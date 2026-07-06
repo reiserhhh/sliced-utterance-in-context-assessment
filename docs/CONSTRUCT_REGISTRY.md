@@ -31,7 +31,7 @@ names are earned at T4 (lockbox) or human-criterion evidence, not before
 | wcl_07 | Politics/civic vocabulary | 0.495 (T3) | |
 | wcl_35 | Media-consumption vocabulary | 0.451 (T3) | |
 | wcl_20 | Gaming-mechanics vocabulary | 0.378 (T3) | joint R^2 ~0.56 (borderline) |
-| novelty_play_v2 | Novelty/play vocabulary rate | raw SB ~0.65 (T2) | choice-channel construct (E1: centering hurts most) |
+| novelty_play_v2 | Novelty/play vocabulary rate | raw SB ~0.65 (T2) | **RELABELED 2026-07-07: VENUE-SIGNATURE (C1-dominant)** — choice-mediated share 0.587 [0.428,0.723], class-disjoint retest 0.033 (c2_purity decomposition). NOT a style trait; fails the v4 flesh-purity gate; model in the choice family. Consistent with lockbox H3 failure + PRED-1 top gain + E9a MTMM fail (round-9 wording) |
 
 ## Tier C — state-unstable / retired-as-trait measures
 

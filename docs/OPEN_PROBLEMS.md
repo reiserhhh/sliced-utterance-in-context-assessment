@@ -61,6 +61,15 @@ construct registry with operational renames).
 
 Minimum closure set for submission: OP-1, OP-3, OP-4, OP-5, OP-9, OP-10, OP-11.
 
+## No-lock falsification program additions (2026-07-07; FALSIFIER_MATRIX_V1)
+
+| ID | Problem | Class | Resolution design | State |
+|----|---------|-------|-------------------|-------|
+| OP-28 | LLM-agent world (channel-separation constructive test: "tense person" vs "person who chooses tense venues" with planted profiles) designed but not executed | ENHANCE (construct logic; never human-validity evidence) | 2x2 {persona} x {free/assigned venues} via DeepSeek/local models; run full pipeline; attribution accuracy | Designed in FALSIFIER_MATRIX; not run |
+| OP-29 | T1 additivity never attacked (interactive/multiplicative misspecification worlds) | ENHANCE | W-F worlds: y = flesh * rind coupling etc.; F6.3 share-agreement alarm as the detector | Open |
+| OP-30 | Exact population-composition-bias term in the centering theorem (W-PHASE strong-coupling gap -1.404 vs -1.14) | ENHANCE (math) | Derive E[bhat_r] under flesh-coupled choice; closes the F4 second-order amendment | Open |
+| OP-31 | Prospective registration harness ("time's lockbox"): seal structural predictions about not-yet-written text (X pipeline windows); label-free, infinitely re-armable | ENHANCE (process infrastructure) | Freeze prediction JSON + hash before window; score after | Designed in FALSIFIER_MATRIX; not run |
+
 ## E9 follow-on (2026-07-06)
 
 | ID | Problem | Class | Resolution design | State |

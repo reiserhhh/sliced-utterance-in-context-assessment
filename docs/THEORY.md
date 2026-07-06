@@ -141,3 +141,87 @@ reliability = f(design, population)  — never a design-only constant
 C1 available iff rind (or micro-rind) is self-selected; C1 miniaturizes to
 within-domain choice (PRED-2) under domain fixing.
 ```
+
+## 7. v3.2 corrections (2026-07-07 no-lock falsification program;
+## FORMAL_NOTES F1-F6 + wrong-world suite + C2 purity decomposition)
+
+**7.1 The C2 row of section 1 was MISLABELED — corrected.** By the model's
+own equation, the uncentered mean is ybar_u = flesh_u + m_u (+ noise), with
+m_u = sum_r P(r|u) b_r the venue-mix term, person-stable exactly to the
+extent choice is (FORMAL_NOTES F1/F2; wrong-world W-B: flesh-null world
+shows raw retest 0.637 from choice alone, final frozen run). "C2 style-base
+(E[y_u] uncentered)" is therefore a **C1+C2 COMPOSITE channel**, and the
+flesh/choice split is a per-construct empirical quantity. Measured on
+Tier-U (suica_c2_purity_decomposition_v1; estimators licensed by
+W-B/W-B2/W-B2c/W-B3 — the class-disjoint estimand by W-B2c, and
+mediated_total as an UPPER bound on mediation under coupling per W-B3):
+
+| construct | rho_raw | rho_class_disjoint | choice-mediated share [95% CI] | corrected reading |
+|---|---|---|---|---|
+| first_person | 0.683 | 0.268 | 0.279 [0.208, 0.349] (cond-share) | flesh-dominant style trait — flesh share is a BAND ~0.56-0.72 (three estimators: cond-share 0.72, class-share 0.56, mediated_total lower-bound 0.60; F6.3 alarm fires on their disagreement — see 7.5) |
+| directive | 0.409 | 0.100 | 0.471 [0.226, 0.662] | C1+C2 composite (estimators disagree 0.23-0.48; wide CI) |
+| novelty | 0.382 | 0.033 | 0.587 [0.428, 0.723] | **VENUE-SIGNATURE construct (C1-dominant); not a style trait** (all three estimators agree: 0.587/0.588 point-coincident) |
+| tension | 0.316 | 0.053 | undetermined (shared-matched < .10) | consistent with no-trait verdict |
+| adversity | 0.129 | 0.028 | undetermined (cov_raw ~0.0004 — unreadable noise) | dead construct, unchanged |
+
+Coherence readings (round-9 corrected wording — "consistent with", not
+"explains", since a choice-mediated construct can still predict O via the
+choice channel, cf. H6): (a) consistent with the lockbox H3 failure
+(novelty's "stability" was never flesh), (b) novelty's top PRED-1 gain is
+the confirmed artifact-side of the same fact (its variance IS rind), (c)
+consistent with novelty's E9a MTMM failure (convergent 0.258 < max
+discriminant 0.325). And the one flesh-dominant construct (first_person) is
+exactly the one that survived external confirmation (H2, T4) — the channel
+accounting closes.
+
+**7.2 Design rule added (v4 battery gate; PROVISIONAL).** A style construct
+may be used as a TRAIT predictor only if it passes a flesh-purity gate:
+class-disjoint retest >= 0.15 AND choice-mediated share < 0.30 (point
+estimate). Constructs failing the gate belong to the choice family and must
+be modeled there (novelty: relabeled; directive: composite — report both
+channels). Round-9 disclosures: the thresholds are post-hoc (set 2026-07-07
+after seeing the decomposition, not in the matrix); first_person passes the
+share arm on the point estimate only (CI [0.208, 0.349] spans 0.30); the
+class-disjoint estimand's wrong-world license (W-B2c) was implemented in
+round 9, after the first decomposition run. The gate binds prospectively
+for v4 construction; it is not a retro-fitted confirmatory claim.
+
+**7.3 F4 (centering theorem) with second-order amendment.** Centering is
+mediator adjustment: it removes retest covariance by exactly
+Var(m) + 2Cov(f, m) at first order UNDER pi ⊥ b (final frozen phase-diagram
+cells: exogenous +0.010 vs predicted 0; kappa=0 -0.316 vs -0.304). Under
+STRONG flesh-choice coupling the observed removal EXCEEDS the first-order
+formula (-1.583 vs -1.294 at kappa=0.7): cross-fitting removes
+self-estimation but not population-composition bias — the round-9 audit
+confirmed the mechanism directly (oracle-b centering matches the identity
+exactly, -1.332 vs -1.335, while estimated-b centering over-removes;
+bhat-on-b regression slope 1.403 at kappa=0.7 vs 1.002 at kappa=0). FE
+centering over-removes flesh whose venue composition is predictable —
+centering is even MORE destructive than the first-order theorem states.
+The same mechanism upward-biases the mediated_total estimator (W-B3
+recorded FAIL: 0.541 vs target 0.426) => under coupling it is an upper
+bound on mediation. (W-PHASE and W-B3 both recorded as FAILs against their
+pre-committed point tolerances; sign and boundary structure confirmed in
+all cells; exact composition-bias term = open derivation, OP-30.)
+
+**7.4 F5 refinement (H(M) is loading-weighted) — POST-HOC amendment,
+trigger disclosed.** The matrix pre-committed "low-entropy > high-entropy
+for each construct; violation => the v3.1 continuous form is wrong". The
+trigger FIRED: 2/5 constructs violated (first_person 0.693 vs 0.700 —
+hairline; adversity 0.164 vs 0.191 — but adversity's cov_raw ~0.0004 makes
+its gradient unreadable noise, disclosed rather than dropped). The
+loading-weighted reading — the entropy penalty applies in proportion to a
+construct's rind-loading (holds for directive/tension/novelty; absent for
+flesh-dominant first_person) — is therefore a POST-HOC refinement
+consistent with the formula's H(M)*sigma2_rind structure, adopted as the
+v3.2 form and subject to fresh-data test (the prospective harness, OP-31).
+
+**7.5 F6.3 misspecification alarm — fired and recorded.** The three
+mediation estimators must agree under the additive model. They agree for
+novelty (0.587 cond-share / 0.588 mediated_total) but DISAGREE for
+first_person (0.279 / 0.398 / class-share 0.442) and directive (0.471 /
+0.229). Known contributors: mediated_total's upward composition bias
+(W-B3) and the class-vs-condition mediation gap (W-B2c: +0.106 in-world).
+Residual disagreement is the F6.3 alarm operating as designed — flesh
+shares are therefore reported as BANDS, and T1 (additivity) remains an
+open attack surface (OP-29).
