@@ -217,6 +217,21 @@ media-consumption 0.451, gaming-mechanics 0.378, descriptive-narrative 0.459).
 | TEG novelty-play bridge "heldout_fdr_supported" | p_fdr = 0.060; single lexical proxy coder | suica_teg_ego_state_bridge_v1.md |
 | Cross-language readiness of validated scorer | Scored subset monolingual (en_latin only) | international psychometrics doc |
 
+## FREEZE RECORD (2026-07-06)
+
+The SUICA method is frozen as an independent repository:
+`/Volumes/mobile3/projects/Sliced Utterance In-Context Assessment`
+- Initial commit: dd5c7805689acd6d5351f7a22864b3ff45eb1d7d
+- Tag: v0.1.0-prereg-sealed (the PREREGISTRATION seal)
+- Verified at freeze: 39/39 tests + P0 zero-data pass inside the release;
+  0 lockbox users in any dev analysis; lockbox budget 2/2 unopened.
+- Round-7 freeze audit: E9a/E9b/OP-22 upheld (with recorded caveats),
+  E11v2 upheld with V2-4 fail recorded, DEV-ANCHOR promoted after the
+  auditor's three remaining mechanical attacks were executed and passed
+  (seed stability 0.3449-0.3504; base rate 0.334; AUC 0.706; 0 Tier-L
+  leakage). Open round-7 INCOMPLETE items (E11 shuffled-fit null geometry;
+  full manual number sweep) are carried in OPEN_PROBLEMS.
+
 ## Audit log
 
 - 2026-07-05 (round 6): OP-5 and OP-10b audited. OP-5 UPHELD on every attack
