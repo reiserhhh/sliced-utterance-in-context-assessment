@@ -22,6 +22,7 @@ users after lockbox exclusion; working extraction = 5,000 stable-hash sample
 | DEV-ANCHOR MBTI | battery users x Tier-D labels | intersection | 3,183 (suica_dev_anchor_performance_v1.md) |
 | DEV-ANCHOR Essays | 2,467 essays -> 1,255 dev-half | dev-half membership | 1,255 (same) |
 | Lockbox (sealed) | Big5 1,401 / bridge 375 | >= 4 conds x >= 4 comments & >= 12 est. slices (metadata-only count) | eligible 1,108 / 326 (PREREGISTRATION.md) |
+| Lockbox OPENING #1 (realized, 2026-07-07) | Tier-L 1,412 -> extracted 1,412 (385,275 comments, en-only, cap 400) | frozen prep (>= 2 conds) -> 1,291 scored; analysis gate >= 4 conds & >= 12 slices | Big5 1,058 / bridge 303 (reports/suica_lockbox_opening_1.md; deviations from estimate 4.5% / 7.1%, F6 gate passed) |
 
 Reading: all trait-level results describe users who write enough (medians
 ~44-372 comments in the respective pools). Generalization to light writers is

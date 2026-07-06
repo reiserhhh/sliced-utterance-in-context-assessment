@@ -3,9 +3,9 @@
 
 Providers (4 model families — the same-family flaw of the v1 panel is retired):
   deepseek   : DeepSeek API (OpenAI-compatible; key/base from .env)
-  qwen30     : qwen3:8b            @ 192.168.1.30 Ollama
-  llama30    : llama3.1:8b         @ 192.168.1.30 Ollama
-  mistral20  : persona-mistral-7b-q8 (UNTUNED base Mistral) @ 192.168.1.20 Ollama
+  qwen30     : qwen3:8b via SUICA_OLLAMA_QWEN_HOST
+  llama30    : llama3.1:8b via SUICA_OLLAMA_LLAMA_HOST
+  mistral20  : base Mistral via SUICA_OLLAMA_MISTRAL_HOST
 
 Tasks: t1 (7-way label identification + salience 0-3), t2 (pair intensity).
 Coders never see the key files. Temperature 0. <think> blocks stripped.
@@ -13,6 +13,7 @@ Coders never see the key files. Temperature 0. <think> blocks stripped.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import time
@@ -27,9 +28,27 @@ OUT_DIR = ROOT / "results" / "suica_op22_llm_coding_v2"
 
 PROVIDERS = {
     "deepseek": {"kind": "openai", "model_env": "DEEPSEEK_LEADER_MODEL", "fallback_model": "deepseek-chat"},
-    "qwen30": {"kind": "ollama", "host": "http://192.168.1.30:11434", "model": "qwen3:8b"},
-    "llama30": {"kind": "ollama", "host": "http://192.168.1.30:11434", "model": "llama3.1:8b"},
-    "mistral20": {"kind": "ollama", "host": "http://192.168.1.20:11434", "model": "persona-mistral-7b-q8:latest"},
+    "qwen30": {
+        "kind": "ollama",
+        "host_env": "SUICA_OLLAMA_QWEN_HOST",
+        "fallback_host": "http://127.0.0.1:11434",
+        "model_env": "SUICA_QWEN_MODEL",
+        "fallback_model": "qwen3:8b",
+    },
+    "llama30": {
+        "kind": "ollama",
+        "host_env": "SUICA_OLLAMA_LLAMA_HOST",
+        "fallback_host": "http://127.0.0.1:11434",
+        "model_env": "SUICA_LLAMA_MODEL",
+        "fallback_model": "llama3.1:8b",
+    },
+    "mistral20": {
+        "kind": "ollama",
+        "host_env": "SUICA_OLLAMA_MISTRAL_HOST",
+        "fallback_host": "http://127.0.0.1:11434",
+        "model_env": "SUICA_MISTRAL_MODEL",
+        "fallback_model": "persona-mistral-7b-q8:latest",
+    },
 }
 
 T1_SYS = ("You are coding text excerpts for a psycholinguistics study. Choose which ONE of the "
@@ -44,8 +63,11 @@ JSON_RE = re.compile(r"\{[^{}]*\}")
 
 
 def load_env() -> dict:
-    env = {}
-    for line in (ROOT / ".env").read_text().splitlines():
+    env = dict(os.environ)
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return env
+    for line in env_path.read_text(encoding="utf-8").splitlines():
         if "=" in line and not line.strip().startswith("#"):
             k, _, v = line.partition("=")
             env[k.strip()] = v.strip().strip('"').strip("'")
@@ -58,16 +80,21 @@ def call_provider(cfg: dict, env: dict, system: str, user: str, *, retries: int 
             if cfg["kind"] == "openai":
                 base = env.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").rstrip("/")
                 model = env.get(cfg["model_env"]) or cfg["fallback_model"]
+                api_key = env.get("DEEPSEEK_API_KEY", "")
+                if not api_key:
+                    raise RuntimeError("Missing DEEPSEEK_API_KEY. Copy .env.example to .env and set it, or use an Ollama provider.")
                 r = requests.post(f"{base}/chat/completions",
-                                  headers={"Authorization": f"Bearer {env['DEEPSEEK_API_KEY']}"},
+                                  headers={"Authorization": f"Bearer {api_key}"},
                                   json={"model": model, "temperature": 0,
                                         "messages": [{"role": "system", "content": system},
                                                      {"role": "user", "content": user}]},
                                   timeout=90)
                 r.raise_for_status()
                 return r.json()["choices"][0]["message"]["content"]
-            r = requests.post(f"{cfg['host']}/api/chat",
-                              json={"model": cfg["model"], "stream": False,
+            host = env.get(cfg.get("host_env", ""), cfg.get("fallback_host", "http://127.0.0.1:11434")).rstrip("/")
+            model = env.get(cfg.get("model_env", ""), cfg.get("fallback_model", cfg.get("model", "")))
+            r = requests.post(f"{host}/api/chat",
+                              json={"model": model, "stream": False,
                                     "options": {"temperature": 0},
                                     "messages": [{"role": "system", "content": system},
                                                  {"role": "user", "content": user}]},

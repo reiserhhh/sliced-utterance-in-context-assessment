@@ -32,11 +32,15 @@ measure choice as a channel).*
 - **AI operating standard** — `docs/AI_ANALYST_GUIDE.md`: role separation
   (scorer/builder/coder/auditor/interpreter/human), fixed prompts, guardrails
   G1-G11 (each traceable to a caught failure).
-- **Sealed preregistration** — `docs/PREREGISTRATION.md`: the external-validity
-  confirmation (lockbox: PANDORA Big5 + MBTI bridge + Essays confirm-half)
-  is UNOPENED (budget 2/2). The initial commit hash of this repository is
-  the seal. Anyone with data access can perform the opening exactly once
-  under the frozen rules.
+- **Sealed preregistration** — `docs/PREREGISTRATION.md`: the seal is the
+  initial commit hash of this repository. **Opening #1 was performed on
+  2026-07-07** under the frozen rules (commit-pinned script, adversarial
+  pre-audit): the preregistered success rule **FAILED** (2/7 hypotheses at
+  BH-FDR q<.05; the rule required >=4/7) — recorded in full in
+  `reports/suica_lockbox_opening_1.md`. H2 (first-person -> Neuroticism,
+  r=+0.111, q=.002) and H6 (politics/news choice -> Openness, r=+0.096,
+  q=.006) confirmed at lockbox tier. One opening remains; the Essays
+  confirm-half labels are still untouched.
 - **Code** — `suica_core/` + `scripts/` (the full validation pipeline) +
   `tests/` (39 tests, no data needed).
 
@@ -61,9 +65,15 @@ shrinkage 0.027), 15/15 discovered constructs on unseen users, react
 signatures for 2 constructs under the stranger null. Falsified and retired:
 condition-mean centering (three independent ways), affect word-rates as
 trait or occasion-state measures, attention-weight interpretation as
-measurement evidence. Sealed: all confirmatory external validity (see
-PREREGISTRATION). Scope: English, one platform + student essays; dialogue
-and clinical use are designed but untested (OPEN_PROBLEMS OP-7/8/14).
+measurement evidence. Confirmatory (T4, lockbox opening #1, 2026-07-07):
+the preregistered success rule FAILED (2/7; recorded in full, no
+re-analysis) — first-person -> Neuroticism (r=+0.111) and politics/news
+choice -> Openness (r=+0.096) are the two lockbox-confirmed relations;
+tension, novelty, directive, venue entropy and gaming choice did not
+confirm. One opening remains sealed. Scope: English, one platform + student
+essays; dialogue and clinical use are designed but untested (OPEN_PROBLEMS
+OP-7/8/14 — OP-7a register-proxy and OP-8 stage 1 closed 2026-07-07, see
+CLAIMS_LEDGER).
 
 ## Provenance
 

@@ -18,6 +18,34 @@ scripts (`scripts/prepare_*.py`, `scripts/build_suica_tiers_v2.py`). Tier
 membership is derived deterministically (SHA-1 stable-hash rules in code)
 from the raw datasets — no membership files are required.
 
+## Expected local layout
+
+The repository commits only an empty `data_sets/` skeleton. Place locally
+obtained data under these paths; all real files below `data_sets/` are ignored
+by Git:
+
+```text
+data_sets/
+├── PANDORA_official/
+│   └── all_comments_since_2015.csv
+├── prepared/
+│   ├── pandora_official/
+│   │   ├── pandora_official_big5_prepared.csv
+│   │   ├── pandora_official_bridge_strict377.csv
+│   │   ├── pandora_official_bridge_supplementary393.csv
+│   │   └── mbti_axes/
+│   │       ├── pandora_official_EI_cont_prepared.csv
+│   │       ├── pandora_official_SN_cont_prepared.csv
+│   │       ├── pandora_official_TF_cont_prepared.csv
+│   │       └── pandora_official_JP_cont_prepared.csv
+│   ├── suica_tiers_v2/
+│   │   └── <deterministically derived tier files>
+│   └── big5/
+│       └── essays_original_prepared.csv
+└── x_fullmarkettext/
+    └── <private local X/Twitter market-text export>
+```
+
 ## Integrity manifest (SHA-256 of our prepared inputs)
 
 Byte-identical preparation can be verified against:

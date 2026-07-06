@@ -34,7 +34,7 @@ conditions = subreddits, temporal halves with >= 90-day gap. Scale: 205k
 slices / 4,983 users (standard), 2.3M comments (deep).
 
 ### S3. Validate the machinery BEFORE real data — `run_suica_synthetic_ground_truth_v2.py`, `run_suica_p0b_thin_cell_regime_v3.py`
-P0: planted-truth recovery 0.96-0.97, null FPR 0.06, scorer equivalence
+P0: planted-truth recovery 0.96-0.98, null FPR 0.06, scorer equivalence
 exact. P0-B: multi-start REML certified for thin cells (recovers planted
 0.05/0.10; MoM demoted to screening). Anyone can run these with zero data.
 
@@ -51,11 +51,13 @@ FE out-of-sample; pooled delta -0.09). This falsification is part of the
 method: conditions carry person signal through self-selection; control rind
 by design, not statistics. Choice IS a channel, not a nuisance.
 
-### S6. The choice channel — `run_suica_e3_e4_choice_scale_class_react_v3.py` + `run_suica_op6a_choice_axes_holdout_v3.py`
+### S6. The choice channel — `run_suica_e3_e4_choice_scale_class_react_v2.py` + `run_suica_op6a_choice_axes_holdout_v3.py`
 12 content classes; venue-choice log-ratio axes; held-out confirmation
 (cohort-A fit/selection, cohort-B confirm): 5/5 axes confirm, r_B 0.48-0.68,
-shrinkage 0.027. Same-user choice-profile AUC 0.84-0.91. Leakage rule shown
-live: the MBTI-community class is excluded from all anchor work.
+shrinkage 0.027. Same-user choice-profile AUC 0.84-0.91 (0.839 = class-profile artifact in
+e3_e4_results.json; 0.909 = ledger-recorded exploratory computation on
+top-300 subreddit vectors, n=2,758, no results artifact — T1). Leakage rule
+shown live: the MBTI-community class is excluded from all anchor work.
 
 ### S7. Growing the inventory — `run_suica_op5_construct_discovery_v3.py`
 Open-vocabulary discovery with A-discover/B-confirm user split: 15/15
@@ -137,13 +139,15 @@ Reading rules for this table:
    within population; ax_11-type leakage exclusions per deployment).
 3. **State track**: per-session first-person deviation is the only currently
    measurable state channel, and its per-occasion precision (contiguous SB
-   ~ 0.27 at ~1k tokens) is below the 0.30 feasibility bar — dashboards must
+   ~ 0.27 at ~1k tokens; audited value from ledger row E5-P-E5c — the
+   results file retains the superseded parity-split values) is below the
+   0.30 feasibility bar — dashboards must
    show it as tentative. Affect-vocabulary rates are NOT occasion states
    (<= ~2% variance) — do not report "tension" as a mood measure.
 4. **Signature track** (provisional): first-person and directive if-then
    patterns across situation classes (stranger-null validated, single
    cohort). Report only with the "provisional" tag.
-5. **Adjective profiles** (E11 v2, where licensed): "anxious +2.1 [1.6,2.6]"
+5. **Adjective profiles** (E11 v2, where licensed): "anxious +2.1 [+0.7,+2.6]"
    style metric descriptors; only constructs passing V2 criteria; flags
    (!lex sense-collision) must be displayed.
 6. **Language rules**: ledger-status vocabulary only (T1 exploratory ... T4
@@ -155,9 +159,10 @@ Reading rules for this table:
 
 Smart apostrophes (U+2019, 3.8% of slices) split tokens in the frozen v3
 scorer. Re-running the full P1 battery with pre-tokenization normalization
-(scorer v3.1, prep flag `--normalize-apostrophes`) changes no headline value
-by more than 0.002 (first-person 0.570 vs 0.569; directive 0.355 vs 0.357;
-tension 0.213 vs 0.215). The v3 numbers therefore stand as reported;
+(scorer v3.1, prep flag `--normalize-apostrophes`) changes no quoted
+headline value by more than 0.002 (first-person 0.570 vs 0.569; directive
+0.355 vs 0.357; tension 0.213 vs 0.215; largest any-metric shift is the
+tension Spearman-Brown value at 0.0022). The v3 numbers therefore stand as reported;
 normalization is the recommended ingestion default going forward. Lexicon
 disjointification is deliberately deferred to scorer v4 (formula changes
 restart the validation chain).
@@ -168,7 +173,7 @@ Proves: a reproducible pipeline exists that takes a raw text-behavior corpus
 to (a) a 19-construct provisional inventory with held-out stability, (b) a
 held-out choice-axis profile, (c) coding-validated legibility classes, (d) a
 metric interpretation layer, (e) orientation-grade anchor relations — with
-every step estimator-validated, adversarially audited (6 rounds), and
+every step estimator-validated, adversarially audited (7 rounds), and
 governed by pre-committed criteria. That is the "本当に作れる" claim, held to
 the same falsification standard that killed the method's own first mechanism.
 

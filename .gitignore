@@ -1,8 +1,52 @@
+# Generated outputs
 results/
-data_sets/
 logs/
+
+# Local datasets. Keep only the empty reproducibility skeleton committed.
+data_sets/**
+!data_sets/
+!data_sets/README.md
+!data_sets/PANDORA_official/
+!data_sets/PANDORA_official/.gitkeep
+!data_sets/prepared/
+!data_sets/prepared/.gitkeep
+!data_sets/prepared/pandora_official/
+!data_sets/prepared/pandora_official/.gitkeep
+!data_sets/prepared/pandora_official/mbti_axes/
+!data_sets/prepared/pandora_official/mbti_axes/.gitkeep
+!data_sets/prepared/big5/
+!data_sets/prepared/big5/.gitkeep
+!data_sets/prepared/suica_tiers_v2/
+!data_sets/prepared/suica_tiers_v2/.gitkeep
+!data_sets/x_fullmarkettext/
+!data_sets/x_fullmarkettext/.gitkeep
+
+# Local secrets and machine-specific runtime config
+.env
+.env.*
+!.env.example
+
+# Python/runtime caches
 __pycache__/
 *.pyc
+.pytest_cache/
 .venv/
+
+# OS/editor noise
+.DS_Store
+._*
+
+# Large or private data/model artifacts
 *.parquet
 *.npy
+*.npz
+*.sqlite
+*.sqlite3
+*.db
+*.pkl
+*.pickle
+*.joblib
+*.jsonl
+*.gguf
+*.safetensors
+*.bin
