@@ -220,7 +220,7 @@ media-consumption 0.451, gaming-mechanics 0.378, descriptive-narrative 0.459).
 ## FREEZE RECORD (2026-07-06)
 
 The SUICA method is frozen as an independent repository:
-`/Volumes/mobile3/projects/Sliced Utterance In-Context Assessment`
+`<repo-root>`
 - Initial commit: dd5c7805689acd6d5351f7a22864b3ff45eb1d7d
 - Tag: v0.1.0-prereg-sealed (the PREREGISTRATION seal)
 - Verified at freeze: 39/39 tests + P0 zero-data pass inside the release;
@@ -231,6 +231,11 @@ The SUICA method is frozen as an independent repository:
   (seed stability 0.3449-0.3504; base rate 0.334; AUC 0.706; 0 Tier-L
   leakage). Open round-7 INCOMPLETE items (E11 shuffled-fit null geometry;
   full manual number sweep) are carried in OPEN_PROBLEMS.
+- 2026-07-07 seal externalized: public remote
+  https://github.com/reiserhhh/sliced-utterance-in-context-assessment
+  (tag v0.1.0-prereg-sealed pushed; remote peeled tag hash verified equal to
+  the seal commit dd5c7805689acd6d5351f7a22864b3ff45eb1d7d; GitHub Release
+  published on the tag).
 
 ## Audit log
 
