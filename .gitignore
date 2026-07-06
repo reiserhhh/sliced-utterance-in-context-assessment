@@ -1,0 +1,8 @@
+results/
+data_sets/
+logs/
+__pycache__/
+*.pyc
+.venv/
+*.parquet
+*.npy

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Sliced Utterance In-Context Assessment (SUICA)"
+message: "If you use this method or code, please cite it."
+type: software
+version: 0.1.0
+date-released: 2026-07-06
+abstract: >
+  A text-behavior measurement framework treating spontaneous writing as
+  sliced behavioral observations measured in naturally occurring contexts,
+  with an audited validation chain and a sealed preregistration for
+  external-validity confirmation.
