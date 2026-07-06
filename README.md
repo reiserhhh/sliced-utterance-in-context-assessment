@@ -1,5 +1,7 @@
 # Sliced Utterance In-Context Assessment (SUICA)
 
+**English** | [日本語](README.ja.md) | [简体中文](README.zh.md)
+
 SUICA is a text-behavior measurement framework: it treats a person's
 spontaneous writing as many small behavioral observations ("sliced
 utterances") measured inside their naturally occurring contexts, and builds
