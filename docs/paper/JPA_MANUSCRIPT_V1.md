@@ -1,4 +1,4 @@
-# [BLINDED MANUSCRIPT — Behavior Research Methods]
+# [BLINDED MANUSCRIPT — Journal of Personality Assessment]
 
 <!-- Double-blind: no author names, no institution, no identifiable repo URL.
      The public repository is cited as [ANONYMIZED REPOSITORY LINK — view-only
@@ -7,34 +7,33 @@
      Every number in this manuscript must trace to a CLAIMS_LEDGER row; the
      pre-submission round-12 audit re-verifies the full sweep. -->
 
-# Sliced Utterance In-Context Assessment (SUICA): A falsification-first framework for interpretable text-based personality measurement
+# Sliced Utterance In-Context Assessment (SUICA): A falsification-first framework for personality assessment from spontaneous language
 
 ## Abstract
 
-Language-based personality assessment typically treats topic as a nuisance:
-variance associated with what a person writes about is statistically removed
-so that "how they write" can be measured. We show — empirically, three
-independent ways, and then as an algebraic result — that this default is
-self-defeating whenever people choose their own contexts: context choice
-mediates person-to-text effects, so partialling contexts out deletes person
-signal (the removed retest covariance equals Var(m) + 2Cov(f, m), the
-mediated share). Building on this reversal we present SUICA, a measurement
-framework that treats a person's spontaneous writing as many small
-utterances sliced within self-selected contexts, and reads three channels:
+Personality assessment has long wanted one instrument to combine the
+standardization of self-report with the spontaneous behavioral richness of
+performance-based measures. We present SUICA, a framework that treats a
+person's everyday writing as a performance-based test with frozen,
+mechanical scoring: spontaneous text is sliced into many small utterances
+inside the contexts the person chose, and read through three channels —
 context choice, a context-invariant style base, and person-by-context
-signatures. The framework ships with a governance architecture we propose
-as reusable methodology: frozen scorers with equivalence gates, data tiers
-with a sealed, hash-pinned preregistration ("lockbox"), estimators licensed
-against generative worlds that violate the theory's own assumptions, graded
-comparison licenses, and an adversarial builder/auditor protocol under which
-independent audits caught and corrected 13 builder errors across 11 rounds.
-In a complete worked construction on public Reddit and essay corpora
-(N = 3,183 development users), channel decomposition shows that trait-grade
-signal concentrates in form habits (pronouns, orthography, negation), while
-content vocabulary rides on context choice; a preregistered one-shot lockbox
-opening confirmed two channel predictions (first-person rate to
-Neuroticism, r = .111; political-venue choice to Openness, r = .096) while
-the omnibus rule failed (2/7) — reported in full. Code, manifests, and the
+signatures. The framework rests on a falsification: the field's default of
+statistically removing topic/venue variance is shown, empirically and then
+algebraically, to DELETE person signal whenever contexts are self-selected
+(the removed retest covariance equals the choice-mediated share); context
+must be handled by design, not subtraction. Validity governance is built
+in: version-pinned scorers, data tiers with a hash-sealed one-shot
+preregistration, estimators licensed against generative worlds that violate
+the model's own assumptions, graded comparison licenses, and an adversarial
+builder/auditor protocol that caught and corrected 13 builder errors across
+11 audit rounds. In a complete worked construction on public Reddit and
+essay corpora (N = 3,183 development users), trait-grade signal
+concentrated in form habits (pronouns, orthography, negation) while content
+vocabulary rode on context choice; the sealed confirmatory opening verified
+two channel predictions (first-person rate to Neuroticism, r = .111;
+political-venue choice to Openness, r = .096) while the preregistered
+omnibus rule failed (2/7) — reported in full. Code, manifests, and the
 sealed preregistration are public.
 
 **Keywords:** personality assessment; natural language; psychometrics;
@@ -86,8 +85,21 @@ situation classes, the textual descendant of behavioral signatures
 (Mischel & Shoda, 1995). Context variance is controlled by DESIGN
 (fixing or sampling rinds) and never by statistical subtraction.
 
-Frameworks are cheap; what we principally offer BRM's readership is the
-validation machinery that made this one falsifiable at every joint:
+This ambition has an assessment-tradition genealogy that predates the
+computational turn. Self-report inventories bought standardization at the
+price of item transparency, response styles, and the limits of
+introspective access; the performance-based tradition (from projective
+techniques onward) reached for spontaneous behavior instead, and paid in
+scoring subjectivity and contested reliability (Meyer et al., 2001; Mihura
+et al., 2013). A person's accumulated everyday writing is, we argue, the
+performance sample the tradition was missing: abundant, ecologically
+produced, impossible to rehearse item-by-item — and, unlike a projective
+protocol, scorable by FROZEN mechanical rules whose every count can be
+audited. SUICA's founding ambition is exactly this synthesis: the
+standardization of the questionnaire applied to the spontaneous behavior of
+the performance tradition. Frameworks are cheap, however; what we
+principally offer the assessment community is the validation machinery that
+made this one falsifiable at every joint:
 
 1. **Frozen, interpretable scoring.** All scores are counts from fixed
    lexica and fixed context maps, version-pinned with equivalence gates

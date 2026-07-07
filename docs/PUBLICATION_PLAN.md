@@ -1,34 +1,54 @@
-# SUICA Publication Plan v1
+# SUICA Publication Plan v1 (REVISED 2026-07-07: JPA primary)
 
 Created: 2026-07-07. Decision basis: the 2026 SJR top-3% list (user-provided)
-x Waseda read-and-publish agreements x topical fit.
+x Waseda read-and-publish agreements x topical fit. REVISION: the user
+correctly noted that Behavior Research Methods' home community is cognitive/
+experimental psychology (Psychonomic Society); the paper's natural readers
+are personality/assessment psychologists. Re-screening the intersection:
 
-## Target: Behavior Research Methods (BRM, Springer Nature)
+**Journal of Personality Assessment (JPA) is the ONLY personality journal
+satisfying ALL stated criteria** (international x top-3% list x Waseda-free):
+- T&F agreement (63 waivers 2026) -> OA free for a Waseda corresponding author.
+- SJR 1.287, on the top-3% list.
+- Official journal of the Society for Personality Assessment — the community
+  whose central discourse IS the integration of self-report and
+  performance-based (projective-tradition) assessment. SUICA's founding
+  ambition ("the advantages of questionnaires and projective tests
+  combined") is native language here: the pitch is a STANDARDIZED,
+  FROZEN-SCORED performance-based measure of spontaneous verbal behavior.
+- Scope statement explicitly includes "normative personality processes"
+  methods — no clinical claims needed or made.
 
-- SJR 2.462, on the top-3% list; THE psychology journal for new research
-  methods/instruments with open code.
-- Fit: SUICA is exactly a "methods, techniques, and instrumentation" paper —
-  a new measurement framework + frozen open-source implementation + a
-  falsification-first validation program with a sealed preregistration.
-  BRM's TOP Level 2 open-practices culture matches the project's ledger/
-  audit/manifest discipline better than any substantive journal.
-- Cost: hybrid OA; the Waseda-Springer agreement (2026 quota 68 articles)
-  waives the APC. Requirements to satisfy AT ACCEPTANCE:
-  1. Corresponding author affiliated with Waseda, using a waseda.jp-family
-     address, and holding an eligible status (regular students ARE eligible
-     under the Springer deal — 学生(正規生のみ)).
-  2. Follow the university library's designated workflow when the article
-     is accepted (author selects OA under the agreement in Springer's
-     system; institution approves).
-- Review: double-blind. CONSEQUENCES for us:
-  - Manuscript must not name the author, Waseda, or the identifiable
-    public GitHub URL. At submission, reference an ANONYMIZED repository
-    view (e.g., an anonymous OSF view-only link or an "identifier redacted
-    for review" placeholder); swap in the real public repo + seal-hash
-    citation in the accepted version. The seal itself is unaffected (the
-    hash is cited, the repo stays public regardless).
+Known submission specs (to re-verify at submission; T&F blocks robot
+fetches): abstract <= 250 words unstructured; APA Publication Manual style;
+email/portal submission via the editorial office; masked review available.
+Strategy for fit: LEAN main text (~9-10k words) + rich online supplements
+(formal proofs F1-F6, wrong-world suite, audit-round taxonomy, funnels) —
+the assessment audience reads the argument, the supplements carry the math.
 
-## Manuscript spec (from the fetched submission guidelines)
+Trade-offs disclosed: lowest SJR of the shortlist; some reviewers will be
+clinical-assessment oriented (the governance/computational depth must be
+readable, hence the supplement strategy).
+
+## Alternatives (in order)
+1. Journal of Research in Personality (Elsevier deal, 164 waivers 2026;
+   NOT on the top-3% list) — the language-personality lineage venue
+   (Pennebaker & King 1999; Yarkoni 2010 appeared in JRP/JPSP orbit);
+   choose if research-community weight matters more than the top-3% list.
+2. Behavior Research Methods (Springer deal; top-3%) — tool-paper framing
+   for a methods audience; demoted per the audience concern, remains viable.
+3. Psychometrika (Cambridge UNLIMITED waiver; not top-3%) — the formal wing
+   (F-theorems + estimator licensing) as a separate methods paper later.
+4. European Journal of Personality — best community fit on paper, but moved
+   to SAGE (2021): no Waseda deal, not top-3%; free only via subscription
+   route without OA.
+
+## Two-paper trajectory (later, not now)
+The governance/audit protocol (wrong-world licensing + builder/auditor
+taxonomy) can eventually stand alone as a methods paper (BRM/Psychometrika/
+AMPPS-class) after the JPA paper anchors the instrument.
+
+## Manuscript spec (BRM specs kept below for the alternative; JPA: abstract <=250 unstructured, APA style, lean main text + supplements)
 
 - APA 7, double-spaced, page numbers; abstract <= 250 words; no hard length
   limit (target ~13-16k words + appendices given the material).
