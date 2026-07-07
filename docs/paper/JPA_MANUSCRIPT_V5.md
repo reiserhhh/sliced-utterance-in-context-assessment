@@ -878,6 +878,30 @@ predictions about text not yet written, sealed by hash in advance. Both
 follow the same policy that produced the present results, which is to
 make the framework easy to kill and then report whether it died.
 
+A further direction follows from what the program kept finding at its
+edges. The strongest style trait in our inventory was not proposed by
+a person: it was discovered by machine clustering, is invisible to
+human raters (0 of 8 in blind coding), and yet replicates on users
+never seen during its construction (r = .65). And when a modern text
+embedding is allowed to identify writers, roughly a third of its
+stable person-signal lies outside our entire construct list. Both
+facts point the same way: if individuality in language is
+fingerprint-like — codable in full only by a high-dimensional
+representation, never exhausted by a human-readable factor list — then
+the natural instrument is partly a machine one, and a battery like
+ours is best understood as the licensed, auditable window onto that
+representation rather than as the representation itself. We expect
+scale development and interpretation methods to move in this
+direction, with learned representations proposing candidates and
+frameworks like the present one deciding what they may claim:
+transported fits, purity gates, convergence licenses, and sealed tests
+are exactly the governance such instruments need, because our own
+development also showed how easily vector scores mislead without
+them — random directions in embedding space are person-stable too, so
+stability alone licenses nothing there. On this view the assessment of
+the future is neither hand-built nor black-box, but machine-proposed
+and theory-audited.
+
 Personality assessment has long treated the standardized test and the
 spontaneous sample as belonging to different traditions, one scorable
 and one rich. A person's accumulated writing suggests the distinction is
@@ -911,7 +935,13 @@ interests to declare.
 under human direction, to implement analysis code, run the
 preregistered analyses, and draft manuscript text; the authors directed
 the program, verified the results against the public claims ledger, and
-take full responsibility for the content. An adversarial audit protocol
+take full responsibility for the content. The
+role of AI here is constitutive rather than incidental: the
+instrument is designed to be machine-executed at scale, part of its
+battery was machine-discovered (including a construct invisible to
+human raters), and the framework's residual layer concerns signal
+that only high-dimensional representations carry (see General
+Discussion). An adversarial audit protocol
 with full recomputation rights, documented in that ledger, governed
 this use (see Transparency and Openness).
 
