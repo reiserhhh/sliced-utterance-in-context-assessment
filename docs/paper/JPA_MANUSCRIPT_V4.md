@@ -297,7 +297,8 @@ remains, the distinctive profile, as a measurable quantity in its own
 right. The theoretical motivation comes from the idiographic tradition
 and from non-ergodicity arguments (Molenaar, 2004; Fisher et al., 2018):
 between-person structure should not be expected to exhaust the
-individual. Empirically it does not. Distinctive profiles correlate with
+individual. Empirically — in exploratory analyses on a single development cohort —
+it does not. Distinctive profiles correlate with
 themselves at a median of .50 across occasions months apart, against a
 stranger-pairing baseline of essentially zero, and the correlation rises
 to .68 when computed on form-based constructs alone. A further sign
@@ -391,9 +392,11 @@ every case, with a pooled change of −.09 (95% CI [−.10, −.08]); partial
 centering at any shrinkage level behaved the same way; and two-way
 fixed-effects centering estimated out of sample, the strongest version we
 could construct, still cost between .05 and .07 per measure once a
-self-estimation leak in our first attempt was found and corrected. On
-the assigned-context side, the same operations are unproblematic, as the
-boundary condition requires.
+self-estimation leak in our first attempt was found and corrected. The boundary condition has, so far, only a simulated instantiation:
+with venue assignment made exogenous, the same operation removes
+essentially nothing (+.01 in covariance units). The essay corpus
+cannot test it directly, because a single fixed prompt leaves no venue
+variation to center — the boundary case in degenerate form.
 
 Applying the purity criterion of
 Proposition 3 to our full inventory of nineteen lexical constructs sorted
@@ -426,15 +429,23 @@ Benjamini-Hochberg correction, a priori power calculations, and a
 success rule of at least four of seven confirmed, before any label was
 read; the analysis script itself was hash-pinned after an adversarial
 audit, and ran once. The omnibus rule failed: two of seven hypotheses
-survived correction. The two survivors are the two that follow most
-directly from the framework's channels: first-person rate predicted
+survived correction. The two survivors are one from each of the framework's primary
+channels, and the style-side survivor is the one construct in the
+battery that the purity criterion certifies as person-borne:
+first-person rate predicted
 Neuroticism (r = .111, 95% CI [.051, .170], q = .002), and choice of
 political venues predicted Openness (r = .096, [.036, .155], q = .006).
-No significant effect ran opposite to its preregistered direction. The
-five failures were, without exception, hypotheses about constructs that
-the purity criterion, derived after the fact, classifies as venue-borne
-or unclassifiable; had the criterion existed at preregistration time, it
-would have barred most of them from confirmatory testing. We report the
+No significant effect ran opposite to its preregistered direction. The five failures divide into two kinds, and only one of them is
+explained by the framework. Three involve style constructs — an
+affect–tension composite, a novelty measure, and a directive-language
+measure — that the purity criterion, derived after the fact,
+classifies as venue-borne or unclassifiable; had the criterion existed
+at preregistration time, it would have barred all three from
+confirmatory testing. The other two were choice-channel hypotheses
+that simply failed: a venue-breadth conjecture, and a
+gaming–extraversion prediction that the preregistration itself had
+flagged as its weakest entry. For these two we have no after-the-fact
+account, and we decline to construct one. We report the
 failure as a failure. What the opening licenses is deliberately narrow:
 the two channel-level directional claims, at small effect sizes, in one
 population. What it illustrates more broadly is that the framework's
@@ -462,7 +473,8 @@ data and is judged on what its scores mean. To put both on one footing
 we ran an exploratory fit gradient on exactly the users of our sealed
 test (n = 1,058, identical folds), moving from full fitting to none
 (Table 1). A ridge model over tf-idf unigrams, the model family of the
-official baselines, reaches a mean r of .272 on these users, so our
+official baselines, reaches a mean r of .272 on these
+users, sitting between the two official baselines, which suggests our
 eligibility rules did not select an unusually easy or hard cohort.
 Restricting the same fitting to the sixteen frozen, preregistered
 features of our instrument (four style constructs, eleven venue-choice
@@ -481,6 +493,8 @@ baselines as an external anchor.*
 | Model | Fitted to labels | E | N | A | C | O | Mean |
 |---|---|---|---|---|---|---|---|
 | Ridge over tf-idf unigrams | features and weights | .31 | .30 | .29 | .18 | .28 | .27 |
+| — content vocabulary only (stop words removed) | features and weights | .32 | .30 | .29 | .18 | .26 | .27 |
+| — function words only (~318, fitted) | features and weights | .15 | .15 | .13 | .05 | .19 | .13 |
 | Ridge over the 16 frozen instrument features | weights only | .09 | .17 | −.01 | .10 | .10 | .09 |
 | Preregistered constructs (sealed test) | nothing | — | .11 | — | — | .10 | — |
 | Official baseline, n-grams (n = 1,402) | features and weights | .33 | .24 | .23 | .16 | .26 | .25 |
@@ -488,15 +502,20 @@ baselines as an external anchor.*
 
 *Note.* Official rows are on the authors' own user set and folds,
 reproduced from their released package to Δr ≤ .0014; they are context,
-not a same-cohort contrast. The sealed-test row reports the two
-preregistered survivors; the remaining cells were not hypothesized.
+not a same-cohort contrast. The sealed-test row reports the two preregistered survivors; the
+remaining cells were not hypothesized. The two indented rows split the
+full-fit vocabulary into its content and function-word parts.
 
 Read as a gradient, the three rungs price the ingredients separately.
 Fitting combination weights over the committed features buys little
 beyond the best single construct, so the instrument's parsimony costs
-almost nothing. Opening the vocabulary roughly triples the mean
-correlation, and that advantage is concentrated in content features,
-which on the framework's reading means the fitted models harvest the
+almost nothing. Opening the vocabulary roughly triples the mean correlation, and the
+concentration of that advantage in content is measured rather than
+presumed: restricting the fitted vocabulary to roughly three hundred
+function words drops the mean to r = .134, while removing exactly
+those words and keeping the content vocabulary costs almost nothing
+(r = .268 against .272). On the framework's reading the fitted models
+are harvesting the
 choice channel wholesale — topics, venues, and all — without asking
 which part of it is the person and which the place. For prediction
 that harvesting is legitimate and effective. A measure must refuse it
@@ -605,9 +624,9 @@ complete claims ledger including corrections and retractions, the sealed
 preregistration, and the one-shot confirmatory report are available at
 [ANONYMIZED REPOSITORY LINK]. No raw user text or identifiers are
 redistributed; the source corpora are available from their original
-publishers. One analysis (the fit gradient of Table 1) reuses the
-confirmation labels after their one-shot opening; it is labeled
-exploratory in the ledger and carries no confirmatory weight.
+publishers. The fit-gradient analyses of Table 1 reuse the confirmation labels
+after their one-shot opening; they are labeled exploratory in the
+ledger and carry no confirmatory weight.
 
 ## Declarations
 

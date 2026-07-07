@@ -13,3 +13,13 @@
 
 External anchor (different user set/protocol): official LR-N mean r = .246 (n=1,402), LR-NP mean r = .293 (n=1,386),
 reproduced in results/pandora_paper_baseline_reproduction (delta <= .0014).
+
+## EXPL-1b — form/content split (same users/folds)
+
+| variant | E | N | A | C | O | mean |
+|---|---|---|---|---|---|---|
+| function words only (~318, fitted) | +0.148 | +0.152 | +0.132 | +0.050 | +0.186 | +0.134 |
+| content only (stop words removed) | +0.315 | +0.301 | +0.285 | +0.184 | +0.256 | +0.268 |
+
+Full rung = .272. Content carries the advantage (drop function words: -.004; drop content: -.138).
+Fitted function words (.134) still beat the 16 committed features (.090).
