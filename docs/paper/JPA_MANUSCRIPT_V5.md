@@ -67,6 +67,30 @@ field that has long wanted behavioral alternatives to the questionnaire,
 these are encouraging results, and they have encouraged applications
 ranging from large-scale epidemiology to clinical screening.
 
+
+The newest wave of this work runs through large language models, and
+its shape is instructive. Most of it retrofits the new machinery onto
+instruments designed around human response processes: the models are
+administered psychometric inventories themselves (Pellert et al.,
+2024), whose validity arguments were built for human respondents and
+do not automatically carry over; or they are deployed as zero-shot
+raters that infer a person's questionnaire score from text (Peters &
+Matz, 2024; Wright et al., 2026), which leaves the questionnaire — not
+the verbal behavior — as the criterion and the construct list
+untouched; or they generate new items for the old self-report format
+(Hommel et al., 2022). Calls for psychology to engage seriously with
+these systems are now common (Demszky et al., 2023), but the
+engagement has mostly swapped the machinery while keeping the
+measurement framework fixed. We start from the other end. If
+instruments are increasingly executed, and in part discovered, by
+machines, the method itself should be designed around what machines
+natively observe — accumulated verbal behavior in chosen contexts, at
+volumes no human coder can read — with the human-auditable layer built
+on top as a matter of governance rather than serving as the measuring
+device. That design brief, and not any particular technology, is what
+the framework below tries to satisfy; the General Discussion returns
+to it.
+
 Less attention has been paid to a methodological habit that runs through
 much of this work. Because personality is understood as something that
 should hold across situations, and because text varies enormously with
@@ -900,7 +924,7 @@ development also showed how easily vector scores mislead without
 them — random directions in embedding space are person-stable too, so
 stability alone licenses nothing there. On this view the assessment of
 the future is neither hand-built nor black-box, but machine-proposed
-and theory-audited.
+and theory-audited — the design brief with which we began.
 
 Personality assessment has long treated the standardized test and the
 spontaneous sample as belonging to different traditions, one scorable
@@ -972,9 +996,13 @@ Dąbrowska, E. (2018). Experience, aptitude and individual differences in native
 
 Edwards, T., & Holtzman, N. S. (2017). A meta-analysis of correlations between depression and first person singular pronoun use. *Journal of Research in Personality, 68*, 63–68.
 
+Demszky, D., Yang, D., Yeager, D. S., Bryan, C. J., Clapper, M., Chandhok, S., Eichstaedt, J. C., Hecht, C., Jamieson, J., Johnson, M., Jones, M., Krettek-Cobb, D., Lai, L., JonesMitchell, N., Ong, D. C., Dweck, C. S., Gross, J. J., & Pennebaker, J. W. (2023). Using large language models in psychology. *Nature Reviews Psychology, 2*(11), 688–701.
+
 Dhami, M. K., Hertwig, R., & Hoffrage, U. (2004). The role of representative design in an ecological approach to cognition. *Psychological Bulletin, 130*(6), 959–988.
 
-Eichstaedt, J. C., Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods, 26*(4), 398–427.
+Eichstaedt, J. C., Hommel, B. E., Wollang, F.-J. M., Kotova, V., Zacher, H., & Schmukle, S. C. (2022). Transformer-based deep neural language modeling for construct-specific automatic item generation. *Psychometrika, 87*(2), 749–772.
+
+Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods, 26*(4), 398–427.
 
 Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. *Proceedings of the National Academy of Sciences, 115*(27), E6106–E6115.
 
@@ -996,7 +1024,11 @@ Mosteller, F., & Wallace, D. L. (1963). Inference in an authorship problem. *Jou
 
 Park, G., Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Kosinski, M., Stillwell, D. J., Ungar, L. H., & Seligman, M. E. P. (2015). Automatic personality assessment through social media language. *Journal of Personality and Social Psychology, 108*(6), 934–952.
 
+Pellert, M., Lechner, C. M., Wagner, C., Rammstedt, B., & Strohmaier, M. (2024). AI psychometrics: Assessing the psychological profiles of large language models through psychometric inventories. *Perspectives on Psychological Science, 19*(5), 808–826.
+
 Pennebaker, J. W., & King, L. A. (1999). Linguistic styles: Language use as an individual difference. *Journal of Personality and Social Psychology, 77*(6), 1296–1312.
+
+Peters, H., & Matz, S. C. (2024). Large language models can infer psychological dispositions of social media users. *PNAS Nexus, 3*(6), Article pgae231.
 
 Rauthmann, J. F., & Sherman, R. A. (2023). Patterned person–situation fit in daily life: Examining magnitudes, stabilities, and correlates of trait–situation and state–situation fit. *European Journal of Personality*. Advance online publication. https://doi.org/10.1177/08902070221104636
 
@@ -1007,6 +1039,8 @@ Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M.
 Shoda, Y., Mischel, W., & Wright, J. C. (1994). Intraindividual stability in the organization and patterning of behavior: Incorporating psychological situations into the idiographic analysis of personality. *Journal of Personality and Social Psychology, 67*(4), 674–687.
 
 van Halteren, H., Baayen, H., Tweedie, F., Haverkort, M., & Neijt, A. (2005). New machine learning methods demonstrate the existence of a human stylome. *Journal of Quantitative Linguistics, 12*(1), 65–77.
+
+Wright, A. G. C., Ringwald, W. R., Vize, C. E., Eichstaedt, J. C., Angstadt, M., Taxali, A., & Sripada, C. (2026). Assessing personality using zero-shot generative AI scoring of brief open-ended text. *Nature Human Behaviour, 10*(3), 541–555.
 
 Wright, D. (2017). Using word n-grams to identify authors and idiolects: A corpus approach to a forensic linguistic problem. *International Journal of Corpus Linguistics, 22*(2), 212–241.
 
