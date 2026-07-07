@@ -215,6 +215,20 @@ working approximation rather than a metaphysical commitment; several of
 its testable consequences are examined below, and one of our own
 estimators exists mainly to sound an alarm when the approximation fails.
 
+In symbols: for person u and slice i written in venue r(i),
+
+    y_ui = f_u + b_r(i) + γ_u,r(i) + ε_ui,        r(i) ~ π_u,
+
+where f_u is the person's context-invariant base, b_r the style offset
+of venue r, γ_u,r the person-by-venue signature, ε_ui noise, and π_u the
+person's venue-choice distribution. A person's raw construct score is
+the slice mean ȳ_u = f_u + m_u + γ̄_u + ε̄_u, whose mixture term
+
+    m_u = Σ_r π̂_ur b_r
+
+is a function of the choice profile alone; π̂_ur is the realized share
+of u's slices falling in venue r.
+
 Under these assumptions, personality can reach a text score through
 exactly three routes: through the choice distribution itself, through the
 context-invariant base, and through the structure of the interaction
@@ -224,14 +238,17 @@ point of naming them is not taxonomy but bookkeeping: every claim about
 covariance, and the channels behave differently under the operations
 researchers routinely apply.
 
-Three propositions make this concrete. Proofs are elementary and given in
-the Appendix; we state the content in words.
+Three propositions make this concrete. Proofs, together with estimator definitions sufficient to
+recompute every quantity, are given in Appendix A; here we state the
+content in words and key identities.
 
 *Proposition 1 (stability is a composite).* The mean of a person's slice
 scores estimates the sum of their base and a choice-weighted mixture of
 context effects. Because the choice distribution is stable, the mixture
 term is stable too, and retest correlations of raw scores therefore
-reflect both channels at once. The practical consequence is easy to
+reflect both channels at once. Formally, with stable shares the
+disjoint-occasion covariance of raw scores is Var(f) + Var(m) +
+2 Cov(f, m), up to signature and noise terms (Appendix A.2). The practical consequence is easy to
 underestimate. In a simulated corpus built to contain no personal style
 whatsoever, only styled venues and person-stable venue preferences,
 ordinary disjoint-occasion retest correlations still reach .64. High
@@ -242,8 +259,8 @@ that something may be the person's taste in venues.
 *Proposition 2 (centering is mediator adjustment).* Subtracting estimated
 context means from scores removes the mixture term, and with it every
 part of the person signal that travels through choice. Under independence
-of choice and context effects, the removed retest covariance can be
-written in closed form, and simulation with known ground truth reproduces
+of choice and context effects, the removed retest covariance is exactly
+Var(m) + 2 Cov(f, m) (Appendix A.3), and simulation with known ground truth reproduces
 it almost exactly (predicted −1.335, observed −1.332 in covariance
 units). When choice and context effects are coupled, as they are whenever
 people seek out venues that suit their style, the estimated context
@@ -266,7 +283,10 @@ category. From this we derive a purity criterion for trait language: a
 construct is described as a style trait only when it stays stable across
 entirely different categories of venue (category-disjoint stability) and
 only a small fraction of that stability can be attributed to stable
-venue choice rather than to style (a low choice-mediated share). The thresholds we use (disjoint stability of at least .15 with
+venue choice rather than to style (a low choice-mediated share). The share is estimated by
+covariance accounting, mediated share = 1 − Cov(f̂_e, f̂_l)/Cov_raw,
+where f̂ = ȳ − m̂ and the mixture estimate m̂ is cross-fitted, with
+venue effects estimated on other persons (Appendix A.4). The thresholds we use (disjoint stability of at least .15 with
 a mediated share below .30) are operational conventions, not derived
 constants, and we flag them as such.
 
@@ -656,3 +676,120 @@ Wright, D. (2017). Using word n-grams to identify authors and idiolects: A corpu
 Yarkoni, T. (2010). Personality in 100,000 words: A large-scale analysis of personality and word use among bloggers. *Journal of Research in Personality, 44*(3), 363–373.
 
 Yarkoni, T., & Westfall, J. (2017). Choosing prediction over explanation in psychology: Lessons from machine learning. *Perspectives on Psychological Science, 12*(6), 1100–1122.
+
+
+## Appendix A: Model, Proofs, and Estimator Definitions
+
+**A.1 Model and notation.** For person u and slice i written in venue
+r(i),
+
+    y_ui = f_u + b_r(i) + γ_u,r(i) + ε_ui,        r(i) ~ π_u,
+
+where f_u is the person's context-invariant base, b_r the style offset
+of venue r, γ_u,r the person-by-venue signature, ε_ui noise, and π_u
+the venue-choice distribution. Venue effects are mean-zero and
+independent across venues unless stated; γ and ε are mean-zero,
+independent of the rest, and independent across occasions. The raw
+score is the mean over a person's slices,
+
+    ȳ_u = f_u + m_u + γ̄_u + ε̄_u,        m_u := Σ_r π̂_ur b_r,
+
+with π̂_ur the realized share of u's slices in venue r; m_u depends on
+the choice profile alone. Stability quantities are covariances (or
+correlations) across persons between scores computed on an early and a
+late occasion with no shared text.
+
+**A.2 Proposition 1 (stability is a composite).** When the venue sets
+of the two occasions overlap and shares are stable, m_u^(e) ≈ m_u^(l),
+and expanding ȳ under A.1 with γ, ε independent across occasions gives
+
+    Cov(ȳ^e, ȳ^l) = Var(f) + Var(m) + 2 Cov(f, m) + [signature terms].
+
+Raw and shared-venue retest correlations therefore carry the full
+mixture variance. The simulated flesh-null world (f ≡ 0, styled venues,
+person-stable preferences) makes the size concrete: raw retest r = .64
+and shared-venue retest r = .43, while the disjoint estimand of A.4
+reads −.07 on the same world.
+
+**A.3 Proposition 2 (centering is mediator adjustment).** Choice
+mediates person → text (f_u → π_u → venue → y). Venue centering
+replaces y_ui by y_ui − b̂_r(i), which removes m̂_u from ȳ_u. When
+choice is independent of venue effects (π ⊥ b) and b̂ is estimated out
+of sample (cross-fitted), the removal is exact in expectation, and the
+change in disjoint-occasion covariance is
+
+    Δ Cov(retest) = − [ Var(m) + 2 Cov(f, m) ]  ≤ 0
+
+whenever the mixture is person-stable and non-negatively coupled. With
+oracle (true) venue effects the identity reproduces in simulation to
+−1.332 observed against −1.335 predicted, in covariance units. Under
+coupling — people seeking venues that suit their style — b̂ absorbs
+part of f itself (the regression of b̂ on b reaches slope 1.40 under
+strong coupling), so centering removes more than the first-order
+identity states. Boundary condition: under assigned contexts π is
+identical across persons, hence Var(m) = Cov(f, m) = 0 and centering
+removes only estimation noise.
+
+**A.4 Proposition 3 (identification needs disjointness) and the purity
+criterion.** Let the venue sets A_u (early) and B_u (late) be disjoint,
+venue effects independent mean-zero across venues, and π ⊥ b. Then
+Cov(m^A, m^B) = 0, and
+
+    Cov(ȳ^A_e, ȳ^B_l) = Var(f) + Cov(f, m^A) + Cov(f, m^B),
+
+so the disjoint-set estimand isolates Var(f) up to the base–mixture
+cross-terms: exact when Cov(f, m) = 0, upper-bound-flavored under
+positive coupling. Three channels survive coupling and are handled
+explicitly: (i) the two cross-terms above; (ii) venue effects
+correlated within a content class, which re-open mediation across
+"disjoint" venues and motivate the category-disjoint variant; and
+(iii) under strong coupling a residual mixture–mixture term, because
+the weights themselves depend on b. The covariance-accounting
+estimator of the total mediated share is
+
+    mediated_total = [Var(m) + 2 Cov(f, m)] / Cov_raw
+                   = 1 − Cov(f̂_e, f̂_l) / Cov_raw,        f̂ := ȳ − m̂,
+
+with m̂ cross-fitted (venue effects estimated on other persons; a
+self-estimation leak in an early version was caught and corrected, and
+the cross-fitting requirement is now standing policy). In generative
+worlds that violate the assumptions deliberately, mediated_total is
+upward-biased under strong coupling (.541 against a target of .426 in
+the recorded failing world), so on real data it is read as an upper
+bound on mediation; equivalently, 1 − mediated_total is a lower bound
+on the base share, the category-disjoint stability supplies the
+matching upper-bound-flavored arm, and the two bracket the truth. The
+operational purity criterion of the main text — category-disjoint
+stability of at least .15 with a mediated share below .30 — applies
+these estimands with thresholds that are conventions, flagged as such.
+
+**A.5 Scoring definitions (as frozen in code).** A construct's slice
+score is the percentage of tokens matching its fixed public list
+(tokens matched / tokens in slice × 100); a person's construct score is
+the mean over their slices; a composite construct is a fixed weighted
+sum of construct scores. Venues map to twelve content classes by a
+frozen map built once on development users. With s_uk person u's share
+of slices in class k and s̄_k the eligible-cohort mean share,
+
+    choice axis      a_uk = log( (s_uk + ε) / (s̄_k + ε) ),   ε = 10⁻⁴,
+    choice entropy   H_u  = − Σ_k s_uk log s_uk,
+
+with one class excluded as reference, leaving eleven axes. Disjoint-
+occasion stability is the Pearson correlation, across persons, of
+scores from the earliest and latest portions of each person's writing,
+separated by at least 90 days with no shared text; the same-category
+and different-category variants constrain the venues of the two
+portions as described in the main text. Sealed-test eligibility
+required at least 4 venue classes and at least 12 slices per person.
+
+**A.6 Overidentifying checks.** Three constraints hold under the model
+and are monitored as misspecification alarms: (i) Spearman–Brown
+consistency along the volume curve; (ii) the single-factor transport
+bound Cross(e, l) ≤ √(w_e · w_l) for any register or occasion pair —
+instantiated in the register study as .739 ≤ √(.782 × .857) = .819;
+and (iii) agreement, within sampling error, between mediated shares
+estimated by the shared-versus-disjoint contrast and by covariance
+accounting. Disagreement flags class-correlated venue effects or a
+failure of additivity, and one observed disagreement of exactly this
+kind is what forced the interval reading of A.4 rather than a point
+estimate.
