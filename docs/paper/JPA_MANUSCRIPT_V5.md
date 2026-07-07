@@ -9,43 +9,46 @@
      realized. v4.2 content and corrections carried forward; every
      number ledger-traceable. Final format details (word limits,
      portal) to be verified against the T&F author portal by the
-     author before submission. -->
+     author before submission.
+     v5.1 (2026-07-07): guidelines VERIFIED in browser (page updated
+     2026-06-22): <=40 pages ALL-INCLUSIVE (abstract, tables, refs,
+     captions, notes) -> Appendix A moves to supplemental material at
+     submission; abstract 200 words (done, 198); NO keywords (removed);
+     double-anonymous review, 2 referees; American spelling; double
+     quotation marks; T&F standard APA refs; Word template via
+     ScholarOne; no submission/publication/page charges; generative-AI
+     declaration + data availability statement REQUIRED (added);
+     CRediT supported; Open Science Badges available (apply:
+     Preregistered + Open Materials). -->
 
 # Text as Behavior in Chosen Situations: Theory, Development, and a Preregistered First Test of Sliced Utterance In-Context Assessment (SUICA)
 
 ## Abstract
 
-People reveal themselves in what they write, and a sizable literature
-now uses everyday language to assess personality. Much of that work
-treats what a text is about, and where it was written, as noise:
-features are residualized on topics, corpora are stratified by venue,
-and measurement is often confined to closed style dictionaries. We
-argue that in self-selected writing this habit removes signal rather
-than noise, because writers choose their contexts and the choices are
-themselves consistent, personality-expressive behavior. We develop this
-observation into a framework in which accumulated text is behavior
-distributed over chosen situations, reaching measurement through three
-channels — context choice, a context-invariant style base, and
-person-by-context signatures — and we operationalize it as Sliced
-Utterance In-Context Assessment (SUICA), a fully specified scoring
-procedure over fixed public word lists and a venue-choice profile.
-Study 1, conducted on PANDORA, a corpus of 17.6 million Reddit comments
-shared with us by its authors (development n = 3,183), supported the
-framework's two central predictions: removing context means lowered
-disjoint-occasion stability for every style measure examined (pooled
-Δ = −.09), and a purity criterion admitted only four of nineteen
-lexical constructs as candidate style traits, all of them form habits.
-Study 2 was a sealed, one-shot preregistered test (n = 1,058): two of
-seven directional hypotheses survived correction — first-person rate
-predicted Neuroticism (r = .111) and political-venue choice predicted
-Openness (r = .096) — the omnibus criterion failed, and no significant
-effect ran opposite its prediction. Exploratory benchmarks locate the
-unfitted instrument against supervised models fitted to the same users
-(mean r = .27). We discuss what a measure, unlike a predictor, is
-entitled to claim.
+People reveal themselves in what they write, and much of the literature
+that scores personality from everyday language treats what a text is
+about, and where it was written, as noise. We argue that in
+self-selected writing this removes signal, because writers choose
+their contexts, and the choices are themselves consistent,
+personality-expressive behavior. We develop a framework that reads
+accumulated text as behavior distributed over chosen situations,
+measured through three channels — context choice, a context-invariant
+style base, and person-by-context signatures — and operationalize it as
+Sliced Utterance In-Context Assessment (SUICA). In Study 1 (PANDORA;
+17.6 million Reddit comments; n = 3,183), removing context means
+lowered disjoint-occasion stability for every style measure
+(Δ = −.09), and a purity criterion admitted four of nineteen
+constructs as candidate style traits, all form habits. Study 2, a
+sealed preregistered test (n = 1,058), confirmed two of seven
+directional hypotheses — first-person rate predicted Neuroticism
+(r = .111), political-venue choice predicted Openness (r = .096) —
+while the omnibus criterion failed; no significant effect ran opposite
+its prediction. Exploratory benchmarks locate the unfitted instrument
+against supervised models (mean r = .27). We discuss what a measure,
+unlike a predictor, may claim.
 
-**Keywords:** personality assessment; verbal behavior; situation
-selection; behavioral signatures; idiolect; language analysis
+<!-- JPA checklist (2026-06-22): unstructured abstract of 200 words;
+     do NOT include keywords. -->
 
 ---
 
@@ -899,13 +902,27 @@ ledger and carry no confirmatory weight.
 
 ## Declarations
 
-<!-- Funding: [tbd]. COI: none. Ethics: secondary analysis of public
-     pseudonymous corpora; no new data collection. Consent: n/a. -->
+**Disclosure statement.** The authors report there are no competing
+interests to declare.
 
-Data and materials. The PANDORA corpus was created by Gjurković et al.
-(2021) and was provided to us by its authors; the essay corpus was
-created by Pennebaker and King (1999). Both are used under their original
-names and access terms, and neither is redistributed here.
+**Funding.** [Completed on the unblinded title page.]
+
+**Declaration of generative AI use.** Generative AI systems were used,
+under human direction, to implement analysis code, run the
+preregistered analyses, and draft manuscript text; the authors directed
+the program, verified the results against the public claims ledger, and
+take full responsibility for the content. An adversarial audit protocol
+with full recomputation rights, documented in that ledger, governed
+this use (see Transparency and Openness).
+
+**Data availability statement.** The PANDORA corpus was created by
+Gjurković et al. (2021) and was provided to us by its authors; the
+essay corpus was created by Pennebaker and King (1999). Both are used
+under their original names and access terms, and neither is
+redistributed. All scoring resources, analysis code, the complete
+claims ledger, the sealed preregistration, and the one-shot
+confirmatory report are available at [ANONYMIZED REPOSITORY LINK]; no
+raw user text or identifiers are redistributed.
 [Acknowledgment of the PANDORA team moves to the unblinded title page.]
 
 ## References
