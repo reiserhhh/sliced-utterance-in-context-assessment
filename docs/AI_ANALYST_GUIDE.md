@@ -52,6 +52,13 @@ has not been found yet.
   scrambled-anchor control: stability 0.49-0.55 for random-word anchors).
   An anchor/probe/concept-vector score may be adopted only with convergent >
   discriminant evidence against an independent measurement method.
+- G12 **Every comparison names its license (L0-L4)**: score comparisons are
+  valid only within their evidence-priced radius (COMPARISON_LICENSES.md). Cross-regime LEVEL comparisons are forbidden (F4 + PRED-4: no
+  covariate shortcut, no form-coordinate shortcut); cross-regime claims are
+  limited to direction and within-population rank order. C-family constructs
+  are never compared as style across themes — they are read as choice.
+  Forbidden without license: "higher/lower than" across regimes; permitted:
+  "same direction as", "ranked similarly within their own populations".
 - G10 **Machine-legible vs human-legible constructs**: constructs humans
   cannot recognize (e.g., apostrophe-omission register: human 0/8, machine
   r_B 0.649) are legitimate but must be labeled `machine_legible`; their
