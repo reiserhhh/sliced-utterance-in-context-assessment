@@ -71,12 +71,17 @@ predict best are largely topical (Schwartz et al., 2013; Eichstaedt et
 al., 2021). If what people write about were mostly noise around the
 person, removing it should have helped.
 
-We recently put the nuisance assumption to a direct test in a corpus of
-17.6 million forum comments, applying context centering in the strongest
+We recently put the nuisance assumption to a direct test in PANDORA
+(Gjurković, Karan, & Šnajder, 2021), a corpus of 17.6 million Reddit
+comments from roughly ten thousand users that its authors compiled for
+personality research and kindly shared with us, applying context
+centering in the strongest
 forms we could construct, including two-way fixed-effects estimates fitted
-out of sample with cross-fitting. Every variant lowered the
-disjoint-occasion stability of every style measure we examined; pooled
-across measures the loss was Δ = −.09 (95% CI [−.10, −.08]). The result
+out of sample with cross-fitting. Every variant lowered what we will
+call disjoint-occasion stability, that is, the correlation between scores
+computed from a person's earlier writing and from their later writing,
+with no text shared between the two; the drop held for every style
+measure we examined, and pooled across measures the loss was Δ = −.09 (95% CI [−.10, −.08]). The result
 seemed paradoxical only until we considered where the "nuisance" variance
 comes from. In observational corpora nobody assigns topics. Writers
 choose their venues and subjects, the choices repeat, and repeated choice
@@ -199,7 +204,8 @@ carries a context label, and in free ecologies the context was chosen.
 The choice distribution appears to be quite stable in its own right; in
 our development corpus, the similarity of a user's venue distribution
 across time separates same-user from different-user pairs with an area
-under the curve near .84, before any style measure enters. Third, we
+under the curve near .84, where .50 is chance and 1.00 is perfect
+separation, before any style measure enters. Third, we
 assume slice scores decompose additively into a person base, a context
 effect, a person-by-context interaction, and noise. We treat this as a
 working approximation rather than a metaphysical commitment; several of
@@ -254,9 +260,10 @@ the correlation. Splitting at the level of individual venues removes most
 of the mixture; splitting at the level of venue categories removes
 mediation that operates through correlated context effects within a
 category. From this we derive a purity criterion for trait language: a
-construct is described as a style trait only when its category-disjoint
-stability remains substantial while its estimated choice-mediated share
-is small. The thresholds we use (disjoint stability of at least .15 with
+construct is described as a style trait only when it stays stable across
+entirely different categories of venue (category-disjoint stability) and
+only a small fraction of that stability can be attributed to stable
+venue choice rather than to style (a low choice-mediated share). The thresholds we use (disjoint stability of at least .15 with
 a mediated share below .30) are operational conventions, not derived
 constants, and we flag them as such.
 
@@ -290,17 +297,69 @@ implies that no statistical adjustment can equate them. We found it
 useful to encode these licenses in the released software, which declines
 out-of-license comparisons rather than leaving the matter to a footnote.
 
+### From Text to Scores: The Procedure in Brief
+
+Because the argument so far has been abstract, it may help to walk
+through what is actually computed; exact parameters and code are in the
+Supplement. Scoring begins by concatenating a person's comments within
+each venue and cutting the result into consecutive 128-token windows,
+where a token is, roughly, a word. Windows shorter than 24 tokens are
+dropped, and so is any window in which the writer explicitly states a
+personality label ("as an INTJ..."), since a measure has no business
+reading the answer off the page. Each surviving slice is scored against
+fixed word lists. The lists are short, public, and version-pinned. A
+first-person score, for instance, is simply the percentage of tokens
+that are first-person forms: in the sentence "I think my plan might
+work, but you should try it first," two of twelve tokens (I, my) are
+first-person, so the slice scores 16.7 per 100 tokens. A person's score
+on a construct is the average over their slices; composite constructs
+are fixed weighted sums of such rates. Nothing is fitted per person,
+and revising any list requires demonstrating, on frozen data, exactly
+what the revision changes.
+
+The choice profile is computed from where the slices come from rather
+than from what they say. Each venue belongs to one of twelve content
+categories under a fixed venue-to-category map built once on development
+users (politics and news, gaming, sports, and so on), and a person's
+profile is their distribution of comments over the categories, expressed
+relative to the population. Someone who places 40% of their comments in
+political venues, against a population average near 10%, has a high
+politics-choice score regardless of anything stylistic in their writing.
+
+Stability and purity are computed by splitting each person's writing in
+time. We take the earliest and the latest portions, separated by at
+least 90 days, score each portion separately, and correlate the two
+scores across people; that is disjoint-occasion stability. For purity,
+the same split is computed twice more: once using only venues from the
+same categories in both portions, and once using venues from entirely
+different categories. A construct whose stability survives the
+different-category split is being carried by the person; one whose
+stability collapses there was being carried by the venues.
+
+The confirmatory test followed the same logic under stricter custody.
+The hypotheses, directions, eligibility rules, correction for multiple
+comparisons, and success rule were committed to a public repository
+whose initial commit hash serves as the seal; the analysis script was
+audited by an independent process and pinned by its own hash; the
+quarantined labels were then read exactly once; and the output,
+favorable or not, was published as computed.
+
 ## Empirical Evidence
 
 The evidence summarized here comes from a development program conducted
 on public corpora, with every analysis, correction, and retraction
 recorded in a public claims ledger; we report the parts that bear on the
 framework's claims and keep procedural detail in the Supplement. The
-main corpus is PANDORA (Gjurković et al., 2021), 17.6 million Reddit
-comments from roughly ten thousand users; development analyses used
-3,183 users with sufficient text in disjoint time windows. A second
-corpus of prompted student essays (Pennebaker & King, 1999) served as
-the assigned-context contrast. Confirmation labels were quarantined from
+main corpus is PANDORA (Gjurković et al., 2021), which we obtained
+directly from its authors; development analyses used 3,183 of its users
+with sufficient text in non-overlapping time windows. The
+assigned-context contrast is the stream-of-consciousness essay corpus of
+Pennebaker and King (1999), in which students wrote continuously on a
+fixed instruction, so that topic and venue were set by the researchers
+rather than chosen by the writers. Both corpora have long publication
+histories, and we use them under their original names and terms; the
+only unpublished data we collected ourselves (a small market-forum
+corpus) plays no part in the analyses reported here. Confirmation labels were quarantined from
 the start behind a preregistration sealed by the initial commit hash of
 a public repository, and were read exactly once.
 
@@ -462,7 +521,14 @@ publishers.
 
 ## Declarations
 
-<!-- unchanged from v2 skeleton -->
+<!-- Funding: [tbd]. COI: none. Ethics: secondary analysis of public
+     pseudonymous corpora; no new data collection. Consent: n/a. -->
+
+Data and materials. The PANDORA corpus was created by Gjurković et al.
+(2021) and was provided to us by its authors; the essay corpus was
+created by Pennebaker and King (1999). Both are used under their original
+names and access terms, and neither is redistributed here.
+[Acknowledgment of the PANDORA team moves to the unblinded title page.]
 
 ## References
 
