@@ -53,7 +53,10 @@ GAP_DAYS = 90
 def rebuild_passA_with_text() -> pd.DataFrame:
     cache = TIER_DIR / "phase2_passA_slicetext_s128_rebuild.parquet"
     if cache.exists():
-        return pd.read_parquet(cache)
+        frame = pd.read_parquet(cache)
+        frozen = pd.read_parquet(FROZEN_PASSA)
+        assert len(frame) == len(frozen), "cached rebuild no longer matches frozen artifact"
+        return frame
     comments = pd.read_parquet(TIER_DIR / "tier_u_comments.parquet")
     comments["author"] = comments["author"].astype(str)
     comments["subreddit"] = comments["subreddit"].fillna("__missing__").astype(str)
@@ -100,10 +103,18 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     frame = rebuild_passA_with_text()
     scored = score_slices_v2(frame[["user_id", "condition", "half", "slice_text"]])
-    wcl = rederive_op5_scores(frame.rename(columns={"half": "half_keep"})
-                              .assign(half=lambda d: d["half_keep"])[["user_id", "half", "slice_text"]])
-    wcl = pd.concat([frame[["condition"]].reset_index(drop=True),
-                     wcl.reset_index(drop=True)], axis=1)
+    # ROUND-10 FIX: wcl scores must be TRANSPORTED from the frozen op9-fit
+    # (dev-anchor builder), never refit on pass-A. The v1 of this script
+    # called rederive_op5_scores(pass-A), which silently REFITS
+    # TF-IDF/SVD/KMeans on the new corpus and reshuffles cluster IDs
+    # (same-ID vocabulary Jaccard <= 0.018 vs the registry constructs —
+    # round-10 audit, OVERTURNED). Standing rule: cluster/embedding-derived
+    # constructs are BOUND TO THEIR FIT; reusing an ID requires transporting
+    # the fitted transform.
+    import scripts.run_suica_dev_anchor_performance_v1 as dav
+    _, wcl_transform = dav.pandora_style_fit_and_battery()
+    wcl = pd.concat([frame[["user_id", "condition", "half"]].reset_index(drop=True),
+                     wcl_transform(frame["slice_text"]).reset_index(drop=True)], axis=1)
     long_v3 = scored
     cmap = pd.read_csv(CLASS_MAP)
     class_of = dict(zip(cmap["condition"], cmap["class_id"]))
@@ -132,6 +143,7 @@ def main() -> None:
         ci = (float(np.percentile(boot, 2.5)), float(np.percentile(boot, 97.5))) if len(boot) >= 100 else (np.nan, np.nan)
         if np.isnan(share):
             family = "undetermined"
+            ci = (np.nan, np.nan)  # round-10: no dangling CI on undetermined rows
         elif est["rho_class_disjoint"] >= 0.15 and share < 0.30:
             family = "F-family (flesh trait)"
         elif share > 0.30 and est["rho_class_disjoint"] < 0.10:
@@ -158,7 +170,9 @@ def main() -> None:
                       + "\n\n```json\n" + json.dumps(summary, indent=2) + "\n```\n\n"
                       "Gate (provisional, THEORY 7.2): F-family iff class-disjoint >= 0.15 AND "
                       "share < 0.30. Estimators licensed by W-B/W-B2/W-B2c/W-B3; mediated_total "
-                      "= upper bound under coupling; shares are bands per the F6.3 alarm.\n")
+                      "= upper bound under coupling AND rng-stream sensitive (~+/-0.02); shares "
+                      "are bands per the F6.3 alarm. wcl scores TRANSPORTED from the frozen "
+                      "op9 fit (round-10 rule: constructs are bound to their fit).\n")
     print(json.dumps(summary, indent=2))
 
 

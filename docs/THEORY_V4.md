@@ -112,10 +112,18 @@ stability (T1 pilot); the estimator layer (P0/P0-B + 9-world suite,
   carries over; what changes is the wider 23-anchor space (OP-23 fix:
   no manufactured between-category covariance). E7-family analyses should
   be re-run under v4 rates before any new state claim.
-- **Families**: F-family (gate-passing flesh traits) / C-family (choice
-  axes + venue-signature constructs) / composites (two-channel reporting)
-  / machine-only registers (wcl_60 lineage) — assignment table in
-  results/suica_c2_purity_all19_v1 and the registry.
+- **Families** (round-10 corrected, transported fit): F-family = {first_person,
+  wcl_60 apostrophe-omission (strongest flesh, 0.365 class-disjoint), wcl_13
+  negation, wcl_23 profanity} — **flesh lives in FORM** (mechanical/register
+  habits, the idiolect literature's person-pure markers); C-family (8) =
+  choice axes + content-vocabulary constructs — **rind carries CONTENT**;
+  composites (6, two-channel reporting); assignment table in
+  results/suica_c2_purity_all19_v1 and the registry. Empirical division of
+  labor on Essays transport: the 4 FORM constructs alone carry N/C/A at
+  near-full-battery level (0.150/0.119/0.117) while E requires the
+  content/choice side (F_ONLY E = -0.001). Standing rule from the round-10
+  defect: cluster/embedding-derived constructs are BOUND TO THEIR FIT —
+  transport, never refit, when reusing a construct ID.
 - **Residual layer**: OP-32 distinctive-profile machinery with stranger
   nulls; reported as layer 3.
 - **JP branch**: scorer v1 at stage 1/3 (machinery-grade; するな lookahead

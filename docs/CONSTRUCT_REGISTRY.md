@@ -78,15 +78,26 @@ design upgrade for the M-choose-K module.
 ## v4 channel-family classification (2026-07-07; flesh-purity gate,
 ## results/suica_c2_purity_all19_v1; gate provisional per THEORY v4 sec.3.2)
 
+**ROUND-10 CORRECTION (2026-07-07): the first classification run REFIT the
+wcl space on pass-A (same-ID vocabulary Jaccard <= 0.018 vs the registry
+constructs) — its wcl labels named DIFFERENT constructs and the table
+published here for a few hours was wrong (wcl_35 "F" and wcl_60
+"venue-coupled" were swap artifacts, both REVERSED under the correct
+transported fit). Standing rule: cluster/embedding-derived constructs are
+BOUND TO THEIR FIT; reusing an ID requires transporting the fitted
+transform.** The table below is the corrected, transported classification
+(auditor-reproduced independently before the fix landed).
+
 Gate: F-family iff class-disjoint retest >= 0.15 AND choice-mediated share
 < 0.30. NOTE the gate is CONSERVATIVE: class-disjoint arms are
-attenuation-uncorrected, so F-membership is likely undercounted (borderline
-composites wcl_03/36/11 sit at class_disj 0.10-0.12); SB-corrected gating is
-a v4.1 refinement item.
+attenuation-uncorrected (SB-corrected gating = OP-34); directive sits at
+class_disj 0.0997, strictly below threshold, with bootstrap flip
+probability ~0.49 (CI95 [0.065, 0.137]) — C vs composite is a coin flip
+for it.
 
 | Family | Members | Reading |
 |---|---|---|
-| **F-family (flesh traits, 2)** | first_person (0.268/0.279), wcl_35 media-consumption (0.206/0.212) | channel-pure style traits; the only constructs licensed for trait language without channel qualification |
-| **C-family (venue signatures, 7)** | directive_action (0.100/0.471 — borderline, class_disj exactly at threshold), novelty_play (0.033/0.587), wcl_60 apostrophe-omission (0.077/0.594), wcl_02 sports (0.028/0.450), wcl_07 politics (0.070/0.458), wcl_22 concrete-narrative (0.059/0.638), wcl_23 profanity (0.029/0.566) | stability rides venue choice; predictive but belongs to the CHOICE channel; **wcl_60 READING REVISED: the "orthographic register" is substantially venue-coupled (mobile/casual venue norms), not a pure personal habit — its r_B 0.649 stands but the channel attribution changes**; profanity as venue-normed matches subreddit-rule intuition |
-| **composite (7)** | wcl_03 positive-enthusiasm (0.103/0.537), wcl_36 family-narrative (0.124/0.364), wcl_11 technical (0.109/0.351), wcl_45 epistemic (0.057/0.280), wcl_25 media-narrative (0.058/0.244), wcl_54 analytic-formal (0.058/0.183), wcl_15 casual-interjection (0.082/0.042 — low mediation but weak flesh: "weak-signal" subtype, not mixed) | report two-channel; NOTE wcl_03 (the TF best edge +0.316) is majority choice-mediated — TF prediction rides heavily on the choice channel |
-| **undetermined (3)** | tension_core, wcl_13 negation, wcl_20 gaming-mechanics | shared-matched < 0.10 — too little set-based signal to decompose |
+| **F-family (flesh traits, 4)** | first_person (0.268/0.279), **wcl_60 apostrophe-omission (0.365/0.053 — the STRONGEST flesh construct in the inventory)**, wcl_13 negation (0.169/0.014), wcl_23 profanity (0.169/0.172) | channel-pure style traits. Pattern: **flesh lives in FORM** — pronouns, orthographic habit, negation, profanity are mechanical/register habits, exactly the idiolect literature's person-pure markers. wcl_60's machine-only legibility + strongest flesh purity now cohere: the construct humans cannot read is the most person-pure |
+| **C-family (venue signatures, 8)** | novelty_play (0.033/0.587), directive_action (0.0997/0.471 — borderline, see note), wcl_35 media-consumption (0.074/0.611), wcl_02 sports (0.041/0.592), wcl_25 media-narrative (0.075/0.538), wcl_54 analytic-formal (0.096/0.329), wcl_22 concrete-narrative (0.100/0.376), wcl_20 gaming-mechanics (0.021/0.595) | stability rides venue choice; predictive but belongs to the CHOICE channel. Pattern: **rind carries CONTENT** — the topic-vocabulary clusters land here |
+| **composite (6)** | wcl_03 positive-enthusiasm (0.140/0.508 — the TF best edge is majority choice-mediated), wcl_36 family-narrative (0.159/0.385), wcl_45 epistemic (0.159/0.320), wcl_11 technical (0.102/0.492), wcl_07 politics (0.110/0.336), wcl_15 casual-interjection (0.135/0.333) | report two-channel; wcl_36/wcl_45 sit just above the class-disjoint bar but fail the share arm — nearest F-candidates under OP-34 SB correction |
+| **undetermined (1)** | tension_core | shared-matched < 0.10 — consistent with its no-trait verdict |

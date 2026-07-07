@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 """SUICA scorer v4 — lexicon disjointification (OP-18 completion, OP-23 fix).
 
-Design fact discovered at build time: the four battery-feeding lexicons
-(self_focus, second_person, directive, negative_affect, conflict_threat,
-uncertainty, novelty_play) were ALREADY mutually disjoint in v3; all 20
-shared words cross into NON-battery categories. Assignment policy therefore
+Design fact discovered at build time (count corrected round 10): the EIGHT
+battery-feeding lexicons (self_focus, second_person, directive,
+negative_affect, conflict_threat, uncertainty, novelty_play, and
+redemption_growth via the adversity 0.4 weight) were ALREADY mutually
+disjoint in v3; every battery-touching shared word resolves with the
+battery lexicon as winner. Assignment policy therefore
 gives battery lexicons priority (they keep their members), which makes the
 five frozen v2 construct scores BIT-IDENTICAL under v4 — the frozen
 validation chain does not restart. What v4 changes is the WIDER 23-anchor
@@ -14,8 +16,13 @@ analyses and PRED-3 structure correlations.
 
 Every reassignment is logged in WORD_MOVES with a one-line rationale
 (primary-sense rule; battery-priority where applicable). Token-level
-disjointness only: morphological variants (plan vs planning/plans) remain
-in different categories where v3 put them — logged as K1 limitation.
+disjointness only: 4 morphological families remain split across categories
+(plan|plans/planning, try|tried, worse|worst, good|better|best) — K1
+limitation; round-10 audit bounds the reintroduced between-category
+correlation at <= +0.010 per pair (vs +0.16..+0.35 removed). Tokenizer
+nuance (round-10): v4 lowercases BEFORE findall, the frozen v3 after —
+divergent only for case-folding expansions (U+0130 'İ'); measured impact
+2/135,115 pass-A slices, 0/116,621 op9 slices.
 
 Selftest (`python scripts/suica_v4_lib.py`):
   S1 disjointness: no word in two v4 lexicons (hard assert);
