@@ -30,18 +30,38 @@ Trade-offs disclosed: lowest SJR of the shortlist; some reviewers will be
 clinical-assessment oriented (the governance/computational depth must be
 readable, hence the supplement strategy).
 
-## Alternatives (in order)
-1. Journal of Research in Personality (Elsevier deal, 164 waivers 2026;
-   NOT on the top-3% list) — the language-personality lineage venue
-   (Pennebaker & King 1999; Yarkoni 2010 appeared in JRP/JPSP orbit);
-   choose if research-community weight matters more than the top-3% list.
-2. Behavior Research Methods (Springer deal; top-3%) — tool-paper framing
-   for a methods audience; demoted per the audience concern, remains viable.
-3. Psychometrika (Cambridge UNLIMITED waiver; not top-3%) — the formal wing
-   (F-theorems + estimator licensing) as a separate methods paper later.
-4. European Journal of Personality — best community fit on paper, but moved
-   to SAGE (2021): no Waseda deal, not top-3%; free only via subscription
-   route without OA.
+## Submission ladder (REVISED with honest odds; user asked for realistic backups)
+
+Honest referee-eye assessment of JPA-worthiness: methodological rigor
+(sealed prereg, one-shot opening, full failure reporting, wrong-world
+licensing, 13-caught-errors audit trail, open code) EXCEEDS the JPA norm;
+empirical maturity (confirmed rs ~.10-.11, failed omnibus 2/7, one
+platform, English-only, heavy writers) is AT THE BOUNDARY. Verdict: viable
+as a "framework + worked construction + honest limits" paper; dead as a
+"new test ready for use" paper. Estimated desk-reject risk 20-30%,
+post-review acceptance ~30-40%. Worth the attempt; ladder mandatory.
+
+**DEAL TRAP (verify per title before each submission): read-and-publish
+agreements normally cover HYBRID journals only. Fully-OA titles
+(Scientific Reports, BMC Psychology, Heliyon, Nature Communications
+class) are typically OUTSIDE the waiver -> NOT free. All ladder entries
+below are hybrid titles of covered publishers.**
+
+1. **Journal of Personality Assessment** (T&F, top-3%, SJR 1.287) — attempt
+   first; community fit maximal (SPA's self-report x performance-based
+   discourse); typical first decision 2-3 months.
+2. **Journal of Research in Personality** (Elsevier hybrid) — the
+   language-personality lineage venue (Pennebaker & King, 1999); methods
+   friendly; est. 40-50%.
+3. **Personality and Individual Differences** (Elsevier hybrid) —
+   measurement development is routine there; fast review; est. 50-60%.
+4. **British Journal of Psychology** (Wiley hybrid) — general but
+   novelty-respecting; est. 40-50%.
+5. **Current Psychology** (Springer hybrid) — safety net; est. 60-70%.
+
+Re-framing cost between rungs is <= 1 day (the Introduction is modular:
+assessment-tradition paragraph swaps for a language-personality or
+general-psychology lead; everything else is venue-neutral).
 
 ## Two-paper trajectory (later, not now)
 The governance/audit protocol (wrong-world licensing + builder/auditor
