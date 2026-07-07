@@ -73,6 +73,17 @@ and literature home (LINGUISTIC_FOUNDATIONS sections 1/3):
 4. **Population/register-relative measurement (D1).** Reliability and
    norms never transport as constants across populations, registers, or
    languages (PRED-1b amendment; OP-7a level shifts; JP protocol T3).
+   **Cross-regime corollary (PRED-4, 2026-07-07, FAIL recorded)**: document
+   type (free/assigned/domain-locked) is NOT controllable as a covariate —
+   F4 bars adjustment whenever type is self-selected, and the tested
+   statistical shortcut (restricting to FORM coordinates, hoping their
+   between-person structure is regime-invariant) FAILED: CONTENT structure
+   transports better in 2/3 corpus pairs (pandora-essays 0.75 vs 0.60;
+   essays-x 0.74 vs 0.52). The within-corpus flesh/FORM finding and this
+   between-corpus result are different objects (stability decomposition vs
+   covariance geometry) — both stand. Licensed paths for cross-regime
+   comparability: within-person multi-regime DESIGN (the 2-arm instrument;
+   OP-35) plus regime-relative norms; nothing statistical substitutes.
 5. **Estimator honesty by wrong-world licensing.** Every estimand used for
    a claim must pass its violation-world test (the licensing map lives in
    FALSIFIER_MATRIX; suites replicate frozen conventions exactly).
