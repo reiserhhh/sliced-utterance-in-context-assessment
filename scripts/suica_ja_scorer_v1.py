@@ -84,7 +84,7 @@ JA_PATTERN_LEXICONS: dict[str, list[str]] = {
     # directive <- should/must/need/have to/don't/let/try(imperative)/please
     "directive": [r"べき", r"しなさい", r"して下さい", r"してください", r"した方がいい",
                   r"したほうがいい", r"する必要", r"なければならない", r"なきゃ",
-                  r"ないでください", r"するな(?![らりるれろ])", r"してみて"],
+                  r"ないでください", r"するな(?![らりるれろどんあぁーはさそかっなよね])", r"してみて"],
     # uncertainty <- could/maybe/might (modal constructions)
     "uncertainty": [r"かもしれない", r"かもしれません", r"かも(?=[。、\s]|$)",
                     r"気がする", r"だろうか", r"でしょうか", r"わからない", r"分からない"],

@@ -74,3 +74,19 @@ tech/beauty, narrative-media (+ 7 minor). choice_ax_11 (MBTI communities) is
 LEAKAGE-EXCLUDED from all external validation. Compositional (sum-constrained)
 scores — ipsativity note in Rulebook A3/E3; Thurstonian modeling listed as a
 design upgrade for the M-choose-K module.
+
+## v4 channel-family classification (2026-07-07; flesh-purity gate,
+## results/suica_c2_purity_all19_v1; gate provisional per THEORY v4 sec.3.2)
+
+Gate: F-family iff class-disjoint retest >= 0.15 AND choice-mediated share
+< 0.30. NOTE the gate is CONSERVATIVE: class-disjoint arms are
+attenuation-uncorrected, so F-membership is likely undercounted (borderline
+composites wcl_03/36/11 sit at class_disj 0.10-0.12); SB-corrected gating is
+a v4.1 refinement item.
+
+| Family | Members | Reading |
+|---|---|---|
+| **F-family (flesh traits, 2)** | first_person (0.268/0.279), wcl_35 media-consumption (0.206/0.212) | channel-pure style traits; the only constructs licensed for trait language without channel qualification |
+| **C-family (venue signatures, 7)** | directive_action (0.100/0.471 — borderline, class_disj exactly at threshold), novelty_play (0.033/0.587), wcl_60 apostrophe-omission (0.077/0.594), wcl_02 sports (0.028/0.450), wcl_07 politics (0.070/0.458), wcl_22 concrete-narrative (0.059/0.638), wcl_23 profanity (0.029/0.566) | stability rides venue choice; predictive but belongs to the CHOICE channel; **wcl_60 READING REVISED: the "orthographic register" is substantially venue-coupled (mobile/casual venue norms), not a pure personal habit — its r_B 0.649 stands but the channel attribution changes**; profanity as venue-normed matches subreddit-rule intuition |
+| **composite (7)** | wcl_03 positive-enthusiasm (0.103/0.537), wcl_36 family-narrative (0.124/0.364), wcl_11 technical (0.109/0.351), wcl_45 epistemic (0.057/0.280), wcl_25 media-narrative (0.058/0.244), wcl_54 analytic-formal (0.058/0.183), wcl_15 casual-interjection (0.082/0.042 — low mediation but weak flesh: "weak-signal" subtype, not mixed) | report two-channel; NOTE wcl_03 (the TF best edge +0.316) is majority choice-mediated — TF prediction rides heavily on the choice channel |
+| **undetermined (3)** | tension_core, wcl_13 negation, wcl_20 gaming-mechanics | shared-matched < 0.10 — too little set-based signal to decompose |
