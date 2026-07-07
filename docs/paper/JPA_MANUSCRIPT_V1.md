@@ -149,20 +149,154 @@ falsification series and confirmations (Sections 4-5), and the licensing
 limits — what comparisons the instrument does and does not permit —
 together with the designed next study (Section 6).
 
-## 2. The rind framework and formal results
+## 2. The Rind Framework and Formal Results
 
-<!-- TO WRITE NEXT: model equation; channels; F1-F6 with proofs in appendix;
-     number sources: THEORY_FORMAL_NOTES, wrong-world suite (W-B 0.637 etc.),
-     phase diagram cells; boundary condition; comparison licenses preview. -->
+### 2.1 Model and channels
 
-## 3. Validation architecture
+For author *u*, text slice *i*, and context ("rind") *r*(*i*) — the venue or
+topic shell inside which the slice was produced — we write
 
-<!-- TO WRITE: tiers U/D/L; lockbox budget; evidence tiers T1-T4; frozen
-     scorer + equivalence gates; wrong-world licensing table (9 worlds, 7
-     pass, 2 recorded FAILs with mechanism); builder/auditor protocol with
-     the 13-error taxonomy table (ledger audit log); comparison licenses
-     L0-L4. Sources: FALSIFIER_MATRIX, CLAIMS_LEDGER audit log, COMPARISON_
-     LICENSES. -->
+> *y*_ui = *f*_u + *b*_r(i) + *γ*_u,r(i) + *e*_ui,  with *r*(*i*) ~ *π*_u,
+
+where *f*_u is the author's context-invariant style base ("flesh"), *b*_r a
+context style offset, *γ*_u,r a person-by-context interaction, *e*_ui slice
+noise, and *π*_u the author's distribution over contexts. The single
+substantive commitment is the last clause: **contexts are chosen**, and the
+choice distribution *π*_u is itself a stable property of the person. Three
+measurement channels follow. C1 (choice): *π*_u relative to the population —
+which venues, in what proportions. C2 (style base): *f*_u — habits that
+survive crossing contexts. C3 (signatures): the structure of *γ*_u,r — the
+person's if–then patterning across situation classes, the textual descendant
+of behavioral signatures (Mischel & Shoda, 1995). Contexts come in regimes:
+free (the writer picks venue and topic; social platforms), assigned (an
+experimenter fixes the prompt; classic essay corpora), and domain-locked (an
+external domain fixes the macro-topic; special-interest communities). Which
+channels are measurable depends on the regime: fixing the rind by design
+silences C1 and purifies C2; free collection yields C1 at the cost of mixing
+rinds into every raw score.
+
+### 2.2 Six formal results
+
+Proofs and their simulation verifications are in Supplement A; here we state
+what changes practice. (F1) The raw user mean is a composite:
+E[ȳ_u] = *f*_u + *m*_u, with *m*_u = Σ_r *π*_ur·*b*_r. Because *π*_u is
+person-stable, the context-mix term *m*_u is person-stable too — a raw
+"style" score measures flesh PLUS frozen context choice. (F2) Retesting on a
+shared context set cannot separate them: shared-set retest covariance equals
+Var(*f*) + Var(*m*) + 2Cov(*f*, *m*). In a generative world with *f* ≡ 0 —
+no personal style whatsoever — the raw disjoint-occasion retest still reads
+*r* = .64 from choice alone. Stability, by itself, is not evidence of a
+style trait; this single fact reorganizes how text-based "reliability" must
+be read. (F3) Splitting contexts into disjoint sets kills the mix–mix term
+when context effects are independent and choice is uncoupled from them;
+person–choice coupling survives as cross terms, so disjoint-set estimates
+upper-bound flesh. A class-disjoint variant removes category-level mediation
+as well (in its licensing world, condition-level splits over-read flesh by
++.106 when context effects correlate within class, while the class-disjoint
+arm reads the planted flesh variance within tolerance). (F4) **The centering
+theorem.** Statistical removal of context means — the field's default
+"topic control" — is mediator adjustment. Under choice–effect independence
+it removes retest covariance by exactly Var(*m*) + 2Cov(*f*, *m*) (oracle
+simulation: −1.332 observed against −1.335 predicted), and under strong
+person–context coupling it over-removes even that, because estimated
+context effects absorb the flesh of the people who chose them (regression
+of estimated on true effects has slope 1.40 at coupling κ = 0.7; observed
+removal −1.583 against a first-order −1.294). The boundary condition is
+exact: with exogenously assigned contexts the mix term vanishes and
+centering is harmless. Removing topic variance is cleaning only in
+assigned-prompt designs; under self-selection it is deletion. (F5) The
+precision cost of context heterogeneity is weighted by a construct's
+context loading — venue-mix entropy costs reliability in proportion to how
+much of the construct's variance rides on context. (F6) The model
+over-identifies: transport across occasions or registers is bounded by
+√(rel₁·rel₂); independent mediation estimators must agree; their
+disagreement is a built-in misspecification alarm. (The alarm fired twice
+in our own data; the affected shares are reported as bands, not points.)
+
+### 2.3 Consequences for instrument design
+
+Three rules follow. Context is controlled by design, never by subtraction
+(F4). A construct may be called a style trait only after a purity check —
+substantial class-disjoint stability with a small choice-mediated share —
+because F1 guarantees that raw stability conflates the two channels. And
+every score carries a comparison license: within-context monitoring,
+cross-theme, cross-register, cross-regime, and cross-language comparisons
+are separately licensed by evidence, with cross-regime LEVEL comparison
+forbidden outright (Section 6); the prohibition is enforced in the released
+software, which raises an exception rather than returning a number.
+
+## 3. Validation Architecture
+
+The framework is only as credible as the machinery that could have killed
+it. Five components — each of which caught at least one real error during
+development — constitute what we propose as a reusable governance standard
+for computational assessment.
+
+**Frozen scoring with equivalence gates.** All scores are counts from
+version-pinned lexica and a fixed context map; no model weights, no
+fine-tuning. A scorer revision must prove equivalence or restart the
+validation chain: the v3.1 revision (apostrophe normalization) changed no
+headline value by more than .002 and was adopted as the ingestion default;
+the v4 revision (disjointifying the 20 words shared across lexica, each
+reassignment logged with its rationale) left every frozen construct score
+bit-identical while removing manufactured between-category covariance from
+the wider feature space.
+
+**Tiered data with a sealed lockbox.** Development users (*N* = 8,678) are
+permanently separated from confirmation labels. Development-tier anchor
+labels are used for orientation only, and every contact is disclosed in the
+preregistration itself. The confirmation tier — 1,401 Big-Five-labeled
+users, 375 dually labeled users, and the reserved half of an essay corpus —
+was sealed behind a preregistration whose seal is the initial commit hash
+of a public repository: hypotheses, directions, eligibility rules, the
+multiplicity correction, and the success rule were fixed in public before
+any confirmatory label was read, with a budget of two openings for the
+project's lifetime. Opening #1 (Section 5) was executed once, by a script
+whose own hash was pinned by an adversarial pre-audit, and is reported in
+full regardless of outcome.
+
+**Evidence tiers with ledger-first reporting.** Every claim lives in a
+public claims ledger at one of four tiers — exploratory; same-data
+pre-committed; held-out; lockbox-confirmatory — and prose may not use
+stronger language than the ledger row supports. The ledger records
+retractions and corrections in place. Every number in this manuscript
+traces to a ledger row and its source artifact.
+
+**Wrong-world licensing of estimators.** Before an estimator's output may
+support a claim, the estimator must demonstrate — in generative worlds that
+violate the model's assumptions one at a time — that it can tell the
+framework being true from being false. Nine worlds were run (choice-null,
+flesh-null, recovery grids, class-correlated contexts, coupled choice, a
+centering phase diagram, timescale aliasing, signature-null, leakage-only).
+Seven passed. Two produced recorded FAILs sharing a single mechanism — the
+composition bias of estimated context effects under strong person–context
+coupling — which converted the affected estimators into declared bounds
+rather than point estimators. The suite also caught a defect in itself (a
+tie-unsafe test statistic that fabricated signal in a heavily tied null
+world), yielding the standing rule that harnesses must replicate frozen
+estimator conventions exactly.
+
+**An adversarial builder/auditor protocol.** Every substantive result was
+attacked by an independent auditor with full recomputation rights before
+entering the ledger, under criteria pre-committed before execution. Across
+eleven rounds the audits caught thirteen real builder errors: nine
+mechanical — among them a self-estimation leak in a centering "rescue," an
+optimizer boundary collapse that included one falsely converged fit, an
+estimand asymmetry that had reversed a verdict, and a construct-identity
+swap caused by silently refitting a clustering instead of transporting it —
+and four interpretive over-claims, among them reading a disattenuation
+blow-up as evidence and over-labeling topical axes as form. Each error, its
+catch, and the standing rule extracted from it are part of the public
+record. We regard this audit trail not as a confession appendix but as the
+method's central reliability evidence: an assessment framework built by a
+fallible process that demonstrably catches its own failures.
+
+All development and auditing were AI-assisted under this protocol, with the
+human investigator fixing criteria, adjudicating scope, and holding final
+responsibility; builder and auditor roles were always executed by
+independent instances. We disclose this both as method transparency and
+because the governance pattern — freeze, seal, license, audit — is
+precisely what makes AI-assisted measurement research checkable.
 
 ## 4. Worked construction I: falsification and channels (development tier)
 
