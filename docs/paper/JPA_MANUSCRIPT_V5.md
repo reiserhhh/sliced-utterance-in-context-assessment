@@ -63,13 +63,13 @@ words from 75,000 social media users, found that open-vocabulary language
 features recover personality, gender, and age with striking specificity.
 Language-based assessments correlate with self-reports, agree with
 informant reports, and are stable over months (Park et al., 2015). For a
-field that has long wanted behavioral alternatives to the questionnaire,
-these are encouraging results, and they have encouraged applications
+field that has long wanted behavioral alternatives to the questionnaire
+(Baumeister et al., 2007), these are encouraging results, and they have encouraged applications
 ranging from large-scale epidemiology to clinical screening.
 
 
 The newest wave of this work runs through large language models, and
-its shape is instructive. Most of it retrofits the new machinery onto
+its shape is instructive. Much of it retrofits the new machinery onto
 instruments designed around human response processes: the models are
 administered psychometric inventories themselves (Pellert et al.,
 2024), whose validity arguments were built for human respondents and
@@ -94,11 +94,18 @@ to it.
 Less attention has been paid to a methodological habit that runs through
 much of this work. Because personality is understood as something that
 should hold across situations, and because text varies enormously with
-what it happens to be about, researchers routinely treat topical and
-situational variance as a nuisance. The moves are familiar: residualize
-features on topic models, stratify corpora by forum or genre before
-analysis, or restrict measurement to closed style dictionaries precisely
-because content words seem contaminated by circumstance. The intuition is
+what it happens to be about, the field's instruments have mostly
+been built to keep topical and situational variance out of the
+measurement. The closed-vocabulary tradition does this by design:
+LIWC-style dictionaries fix their word categories in advance, and
+their style core — function words — was chosen in part because it is
+nearly content-free (Tausczik & Pennebaker, 2010; Boyd & Schwartz,
+2021). Stylometry made the same choice a century earlier and for the
+same reason, favoring function words and character patterns precisely
+because they are robust to topic (Mosteller & Wallace, 1963;
+Stamatatos, 2009). And where context cannot be excluded by feature
+choice, the natural next step is to hold it constant or remove it
+statistically — the operation we put to a direct test below. The intuition is
 reasonable on its face. It is also, we will suggest, in quiet conflict
 with the field's own findings, since the open-vocabulary features that
 predict best are largely topical (Schwartz et al., 2013; Eichstaedt et
@@ -822,14 +829,18 @@ open-vocabulary methods over closed dictionaries (Schwartz et al., 2013;
 Kern et al., 2014) is expected, because topical features carry the
 choice channel that style dictionaries exclude by construction; on this
 reading the advantage reflects channel coverage more than lexical resolution; our own fit gradient reproduces the pattern within a single corpus, where opening the vocabulary roughly triples mean correlation over the committed feature set (Table 3). The decades-long robustness of function words as individual
-markers, from authorship attribution to Pennebaker's program, is equally
+markers, from authorship attribution to Pennebaker's program
+(Mosteller & Wallace, 1963; Tausczik & Pennebaker, 2010), is equally
 expected, because form habits are where the context-invariant base
-lives. The common observation that language models and dictionaries
-alike transfer poorly across platforms in level, while rank-order
-relations survive in attenuated form, matches the framework's boundary
+lives. The recurrent finding that language-based models lose accuracy when
+moved across platforms (Jaidka et al., 2018), while rank-order
+relations survive in attenuated form — as in our own transport to the
+essay corpus — matches the framework's boundary
 structure: levels are regime-bound, direction travels. And the repeated
-disappointment of affect word-rates as trait measures has a simple
-description here: they are heavily context-loaded and behave as states
+disappointment of affect word-rates as measures of stable individual
+differences — dictionary affect scores can even run in the wrong
+direction against the well-being of the populations producing them
+(Jaidka et al., 2020) — has a simple description here: they are heavily context-loaded and behave as states
 sampled at the wrong timescale, which is what the density-distribution
 view would suggest.
 
@@ -928,7 +939,7 @@ and theory-audited — the design brief with which we began.
 
 Personality assessment has long treated the standardized test and the
 spontaneous sample as belonging to different traditions, one scorable
-and one rich. A person's accumulated writing suggests the distinction is
+and one rich (cf. McClelland et al., 1989). A person's accumulated writing suggests the distinction is
 not fundamental. What people write about, where they choose to write it,
 and the small mechanical habits that persist regardless are all behavior;
 read together, under rules that respect which channel carries which
@@ -988,6 +999,10 @@ Allport, G. W. (1937). *Personality: A psychological interpretation*. Henry Holt
 
 Ambady, N., & Rosenthal, R. (1992). Thin slices of expressive behavior as predictors of interpersonal consequences: A meta-analysis. *Psychological Bulletin, 111*(2), 256–274.
 
+Baumeister, R. F., Vohs, K. D., & Funder, D. C. (2007). Psychology as the science of self-reports and finger movements: Whatever happened to actual behavior? *Perspectives on Psychological Science, 2*(4), 396–403.
+
+Boyd, R. L., & Schwartz, H. A. (2021). Natural language analysis and the psychology of verbal behavior: The past, present, and future states of the field. *Journal of Language and Social Psychology, 40*(1), 21–41.
+
 Brunswik, E. (1956). *Perception and the representative design of psychological experiments* (2nd ed.). University of California Press.
 
 Buss, D. M. (1987). Selection, evocation, and manipulation. *Journal of Personality and Social Psychology, 53*(6), 1214–1221.
@@ -1002,6 +1017,10 @@ Dhami, M. K., Hertwig, R., & Hoffrage, U. (2004). The role of representative des
 
 Eichstaedt, J. C., Hommel, B. E., Wollang, F.-J. M., Kotova, V., Zacher, H., & Schmukle, S. C. (2022). Transformer-based deep neural language modeling for construct-specific automatic item generation. *Psychometrika, 87*(2), 749–772.
 
+Jaidka, K., Giorgi, S., Schwartz, H. A., Kern, M. L., Ungar, L. H., & Eichstaedt, J. C. (2020). Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods. *Proceedings of the National Academy of Sciences, 117*(19), 10165–10171.
+
+Jaidka, K., Guntuku, S. C., & Ungar, L. H. (2018). Facebook versus Twitter: Cross-platform differences in self-disclosure and trait prediction. In *Proceedings of the Twelfth International AAAI Conference on Web and Social Media*. AAAI Press.
+
 Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods, 26*(4), 398–427.
 
 Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. *Proceedings of the National Academy of Sciences, 115*(27), E6106–E6115.
@@ -1013,6 +1032,8 @@ Furr, R. M. (2008). A framework for profile similarity: Integrating similarity, 
 Gjurković, M., Karan, M., Vukojević, I., Bošnjak, M., & Šnajder, J. (2021). PANDORA talks: Personality and demographics on Reddit. In *Proceedings of the Ninth International Workshop on Natural Language Processing for Social Media* (pp. 138–152). Association for Computational Linguistics.
 
 Kern, M. L., Eichstaedt, J. C., Schwartz, H. A., Dziurzynski, L., Ungar, L. H., Stillwell, D. J., Kosinski, M., Ramones, S. M., & Seligman, M. E. P. (2014). The online social self: An open vocabulary approach to personality. *Assessment, 21*(2), 158–169.
+
+McClelland, D. C., Koestner, R., & Weinberger, J. (1989). How do self-attributed and implicit motives differ? *Psychological Review, 96*(4), 690–702.
 
 Mehl, M. R., Gosling, S. D., & Pennebaker, J. W. (2006). Personality in its natural habitat: Manifestations and implicit folk theories of personality in daily life. *Journal of Personality and Social Psychology, 90*(5), 862–877.
 
@@ -1037,6 +1058,10 @@ Rauthmann, J. F., Sherman, R. A., & Funder, D. C. (2015). Principles of situatio
 Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., & Ungar, L. H. (2013). Personality, gender, and age in the language of social media: The open-vocabulary approach. *PLoS ONE, 8*(9), Article e73791.
 
 Shoda, Y., Mischel, W., & Wright, J. C. (1994). Intraindividual stability in the organization and patterning of behavior: Incorporating psychological situations into the idiographic analysis of personality. *Journal of Personality and Social Psychology, 67*(4), 674–687.
+
+Stamatatos, E. (2009). A survey of modern authorship attribution methods. *Journal of the American Society for Information Science and Technology, 60*(3), 538–556.
+
+Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology, 29*(1), 24–54.
 
 van Halteren, H., Baayen, H., Tweedie, F., Haverkort, M., & Neijt, A. (2005). New machine learning methods demonstrate the existence of a human stylome. *Journal of Quantitative Linguistics, 12*(1), 65–77.
 
