@@ -40,6 +40,30 @@ primary; ``theta_by_construct`` -- the [0, 1] MA(1) inversion of r_c (root
 of r = -theta/(1+theta**2)), meaningful only where r_c < 0 -- is kept for
 continuity.
 
+Period-2 energy (F12.6.3/F12.7): lag COORDINATES beyond the (Gamma0, B)
+pair are ill-posed under within-text centering (the centered lag map is
+severely ill-conditioned, and for pure m=5 support it is exactly singular:
+every text satisfies 3*s0 + 4*s1 + 2*s2 = 0 identically), but linear
+FUNCTIONALS whose left-solves are well-conditioned remain estimable. The
+one-number dynamics fingerprint is the normalized Nyquist ratio
+rho_pi = f(pi)/gamma0, with f(pi) = gamma0 - 2*gamma1 + 2*gamma2 -
+2*gamma3 + 2*gamma4 (spectral density at period 2, truncated at lag 4).
+Reference values: white gusts = 1; MA(1) bounce theta ->
+(1+theta)**2/(1+theta**2) (bounce piles energy at period 2); AR(1)
+carry-over phi -> (1-phi)/(1+phi); AR(2)-even a2 -> (1+a2)/(1-a2).
+Estimated per construct as w^T s over the pooled centered lag moments
+s = (S0, symS1, ..., symS4), with w = solve(M^T, c), c = (1,-2,2,-2,2),
+and M the exact centered lag map built by unit-band enumeration
+(``_centered_lag_map``) -- the estimable-functional replacement for lag
+coordinates. Reported as "period2_energy_by_construct" with
+"period2_mode" = "full5" | "truncated3" (a lag-2-truncated 3x3 fallback
+when lag-3/lag-4 pairs are thin) and "period2_reason" when neither is
+estimable (thin pairs, or a singular m-composition). MEASURED CAVEAT: the
+gamma0 left-solve is the map's ill-conditioned direction, so rho_pi is
+noise-hungry and leaks unmodeled bands beyond lag 4 -- e.g. AR(2)-even
+a2 = 0.4 at m = 8 reads ~1.41, not the process value 2.33. Treat rho_pi
+as a register fingerprint, not a process parameter.
+
 Flow (F12.1.iii): the wide difference d = (w_last - w_first)/(m-1) has
 Cov(d) = Sigma_flow + 2*Gamma0/(m-1)**2 with no Gamma1 term (endpoint gap
 >= 2), so subtracting the estimated gust term per m-stratum and
@@ -96,6 +120,21 @@ GAMMA0_UNESTIMABLE_REASON = (
     "motion structure is token-limited)"
 )
 FLOW_UNCORRECTED_FLAG = "uncorrected: gust moments not estimable"
+
+# F12.7 period-2 (Nyquist) functional: band depth, pair thresholds, guards.
+PERIOD2_MAX_LAG = 4
+PERIOD2_MIN_LAG_PAIRS = 100
+PERIOD2_COND_MIN = 1e-8  # relative sigma_min below this = singular composition
+PERIOD2_C_FULL = (1.0, -2.0, 2.0, -2.0, 2.0)  # f(pi) band weights, lags 0..4
+PERIOD2_UNESTIMABLE_REASON = (
+    "insufficient lag-2 pairs (need >= 100; the period-2 functional is "
+    "token-limited)"
+)
+PERIOD2_SINGULAR_REASON = (
+    "centered lag map is singular for this m-composition (pure m=5 support "
+    "carries the exact within-text constraint 3*s0 + 4*s1 + 2*s2 = 0; the "
+    "period-2 functional is unidentifiable)"
+)
 
 
 def text_window_frames(
@@ -225,6 +264,54 @@ def _invert_moments(
     return gamma0, b
 
 
+def _centered_lag_map(
+    n_list: list[int],
+    max_lag: int = PERIOD2_MAX_LAG,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Exact centered lag map M for a pooled n-composition (F12.7).
+
+    M[h, j] is the coefficient of gust band gamma_j in E[symS_h] (h, j =
+    0..max_lag), built by unit-band enumeration: for each distinct n (=
+    m - 2 rows), place gamma_j = 1 on the +-j bands of the m x m gust
+    Toeplitz, push it through the D2 filter rows [1, -2, 1] and the
+    within-text centering projection P = I - J/n, and read the mean lag-h
+    products of the resulting covariance; rows are pooled over texts with
+    pair weights n - h (exactly how the empirical symS_h pool). The 2x2
+    top-left equals the ``_centered_moment_coefficients`` system (asserted
+    in tests). Rows with no pairs anywhere (all n <= h) come back as nan
+    with pooled weight 0.
+
+    Returns (M, row_pair_weights).
+    """
+    counts: dict[int, int] = {}
+    for n_val in n_list:
+        counts[int(n_val)] = counts.get(int(n_val), 0) + 1
+    num = np.zeros((max_lag + 1, max_lag + 1))
+    weights = np.zeros(max_lag + 1)
+    for n_val, cnt in counts.items():
+        m = n_val + 2
+        filt = np.zeros((n_val, m))
+        for k in range(n_val):
+            filt[k, k], filt[k, k + 1], filt[k, k + 2] = 1.0, -2.0, 1.0
+        proj = np.eye(n_val) - np.ones((n_val, n_val)) / n_val
+        a_mat = proj @ filt
+        for j in range(max_lag + 1):
+            toep = (np.eye(m) if j == 0
+                    else np.diag(np.ones(m - j), j) + np.diag(np.ones(m - j), -j))
+            cov = a_mat @ toep @ a_mat.T
+            for h in range(max_lag + 1):
+                if n_val - h >= 1:
+                    num[h, j] += cnt * np.trace(cov, offset=h)
+        for h in range(max_lag + 1):
+            if n_val - h >= 1:
+                weights[h] += cnt * (n_val - h)
+    lag_map = np.full((max_lag + 1, max_lag + 1), np.nan)
+    for h in range(max_lag + 1):
+        if weights[h] > 0:
+            lag_map[h] = num[h] / weights[h]
+    return lag_map, weights
+
+
 def _top_eig(matrix: np.ndarray) -> tuple[float, np.ndarray]:
     """Largest eigenvalue/eigenvector of a symmetric matrix."""
     vals, vecs = np.linalg.eigh(matrix)
@@ -258,6 +345,8 @@ def motion_from_window_arrays(
     The primary dynamic output is ``memory_by_construct`` (signed r_c;
     positive = carry-over, negative = bounce); ``theta_by_construct`` is
     the continuity [0, 1] MA(1) reading, meaningful only where r_c < 0.
+    ``period2_energy_by_construct`` is the F12.7 normalized Nyquist ratio
+    (always from the exact centered lag map, independent of the flag).
     """
     inversion_mode = "naive" if naive_inversion else "corrected_f12_4"
     n_texts = len(window_arrays)
@@ -267,39 +356,51 @@ def motion_from_window_arrays(
             "Gamma0": None, "B": None, "gamma0_reason": "no texts",
             "memory_by_construct": None, "theta_by_construct": None,
             "inversion": inversion_mode,
+            "period2_energy_by_construct": None, "period2_mode": None,
+            "period2_reason": "no texts", "lag_pair_counts": {},
             "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         }
     if orig_m is None:
         orig_m = [int(arr.shape[0]) for arr in window_arrays]
     p = window_arrays[0].shape[1]
 
-    # ---- level (mean window vector) and wide difference d, per text ----
-    levels = np.stack([arr.mean(axis=0) for arr in window_arrays])
-    slopes = np.stack([
-        (arr[-1] - arr[0]) / (m_orig - 1)
-        for arr, m_orig in zip(window_arrays, orig_m)
-    ])
-
-    # ---- second differences, centered within text, pooled across eligible texts (F12.1.ii/F12.4) ----
-    d2_rows: list[np.ndarray] = []
-    adj_a: list[np.ndarray] = []
-    adj_b: list[np.ndarray] = []
-    n_rows_list: list[int] = []
+    # ---- group texts by (kept rows, original m) and stack once per group
+    # (identical math to a per-text loop; vectorized so large-N batches
+    # stay fast) ----
+    groups: dict[tuple[int, int], list[np.ndarray]] = {}
     for arr, m_orig in zip(window_arrays, orig_m):
-        m_i = arr.shape[0]
-        if m_i != m_orig:
-            continue  # subsample gaps -- second differences would span skipped windows
-        if not (D2_M_LO <= m_i <= D2_M_HI):
-            continue
-        d2 = arr[2:] - 2 * arr[1:-1] + arr[:-2]
-        d2c = d2 - d2.mean(axis=0, keepdims=True)  # center within text
-        d2_rows.append(d2c)
-        n_rows_list.append(d2c.shape[0])
-        if d2c.shape[0] >= 2:
-            adj_a.append(d2c[:-1])
-            adj_b.append(d2c[1:])
+        groups.setdefault((int(arr.shape[0]), int(m_orig)), []).append(arr)
 
-    n_d2 = sum(rows.shape[0] for rows in d2_rows)
+    level_sum = np.zeros(p)
+    slope_sum = np.zeros(p)
+    strata: dict[int, list[np.ndarray]] = {}
+    lag_sums = {h: np.zeros((p, p)) for h in range(PERIOD2_MAX_LAG + 1)}
+    lag_pairs = {h: 0 for h in range(PERIOD2_MAX_LAG + 1)}
+    n_rows_list: list[int] = []
+    for (m_kept, m_orig_g), arrs in sorted(groups.items()):
+        stack = np.stack(arrs)                                  # (n_g, m_kept, p)
+        n_g = stack.shape[0]
+        # level (mean window vector) and wide difference d, per text
+        level_sum += stack.mean(axis=1).sum(axis=0)
+        slopes_g = (stack[:, -1, :] - stack[:, 0, :]) / (m_orig_g - 1)
+        slope_sum += slopes_g.sum(axis=0)
+        strata.setdefault(m_orig_g, []).append(slopes_g)
+        # second differences, centered within text (F12.1.ii/F12.4/F12.7)
+        if m_kept != m_orig_g:
+            continue  # subsample gaps -- D2 would span skipped windows
+        if not (D2_M_LO <= m_kept <= D2_M_HI):
+            continue
+        n_i = m_kept - 2
+        d2 = stack[:, 2:, :] - 2.0 * stack[:, 1:-1, :] + stack[:, :-2, :]
+        d2c = d2 - d2.mean(axis=1, keepdims=True)               # center within text
+        n_rows_list.extend([n_i] * n_g)
+        for h in range(PERIOD2_MAX_LAG + 1):
+            if n_i - h >= 1:
+                lag_sums[h] += np.einsum("tkp,tkq->pq",
+                                         d2c[:, :n_i - h, :], d2c[:, h:, :])
+                lag_pairs[h] += n_g * (n_i - h)
+
+    n_d2 = lag_pairs[0]
     if n_d2 < MIN_D2_ROWS:
         gamma0_hat: np.ndarray | None = None
         b_hat: np.ndarray | None = None
@@ -307,11 +408,8 @@ def motion_from_window_arrays(
         theta_by_construct: list[float] | None = None
         gamma0_reason: str | None = GAMMA0_UNESTIMABLE_REASON
     else:
-        all_d2 = np.vstack(d2_rows)
-        s0 = (all_d2.T @ all_d2) / all_d2.shape[0]
-        a_mat = np.vstack(adj_a)
-        b_mat = np.vstack(adj_b)
-        s1 = (a_mat.T @ b_mat) / a_mat.shape[0]
+        s0 = lag_sums[0] / lag_pairs[0]
+        s1 = lag_sums[1] / lag_pairs[1]
         sym_s1 = (s1 + s1.T) / 2.0
         gamma0_hat, b_hat = _invert_moments(s0, sym_s1, n_rows_list,
                                             naive_inversion=naive_inversion)
@@ -324,16 +422,39 @@ def motion_from_window_arrays(
             memory_by_construct.append(r_c)
             theta_by_construct.append(_theta_from_ratio(r_c))
 
-    # ---- flow: per m-stratum wide-difference covariance, gust-corrected when possible (F12.1.iii) ----
-    strata: dict[int, list[np.ndarray]] = {}
-    for slope_row, m_orig in zip(slopes, orig_m):
-        strata.setdefault(m_orig, []).append(slope_row)
+    # ---- period-2 energy: normalized Nyquist ratio via exact left-functionals (F12.7) ----
+    period2_energy: list[float] | None = None
+    period2_mode: str | None = None
+    period2_reason: str | None = None
+    if lag_pairs[2] < PERIOD2_MIN_LAG_PAIRS:
+        period2_reason = PERIOD2_UNESTIMABLE_REASON
+    else:
+        full5 = (lag_pairs[3] >= PERIOD2_MIN_LAG_PAIRS
+                 and lag_pairs[4] >= PERIOD2_MIN_LAG_PAIRS)
+        n_bands = 5 if full5 else 3  # truncated: assume gamma3 = gamma4 = 0
+        lag_map, _map_weights = _centered_lag_map(n_rows_list)
+        map_sub = lag_map[:n_bands, :n_bands]
+        singular_values = np.linalg.svd(map_sub, compute_uv=False)
+        if singular_values[-1] < PERIOD2_COND_MIN * singular_values[0]:
+            period2_reason = PERIOD2_SINGULAR_REASON
+        else:
+            c_vec = np.asarray(PERIOD2_C_FULL[:n_bands])
+            w_pi = np.linalg.solve(map_sub.T, c_vec)
+            w_g0 = np.linalg.solve(map_sub.T, np.eye(n_bands)[0])
+            s_diag = np.stack([np.diagonal(lag_sums[h]) / lag_pairs[h]
+                               for h in range(n_bands)])         # (n_bands, p)
+            f_pi = w_pi @ s_diag
+            g0_f = w_g0 @ s_diag
+            period2_energy = [float(f / g) if g != 0 else 0.0
+                              for f, g in zip(f_pi, g0_f)]
+            period2_mode = "full5" if full5 else "truncated3"
 
+    # ---- flow: per m-stratum wide-difference covariance, gust-corrected when possible (F12.1.iii) ----
     sig_sum = np.zeros((p, p))
     n_total = 0
     corrected = gamma0_hat is not None
-    for m_val, rows in strata.items():
-        rows_arr = np.stack(rows)
+    for m_val, slope_groups in strata.items():
+        rows_arr = np.vstack(slope_groups)
         n_sel = rows_arr.shape[0]
         if n_sel < 2:
             continue  # cross-text covariance undefined on a single observation
@@ -353,14 +474,18 @@ def motion_from_window_arrays(
         flow_flag = None if corrected else FLOW_UNCORRECTED_FLAG
 
     return {
-        "level_mean": levels.mean(axis=0).tolist(),
-        "slope_mean": slopes.mean(axis=0).tolist(),
+        "level_mean": (level_sum / n_texts).tolist(),
+        "slope_mean": (slope_sum / n_texts).tolist(),
         "Gamma0": gamma0_hat.tolist() if gamma0_hat is not None else None,
         "B": b_hat.tolist() if b_hat is not None else None,
         "gamma0_reason": gamma0_reason,
         "memory_by_construct": memory_by_construct,
         "theta_by_construct": theta_by_construct,
         "inversion": inversion_mode,
+        "period2_energy_by_construct": period2_energy,
+        "period2_mode": period2_mode,
+        "period2_reason": period2_reason,
+        "lag_pair_counts": {h: int(lag_pairs[h]) for h in range(PERIOD2_MAX_LAG + 1)},
         "flow_lambda1": flow_lambda1,
         "flow_top_vector": flow_top_vector,
         "flow_flag": flow_flag,
@@ -374,6 +499,8 @@ def _empty_motion_profile(n_dropped: int, inversion_mode: str) -> dict[str, Any]
         "Gamma0": None, "B": None, "gamma0_reason": "no texts",
         "memory_by_construct": None, "theta_by_construct": None,
         "inversion": inversion_mode,
+        "period2_energy_by_construct": None, "period2_mode": None,
+        "period2_reason": "no texts", "lag_pair_counts": {},
         "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         "axis_series": None, "axis_mean_abs_projection": None,
         "licenses": list(LICENSES),
@@ -472,6 +599,10 @@ def motion_profile(
         "memory_by_construct": core["memory_by_construct"],
         "theta_by_construct": core["theta_by_construct"],
         "inversion": core["inversion"],
+        "period2_energy_by_construct": core["period2_energy_by_construct"],
+        "period2_mode": core["period2_mode"],
+        "period2_reason": core["period2_reason"],
+        "lag_pair_counts": core["lag_pair_counts"],
         "flow_lambda1": core["flow_lambda1"],
         "flow_top_vector": core["flow_top_vector"],
         "flow_flag": core["flow_flag"],

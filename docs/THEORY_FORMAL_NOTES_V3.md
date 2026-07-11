@@ -256,6 +256,59 @@ classify, the verdict is INDETERMINATE-AT-THIS-N, recorded as such (no forcing).
 KILL: γ4 CI-solid NEGATIVE for wcl_20/22 would reject both registered families and
 reopen the model class.
 
+## F12.7 — The normalized Nyquist ratio: a one-number dynamics fingerprint
+## (registered 2026-07-12, before W6)
+
+**Definition.** ρ_π ≡ f(π)/γ0, the period-2 spectral energy relative to total gust
+variance. Exact reference values: white = 1; MA(1) memory θ: ρ_π = (1+θ)²/(1+θ²)
+(bounce θ = .4 → 1.69; carry-over θ = −.4 → 0.31); AR(1) φ: ρ_π = (1−φ)/(1+φ)
+(φ = +.1 → 0.82); AR(2)-even a2: ρ_π = (1+a2)/(1−a2) (a2 = .4 → 2.33). One number
+separates bounce/alternation (> 1), carry-over (< 1), white (= 1).
+
+**Resolution of the W5 units puzzle (prediction, not post-hoc):** W5's RAW f_π ranked
+wcl_60 lowest — but wcl_60 is the certified bouncer, which must have HIGH relative
+Nyquist energy; its low raw value reflects a small γ0 in pooled-standardized units.
+Under normalization the ranking must INVERT for wcl_60. Estimation: f_π and γ0 via the
+exact left-functionals of the centered moment map (the W5 left-solve is well-conditioned,
+|v| ≈ 4.1, unlike the ladder coordinates); graceful degradation to a lag-2-truncated
+functional when lag-3/4 pairs are scarce (flagged mode).
+
+**W6 registered leans (BEFORE the runs).** Essays, normalized ratios with bootstrap CIs:
+(a) wcl_60 ρ_π > 1, CI-solid (bounce; ≈ 1.4–1.7 at its θ̂ ≈ .23–.34). (b) The carry-over
+set (wcl_35/36/13, first_person, wcl_03) ρ_π < 1 (≈ .8–.95). (c) wcl_20 and tension
+ρ_π > 1 (the period-2 flag, now in the right units). (d) Deployment: motion.py gains
+period2_energy (normalized ρ_π per construct) with synthetic tests recovering the four
+reference values above. KILL: wcl_60 ρ_π ≤ 1 CI-solid would contradict its certified
+bounce and reopen the wcl_60 story.
+
+## F12.7 results (W6a, run AFTER registration ed971f1)
+
+**Conditioning postscript (premise half-failed, registered fallback absorbed it).** The
+"well-conditioned left-solve" premise holds for f_π (|w| = 4.10) but NOT for the
+5-moment γ0 functional (|w| = 70.4 — it projects 0.61 onto the centering near-null
+direction; wcl_60/wcl_07 got negative point γ0 and 300+ dropped draws). The registered
+lag-2-truncated fallback (|w_γ0| = 5.77, cond(M3) = 110, all 19 γ0 positive) is the
+HEADLINE mode; 5-moment reported for transparency. Estimable-functional discipline now
+reads: check the LEFT-solve norm per functional, not per instrument.
+
+**Adjudication (truncated headline mode, mode-corrected reference values printed).**
+(a) wcl_60 ρ_π = 2.513, CI [1.280, 7.354] — **CI-SOLID ABOVE 1; the registered ranking
+INVERSION happened exactly** (lowest raw f_π → highest normalized ρ_π); KILL not fired;
+point above the predicted 1.4–1.7 band (wide upper CI, 40 small-γ0 draws dropped).
+(b) Carry-over set below 1: wcl_35 .752 [.607, .970], wcl_36 .768 [.647, .930], wcl_13
+.807 [.689, .959] CI-solid; first_person .841 [.714, 1.015] and wcl_03 .863 [.717,
+1.058] directional — 3/5 solid, 2/5 grazing.
+(c) **FAILED INFORMATIVELY: wcl_20 ρ_π = 0.770 [.645, .967] — CI-solid BELOW one, the
+OPPOSITE side**; tension .904 spans 1. wcl_20 carries the largest absolute f_π AND the
+largest γ0: its W4 lag-2 excess coexists with lag-1 carry-over that pulls net Nyquist
+energy sub-white. VERDICT: the "period-2 standing wave" reading of wcl_20/22 is DEAD at
+the net-energy level; what survives is an EVEN-LAG ANOMALY inside a carry-over-dominated
+spectrum (W4's R2 remains a real model-misfit signal). The separator is spectral SHAPE:
+f(π/2) = γ0 − 2γ2 + 2γ4 should be DEPRESSED for wcl_20/22 (positive γ2) — queued as W7.
+Unregistered: wcl_23 is the only other point > 1 (1.110 [.845, 1.622]), consistent with
+its W3 second-bouncer rank. Corpus mass sits at ρ_π ≈ .75–1.0 — the faint carry-over
+again, now in spectral units.
+
 ## F12.6 results (W5, run AFTER registration 6669ccc; engine cross-checks to 9e-16 on
 ## the W3/W4 blocks; truncation aliasing quantified pre-run — f_π is the most
 ## aliasing-robust output, and damped alternation can flip g3's sign, both recorded)

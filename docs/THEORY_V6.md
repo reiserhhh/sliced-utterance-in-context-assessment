@@ -28,6 +28,17 @@ disjoint CIs (wcl_20 1.033 / tension 1.016 top vs wcl_60 0.557 / first_person 0.
 bottom). New principle (F12.6.3): parameterize gust texture by well-conditioned spectral
 functionals, not autocovariance ladders — the estimable-functional move.
 
+v6.5 (same day): the normalized Nyquist ratio ρ_π = f(π)/γ0 (F12.7/W6) becomes the
+deployed one-number dynamics fingerprint (white 1; bounce > 1; carry-over < 1): wcl_60's
+predicted ranking INVERSION confirmed CI-solid (ρ_π = 2.51 [1.28, 7.35]); the carry-over
+set sits below 1 (3/5 CI-solid); the "period-2 standing wave" reading of wcl_20 DIED
+informatively (ρ_π = .770 CI-solid BELOW 1 — its lag-2 excess lives inside a
+carry-over-dominated spectrum; even-lag anomaly, W7 = f(π/2) shape separator). Two new
+exact facts from deployment verification: pure-m=5 truncated compositions are exactly
+singular (3s0+4s1+2s2 ≡ 0 at n=3), and the 5-moment γ0 left-functional is
+ill-conditioned (|w| ≈ 39-70) — the hybrid functional (f_π from the 5-moment solve, γ0
+from the truncated solve) is the queued deployment fix.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -231,6 +242,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
 | W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
 | W3 corrected re-inversion (0a4a97a) | corrected B̂ mean ≈ 0 (\|mean\| < .004); small-θ constructs shrink > half; wcl_60 ≥ .25 | POINT LEAN KILLED: B̂ mean = +.0303, CI [+.014, +.048], 500/500 draws > 0 — the naive negative was centering artifact (its CI contains the predicted −.013) hiding REAL mild positive memory; per-construct predictions ✓ (tension .070→.017, wcl_54 .057→.004, wcl_23 .103→.048, wcl_60 .34); "white gusts" superseded by faint persistence + wcl_60 bounce; instruments converge with W2a construct-by-construct |
+| W6 Nyquist ratio (ed971f1) | wcl_60 rho_pi > 1 CI-solid (ranking inversion); carry-over set < 1; wcl_20/tension > 1 | (a) CONFIRMED 2.51 [1.28, 7.35], inversion exact; (b) 3/5 CI-solid below 1; (c) FAILED INFORMATIVELY — wcl_20 .770 CI-solid BELOW 1 (standing-wave reading dead; even-lag anomaly inside carry-over spectrum); gamma0 5-moment functional ill-conditioned (premise half-wrong, registered fallback absorbed it); KILL not fired |
 | W5 gust ladder (6669ccc) | wcl_20/22 standing-wave (g4/g2 in (0.1,0.9)); wcl_60 lag-1-confined; memory set geometric; indeterminate-if-CIs-wide registered as (d) | (d) FIRED structurally: centering null direction (sigma_min .0087) makes lag coordinates ill-posed — coordinates unresolved 19/19, class rule vacuous (design flaw recorded); f(pi) tightly resolved and CONFIRMS the period-2 ordering with disjoint CIs (wcl_20 1.033/tension 1.016 vs wcl_60 .557/first_person .628); KILL not fired; new estimable-functional principle F12.6.3 |
 | W4 MA-vs-AR (5064a0a) | corpus R2 CI-solid positive; memory set AR; wcl_60 MA | corpus R2 +.021 directional only (CI spans 0); memory set 3/5 AR (wcl_35/36/13, φ̂ consistent with lag-1) with first_person/wcl_03 = one-step echo; wcl_60 MA ✓; UNREGISTERED: period-2 signature in wcl_20/wcl_22 (CI-solid lag-2 excess, both families fail) → W5 lag-3 separator |
 
