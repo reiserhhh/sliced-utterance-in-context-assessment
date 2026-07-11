@@ -1,4 +1,4 @@
-# SUICA Theory Formal Notes v2 — F7–F9: invariance, aggregation geometry, spectral nulls
+# SUICA Theory Formal Notes v2 — F7–F10: invariance, aggregation geometry, spectral nulls, factor fluidity
 
 Created 2026-07-11. Extends F1–F6 (SUICA_THEORY_FORMAL_NOTES_V1.md). Source of the
 mathematical apparatus: the field program's T-geometry reformulation
@@ -96,10 +96,121 @@ components exceed the edge, and all 4 replicate across halves** (early/late eige
 congruence .985 / .980 / .932 / .939). The battery's factor structure is real and stable by
 the RMT criterion. Follow-up target: OP-33's 48 co-selection axes (requires re-scoring).
 
+## F10 — Factor fluidity: the frame as a field (proposed 2026-07-11, user conjecture)
+
+**Motivating conjecture (user, verbatim intent).** Factors are not fixed; they FLOW with
+conditions (time, position within a text, venue — to be explored). If so, factors likely
+cannot be NAMED, but they take on a stronger role as AXES OF INDIVIDUALITY.
+
+**Context from F9.** T-GEO-P3 already constrains this: the population between-person frame
+is time-stable at half scale (4 supra-MP factors, early/late congruence .93–.99). So if
+flow exists, it must live (a) at finer condition scales than the half split, or (b) at the
+PERSON level — each person carrying their own frame — which is exactly where the conjecture
+points ("individuality as axes"). The population average frame can be rigid while the
+person-level frames disperse and drift.
+
+**F10.1 (frame field).** For a condition variable t (time block, text position, venue), let
+C(t) be the between-person correlation operator of the battery and V_k(t) ∈ Gr(k, p) the
+span of its top-k eigenvectors — a point on the Grassmann manifold. Factor FIXITY (H0) is
+the assertion that t ↦ V_k(t) is constant up to sampling noise; per F7 this is invariance
+of the chordal distance d(V_k(t), V_k(t')) = sqrt(k − ||V_tᵀV_t'||²_F) under the group that
+permutes condition labels within person. Factor FLOW is rejection of that invariance.
+
+**F10.2 (nameability criterion).** An axis is eligible for a NAME only if the frame is
+(i) condition-invariant (F10.1 H0 holds over the tested t) and (ii) person-shared (the
+person-indexed frames U_u concentrate near a common point of the Grassmannian). If (i) or
+(ii) fails, the surviving invariants are the eigenvalue spectrum and the person-level frame
+itself: the axis stops being a population construct and becomes a personal quantity. This
+gives mathematical form to the program's standing rule that vectors are not entitled to
+names by default (vector interpretation unlicensed until calibrated).
+
+**F10.3 (individuality as axes).** Person frame: U_u = leading eigenvector (or top-k frame)
+of person u's WITHIN-person slice correlation. The conjecture's positive content: U_u is
+trait-like — orientation, not only scores, is a personal signature. If it holds, the SUICA
+person representation extends from the score vector f_u to the pair (f_u, U_u) ∈ R^p ×
+Gr(1, p), and interperson distance gains a principal-angle term. Deployment is AI-native by
+construction: an axis needs no name to be used.
+
+**F10.4 (instruments and falsifiers — predictions REGISTERED BEFORE the runs).**
+
+| instrument | design | registered prediction | falsifier |
+|---|---|---|---|
+| T-GEO-P4 time flow | P2 block design (K=4, span ≥180d), per-block between-person corr, top-4 chordal distance d(1,4) + path length; null = within-user block-label permutations (500); arms pooled/top1 | NO detectable flow beyond null at block scale (P3 constraint); if pooled flows but top1 does not → venue-mix flow, mirroring P2 | flow detected on top1 arm would OVERTURN the fixed-population-frame reading of F9 |
+| T-GEO-P5 position flow | comments ≥288 tokens: open = first 128, close = last 128 tokens; per-construct paired mean shift (user-level primary) + open/close frame distance; null = per-comment open/close swaps, (Z/2)^N | mean-level shifts exist (hunches, stated for honesty: directive_action higher at close; first_person higher at open); frame rotation small | large frame rotation would relocate "style trait" claims to position-conditional claims |
+| T-GEO-P6 personal axes | per user per half: leading eigenvector of within-person slice corr (gate ≥12 slices/half; top1 arm ≥8); self early↔late |cos| vs stranger null (cyclic-shift derangements, F7 row 1); noise ceiling = within-half odd/even split; SHARP arm: residualize slices against the population top-4 frame first | self > stranger raw AND residualized (γ-channel precedent: E6 v3 profile signatures); early↔late ≈ odd/even ceiling (frames stable, no strong within-person drift) | **the conjecture DIES if residualized self ≤ stranger** (personal frames = noisy copies of the shared frame); early↔late ≪ odd/even ceiling would instead CONFIRM temporal flow of personal frames |
+
+**F10.5 (stated caveats, before results).** (a) P4 block means have heteroscedastic noise
+across blocks (slice counts vary within user); the exchangeability null is approximate.
+(b) P6 person frames are estimated from ~21 slices per half; estimation noise is symmetric
+between self and stranger pairings, so the comparison remains valid, but congruence
+magnitudes are attenuated — the odd/even ceiling is the honest yardstick. (c) P5 "position
+in text" is confounded with discourse function (openings and closings do different jobs);
+this instrument reads the confound deliberately, as a first probe. (d) All three are
+label-free Tier-U; no seals, no frozen objects touched.
+
+## F10 results (T-GEO-P4/P5/P6, run AFTER the registration commit 60ce99c, same day)
+
+**P4 — time flow of the population frame: PREDICTION HELD (rigid).** Pooled arm
+(n = 4,454): D14 = .2848 vs null mean .2603 (p = .342); PATH = .8248 vs .7624 (p = .244).
+Venue-held arm (n = 3,278): D14 = .2266 vs .2457 (p = .662); PATH p = .096. No movement
+beyond the within-user block-permutation null at block scale — consistent with F9's
+early/late congruence .93–.99. λ spectra flat across blocks.
+
+**P5 — position flow: prediction PARTLY WRONG (frame rotation is real).** 21,496 comments
+≥ 288 tokens (3,614 users; frame cohort 1,380 users ≥ 5 comments). Frame: chordal(open,
+close) = .4919 vs swap-null p95 .3475 (p < .002); per-PC best congruence [.965, .940,
+.732, .780] — PC1/PC2 position-invariant, PC3/PC4 REORIENT, while eigenvalue spectra
+barely move (orientation shifts, strength does not). Mean shifts (user level, close −
+open): first_person −0.687 (p < .0005; registered hunch CONFIRMED — openings are
+first-person territory), tension +0.055 (p < .0005), directive +0.026 (p = .104 —
+registered hunch FAILED, recorded); wcl_36/54/22/15/25 lower at close, wcl_02 higher.
+
+**P6 — personal axes: CONJECTURE SUPPORTED; kill condition NOT triggered.** Pooled arm
+(n = 2,430 users, ≥ 12 slices per half):
+
+| variant | self | stranger | p | ceiling early/late (odd-even) |
+|---|---|---|---|---|
+| raw | .2567 | .2237 | < .0033 | .2554 / .2508 |
+| residualized (pop top-4 projected out) | .2769 | .2155 | < .0033 | .2805 / .2917 |
+
+Self-congruence sits AT the odd/even ceiling → within-person frame rotation is at most
+mild (the ceiling uses half-sized estimates, so exactly zero is not claimable — a
+φ-correction of frame congruence is the natural F8×F10 follow-up). The decisive row is
+the residualized one: the self−stranger gap WIDENS (.061 vs .033) after the shared
+four-factor frame is projected out — personal orientation is not a noisy copy of the
+population factors. Venue-held arm (n = 938, ≥ 8 slices): raw ns (.204 vs .199,
+p = .173) but residualized significant (.2435 vs .2078, p < .0033) — within a single
+venue the personal orientation appears once the shared frame is removed. Alignment
+dispersion: median best |cos| of personal axes vs population PC1–4 = .4929 (IQR
+.394–.598) against a random-direction median .3332 (p95 .5475); best-match shares
+.42/.27/.17/.14 across the four PCs — the population frame describes individual frames
+poorly.
+
+**F10 verdict.** The population frame is rigid in time (P4, confirming F9); position
+within a text bends the third and fourth axes while leaving the first two and the
+spectrum intact (P5); and the person-level frame is a stable, individually informative
+orientation that the population factors do not capture (P6). Nameability (F10.2) fails at
+clause (ii) — person-sharedness — exactly as the conjecture proposed: the axes' role
+shifts from named population constructs to carriers of individuality. The F10.3
+representational consequence now has empirical backing: (f_u, U_u) with a principal-angle
+term is a licensed exploratory object. Naming individual axes remains UNLICENSED (the
+E11-v2 calibration rule applies unchanged); all congruence magnitudes are attenuated by
+~21-slice-per-half estimation and only ORDER claims (self vs stranger, self vs ceiling)
+are made.
+
+**F10 follow-ups (ledger-noted).** (a) φ-correct the odd/even ceiling to bound true
+temporal rotation of personal frames; (b) identify WHICH loadings move in the PC3/PC4
+position reorientation; (c) position-conditional scoring (open/close as micro-registers)
+as parallel-form material; (d) whether personal-axis geometry carries Tier-L signal —
+requires a NEW seal (NOT opening #2's registered candidates); deferred.
+
 ## Status
 
 F7–F9 are formal apparatus plus first instantiations, all three computed label-free on
-Tier-U (T-GEO-P1/P2/P3; ledger rows carry the authoritative numbers).
+Tier-U (T-GEO-P1/P2/P3; ledger rows carry the authoritative numbers). F10 was registered
+as conjecture + instruments + falsifiers at commit 60ce99c BEFORE the runs; T-GEO-P4/P5/P6
+results above landed the same day (ledger rows TGEO-P4/P5/P6). The manuscript carries the
+compact version (exploratory subsection + A.7(iv), v5.6, EN/JA/ZH).
 
 **T-GEO-P2 result (time-reversal drift, K=4 blocks, span >= 180 days, sign-flip null 2000
 draws).** Pooled arm (n = 4,454): first_person mean slope −0.224/yr (p < .0005), directive

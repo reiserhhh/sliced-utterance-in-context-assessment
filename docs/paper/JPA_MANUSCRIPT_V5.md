@@ -19,7 +19,12 @@
      ScholarOne; no submission/publication/page charges; generative-AI
      declaration + data availability statement REQUIRED (added);
      CRediT supported; Open Science Badges available (apply:
-     Preregistered + Open Materials). -->
+     Preregistered + Open Materials).
+     v5.6 (2026-07-11): factor-fluidity conjecture (F10) + three
+     label-free instruments (time / text position / personal axes);
+     exploratory subsection extended and retitled, A.7(iv) added.
+     Directional predictions registered and committed BEFORE the runs
+     (parent repo commit 60ce99c). -->
 
 # Text as Behavior in Chosen Situations: Theory, Development, and a Preregistered First Test of Sliced Utterance In-Context Assessment (SUICA)
 
@@ -819,7 +824,7 @@ Same-occasion cross-register correlations ran about .08 above
 opposite-half ones, a reminder that adjacency inflates and that
 disjoint-occasion designs remain the honest default.
 
-### Three Instruments From the Aggregation Geometry
+### Instruments From the Aggregation Geometry
 
 The instrument set gained a further, more mathematical layer late in the
 program, developed in a parallel deployment of the framework and imported
@@ -849,8 +854,39 @@ measure, and a boundary condition for within-person monitoring. The
 third instrument tests factor claims against a random-matrix benchmark:
 exactly four components of the nineteen-construct battery exceed the
 Marchenko–Pastur edge (empirical shuffle edge 1.169), and all four
-replicate across disjoint halves (loading congruences .93–.99). Formal
-statements and the associated falsifiers are collected in Appendix A.7.
+replicate across disjoint halves (loading congruences .93–.99).
+
+The same geometric register then posed a further question, arriving as
+a conjecture: is the factor frame itself fixed, or does it flow with
+conditions — and if it flows, do the axes stop being nameable and
+become carriers of individuality instead? Directional predictions were
+registered before the runs. Across time the population frame is rigid:
+the top-four eigenframe, recomputed over four within-person time
+blocks, moves no more than within-person block-permutation nulls allow
+(subspace-distance p = .24–.66 across two cohort definitions). Across
+position in a text it flows: comparing the opening against the closing
+128 tokens of 21,496 long comments, the first two axes hold
+(congruences .97 and .94) while the third and fourth reorient (.73 and
+.78; subspace distance p < .002 against per-comment swap nulls), and
+mean levels shift — first-person rate runs markedly higher in openings
+(user-level difference 0.69 rate units, p < .0005) and affect–tension
+slightly higher in closings, while a registered hunch that directive
+language rises toward closings failed (p = .10). Across persons the
+frame is a signature: each writer's leading within-person eigenvector
+matches itself across time-disjoint halves better than stranger
+pairings (mean |cos| = .257 vs. .224, p < .0033, n = 2,430), sits at
+the odd–even estimation ceiling (≈ .25), so any within-person rotation
+is at most mild, and — the registered kill condition — the
+self–stranger gap widens rather than closes (.277 vs. .216) once the
+shared four-factor frame is projected out: personal orientation is not
+a noisy copy of the population factors. Individual axes also disperse
+widely against those factors (median best alignment .49, against a .33
+random-direction median). The joint reading is specific: the population
+factors are stable coordinates, but at the person level the orientation
+itself is trait-like, individually informative, and not usefully
+nameable — one more measurement object that is natural for machine
+consumption and awkward for lexical interpretation. Formal statements
+and the associated falsifiers are collected in Appendix A.7.
 
 ## General Discussion
 
@@ -1224,7 +1260,7 @@ kind is what forced the interval reading of A.4 rather than a point
 estimate.
 
 
-**A.7 Invariance, aggregation geometry, and spectral checks.** Three
+**A.7 Invariance, aggregation geometry, and spectral checks.** Four
 further formal elements, added late in the program. (i) Every
 permutation null in this article is a choice of group G acting on
 labels; a construct carries G-signal iff its statistic's distribution is
@@ -1250,4 +1286,13 @@ constructs should be blended in φ, where independent-noise composition
 is additive, not in r. (iii) Factor claims about the battery are tested
 against the Marchenko–Pastur edge (1 + √(p/n))², with an empirical
 within-column-shuffle edge and a cross-half eigenvector-replication
-requirement.
+requirement. (iv) Whether the frame itself is fixed is one more
+invariance question: for a condition variable t, factor fixity asserts
+that the top-k eigenframe — a point on the Grassmann manifold Gr(k, p)
+— is constant in t up to sampling noise, testable by subspace distance
+against within-person condition-label permutations; a frame that
+replicates within persons while failing to be shared across them stops
+being a nameable population object and becomes a personal quantity.
+Predictions for the three fluidity instruments were registered before
+the runs, and the registered kill condition (residualized
+self-congruence at or below stranger congruence) was not triggered.
