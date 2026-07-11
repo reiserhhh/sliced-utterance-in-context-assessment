@@ -819,6 +819,39 @@ Same-occasion cross-register correlations ran about .08 above
 opposite-half ones, a reminder that adjacency inflates and that
 disjoint-occasion designs remain the honest default.
 
+### Three Instruments From the Aggregation Geometry
+
+The instrument set gained a further, more mathematical layer late in the
+program, developed in a parallel deployment of the framework and imported
+here; all three analyses are exploratory and label-free. The first reads
+aggregation through a projective coordinate. With φ(r) = r/(1−r), the
+Spearman–Brown lengthening family becomes exactly linear, φ(r_W) =
+W·φ(r₁), so plotting φ against a designed number of slices W tests the
+measurement model itself rather than any single reliability figure. On
+2,767 development users (nested designed subsets, W = 1, 2, 4, 8), the
+affect–tension composite followed the saturating alternative with an
+asymptote matching its realized full-half stability (fitted φ_max = 0.49
+against a realized 0.46): its low reliability is a ceiling, not a
+sample-size accident. The apostrophe construct violated the saturation
+model in the opposite direction — its fitted asymptote falls far below
+its realized large-W value — which is the signature of zero-inflation at
+the slice level: many 128-token slices offer no apostrophe opportunity
+at all, so at small W the construct behaves as a hurdle process rather
+than a rate. The second instrument is a time-reversal null: under
+stationarity, each person's occasion sequence is exchangeable with its
+reversal, so per-person sign flips give an exact null for mean drift.
+First-person rate drifts downward at −0.22 to −0.25 rate-units per year
+(p < .0005; n = 4,454 pooled, 3,278 venue-constant), and the drift
+survives holding each writer's single largest venue fixed — a
+within-person change, not a venue-mix change — while the construct
+remains rank-order stable: the classic maturation pattern of a trait
+measure, and a boundary condition for within-person monitoring. The
+third instrument tests factor claims against a random-matrix benchmark:
+exactly four components of the nineteen-construct battery exceed the
+Marchenko–Pastur edge (empirical shuffle edge 1.169), and all four
+replicate across disjoint halves (loading congruences .93–.99). Formal
+statements and the associated falsifiers are collected in Appendix A.7.
+
 ## General Discussion
 
 The framework began as an attempt to explain one uncomfortable result,
@@ -1189,3 +1222,32 @@ accounting. Disagreement flags class-correlated venue effects or a
 failure of additivity, and one observed disagreement of exactly this
 kind is what forced the interval reading of A.4 rather than a point
 estimate.
+
+
+**A.7 Invariance, aggregation geometry, and spectral checks.** Three
+further formal elements, added late in the program. (i) Every
+permutation null in this article is a choice of group G acting on
+labels; a construct carries G-signal iff its statistic's distribution is
+not G-invariant. The stranger-pairing null uses the derangement class of
+S_N; sign-flip nulls use (Z/2)^N; the refusal to shuffle time (the
+contiguous-halves rule) is the trivial-group row of the same table. An
+artifact, in this language, is a statistic that is constant on a larger
+orbit than the analyst believed. Stationarity itself becomes a testable
+invariance: reversing each person's occasion sequence maps drift slopes
+to their negatives, so per-person sign flips give an exact null for mean
+drift (the time-reversal instrument of the exploratory section). (ii)
+With φ(r) = r/(1−r), Spearman–Brown lengthening is exactly φ(r_W) =
+W·φ(ρ) (proof: φ(r_W) = Wρ/(1+(W−1)ρ−Wρ) = Wρ/(1−ρ)); reliability
+growth is linear flow in a projective coordinate. Under slice-clustered
+noise the curve bends to φ(W) = aW/(1+bW), concave with asymptote a/b,
+and the fitted asymptote must not fall below the realized large-W value
+— a consistency falsifier that the apostrophe construct fails, exposing
+slice-level zero-inflation. Because stable venue choice acts as signal
+in a retest, φ-curvature reads noise geometry only: it cannot detect the
+choice channel, and it complements rather than replaces the purity
+decomposition. One consequence is adopted as policy: composite
+constructs should be blended in φ, where independent-noise composition
+is additive, not in r. (iii) Factor claims about the battery are tested
+against the Marchenko–Pastur edge (1 + √(p/n))², with an empirical
+within-column-shuffle edge and a cross-half eigenvector-replication
+requirement.
