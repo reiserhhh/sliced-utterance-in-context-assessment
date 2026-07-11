@@ -1,6 +1,11 @@
 # SUICA THEORY V6 — Text as a Realized Path: the Unified Static + Motion Theory
 
 Created 2026-07-12. Status: theory document, Tier-U/T1 throughout; no seals touched.
+v6.1 (same day): the F12/W2 correction cycle (Fable-planned, Sonnet-executed) struck
+E3's bounce claim (leverage artifact — gust axes are white), unified wcl_60's three
+anomalies as sparse-burst dynamics, retracted the bid-ask-bounce sub-analogy, added the
+exact MA(1) moment inversions as standing audit equipment, and downgraded the P9 flow
+factor to conditional-on-iid-gusts (F12.2 identifiability theorem).
 
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
@@ -87,9 +92,14 @@ congruence .940 (second factor .782; static frames .923 at rank 1), while the PA
 flow-only gust factor — robust inside Reddit (time .956/.971, user-demeaning .982,
 64-token scale .622, large venues .926/.896) — lands at .200 (random ≈ .23) on Essays.
 Similarity: integrated covariance (asset-fundamental, portable) vs microstructure noise
-(market-specific) in realized-covariance theory; the gusts even carry the microstructure
-signature of NEGATIVE lag-1 autocorrelation (E3: −0.31 to −0.34 vs pairing null
-[−0.21, −0.17]; bounce = overshoot-then-compensate; leverage caveat recorded). FALSIFIER:
+(market-specific) in realized-covariance theory. [v6.1 correction: E3's apparent
+NEGATIVE lag-1 "bounce" was struck by the leverage-free Δ² instrument (W2a) — Essays
+gust axes are WHITE (ρ1(Δ²) = −.640 vs iid null −.649, p = .87); the certified texture
+is construct-level, not axis-level: the zero-inflated wcl_60 bounces (θ̂ ≈ .09,
+p = .0005) and content constructs carry over mildly, while PANDORA's thin long-comment
+stratum shows format-periodic alternation (quote/list structure), not an MA(1) field.
+The realized-covariance analogy stands on the portability split; the bid-ask-bounce
+sub-analogy is RETRACTED.] FALSIFIER:
 exhibit a statically invisible factor that transports across registers — one clean
 counterexample breaks the law.
 
@@ -98,7 +108,8 @@ counterexample breaks the law.
 | mathematical tool / theorem | SUICA object | what transfers | where the analogy is bounded |
 |---|---|---|---|
 | Itô/semimartingale decomposition (drift + martingale) | (M): level + flow·k + gust | which statistics read which layer; differencing reads the martingale part | our "time" is token position; increments are windows, not infinitesimal |
-| Realized covariance vs microstructure noise; Epps-type locality; bid-ask bounce (negative lag-1) | gust matrix Γ vs level/drift structure; T6 portability law; E3 anti-persistence | portable-fundamental vs local-texture split; bounce signature | no trading mechanism; "market" = register/genre |
+| Realized covariance vs microstructure noise; Epps-type locality | gust matrix Γ vs level/drift structure; T6 portability law | portable-fundamental vs local-texture split | no trading mechanism; "market" = register/genre; the bid-ask-bounce sub-analogy was tested and RETRACTED (W2a: axes white; wcl_60 the lone sparse-burst bouncer) |
+| MA(1) moment inversion; Δ² prewhitening (exact ρ1 = −2/3 under iid) | F12 identities: Γ̂0 = (7S0+8·symS1)/10, B̂ = (6Γ̂0−S0)/8; leverage-free dynamics test | exact estimator + audit of our own flow estimator (Σ̂ = Σ_flow + (2/3)B on m=3) | m = 3 support cannot separate Σ_flow from B (F12.2 theorem) |
 | Martingale LLN / averaging | T1: Γ/m attenuation — "stop and coherence disappears" | exact | — |
 | Spearman–Brown as Möbius flow; projective line (F8) | φ(r) = r/(1−r) linearization; composites blend in φ | exact theorem | — |
 | Marchenko–Pastur edge (RMT) | factor claims vs shuffle edges (P3, F10.8, F11) | exact null construction | heteroscedasticity → empirical edges preferred |
@@ -155,7 +166,10 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 ## 6. Open instruments (designed, not yet executable / not yet run)
 
 - Single-text sufficiency (F11.5): needs many long texts per person — native corpus.
-- Leverage-free gust dynamics (E3 redesign: second-difference prewhitening).
+- Leverage-free gust dynamics: DONE (W2a, F12) — outcome: axes white, wcl_60 bounces,
+  content constructs carry over; E3's bounce struck.
+- Format-aware PANDORA windowing (quote/list periodicity in long comments — the W2a
+  saturation/flip signature); until then, PANDORA m ≥ 4 dynamics are not interpretable.
 - Small-venue gust heterogeneity (E1: power vs true heterogeneity at n ≤ 75).
 - Person-level motion style portability (needs a second register with per-person volume).
 - wcl_13 super-linearity (F8.3 flag); OP-33 co-selection axes under the MP edge.
@@ -174,8 +188,10 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | P9 flow-only factors (a493ff6) | exists at gust layer; ordered flow too weak; person-level open | gust ✓ (all gates, vocab-disjoint); ordered flow CERTIFIED (lean too pessimistic); person-level died at rep .150 |
 | E1 gust robustness (8e2b0ba) | venue ≥.6; time ≥.7; demeaned ≥.8; scale64 .4–.6 | large venues .90–.93 ✓; small venues FAIL (power?); time .86–.97 ✓; demeaned .982 ✓; scale64 .622 ✓ |
 | E2 Essays transport (8e2b0ba) | first_person transports; gust congruence ≥ .5; essay-level invisible factor exists; composite wins CV | first_person ✓ (+ curvature); **gust .200 — KILLED as registered**; invisible factor ✗ (visible factors transport .94 instead); composite ✗ (no CV gain) |
-| E3 gust dynamics (8e2b0ba) | AR ≈ 0 white; boundary-elevated magnitude | ✗ anti-persistent (−.31 vs null −.19, bounce); magnitude arm INCONCLUSIVE (leverage flaw, recorded) |
+| E3 gust dynamics (8e2b0ba) | AR ≈ 0 white; boundary-elevated magnitude | ✗ anti-persistent (−.31 vs null −.19, bounce); magnitude arm INCONCLUSIVE (leverage flaw, recorded) — E3's bounce later STRUCK by W2a |
 | E4 person retry (8e2b0ba) | ≥1 component, rep ≥ .5 at gate ≥5 residualized | ✓ rep .777 (gate 5) / .784 (gate 8) |
+| W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
+| W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
 
 Score: roughly half the leans held. The program's value is exactly that the instruments,
 not the leans, decided — and that both corpora, both directions of surprise, and one

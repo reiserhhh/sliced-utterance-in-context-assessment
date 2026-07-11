@@ -90,6 +90,112 @@ level scores at matched token budgets) is DESIGNED but not executable on current
 (PANDORA: too few m >= 4 texts per user; Essays: one text per person) — declared open for
 the native corpus (OP-36).
 
+## F12 — MA(1) gusts: exact identities, an identifiability theorem, and the correction
+## of our own flow estimator (registered 2026-07-12, before the W2 runs)
+
+Process note (operator directive): analysis/planning by Fable, execution by Sonnet
+agents; mathematical reduction to the base model over lexical narration; iterate
+experiment -> correction -> theory.
+
+**F12.1 (model (M′) and exact identities; derived, not fitted).** Replace iid gusts in
+(M) with MA(1): g_k = η_k − θ η_{k−1} (multivariate: g_k = η_k − Θ η_{k−1}). Write
+Γ0 = Cov(g_k), Γ1 = Cov(g_k, g_{k+1}), B = (Γ1 + Γ1ᵀ)/2; E3's anti-persistence means B
+has a negative direction. Exact consequences:
+
+(i) Second differences Δ²w_k = w_{k+1} − 2w_k + w_{k−1} kill level and linear drift
+    PER TRIPLE (no OLS, no leverage). Univariate lag-1 autocorrelation of Δ² under (M′):
+
+        ρ1(Δ²)(θ) = −(4(1+θ²) + 7θ) / (6(1+θ²) + 8θ),
+
+    equal to −2/3 iff θ = 0, strictly decreasing to −3/4 as θ → 1. This is the
+    leverage-free replacement for E3: the iid hypothesis pins ρ1(Δ²) at −2/3 exactly.
+
+(ii) Multivariate moment identities: S0 ≡ Cov(Δ²) = 6Γ0 − 8B and sym S1 ≡
+     sym Cov(Δ²_k, Δ²_{k+1}) = −4Γ0 + 7B. Hence the EXACT inversions
+
+        Γ̂0 = (7·S0 + 8·sym S1)/10,       B̂ = (6·Γ̂0 − S0)/8.
+
+(iii) Wide difference d = (w_{m−1} − w_0)/(m−1) has Cov(d) = Σ_flow + 2Γ0/(m−1)²
+     with NO Γ1 term (endpoint gap ≥ 2), so a CORRECTED flow estimator exists on m ≥ 5:
+
+        Σ̂_flow(corrected) = Cov(d) − 2Γ̂0/(m−1)²   (per-m stratum, precision-pooled).
+
+**F12.2 (identifiability theorem — our own P9 estimator is contaminated).** On adjacent
+3-point support, Cov_ℓ = Σ_flow + Γ0/2 (the ℓ kernel is γ1-free) and Cov_q = Γ0 − (4/3)B,
+so the F10.8 estimator satisfies EXACTLY
+
+        Σ̂ = C_ℓ − C_q/2 = Σ_flow + (2/3)B.
+
+Σ_flow and B are therefore NOT separately identifiable on m = 3; the P9 "ordered flow
+factor" (λ1 = .486, rep .809) is certified only under B = 0. With B in the E3 direction
+the estimator is biased along B's structure. STATUS DECISION (theory-level): the P9 flow
+claim is DOWNGRADED to conditional-on-iid-gusts pending an m ≥ 5 correction in that
+register (PANDORA m ≥ 5 is too thin: ~41 comments).
+
+**F12.3 (registered leans for the W2 runs; Sonnet executes).**
+(a) W2a Δ² dynamics: Essays ρ1(Δ²) below the iid simulation null (matched m's, same
+    centering pipeline); gust-axis θ̂ in [.1, .5]. KILL: ρ1(Δ²) consistent with the iid
+    null strikes E3's anti-persistence as pure leverage artifact and restores white gusts.
+(b) W2b corrected separation (Essays m in 5..12): corrected λ1(Σ̂_flow) RISES vs the
+    uncorrected value (the +2/3·B contamination is negative-leaning), but author-half
+    replication stays < .5 — flow remains uncertified on Essays (lean).
+(c) Bounce factor: λ1(−B̂) exceeds the within-text permutation null; author-half
+    replication ≥ .6; top eigenvector congruent with Γ̂0's top ≥ .6 (bounce structure ≈
+    gust structure, common-θ reading). Level-visibility: open.
+(d) The F12.2 downgrade of P9 stands regardless of W2 outcomes (it is a theorem).
+
+## F12 results (W2a/W2b, run AFTER registration da07462; Sonnet-executed under Fable
+## specs; W2b agent validated the inversions on synthetic MA(1) at six θ values)
+
+**W2a — leverage-free Δ² dynamics.**
+Essays primary arm (1,349 texts 5 ≤ m ≤ 12, 4,746 pairs; iid simulation null mean
+−0.6487, band [−.663, −.634]):
+- **gust axes are WHITE: gust1_E ρ1 = −0.6402, p = .871 (θ̂ = 0); gust1_P −0.6581,
+  p = .095 (θ̂ = .036). The registered kill fired against E3: its anti-persistence
+  (−0.31 vs pairing null −0.19) was the OLS-leverage artifact. E3's bounce claim is
+  STRUCK.**
+- The one certified bouncer: **wcl_60, ρ1 = −0.6711, p = .0005, θ̂ = .091** (sensitivity
+  arm p = .034) — the zero-inflated apostrophe construct. Bounce = burst-recovery of
+  sparse events. This UNIFIES wcl_60's three anomalies (F8.3 asymptote violation, the v5
+  hurdle regime, θ > 0) under one mechanism: sparse event bursts.
+- Systematic MILD POSITIVE persistence (ρ1 significantly LESS negative than null;
+  one-sided p ≥ .97) for content-flavored constructs: first_person (.9955), wcl_36
+  (.997), wcl_07 (.998), wcl_13/35/15 (~.996-.998), wcl_02/03 (.98), novelty (.971) —
+  topic carry-over, |Δρ1| ≈ .015-.024. The gust field is white on average with a
+  textured split: sparse constructs bounce, content constructs carry over slightly.
+- PANDORA m ≥ 5 (29 texts, 95 pairs; wide null [−.74, −.53]): axes −0.797/−0.805
+  (p < .0005) and several constructs SATURATE the MA(1) boundary (wcl_02 −0.846; in the
+  m ≥ 4 arm wcl_36 −0.995, wcl_11 −0.976, novelty −0.967) while wcl_11 FLIPS from −0.203
+  (m 5-12) to −0.976 (m 4-12) — arm-flipping plus ρ1 ≈ −1 signals near-deterministic
+  window ALTERNATION, i.e., FORMAT PERIODICITY (quote/reply and list structure in long
+  Reddit comments), not an MA(1) gust field. Register-local texture (consistent with
+  T6); psychology NOT claimable; format-aware windowing = new open instrument.
+
+**W2b — corrected separation + bounce factor (Essays, 1,349 texts, 8,793 windows).**
+- **B̂ ≈ 0**: diag mean −0.0103 against Γ̂0 diag ≈ 0.73 (implied mean θ ≈ .014);
+  per-construct implied θ nonzero for 10/19, led by wcl_60 = .43 (diag method — cruder
+  than W2a's .09, same unique flag), wcl_23 = .10, tension = .07.
+- **Bounce factor: DOES NOT EXIST** — λ1(−B̂) = .175 with permutation p = .98 (observed
+  SMALLER than 98% of order-permutation draws), half-replication .108, congruence with
+  Γ̂0 = .026. Registered lean (c) wrong on every gate — coherent with W2a: no common
+  bounce structure because the average memory is zero.
+- Corrected flow: λ1(Σ̂_flow) = .0307 (comparator without the 2Γ̂0/(m−1)² subtraction:
+  .1036 — the drop is removal of gust inflation, not of B contamination, since B̂ ≈ 0),
+  half-replication .308, bootstrap point-below-CI bias noted by the executing agent —
+  **flow remains UNCERTIFIED on Essays** with the correct machinery.
+- P9 status: the F12.2 downgrade STANDS (it is a theorem). B̂ ≈ 0 was measured on Essays
+  and by T6 must not be transported to Reddit; PANDORA's own long-text dynamics are
+  non-white and format-suspect — so the P9 flow factor stays CONDITIONAL on iid gusts,
+  now with the added note that the one measurable register shows B ≈ 0.
+
+**F12.3 scorecard.** (a) WRONG as leaned — axes white; the designed alternative (strike
+E3) is what fired; wcl_60 the exception at θ̂ .09 (below the leaned [.1,.5] band edge).
+(b) "rises" WRONG (premise of large negative B false); "replication < .5" RIGHT (.308).
+(c) WRONG on all gates. (d) stands. Net theory movement: one wrong claim deleted (E3
+bounce), three anomalies unified (wcl_60), the gust model cleaned to
+white-with-textured-exceptions, and the flow estimator's audit machinery (exact
+inversions) now standing equipment.
+
 ## F11 results (V6-E1..E4, run AFTER registration commit 8e2b0ba, same day)
 
 **E1 — gust robustness (PANDORA m=3, n=618; gust1 recomputed, leads wcl_02/wcl_11).**
