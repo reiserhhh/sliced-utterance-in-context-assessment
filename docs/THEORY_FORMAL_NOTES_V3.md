@@ -281,6 +281,66 @@ period2_energy (normalized ρ_π per construct) with synthetic tests recovering 
 reference values above. KILL: wcl_60 ρ_π ≤ 1 CI-solid would contradict its certified
 bounce and reopen the wcl_60 story.
 
+## F12.8 — The spectral shape pair: mid-frequency separator and the hybrid functional
+## (registered 2026-07-12, before W7)
+
+**Definitions.** f(π/2) = γ0 − 2γ2 + 2γ4; ρ_{π/2} = f(π/2)/γ0; shape pair =
+(ρ_{π/2}, ρ_π); Δ_shape = ρ_{π/2} − ρ_π. Exact references: white (1, 1), Δ = 0.
+MA(1) ANY θ: ρ_{π/2} = 1 EXACTLY (γ2 = 0) — a sharp invariant. AR(1) φ:
+ρ_{π/2} = (1−φ²)/(1+φ²) ≈ .98 at φ = .1, so Δ_shape ≈ +.16 > 0. AR(2)-even a2:
+ρ_{π/2} = (1−a2)/(1+a2) — strongly depressed. Even-lag anomaly (γ2 > 0) hits ρ_{π/2}
+directly: Δ_shape is pushed NEGATIVE. So the sign of Δ_shape separates carry-over
+(positive) from even-lag anomaly (negative), and ρ_{π/2} = 1 tests pure-MA(1) stories.
+
+**Hybrid functional (deployment fix, from the W6 conditioning findings).** Numerator
+spectral functionals (f_π, f_{π/2}) from the 5-moment left-solves (|w| ≈ 4, conditioned);
+the DENOMINATOR γ0 from the truncated-3 left-solve (|w| ≈ 5.8) — per-functional
+conditioning discipline. Prediction: the hybrid restores the deployed AR(2) m = 8
+calibration toward the asymptotic value (the executing agent computes the exact expected
+value of the shipped estimator and asserts against IT, per established practice).
+
+**W7 registered leans (BEFORE the runs).** (a) Essays: carry-over set (wcl_35/36/13,
+first_person, wcl_03) Δ_shape > 0. (b) wcl_20/22: Δ_shape BELOW the carry-over set's,
+lean CI-separable at least against wcl_35; ρ_{π/2} depressed. (c) wcl_60: ρ_{π/2} ≈ 1
+(pure-MA(1) invariant); CI-solid deviation from 1 would break its one-step-echo story.
+(d) Deployment: hybrid mode ships with the shape pair as "spectral_shape_by_construct";
+all reference invariants tested (MA(1) ρ_{π/2} = 1 exactly is the cleanest new test).
+KILL: wcl_20 Δ_shape ≥ the carry-over set CI-solid would kill the even-lag-anomaly
+reading as well, reopening the model class for W4's R2 excess.
+
+## F12.8 results (W7a Essays + W7b deployment, run AFTER registration eabc17b)
+
+**Conditioning: the registered hybrid design HELD with no fallback** (|w_pi| = 4.10,
+|w_pihalf,5| = 7.05 < 20, |w_gamma0,trunc| = 5.77 on Essays; deployment m = 8: 2.09 /
+4.27 / 4.07-vs-39.1 old). Two exact invariants asserted at runtime on the actual
+composition (white -> (1,1,0); MA(1) -> rho_pihalf = 1) — both passed to 1e-9.
+
+**Adjudication.** (a) Carry-over set Delta_shape > 0: 4/5 directional (wcl_36 +.094,
+wcl_13 +.094, wcl_35 +.065, first_person +.048; wcl_03 the exception at −.030), none
+CI-solid. (b) **wcl_20's even-lag reading CONFIRMED in the cleanest number:
+rho_pihalf = 0.645 [0.428, 0.914] — CI-solid depressed**; ordering P(Delta[wcl_20] <
+Delta[wcl_35]) = .912 (strong lean, short of solid), wcl_22 weaker (.756); tension shows
+the same shape (Delta −.159). (c) wcl_60: rho_pihalf = 1.962 [0.898, 5.846] — CI
+includes 1, the pure-MA(1) invariant SURVIVES (unstable denominator gamma0 = .22 noted;
+point far from 1, undecided in the strong sense). KILL not fired.
+
+**Unregistered finding (third consecutive poke by this family): wcl_07 is the ONLY
+CI-solid Delta_shape, POSITIVE +0.540 [+0.092, +1.245]** (rho_pihalf = 1.478) —
+elevated quarter-frequency with sub-white Nyquist implies gamma2 < 0 alongside positive
+gamma1: a damped ~4-window (~512-token) oscillation. Post-hoc reading (labeled as such):
+AR(2)-even with NEGATIVE a2 fits almost exactly ((1−a2)/(1+a2) = 1.5 at a2 = −0.2 vs
+observed 1.478). Together with wcl_20 (a2 > 0, period-2) this suggests the UNIFYING
+two-parameter family — signed odd-lag memory (theta/phi) x signed even-lag oscillation
+(a2) — covering every texture seen so far: carry-over, bounce, period-2, period-4.
+QUEUED AS W8 (to be registered before any run): joint signed-(memory, a2) fit per
+construct with the shape pair + rho_ladder moments; leans to be written at registration.
+
+**Deployment (W7b).** Hybrid denominator + shape pair shipped
+("spectral_shape_by_construct", "delta_shape_by_construct", "period2_denominator",
+"shape_mode"); AR(2) m = 8 calibration recovered 1.41 -> 1.75 (asymptotic 2.33; residual
+gap = numerator truncation of gamma6, documented); noise roughly halved by the hybrid;
+72/72 tests.
+
 ## F12.7 results (W6a, run AFTER registration ed971f1)
 
 **Conditioning postscript (premise half-failed, registered fallback absorbed it).** The

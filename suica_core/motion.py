@@ -59,10 +59,27 @@ coordinates. Reported as "period2_energy_by_construct" with
 "period2_mode" = "full5" | "truncated3" (a lag-2-truncated 3x3 fallback
 when lag-3/lag-4 pairs are thin) and "period2_reason" when neither is
 estimable (thin pairs, or a singular m-composition). MEASURED CAVEAT: the
-gamma0 left-solve is the map's ill-conditioned direction, so rho_pi is
-noise-hungry and leaks unmodeled bands beyond lag 4 -- e.g. AR(2)-even
-a2 = 0.4 at m = 8 reads ~1.41, not the process value 2.33. Treat rho_pi
-as a register fingerprint, not a process parameter.
+FIVE-band gamma0 left-solve is the map's ill-conditioned direction
+(|w| ~ 39 at m = 8), noise-hungry and leaky in unmodeled bands beyond
+lag 4. Treat rho_pi as a register fingerprint, not a process parameter.
+
+F12.8 refinements (research commit eabc17b): (i) HYBRID DENOMINATOR --
+left-solve conditioning is per-functional, so in full5 mode the gamma0
+denominator comes from the truncated-3 left-solve (3x3 top-left of M,
+c0 = (1, 0, 0); |w| ~ 4 vs ~ 39 for the 5-band gamma0 solve at m = 8),
+which both stabilizes and de-leaks the ratio -- AR(2)-even a2 = 0.4 at
+m = 8 reads 1.75 hybrid vs 1.41 non-hybrid against the 2.33 process
+value; "period2_denominator" records which solve normalized the ratio.
+(ii) SHAPE PAIR -- f(pi/2), the spectral density at the quarter
+frequency, via c = (1, 0, -2, 0, 2) (truncated-3 fallback c = (1, 0, -2)
+whenever the 5-band left-solve norm exceeds 20; "shape_mode" flags the
+solve used, "shape_w_norm" reports its norm). "spectral_shape_by_construct"
+= per-construct [rho_pihalf, rho_pi] pairs over the hybrid gamma0, and
+"delta_shape_by_construct" = rho_pihalf - rho_pi. Reference shapes:
+white (1, 1), delta 0; MA(1) ANY theta: rho_pihalf = 1 EXACTLY (MA(1) is
+flat at the quarter frequency -- the sharpest invariant); AR(1) phi:
+((1-phi**2)/(1+phi**2), (1-phi)/(1+phi)), delta > 0; AR(2)-even a2:
+((1-a2)/(1+a2), (1+a2)/(1-a2)), delta strongly < 0.
 
 Flow (F12.1.iii): the wide difference d = (w_last - w_first)/(m-1) has
 Cov(d) = Sigma_flow + 2*Gamma0/(m-1)**2 with no Gamma1 term (endpoint gap
@@ -135,6 +152,11 @@ PERIOD2_SINGULAR_REASON = (
     "carries the exact within-text constraint 3*s0 + 4*s1 + 2*s2 = 0; the "
     "period-2 functional is unidentifiable)"
 )
+
+# F12.8 shape pair: f(pi/2) band weights and the left-solve norm guard.
+SHAPE_C_FULL = (1.0, 0.0, -2.0, 0.0, 2.0)   # f(pi/2), lags 0..4
+SHAPE_C_TRUNCATED = (1.0, 0.0, -2.0)        # f(pi/2) truncated at lag 2
+SHAPE_W_NORM_MAX = 20.0
 
 
 def text_window_frames(
@@ -357,7 +379,9 @@ def motion_from_window_arrays(
             "memory_by_construct": None, "theta_by_construct": None,
             "inversion": inversion_mode,
             "period2_energy_by_construct": None, "period2_mode": None,
-            "period2_reason": "no texts", "lag_pair_counts": {},
+            "period2_reason": "no texts", "period2_denominator": None,
+            "spectral_shape_by_construct": None, "delta_shape_by_construct": None,
+            "shape_mode": None, "shape_w_norm": None, "lag_pair_counts": {},
             "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         }
     if orig_m is None:
@@ -422,10 +446,15 @@ def motion_from_window_arrays(
             memory_by_construct.append(r_c)
             theta_by_construct.append(_theta_from_ratio(r_c))
 
-    # ---- period-2 energy: normalized Nyquist ratio via exact left-functionals (F12.7) ----
+    # ---- period-2 energy + spectral shape pair via exact left-functionals (F12.7/F12.8) ----
     period2_energy: list[float] | None = None
     period2_mode: str | None = None
     period2_reason: str | None = None
+    period2_denominator: str | None = None
+    spectral_shape: list[list[float]] | None = None
+    delta_shape: list[float] | None = None
+    shape_mode: str | None = None
+    shape_w_norm: float | None = None
     if lag_pairs[2] < PERIOD2_MIN_LAG_PAIRS:
         period2_reason = PERIOD2_UNESTIMABLE_REASON
     else:
@@ -433,21 +462,42 @@ def motion_from_window_arrays(
                  and lag_pairs[4] >= PERIOD2_MIN_LAG_PAIRS)
         n_bands = 5 if full5 else 3  # truncated: assume gamma3 = gamma4 = 0
         lag_map, _map_weights = _centered_lag_map(n_rows_list)
-        map_sub = lag_map[:n_bands, :n_bands]
-        singular_values = np.linalg.svd(map_sub, compute_uv=False)
-        if singular_values[-1] < PERIOD2_COND_MIN * singular_values[0]:
+        map3 = lag_map[:3, :3]
+        map_num = lag_map[:n_bands, :n_bands]
+        sv3 = np.linalg.svd(map3, compute_uv=False)
+        sv_num = np.linalg.svd(map_num, compute_uv=False)
+        if (sv3[-1] < PERIOD2_COND_MIN * sv3[0]
+                or sv_num[-1] < PERIOD2_COND_MIN * sv_num[0]):
             period2_reason = PERIOD2_SINGULAR_REASON
         else:
-            c_vec = np.asarray(PERIOD2_C_FULL[:n_bands])
-            w_pi = np.linalg.solve(map_sub.T, c_vec)
-            w_g0 = np.linalg.solve(map_sub.T, np.eye(n_bands)[0])
             s_diag = np.stack([np.diagonal(lag_sums[h]) / lag_pairs[h]
                                for h in range(n_bands)])         # (n_bands, p)
+            # numerator: f(pi) over the mode's full band depth
+            w_pi = np.linalg.solve(map_num.T, np.asarray(PERIOD2_C_FULL[:n_bands]))
             f_pi = w_pi @ s_diag
-            g0_f = w_g0 @ s_diag
+            # denominator: gamma0 ALWAYS from the truncated-3 left-solve --
+            # the F12.8 hybrid (|w| ~ 4 vs ~ 39 for the 5-band solve at m=8)
+            w_g0 = np.linalg.solve(map3.T, np.array([1.0, 0.0, 0.0]))
+            g0_f = w_g0 @ s_diag[:3]
+            # shape numerator: f(pi/2), with the |w| > 20 truncation guard
+            w_ph5 = np.linalg.solve(map_num.T, np.asarray(SHAPE_C_FULL[:n_bands]))
+            if full5 and float(np.linalg.norm(w_ph5)) > SHAPE_W_NORM_MAX:
+                w_ph = np.linalg.solve(map3.T, np.asarray(SHAPE_C_TRUNCATED))
+                f_ph = w_ph @ s_diag[:3]
+                shape_mode = "truncated3"
+            else:
+                w_ph = w_ph5
+                f_ph = w_ph @ s_diag
+                shape_mode = "full5" if full5 else "truncated3"
+            shape_w_norm = float(np.linalg.norm(w_ph))
             period2_energy = [float(f / g) if g != 0 else 0.0
                               for f, g in zip(f_pi, g0_f)]
+            rho_ph = [float(f / g) if g != 0 else 0.0
+                      for f, g in zip(f_ph, g0_f)]
+            spectral_shape = [[ph, pi] for ph, pi in zip(rho_ph, period2_energy)]
+            delta_shape = [ph - pi for ph, pi in zip(rho_ph, period2_energy)]
             period2_mode = "full5" if full5 else "truncated3"
+            period2_denominator = "truncated3_hybrid" if full5 else "truncated3"
 
     # ---- flow: per m-stratum wide-difference covariance, gust-corrected when possible (F12.1.iii) ----
     sig_sum = np.zeros((p, p))
@@ -485,6 +535,11 @@ def motion_from_window_arrays(
         "period2_energy_by_construct": period2_energy,
         "period2_mode": period2_mode,
         "period2_reason": period2_reason,
+        "period2_denominator": period2_denominator,
+        "spectral_shape_by_construct": spectral_shape,
+        "delta_shape_by_construct": delta_shape,
+        "shape_mode": shape_mode,
+        "shape_w_norm": shape_w_norm,
         "lag_pair_counts": {h: int(lag_pairs[h]) for h in range(PERIOD2_MAX_LAG + 1)},
         "flow_lambda1": flow_lambda1,
         "flow_top_vector": flow_top_vector,
@@ -500,7 +555,9 @@ def _empty_motion_profile(n_dropped: int, inversion_mode: str) -> dict[str, Any]
         "memory_by_construct": None, "theta_by_construct": None,
         "inversion": inversion_mode,
         "period2_energy_by_construct": None, "period2_mode": None,
-        "period2_reason": "no texts", "lag_pair_counts": {},
+        "period2_reason": "no texts", "period2_denominator": None,
+        "spectral_shape_by_construct": None, "delta_shape_by_construct": None,
+        "shape_mode": None, "shape_w_norm": None, "lag_pair_counts": {},
         "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         "axis_series": None, "axis_mean_abs_projection": None,
         "licenses": list(LICENSES),
@@ -602,6 +659,11 @@ def motion_profile(
         "period2_energy_by_construct": core["period2_energy_by_construct"],
         "period2_mode": core["period2_mode"],
         "period2_reason": core["period2_reason"],
+        "period2_denominator": core["period2_denominator"],
+        "spectral_shape_by_construct": core["spectral_shape_by_construct"],
+        "delta_shape_by_construct": core["delta_shape_by_construct"],
+        "shape_mode": core["shape_mode"],
+        "shape_w_norm": core["shape_w_norm"],
         "lag_pair_counts": core["lag_pair_counts"],
         "flow_lambda1": core["flow_lambda1"],
         "flow_top_vector": core["flow_top_vector"],

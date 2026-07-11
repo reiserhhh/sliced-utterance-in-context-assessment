@@ -191,15 +191,15 @@ def test_signed_memory_sign():
 
 
 # ---------------------------------------------------------------------------
-# F12.7 -- centered lag map + normalized Nyquist ratio (period-2 energy).
-# NOTE on N: the registered leans specified N=4000, but the gamma0
-# left-functional is the centered lag map's ill-conditioned direction
-# (|w_g0| ~ 39 at m=8), so the per-construct ratio sd at N=4000 is ~0.18
-# (white) to ~0.50 (MA1) -- the registered tolerance bands are not
-# reachable there except by freak seeds. N is raised per test until each
-# band holds with >= 4x margin (runtime stays ~2s total); the BANDS
-# (the scientific content) are kept as registered wherever the estimator
-# can reach them.
+# F12.7/F12.8 -- centered lag map + normalized Nyquist ratio + shape pair.
+# NOTE on N: the F12.7 registered leans specified N=4000, but at that N the
+# per-construct ratio sd was ~0.18 (white) to ~0.50 (MA1) under the original
+# 5-band gamma0 left-functional (|w_g0| ~ 39 at m=8) -- bands unreachable
+# except by freak seeds, so N was raised per test. The F12.8 hybrid
+# denominator (truncated-3 gamma0 solve, |w| ~ 4) roughly halves that noise
+# again; the raised Ns are kept, giving >= 5x margins everywhere at ~2s
+# total runtime. The BANDS (the scientific content) are as registered
+# wherever the estimator can reach them.
 # ---------------------------------------------------------------------------
 def test_lag_map_top_left_matches_2x2():
     # the 5x5 enumeration map must reproduce the F12.4 2x2 system as its
@@ -222,8 +222,14 @@ def test_rho_pi_white():
     out = motion_from_window_arrays(_white_arrays(np.random.default_rng(7101), 100_000, 8, 3))
     assert out["period2_mode"] == "full5"
     assert out["period2_reason"] is None
+    assert out["period2_denominator"] == "truncated3_hybrid"  # F12.8 hybrid active
+    assert out["shape_mode"] == "full5"
+    assert out["shape_w_norm"] < 20.0  # |w_pihalf5| ~ 4.27 at m=8, under the guard
     ratios = np.array(out["period2_energy_by_construct"])
     assert np.abs(ratios - 1.0).max() < 0.12  # white: rho_pi = 1 (registered band)
+    # white shape pair = (1, 1), delta 0
+    deltas = np.array(out["delta_shape_by_construct"])
+    assert np.abs(deltas).max() < 0.10
 
 
 def test_rho_pi_ma1_bounce():
@@ -243,18 +249,58 @@ def test_rho_pi_ar1_carryover():
 
 
 def test_rho_pi_ar2_even():
-    # AR(2)-even a2=0.4: the PROCESS value is (1+a2)/(1-a2) = 2.333, but the
-    # registered 2.33 +/- 0.30 lean is UNREACHABLE by the spec'd estimator at
-    # m=8: the gamma0 left-functional leaks the unmodeled gamma_6 band
-    # (0.064*gamma0), inflating the denominator -- the exact expectation of
-    # the shipped estimator is 1.4054 (extended-map analysis, confirmed by
-    # MC; see module docstring caveat + deployment report). Asserted here at
-    # the machine-verified value; the >1 direction (even-lag energy
-    # concentration) still discriminates AR(2)-even from white/carry-over.
+    # AR(2)-even a2=0.4: process value (1+a2)/(1-a2) = 2.333. The F12.8
+    # HYBRID denominator (truncated-3 gamma0 solve) removes most of the
+    # gamma_6-leakage that pinned the old non-hybrid estimator at 1.4054;
+    # the exact expectation of the SHIPPED hybrid estimator at m=8 is
+    # 1.7481 (extended-band analysis: numerator w_pi5 over bands 0..7,
+    # denominator w_g0_3x3; confirmed by MC, measured means ~1.75).
+    # Asserted per the registered W7b design: measured mean against the
+    # exact value +-0.15, plus the closer-than-non-hybrid condition.
     out = motion_from_window_arrays(_ar2_arrays(np.random.default_rng(7404), 100_000, 8, 3, 0.4))
+    assert out["period2_denominator"] == "truncated3_hybrid"
     ratios = np.array(out["period2_energy_by_construct"])
-    assert np.abs(ratios - 1.4054).max() < 0.12
+    expected_hybrid = 1.7481
+    assert abs(ratios.mean() - expected_hybrid) < 0.15
+    # hybrid must sit closer to the asymptotic 2.333 than the old
+    # non-hybrid expectation 1.4054 did (|1.4054 - 2.3333| = 0.9279)
+    assert abs(ratios.mean() - 2.3333) < abs(1.4054 - 2.3333)
     assert ratios.min() > 1.15  # direction: clearly above white = 1
+
+
+# ---------------------------------------------------------------------------
+# F12.8 -- spectral shape pair (rho_pihalf, rho_pi)
+# ---------------------------------------------------------------------------
+def test_shape_ma1_invariant():
+    # The sharpest new invariant: MA(1) at ANY theta is flat at the quarter
+    # frequency (f(pi/2) = gamma0 has no theta term), so rho_pihalf = 1
+    # EXACTLY while rho_pi sits at (1+theta)**2/(1+theta**2) = 1.6897.
+    theta = 0.4
+    out = motion_from_window_arrays(_ma1_arrays(np.random.default_rng(7203), 250_000, 8, 3, theta))
+    shape = np.array(out["spectral_shape_by_construct"])   # (p, 2): [pihalf, pi]
+    assert np.abs(shape[:, 0] - 1.0).max() < 0.10
+    target_pi = (1 + theta) ** 2 / (1 + theta ** 2)
+    assert np.abs(shape[:, 1] - target_pi).max() < 0.18
+
+
+def test_shape_ar1():
+    # AR(1) phi=0.2 carry-over: delta = rho_pihalf - rho_pi > 0. Asymptotic
+    # delta = (1-phi**2)/(1+phi**2) - (1-phi)/(1+phi) = 0.9231 - 0.6667 =
+    # +0.2564; the exact m=8 expectation of the shipped hybrid estimator is
+    # +0.2609 (extended-band analysis: (0.9399, 0.6790)) -- asserted around
+    # that value per the registered "adjust to your exact estimator" spec.
+    out = motion_from_window_arrays(_ar1_arrays(np.random.default_rng(7301), 50_000, 8, 3, 0.2))
+    deltas = np.array(out["delta_shape_by_construct"])
+    assert (deltas > 0).all()
+    assert np.abs(deltas - 0.2609).max() < 0.12
+
+
+def test_shape_ar2_even():
+    # AR(2)-even a2=0.4: shape pair (0.43, 2.33)-shaped -> delta strongly
+    # negative (exact m=8 hybrid expectation: 0.3922 - 1.7481 = -1.3559).
+    out = motion_from_window_arrays(_ar2_arrays(np.random.default_rng(7404), 100_000, 8, 3, 0.4))
+    deltas = np.array(out["delta_shape_by_construct"])
+    assert (deltas < -0.3).all()
 
 
 def test_truncated_mode():
@@ -267,16 +313,20 @@ def test_truncated_mode():
     arrays = _white_arrays(rng, 3000, 5, 3) + _white_arrays(rng, 3000, 6, 3)
     out = motion_from_window_arrays(arrays)
     assert out["period2_mode"] == "truncated3"
+    assert out["period2_denominator"] == "truncated3"  # no hybrid outside full5
+    assert out["shape_mode"] == "truncated3"
     assert out["lag_pair_counts"][4] == 0
     ratios = np.array(out["period2_energy_by_construct"])
     assert np.isfinite(ratios).all()
     assert np.abs(ratios - 1.0).max() < 0.3
+    assert np.isfinite(np.array(out["delta_shape_by_construct"])).all()
 
     # pure m=5: singular composition -> None with the singular reason
     out_pure = motion_from_window_arrays(_white_arrays(np.random.default_rng(7600), 4000, 5, 3))
     assert out_pure["period2_energy_by_construct"] is None
     assert out_pure["period2_mode"] is None
     assert out_pure["period2_reason"] == PERIOD2_SINGULAR_REASON
+    assert out_pure["spectral_shape_by_construct"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -328,6 +378,10 @@ def test_economics_guard_and_uncorrected_flow_flag():
     assert out["period2_energy_by_construct"] is None
     assert out["period2_mode"] is None
     assert out["period2_reason"] == PERIOD2_UNESTIMABLE_REASON
+    assert out["period2_denominator"] is None
+    assert out["spectral_shape_by_construct"] is None
+    assert out["delta_shape_by_construct"] is None
+    assert out["shape_mode"] is None
     # flow is still reported, but uncorrected (no Gamma0 to subtract)
     assert out["flow_lambda1"] is not None
     assert out["flow_flag"] == "uncorrected: gust moments not estimable"
@@ -363,7 +417,9 @@ def test_motion_profile_end_to_end_smoke():
                 "level_mean", "slope_mean", "Gamma0", "B",
                 "memory_by_construct", "theta_by_construct", "inversion",
                 "period2_energy_by_construct", "period2_mode",
-                "period2_reason", "lag_pair_counts",
+                "period2_reason", "period2_denominator",
+                "spectral_shape_by_construct", "delta_shape_by_construct",
+                "shape_mode", "shape_w_norm", "lag_pair_counts",
                 "flow_lambda1", "flow_top_vector", "flow_flag", "axis_series",
                 "licenses"):
         assert key in out
