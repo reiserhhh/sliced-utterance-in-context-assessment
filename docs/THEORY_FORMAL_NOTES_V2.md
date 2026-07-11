@@ -236,6 +236,106 @@ of t); if ZONES wins, functionalization still holds but the flow's true coordina
 boundary distance, not relative position. Either way the in/out-of-range predictability
 the conjecture asserts is quantified by the MAE ladders.
 
+## F10.8 — Flow-only factors: coherence that exists only in motion (user conjecture 2026-07-11, registered before run)
+
+**Motivating conjecture (user, verbatim intent).** Beyond the factors extracted so far,
+do there exist "factors" visible ONLY in flow — existing only in the line (motion), such
+that the moment you stop, the coherence disappears?
+
+**Formalization (multivariate extension of F8's noise geometry).** Decompose a comment's
+window-k score vector:
+
+    w_k = p + k·s + g_k,   Cov(p) = Π (stable),  Cov(s) = Σ_flow (ordered flow),
+                            Cov(g) = Γ (gust: transient window-level co-fluctuation)
+
+Then LEVEL aggregation reads Cov_L = Π + Γ/m (+ small flow term if k uncentered): stopping
+(averaging) kills gust coherence at rate 1/m — the exact mechanism of "once you stop, the
+togetherness disappears," and the multivariate face of F8.2's clustered-noise parameter.
+DIFFERENCING reads motion: D = w_last − w_first has Cov_D = (m−1)²Σ_flow + 2Γ. On m = 3
+support the two motion layers SEPARATE by contrast algebra, with no permutation needed:
+
+    linear contrast    ℓ = (w_2 − w_0)/2        Cov_ℓ = Σ_flow + Γ/2
+    curvature contrast q = (w_0 − 2w_1 + w_2)/√6  Cov_q = Γ
+    ⇒  Σ̂_flow = C_ℓ − C_q / 2   (up to scale; possibly indefinite — bootstrap the spectrum)
+
+A FLOW-ONLY FACTOR (the conjecture's strong object, "line factor") is a component v with
+(i) significant variance in Σ̂_flow, (ii) cross-user-half replication, and (iii) level-space
+invisibility: vᵀC_L v inside the L-bulk (below the empirical shuffle edge) and low
+congruence with all supra-edge L-components. A GUST FACTOR (weak reading) is the same
+gates applied to C_q — coherence carried by transient co-fluctuation, erased by averaging.
+
+**Instruments (T-GEO-P9, three phases, all on the P8 window cache; label-free).**
+P9-A existence at scale: D on ALL m ≥ 2 comments (n ≈ 21.5k; Cov_D mixes flow+gust) —
+supra-edge components (column-shuffle edge), user-half replication, static-visibility vs
+C_L on the same comments. P9-B separation on m = 3 (n = 618): C_ℓ vs C_q, Σ̂_flow spectrum
+with bootstrap-over-comments CIs, gates (i)–(iii). P9-C person level: per-user mean D over
+their long comments (gate ≥ 3) — personal flow-STYLE factor structure C_uD, its edge, and
+congruence with the same cohort's person-level static factors C_uL.
+
+**Registered predictions (BEFORE the run, honest leans).** A: YES — at least one
+replicating, statically invisible D-component exists (differencing isolates Γ, whose
+structure has no reason to mirror Π). B: most motion structure is GUST (Γ); at n = 618 the
+Σ̂_flow spectrum is likely too noisy to certify a flow-only factor — lean NO-at-this-power,
+existence left OPEN rather than refuted. C: one person-level flow-style component, led by
+co-movement of the first_person/directive declines; its static invisibility is OPEN.
+Artifact caveats registered: (a) residual scorer-vocabulary overlap (v2 lexicons vs wcl
+clusters) could mechanically couple gusts — any found factor gets a loading-pair overlap
+screen before being believed; (b) sparse constructs make D heavy-tailed; (c) m = 2
+comments cannot separate flow from gust (stated).
+
+## F10.8 results (T-GEO-P9, run AFTER the registration commit a493ff6, same day)
+
+**Answer to the conjecture: YES — motion-only coherence exists, with the cleanest
+specimen at the gust layer.**
+
+**Phase A (n = 21,498 comments; edge 1.059).** Four supra-edge slope components.
+Components 1–2 (first_person/wcl_36 co-decline, λ=1.403, rep .990; directive/wcl_13,
+λ=1.284, rep .973) are statically VISIBLE (level-visibility 1.97 / 1.59 vs null95 ≈1.01)
+— motion factors with level shadows. **Component 3 (λ=1.145, replication .778) is
+STATICALLY INVISIBLE: level-visibility 0.993 vs null95 1.014 — exactly at noise.**
+Loadings: wcl_07 −.49, tension −.46, wcl_02 −.36, wcl_20 +.34. Component 4 fails
+replication (.482) — discarded.
+
+**Phase B (n = 618 m=3 comments).**
+- ORDERED FLOW factor CERTIFIED (against my registered lean): λ₁(Σ̂_flow) = 0.486,
+  bootstrap CI [0.42, 0.66] excludes 0, attenuation-permutation p < .002, person-disjoint
+  half replication .809. Loadings: tension +.43, wcl_07 +.42, wcl_22 −.37, directive
+  −.34. BUT level-visibility 2.75 — statically visible: a FLOW factor, not a flow-ONLY
+  factor.
+- **GUST factor 1 = the conjecture's textbook specimen, ALL THREE GATES PASSED:**
+  λ = 2.223 ≫ edge 1.386; replication .829; **level-visibility 0.972 vs null95 1.096 —
+  statically at noise.** Loadings: wcl_02 −.47, wcl_11 +.45, wcl_07 −.40, wcl_20 +.31 —
+  all four are wcl clusters, whose vocabularies are DISJOINT by k-means construction, so
+  the coupling cannot be shared-token mechanical (the registered artifact screen passes
+  for this component). Gusts 2–3 fail replication (.293 / .235) — discarded.
+
+**Phase C (n = 2,166 users, gate ≥ 3 long comments; edge 1.192).** Components 1–2
+(first_person-led λ=1.432 rep .675 vis 2.32; directive-led λ=1.358 rep .602 vis 1.65)
+replicate moderately but are statically visible/entangled (static congruence .85 / .73).
+**Component 3 — barely supra (1.224), statically invisible (1.015; static congruence
+.337) — FAILS replication (.150): the person-level flow-only factor is NOT established;
+remains open.**
+
+**Cross-phase congruence.** The same motion direction recurs: A-comp3 × B-flow = .786;
+A-comp3 × C-comp3 = .817; B-flow × C-comp3 = .547. A {tension, wcl_07, wcl_02/20/22}
+"motion cluster" appears at comment scale, in the ordered-flow estimator, and as the
+(unreplicated) person-level candidate.
+
+**F10.8 verdict.** The conjecture is CONFIRMED in the gust reading and partially in the
+ordered reading: (i) a transient co-fluctuation factor exists that is invisible at rest —
+supra-edge, person-disjoint replicating, level-space at noise, vocabulary-disjoint (B
+gust1); averaging erases it at rate 1/m, which is the precise sense of "stop and the
+togetherness disappears"; (ii) an ordered flow factor exists (slopes co-move along texts)
+but casts a level shadow — flow, not flow-only; (iii) the fully personal flow-only factor
+fails replication at current power — open. Registered-lean scorecard: A ✓; B half-wrong
+(flow factor DID certify — stronger than my lean); C's invisible candidate died at the
+replication gate as standards require. Measurement consequence: the battery's construct
+space is not exhausted by level factors — motion coordinates (slopes, gusts) carry
+replicating structure orthogonal to every static factor, and any future battery revision
+should consider motion-space constructs as first-class candidates (registry gate: the
+three F10.8 gates + vocabulary-overlap screen for mixed v2×wcl loadings, which remains
+unmeasured — flagged for A-comp3, whose tension loading is a v2 lexicon).
+
 ## F10.7 results (T-GEO-P8, run AFTER the registration commit c5a9b4f, same day)
 
 **P8a — in-range interpolation ladder (412 m=3 comments, 70 users, user-level MAE,
