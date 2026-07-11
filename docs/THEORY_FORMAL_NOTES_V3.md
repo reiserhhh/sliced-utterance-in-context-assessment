@@ -189,6 +189,67 @@ reading is wrong. (iii) Deployment: motion.py's inversion switches to the correc
 solve (naive kept as an option for comparability); the documented bias note becomes a
 resolved item.
 
+## F12.5 — Lag-2 identities: MA-vs-AR discrimination (registered 2026-07-12, before W4)
+
+**The gap.** The signed memory coefficient r = B/Γ0 cannot distinguish a one-step MA
+echo (γ_h = 0 for h ≥ 2) from a decaying AR carry-over (γ_h = φ^h γ0). Lag-2 structure
+can.
+
+**F12.5.1 (general identity).** The uncentered Δ² autocovariance sequence is the
+fourth-difference filter applied to the gust autocovariance sequence:
+S_h = Σ_l [1, −4, 6, −4, 1]_l · γ_{h+l−2}. In particular S2 = γ0 − 4γ1 + 6γ2 − 4γ3 + γ4
+(this reproduces S0 = 6γ0 − 8γ1 + 2γ2 and S1 = −4γ0 + 7γ1 − 4γ2 + γ3 as the h = 0, 1
+cases). Under MA(1), γ_{h≥2} = 0, so S2 is EXACTLY PREDICTED by the identified pair:
+S2_pred = Γ0 − 4B (entrywise, symmetrized).
+
+**F12.5.2 (discriminator).** R2 ≡ S2_obs − S2_pred(Γ̂0, B̂), all three moments taken with
+their EXACT within-text-centering corrections. Under MA(1), E[R2] = 0; under AR(1) with
+small φ, R2 ≈ 6φ²γ0 > 0; R2 < 0 falls outside both one-parameter families (→ MA(2)+).
+METHOD NOTE (the d(3) lesson): centering-corrected coefficient maps for S0/S1/S2 are to
+be computed by EXACT ENUMERATION (Toeplitz covariance of the D2 rows under the
+hypothesized γ-structure, centering projection P = I − J/n, read the pooled moments), not
+by hand-simplified closed forms. S2 pairs exist for n ≥ 3 (n − 2 per text).
+
+**F12.5.3 (per-construct scalar overidentification).** For each construct, fit both
+one-parameter families to the centered (S0, S1, S2)_cc diagonal triple — MA(1): (γ0, θ);
+AR(1): (γ0, φ), the AR map computed by exact enumeration from the AR(1) Toeplitz — and
+compare overidentification residuals (2 parameters, 3 moments, 1 dof each).
+
+**W4 registered leans (BEFORE the run).** (a) Corpus-mean diag R2 slightly POSITIVE
+(bootstrap CI excluding 0 on the positive side) — the carry-over decays over more than
+one window. (b) Content carry-over constructs (wcl_35, wcl_36, wcl_03, first_person,
+wcl_13) classify AR-type (R2 > 0; AR fit beats MA). (c) wcl_60 classifies MA-type
+(burst-echo is one-step: R2 ≈ 0; MA fit beats AR). KILL semantics: R2 ≈ 0 everywhere →
+MA(1) suffices and the AR extension is REJECTED on parsimony; widespread R2 < 0 → both
+families fail and the model moves to MA(2)+.
+
+## F12.5 results (W4, run AFTER registration 5064a0a; enumeration engine reproduced the
+## W3 coefficient set incl. d(3)=56/9 to ≤ 9e−16; planted-recovery checks passed at
+## MA θ=.4, AR φ∈{.15,.5}; centering attenuates the lag-2 map to (0.708, −3.480) from
+## the uncentered (1, −4) — the enumeration mandate vindicated again)
+
+**Scorecard.** (a) Corpus diag-mean R2 = +0.0210, frac>0 = .942, CI [−0.0052, +0.0461]
+— direction as leaned, CI NOT solid: the corpus-level decaying-carry-over claim stays
+directional. (b) Memory-set classification 3/5: wcl_35/wcl_36/wcl_13 AR-win with φ̂ =
++0.100/+0.095/+0.080 — cross-moment CONSISTENCY with their W3 lag-1 r_c (+0.098/+0.092/
++0.079); first_person and wcl_03 flip to MA (θ̂ = −0.085/−0.070): still positive
+one-step memory, but the carry-over does NOT extend to lag 2 — a refined taxonomy:
+DECAYING carry-over (wcl_35/36/13) vs ONE-STEP echo (first_person, wcl_03). Per-construct
+winner calls are suggestive (all R2 CIs span 0 for these). (c) wcl_60 MA-type CONFIRMED
+(second-largest margin; θ̂ = +0.235). Neither registered kill fires.
+
+**Unregistered discovery — the period-2 signature.** The only CI-SOLID R2 constructs are
+NOT the memory set: wcl_20 (R2 = +0.175, CI [+0.064, +0.283]) and wcl_22 (+0.119,
+[+0.040, +0.197]) — and for both, BOTH one-parameter families fail (RSS 2–3 orders above
+the well-fit constructs; fitted θ, φ ≈ 0). Weak lag-1 with large positive lag-2 is
+producible by neither MA(1) nor AR(1) (AR needs γ2 = φ²γ0 bounded by the lag-1 level):
+an EVEN-LAG / PERIOD-2 gust signature on Essays (tension borderline shows the same
+shape, +0.085 CI [−0.013, +0.194]) — structurally reminiscent of the PANDORA
+format-periodicity flag, now appearing register-internally for a construct subset.
+Registered follow-up: lag-3 identity (the Δ⁴ filter at h = 3) separates period-2
+oscillation (γ3 < 0 expected) from MA(2) (γ3 = 0); this is the W5 instrument. The F12.5.2
+"outside both families" branch fired in the UNANTICIPATED R2 > 0 form — recorded.
+
 ## F12.4 results (W3 + bootstrap, run AFTER registration 0a4a97a; Sonnet-executed with
 ## independent verification — analytic re-derivation, 4M-text Monte Carlo, and an
 ## out-of-sample check at θ = .6, m = 10 chosen by the agent)
