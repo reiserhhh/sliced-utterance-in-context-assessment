@@ -155,6 +155,18 @@ counterexample breaks the law.
 - The pass-A opening-share confound (F10.6) gets a principled fix: position-conditional
   scoring per shape class.
 
+## 4.4 Deployment (v6.1, 実戦)
+
+The surviving estimators ship as an operational module in the public package:
+suica_core/motion.py — text_windows / motion_profile(texts, scorer, axis=None) returning
+level, slope, Γ̂0, B̂, per-construct θ̂, gust-corrected flow spectrum, and a mandatory
+licenses list encoding T4/T5/T6 (sample-standardized, register-anchored, no trait
+inference; F12.2 support caveat). Implemented Sonnet-to-spec, planner-audited line-by-
+line against the F12 identities, and covered by 12 synthetic-recovery tests (MA(1)
+recovery at θ ∈ {0, .4}, planted-flow recovery after gust correction, the T4
+estimability guard, leak-drop semantics); full package suite 59/59. Known finite-sample
+θ̂ bias documented in the module and listed as an open instrument (Section 6).
+
 ## 5. Battery v-next gates (registry addition)
 
 A motion-space construct enters the registry iff: (1) supra empirical shuffle edge;
@@ -170,6 +182,10 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
   content constructs carry over; E3's bounce struck.
 - Format-aware PANDORA windowing (quote/list periodicity in long comments — the W2a
   saturation/flip signature); until then, PANDORA m ≥ 4 dynamics are not interpretable.
+- Analytic finite-m correction of the OPERATIONAL Γ̂0/B̂ (suica_core/motion.py): the
+  within-text D2 centering biases θ̂ upward by a bounded, m-shrinking amount (≈ +0.04
+  at true θ = .4, m = 8; agent-derived, N = 200k-confirmed) — treat deployed θ values
+  comparatively until corrected.
 - Small-venue gust heterogeneity (E1: power vs true heterogeneity at n ≤ 75).
 - Person-level motion style portability (needs a second register with per-person volume).
 - wcl_13 super-linearity (F8.3 flag); OP-33 co-selection axes under the MP edge.
