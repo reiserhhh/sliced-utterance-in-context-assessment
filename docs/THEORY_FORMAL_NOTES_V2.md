@@ -193,6 +193,110 @@ residue is an opening-share composition effect (each cell's first slice always s
 a comment opening; users with shorter comments carry more openings per slice). Flagged as
 a pending robustness check for first_person (opening-share covariate).
 
+## F10.7 — Functionalization of the flow (user directive 2026-07-11, registered before run)
+
+**Motivating conjecture (user, verbatim intent).** If factors are fluid, the flow can be
+FUNCTIONALIZED: within the observed range, specifying the position specifies the height;
+outside the observed range, the height remains predictable to a degree.
+
+**Formalization.** Promote the position profile from a description to a predictive
+function μ_c(coordinate) with held-out tests. Two claims, two instruments:
+
+- **F10.7a (in-range interpolation).** Given a comment's endpoints and a population
+  functional form, the interior height is determined up to noise. Predictor ladder for
+  the m = 3 mid window: (0) cross-fitted grand mean; (1) PERSON = leave-one-comment-out
+  user mean; (2) FUNCTION-LINEAR = the comment's own endpoint average; (3)
+  FUNCTION-QUADRATIC = (2) + cross-fitted population curvature. User-level MAE; the
+  conjecture's in-range half holds for a construct iff a function rung beats the person
+  rung.
+
+- **F10.7b (out-of-range coordinate race).** CRITICAL IDENTIFICATION FACT: on m = 3
+  support, a monotone flow in relative position t and an additive boundary-zone model are
+  indistinguishable — they separate only in the DEEP INTERIOR of long comments, i.e., in
+  (start-distance ≥ 2, end-distance ≥ 2) cells that short comments never realize. Three
+  coordinate models, all fitted ONLY on short strata (m ≤ 3; five observed (τ, δ) cells,
+  where τ = windows from start, δ = windows from end): CONSTANT; RELATIVE FLOW μ = a +
+  b·t + c·t²; ADDITIVE ZONES μ = a + s(τ-zone) + e(δ-zone), zones {0, 1, 2+} — exactly
+  identified with 5 parameters on 5 cells. Each model's shape is transported to long
+  comments (m ≥ 4) with an intercept recalibrated on long ENDPOINT windows only; models
+  are then judged by MAE and signed bias on the long INTERIOR windows — for the deep
+  cells this is genuine out-of-range prediction. Bootstrap over comments for MAE-
+  difference CIs. Thin evaluation set expected (~200 interior windows, ~100 comments):
+  PILOT status declared in advance.
+
+**Registered predictions (BEFORE the run).** P8a: for first_person the comment's own
+endpoints beat the person rung (within-text information is real); the curvature
+correction helps tension and directive but not first_person. P8b: tension is END-ANCHORED
+(zone model wins via e(δ)); directive is START-ANCHORED (via s(τ)); for first_person the
+race is genuinely open — registered lean: ZONES (the m = 3 "monotone flow" is an additive
+boundary effect in disguise; the decline is opening-anchored settling, not a planned
+relative-position allocation). Verdict semantics: if RELATIVE FLOW wins the first_person
+race on deep interiors, the conjecture's strongest form holds (a transportable function
+of t); if ZONES wins, functionalization still holds but the flow's true coordinate is
+boundary distance, not relative position. Either way the in/out-of-range predictability
+the conjecture asserts is quantified by the MAE ladders.
+
+## F10.7 results (T-GEO-P8, run AFTER the registration commit c5a9b4f, same day)
+
+**P8a — in-range interpolation ladder (412 m=3 comments, 70 users, user-level MAE,
+bootstrap-over-users CIs).** The ladder splits by the P7b shape taxonomy:
+
+| construct | grand | person | func-linear | func-quad | reading |
+|---|---|---|---|---|---|
+| first_person | 2.166 | 1.902 | **1.516** | 1.504 | endpoints beat person by +0.378 (CI [−0.13, +0.90], direction as registered, ns at this n); quadratic adds nothing — flow-consistent |
+| wcl_15 | 0.793 | 0.933 | **0.555** | 0.638 | endpoints beat person, +0.390 CI [+0.03, +0.83] — SIGNIFICANT in-range functionalization |
+| wcl_36 | 1.056 | 0.986 | **0.773** | 0.805 | endpoints better, +0.217 (ns) |
+| tension | 0.414 | **0.377** | 0.485 | 0.568 | PERSON best — registered "curvature helps" prediction WRONG |
+| directive | 0.608 | **0.635/0.608** | 0.718 | 0.844 | person/grand best — registered prediction WRONG |
+| novelty, wcl_02/54 | — | **best** | — | — | person best |
+
+Post-hoc reading (recorded as such): for BOUNDARY-type constructs the interior is the
+person's baseline and the endpoints are the contaminated zones — so endpoint
+interpolation overshoots and the correct in-range function is "person baseline + zone
+offsets," not endpoint averaging. For FLOW-type constructs the comment's own endpoints
+genuinely carry the interior. In-range "position + function → height" holds, but the
+right function differs by shape class.
+
+**P8b — out-of-range coordinate race (fit m ≤ 3, predict m ≥ 4 interiors; 69 long
+comments, 54 users, 204 interior / 66 deep windows — PILOT as declared).** Deep-interior
+MAE (constant / relative-t / zones), user-level, intercept recalibrated on long endpoints:
+
+| construct | const | relative | zones | winner |
+|---|---|---|---|---|
+| first_person | 1.365 | **1.114** | 4.167 | **RELATIVE — decisively** (zones−rel +3.05, CI [+3.03, +3.08]); registered lean (zones) WRONG |
+| tension | 0.179 | **0.110** | 0.380 | relative |
+| wcl_36 | 0.613 | **0.330** | 2.198 | relative (+1.87) |
+| novelty | 0.323 | 0.277 | **0.079** | zones (−0.198) |
+| wcl_54 | 2.184 | 1.674 | **1.093** | zones (−0.581) |
+| wcl_22 | 3.301 | 2.642 | **1.542** | zones (−1.109) |
+| wcl_25 / wcl_15 | **best** | — | — | nothing transports (2 of 10) |
+
+**F10.7 verdict.** The conjecture HOLDS quantitatively, in both halves: (in-range) a
+function rung beats or matches the person rung for flow-type constructs, significantly
+for wcl_15; (out-of-range) for 8 of 10 highlighted constructs some transported function
+beats the constant baseline on genuinely never-observed deep cells — and the WINNING
+COORDINATE follows the P7b shape taxonomy: flow-type constructs transport as functions of
+relative position t (first_person's win is decisive — the conjecture's strongest form:
+specify t, predict the height, even out of range), plateau/dip-type constructs transport
+as zone/plateau functions. Two constructs do not transport at all (wcl_25, wcl_15 deep).
+My registered lean for first_person (zones) was WRONG — the m=3 monotone pattern is a
+genuine relative-position flow, not boundary settling in disguise.
+
+**Stated limitations.** (a) The zones model's short-support identification is confounded
+(its τ≥2 parameter comes from a δ=0 cell and vice versa), so its deep-cell failure for
+flow-type constructs partly reflects the parameterization, not the falsity of boundary
+anchoring where P7b established it; a cleaner zone fit needs m=4 in the fit set at the
+cost of evaluation data. (b) Evaluation cohort is thin (69 comments / 66 deep windows) —
+pilot. (c) P8b CIs are tight because systematic model bias dominates user noise; they are
+CIs of the MAE difference, not of construct effects.
+
+**Consequence for measurement.** Position-conditional scoring now has a concrete recipe
+per shape class: flow-type constructs should be scored with a t-regression (or t-norming)
+inside long texts; boundary-type constructs with zone offsets (open/close/interior);
+plateau-type with interior-only scoring. This is new battery-design material for the
+SUICA-native corpus (design doc cross-reference) and a candidate robustness fix for the
+pass-A opening-share confound flagged in F10.6.
+
 ## F10.6 results (T-GEO-P7/P7b, run AFTER the registration commit e839ed9, same day)
 
 **Data-shape discovery first.** PANDORA's long-comment length distribution is too steep
