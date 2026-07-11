@@ -25,6 +25,11 @@
      exploratory subsection extended and retitled, A.7(iv) added.
      Directional predictions registered and committed BEFORE the runs
      (parent repo commit 60ce99c).
+     v5.8 (2026-07-12): round-12 mechanical number sweep of the v5.5-v5.7
+     additions (36 items, Sonnet-executed, read-only): one summary range
+     fixed (P4 motion statistics -> 'smallest p = .096'; the old .24-.66
+     mixed statistics and dropped the smallest p), realized-phi clarified,
+     m=3 harmonized into EN; trilingual.
      v5.7 (2026-07-11): continuization of position (F10.6, cut -> flow;
      predictions pre-registered at e839ed9): construct-specific shapes —
      first-person true flow (monotone), tension/directive boundary
@@ -840,7 +845,7 @@ measurement model itself rather than any single reliability figure. On
 2,767 development users (nested designed subsets, W = 1, 2, 4, 8), the
 affect–tension composite followed the saturating alternative with an
 asymptote matching its realized full-half stability (fitted φ_max = 0.49
-against a realized 0.46): its low reliability is a ceiling, not a
+against a realized φ of 0.46): its low reliability is a ceiling, not a
 sample-size accident. The apostrophe construct violated the saturation
 model in the opposite direction — its fitted asymptote falls far below
 its realized large-W value — which is the signature of zero-inflation at
@@ -866,8 +871,9 @@ conditions — and if it flows, do the axes stop being nameable and
 become carriers of individuality instead? Directional predictions were
 registered before the runs. Across time the population frame is rigid:
 the top-four eigenframe, recomputed over four within-person time
-blocks, moves no more than within-person block-permutation nulls allow
-(subspace-distance p = .24–.66 across two cohort definitions). Across
+blocks, moves no more than within-person block-permutation nulls allow (all
+four motion statistics nonsignificant across two cohort definitions,
+smallest p = .096). Across
 position in a text it flows: comparing the opening against the closing
 128 tokens of 21,496 long comments, the first two axes hold
 (congruences .97 and .94) while the third and fourth reorient (.73 and
@@ -878,7 +884,8 @@ slightly higher in closings, while a registered hunch that directive
 language rises toward closings failed (p = .10). A continuous
 refinement — windows indexed by relative position within a comment,
 with composition-matched within-comment permutation nulls and a
-composition-free paired stratum — resolves the shape per construct:
+composition-free paired stratum (m = 3) — resolves the shape per
+construct:
 first-person rate declines gradually along the text (monotone,
 curvature not significant — a true flow), affect–tension jumps in the
 closing zone, directive language turns out to be elevated at openings
