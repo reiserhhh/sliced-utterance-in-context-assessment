@@ -56,6 +56,14 @@ fits as well as median) was ruled UNDECIDABLE by an explicit power argument (its
 functional sds are 7-13x the field) with the target claim separately refuted — the
 program's first power-annotated kill adjudication. Promoted to T7 below.
 
+v6.8 (same day): W9 resolved the PANDORA long-text flag as a CAP-ARTIFACT STRATUM —
+Tier-U extraction truncates bodies at 1,500 chars, so 512+-token texts are
+definitionally non-prose (chars/token 2.48 vs 4.79; markdown pipe tables in 14/72);
+all PANDORA within-text dynamics claims are retroactively artifact-stratum and OUT OF
+SCOPE under the frozen extraction (the native corpus carries dynamics). The registered
+quote/list/code stripper was a no-op (kill fired as registered); the mechanism family
+survived under the corrected taxonomy via the executing agent's provenance dig.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -243,8 +251,10 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 - Single-text sufficiency (F11.5): needs many long texts per person — native corpus.
 - Leverage-free gust dynamics: DONE (W2a, F12) — outcome: axes white, wcl_60 bounces,
   content constructs carry over; E3's bounce struck.
-- Format-aware PANDORA windowing (quote/list periodicity in long comments — the W2a
-  saturation/flip signature); until then, PANDORA m ≥ 4 dynamics are not interpretable.
+- Format-aware PANDORA windowing: RESOLVED (W9/F12.10) — the m ≥ 4 stratum is a
+  1,500-char extraction-cap artifact (non-prose, table-dense); PANDORA within-text
+  dynamics are permanently out of scope under the frozen extraction; the native corpus
+  carries the dynamics program.
 - Analytic finite-m centering-bias correction: DONE (F12.4, closed form; verified
   analytically, by 4M-text Monte Carlo, and out-of-sample; deployed as the default
   inversion). Successor item: MA-vs-AR gust discrimination via lag-2 moment identities
@@ -273,6 +283,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
 | W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
 | W3 corrected re-inversion (0a4a97a) | corrected B̂ mean ≈ 0 (\|mean\| < .004); small-θ constructs shrink > half; wcl_60 ≥ .25 | POINT LEAN KILLED: B̂ mean = +.0303, CI [+.014, +.048], 500/500 draws > 0 — the naive negative was centering artifact (its CI contains the predicted −.013) hiding REAL mild positive memory; per-construct predictions ✓ (tension .070→.017, wcl_54 .057→.004, wcl_23 .103→.048, wcl_60 .34); "white gusts" superseded by faint persistence + wcl_60 bounce; instruments converge with W2a construct-by-construct |
+| W9 format-aware (e2b2240) | raw anchor reproduces W2a; formatting concentrated in long texts; stripping removes >= half the excess | anchors bit-exact x2; census INVERTED (0/72 long texts have quote/list/code lines); KILL FIRED (stripper no-op) — and the provenance dig found the true mechanism: 1,500-char extraction cap makes m >= 4 definitionally non-prose (chars/token 2.48; pipe tables 14/72) -> PANDORA dynamics = ARTIFACT-STRATUM, out of scope under frozen extraction |
 | W8 AR(2) triangle (e04d5e0) | carry-over (a1~+.1, a2~0); wcl_20 a2~+.15 / wcl_07 a2~-.15..-.2; wcl_60 worst residual; echoes worse than carry-over | (a) direction holds; (b) CONFIRMED CI-solid both signs (wcl_07 -0.16 [-.28,-.02]; wcl_20 +0.30 [+.04,+.32], a1=.68 boundary surprise); (c) FAILED — kill letter-fired, ruled UNDECIDABLE by power (sds 7-13x field), target claim refuted via (d); (d) HOLDS emphatically (echoes = 2 worst fits of 19) |
 | W7 shape pair (eabc17b) | carry-over set Delta>0; wcl_20/22 below them, rho_pihalf depressed; wcl_60 rho_pihalf ~ 1; hybrid restores AR(2) calibration | (a) 4/5 directional (wcl_03 flips sign), none solid; (b) wcl_20 rho_pihalf = .645 CI-SOLID depressed (even-lag confirmed), ordering P=.912 strong lean; (c) invariant survives (CI includes 1; unstable denominator noted); hybrid held with no fallback, calibration 1.41 -> 1.75, 72/72 tests; UNREGISTERED: wcl_07 only CI-solid Delta (+.540) = damped 4-window oscillation -> W8 signed-(memory, a2) unification queued |
 | W6 Nyquist ratio (ed971f1) | wcl_60 rho_pi > 1 CI-solid (ranking inversion); carry-over set < 1; wcl_20/tension > 1 | (a) CONFIRMED 2.51 [1.28, 7.35], inversion exact; (b) 3/5 CI-solid below 1; (c) FAILED INFORMATIVELY — wcl_20 .770 CI-solid BELOW 1 (standing-wave reading dead; even-lag anomaly inside carry-over spectrum); gamma0 5-moment functional ill-conditioned (premise half-wrong, registered fallback absorbed it); KILL not fired |

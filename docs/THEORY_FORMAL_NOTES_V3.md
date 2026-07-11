@@ -331,6 +331,62 @@ wcl_03 (one-step echoes): residual larger than the carry-over set's. KILL: if wc
 fits AS WELL as the median construct, W4's MA-vs-AR distinction was noise and the
 taxonomy collapses to AR(2)-only.
 
+## F12.10 — Format-aware windowing: lifting or confirming the PANDORA flag
+## (registered 2026-07-12, before W9)
+
+**Question.** W2a flagged PANDORA's long-comment dynamics as uninterpretable (rho1(Delta2)
+saturating toward -1, theta boundary hits, wcl_11 arm-flip) with QUOTE/LIST FORMAT
+PERIODICITY as the suspected mechanism. W9 tests the mechanism directly: strip Reddit
+formatting (quote lines starting with ">"/"&gt;", list markers, code fences/inline code,
+collapsed whitespace) BEFORE tokenization, re-window, re-run the leverage-free Delta2
+dynamics on the same texts; plus a format census (quote/list/code line shares by length
+stratum).
+
+**W9 registered leans (BEFORE the run).** (a) The raw arm reproduces W2a's numbers
+(anchor; assert direction and magnitude within bootstrap noise). (b) Format census:
+formatting is CONCENTRATED in long comments (m >= 4 share >> m = 2-3 share). (c)
+Stripping moves the gust-axis rho1(Delta2) TOWARD the iid band by at least half the
+excess and reduces theta-saturation counts — the format hypothesis. KILL: if the
+stripped dynamics are UNCHANGED (excess persists), the format hypothesis dies and
+PANDORA long comments carry genuine extreme register texture (the flag then becomes a
+finding). (d) Cohort shrinkage after stripping is expected and reported (quotes removed
+-> shorter texts); conclusions stay diagnostic at this n (~50-70 texts), stated.
+
+## F12.10 results (W9, run AFTER registration e2b2240; anchors bit-exact twice —
+## cache dynamics = W2a to 0.0e+00, raw rebuild = P8 cache to 0.0e+00)
+
+**Lean (b) FAILED INVERTED; lean (c)'s KILL FIRED ON THE LETTER; and the executing
+agent's provenance dig found the true mechanism, which the registered taxonomy missed.**
+The registered stripper (quotes/lists/code) was a no-op: 0 of 72 long texts contain even
+one such line; stripped dynamics identical (excess −.1199 vs −.1194; saturations 7 = 7).
+The registered format hypothesis is dead AS TAXONOMIZED.
+
+**The actual mechanism — CAP-ARTIFACT STRATUM (provenance evidence, all numeric).**
+(i) Tier-U bodies are hard-truncated at 1,500 characters at extraction
+(extract_suica_tier_u_comments_v2.py:67); 21,733 of 35,181 candidates sit at exactly
+1,500. (ii) Normal prose runs ~4.8 chars/token, so m ≥ 4 (512+ tokens) within 1,500
+chars is DEFINITIONALLY IMPOSSIBLE FOR PROSE; the cohort's chars/token median is 2.48
+(min 1.02) vs 4.79 in the m = 2–3 stratum. (iii) The stratum is populated by
+punctuation-dense formats: markdown pipe TABLES (pipe-line share > .5 in 14/72 texts,
+mean share .194 — column-periodic, a textbook Δ²-saturation generator) and other
+dense-format objects. VERDICT: the PANDORA m ≥ 4 stratum is an extraction-cap artifact,
+not a register: **all PANDORA within-text dynamics claims (the W2a PANDORA arm, E3's
+PANDORA descriptive) are retroactively marked ARTIFACT-STRATUM — neither psychology nor
+"register texture"**. Standing rule: PANDORA within-text dynamics are OUT OF SCOPE under
+the current frozen extraction (re-extraction would touch frozen prep — not done); the
+native corpus carries the dynamics program.
+
+**Additional fragility caught by the anchor:** gust1_P's PANDORA θ̂ swings 0.02 ↔ 0.48
+purely on the pooled-sd convention (per-arm vs full-cache) at n = 69 — dynamics
+conclusions on that axis were standardization-dependent, consistent with the
+artifact-stratum verdict.
+
+**Scorecard.** (a) anchors ✓✓ bit-exact; (b) inverted (formatting ABSENT from the long
+stratum — because the long stratum is not prose at all); (c) kill fired as registered,
+and the mechanism FAMILY (format periodicity) is vindicated under the corrected
+taxonomy (tables + cap), discovered by the agent's Reviewer-style provenance dig — the
+program's clearest case of the executing agent out-reasoning the registration.
+
 ## F12.9 results (W8, run AFTER registration e04d5e0; grid 6,564 triangle points,
 ## five integrity asserts passed incl. white and AR(1) grid rows to 1e-9/1e-6)
 
