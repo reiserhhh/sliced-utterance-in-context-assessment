@@ -20,6 +20,13 @@ lag-1 coefficients) vs one-step echo (first_person, wcl_03, MA-type) vs sparse b
 (wcl_60, MA, θ̂ = +0.235) — and surfaces an unanticipated PERIOD-2 gust signature
 (wcl_20/wcl_22: CI-solid positive lag-2 excess that neither MA(1) nor AR(1) can produce;
 lag-3 identity registered as the W5 separator).
+v6.4 (same day): the ladder inversion (F12.6/W5) hit a STRUCTURAL indeterminacy —
+within-text centering has a near-null "smooth ladder" direction (σ_min = 0.0087 of the
+exact 5×5 map), so lag coordinates beyond ~2 are ill-posed at feasible n; the Nyquist
+spectral functional f(π) IS tightly estimable and confirms the period-2 ordering with
+disjoint CIs (wcl_20 1.033 / tension 1.016 top vs wcl_60 0.557 / first_person 0.628
+bottom). New principle (F12.6.3): parameterize gust texture by well-conditioned spectral
+functionals, not autocovariance ladders — the estimable-functional move.
 
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
@@ -224,6 +231,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
 | W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
 | W3 corrected re-inversion (0a4a97a) | corrected B̂ mean ≈ 0 (\|mean\| < .004); small-θ constructs shrink > half; wcl_60 ≥ .25 | POINT LEAN KILLED: B̂ mean = +.0303, CI [+.014, +.048], 500/500 draws > 0 — the naive negative was centering artifact (its CI contains the predicted −.013) hiding REAL mild positive memory; per-construct predictions ✓ (tension .070→.017, wcl_54 .057→.004, wcl_23 .103→.048, wcl_60 .34); "white gusts" superseded by faint persistence + wcl_60 bounce; instruments converge with W2a construct-by-construct |
+| W5 gust ladder (6669ccc) | wcl_20/22 standing-wave (g4/g2 in (0.1,0.9)); wcl_60 lag-1-confined; memory set geometric; indeterminate-if-CIs-wide registered as (d) | (d) FIRED structurally: centering null direction (sigma_min .0087) makes lag coordinates ill-posed — coordinates unresolved 19/19, class rule vacuous (design flaw recorded); f(pi) tightly resolved and CONFIRMS the period-2 ordering with disjoint CIs (wcl_20 1.033/tension 1.016 vs wcl_60 .557/first_person .628); KILL not fired; new estimable-functional principle F12.6.3 |
 | W4 MA-vs-AR (5064a0a) | corpus R2 CI-solid positive; memory set AR; wcl_60 MA | corpus R2 +.021 directional only (CI spans 0); memory set 3/5 AR (wcl_35/36/13, φ̂ consistent with lag-1) with first_person/wcl_03 = one-step echo; wcl_60 MA ✓; UNREGISTERED: period-2 signature in wcl_20/wcl_22 (CI-solid lag-2 excess, both families fail) → W5 lag-3 separator |
 
 Score: roughly half the leans held. The program's value is exactly that the instruments,

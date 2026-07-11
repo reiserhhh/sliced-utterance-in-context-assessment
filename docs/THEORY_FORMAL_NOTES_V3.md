@@ -223,6 +223,72 @@ wcl_13) classify AR-type (R2 > 0; AR fit beats MA). (c) wcl_60 classifies MA-typ
 MA(1) suffices and the AR extension is REJECTED on parsimony; widespread R2 < 0 → both
 families fail and the model moves to MA(2)+.
 
+## F12.6 — The gust ladder: lag-structure inversion and the period-2 question
+## (registered 2026-07-12, before W5; REFINES the W5 sketch in F12.5 results)
+
+**Design correction (recorded).** F12.5's closing line proposed lag-3 as the period-2
+separator (γ3 < 0 under oscillation). That works only for PHASE-LOCKED alternation. The
+observed wcl_20/22 shape (lag-1 ≈ 0, lag-2 large positive) fits an AR(2)-even process
+(x_k = a2·x_{k−2} + η, a1 ≈ 0 — a damped standing wave), which predicts γ3 ≈ 0 and
+γ4 = a2·γ2 > 0; MA(2) predicts γ3 = γ4 = 0. The general instrument is therefore the
+LADDER INVERSION, not one more residual.
+
+**F12.6.1 (instrument).** Extend the exact-enumeration centering maps to S3 and S4
+(lag-h pairs need n ≥ h+1; lag-4 draws only on m ≥ 7 texts, ≈ 1.1k pairs — thin,
+declared). Build the exact centered 5×5 linear map (γ0..γ4) → (S0..S4) from the pooled
+n-composition (unit-vector enumeration; report the condition number), invert for the
+GUST LADDER γ̂0..γ̂4 per construct (assuming γ_{h≥5} = 0), bootstrap over texts for CIs.
+Also report the Nyquist spectral value f(π) = γ0 − 2γ1 + 2γ2 − 2γ3 + 2γ4 (period-2
+energy) per construct.
+
+**F12.6.2 (classification by ladder shape).** MA(2) echo: γ3, γ4 ≈ 0 with γ2 > 0.
+Damped standing wave (AR(2)-even): γ4/γ2 = a2 ∈ (0, 1), γ3 ≈ 0. Phase-locked
+alternation: γ3 < 0. AR(1) carry-over: geometric ladder γ2/γ1 ≈ γ1/γ0. MA(1): ladder
+dies after lag 1.
+
+**W5 registered leans (BEFORE the run).** (a) wcl_20/22: γ2 CI-solid positive AND
+γ4 > 0 with γ4/γ2 ∈ (0.1, 0.9) — the damped-standing-wave reading (a sustained ~2-window
+≈ 256-token rhythm; guess: paragraph-scale alternation), rather than MA(2) (γ4 ≈ 0).
+(b) wcl_60: ladder confined to lag 1. (c) wcl_35/36/13: geometric-ish decay consistent
+with their AR φ̂ ≈ +0.1. (d) The 5×5 inversion is expected ill-conditioned at high lags
+(centering attenuation grows with h) — if the bootstrap CIs on γ3/γ4 are too wide to
+classify, the verdict is INDETERMINATE-AT-THIS-N, recorded as such (no forcing).
+KILL: γ4 CI-solid NEGATIVE for wcl_20/22 would reject both registered families and
+reopen the model class.
+
+## F12.6 results (W5, run AFTER registration 6669ccc; engine cross-checks to 9e-16 on
+## the W3/W4 blocks; truncation aliasing quantified pre-run — f_π is the most
+## aliasing-robust output, and damped alternation can flip g3's sign, both recorded)
+
+**The registered indeterminacy scenario (lean d) FIRED — and it is structural, not
+sampling.** SVD of the exact centered 5×5 map: singular values [14.9, 10.1, 4.05, 0.81,
+**0.0087**]; the near-null right vector [0.61, 0.57, 0.45, 0.28, 0.12] is a smooth
+"raise the whole ladder" direction that within-text centering renders nearly invisible.
+Consequently the individual γ1..γ4 coordinates are unresolvable at this n for every
+construct (all point ladders are near-proportional to the null vector; all CIs span 0),
+the classification rule fired vacuously (19/19 "MA1" — a rule-design flaw of the
+registration, recorded as such), lean (a) is unadjudicable (wcl_20/22 g4/g2 points sit
+in the registered band but their CIs span everything), and the KILL did not fire.
+
+**What IS resolved — the spectral functional.** The Nyquist energy f(π) = γ0 − 2γ1 +
+2γ2 − 2γ3 + 2γ4 lies away from the null direction and is tightly estimated for all 19
+constructs. Its ordering CONFIRMS the W4 period-2 flag at the functional level, with
+disjoint CIs at the extremes: wcl_20 f_π = 1.033 [0.833, 1.225] and tension = 1.016
+[0.806, 1.260] highest — exactly the two flagged constructs — versus wcl_60 = 0.557
+[0.271, 0.965] and first_person = 0.628 [0.515, 0.744] lowest (wcl_20 vs first_person:
+non-overlapping CIs).
+
+**F12.6.3 (estimable-functional principle; theorem-grade lesson).** Under within-text
+centering, gust dynamics beyond lag ~2 are ill-posed in LAG COORDINATES at feasible n
+(the centering null direction); the estimable objects are WELL-CONDITIONED SPECTRAL
+FUNCTIONALS of the gust spectrum (f at Nyquist and similarly placed frequencies). The
+right parameterization of the motion layer's dynamic texture is frequency-domain — (r_c,
+f_π/γ̂0-normalized) — not the autocovariance ladder. This is the deconvolution-style
+ill-posedness → estimable-functional move, and it aligns the program with why
+realized-covariance theory works with integrated spectral quantities. Deployment
+increment (queued W6): expose a normalized period-2 energy in motion.py alongside the
+signed memory coefficient.
+
 ## F12.5 results (W4, run AFTER registration 5064a0a; enumeration engine reproduced the
 ## W3 coefficient set incl. d(3)=56/9 to ≤ 9e−16; planted-recovery checks passed at
 ## MA θ=.4, AR φ∈{.15,.5}; centering attenuates the lag-2 map to (0.708, −3.480) from
