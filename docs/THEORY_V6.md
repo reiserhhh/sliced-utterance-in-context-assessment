@@ -47,6 +47,15 @@ emerged as the only CI-solid Delta_shape (+.540) — a damped ~4-window oscillat
 (AR(2)-even, a2 ~ −0.2 post-hoc). The signed two-parameter family (odd-lag memory x
 even-lag oscillation) is queued as the W8 unification hypothesis.
 
+v6.7 (same day): the AR(2) texture triangle (F12.9/W8) closes the texture arc — gust
+dynamics reduce to model (M'''): level + flow + AR(2)-textured gusts (a1, a2 on the
+stationarity triangle: carry-over a1 > 0; even structure a2 CI-solid at BOTH signs —
+wcl_20 +0.30, wcl_07 −0.16) plus a NON-NESTED MA-echo class (first_person/wcl_03 = the
+two worst AR(2) fits of 19, as "not nested" predicts). One letter-fired kill (wcl_60
+fits as well as median) was ruled UNDECIDABLE by an explicit power argument (its
+functional sds are 7-13x the field) with the target claim separately refuted — the
+program's first power-annotated kill adjudication. Promoted to T7 below.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -142,6 +151,20 @@ The realized-covariance analogy stands on the portability split; the bid-ask-bou
 sub-analogy is RETRACTED.] FALSIFIER:
 exhibit a statically invisible factor that transports across registers — one clean
 counterexample breaks the law.
+
+**T7 (spectral texture of gusts; the F12 arc consolidated).** Under within-text
+centering, gust dynamics are estimable ONLY through well-conditioned spectral
+functionals (F12.6.3): the signed memory r_c, and the hybrid shape pair
+(rho_pihalf, rho_pi) with per-functional left-solve conditioning (F12.8). Exact
+invariants: iid gusts pin ρ1(Δ²) = −2/3, (rho_pihalf, rho_pi) = (1, 1); MA(1) of ANY
+memory pins rho_pihalf = 1. The texture family is the AR(2) stationarity triangle plus
+a non-nested MA-echo class (F12.9/W8: even-lag structure CI-solid at both signs of a2;
+echoes = worst AR(2) residuals). Every estimator carries its exact finite-n centering
+correction (F12.4, incl. the d(3) = 56/9 boundary) and its composition-dependent
+calibration; power is a per-construct property (denominator instability can render a
+test undecidable — recorded, not forced). Personality reading: texture parameters are
+register-anchored machine coordinates (T5/T6 apply); their person-level stability is
+untested (native-corpus item).
 
 ## 3. Theorem-similarity table (advanced tools ↔ SUICA objects)
 
@@ -250,6 +273,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
 | W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
 | W3 corrected re-inversion (0a4a97a) | corrected B̂ mean ≈ 0 (\|mean\| < .004); small-θ constructs shrink > half; wcl_60 ≥ .25 | POINT LEAN KILLED: B̂ mean = +.0303, CI [+.014, +.048], 500/500 draws > 0 — the naive negative was centering artifact (its CI contains the predicted −.013) hiding REAL mild positive memory; per-construct predictions ✓ (tension .070→.017, wcl_54 .057→.004, wcl_23 .103→.048, wcl_60 .34); "white gusts" superseded by faint persistence + wcl_60 bounce; instruments converge with W2a construct-by-construct |
+| W8 AR(2) triangle (e04d5e0) | carry-over (a1~+.1, a2~0); wcl_20 a2~+.15 / wcl_07 a2~-.15..-.2; wcl_60 worst residual; echoes worse than carry-over | (a) direction holds; (b) CONFIRMED CI-solid both signs (wcl_07 -0.16 [-.28,-.02]; wcl_20 +0.30 [+.04,+.32], a1=.68 boundary surprise); (c) FAILED — kill letter-fired, ruled UNDECIDABLE by power (sds 7-13x field), target claim refuted via (d); (d) HOLDS emphatically (echoes = 2 worst fits of 19) |
 | W7 shape pair (eabc17b) | carry-over set Delta>0; wcl_20/22 below them, rho_pihalf depressed; wcl_60 rho_pihalf ~ 1; hybrid restores AR(2) calibration | (a) 4/5 directional (wcl_03 flips sign), none solid; (b) wcl_20 rho_pihalf = .645 CI-SOLID depressed (even-lag confirmed), ordering P=.912 strong lean; (c) invariant survives (CI includes 1; unstable denominator noted); hybrid held with no fallback, calibration 1.41 -> 1.75, 72/72 tests; UNREGISTERED: wcl_07 only CI-solid Delta (+.540) = damped 4-window oscillation -> W8 signed-(memory, a2) unification queued |
 | W6 Nyquist ratio (ed971f1) | wcl_60 rho_pi > 1 CI-solid (ranking inversion); carry-over set < 1; wcl_20/tension > 1 | (a) CONFIRMED 2.51 [1.28, 7.35], inversion exact; (b) 3/5 CI-solid below 1; (c) FAILED INFORMATIVELY — wcl_20 .770 CI-solid BELOW 1 (standing-wave reading dead; even-lag anomaly inside carry-over spectrum); gamma0 5-moment functional ill-conditioned (premise half-wrong, registered fallback absorbed it); KILL not fired |
 | W5 gust ladder (6669ccc) | wcl_20/22 standing-wave (g4/g2 in (0.1,0.9)); wcl_60 lag-1-confined; memory set geometric; indeterminate-if-CIs-wide registered as (d) | (d) FIRED structurally: centering null direction (sigma_min .0087) makes lag coordinates ill-posed — coordinates unresolved 19/19, class rule vacuous (design flaw recorded); f(pi) tightly resolved and CONFIRMS the period-2 ordering with disjoint CIs (wcl_20 1.033/tension 1.016 vs wcl_60 .557/first_person .628); KILL not fired; new estimable-functional principle F12.6.3 |

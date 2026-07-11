@@ -308,6 +308,64 @@ all reference invariants tested (MA(1) ρ_{π/2} = 1 exactly is the cleanest new
 KILL: wcl_20 Δ_shape ≥ the carry-over set CI-solid would kill the even-lag-anomaly
 reading as well, reopening the model class for W4's R2 excess.
 
+## F12.9 — The signed two-parameter unification: AR(2) texture triangle
+## (registered 2026-07-12, before W8)
+
+**Claim.** The four observed gust textures are regions of ONE family: AR(2) gusts
+x_k = a1 x_{k-1} + a2 x_{k-2} + eta on the stationarity triangle. Carry-over =
+(a1 > 0, a2 ~ 0); bounce = (a1 < 0); interleaved carry-over / period-2 = (a1 ~ 0,
+a2 > 0); damped period-4 = (a1 ~ 0, a2 < 0). MA(1) is NOT nested — genuine one-step
+echoes must FAIL the AR(2) fit, which retests W4's MA-vs-AR verdicts from a new angle.
+
+**Instrument (W8).** Per construct, fit (a1, a2) to the THREE hybrid estimable
+functionals (signed memory r_c, rho_pihalf, rho_pi) by grid least squares over the
+stationarity triangle (references exact via Yule-Walker + the enumeration engine's
+exact-on-composition expected functionals); 3 moments, 2 parameters, 1 dof —
+overidentification residual = the fit gate. Bootstrap CIs on (a1, a2) and residual.
+
+**W8 registered leans (BEFORE the run).** (a) wcl_35/36/13: a1 ~ +0.1, a2 ~ 0, small
+residual. (b) wcl_20: a1 ~ 0, a2 ~ +0.15; wcl_07: a1 ~ 0, a2 ~ -0.15..-0.2; both small
+residuals (the family's raison d'etre). (c) wcl_60: WORST overid residual of the 19
+(genuine MA bounce, not AR-representable) — this is the sharp test. (d) first_person /
+wcl_03 (one-step echoes): residual larger than the carry-over set's. KILL: if wcl_60
+fits AS WELL as the median construct, W4's MA-vs-AR distinction was noise and the
+taxonomy collapses to AR(2)-only.
+
+## F12.9 results (W8, run AFTER registration e04d5e0; grid 6,564 triangle points,
+## five integrity asserts passed incl. white and AR(1) grid rows to 1e-9/1e-6)
+
+**Lean (b) — the family's raison d'etre: CONFIRMED with CI-solid signs.** wcl_07
+a2 = −0.16, CI [−0.28, −0.02] (damped period-4, squarely in the registered band; a1 ~ 0
+as sketched). wcl_20 a2 = +0.30, CI [+0.04, +0.32] solid positive — but with an
+UNANTICIPATED large a1 = +0.68 (optimum at a1+a2 = 0.98, near the stationarity
+boundary): near-integrated persistence PLUS even structure, not the "interleaved" pure
+a1 ~ 0 texture the lean sketched (sketch corrected, sign conclusion stands).
+
+**Lean (d) — HOLDS emphatically and carries the MA class.** The two one-step-echo
+constructs are the WORST AR(2) fits of all 19 (wcl_03 resid 0.830, first_person 0.524
+vs carry-over set 0.067–0.154) — exactly what "MA(1) is not nested" predicts, delivered
+where the instruments have power.
+
+**Lean (c) FAILED as registered; the KILL fires by letter and is ruled UNDECIDABLE by
+mechanism (recorded in full).** wcl_60 ranks 8/19 (ratio to median 1.18). But its
+functional sds are 7–13x the field (gamma0 = 0.22 denominator; 29/300 draws dropped) —
+the weighted overidentification test has NO POWER for wcl_60 (its resid CI spans
+[0.003, 1.76]; under wcl_03's sds its deviations would rank worst by an order of
+magnitude). Ruling: the kill predicate presupposed comparable test power, which fails;
+the kill's TARGET claim ("the MA-vs-AR distinction was noise") is separately REFUTED by
+lean (d). Consequence: wcl_60's PARAMETRIC identity (MA vs AR) is downgraded to
+UNDECIDED-LOW-POWER; only its sign facts stand (anti-persistent lag-1, rho_pi > 1
+CI-solid). Honest note: this is the program's first letter-fired kill set aside by an
+explicit power argument — the reasoning, sd table, and both readings are in the JSON.
+
+**F12.9 verdict — the unification, amended.** Gust texture = AR(2) STATIONARITY
+TRIANGLE plus a NON-NESTED MA-ECHO CLASS: carry-over cluster (a1 > 0, a2 ~ 0), even
+structure at both signs of a2 (wcl_20 +, wcl_07 −, both CI-solid), echoes
+AR(2)-unrepresentable (worst residuals), wcl_60 bounce-region placement power-limited.
+Model (M''') = level + flow + AR(2)-textured gusts (+) MA-echo exceptions — four ad-hoc
+textures reduced to one two-parameter family plus one discrete class. Promoted to
+THEORY V6 as T7.
+
 ## F12.8 results (W7a Essays + W7b deployment, run AFTER registration eabc17b)
 
 **Conditioning: the registered hybrid design HELD with no fallback** (|w_pi| = 4.10,
