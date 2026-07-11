@@ -148,6 +148,102 @@ in text" is confounded with discourse function (openings and closings do differe
 this instrument reads the confound deliberately, as a first probe. (d) All three are
 label-free Tier-U; no seals, no frozen objects touched.
 
+## F10.6 — Continuization: from cut to flow (user directive 2026-07-11, registered before run)
+
+**Motivating observation (user, verbatim intent).** The "cut" (slicing) is an interval
+variable; the finding turns it into "flow," a continuous variable.
+
+**Formalization.** P5 measured position as a two-point contrast (open vs close). The
+conjecture's natural completion treats position as a continuous flow parameter: each
+window of a text carries t = relative position in [0, 1] (the frozen slicer has always
+computed this coordinate — token_mid_frac — which the frozen prep then discarded), the
+frame becomes a path t ↦ V(t) on the Grassmannian, and each construct gains a mean path
+t ↦ μ_c(t). Two readings then separate, and only a continuous instrument can separate
+them:
+
+- BOUNDARY-REGISTER reading: openings and closings are discrete micro-registers; the
+  interior is homogeneous. Movement is edge-localized; the "flow" is two zone jumps.
+- TRUE-FLOW reading: movement accumulates along t; interior steps are comparable to edge
+  steps.
+
+**Instrument (T-GEO-P7, flow curve).** Non-overlapping 128-token windows within long
+comments (>= 288 tokens; comments capped at 12 windows by endpoint-preserving even
+subsampling), t = j/(m−1), five bins over t. Per bin: between-person frames (pairwise
+user-matched to bin 0) and mean curves. Null: within-comment permutation of window order
+(the group S_m per comment). Key property: this group preserves each comment's SET of t
+values, hence its bin memberships — so bin composition (which comment lengths feed which
+bins) is held fixed under the null, and every p-value is composition-matched by
+construction. Statistics: adjacent-step frame distances d(b, b+1); per-construct adjacent
+mean steps; EDGE SHARE = (first step + last step) / (sum of all adjacent steps), which is
+≈ .5 under uniform flow and → 1 under edge localization; interior flatness = max interior
+step vs null. Sanity anchor: bin4 − bin0 must reproduce P5's open/close direction for
+first_person before anything is reported.
+
+**Registered predictions (honest hunches, BEFORE the run).** Edge-localized: edge share
+above null for first_person and for the PC3/PC4 rotation; interior steps within null;
+PC1/PC2 flat everywhere. The conjecture's strongest form — true continuous flow — would
+instead show interior movement at edge-comparable size. Either verdict refines F10; a
+boundary verdict would RENAME P5's finding from "position flow" to "boundary
+micro-registers," and a flow verdict would license t as a genuine continuous condition
+variable in F10.1.
+
+**Exchangeability note (F8 × F10).** Position structure violates within-comment window
+exchangeability. Pass-A concatenation mixes positions across comments, so the user-level
+residue is an opening-share composition effect (each cell's first slice always starts at
+a comment opening; users with shorter comments carry more openings per slice). Flagged as
+a pending robustness check for first_person (opening-share covariate).
+
+## F10.6 results (T-GEO-P7/P7b, run AFTER the registration commit e839ed9, same day)
+
+**Data-shape discovery first.** PANDORA's long-comment length distribution is too steep
+to fill a five-point curve: 43,818 windows from 21,498 comments (3,622 users), but median
+m = 2, so bins 0/4 carry 21.5k windows each while bin 2 gets 659 (294 users, m = 3
+comments) and bins 1/3 get 80 windows (54 users, m >= 4). Interior FRAME estimates are
+therefore underpowered by construction; interior MEAN tests retain usable power. The
+within-comment permutation null preserves each comment's bin set, so all p-values are
+composition-matched; bin VALUES, however, mix composition (interior bins = long comments
+only) and must not be read as trajectories — the m = 3 paired stratum (P7b) is the
+composition-free readout.
+
+**T-GEO-P7 (five-bin curve).** Sanity anchor held: first_person bin4 − bin0 = −0.741,
+reproducing P5's direction on the perfectly matched endpoint pair (bins 0 and 4 receive
+one window from EVERY comment). Registered edge-localization prediction: SUPPORTED where
+powered, for means — tension edge share .742 (p = .027), novelty .868 (p = .040),
+first_person .774 (p = .053, marginal); ALL interior mean steps within null (interior-max
+p = .64–.96 for those constructs). No wcl construct shows significant edge structure.
+TRUE-FLOW reading: no support anywhere. Frames: no adjacent step beyond null (p =
+.08–.77), edge share .488 (p = .74) — verdict WITHHELD for frames (54–294 users in the
+interior cannot estimate a 19-dim frame); the well-powered endpoint congruence
+[.947, .942, .835, .815] replicates P5's PC1/PC2-hold / PC3-PC4-move pattern.
+
+**T-GEO-P7b (m = 3 paired stratum, composition-free).** 412 comments with exactly three
+windows, 70 users (gate >= 2 comments; thin cohort, flagged), user-level statistics, S_3
+within-comment null (2,000 draws). Every position estimated from the SAME comments, so
+shape claims are clean; this test takes PRECEDENCE over P7 curve steps for shape claims.
+
+| construct | open / mid / close | linear (p) | curvature (p) | shape verdict |
+|---|---|---|---|---|
+| first_person | 2.908 / 2.043 / 1.720 | −1.188 (< .0005) | −0.271 (.156, ns) | **TRUE FLOW — monotone decline, mid ON the endpoint segment** |
+| tension | 0.239 / 0.216 / 0.618 | +0.379 (< .0005) | −0.212 (.001) | closing-zone jump (boundary) |
+| directive | 0.890 / 0.442 / 0.500 | −0.390 (.001) | −0.253 (.008) | opening elevation (boundary) — invisible to the two-point contrast; NOTE P5's all-strata two-point was +0.026 ns → stratum-dependence flagged |
+| novelty | 0.163 / 0.242 / 0.145 | −0.018 (.782) | +0.088 (.100) | no clean verdict (P7's edge share p=.040 not corroborated here; underpowered) |
+| wcl_22 | 4.328 / 3.032 / 3.671 | −0.657 (.029) | −0.968 (< .0005) | mid-text dip (a THIRD shape) |
+| wcl_54 | 2.435 / 2.049 / 2.470 | +0.035 (.861) | −0.404 (.041) | mid-text dip |
+
+**F10.6 verdict.** The registered edge-localization hunch was PARTLY WRONG, and the
+continuization earned its keep: position structure is CONSTRUCT-SPECIFIC. The flagship
+first_person genuinely FLOWS (gradual monotone decline along the text — the user's
+continuous-variable reading holds for it); tension and directive live in boundary
+micro-registers (closing jump / opening elevation); two style clusters dip mid-text.
+Neither pure reading (all-flow / all-boundary) survives — t is a licensed continuous
+condition variable in F10.1, and each construct carries its own position profile, which
+is itself new measurement material (position-conditional norms; opening/closing/interior
+as micro-registers for the boundary-type constructs). Follow-ups: directive's stratum
+dependence (m=2 vs m=3); position profiles as user-level signatures (does the SHAPE of a
+person's first_person decay individuate? — would be F10.3 x F10.6); Essays' long documents
+as the natural corpus for dense interior coverage (frozen benchmark governance applies —
+Tier-U-equivalent text only, no labels).
+
 ## F10 results (T-GEO-P4/P5/P6, run AFTER the registration commit 60ce99c, same day)
 
 **P4 — time flow of the population frame: PREDICTION HELD (rigid).** Pooled arm

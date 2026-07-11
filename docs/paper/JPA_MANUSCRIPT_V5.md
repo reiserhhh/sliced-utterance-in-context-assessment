@@ -24,7 +24,11 @@
      label-free instruments (time / text position / personal axes);
      exploratory subsection extended and retitled, A.7(iv) added.
      Directional predictions registered and committed BEFORE the runs
-     (parent repo commit 60ce99c). -->
+     (parent repo commit 60ce99c).
+     v5.7 (2026-07-11): continuization of position (F10.6, cut -> flow;
+     predictions pre-registered at e839ed9): construct-specific shapes —
+     first-person true flow (monotone), tension/directive boundary
+     micro-registers, two style clusters mid-dip. -->
 
 # Text as Behavior in Chosen Situations: Theory, Development, and a Preregistered First Test of Sliced Utterance In-Context Assessment (SUICA)
 
@@ -871,7 +875,16 @@ position in a text it flows: comparing the opening against the closing
 mean levels shift — first-person rate runs markedly higher in openings
 (user-level difference 0.69 rate units, p < .0005) and affect–tension
 slightly higher in closings, while a registered hunch that directive
-language rises toward closings failed (p = .10). Across persons the
+language rises toward closings failed (p = .10). A continuous
+refinement — windows indexed by relative position within a comment,
+with composition-matched within-comment permutation nulls and a
+composition-free paired stratum — resolves the shape per construct:
+first-person rate declines gradually along the text (monotone,
+curvature not significant — a true flow), affect–tension jumps in the
+closing zone, directive language turns out to be elevated at openings
+(a boundary structure the two-point contrast could not see), and two
+style clusters dip mid-text; some constructs flow, others live in
+boundary micro-registers. Across persons the
 frame is a signature: each writer's leading within-person eigenvector
 matches itself across time-disjoint halves better than stranger
 pairings (mean |cos| = .257 vs. .224, p < .0033, n = 2,430), sits at
