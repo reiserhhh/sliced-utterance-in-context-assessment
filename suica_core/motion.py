@@ -10,19 +10,35 @@ personality-leak sticker (``PERSONALITY_LEAK_RE``) drops the WHOLE text,
 position-neutral (we do not selectively peel individual windows here, since
 that would bias which parts of the path survive).
 
-Moments (F12.1, ``docs/THEORY_FORMAL_NOTES_V3.md``, registered commit
-da07462): second differences D2_k = w_{k+1} - 2*w_k + w_{k-1} kill level and
-linear drift per triple. Pooled over eligible texts (no subsample gaps,
-5 <= m <= 12 -- the registered W2b corridor) they give the exact MA(1)
-inversions
+Moments (F12.1 identities + F12.4 finite-n correction,
+``docs/THEORY_FORMAL_NOTES_V3.md``, registered commit da07462): second
+differences D2_k = w_{k+1} - 2*w_k + w_{k-1} kill level and linear drift per
+triple. S0 = Cov(D2) and symS1 = sym Cov(D2_k, D2_{k+1}) are estimated from
+per-text-CENTERED D2 rows, pooled over eligible texts (no subsample gaps,
+5 <= m <= 12 -- the registered W2b corridor). Centering biases the sample
+moments relative to the raw F12.1 identities (S0 = 6*Gamma0 - 8*B,
+symS1 = -4*Gamma0 + 7*B), so the DEFAULT inversion is the F12.4 exact map:
+solve, entrywise, the centered-moment system
 
-    Gamma0_hat = (7*S0 + 8*symS1) / 10
-    B_hat      = (6*Gamma0_hat - S0) / 8
+    E[S0]    = a(n)*Gamma0 + b(n)*B     (n = m - 2 second-difference rows)
+    E[symS1] = c(n)*Gamma0 + d(n)*B
 
-with S0 = Cov(D2) and symS1 = sym Cov(D2_k, D2_{k+1}), both estimated from
-per-text-centered D2 rows. The per-construct diagonal ratio r_c =
-B_hat_cc / Gamma0_hat_cc identifies the implied MA(1) theta (root of
-r = -theta/(1+theta**2) in [0, 1]).
+with the per-n coefficients of ``_centered_moment_coefficients`` pooled
+over the actual texts used -- row weights n_t for the S0 equation,
+adjacent-pair weights n_t - 1 for the symS1 equation. The naive F12.1
+inversion (Gamma0_hat = (7*S0 + 8*symS1)/10, B_hat = (6*Gamma0_hat - S0)/8)
+remains available behind ``naive_inversion=True``; the output key
+``"inversion"`` records which map produced the estimates
+("corrected_f12_4" | "naive").
+
+Memory (primary dynamic output): ``memory_by_construct`` is the SIGNED
+per-construct ratio r_c = B_hat_cc / Gamma0_hat_cc -- positive = carry-over
+/ persistence, negative = bounce / anti-persistence. The corpus finding
+(Essays re-inversion under F12.4) is a mildly POSITIVE average memory with
+sparse-construct bounce exceptions, so the signed coefficient is the honest
+primary; ``theta_by_construct`` -- the [0, 1] MA(1) inversion of r_c (root
+of r = -theta/(1+theta**2)), meaningful only where r_c < 0 -- is kept for
+continuity.
 
 Flow (F12.1.iii): the wide difference d = (w_last - w_first)/(m-1) has
 Cov(d) = Sigma_flow + 2*Gamma0/(m-1)**2 with no Gamma1 term (endpoint gap
@@ -30,14 +46,10 @@ Cov(d) = Sigma_flow + 2*Gamma0/(m-1)**2 with no Gamma1 term (endpoint gap
 precision-pooling (weights = n texts per stratum) recovers a corrected flow
 covariance -- when Gamma0_hat itself is estimable (T4 guard below).
 
-Known finite-sample property (planner audit, v6.1 deployment): the
-within-text centering of D2 (which removes quadratic position leakage)
-carries a bounded upward bias in the theta inversion -- at true theta =
-0.4, m = 8 the estimator asymptotes to ~0.44-0.45 (agent-derived
-analytically and confirmed to N = 200k). Direction is known (toward
-anti-persistence), magnitude shrinks with m. An analytic finite-m
-correction is an open instrument (THEORY V6 section 6); until then treat
-theta values comparatively, not absolutely.
+Finite-sample bias (closed, F12.4): the centering bias is now corrected by
+default via the F12.4 exact map above -- verified analytically and by
+Monte Carlo; the historical naive inversion's bias was ~ +0.04 on
+theta_hat at theta = 0.4, m = 8 (reproducible via ``naive_inversion=True``).
 
 Estimability guard (T4, measurement economics -- occasions vs tokens):
 gust-structure variance is token-limited (~1/(N*(m-2))), not
@@ -148,6 +160,71 @@ def _theta_from_ratio(r_c: float) -> float:
     return float(np.clip((-1.0 + np.sqrt(disc)) / (2.0 * r_c), 0.0, 1.0))
 
 
+def _centered_moment_coefficients(n_list: list[int]) -> tuple[float, float, float, float]:
+    """Pooled F12.4 coefficients (A, B_coef, C, D_coef) of the centered-
+    moment system E[S0] = A*Gamma0 + B_coef*B, E[symS1] = C*Gamma0 +
+    D_coef*B, for texts contributing n_t = m_t - 2 centered second-
+    difference rows each (n_t >= 3 inside the corridor).
+
+    Per-text exact coefficients (within-text centering of the D2 series,
+    whose autocovariances under MA(1) gusts are gamma_D(0..3) =
+    (6, -4, 1, 0)*Gamma0 + (-8, 7, -4, 1)*B):
+
+        a(n) = 6 - 4/n**2
+        b(n) = -8 + 4/n**2
+        c(n) = -4 + 2*(n - 2)/(n**2*(n - 1))
+        d(n) = 7 - 4/n**2                     for n >= 4
+        d(3) = 56/9                           n = 3 boundary case: the lag-3
+                                              term gamma_D(3) = B cannot
+                                              occur on 3 rows, lowering d by
+                                              2/(n*(n-1)) = 1/3 relative to
+                                              the n >= 4 formula (verified
+                                              analytically + Monte Carlo)
+
+    All coefficients tend to the raw F12.1 identity values (6, -8, -4, 7)
+    as n grows. Pooling matches how S0/symS1 are pooled: row weights n_t
+    for the S0 equation, adjacent-pair weights n_t - 1 for the symS1
+    equation.
+    """
+    n_arr = np.asarray(n_list, dtype=float)
+    a = 6.0 - 4.0 / n_arr ** 2
+    b = -8.0 + 4.0 / n_arr ** 2
+    c = -4.0 + 2.0 * (n_arr - 2.0) / (n_arr ** 2 * (n_arr - 1.0))
+    d = 7.0 - 4.0 / n_arr ** 2
+    d = np.where(n_arr == 3.0, 56.0 / 9.0, d)  # exact n=3 boundary (see docstring)
+    w_rows = n_arr
+    w_pairs = n_arr - 1.0
+    pooled_a = float((w_rows * a).sum() / w_rows.sum())
+    pooled_b = float((w_rows * b).sum() / w_rows.sum())
+    pooled_c = float((w_pairs * c).sum() / w_pairs.sum())
+    pooled_d = float((w_pairs * d).sum() / w_pairs.sum())
+    return pooled_a, pooled_b, pooled_c, pooled_d
+
+
+def _invert_moments(
+    s0: np.ndarray,
+    sym_s1: np.ndarray,
+    n_list: list[int],
+    naive_inversion: bool = False,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Invert pooled centered moments (S0, symS1) to (Gamma0_hat, B_hat).
+
+    Default: the F12.4 corrected inversion -- solve the pooled 2x2
+    centered-moment system entrywise (det = A*D_coef - B_coef*C; Gamma0 =
+    (D_coef*S0 - B_coef*symS1)/det; B = (A*symS1 - C*S0)/det).
+    ``naive_inversion=True`` applies the raw F12.1 identities, which ignore
+    the within-text centering (kept for history/comparison).
+    """
+    if naive_inversion:
+        gamma0 = (7.0 * s0 + 8.0 * sym_s1) / 10.0
+        return gamma0, (6.0 * gamma0 - s0) / 8.0
+    pooled_a, pooled_b, pooled_c, pooled_d = _centered_moment_coefficients(n_list)
+    det = pooled_a * pooled_d - pooled_b * pooled_c
+    gamma0 = (pooled_d * s0 - pooled_b * sym_s1) / det
+    b = (pooled_a * sym_s1 - pooled_c * s0) / det
+    return gamma0, b
+
+
 def _top_eig(matrix: np.ndarray) -> tuple[float, np.ndarray]:
     """Largest eigenvalue/eigenvector of a symmetric matrix."""
     vals, vecs = np.linalg.eigh(matrix)
@@ -159,11 +236,12 @@ def _top_eig(matrix: np.ndarray) -> tuple[float, np.ndarray]:
 def motion_from_window_arrays(
     window_arrays: list[np.ndarray],
     orig_m: list[int] | None = None,
+    naive_inversion: bool = False,
 ) -> dict[str, Any]:
     """Internal moment/flow pipeline over already-scored (and, in
     ``motion_profile``, already pooled-sd-standardized) per-text window
-    score matrices -- the numeric core that F12.1's formulas are checked
-    against directly in tests.
+    score matrices -- the numeric core that the F12.1/F12.4 formulas are
+    checked against directly in tests.
 
     ``window_arrays[i]`` is an ``(m_i, p)`` matrix of window scores for one
     text, IN ORIGINAL WINDOW ORDER. ``orig_m`` is the pre-subsample window
@@ -174,13 +252,21 @@ def motion_from_window_arrays(
     kept rows equal its original m (no subsample gaps) AND
     ``D2_M_LO <= m <= D2_M_HI`` (the F12.3 registered corridor); every text
     with m >= 2 still contributes to level/slope and to the flow moment.
+
+    ``naive_inversion=False`` (default) applies the F12.4 finite-n
+    corrected inversion; ``True`` applies the historical F12.1 identities.
+    The primary dynamic output is ``memory_by_construct`` (signed r_c;
+    positive = carry-over, negative = bounce); ``theta_by_construct`` is
+    the continuity [0, 1] MA(1) reading, meaningful only where r_c < 0.
     """
+    inversion_mode = "naive" if naive_inversion else "corrected_f12_4"
     n_texts = len(window_arrays)
     if n_texts == 0:
         return {
             "level_mean": None, "slope_mean": None,
             "Gamma0": None, "B": None, "gamma0_reason": "no texts",
-            "theta_by_construct": None,
+            "memory_by_construct": None, "theta_by_construct": None,
+            "inversion": inversion_mode,
             "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         }
     if orig_m is None:
@@ -194,10 +280,11 @@ def motion_from_window_arrays(
         for arr, m_orig in zip(window_arrays, orig_m)
     ])
 
-    # ---- second differences, centered within text, pooled across eligible texts (F12.1.ii) ----
+    # ---- second differences, centered within text, pooled across eligible texts (F12.1.ii/F12.4) ----
     d2_rows: list[np.ndarray] = []
     adj_a: list[np.ndarray] = []
     adj_b: list[np.ndarray] = []
+    n_rows_list: list[int] = []
     for arr, m_orig in zip(window_arrays, orig_m):
         m_i = arr.shape[0]
         if m_i != m_orig:
@@ -207,6 +294,7 @@ def motion_from_window_arrays(
         d2 = arr[2:] - 2 * arr[1:-1] + arr[:-2]
         d2c = d2 - d2.mean(axis=0, keepdims=True)  # center within text
         d2_rows.append(d2c)
+        n_rows_list.append(d2c.shape[0])
         if d2c.shape[0] >= 2:
             adj_a.append(d2c[:-1])
             adj_b.append(d2c[1:])
@@ -215,6 +303,7 @@ def motion_from_window_arrays(
     if n_d2 < MIN_D2_ROWS:
         gamma0_hat: np.ndarray | None = None
         b_hat: np.ndarray | None = None
+        memory_by_construct: list[float] | None = None
         theta_by_construct: list[float] | None = None
         gamma0_reason: str | None = GAMMA0_UNESTIMABLE_REASON
     else:
@@ -224,13 +313,15 @@ def motion_from_window_arrays(
         b_mat = np.vstack(adj_b)
         s1 = (a_mat.T @ b_mat) / a_mat.shape[0]
         sym_s1 = (s1 + s1.T) / 2.0
-        gamma0_hat = (7.0 * s0 + 8.0 * sym_s1) / 10.0
-        b_hat = (6.0 * gamma0_hat - s0) / 8.0
+        gamma0_hat, b_hat = _invert_moments(s0, sym_s1, n_rows_list,
+                                            naive_inversion=naive_inversion)
         gamma0_reason = None
+        memory_by_construct = []
         theta_by_construct = []
         for i in range(p):
             g0_ii = gamma0_hat[i, i]
             r_c = float(b_hat[i, i] / g0_ii) if g0_ii != 0 else 0.0
+            memory_by_construct.append(r_c)
             theta_by_construct.append(_theta_from_ratio(r_c))
 
     # ---- flow: per m-stratum wide-difference covariance, gust-corrected when possible (F12.1.iii) ----
@@ -267,19 +358,22 @@ def motion_from_window_arrays(
         "Gamma0": gamma0_hat.tolist() if gamma0_hat is not None else None,
         "B": b_hat.tolist() if b_hat is not None else None,
         "gamma0_reason": gamma0_reason,
+        "memory_by_construct": memory_by_construct,
         "theta_by_construct": theta_by_construct,
+        "inversion": inversion_mode,
         "flow_lambda1": flow_lambda1,
         "flow_top_vector": flow_top_vector,
         "flow_flag": flow_flag,
     }
 
 
-def _empty_motion_profile(n_dropped: int) -> dict[str, Any]:
+def _empty_motion_profile(n_dropped: int, inversion_mode: str) -> dict[str, Any]:
     return {
         "n_texts_used": 0, "n_texts_dropped": n_dropped, "n_windows": 0, "m_counts": {},
         "level_mean": None, "slope_mean": None,
         "Gamma0": None, "B": None, "gamma0_reason": "no texts",
-        "theta_by_construct": None,
+        "memory_by_construct": None, "theta_by_construct": None,
+        "inversion": inversion_mode,
         "flow_lambda1": None, "flow_top_vector": None, "flow_flag": None,
         "axis_series": None, "axis_mean_abs_projection": None,
         "licenses": list(LICENSES),
@@ -292,6 +386,7 @@ def motion_profile(
     axis: np.ndarray | None = None,
     win: int = 128,
     max_windows: int = 12,
+    naive_inversion: bool = False,
 ) -> dict[str, Any]:
     """Label-free motion coordinates for a batch of texts (F12, THEORY V6).
 
@@ -304,10 +399,18 @@ def motion_profile(
     sample-standardized and register-anchored, never norm-referenced (see
     ``licenses``).
 
+    The primary dynamic output is ``memory_by_construct`` -- the signed
+    r_c = B_hat_cc/Gamma0_hat_cc (positive = carry-over/persistence,
+    negative = bounce/anti-persistence); see the module docstring for why
+    the signed coefficient, not the theta clip, is the honest primary.
+    ``naive_inversion=True`` switches the moment inversion back to the
+    historical F12.1 map (the ``"inversion"`` key records the mode used).
+
     ``axis``, if given, is a length-p register gust/motion axis; each
     text's per-window projections onto ``axis / ||axis||`` are returned
     (descriptive only -- not part of the F12 moment machinery).
     """
+    inversion_mode = "naive" if naive_inversion else "corrected_f12_4"
     frames: list[tuple[list[str], np.ndarray, int]] = []
     n_dropped = 0
     for text in texts:
@@ -317,7 +420,7 @@ def motion_profile(
             continue
         frames.append(frame)
     if not frames:
-        return _empty_motion_profile(n_dropped)
+        return _empty_motion_profile(n_dropped, inversion_mode)
 
     window_texts_all: list[str] = []
     counts: list[int] = []
@@ -349,7 +452,8 @@ def motion_profile(
         axis_series = [(arr @ unit_axis).tolist() for arr in window_arrays]
         axis_mean_abs_projection = [float(np.mean(np.abs(series))) for series in axis_series]
 
-    core = motion_from_window_arrays(window_arrays, orig_m=orig_m)
+    core = motion_from_window_arrays(window_arrays, orig_m=orig_m,
+                                     naive_inversion=naive_inversion)
 
     m_counts: dict[int, int] = {}
     for m_val in orig_m:
@@ -365,7 +469,9 @@ def motion_profile(
         "Gamma0": core["Gamma0"],
         "B": core["B"],
         "gamma0_reason": core["gamma0_reason"],
+        "memory_by_construct": core["memory_by_construct"],
         "theta_by_construct": core["theta_by_construct"],
+        "inversion": core["inversion"],
         "flow_lambda1": core["flow_lambda1"],
         "flow_top_vector": core["flow_top_vector"],
         "flow_flag": core["flow_flag"],

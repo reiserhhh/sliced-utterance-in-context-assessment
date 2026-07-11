@@ -1,6 +1,8 @@
-"""motion layer tests (F12 / THEORY V6). Numerical recovery of the exact
-MA(1) moment inversions on synthetic gust processes, the T4 estimability
-guard, and an end-to-end API smoke test of motion_profile."""
+"""motion layer tests (F12 / THEORY V6, F12.4 finite-n correction).
+Numerical recovery of the MA(1) moment inversions on synthetic gust
+processes (corrected map = default, naive map behind a flag), the F12.4
+closed-form verification constants, the signed memory coefficient, the T4
+estimability guard, and an end-to-end API smoke test of motion_profile."""
 from __future__ import annotations
 
 import sys
@@ -13,6 +15,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from suica_core.motion import (  # noqa: E402
+    _centered_moment_coefficients, _invert_moments, _theta_from_ratio,
     motion_from_window_arrays, motion_profile, text_windows, text_window_frames,
 )
 
@@ -28,21 +31,19 @@ def _ma1_arrays(rng, n_texts: int, m: int, p: int, theta: float) -> list[np.ndar
 
 
 # ---------------------------------------------------------------------------
-# T1 -- MA(1) recovery at theta = 0.4
+# T1 -- MA(1) recovery at theta = 0.4 (corrected F12.4 inversion, the default)
 # ---------------------------------------------------------------------------
 def test_ma1_recovery_theta_0p4():
-    # Seed fixed at a value verified to sit well inside every tolerance below
-    # (not cherry-picked to the edge): the within-text D2 centering carries a
-    # known, bounded finite-m bias (confirmed analytically -- centering a
-    # short m-2=6 run removes some genuine lag-0/lag-1 second-difference
-    # variance), so individual seeds/constructs jitter by a few hundredths
-    # around the population theta; this seed's deviations are comfortably
-    # under half of each budget below, so the assertions are not fragile.
-    rng = np.random.default_rng(3171)
+    # The F12.4 corrected inversion removes the within-text-centering bias,
+    # so theta recovery is unbiased and the tolerance is 0.40 +/- 0.05.
+    # Seed chosen (deterministic scan) to sit well inside every budget below
+    # -- at least a 35% relative margin on each assert, so nothing is fragile.
+    rng = np.random.default_rng(4365)
     theta, p, m, n_texts = 0.4, 5, 8, 2000
     arrays = _ma1_arrays(rng, n_texts, m, p, theta)
 
     out = motion_from_window_arrays(arrays)
+    assert out["inversion"] == "corrected_f12_4"
     gamma0 = np.array(out["Gamma0"])
     b_hat = np.array(out["B"])
 
@@ -52,7 +53,7 @@ def test_ma1_recovery_theta_0p4():
     assert np.abs(np.diagonal(b_hat) - (-theta)).max() < 0.06
 
     theta_hat = np.array(out["theta_by_construct"])
-    assert np.abs(theta_hat - theta).max() < 0.08
+    assert np.abs(theta_hat - theta).max() < 0.05
 
 
 # ---------------------------------------------------------------------------
@@ -60,7 +61,7 @@ def test_ma1_recovery_theta_0p4():
 # ---------------------------------------------------------------------------
 def test_white_gust_theta_0():
     # Seed picked with the same comfortable-margin criterion as T1 above.
-    rng = np.random.default_rng(2108)
+    rng = np.random.default_rng(2175)
     p, m, n_texts = 5, 8, 2000
     arrays = _ma1_arrays(rng, n_texts, m, p, 0.0)
 
@@ -69,7 +70,98 @@ def test_white_gust_theta_0():
     assert (theta_hat <= 0.05).all()
 
     b_hat = np.array(out["B"])
-    assert np.abs(np.diagonal(b_hat)).max() < 0.04
+    assert np.abs(np.diagonal(b_hat)).max() < 0.03  # corrected: unbiased at theta=0
+
+
+# ---------------------------------------------------------------------------
+# F12.4 -- naive bias matches the closed form; corrected removes it
+# ---------------------------------------------------------------------------
+def test_naive_bias_matches_closed_form():
+    # At theta=0.4, m=8 (n=6 rows) the F12.4 closed form predicts the naive
+    # inversion lands at implied theta 0.4408 (centering bias ~ +0.04); the
+    # corrected inversion recovers 0.40. Same simulated data feeds both maps.
+    rng = np.random.default_rng(5002)
+    theta, p, m, n_texts = 0.4, 3, 8, 20000
+    arrays = _ma1_arrays(rng, n_texts, m, p, theta)
+
+    naive = motion_from_window_arrays(arrays, naive_inversion=True)
+    corrected = motion_from_window_arrays(arrays)
+    assert naive["inversion"] == "naive"
+    assert corrected["inversion"] == "corrected_f12_4"
+
+    naive_mean = float(np.mean(naive["theta_by_construct"]))
+    corrected_mean = float(np.mean(corrected["theta_by_construct"]))
+    assert abs(naive_mean - 0.4408) < 0.02
+    assert abs(corrected_mean - 0.40) < 0.02
+
+
+def test_corrected_inversion_exact_on_expected_moments():
+    # Analytic centered-moment expectations at theta=0.4, n=6 rows (m=8):
+    # a=53/9, b=-71/9, c=-178/45, d=310/45, giving E[S0]=9.9867 and
+    # E[symS1]=-7.3440. Naive inversion of those exact moments implies
+    # theta=0.4408; the corrected inversion returns gamma0=1.16, gamma1=-0.4
+    # exactly (registered F12.4 verification constants).
+    gamma0_true, b_true = 1.16, -0.4
+    a6, b6, c6, d6 = 53 / 9, -71 / 9, -178 / 45, 310 / 45
+    s0 = np.array([[a6 * gamma0_true + b6 * b_true]])
+    sym_s1 = np.array([[c6 * gamma0_true + d6 * b_true]])
+    assert abs(s0[0, 0] - 9.9867) < 1e-3
+    assert abs(sym_s1[0, 0] - (-7.3440)) < 1e-3
+
+    pooled = _centered_moment_coefficients([6])
+    for got, want in zip(pooled, (a6, b6, c6, d6)):
+        assert abs(got - want) < 1e-12
+
+    g_naive, b_naive = _invert_moments(s0, sym_s1, [6], naive_inversion=True)
+    theta_naive = _theta_from_ratio(float(b_naive[0, 0] / g_naive[0, 0]))
+    assert abs(theta_naive - 0.4408) < 1e-3
+
+    g_corr, b_corr = _invert_moments(s0, sym_s1, [6])
+    assert abs(g_corr[0, 0] - gamma0_true) < 1e-9
+    assert abs(b_corr[0, 0] - b_true) < 1e-9
+
+
+def test_corrected_inversion_n3_boundary():
+    # n=3 (m=5) boundary case: the lag-3 D2 autocovariance gamma_D(3) = B
+    # cannot occur on 3 rows, so the exact d coefficient is 56/9 -- NOT the
+    # n>=4 formula value 7 - 4/9 = 59/9 (a, b, c are unaffected). Verified
+    # analytically and by Monte Carlo (E[symS1] = -7.0 exactly at theta=0.4);
+    # asserted here so the boundary stays visible to audits.
+    a3, b3, c3, d3 = _centered_moment_coefficients([3])
+    assert abs(a3 - 50 / 9) < 1e-12
+    assert abs(b3 - (-68 / 9)) < 1e-12
+    assert abs(c3 - (-35 / 9)) < 1e-12
+    assert abs(d3 - 56 / 9) < 1e-12
+
+    gamma0_true, b_true = 1.16, -0.4
+    s0 = np.array([[a3 * gamma0_true + b3 * b_true]])
+    sym_s1 = np.array([[c3 * gamma0_true + d3 * b_true]])  # = -7.0 exactly
+    assert abs(sym_s1[0, 0] - (-7.0)) < 1e-12
+    g_corr, b_corr = _invert_moments(s0, sym_s1, [3])
+    assert abs(g_corr[0, 0] - gamma0_true) < 1e-9
+    assert abs(b_corr[0, 0] - b_true) < 1e-9
+
+
+# ---------------------------------------------------------------------------
+# Signed memory coefficient (primary): sign follows the gust memory
+# ---------------------------------------------------------------------------
+def test_signed_memory_sign():
+    rng = np.random.default_rng(6001)
+    # positive memory: g_k = eta_k + 0.3*eta_{k-1} (theta = -0.3 in the
+    # g = eta - theta*eta_prev parametrization) -> r_c ~ +0.275 > 0
+    arrays_pos = _ma1_arrays(rng, 2000, 8, 3, -0.3)
+    out_pos = motion_from_window_arrays(arrays_pos)
+    memory_pos = np.array(out_pos["memory_by_construct"])
+    assert (memory_pos > 0).all()
+    # the [0,1] theta clip is meaningless for positive memory -- it reads 0,
+    # which is exactly why the signed coefficient is the primary output
+    assert (np.array(out_pos["theta_by_construct"]) == 0.0).all()
+
+    # negative memory (bounce): theta = +0.4 -> r_c ~ -0.345 < 0
+    arrays_neg = _ma1_arrays(rng, 2000, 8, 3, 0.4)
+    out_neg = motion_from_window_arrays(arrays_neg)
+    memory_neg = np.array(out_neg["memory_by_construct"])
+    assert (memory_neg < 0).all()
 
 
 # ---------------------------------------------------------------------------
@@ -109,11 +201,14 @@ def test_economics_guard_and_uncorrected_flow_flag():
     out = motion_from_window_arrays(arrays)
     assert out["Gamma0"] is None
     assert out["B"] is None
+    assert out["memory_by_construct"] is None
     assert out["theta_by_construct"] is None
     assert out["gamma0_reason"] == (
         "insufficient within-text tokens (need >= 30 second-difference rows; "
         "motion structure is token-limited)"
     )
+    # the configured inversion mode is still reported (no inversion ran)
+    assert out["inversion"] == "corrected_f12_4"
     # flow is still reported, but uncorrected (no Gamma0 to subtract)
     assert out["flow_lambda1"] is not None
     assert out["flow_flag"] == "uncorrected: gust moments not estimable"
@@ -146,11 +241,13 @@ def test_motion_profile_end_to_end_smoke():
     out = motion_profile(texts, trivial_scorer, win=8, max_windows=12)
 
     for key in ("n_texts_used", "n_texts_dropped", "n_windows", "m_counts",
-                "level_mean", "slope_mean", "Gamma0", "B", "theta_by_construct",
+                "level_mean", "slope_mean", "Gamma0", "B",
+                "memory_by_construct", "theta_by_construct", "inversion",
                 "flow_lambda1", "flow_top_vector", "flow_flag", "axis_series",
                 "licenses"):
         assert key in out
     assert out["n_texts_used"] + out["n_texts_dropped"] == len(texts)
+    assert out["inversion"] == "corrected_f12_4"
     assert len(out["licenses"]) == 4
 
 

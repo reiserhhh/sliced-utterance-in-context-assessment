@@ -144,6 +144,81 @@ register (PANDORA m ≥ 5 is too thin: ~41 comments).
     gust structure, common-θ reading). Level-visibility: open.
 (d) The F12.2 downgrade of P9 stands regardless of W2 outcomes (it is a theorem).
 
+## F12.4 — Exact finite-n correction of the centered moment estimators (derived and
+## registered 2026-07-12, before the W3 run)
+
+**Derivation (Fable, closed form; the deployed estimator centers D2 within text, which
+biases the naive inversion — quantified exactly here).** With n = m−2 D2 rows per text
+and MA(1) gusts, D2 is MA(3) with autocovariances (all linear in γ0, γ1):
+c0 = 6γ0 − 8γ1, c1 = −4γ0 + 7γ1, c2 = γ0 − 4γ1, c3 = γ1, c_h≥4 = 0. Within-text
+centering subtracts the mean D2, and the pooled centered moments have EXACT expectations
+
+    Ā(n) = (4γ0 − 4γ1)/n²        A_end(n) = (3γ0 − 4γ1)/n   [n ≥ 4]
+    E[S0](n)    = (6 − 4/n²)·γ0 + (−8 + 4/n²)·γ1
+    E[symS1](n) = (−4 + 2(n−2)/(n²(n−1)))·γ0 + d(n)·γ1,
+        d(n) = 7 − 4/n² for n ≥ 4;  d(3) = 56/9  [BOUNDARY CORRECTION]
+
+CORRECTION (caught post-registration by the deployment agent's independent derivation,
+confirmed by direct n = 3 enumeration and 1.5M-text Monte Carlo): the closed-form
+simplification of A_end dropped the c3 clip at n = 3 — the lag-3 term cannot enter the
+boundary sum there, so A_end(3) = (3γ0 − 5γ1)/3 and d(3) = 56/9, not the formula's
+59/9 (a, b, c are exact at all n ≥ 3). The registered verification constants (n = 6)
+are unaffected; the W3 Essays re-inversion, whose largest stratum is m = 5 (n = 3), was
+RERUN with the exact d(3) and the recorded numbers below are the corrected-formula ones.
+
+(mixed corpus: pool the coefficients with row weights n_t for S0 and pair weights
+n_t − 1 for symS1). The identities are linear with the SAME scalar coefficients for
+every matrix entry, so the corrected multivariate inversion is the 2×2 solve
+(Γ0, B) = M(m-composition)⁻¹ (S0, symS1). VERIFICATION VALUES (to be reproduced by the
+executing agent): at θ = .4, m = 8 (n = 6): E[S0] = 9.9867, E[symS1] = −7.3440; the
+NAIVE inversion on these gives θ̂ = 0.4408 — matching the deployment agent's empirical
+0.44–0.45; at θ = 0, m = 8 the naive B̂ bias is −0.0178·γ0.
+
+**Quantitative consequence registered as a prediction:** W2b's Essays B̂ diag mean
+(−0.0103, with Γ̂0 ≈ 0.73 and mixed m 5–12) is CONSISTENT WITH PURE CENTERING BIAS AT
+θ = 0 (predicted ≈ −0.013·0.73/0.73-scale). W2a is unaffected (its simulation null ran
+the same centered pipeline — internally consistent by construction).
+
+**W3 registered leans (BEFORE the run).** (i) Synthetic θ = .4, m = 8: naive θ̂ =
+0.4408 ± sampling (validating the closed form); corrected recovers 0.40. (ii) Essays
+re-inversion with the corrected map: mean diag B̂ moves to ≈ 0 (|mean| < .004); the
+small-θ constructs (tension .070, wcl_23 .103, wcl_54 .057) shrink by more than half;
+wcl_60 stays clearly positive (corrected diag θ̂ ≥ .25). KILL: if the corrected Essays
+B̂ mean does not move toward 0, the "W2b's tiny negative B̂ is centering artifact"
+reading is wrong. (iii) Deployment: motion.py's inversion switches to the corrected
+solve (naive kept as an option for comparability); the documented bias note becomes a
+resolved item.
+
+## F12.4 results (W3 + bootstrap, run AFTER registration 0a4a97a; Sonnet-executed with
+## independent verification — analytic re-derivation, 4M-text Monte Carlo, and an
+## out-of-sample check at θ = .6, m = 10 chosen by the agent)
+
+**The registered point lean was KILLED as written — and the sub-claim survived in a
+stronger form.** Corrected inversion on Essays (1,349 texts, coefficients from the
+actual n-composition: A = 5.7836, B = −7.7836, C = −3.9348, D = 6.7345 (exact d(3))):
+
+- Corrected B̂ diag mean = **+0.0303, bootstrap CI [+0.0136, +0.0484], 500/500 draws
+  > 0** — not ≈ 0 as leaned. The naive mean (−0.0103) has CI [−0.0248, +0.0054]:
+  spans zero AND contains the F12.4-predicted pure-centering value (−0.0178·Γ̂0 ≈
+  −0.013) — the bias formula is quantitatively confirmed on real data. Verdict: the
+  naive negative WAS centering artifact (sub-claim right), but what it was hiding is
+  not zero — it is REAL, MILD, POSITIVE gust memory. "White gusts" (v6.1) is revised.
+
+- Construct-level convergence with W2a: positive with CI excluding 0 — wcl_35 +.098,
+  wcl_36 +.092, first_person +.083, wcl_13 +.079, wcl_03 +.070 (the same
+  content-flavored carry-over set W2a flagged on the less-negative side of its null);
+  negative — wcl_60 only (r_c = −.308, CI [−.873, −.035]: SIGN solid, magnitude tail
+  beyond MA(1) identifiability |r| ≤ .5, so θ-conversion of the CI is not licensed);
+  13 of 19 span zero. **The two leverage-free instruments now agree
+  construct-by-construct.** Per-construct registered predictions all held (tension
+  .070 → .017, wcl_54 .057 → .004, wcl_23 .103 → .048, wcl_60 stays ≥ .25 at .34).
+
+- Model revision (M″): signed-memory MA(1), θ ∈ (−1, 1] — every F12 identity is
+  polynomial in θ and holds unchanged; the operational primary output becomes the
+  SIGNED memory coefficient r_c = B̂_cc/Γ̂0_cc ∈ [−.5, .5) (positive = carry-over,
+  negative = bounce), with θ reported only where meaningful. MA-vs-AR discrimination
+  needs lag-2 moments (S2 identities) — registered as the next identifiability step.
+
 ## F12 results (W2a/W2b, run AFTER registration da07462; Sonnet-executed under Fable
 ## specs; W2b agent validated the inversions on synthetic MA(1) at six θ values)
 

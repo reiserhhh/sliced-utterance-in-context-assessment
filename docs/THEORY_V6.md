@@ -6,6 +6,14 @@ E3's bounce claim (leverage artifact — gust axes are white), unified wcl_60's 
 anomalies as sparse-burst dynamics, retracted the bid-ask-bounce sub-analogy, added the
 exact MA(1) moment inversions as standing audit equipment, and downgraded the P9 flow
 factor to conditional-on-iid-gusts (F12.2 identifiability theorem).
+v6.2 (same day): the F12.4 exact finite-n centering-bias correction (closed form,
+independently verified) re-inverted the Essays moments: the corpus-mean gust memory is
+FAINTLY POSITIVE (B̂ diag mean +0.030, CI [+.014, +.048], 500/500 bootstrap draws > 0),
+carried by content constructs (wcl_35/36/03, first_person, wcl_13 — each CI-solid),
+with wcl_60 the lone anti-persistent exception — construct-by-construct agreement
+between the two leverage-free instruments. "White gusts" is superseded by "faintly
+persistent gusts with a sparse-burst exception"; the model generalizes to signed-memory
+MA(1) and the deployed API reports the signed memory coefficient as primary.
 
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
@@ -182,10 +190,11 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
   content constructs carry over; E3's bounce struck.
 - Format-aware PANDORA windowing (quote/list periodicity in long comments — the W2a
   saturation/flip signature); until then, PANDORA m ≥ 4 dynamics are not interpretable.
-- Analytic finite-m correction of the OPERATIONAL Γ̂0/B̂ (suica_core/motion.py): the
-  within-text D2 centering biases θ̂ upward by a bounded, m-shrinking amount (≈ +0.04
-  at true θ = .4, m = 8; agent-derived, N = 200k-confirmed) — treat deployed θ values
-  comparatively until corrected.
+- Analytic finite-m centering-bias correction: DONE (F12.4, closed form; verified
+  analytically, by 4M-text Monte Carlo, and out-of-sample; deployed as the default
+  inversion). Successor item: MA-vs-AR gust discrimination via lag-2 moment identities
+  (S2) — the signed memory coefficient cannot tell a one-step MA echo from a decaying
+  AR carry-over; the lag-2 structure can.
 - Small-venue gust heterogeneity (E1: power vs true heterogeneity at n ≤ 75).
 - Person-level motion style portability (needs a second register with per-person volume).
 - wcl_13 super-linearity (F8.3 flag); OP-33 co-selection axes under the MP edge.
@@ -208,6 +217,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | E4 person retry (8e2b0ba) | ≥1 component, rep ≥ .5 at gate ≥5 residualized | ✓ rep .777 (gate 5) / .784 (gate 8) |
 | W2a Δ² dynamics (da07462) | Essays axes anti-persistent, θ ∈ [.1, .5] | ✗ axes WHITE (gust1_E p = .87, θ̂ = 0) — E3 struck as leverage artifact; wcl_60 the lone certified bouncer (θ̂ = .091, p = .0005); mild positive carry-over in content constructs; PANDORA m ≥ 4 non-white but format-suspect and unstable (wcl_11 flips −.20 → −.98 between arms) |
 | W2b corrected separation (da07462) | corrected λ1 rises; rep < .5; bounce factor exists, congruent with Γ0 | B̂ ≈ 0 so λ1 falls, not rises (premise wrong); rep .308 ✓; bounce factor ✗ on every gate (perm p = .98, rep .108, congr .026) |
+| W3 corrected re-inversion (0a4a97a) | corrected B̂ mean ≈ 0 (\|mean\| < .004); small-θ constructs shrink > half; wcl_60 ≥ .25 | POINT LEAN KILLED: B̂ mean = +.0303, CI [+.014, +.048], 500/500 draws > 0 — the naive negative was centering artifact (its CI contains the predicted −.013) hiding REAL mild positive memory; per-construct predictions ✓ (tension .070→.017, wcl_54 .057→.004, wcl_23 .103→.048, wcl_60 .34); "white gusts" superseded by faint persistence + wcl_60 bounce; instruments converge with W2a construct-by-construct |
 
 Score: roughly half the leans held. The program's value is exactly that the instruments,
 not the leans, decided — and that both corpora, both directions of surprise, and one
