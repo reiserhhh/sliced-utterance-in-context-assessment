@@ -386,6 +386,102 @@ add); ONE single-feature surprise |r| >= .10 in Agreeableness or Openness from t
 motion set; M alone in [.03, .07]. KILL: Delta <= 0 means the position/slope layer adds
 NO exploratory signal at this cap — recorded as the honest v4->v5->V6 detection verdict.
 
+## F15 — W10: the anatomy of the invisible factor (registered 2026-07-12, before run;
+## operator focus: "what interests me most is the properties of motion-only factors")
+
+**Known properties (consolidated).** Stable (person-disjoint rep .78-.83); theorem-
+invisible to averaging instruments (T1); register-local (T6: .20 cross-corpus; and
+Essays hosts NO invisible gust factor — all its gust components are level-visible);
+carried by the recurring cluster {wcl_02, wcl_07, wcl_11, wcl_20(, tension, wcl_22,
+wcl_35)} — the SAME constructs flagged for anomalous spectral texture (wcl_20 even-lag,
+wcl_07 period-4). NEW HYPOTHESIS registered: the invisible factor is a SHARED RHYTHM
+component — the cross-construct face of the individual spectral anomalies.
+
+**Instrument (W10, on existing caches; uncapped upgrade after N1).**
+(a) ACTIVATION ANATOMY: per-window gust1_P activation (within-comment detrended
+residual projected on the axis) correlated with LOADING-EXOGENOUS window markers:
+question density, quote-character share, digit share, comma density, novelty_play level
+and its window-to-window jump (topic-shift proxy), and window position — what is
+textually happening when the factor fires.
+(b) PERSON SUSCEPTIBILITY: per Tier-U user with >= 2 m=3 comments: split-half stability
+of mean |activation| (susceptibility) and of mean signed activation (directionality).
+(c) ESSAYS CONTRAST: same activation machinery on Essays windows via gust1_P — expected
+near-chance variance ratio (the factor should barely exist there).
+
+**Registered leans.** (a) activation is question/quote-marker enriched (the
+conversational-burst reading of the Reddit-local factor) and topic-shift adjacent
+(positive |activation| x novelty-jump); position effect weak. (b) susceptibility
+split-half r >= .3 (a stable person property — the first PERSONAL trait-like quantity of
+a motion-only object); signed directionality weaker but > 0. (c) Essays activation
+variance ratio ~ 1 vs its own shuffle (factor absent). KILL: susceptibility r < .1 would
+demote motion-only structure to comment-level texture with NO person anchoring — the
+"person x register" reading would lose its person half.
+
+## F15 results (W10, run AFTER registration 52421ea; alignment asserts 43,818/43,818
+## and 12,039/12,039 rows; axis drift guard passed {wcl_02 −.47, wcl_11 +.45})
+
+**(a) Activation anatomy — registered lean WRONG in an informative direction.** The
+factor does NOT fire on question/quote markers; it fires on EMPHATIC/NUMERIC bursts:
+allcaps token share r_centered = .161 (perm p < .002), digits/100 chars = .127
+(p < .002); question/quote markers weaker. Reading: gust1 = bursts of shouty/numeric
+texture (score-talk, emphasis) coordinated across the style clusters. CAVEAT
+(recorded): estimated on the capped m >= 3 stratum (687 texts), which borders the W9
+format-dense band — the digit enrichment may be partly stratum texture; the N1 uncapped
+re-run adjudicates.
+
+**(b) Person susceptibility — the headline: the first person-anchored trait-like
+quantity of a motion-only object.** Split-half r of mean |activation| = **.441**
+(clears the registered >= .3 lean; ICC-share .381; n = 81 users, capped-corpus-limited).
+Signed DIRECTION r = −.128 — my "weaker but positive" lean WRONG: people are stable in
+HOW STRONGLY they gust, not in which direction. Susceptibility is an amplitude trait.
+KILL (r < .1) not fired.
+
+**(c) Essays contrast.** PANDORA activation variance ratio 1.678 (p < .005) vs Essays
+1.035 (p = .005) — direction as registered; Essays carries a whisper, not zero (flagged
+rather than rounded down).
+
+**Consolidated portrait of the motion-only factor (operator's question).** A register-
+local, averaging-invisible coordination of style clusters that fires in emphatic/numeric
+bursts; individuals differ stably in its AMPLITUDE (susceptibility .44) but not its
+direction; essentially absent in solitary stream-of-consciousness writing; its carrier
+constructs are the same ones bearing anomalous spectral texture (shared-rhythm
+hypothesis, still open — uncapped data next).
+
+## F14 — The N-program: building the comparison substrate (registered 2026-07-12,
+## operator-ordered "execute the native corpus etc.")
+
+**Mandate.** EXPL-3 showed the comparison substrate itself is missing: the 1,500-char
+extraction cap blocks the motion layer for labeled users. Three tracks, all frozen-
+object-safe (parallel NEW artifacts only):
+
+**N1 (uncapped parallel re-extraction).** The RAW dump (all_comments_since_2015.csv,
+5.3 GB) is uncapped (sampled max 29,189 chars; > 1,500 in 1.1% of comments). Re-extract
+Tier-L and Tier-U comment sets with the v2 rules MINUS the cap (sanity cap 30,000 chars,
+documented) into NEW files tier_{l,u}_comments_uncapped_v1.parquet. Frozen v2 artifacts
+untouched. Diagnostics: per-tier m-distribution; texture-capable coverage (m >= 3 / 5 /
+7) among gated opening-#1 users. LEANS: >= 60% of gated users gain >= 1 text with
+m >= 5; >= 30% gain >= 3 such texts.
+
+**EXPL-4a (Essays dev half; the motion-layer x questionnaire test the cap denied us).**
+Single-essay motion features (slope vector projections + q-contrast gust magnitudes +
+where m >= 5 crude spectral values) vs Big5 on the DEV half only — the split rule read
+from the seal documents; confirm-half labels remain UNTOUCHED (opening budget 1 intact);
+exploratory banner. LEANS: any single motion feature |r| >= .08 in <= 3 of 50 cells;
+incremental over a level-feature baseline in [+.00, +.02]; honest coin-flip overall.
+
+**EXPL-4b (after N1): uncapped Tier-L motion features x spent opening-#1 labels** under
+the EXPL-3 triple-assert governance, now WITH the spectral layer where per-user data
+permits. LEAN: Delta over EXPL-3's D in [+.000, +.015]. STANDING KILL: if 4a and 4b both
+land <= 0, the conclusion "questionnaire-criterion insensitivity to the motion layer"
+becomes the recorded verdict pending BEHAVIORAL criteria (the native corpus's job).
+
+**N4 (native corpus collection instrument, OP-36 execution to the autonomy boundary).**
+Deliver the ready-to-run collection pack per SUICA_NATIVE_CORPUS_DESIGN_V1: bilingual
+prompt battery (Arm A free / Arm B fixed + AI-interview script per Rulebook G), session
+protocol (2 x 2, >= 2 weeks), assistant-echo monitor spec, data schema, anonymization
+plan. Participant recruitment and IRB are operator-side by nature and are the ONLY
+missing pieces after this deliverable.
+
 ## F13 results (EXPL-3, run AFTER registration 36293aa; all governance gates passed
 ## before fitting: gate n=1,058, H2/H6 to <1e-9, EXPL-2 anchor .1361 exact)
 
