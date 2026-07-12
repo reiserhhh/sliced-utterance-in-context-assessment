@@ -76,6 +76,18 @@ prior — first_person_usage_v2 (the H2-carrying construct) shifts -0.190 system
 between capped and N1-uncapped extraction (p=1.3e-40); capped-era and N1-era static
 scores for 5/19 constructs are not interchangeable without re-verification.
 
+v6.10 (2026-07-12): EXPL-4b closed the F14 standing kill. Uncapped Tier-L motion features
+(position/slope + signed-memory/gust-amplitude + rho_pi/shape where estimable) added to
+the spent-label Big5 weight-fit gave Delta=-0.0332 (negative on all 5 traits) — combined
+with EXPL-4a's -0.0096, the registered kill fires: "questionnaire-criterion
+insensitivity to the motion layer" is now the recorded verdict, pending BEHAVIORAL
+criteria. Power-annotated reading: the well-powered position layer genuinely flips sign
+capped-to-uncapped (+0.0009 -> -0.0051, n=799, trustworthy); the spectral layer's further
+drop rests on only 22/1,058 (2.1%) covered users and is marked UNDECIDED-LOW-POWER
+rather than a clean falsification — PANDORA, even fully uncapped, cannot supply enough
+per-user long-text volume for a fair spectral test, sharpening the case for the native
+corpus (N4) as the necessary next instrument.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -286,7 +298,14 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 - Small-venue gust heterogeneity (E1: power vs true heterogeneity at n ≤ 75).
 - Person-level motion style portability (needs a second register with per-person volume).
 - wcl_13 super-linearity (F8.3 flag); OP-33 co-selection axes under the MP edge.
-- Motion-style ↔ Tier-L relevance: new seal required; explicitly deferred.
+- Motion-style ↔ Tier-L relevance: EXPLORATORY FIRST CONTACT MADE (F16: one BH-surviving
+  dynamic-only cell, wcl_07 x MBTI T/F; EXPL-4b: the composite motion-layer-add-to-
+  Big5-detection test came back clearly negative, Delta=-0.0332, standing kill fired).
+  A CONFIRMATORY claim still requires a new prospective seal — unchanged — but EXPL-4b
+  also demonstrated PANDORA's structural ceiling: even fully uncapped, only ~2% of
+  labeled users clear the pooled-estimator coverage bar for spectral texture, so the
+  spectral layer specifically has never yet had a fair, adequately-powered test. The
+  native corpus (N4) is the first instrument that can supply that by construction.
 
 ## 7. Registered-vs-outcome record (the honesty table of the F10–F11 program)
 
@@ -312,6 +331,8 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W6 Nyquist ratio (ed971f1) | wcl_60 rho_pi > 1 CI-solid (ranking inversion); carry-over set < 1; wcl_20/tension > 1 | (a) CONFIRMED 2.51 [1.28, 7.35], inversion exact; (b) 3/5 CI-solid below 1; (c) FAILED INFORMATIVELY — wcl_20 .770 CI-solid BELOW 1 (standing-wave reading dead; even-lag anomaly inside carry-over spectrum); gamma0 5-moment functional ill-conditioned (premise half-wrong, registered fallback absorbed it); KILL not fired |
 | W5 gust ladder (6669ccc) | wcl_20/22 standing-wave (g4/g2 in (0.1,0.9)); wcl_60 lag-1-confined; memory set geometric; indeterminate-if-CIs-wide registered as (d) | (d) FIRED structurally: centering null direction (sigma_min .0087) makes lag coordinates ill-posed — coordinates unresolved 19/19, class rule vacuous (design flaw recorded); f(pi) tightly resolved and CONFIRMS the period-2 ordering with disjoint CIs (wcl_20 1.033/tension 1.016 vs wcl_60 .557/first_person .628); KILL not fired; new estimable-functional principle F12.6.3 |
 | W4 MA-vs-AR (5064a0a) | corpus R2 CI-solid positive; memory set AR; wcl_60 MA | corpus R2 +.021 directional only (CI spans 0); memory set 3/5 AR (wcl_35/36/13, φ̂ consistent with lag-1) with first_person/wcl_03 = one-step echo; wcl_60 MA ✓; UNREGISTERED: period-2 signature in wcl_20/wcl_22 (CI-solid lag-2 excess, both families fail) → W5 lag-3 separator |
+| F16 visibility taxonomy (32befcf) | most constructs static-only/neither; 1-4 dynamic-only from the gust1_P carrier set; BOTH rare (0-2); kill if 0 dynamic-only anywhere | (a) ✓ strongly (98.5%); (b) ✓ at the floor: exactly 1 dynamic-only cell, wcl_07 x MBTI T/F (carrier set, as leaned); (c) SLIGHT MISS: BOTH=3 vs band 0-2; (d) kill NOT fired — W10 strengthened by external-anchor evidence; UNREGISTERED: cap-sensitivity check fired against its own prior (5/19 constructs' static means shift capped-vs-uncapped, first_person_usage_v2 by -.190) |
+| EXPL-4b uncapped motion x Big5 (97ecca2) | Delta over EXPL-3's D in [+.000,+.015]; kill if 4a AND 4b both <=0 | ✗ Delta=-0.0332 (negative on all 5 traits); **STANDING KILL FIRES** (4a -.0096 + 4b -.0332); power-annotated split: position-layer-alone flip (+.0009→-.0051, n=799) is trustworthy, spectral layer's further drop rests on only 22/1058 (2.1%) covered users — marked UNDECIDED-LOW-POWER, not a clean falsification; verification caught 2 real issues (dead has_long column; a cited robustness number that did not reproduce) |
 
 Score: roughly half the leans held. The program's value is exactly that the instruments,
 not the leans, decided — and that both corpora, both directions of surprise, and one

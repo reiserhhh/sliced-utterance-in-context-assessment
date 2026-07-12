@@ -1046,3 +1046,82 @@ cap-sensitivity hazard: it retroactively flags that any cross-cycle comparison o
 first_person_usage_v2 (the program's single most load-bearing construct) between
 capped-era and N1-era work needs an explicit reconciliation step, not an assumption of
 equivalence.
+
+## F14 results (EXPL-4b: uncapped Tier-L motion features x spent opening-#1 labels —
+## the standing kill's final leg, run AFTER registration 97ecca2; independently
+## verified TRUST_WITH_CAVEATS)
+
+**Governance, reproduced independently.** Gate n=1,058 exact; H2/H6 reproduced <1e-9
+against OPENING_REPORT.json; EXPL-2 arm-C anchor reproduced EXACTLY (mean r=.1361,
+per-trait match). No frozen script modified (EXPL-3's own build_motion_user_features /
+finalize_axes / ridge_arm imported and called directly; capped-source artifacts never
+read or overwritten). The verifier re-ran the entire script from scratch and got a
+bit-for-bit identical output file.
+
+**Numbers.** C (anchor) = .1361 (E .145 / N .146 / A .149 / C .079 / O .162). D (C + the
+full motion layer: EXPL-3's original 10 position/slope features + a new signed-memory
+and gust-amplitude family) = **.1029 (E .119 / N .089 / A .104 / C .075 / O .127) —
+Delta = -0.0332, NEGATIVE ON ALL FIVE TRAITS**, worst on Neuroticism (-.057) and
+Agreeableness (-.045), least on Conscientiousness (-.004). M (motion alone) = **-.0129
+— motion features alone are actively worse than a null baseline**, a materially worse
+motion-alone showing than EXPL-3's own +.0300.
+
+**Coverage — a further, previously-undocumented layer of attrition below N1's own
+per-text census.** N1's loose per-text count said 636/1,058 (60.1%) gated users have
+>=1 text at m>=3, 316/1,058 (29.9%) at m>=5. But suica_core/motion.py's own POOLED
+estimators need many such texts summed together per person (MIN_D2_ROWS=30 pooled
+second-difference rows for signed-memory/gust-amplitude; PERIOD2_MIN_LAG_PAIRS=100 for
+rho_pi/shape) — at that real per-user bar, only **22/1,058 (2.1%) gated users** are
+estimable for the moment family and **1/1,058 (0.09%)** for the shape family. Complete-
+case sensitivity (real, non-imputed coverage on every feature family at once) collapses
+to n=1 — reported honestly as unfittable rather than smoothed over.
+
+**Adjudication — the STANDING KILL FIRES.** EXPL-4a's Delta (-0.0096, Essays dev-half)
+and EXPL-4b's Delta (-0.0332, this run) are BOTH <=0, outside and below the registered
+lean band [+.000, +.015]. Per F14's own registered clause, the recorded verdict is:
+**questionnaire-criterion insensitivity to the motion layer, pending BEHAVIORAL
+criteria (the native corpus's job).** This is not a marginal call — the verifier
+confirmed both deltas are clearly negative, not borderline.
+
+**Mechanistic reading, power-annotated (the wcl_60/W8 precedent applies here).** The
+kill's two components carry very different evidential weight:
+- The POSITION/SLOPE layer alone (n=799, well-powered, EXPL-3's own recipe rerun on
+  genuinely uncapped Tier-L text) already flips from EXPL-3's capped +0.0009 to
+  **-0.0051 uncapped** — a small but real sign flip on a well-covered sample. Uncapping
+  did NOT rescue this layer; if anything it went slightly negative. This sub-conclusion
+  is TRUSTWORTHY.
+- The SPECTRAL layer's incremental contribution to the further drop (-0.0051 -> -0.0332)
+  rests on only 22 (moment family) / 1 (shape family) covered users out of 1,058 — far
+  too thin to distinguish a true null from a real-but-undetected effect in a 1,058-user
+  pooled ridge fit. This sub-conclusion should be marked **UNDECIDED-LOW-POWER**, not a
+  clean falsification of spectral-texture relevance, by the same logic that downgraded
+  wcl_60's AR-vs-MA identity in W8. The single-feature screen on the 22-user moment
+  family produced 42 nominal |r|>=.10 hits, but at n=22 the two-tailed p<.05 threshold
+  needs |r|~.42 — only a handful clear that bar (e.g. amp_proj_dcomp1->E +.408,
+  amp_first_person->O -.398, mem_tension->E -.373) and even those are single-cell,
+  uncorrected, and should be read as a noisy exploratory table, not confirmed signal.
+
+**Verification caveats (recorded, not hidden).** (1) A real implementation bug: the
+generalized imputation helper neuters the position layer's `has_long` missingness
+indicator into a constant-zero column (EXPL-3's own code re-sets it correctly; this
+script's generalization dropped that step) — one dead column out of ~40 motion
+features, verified immaterial to the ridge fit (zero-variance under RidgeCV) but a real,
+undisclosed deviation from the stated "mirrors EXPL-3's convention." (2) The build
+agent's cited "alternative-standardization Delta=-0.0272" robustness check does NOT
+reproduce (a faithful re-implementation gives -0.0332, mathematically expected since the
+per-fold StandardScaler inside ridge_arm() is invariant to that class of rescaling) and
+has no artifact backing — struck as unverified/incorrect. Its companion claim
+("position-layer-alone Delta=-0.0051") DID reproduce exactly and stands.
+
+**Consequence for the three-leg F14 program.** capped PANDORA position-only (EXPL-3,
++0.0009, ~flat) -> Essays uncapped (EXPL-4a, -0.0096, mildly negative) -> PANDORA fully
+uncapped position+spectral (EXPL-4b, -0.0332, clearly negative). The cap was NOT masking
+a real questionnaire-relevant motion signal for Big5 detection on this cohort — the
+well-powered position layer's own sign flip (capped-positive to uncapped-negative) rules
+that hope out directly. What remains genuinely open is the spectral layer specifically,
+which never got a fair test here: PANDORA (even fully uncapped) does not have enough
+per-user long-text VOLUME for the pooled spectral estimators to clear their own
+estimability bars for more than ~2% of labeled users. This is the sharpest concrete
+argument yet for why the native corpus (N4, already delivered) is necessary rather than
+optional — it is designed to guarantee, by construction (>=1,500-2,500 words per
+session, 2 sessions/person), the long-text volume PANDORA structurally cannot supply.
