@@ -352,6 +352,66 @@ PANDORA long comments carry genuine extreme register texture (the flag then beco
 finding). (d) Cohort shrinkage after stripping is expected and reported (quotes removed
 -> shorter texts); conclusions stay diagnostic at this n (~50-70 texts), stated.
 
+## F13 — EXPL-3: do motion-layer features add exploratory detection power?
+## (registered 2026-07-12, before the run; operator-ordered)
+
+**Question (operator).** How much did detection power improve v4 -> v5 -> V6? Confirmed-
+tier power is deliberately unchanged (no new seal). v4 -> v5 exploratory weight-fit was
++51% (.0902 -> .1361, EXPL-2 arm C). V6's contribution is UNMEASURED — EXPL-3 measures it
+on the SAME spent opening-#1 labels under the same governance (exploratory banner; gate
+replicated verbatim; H2/H6 reproduced to < 1e-9 BEFORE any fitting; ledger row; no new
+labels; Essays confirm half untouched).
+
+**Feasibility pre-check (measured label-free, recorded).** tier_l_comments is 1,500-char
+capped like Tier-U (max = 1500; 7,047 at exactly 1500) — so m >= 3 windows are
+prose-impossible (93 users have any); the V6 feature set REDUCES to the slope/position
+layer on m = 2 long texts (open/close pairs): 10,300 texts across 1,050/1,412 Tier-L
+users (median 5 per user; 715 users >= 3, 541 >= 5). Spectral texture (r_c, rho_pi,
+shape pair) is NOT computable for labeled users under the frozen extraction — the cap
+consequence reaches the detection question itself, and is part of the answer.
+
+**Feature set (per user, over their m >= 2 long texts; axes estimated on TIER-U data
+only — no label leakage).** (1) mean close-open 19-vector projected on the PANDORA
+slope factors D-comp1/D-comp2 (P8-cache recomputation) and on the A-comp3 motion-cluster
+axis; (2) per-construct mean diffs for first_person / tension / directive / novelty;
+(3) mean OPENING-window first_person level (position-conditional level); (4) log1p
+n_long_texts + coverage indicator; mean-imputation for users without coverage.
+
+**Arms.** C = EXPL-2 union anchor (must reproduce .1361 exactly from its artifact);
+D = C + motion features; M = motion features alone. Per-trait RidgeCV (EXPL-2 protocol),
+plus a single-feature x trait screen on covered users.
+
+**Registered leans.** Delta(C -> D) mean r in [+.005, +.02] (orthogonality bounds the
+add); ONE single-feature surprise |r| >= .10 in Agreeableness or Openness from the
+motion set; M alone in [.03, .07]. KILL: Delta <= 0 means the position/slope layer adds
+NO exploratory signal at this cap — recorded as the honest v4->v5->V6 detection verdict.
+
+## F13 results (EXPL-3, run AFTER registration 36293aa; all governance gates passed
+## before fitting: gate n=1,058, H2/H6 to <1e-9, EXPL-2 anchor .1361 exact)
+
+**Numbers.** Coverage 787/1,058 users (74.4%; median 4 long texts). Arms: C = .1361
+(anchor), D = C + 10 motion features = **.1370 (Delta +0.0009)**, M = motion alone =
+.0300 (Openness-carried, +.127). Single-feature screen 10x5: **zero |r| >= .10 hits**;
+closest = open_first_person -> Neuroticism +.096.
+
+**Adjudication.** Lean 1 MISSED LOW (+.0009 vs the [+.005, +.02] band; the Delta <= 0
+kill does not fire by letter, but the practical verdict is the kill's spirit: NO
+MEANINGFUL ADD). Lean 2 FAILED (no single-feature hit; the near-miss is in the wrong
+trait). Lean 3 at the band's lower edge (.0300). Mechanistic reading: the one
+label-relevant position feature (open_first_person -> N +.096) is plausibly the H2
+signal (first_person -> N +.111) REPACKAGED through the position lens — its content was
+already in arm C. This is theory-consistent: components with level shadows were already
+captured; the level-orthogonal motion components carry no measured trait signal here.
+
+**The v4 -> v5 -> V6 exploratory detection ledger (spent labels, weight-fit tier):
+.0902 -> .1361 (+51%) -> .1370 (+0.7%).** Confirmed tier unchanged throughout (2/7 at
+opening #1; no new seal). CRITICAL SCOPE NOTE: the 1,500-char cap makes the V6 SPECTRAL
+layer (r_c, rho_pi, shape pair) uncomputable for labeled users — EXPL-3 measured only
+the position/slope layer. The honest summary: V6's contribution to DETECTION on PANDORA
+is ~nil; V6's contribution is new measurement objects (motion styles, frames, texture)
+whose trait relevance is untestable on this corpus and awaits the native corpus and a
+new seal.
+
 ## F12.10 results (W9, run AFTER registration e2b2240; anchors bit-exact twice —
 ## cache dynamics = W2a to 0.0e+00, raw rebuild = P8 cache to 0.0e+00)
 
