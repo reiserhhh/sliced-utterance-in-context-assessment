@@ -298,6 +298,25 @@ The SUICA method is frozen as an independent repository:
 
 ## Audit log
 
+- 2026-07-12 (operator decision): native corpus (N4) execution is PAUSED BY CHOICE — not
+  merely blocked on the operator-side IRB/recruitment steps already on record. Operator
+  rationale (verbatim intent): theory should be enriched/matured on existing, zero-cost
+  data before any paid field experiment begins — collecting human-subjects data ahead of
+  a mature theory risks paying for the wrong instrument battery or the wrong hypotheses.
+  Consequence: PROTOCOL_V1/PROMPTS_V1/PREREG_SKELETON_V1 remain fully specified and
+  ready, but IRB submission and collection are NOT to be initiated until this decision is
+  revisited. Priority redirects to theory-enrichment using data already in hand.
+  Also recorded this session: a precision correction to F16's NEITHER-cell reporting —
+  "no detected correlation with Big5/MBTI" was being described as "no personality
+  signal," which overclaims (absence of evidence vs. evidence of absence); the correct
+  reading is "not shown to relate to Big5/MBTI specifically," consistent with F10's own
+  premise that some factors may not map onto any existing named taxonomy. A concrete,
+  zero-cost candidate for widening the external-anchor net was found in the process:
+  data_sets/PANDORA_official/author_profiles.csv already carries an untouched Enneagram
+  label (794 users; 793 overlap the MBTI-axis population already used in F16) — a third,
+  structurally distinct (typological, not dimensional) taxonomy available with no new
+  data collection.
+
 - 2026-07-12 (EXPL-3, operator-ordered): the v4->v5->V6 detection question answered with numbers under full governance (three asserts before fitting, all passed). Verdict: the position/slope layer adds +0.0009 to the exploratory weight-fit (.1361 -> .1370) with zero single-feature hits — no meaningful add; the one near-miss is the H2 signal repackaged. My leans mostly missed (recorded). The measured story: v5 delivered +51% exploratory; V6 delivered ~0% DETECTION on capped PANDORA by design and by cap — its contribution is new measurement objects awaiting the native corpus and a new seal.
 
 - 2026-07-12 (round-12 mechanical sweep, partial): the v5.5-v5.7 manuscript additions swept number-by-number against the TGEO result JSONs and ledger (36 items, Sonnet-executed read-only, full table in session record): 35 OK, 1 MISMATCH fixed trilingually (the P4 summary "p = .24-.66" mixed D14 and path statistics and silently dropped the smallest p = .096 — replaced with "all four motion statistics nonsignificant, smallest p = .096"); two hardening notes applied (realized-phi wording; m=3 harmonized into EN). Manuscript now v5.8. REMAINING for round-12: bibliographic verification (needs the operator's browser), blinding check, Word/ScholarOne conversion.

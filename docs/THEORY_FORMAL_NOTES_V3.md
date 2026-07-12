@@ -976,6 +976,17 @@ q-value and every one of the 266 classifications exactly by hand.
 **The grid (19 constructs x 14 anchor traits x 2 channels = 266 cells per family).**
 NEITHER 238 / STATIC-ONLY 24 / BOTH 3 / **DYNAMIC-ONLY 1** of 266.
 
+**PRECISION CORRECTION (added 2026-07-12, operator-prompted).** "NEITHER" means "no
+BH-surviving correlation with Big5 or MBTI was DETECTED," not "no personality signal
+exists." Big5 and MBTI are two taxonomies, not an exhaustive nomological net — a
+construct landing NEITHER against both may still relate to a personality framework this
+program has not tested (see the Enneagram field newly identified in author_profiles.csv,
+Audit log 2026-07-12), or may be a genuinely un-nameable axis outside any existing
+taxonomy, exactly the possibility F10.2 raised at the theory's founding. Absence of
+evidence against two specific criterion sets is not evidence of absence more broadly;
+this correction does not, by itself, predict that a wider net WOULD find something —
+it only retracts the overclaim that NEITHER settles the question.
+
 **Adjudication against the registered leans.**
 (a) CONFIRMED STRONGLY: 262/266 cells (98.5%) land STATIC-ONLY or NEITHER — the
 null-consistent expectation for a battery built and validated on level correlations.

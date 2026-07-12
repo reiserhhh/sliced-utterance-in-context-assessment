@@ -283,6 +283,11 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 
 ## 6. Open instruments (designed, not yet executable / not yet run)
 
+- **Native corpus (N4): PAUSED BY OPERATOR CHOICE (2026-07-12)**, not merely blocked on
+  the IRB/recruitment items below. Rationale: theory should be matured on existing,
+  zero-cost data before a paid field experiment is undertaken. The collection pack
+  (PROTOCOL_V1/PROMPTS_V1/PREREG_SKELETON_V1) remains fully specified and ready; IRB
+  submission is not to be initiated until this decision is revisited.
 - Single-text sufficiency (F11.5): needs many long texts per person — native corpus.
 - Leverage-free gust dynamics: DONE (W2a, F12) — outcome: axes white, wcl_60 bounces,
   content constructs carry over; E3's bounce struck.
