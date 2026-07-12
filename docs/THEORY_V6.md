@@ -64,6 +64,18 @@ SCOPE under the frozen extraction (the native corpus carries dynamics). The regi
 quote/list/code stripper was a no-op (kill fired as registered); the mechanism family
 survived under the corrected taxonomy via the executing agent's provenance dig.
 
+v6.9 (2026-07-12): F16 swept the full static/dynamic/hybrid space (19 constructs x 14
+anchor traits x PANDORA-Big5/PANDORA-MBTI/Essays-dev, BH-FDR per channel) instead of one
+hand-built composite. Result: 238 neither / 24 static-only / 3 both / **1 dynamic-only**
+— wcl_07 (the recurring motion-anomalous construct) x MBTI T/F, surviving 266-cell FDR
+correction; the program's first EXTERNAL-anchor evidence for a motion-only signal
+(previously only internal split-half/spectral replication). Standing kill (zero
+dynamic-only cells -> demote W10) did NOT fire; W10 is strengthened. Unregistered
+finding that must bind future work: the cap-sensitivity check FIRED against its own
+prior — first_person_usage_v2 (the H2-carrying construct) shifts -0.190 systematically
+between capped and N1-uncapped extraction (p=1.3e-40); capped-era and N1-era static
+scores for 5/19 constructs are not interchangeable without re-verification.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -209,10 +221,21 @@ untested (native-corpus item).
 **4.2 Inference licenses (what may be claimed today).**
 - Motion-style dimensions exist, replicate, and are orthogonal to the static battery —
   Tier-U facts.
-- ANY claim linking motion styles to Big5/MBTI or clinical outcomes is UNLICENSED: it
-  requires a new prospective seal (not opening #2's registered candidates). The native
-  corpus (OP-36) and the single-text sufficiency instrument (F11.5) are the designed
-  vehicles.
+- ANY CONFIRMATORY claim linking motion styles to Big5/MBTI or clinical outcomes is
+  UNLICENSED: it requires a new prospective seal (not opening #2's registered
+  candidates). The native corpus (OP-36) and the single-text sufficiency instrument
+  (F11.5) are the designed vehicles; PREREG_SKELETON_V1's H-M slot is where that
+  licensed test will run.
+- **First EXPLORATORY contact recorded (F16, 2026-07-12):** on spent/first-use labels
+  (PANDORA Big5 opening-#1, PANDORA MBTI axes, Essays dev-half), an exhaustive
+  static/dynamic/hybrid sweep of all 19 frozen constructs found exactly one dynamic-only
+  cell — wcl_07's dynamic (gust-amplitude) channel x MBTI Thinking/Feeling, r=-.093,
+  BH q=9.0e-05, surviving 266-cell FDR correction — while wcl_07's own static channel on
+  the same cell misses the effect floor. wcl_07 is the pre-registered W10 gust1_P
+  carrier construct, so this is external-validity evidence for a motion-only signal, not
+  merely internal split-half stability. This does NOT license a confirmatory claim (one
+  exploratory cell, modest |r|, spent/first-use labels) — it is the program's first data
+  point toward the claim class the native corpus is designed to test properly.
 - Vector/axis naming remains unlicensed (T5); deployment is machine-facing.
 
 **4.3 Assessment design consequences.**

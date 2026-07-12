@@ -849,3 +849,200 @@ PERSON-LEVEL, statically invisible, replicating individual-difference dimension.
 
 The V6 document (SUICA_THEORY_V6.md) carries the full synthesis, the mathematical
 similarity table, and the personality-inference extension.
+
+## F14 results (N1, uncapped re-extraction; run same day as registration 97ecca2;
+## adjudication was never closed out — closing it now, before F16 depends on it)
+
+**Numbers.** Runtime 62s. tier_l: 385,275 rows / 1,412 users (7,039 bodies differ from
+the frozen v2 capped parquet, 1.83%; new max length 9,999 vs the 1,500 cap). tier_u:
+1,540,040 rows / 5,000 users (21,696 differ, 1.41%; max 16,417). Long-text census
+(bodies >= 1,200 chars): tier_l m>=3 4,400 texts / m>=5 1,240 / m>=7 502; at m>=4 the
+chars/token median is 4.81 — real prose, clear of the W9 cap-artifact band (2.48).
+
+Coverage among the 1,058 opening-#1 gated users (the EXPL-3/4b/F16 population): m>=3 in
+678/1058 (64.1%, median 3 texts); m>=5 in 352/1058 (33.3%, median 2 texts); >=3 texts at
+m>=5 in 118/1058 (11.2%).
+
+**Adjudication against the registered leans (>=60% at m>=5; >=30% with >=3 such
+texts).** BOTH MISSED LOW: 33.3% vs 60%, 11.2% vs 30% — roughly half the hoped-for
+texture-capable coverage materialized. N1 carries no kill condition of its own (it is
+infrastructure, not a claim), so this is not a failed hypothesis — but it sets the real
+power ceiling for every downstream uncapped-motion instrument (EXPL-4b, F16): about a
+third of labeled users get any spectral read at all, about a ninth get a multi-text
+within-person read. Downstream instruments must report coverage-conditional numbers
+alongside pooled ones, not pooled-only.
+
+## F16 — Visibility taxonomy: static-only / dynamic-only / both, against every existing
+## external anchor (registered 2026-07-12, operator-ordered: "静的しか見れない因子と動的
+## しか見れない因子，および動静両方見える因子...全部探し出し，既存の外的尺度と相関を
+## 調べよう")
+
+**Mandate.** F10.8/W10 established exactly ONE motion-only, person-stable quantity (the
+hand-built gust1_P susceptibility composite). The operator's directive generalizes this
+from one composite to the full construct space: classify EVERY frozen construct's
+personality signal by which channel carries it, against every external anchor this
+program has legitimate access to. This is the first EXHAUSTIVE sweep of the static/
+dynamic/hybrid space, not another single-composite probe.
+
+**Object.** For each of the 19 frozen v4-battery constructs c (read at run time from the
+frozen scorer — project_persona/suica.py / melon.py's ScoreSheet — never hardcoded),
+define two channel scores per person u:
+- STATIC S_c(u): person mean of c across all scored windows. Bit-identical to the
+  existing frozen battery's own construct means (score_slices_v2 output) — no new
+  estimator.
+- DYNAMIC D_c(u), PRIMARY: per-construct gust amplitude / susceptibility — W10's
+  activation measure (within-text detrended residual on a construct's own axis)
+  generalized from the one hand-built gust1_P composite to EACH construct's own axis
+  individually; person score = mean |activation|, m>=3 windows required (W10's
+  estimator, reused, not reinvented). SECONDARY (exploratory-of-exploratory; reported,
+  not load-bearing for classification): signed memory (persistence) and rho_pi (Nyquist
+  ratio) from suica_core/motion.py, each m-gated per its own estimator requirement.
+
+Before any fitting, the executing agent must verify (not assume) that capped vs.
+uncapped extraction does not itself move STATIC scores: if capped/uncapped person means
+differ systematically by >|.02| for any construct, flag and report before proceeding —
+level is expected to be cap-insensitive (unlike spectral texture, per W9), but this is
+an empirical check, not a premise.
+
+**External anchors — three tiers of governance, none conflated.**
+(i) **PANDORA official Big5, opening-#1 gate (n=1,058, predictors.parquet) — SPENT
+label tier.** EXPLORATORY banner, ledger row, mandatory gate-replication assert
+(n==1,058) AND H2 (first_person -> Neuroticism) AND H6 (politics_choice -> Openness)
+recomputed to <1e-9 against OPENING_REPORT.json BEFORE any fitting — the EXPL-1/EXPL-3
+assert block, copied verbatim, not reimplemented.
+(ii) **PANDORA official MBTI axes (EI/SN/TF/JP cont; data_sets/prepared/pandora_
+official/mbti_axes/*.csv, ~9,042 users) — FIRST correlational use in the SUICA
+construct-vs-anchor sense.** These labels were used to TRAIN the official MBTI LoRA CV
+line (a separate, model-training spend) but have never been fit or correlated against
+SUICA constructs before; there is no prior H2/H6-equivalent to replicate. Governed by
+the same EXPLORATORY banner + ledger-row discipline as (i), WITHOUT a replication
+assert (none exists yet to reproduce) — and this run ITSELF becomes the reference point
+any future reuse must replicate. Record explicitly: this run SPENDS the MBTI axis
+labels for future SUICA-correlational (not LoRA-training) work.
+(iii) **Essays Big5, DEV HALF ONLY** (essays_regime_dev_half.csv, 1,255 users), via the
+verified two-pass parse-time exclusion mechanism (`two_pass_dev_labels`, reused verbatim
+from EXPL-4a); CONFIRM half remains untouched (opening budget = 1 remaining, unaffected
+by this run).
+
+Dynamic scores use N1's uncapped tier_l/tier_u parquets where a user's population
+requires PANDORA text (Big5 gate and MBTI axes), and the existing uncapped Essays cache
+(already built for EXPL-4a) for (iii).
+
+**Classification rule (per construct x anchor cell).** BH-FDR correction applied
+SEPARATELY within the static family (19 constructs x K anchor traits) and the dynamic
+family (same N cells) — q<.05, plus an effect floor |r|>=.08 (the EXPL-3/4a convention)
+for a cell to count as signal.
+- STATIC-ONLY: static cell passes, dynamic cell (same construct x anchor) does not.
+- DYNAMIC-ONLY: dynamic cell passes, static does not.
+- BOTH: both pass.
+- NEITHER: neither passes.
+Report the FULL anchor x construct grid (19 x up to 14 anchor traits x 2 channels) —
+no collapsing to a single modal label before the raw grid is shown.
+
+**Leans (directional, registered before run).**
+(a) Most constructs land STATIC-ONLY or NEITHER — the v4 battery was built and
+validated on static/level correlations (H2 IS a static-level replication), so this is
+the null-consistent expectation, not a finding.
+(b) 1-4 constructs land DYNAMIC-ONLY on at least one anchor; leaned to be among the W10
+gust1_P carrier constructs (its loading-drift-guard set: wcl_02/wcl_11/wcl_07/wcl_20)
+rather than a fresh unrelated construct.
+(c) BOTH (hybrid) is rare: 0-2 constructs, given EXPL-3 (+0.0009) and EXPL-4a (-0.0096)
+already show static+dynamic stacking adds little at the composite level.
+(d) **STANDING KILL:** if ZERO (construct, anchor) cells classify DYNAMIC-ONLY anywhere
+in the full grid, W10's headline finding demotes from "a general property of the
+construct space" to "true only of the one hand-built gust1_P composite" — this must be
+recorded explicitly as a demotion, not quietly re-described as consistent with W10.
+
+**Governance checklist (all must hold before results are trusted):** frozen scorer used
+unmodified for S_c; suica_core/motion.py used unmodified for D_c; PANDORA gate n=1,058
++ H2 + H6 replicated <1e-9 before any Big5 fitting; MBTI-axis run explicitly marked as
+first-use/label-spending; Essays confirm-half bytes never parsed (two-pass mechanism,
+tested on synthetic data first, exactly as EXPL-4a); BH correction applied per-family as
+specified, never pooled across families; EXPLORATORY banner on every output; new ledger
+row; N1's uncapped parquets and the frozen v2/Essays caches are read-only throughout.
+
+## F16 results (run AFTER registration 32befcf; independently adversarially verified,
+## overall verdict TRUST — governance_ok/stats_ok both true, zero discrepancies found)
+
+**Governance, reproduced independently.** Gate n=1,058 exact; H2=0.1113549036 /
+H6=0.0959130343 both matched OPENING_REPORT.json to <1e-9 (recomputed twice, once by
+the build agent, once from scratch by the verifier, diffs 1.4e-17). Essays two-pass
+mechanism is the actual imported EXPL-4a function, not a reimplementation; confirm-half
+bytes never parsed. MBTI-axis run explicitly banner-marked as first-use/label-spending.
+BH-FDR applied as two independent 266-cell families (static, dynamic; not pooled, not
+per-anchor-set) — the verifier reimplemented BH-FDR from scratch and reproduced every
+q-value and every one of the 266 classifications exactly by hand.
+
+**The grid (19 constructs x 14 anchor traits x 2 channels = 266 cells per family).**
+NEITHER 238 / STATIC-ONLY 24 / BOTH 3 / **DYNAMIC-ONLY 1** of 266.
+
+**Adjudication against the registered leans.**
+(a) CONFIRMED STRONGLY: 262/266 cells (98.5%) land STATIC-ONLY or NEITHER — the
+null-consistent expectation for a battery built and validated on level correlations.
+(b) CONFIRMED, at the lean's low end: exactly ONE dynamic-only cell exists —
+**wcl_07 (dynamic channel) x MBTI TF_cont, r = -0.093, BH q = 9.0e-05** — and wcl_07 IS
+inside the registered W10 gust1_P carrier-set expectation {wcl_02, wcl_07, wcl_11,
+wcl_20}, exactly as leaned. Margin note (report honestly, not oversold): wcl_07's STATIC
+channel on this same cell also clears BH (q = 1.7e-04) but fails the |r|>=.08 effect
+floor (r_static = -0.073) — the cell is dynamic-only by a real but narrow margin, not an
+overwhelming one. This is wcl_07's third appearance as an out-of-family construct (after
+F12.8's CI-solid Delta_shape and its damped-oscillation texture) — the recurring
+motion-anomalous construct now also carries the program's first EXTERNALLY-anchored
+motion-only signal, not just internal split-half stability (W10) or internal spectral
+replication (F12.8/F12.9).
+(c) SLIGHT MISS: BOTH = 3 (registered band 0-2), one over the upper bound —
+first_person_usage_v2 x MBTI TF (static r=.152, dynamic r=.089), wcl_03 x MBTI TF
+(static r=.170, dynamic r=.088), wcl_23 x Essays Agreeableness (static r=-.140, dynamic
+r=-.112). Recorded as a real, if small, miss rather than rounded into the band.
+(d) **STANDING KILL NOT TRIGGERED** (dynamic-only is non-empty). Consequence: W10's
+headline finding is NOT demoted — it is *strengthened* by external validity. W10 showed
+gust1_P susceptibility is a stable INTERNAL property (split-half r=.441) of a
+hand-built composite; F16 now shows one of that composite's own RAW constructs
+(wcl_07) carries a motion-only signal against a genuine EXTERNAL personality anchor
+(MBTI T/F) that the static channel of the same construct does not carry. This is the
+first evidence of external validity for a motion-only object in this program, not
+merely internal reliability.
+
+**Unregistered but must-report finding: the cap-sensitivity check FIRED, against the
+registration's own prior.** Comparing STATIC person-means from the old capped Tier-U
+cache vs. the new N1-uncapped-derived pool (n=3,605 common users): 5 of 19 constructs
+move by >|.02| with paired-t p as low as 1.3e-40 — **first_person_usage_v2 alone moves
+-0.190 (huge, systematic)**; wcl_36 -0.035, wcl_13 -0.038, wcl_07 +0.045, wcl_03 -0.024,
+all p<3e-5. The registration's premise ("level is expected to be cap-insensitive,
+unlike spectral texture, per W9") is **WRONG for at least these 5 constructs, most
+severely for first_person_usage_v2 — the single construct carrying the program's
+central H2 replication (first_person -> Neuroticism)**. Standing caveat, binding on all
+future work: STATIC scores computed from the old capped extraction and STATIC scores
+computed from N1-uncapped data are NOT directly comparable for these 5 constructs; any
+future claim that mixes the two extractions for first_person_usage_v2 specifically must
+re-verify rather than assume equivalence. F16's own grid is internally consistent (both
+channels for a given cell come from the SAME uncapped pool), so this caveat does not
+threaten the grid's own classifications, but it is a live methodological hazard for any
+comparison ACROSS this cycle and pre-N1 cycles (EXPL-3, all v4/H2/H6 numbers reported on
+capped data).
+
+**Coverage (measured, not assumed).** PANDORA Big5 gate: 794/1,058 (75.0%) static-
+covered, 636/1,058 (60.1%) dynamic-covered (m>=3). MBTI axes: only 5,364/9,042 (59.3%)
+of labeled users appear in N1's uncapped pool at all (tier_l/tier_u verified disjoint,
+0 overlap); of those, 3,933 static-covered, 3,028 dynamic-covered. Essays dev:
+1,160/1,255 (92.4%) static, 1,053/1,255 (83.9%) dynamic.
+
+**Secondary descriptors (signed memory, rho_pi/shape pair; exploratory-of-exploratory,
+non-load-bearing).** Computed cleanly for all three populations with no estimability
+failures; reported in a separate table; per the registration these are POPULATION-level
+statistics from suica_core/motion.py (not per-person), so they cannot themselves enter
+the per-person classification grid — this is a property of the reused estimator, not a
+shortcut taken here.
+
+**Portrait update for the invisible-factor program.** The motion-only signal is not
+confined to one hand-tuned composite: at least one of its constituent RAW constructs
+(wcl_07) independently clears a real external-anchor bar that its own static channel
+misses, on an axis (MBTI Thinking/Feeling) this program had never previously tested
+against SUICA constructs. The effect is modest (|r| ~ .09, one cell out of 266) and
+must not be oversold as a validated MBTI-T/F motion marker — it is a single BH-surviving
+exploratory cell on spent/first-use labels, one data point toward the class of claim,
+not a sealed finding. The larger, more actionable result of this cycle may be the
+cap-sensitivity hazard: it retroactively flags that any cross-cycle comparison of
+first_person_usage_v2 (the program's single most load-bearing construct) between
+capped-era and N1-era work needs an explicit reconciliation step, not an assumption of
+equivalence.
