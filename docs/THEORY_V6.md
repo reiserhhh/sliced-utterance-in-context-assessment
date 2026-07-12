@@ -105,6 +105,19 @@ anomaly magnitude, F12.7-9, predict per-construct person-level susceptibility-st
 W10 generalized to all 19 constructs — resolving F15/W10's open item). Native corpus (N4)
 explicitly paused by operator choice pending theory maturity, not by logistics.
 
+v6.12 (2026-07-12): the two theory-enrichment data experiments closed. F17 (Enneagram,
+a third external anchor) came back a complete, independently-verified-as-genuinely-
+underpowered null (171/171 NEITHER) — the operator's "Big5/MBTI coverage may be
+insufficient" objection stands logically, but this first concrete test of it did not
+pan out. The shared-rhythm test is the sharper lesson: its registered cross-corpus
+design produced an exciting Pearson r=.633 (computationally exact) that collapsed to
+non-significance (r~.15-.18) when the SAME verification agent went beyond its brief and
+re-ran the test same-corpus — downgraded to NOT SUPPORTED AS REGISTERED, a register-
+specificity artifact consistent with T6, with the registration's own unstated same-
+corpus assumption owned as the gap (not an executing-agent error). One narrower thread
+(rho_pi alone, wcl_60-anchored) stays same-corpus-robust and open for a properly-
+designed follow-up.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -399,6 +412,8 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W4 MA-vs-AR (5064a0a) | corpus R2 CI-solid positive; memory set AR; wcl_60 MA | corpus R2 +.021 directional only (CI spans 0); memory set 3/5 AR (wcl_35/36/13, φ̂ consistent with lag-1) with first_person/wcl_03 = one-step echo; wcl_60 MA ✓; UNREGISTERED: period-2 signature in wcl_20/wcl_22 (CI-solid lag-2 excess, both families fail) → W5 lag-3 separator |
 | F16 visibility taxonomy (32befcf) | most constructs static-only/neither; 1-4 dynamic-only from the gust1_P carrier set; BOTH rare (0-2); kill if 0 dynamic-only anywhere | (a) ✓ strongly (98.5%); (b) ✓ at the floor: exactly 1 dynamic-only cell, wcl_07 x MBTI T/F (carrier set, as leaned); (c) SLIGHT MISS: BOTH=3 vs band 0-2; (d) kill NOT fired — W10 strengthened by external-anchor evidence; UNREGISTERED: cap-sensitivity check fired against its own prior (5/19 constructs' static means shift capped-vs-uncapped, first_person_usage_v2 by -.190) |
 | EXPL-4b uncapped motion x Big5 (97ecca2) | Delta over EXPL-3's D in [+.000,+.015]; kill if 4a AND 4b both <=0 | ✗ Delta=-0.0332 (negative on all 5 traits); **STANDING KILL FIRES** (4a -.0096 + 4b -.0332); power-annotated split: position-layer-alone flip (+.0009→-.0051, n=799) is trustworthy, spectral layer's further drop rests on only 22/1058 (2.1%) covered users — marked UNDECIDED-LOW-POWER, not a clean falsification; verification caught 2 real issues (dead has_long column; a cited robustness number that did not reproduce) |
+| F17 Enneagram taxonomy (8afb3e3) | most cells static-only/neither; 0-3 dynamic-only, low-confidence lean toward wcl_07; BOTH rare (0-3); soft kill | (a) ✓ even more strongly (100% vs F16's 98.5%) but for a different reason (0 static-only too, not just 0 dynamic-only); (b) count✓(0) but wcl_07 sub-lean ✗ — clean null, not a near-miss; (c) ✓(0); soft-kill triggered but does NOT retract W10/T8. Complete null (171/171 NEITHER) independently verified as UNDERPOWERED (KS-test of all 342 p vs Uniform(0,1): p=.76), not a bug |
+| Shared-rhythm test (8afb3e3) | positive sign, n=19, p<.10 suggestive bar; kill if null/negative, esp. if wcl_60 doesn't rank high | Registered cross-corpus numbers computationally exact (Pearson r=.633 p=.0036) but verifier RE-RAN same-corpus and the primary statistic COLLAPSED (r~.15-.18, n.s.) — **DOWNGRADED to NOT SUPPORTED AS REGISTERED**, a register-specificity artifact (T6-consistent), not a bug. One component (rho_pi alone) stays same-corpus-robust with wcl_60 top-ranked — narrower thread left open, pending a properly-registered same-corpus follow-up |
 
 Score: roughly half the leans held. The program's value is exactly that the instruments,
 not the leans, decided — and that both corpora, both directions of surprise, and one

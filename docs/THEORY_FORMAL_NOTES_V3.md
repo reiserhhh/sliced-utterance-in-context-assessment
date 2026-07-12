@@ -1292,3 +1292,70 @@ covered populations to clear BH. Consequence for the operator's original objecti
 Big5/MBTI's coverage might be insufficient for a high-dimensional scale): the LOGIC of
 that objection is untouched — this result only says the FIRST concrete candidate tested
 (Enneagram, at this sample size) did not pan out, not that no other taxonomy would.
+
+## Shared-rhythm results (run AFTER registration 8afb3e3; independently verified
+## TRUST_WITH_CAVEATS — computation confirmed exact, but the headline conclusion is
+## DOWNGRADED after the verifier executed the same-corpus check this registration only
+## asked to attempt "if feasible")
+
+**Registered (cross-corpus) numbers — computationally exact, reproduced from scratch by
+the verifier via independent code with zero discrepancies.** Combined anomaly score
+(mean of max-normalized |rho_pi-1| [Essays, W6], |Delta_shape| [Essays, W7], |a2|
+[Essays, W8]) vs. per-construct susceptibility-stability (W10's split-half estimator,
+generalized to all 19 constructs, measured on the PANDORA uncapped pool, n=2,355
+split-half-eligible users): **Pearson r=.633, p=.0036; Spearman rho=.426, p=.069**;
+wcl_60 ranks 2nd of 19 on susceptibility (wcl_07 3rd, wcl_20 6th); leave-one-out Pearson
+stable in [.504, .737] across all 19 drops.
+
+**The problem, found by the verifier going beyond its brief.** The anomaly magnitude was
+measured on ESSAYS (where W6/W7/W8 happened to be built) while susceptibility-stability
+was measured on PANDORA — a cross-corpus comparison this registration should have
+required to be same-corpus from the start (a gap in the registration itself, owned here,
+not the executing agent's error). The verifier didn't just flag this in the abstract —
+it ACTUALLY RAN the same-corpus (PANDORA-native) version, reusing W6/W8's own validated
+closed-form engines (not hand-transcribed) applied to PANDORA's 5<=m<=12 stratum
+(3,879 texts/1,656 users — MORE data than Essays' 1,349 texts, and confirmed clear of
+the W9 cap-artifact per N1/EXPL-4b's chars/token=4.81 at m>=4).
+
+**Same-corpus result: the PRIMARY (Pearson) statistic COLLAPSES.**
+
+| variant | Pearson r | p | Spearman rho | p |
+|---|---|---|---|---|
+| Registered (Essays anomaly x PANDORA susceptibility) | .633 | .0036 | .426 | .069 |
+| PANDORA-native, all qualifying texts (n=3,879 texts/1,656 users, clustered) | .181 | .458 | .358 | .133 |
+| PANDORA-native, one text/user dedup (n=1,656) | .151 | .539 | .447 | .055 |
+
+The stronger, cleaner original statistic (Pearson) is clearly NON-SIGNIFICANT in both
+same-corpus variants. Spearman is internally INCONSISTENT across the two robustness
+variants (fails clustered, borderline-recovers deduped) — read as noise at n=19, not a
+robust secondary confirmation.
+
+**Component-level nuance (not a total wash).** |rho_pi-1| ALONE shows a STRONGER
+same-corpus rank correlation (Spearman rho=.49, p=.03, vs. Essays' .38/.11), with wcl_60
+staying top-ranked specifically on this one component. |Delta_shape| ALONE FLIPS SIGN
+entirely (Essays r=.51/rho=.22 positive -> PANDORA r=-.10/rho=-.15 negative) — this sign
+flip, inside a combined score that weights all three components equally, is what drags
+the cross-corpus headline number down once the confound is removed.
+
+**Adjudication — DOWNGRADED from the build agent's "SUPPORTED_AT_LOW_POWER."** The
+registered combined-score, cross-corpus claim is **NOT SUPPORTED AS REGISTERED**: its
+strongest statistic does not survive same-corpus re-derivation. This is best read as a
+REGISTER-SPECIFICITY ARTIFACT, consistent with — and a further small piece of evidence
+for — T6 ("portability follows visibility"): cross-corpus comparisons of motion-layer
+properties are exactly where this program has repeatedly found trouble (E2d's gust1_P
+non-transport, .200 vs random .23). The door is NOT fully closed, though: the rho_pi-
+specific thread (not the 3-component combined score) shows a same-corpus-ROBUST, even
+STRENGTHENED signal with wcl_60 anchoring it — a narrower, live candidate that needs its
+own freshly-registered, same-corpus, cluster-robust (PANDORA has ~46% repeated-user
+texts in this stratum, unlike Essays) confirmatory test before being treated as
+established in either direction. Until that runs, the shared-rhythm hypothesis in its
+ORIGINAL combined-score form is recorded as NOT SUPPORTED; the rho_pi-only sub-claim is
+UNDECIDED-PENDING-PROPER-TEST.
+
+**Process note.** This is the verification step working exactly as designed: an
+initially clean, exciting positive result (r=.63, p=.004) was substantially walked back
+by the SAME verification pass that confirmed its arithmetic was flawless — the bug here
+was in the registration's own design (an unstated same-corpus assumption), not in the
+code. Filed alongside E3's bounce (struck by W2a) and W9's inverted mechanism as another
+case where independent scrutiny changed the substantive conclusion, not just the
+numbers.
