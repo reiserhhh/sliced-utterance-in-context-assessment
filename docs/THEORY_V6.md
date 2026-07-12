@@ -88,6 +88,23 @@ rather than a clean falsification — PANDORA, even fully uncapped, cannot suppl
 per-user long-text volume for a fair spectral test, sharpening the case for the native
 corpus (N4) as the necessary next instrument.
 
+v6.11 (2026-07-12): T8 formalizes the session's own throughline as a theorem — the
+static battery (range of the averaging operator A, measured rank ~4 via TGEO-P3's RMT
+edge) and the motion layer (ker(A), measured rank >=1 via three independent gated
+instruments: F10.8, E4, W10) are orthogonal by construction, so total personality
+dimensionality is structurally larger than any static instrument (Big5, MBTI, Enneagram,
+or SUICA's own v4 battery) can access — not a probabilistic near-miss but a kernel
+exclusion. Self-critical corollary applied immediately: F16's lone external-anchor hit
+(wcl_07 x MBTI T/F) is flagged as a likely floor-threshold artifact (its static channel
+missed the .08 floor by only .007 while clearing BH significance), not a clean
+ker(A)-only signal — standing instruction to report paired static/dynamic r+q on every
+future hit. Two theory-enrichment tracks launched in parallel: F17 (Enneagram as a 3rd,
+previously-untouched external anchor already sitting in PANDORA's own author_profiles.csv,
+zero new data collection) and the shared-rhythm test (does population-pooled spectral
+anomaly magnitude, F12.7-9, predict per-construct person-level susceptibility-stability,
+W10 generalized to all 19 constructs — resolving F15/W10's open item). Native corpus (N4)
+explicitly paused by operator choice pending theory maturity, not by logistics.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -198,6 +215,49 @@ test undecidable — recorded, not forced). Personality reading: texture paramet
 register-anchored machine coordinates (T5/T6 apply); their person-level stability is
 untested (native-corpus item).
 
+**T8 (dimensionality is additive across the aggregation kernel; no static instrument
+can see all of personality — 2026-07-12, theory-enrichment track).** Let A be the
+person-level averaging operator that ANY static instrument is a function of —
+window-mean scoring, Big5/MBTI/Enneagram self-report (a person's own recalled/averaged
+self-judgment is itself an aggregation), or SUICA's own v4 battery. For any such linear
+A, range(A) and ker(A) are orthogonal complements — a pure linear-algebra fact, not an
+empirical claim. T1 already proves gust coherence lies in ker(A) (erased at 1/m by the
+window-mean LLN). CONSEQUENCE: total identifiable personality-signal dimensionality is
+AT LEAST rank(range(A)) + rank(ker(A) ∩ replicable structure) — strictly larger than
+what range(A) alone carries, and NO instrument built from A (however comprehensive its
+trait coverage) can ever recover ker(A)'s content, by construction, not by chance.
+
+Both ranks are independently MEASURED, not assumed: rank(range(A)) ≈ 4, via TGEO-P3's
+Marchenko-Pastur edge test on the static v4 battery (exactly 4 supra-edge components,
+cross-half congruence .985/.980/.932/.939). rank(ker(A) ∩ replicable) ≥ 1, certified
+through THREE independent gated instruments: F10.8's B-gust1 (supra-edge, replication
+.829, level-invisible at noise), E4's person-level motion style (comp1 λ=2.137,
+replication .784, after explicitly residualizing against the static top-4 frame — a
+direct empirical test that dynamic structure survives orthogonalization, not an
+assumption of it), and W10's person-anchored susceptibility (split-half r=.441, built
+from within-text-detrended residuals — orthogonal to level by construction). So the
+static battery's own measured rank (~4) is a LOWER BOUND on total personality
+dimensionality, not the whole of it — classical trait theory's "state variance" (the
+part averaged away as noise) contains at least one further, independently-replicating,
+BETWEEN-PERSON dimension that the trait/state split has always assumed was noise.
+
+**Self-critical corollary (apply on every future external-anchor result).** Under a
+CLEAN model, an object purely in ker(A) has EXACTLY ZERO population correlation with any
+range(A)-based measure (Big5, MBTI, Enneagram) — not "small," zero, by the orthogonality
+argument above. So F16's one surviving DYNAMIC-ONLY cell (wcl_07 x MBTI T/F, r=-.093) is
+mildly surprising under the idealized model, and this is worth resolving rather than
+celebrating uncritically: wcl_07's STATIC channel on that same cell had r=-.073, q=1.7e-4
+— it CLEARED BH significance and missed the .08 effect floor by only .007. This means
+wcl_07 was likely never a clean ker(A)-only object for this anchor; it more plausibly sits
+close to a BOTH classification that a hard .08 floor pushed into DYNAMIC-ONLY. Standing
+instruction: every future dynamic-only classification must report its paired static
+r/q alongside the dynamic r/q (not just the pass/fail label) so floor-threshold artifacts
+are visible on the page, not laundered into a clean-sounding category name. This does not
+retract T8's dimensionality argument (rank(ker(A))≥1 is independently certified by THREE
+OTHER instruments that never touch external anchors at all) — it only means F16's
+specific external-validity anecdote is less clean than first reported, and F17 (in
+progress) is registered to report exactly this pairing for every hit it finds.
+
 ## 3. Theorem-similarity table (advanced tools ↔ SUICA objects)
 
 | mathematical tool / theorem | SUICA object | what transfers | where the analogy is bounded |
@@ -212,6 +272,7 @@ untested (native-corpus item).
 | Boundary-layer theory / matched asymptotics (inner-outer) | position profiles: zone coordinates vs similarity coordinate t (F10.7) | coordinate-race DESIGN; identifiability (T3) | composite inner+outer model gave no CV gain at current SNR (E2b) — analogy is a design tool, not a fitted necessity |
 | Group-theoretic invariance (F7 lattice) | every null = subgroup choice; artifact = statistic constant on a larger orbit | exact | — |
 | Drift-vs-diffusion estimation asymmetry | T4 measurement economics | rate structure (occasions vs tokens) | constants differ; discrete windows |
+| Orthogonal direct-sum decomposition (range/kernel of a linear operator); classical trait-state variance split | T8: range(A)=static battery (rank~4, P3) ⊕ ker(A)=motion layer (rank>=1, F10.8/E4/W10) | the STRUCTURAL (not probabilistic) reason no static instrument sees ker(A); reframes "state variance" from noise to a second trait layer | orthogonality of range/ker is exact for linear A; whether real self-report/averaging is close enough to linear A for the bound to bind tightly is assumed, not separately proven |
 
 ## 4. Extension to personality inference (人格推論への拡張)
 

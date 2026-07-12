@@ -1136,3 +1136,108 @@ estimability bars for more than ~2% of labeled users. This is the sharpest concr
 argument yet for why the native corpus (N4, already delivered) is necessary rather than
 optional — it is designed to guarantee, by construction (>=1,500-2,500 words per
 session, 2 sessions/person), the long-text volume PANDORA structurally cannot supply.
+
+## F17 — Enneagram as a third external anchor (registered 2026-07-12, operator-ordered:
+## theory-enrichment track, zero new data collection)
+
+**Mandate.** F16 tested Big5 and MBTI only — two taxonomies, not an exhaustive
+nomological net (per the NEITHER precision correction above). PANDORA's own
+author_profiles.csv already carries an untouched Enneagram field (794 users; type +
+wing, e.g. "5w4") — a THIRD, structurally distinct (typological/circumplex, not
+dimensional) taxonomy, usable with zero new data collection. F17 repeats F16's exact
+classification methodology against this new anchor.
+
+**Object.** Same 19 frozen constructs, same STATIC S_c(u) / DYNAMIC D_c(u) (per-construct
+gust amplitude) channels as F16, reusing F16's own already-built and independently-
+verified uncapped windows-scored cache (results/suica_f16_visibility_taxonomy/
+pandora_uncapped_windows_scored19.parquet) wherever it covers the enneagram-labeled
+population — do not rebuild from scratch if that cache already fits.
+
+**Anchor design.** Enneagram type is CATEGORICAL (9 levels), not continuous like Big5/
+MBTI-cont — a real methodological difference from F16, to be handled explicitly, not
+silently forced into the same shape. PRIMARY: one-vs-rest point-biserial correlation
+per type (is_type_1..is_type_9, 9 binary columns) x 19 constructs x 2 channels = 171
+cells per family, BH-FDR per family (static, dynamic), same |r|>=.08 floor as F16 —
+chosen for direct comparability with F16's own convention, at the cost of the 9
+indicators being non-independent by construction (correlated through the categorical
+structure) — flag this explicitly rather than treating the 9 as orthogonal contrasts.
+SECONDARY, non-load-bearing (mirrors F16's own secondary-descriptor convention): a
+one-way ANOVA eta-squared per construct x channel (19 x 2 = 38 cells) as an omnibus
+cross-check that does not feed the primary classification.
+
+**Governance.** FIRST correlational use of Enneagram labels in this program (confirmed:
+no prior script reads this field) — same treatment as MBTI got in F16: EXPLORATORY
+banner, ledger row, no prior replication-assert to reproduce (none exists), and this run
+itself becomes the future reference point. Measure actual coverage empirically (how many
+of the 794 enneagram-labeled users appear in N1's uncapped pool / the F16 cache) — do not
+assume the 793 MBTI-overlap figure transfers to N1 coverage without checking.
+
+**Leans (directional, before run).** (a) Most cells land STATIC-ONLY or NEITHER again,
+consistent with F16's 98.5% base rate — no reason to expect Enneagram behaves
+differently in kind. (b) Given wcl_07's population overlap is nearly identical to the
+793 MBTI-TF-tested users, IF wcl_07's dynamic signal reflects a genuine trait-general
+"thinking/feeling-style" property (rather than an MBTI-specific artifact), some echo is
+plausible in Enneagram types carrying "head/thinking" lore (types 5, 6) — lean: 0-3
+dynamic-only cells total, same order of magnitude as F16, NOT zero but not large; this
+lean is explicitly LOW-CONFIDENCE (Enneagram-Big5/MBTI correspondence is itself
+contested in the literature, not a settled fact to lean on). (c) BOTH rare, similar
+order to F16 (0-3). **KILL condition is deliberately soft here** (unlike F16's standing
+kill): zero dynamic-only cells would NOT retroactively falsify W10 (already externally
+validated via MBTI) — it would only mean wcl_07's MBTI-T/F relationship does not
+generalize to a structurally different taxonomy, narrowing (not killing) the claim to
+"MBTI-T/F-specific" rather than "trait-general."
+
+**Standing self-check to apply on adjudication (carried from the T8 theorem work below):
+re-examine whether any newly-classified DYNAMIC-ONLY cell is a genuine kernel-only
+object or a floor-threshold artifact** — report each hit's STATIC r and BH-q alongside
+its dynamic r and q, not just the pass/fail label, exactly as F16 should have done more
+prominently for wcl_07 (whose static r=-.073 missed the .08 floor by only .007 while
+still clearing BH q=1.7e-4).
+
+## Shared-rhythm hypothesis test (registered 2026-07-12, resolving the open item flagged
+## in F15/W10's registration: "carriers = the spectral-anomaly constructs (shared-rhythm
+## hypothesis open)")
+
+**Mandate.** W10 found gust1_P's carrier constructs (wcl_02, wcl_07, wcl_11, wcl_20) and
+left open whether these are the SAME constructs independently flagged as spectrally
+anomalous at the population/corpus-pooled level (F12.7-F12.9: wcl_20's depressed
+rho_pihalf/CI-solid even-lag a2; wcl_07's CI-solid Delta_shape/damped-oscillation a2;
+wcl_60's MA(1)/bounce identity) — i.e., is "a construct co-activates with others in
+bursts" (W10, per-person) the SAME phenomenon as "a construct has unusual population-
+pooled spectral texture" (F12.7-9, corpus-pooled), or do these merely happen to overlap
+in gust1_P's specific loadings by coincidence?
+
+**Object.** For each of the 19 constructs, using N1's uncapped data (reusing F16's own
+per-construct dynamic-channel machinery, already built and verified), compute:
+(i) SPECTRAL-ANOMALY MAGNITUDE at the population level — the already-published F12.7-9
+numbers (|rho_pi - 1|, |Delta_shape|, |a2| from the AR(2) triangle) collected into one
+per-construct anomaly score (document the exact combination rule — e.g., max-normalized
+mean of the three, or report all three separately if no single combination is
+defensible; do not silently pick one without saying so).
+(ii) PERSON-LEVEL SUSCEPTIBILITY-STABILITY — W10's split-half |activation| stability
+estimator, generalized from the single gust1_P composite to EACH of the 19 raw
+constructs individually (reusing W10's person_susceptibility() function).
+Then correlate (i) against (ii) ACROSS THE 19 CONSTRUCTS (n=19, one point per
+construct) — a small-n, construct-level correlation, explicitly flagged as
+LOW-POWERED/SUGGESTIVE-ONLY given n=19, reported with exact p-values and a rank
+(Spearman) correlation alongside Pearson given the small n and likely non-normality of
+anomaly scores.
+
+**Leans.** Positive association: constructs with LARGER population-level spectral
+anomaly magnitude show HIGHER person-level susceptibility-stability — the conjecture
+that "population-pooled spectral weirdness" and "individual gustiness-stability" are two
+observable faces of the same underlying rhythmic-coordination phenomenon, not two
+independent facts that coincidentally overlapped in one composite's loadings. Given
+n=19, no specific correlation magnitude is leaned — only the SIGN and nominal
+suggestiveness (p<.10 as a "worth a second look" bar, explicitly NOT treated as
+confirmatory at this n).
+
+**Kill condition.** If the correlation is null or negative (particularly if wcl_60 —
+the construct with the clearest population-level anomaly of all 19, per W6/W7's
+CI-solid rho_pi=2.51 — does NOT also rank among the higher-susceptibility constructs),
+record "shared-rhythm hypothesis NOT supported at this power — the gust1_P carrier set
+and the individually spectrally-anomalous constructs are better treated as two
+independent facts that happened to overlap in one composite's specific loadings, not
+evidence of one underlying phenomenon." Given n=19, a null result here should be
+reported as "underpowered/undecided," not a confident falsification, unless the sign is
+actively wrong for the clearest cases (wcl_60, wcl_07, wcl_20).
