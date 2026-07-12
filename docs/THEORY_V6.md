@@ -344,8 +344,11 @@ licenses list encoding T4/T5/T6 (sample-standardized, register-anchored, no trai
 inference; F12.2 support caveat). Implemented Sonnet-to-spec, planner-audited line-by-
 line against the F12 identities, and covered by 12 synthetic-recovery tests (MA(1)
 recovery at θ ∈ {0, .4}, planted-flow recovery after gust correction, the T4
-estimability guard, leak-drop semantics); full package suite 59/59. Known finite-sample
-θ̂ bias documented in the module and listed as an open instrument (Section 6).
+estimability guard, leak-drop semantics), grown through the W6b/W7b deployment cycles
+(period2_energy/truncated-mode tests, hybrid-functional shape-pair tests); full release
+package suite currently 72/72 passing (reverified 2026-07-12; this line was stale at
+"59/59" from the v6.1 deployment and is corrected here). Known finite-sample θ̂ bias
+documented in the module and listed as an open instrument (Section 6).
 
 ## 5. Battery v-next gates (registry addition)
 
