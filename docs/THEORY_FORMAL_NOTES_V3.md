@@ -1241,3 +1241,54 @@ independent facts that happened to overlap in one composite's specific loadings,
 evidence of one underlying phenomenon." Given n=19, a null result here should be
 reported as "underpowered/undecided," not a confident falsification, unless the sign is
 actively wrong for the clearest cases (wcl_60, wcl_07, wcl_20).
+
+## F17 results (run AFTER registration 8afb3e3; independently verified TRUST — exhaustive
+## re-derivation of all 342 cells + 3 independent BH-FDR implementations, zero
+## discrepancies)
+
+**The grid (19 constructs x 9 one-vs-rest Enneagram types x 2 channels = 171 cells per
+family).** **COMPLETE NULL: 171/171 NEITHER in both families (0 STATIC-ONLY, 0
+DYNAMIC-ONLY, 0 BOTH).** Smallest raw p-values (dynamic wcl_22 x type7, p=.00104; static
+first_person_usage_v2 x type5, p=.00129) both fail BH decisively (q=.178, q=.220 — 3.5-
+4.4x over threshold, not close calls). Verifier's distributional check: KS-test of all
+342 p-values against Uniform(0,1) gives D=.036, p=.76 — genuinely indistinguishable from
+a global null, not merely "BH was too strict to catch a real signal."
+
+**Coverage (corrected).** 794 enneagram-labeled users; 372 (46.9%) static-covered, 304
+(38.3%) dynamic-eligible (m>=3) in F16's reused cache. MBTI-axis overlap is **790/794
+(99.5%), not the 793 figure in the registration** — a small factual correction, caught
+and reported plainly by the executing agent rather than silently reconciled (the 4
+enneagram-only, non-MBTI users are individually identified in the verifier's output).
+Smallest Enneagram type (type 3) has only 18/16 covered users — the thinnest cell in
+either family.
+
+**Adjudication against the registered leans.**
+(a) CONFIRMED even more strongly than F16's own 98.5% — but for a QUALITATIVELY
+DIFFERENT reason worth flagging, not just a bigger number: F16's null was carried mostly
+by NEITHER but had a genuine 24-cell STATIC-ONLY bucket; F17 has ZERO hits of ANY kind,
+including static. This is a more complete null than lean (a)'s F16-by-analogy framing
+anticipated.
+(b) Count (0) sits at the bottom of the registered 0-3 band — technically not violated —
+but the SPECIFIC low-confidence sub-lean (wcl_07 echoing via "head/thinking" types 5/6)
+is NOT supported. wcl_07 shows a CLEAN null here (largest static r=+.136 at type6,
+q=.307 — nowhere near BH; dynamic r=+.038/-.068 at types 5/6 — tiny), not a narrow miss
+like its genuine MBTI-T/F result in F16. The two external-anchor results for wcl_07 are
+qualitatively different, not just different in size.
+(c) CONFIRMED (0, within 0-3).
+**Soft-kill TRIGGERED (0 dynamic-only cells) — per the pre-committed framing, this does
+NOT retroactively falsify W10/T8** (rank(ker(A))>=1 remains independently certified by
+THREE OTHER anchor-free instruments: F10.8, E4, W10). It narrows wcl_07's finding from
+"trait-general thinking/feeling-style signal" to "specific to MBTI's own T/F axis" —
+Enneagram, a structurally different (typological, not dimensional) taxonomy built from
+an almost-identical user population, does not replicate it.
+
+**Power vs. absence-of-relationship.** The verifier's explicit read, independently
+derived: SE(r) ~ .052-.058 at this n; the single largest observed |r| (.166) is only ~3
+SEs from zero — enough for uncorrected p<.05 but far short of what BH across 171
+(correlated, one-hot) tests requires. This is best read as UNDERPOWERED, not as
+evidence Enneagram is unrelated to these constructs — F16's own genuine hits against
+Big5/MBTI were of similar magnitude (|r|~.09-.17) and needed larger, better-balanced
+covered populations to clear BH. Consequence for the operator's original objection (that
+Big5/MBTI's coverage might be insufficient for a high-dimensional scale): the LOGIC of
+that objection is untouched — this result only says the FIRST concrete candidate tested
+(Enneagram, at this sample size) did not pan out, not that no other taxonomy would.
