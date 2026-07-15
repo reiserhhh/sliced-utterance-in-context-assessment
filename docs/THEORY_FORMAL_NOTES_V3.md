@@ -881,12 +881,13 @@ alongside pooled ones, not pooled-only.
 ## しか見れない因子，および動静両方見える因子...全部探し出し，既存の外的尺度と相関を
 ## 調べよう")
 
-**Mandate.** F10.8/W10 established exactly ONE motion-only, person-stable quantity (the
-hand-built gust1_P susceptibility composite). The operator's directive generalizes this
-from one composite to the full construct space: classify EVERY frozen construct's
-personality signal by which channel carries it, against every external anchor this
-program has legitimate access to. This is the first EXHAUSTIVE sweep of the static/
-dynamic/hybrid space, not another single-composite probe.
+**Mandate (retrospectively narrowed by the V7 audit).** F10.8/W10 produced one
+motion-only, same-sample person-associated candidate (the hand-built gust1_P
+susceptibility composite); it did not establish a stable person parameter. The
+operator's directive generalizes the channel screen from one composite to the full
+construct space and compares each frozen construct with available external anchors.
+This is an exhaustive exploratory sweep of the static/dynamic/hybrid space, not a
+personality-signal certification procedure.
 
 **Object.** For each of the 19 frozen v4-battery constructs c (read at run time from the
 frozen scorer — project_persona/suica.py / melon.py's ScoreSheet — never hardcoded),
@@ -1184,8 +1185,9 @@ dynamic-only cells total, same order of magnitude as F16, NOT zero but not large
 lean is explicitly LOW-CONFIDENCE (Enneagram-Big5/MBTI correspondence is itself
 contested in the literature, not a settled fact to lean on). (c) BOTH rare, similar
 order to F16 (0-3). **KILL condition is deliberately soft here** (unlike F16's standing
-kill): zero dynamic-only cells would NOT retroactively falsify W10 (already externally
-validated via MBTI) — it would only mean wcl_07's MBTI-T/F relationship does not
+kill): zero dynamic-only cells would not by itself falsify the narrow averaging/path
+contrast statement. W10 was not externally validated by the exploratory MBTI result;
+zero cells would mean wcl_07's observed MBTI-T/F association does not
 generalize to a structurally different taxonomy, narrowing (not killing) the claim to
 "MBTI-T/F-specific" rather than "trait-general."
 
