@@ -1,6 +1,7 @@
 {
   "version": "v7-theory-closure-2-portable",
   "release_manifest": "release/v0.2.0/LOCKBOX_MANIFEST.json",
+  "release_tag": "v0.2.0",
   "required_files": [
     "docs/V7_GEOMETRY_OBJECT.md",
     "docs/V7_UNCERTAINTY_PROTOCOL.md",

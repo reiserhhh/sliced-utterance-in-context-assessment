@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -78,6 +79,58 @@ def verify_lockbox_manifest(
         "status": "LOCKBOX_MANIFEST_PASS" if not failures else "LOCKBOX_MANIFEST_FAIL",
         "release_version": payload.get("release_version"),
         "n_expected": expected,
+        "n_failures": len(failures),
+        "failures": failures,
+    }
+
+
+def verify_release_identity(
+    repository_root: str | Path,
+    manifest_path: str | Path,
+    *,
+    tag: str = "v0.2.0",
+) -> dict[str, Any]:
+    """Bind a clean checkout to an annotated tag carrying the manifest hash."""
+    root = Path(repository_root).resolve()
+    manifest = Path(manifest_path).resolve()
+    failures: list[dict[str, str]] = []
+    try:
+        head = subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=root, check=True, capture_output=True, text=True
+        ).stdout.strip()
+        tag_commit = subprocess.run(
+            ["git", "rev-parse", f"{tag}^{{commit}}"], cwd=root, check=True, capture_output=True, text=True
+        ).stdout.strip()
+        tag_type = subprocess.run(
+            ["git", "cat-file", "-t", tag], cwd=root, check=True, capture_output=True, text=True
+        ).stdout.strip()
+        tag_body = subprocess.run(
+            ["git", "for-each-ref", "--format=%(contents)", f"refs/tags/{tag}"],
+            cwd=root,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return {
+            "status": "RELEASE_IDENTITY_UNAVAILABLE",
+            "tag": tag,
+            "n_failures": 1,
+            "failures": [{"item": tag, "reason": "git_or_tag_unavailable"}],
+        }
+    manifest_sha256 = sha256_file(manifest)
+    if head != tag_commit:
+        failures.append({"item": tag, "reason": "tag_does_not_point_to_head"})
+    if tag_type != "tag":
+        failures.append({"item": tag, "reason": "tag_is_not_annotated"})
+    if f"LOCKBOX_MANIFEST_SHA256={manifest_sha256}" not in tag_body:
+        failures.append({"item": tag, "reason": "manifest_hash_missing_from_tag_message"})
+    return {
+        "status": "RELEASE_IDENTITY_PASS" if not failures else "RELEASE_IDENTITY_FAIL",
+        "tag": tag,
+        "head": head,
+        "tag_commit": tag_commit,
+        "manifest_sha256": manifest_sha256,
         "n_failures": len(failures),
         "failures": failures,
     }

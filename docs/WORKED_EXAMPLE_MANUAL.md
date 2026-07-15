@@ -18,7 +18,7 @@ students. Nothing here is claimed beyond these populations (Rulebook D1).
 | PANDORA official dump | 17.6M comments, ~10k users, subreddit+timestamp | raw behavior stream |
 | Tier U (dev) | 8,678 MBTI-axis users minus all lockbox users | all discovery/tuning |
 | Tier D (dev labels) | Tier-U users' MBTI axis labels | orientation only (never selection) |
-| Tier L (lockbox, SEALED) | Big5 1,401 + bridge 375 + Essays confirm-half | preregistered confirmation, budget 2 openings, 0 used |
+| Tier L (historical lockbox) | Big5 1,401 + bridge 375 + Essays confirm-half | opening #1 spent 2026-07-07; overall 2/7 fail, H2/H6 individual pass; one opening remains; Essays confirm-half unopened |
 | Essays dev-half | 1,255 students, text + (this manual only) labels | regime tests + dev-tier Big5 orientation |
 | Working samples | 5,000-user cap-400 sample; 2,000-user deep (cap 1,200) | standard vs thick-cell designs |
 

@@ -119,6 +119,9 @@ def _critical_paths() -> list[str]:
         "scripts/verify_suica_v020_lockbox.py",
         "suica_core/__init__.py",
         "docs/CLAIMS_LEDGER.md",
+        "docs/OPEN_PROBLEMS.md",
+        "docs/PREREGISTRATION.md",
+        "docs/WORKED_EXAMPLE_MANUAL.md",
         "docs/V7_LOCKBOX_V020.md",
         "docs/RELEASE_NOTES_V020.md",
     })

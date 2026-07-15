@@ -43,6 +43,6 @@ predeclared 4/7 rule, H2/H6 passed individually, and one opening remains.
 Quick/smoke reports are development diagnostics; corrected full reports and
 the tracked v0.2.0 evidence bundle are authoritative for this release.
 
-Release audit: Python compilation passed; full suite 301/301 passed; V7 and
-release-lockbox subset 94/94 passed. Exact package versions are recorded in
+Release audit: Python compilation passed; full suite 302/302 passed; V7 and
+release-lockbox subset 95/95 passed. Exact package versions are recorded in
 `requirements-lock-v0.2.0.txt` and `release/v0.2.0/TEST_REPORT.md`.

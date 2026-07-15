@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from suica_core.v7_governance import git_revision, verify_artifact_inventory, verify_run_manifest
-from suica_core.v7_release import verify_lockbox_manifest
+from suica_core.v7_release import verify_lockbox_manifest, verify_release_identity
 
 
 def audit_v7_theory_closure(config: dict[str, Any], *, repository_root: str | Path) -> dict[str, Any]:
@@ -21,6 +21,7 @@ def audit_v7_theory_closure(config: dict[str, Any], *, repository_root: str | Pa
             failures.append({"item": str(relative), "reason": "required_file_missing"})
 
     release_manifest_result: dict[str, Any] | None = None
+    release_identity_result: dict[str, Any] | None = None
     if config.get("release_manifest"):
         manifest_path = root / str(config["release_manifest"])
         if not manifest_path.is_file():
@@ -29,6 +30,12 @@ def audit_v7_theory_closure(config: dict[str, Any], *, repository_root: str | Pa
             release_manifest_result = verify_lockbox_manifest(manifest_path, repository_root=root)
             if release_manifest_result["status"] != "LOCKBOX_MANIFEST_PASS":
                 failures.append({"item": "release_manifest", "reason": "release_manifest_failed"})
+            if config.get("release_tag"):
+                release_identity_result = verify_release_identity(
+                    root,
+                    manifest_path,
+                    tag=str(config["release_tag"]),
+                )
 
     for item in config.get("evidence", []):
         evidence_id = str(item["id"])
@@ -62,7 +69,12 @@ def audit_v7_theory_closure(config: dict[str, Any], *, repository_root: str | Pa
     revision = git_revision(root)
     if failures:
         closure_status = "REFUSE_V7_THEORY_CLOSURE_AUDIT_FAILURE"
-    elif revision.get("dirty") is True:
+    elif (
+        revision.get("status") != "GIT_AVAILABLE"
+        or revision.get("dirty") is not False
+        or release_identity_result is None
+        or release_identity_result.get("status") != "RELEASE_IDENTITY_PASS"
+    ):
         closure_status = "V7_THEORETICAL_CORE_IMPLEMENTED_DURABLE_SNAPSHOT_PENDING"
     else:
         closure_status = "V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES"
@@ -74,6 +86,7 @@ def audit_v7_theory_closure(config: dict[str, Any], *, repository_root: str | Pa
         "evidence": evidence_rows,
         "repository": revision,
         "release_manifest": release_manifest_result,
+        "release_identity": release_identity_result,
         "evidence_lattice": {
             "geometry": "IMPLEMENTED_AND_HELDOUT_SMOKED",
             "conditional_uncertainty": "PROTOCOL_IMPLEMENTED_EMPIRICAL_JOINT_ESTIMATE_PENDING",

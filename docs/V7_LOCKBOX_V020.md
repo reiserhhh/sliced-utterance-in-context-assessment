@@ -62,6 +62,9 @@ git rev-parse v0.2.0^{commit}
 
 The annotated tag message records the manifest SHA-256. A verifier can compare
 that value with the checked-out manifest and then verify every critical file.
+The strict verifier requires Git metadata, an annotated `v0.2.0` tag at
+`HEAD`, and the matching manifest hash. `--content-only` checks file integrity
+for CI or source archives but does not establish release identity or closure.
 
 ## Relation to the v0.1 preregistration
 

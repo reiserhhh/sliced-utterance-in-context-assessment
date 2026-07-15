@@ -3,12 +3,12 @@
   "release_version": "0.2.0",
   "status": "V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES",
   "highest_supported_claim": "OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN",
-  "n_files": 152,
+  "n_files": 155,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 531,
-      "sha256": "322e4557da95c0156be9ea0c4eb5f72c10739177c0fce15e174ee4913b9de398"
+      "bytes": 546,
+      "sha256": "126830af5b4107a0602ceecc1642ea449bc6b1f57b11f8ad0775d157d5e377c3"
     },
     {
       "path": ".gitignore",
@@ -23,17 +23,17 @@
     {
       "path": "README.ja.md",
       "bytes": 6513,
-      "sha256": "39ec79ca84af09a36d88409e476f02b0bdbe7496251c4ea706cfe49125864d01"
+      "sha256": "99e9b50a3bbf3851fbb38c3565555bfca21a84ccfa0fd0d2dd2c77325b9bf0bb"
     },
     {
       "path": "README.md",
       "bytes": 9072,
-      "sha256": "c193bf3abc4cc0ec5d1c3dbc0a7e418c656e13dab5203102c50c078b9868940a"
+      "sha256": "08ed231ad0220ceb41a2e75eb32dfd34424496d15dc4e2ba0756a282b77ca06c"
     },
     {
       "path": "README.zh.md",
       "bytes": 5287,
-      "sha256": "a62cca823e2e388ff2c356b8a90538a7ff9994a23108202352ff09fe3f1d12c7"
+      "sha256": "9e3f0af3887a963320b2e98f92a54d32cbbbdbc1f2c903e87381dc42259b1137"
     },
     {
       "path": "configs/v7_condition_opportunity.json",
@@ -112,18 +112,28 @@
     },
     {
       "path": "configs/v7_theory_closure.json",
-      "bytes": 1830,
-      "sha256": "4a08ad66324d316ae946cbe0137db970d72217b3f94bc1cdf76eb6332245ab7b"
+      "bytes": 1857,
+      "sha256": "e1403365958c4ca7c56c8a039d867b0eb32becd18e95810ce9f2eb0c872f4525"
     },
     {
       "path": "docs/CLAIMS_LEDGER.md",
-      "bytes": 154121,
-      "sha256": "319fa36eac175f242dabb95234346a6c03c0833ef81a87d30e3b1777eeade592"
+      "bytes": 152695,
+      "sha256": "fe5b74e760ddb6721532ef63bf4cac1a4062b1b0485cb623c1ce84c8ec3843c7"
+    },
+    {
+      "path": "docs/OPEN_PROBLEMS.md",
+      "bytes": 16387,
+      "sha256": "c2d180e1a458fab0d6c49bd8c180c7cbbb4079e1816b712a2409654fed794833"
+    },
+    {
+      "path": "docs/PREREGISTRATION.md",
+      "bytes": 4787,
+      "sha256": "e2a36cd791b69bc04bde1a0da2756f1b2d65c7156b290c4e0048302b413fde1b"
     },
     {
       "path": "docs/RELEASE_NOTES_V020.md",
       "bytes": 2269,
-      "sha256": "c03dce63e7d3cafef7e51f1de1f8a3e80e1dd6325667e78ecf34608321204e51"
+      "sha256": "93f29b02471aab41fcf11c50865de13120dbb451e739fd1eac8f5bd7e284f080"
     },
     {
       "path": "docs/V7_ACCEPTANCE_RULEBOOK.md",
@@ -162,8 +172,8 @@
     },
     {
       "path": "docs/V7_LOCKBOX_V020.md",
-      "bytes": 2948,
-      "sha256": "66844cf5683301c94afa93642156d7feea325324fc0e2fd6c9465c92085acafa"
+      "bytes": 3177,
+      "sha256": "3665d4620bd39b11530ef698b460447ed5724ee147c2de44240189aee80e0330"
     },
     {
       "path": "docs/V7_OPERATOR_INDEXED_MULTIVIEW_V71.md",
@@ -187,8 +197,8 @@
     },
     {
       "path": "docs/V7_THEORY_CLOSURE_CONTRACT.md",
-      "bytes": 1097,
-      "sha256": "9b4180207d58007667be0d2bf37014f64d610504067b83e7332e8cfefaabce83"
+      "bytes": 1485,
+      "sha256": "da07998a70ab2468641de79d2d2cdcd836349897444fdeb4fce8c91990e36f77"
     },
     {
       "path": "docs/V7_UNCERTAINTY_PROTOCOL.md",
@@ -196,9 +206,14 @@
       "sha256": "e9f5945aab272a7ed6f8a427f05f4b64a23beb8ed198f13ab8d36581f48df2e4"
     },
     {
+      "path": "docs/WORKED_EXAMPLE_MANUAL.md",
+      "bytes": 11455,
+      "sha256": "ab0d752033131ea0d1402206a1218f04af0e335e631a575c2a6613b19f9c7962"
+    },
+    {
       "path": "release/v0.2.0/TEST_REPORT.md",
       "bytes": 716,
-      "sha256": "8bbf9c7246382466d18ae880b8d54410ad5246b63fc30dc7981cfda2e381aa19"
+      "sha256": "44f4fb80c9ccd579d71324580cbd43a47a1226850343d7c57aeaa4fea25ce1e0"
     },
     {
       "path": "release/v0.2.0/evidence/g1_real_data_geometry.json",
@@ -412,8 +427,8 @@
     },
     {
       "path": "scripts/build_suica_v020_release_bundle.py",
-      "bytes": 5153,
-      "sha256": "ca2548a3f823a74a3dbda5bab0c2a982e703e37d26b39c82aff190f0395f29dd"
+      "bytes": 5262,
+      "sha256": "c813806dcc043eef6ab5b75e5d3e256a8990951243e74e14de6c3c779eb092e3"
     },
     {
       "path": "scripts/build_suica_v7_run_manifest.py",
@@ -532,8 +547,8 @@
     },
     {
       "path": "scripts/verify_suica_v020_lockbox.py",
-      "bytes": 697,
-      "sha256": "96f497444b7832cfb81cd14d0093ff508d99a7681619a2655fbfae9669e8a649"
+      "bytes": 1350,
+      "sha256": "bceac1ab39e54dee9afa6bb3f5fa4c70c3a0e51fdc4981987976ac5edd99e5d8"
     },
     {
       "path": "suica_core/__init__.py",
@@ -542,8 +557,8 @@
     },
     {
       "path": "suica_core/v7_closure.py",
-      "bytes": 4300,
-      "sha256": "c9405c6f34400a809bc293ae8711dfca2cb1dfc6e18bb9d5a05fceb2f7745934"
+      "bytes": 4869,
+      "sha256": "f91f618317a171db4ac33c9bf660a456a356829a9f372e60618d182a3964253d"
     },
     {
       "path": "suica_core/v7_condition_opportunity.py",
@@ -622,8 +637,8 @@
     },
     {
       "path": "suica_core/v7_release.py",
-      "bytes": 3465,
-      "sha256": "2723a708c5e01921cc80b312dfef55f3522b18e845559a95eadaf156347968fa"
+      "bytes": 5538,
+      "sha256": "54f75b66865a57d1883c466e534005cee9e4a64290acb17f946f3bfba5c5a241"
     },
     {
       "path": "suica_core/v7_temporal_geometry.py",
@@ -742,8 +757,8 @@
     },
     {
       "path": "tests/test_v7_release.py",
-      "bytes": 1135,
-      "sha256": "9502e1a33c7af921fbc50a4dfb09c01c5c31a94fe6838e2f92c79be50cc84978"
+      "bytes": 2698,
+      "sha256": "d6e64e82b1e0482597338ef57e8227b83d64b64843aacdf5afab1057bcf4e996"
     },
     {
       "path": "tests/test_v7_representation_transport.py",

@@ -1,14 +1,8 @@
 # SUICA Lockbox Opening #1 — PREREGISTRATION (SEALED)
 
-> **Historical frozen document.** This is the v0.1 P5 preregistration, not the
-> v0.2.0 V7 technical lockbox. Opening #1 was spent on 2026-07-07: the overall
-> rule failed 2/7 (required at least 4/7), H2 and H6 passed individually, one
-> legacy opening remains, and the Essays confirm-half remains unopened. See
-> `V7_LOCKBOX_V020.md` for the separate V7 release seal.
-
-Status at the v0.1.0 freeze: FINAL and unopened, with an original budget of
-2/2 openings. The initial commit hash of the independent release repository
-is the seal for the historical text below.
+Status: FINAL as of the v0.1.0 freeze. The lockbox is NOT opened; budget
+2/2 openings remain. The initial commit hash of the independent release
+repository is the seal for this document.
 
 Disclosure of prior label contact: development-tier orientation (Tier-D MBTI
 and Essays dev-half Big5; see WORKED_EXAMPLE_MANUAL section 3) was computed

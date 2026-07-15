@@ -8,8 +8,8 @@ Environment: Python 3 with exact core dependencies in
 | Check | Result |
 | --- | --- |
 | `python -m compileall -q suica_core suica_sim scripts tests` | PASS |
-| `python -m pytest -q -p no:cacheprovider` | 301 passed in 29.44s |
-| `python -m pytest -q -p no:cacheprovider tests/test_v7*.py` | 94 passed in 3.73s |
+| `python -m pytest -q -p no:cacheprovider` | 302 passed in 29.58s |
+| `python -m pytest -q -p no:cacheprovider tests/test_v7*.py` | 95 passed in 3.82s |
 | `python scripts/verify_suica_v020_lockbox.py` | PASS after final manifest build |
 | `git diff --check` | PASS |
 

@@ -55,7 +55,7 @@ measure choice as a channel).*
 ```bash
 pip install -r requirements.txt
 python -m pytest -q tests/test_suica.py          # 39 passed
-python -m pytest -q -p no:cacheprovider          # release audit: 301 passed
+python -m pytest -q -p no:cacheprovider          # release audit: 302 passed
 python scripts/verify_suica_v020_lockbox.py       # portable v0.2.0 seal
 python scripts/run_suica_synthetic_ground_truth_v2.py   # P0: estimator
 python scripts/run_suica_p0b_thin_cell_regime_v3.py     # P0-B: thin cells

@@ -17,14 +17,19 @@ and require future data.
 
 ## Durable closure
 
-The machine audit verifies decisions, source/input manifests, artifact
-inventories, and required protocols. A dirty repository can pass the
-implementation audit but receives:
+The pre-release local audit verified the original source/input manifests and
+artifact inventories. The portable release audit verifies deidentified
+aggregate decisions, source-artifact hashes, required protocols, critical-file
+hashes, and release identity. A dirty, untagged, tag-mismatched, or Git-less
+checkout can pass content checks but receives:
+
+V7_THEORETICAL_CORE_IMPLEMENTED_DURABLE_SNAPSHOT_PENDING
+
+Only a clean checkout whose annotated release tag points to `HEAD` and embeds
+the current manifest SHA-256 can receive:
 
 V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES
 
-Only a clean, intentionally frozen source snapshot can receive:
-
-V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES
-
-No commit or tag is created automatically by the audit.
+No commit or tag is created automatically by the audit. The strict release
+verifier refuses tarball exports without Git identity; `--content-only` is a
+separate integrity check and cannot grant closure.

@@ -438,8 +438,8 @@ exploratory because their axis-selection/null procedures require cross-fitted re
   cell — wcl_07's dynamic (gust-amplitude) channel x MBTI Thinking/Feeling, r=-.093,
   BH q=9.0e-05, surviving 266-cell FDR correction — while wcl_07's own static channel on
   the same cell misses the effect floor. wcl_07 is the pre-registered W10 gust1_P
-  carrier construct, so this is external-validity evidence for a motion-only signal, not
-  merely internal split-half stability. This does NOT license a confirmatory claim (one
+  carrier construct, so this is one exploratory external-anchor association for a
+  motion-only candidate, not merely internal split-half stability. This does NOT license a confirmatory claim (one
   exploratory cell, modest |r|, spent/first-use labels) — it is the program's first data
   point toward the claim class the native corpus is designed to test properly.
 - Vector/axis naming remains unlicensed (T5); deployment is machine-facing.
@@ -466,8 +466,8 @@ line against the F12 identities, and covered by 12 synthetic-recovery tests (MA(
 recovery at θ ∈ {0, .4}, planted-flow recovery after gust correction, the T4
 estimability guard, leak-drop semantics), grown through the W6b/W7b deployment cycles
 (period2_energy/truncated-mode tests, hybrid-functional shape-pair tests); full release
-package suite currently 86/86 passing (reverified 2026-07-12 after the simulation and endpoint-correction additions; this line was stale at
-"59/59" from the v6.1 deployment and is corrected here). Known finite-sample θ̂ bias
+  package suite was subsequently superseded by the v0.2.0 release audit (302/302;
+  `release/v0.2.0/TEST_REPORT.md`). Known finite-sample θ̂ bias
 documented in the module and listed as an open instrument (Section 6).
 
 ## 5. Battery v-next gates (registry addition)
