@@ -1,0 +1,54 @@
+{
+  "bundle_path": "path/to/frozen_bundle.json",
+  "bundle_sha256": "sha256-of-frozen-bundle",
+  "pre_freeze_label_access": false,
+  "score_cohort_id": "frozen-score-cohort",
+  "anchor_cohort_id": "untouched-anchor-cohort",
+  "cohort_overlap_count": 0,
+  "multiplicity_plan": {
+    "primary": "registered_omnibus",
+    "component_followups": "max_t_or_freedman_lane"
+  },
+  "hypotheses": [
+    {"id": "overall_anchor", "direction": "two_sided", "missing_data_rule": "predeclared"}
+  ],
+  "convergence_hypotheses": [
+    {"id": "criterion_link", "criterion_source": "independent_observable_or_scale", "direction": "predeclared"}
+  ],
+  "discriminant_artifact_controls": [
+    "text_length",
+    "format_or_structure",
+    "prompt_or_condition"
+  ],
+  "score_perturbation_plan": {
+    "scorer_or_embedding_runtime": "predeclared alternate frozen runtime",
+    "window_or_operator": "predeclared registered perturbation family",
+    "predeclared_stability_rule": "report concordance and refusal threshold"
+  },
+  "anchor_method_independent": true,
+  "score_cohort_membership_commitment": "sha256-of-frozen-score-membership",
+  "anchor_cohort_membership_commitment": "sha256-of-untouched-anchor-membership",
+  "anchor_reliability_plan": {
+    "estimate_or_source": "reliability estimated in the anchor cohort or cited independent study",
+    "attenuation_handling": "report observed and reliability-corrected association separately"
+  },
+  "effect_size_thresholds": {
+    "convergent_minimum": "predeclared smallest effect of interest",
+    "incremental_minimum": "predeclared delta beyond artifact controls",
+    "uncertainty_rule": "confidence interval or posterior interval excludes negligible region"
+  },
+  "incremental_validity_plan": {
+    "baseline_covariates": ["text_length", "format_or_structure", "prompt_or_condition"],
+    "comparison": "registered nested model on untouched confirmation data"
+  },
+  "independent_replication_plan": {
+    "population": "new participants",
+    "operator_and_bundle": "frozen before access",
+    "decision_rule": "same signed effect family and registered uncertainty rule"
+  },
+  "confirmation_decision_rule": {
+    "convergence": "registered familywise-controlled result",
+    "discriminance": "artifact controls do not solely explain association",
+    "stability": "perturbation rule passes"
+  }
+}

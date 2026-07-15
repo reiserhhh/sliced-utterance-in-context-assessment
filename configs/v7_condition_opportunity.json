@@ -1,0 +1,52 @@
+{
+  "version": "v7.2-e2-stratified-exchangeable-1",
+  "seed": 20260714,
+  "max_users": 600,
+  "min_comments_per_user": 48,
+  "min_distinct_conditions": 4,
+  "min_span_days": 180,
+  "max_source_comments_per_user": 48,
+  "max_source_tokens_per_user": 0,
+  "max_units_per_user": 128,
+  "min_tokens_per_unit": 12,
+  "mask_personality_terms": false,
+  "max_condition_vocabulary": 128,
+  "ridge_alpha_grid": [0.1, 1.0, 10.0, 100.0],
+  "author_map_ridge_alpha_grid": [0.1, 1.0, 10.0, 100.0],
+  "selection_shrinkage_grid": [1.0, 5.0, 10.0, 25.0, 50.0, 100.0],
+  "bootstrap_iterations": 2000,
+  "permutation_iterations": 999,
+  "stranger_draws": 20,
+  "matched_null_version": "within_stratum_identity_permutation_rank_v1",
+  "matching_features": [
+    "paired_selection_profile",
+    "frozen_context_surface_K",
+    "log_matched_comment_count",
+    "log_matched_time_span",
+    "log_matched_token_count"
+  ],
+  "matching_exact_fields": ["operator", "representation", "source_arm", "language", "support_class"],
+  "matching_caliper_selection_order": "minimum_jaccard_desc_then_numeric_caliper_asc",
+  "numeric_caliper_grid": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+  "condition_jaccard_grid": [0.9, 0.75, 0.5, 0.25, 0.0],
+  "matched_block_size_min": 4,
+  "matched_block_size_max": 8,
+  "time_calipers_days": [30, 90, 365, null],
+  "minimum_pair_count": 8,
+  "minimum_pair_conditions": 3,
+  "minimum_matched_coverage": 0.75,
+  "operators": [
+    {"name": "native", "kind": "native"},
+    {"name": "fixed_128_cross", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross"}
+  ],
+  "representation": {
+    "max_features": 5000,
+    "ngram_range": [1, 2],
+    "svd_dimensions": 24
+  },
+  "screen_thresholds": {
+    "minimum_auc": 0.55,
+    "minimum_context_r2": 0.02,
+    "alpha": 0.05
+  }
+}

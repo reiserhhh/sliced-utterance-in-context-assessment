@@ -429,11 +429,15 @@ texture (score-talk, emphasis) coordinated across the style clusters. CAVEAT
 format-dense band — the digit enrichment may be partly stratum texture; the N1 uncapped
 re-run adjudicates.
 
-**(b) Person susceptibility — the headline: the first person-anchored trait-like
-quantity of a motion-only object.** Split-half r of mean |activation| = **.441**
+**(b) Person susceptibility — historical exploratory headline, downgraded
+2026-07-12.** Split-half r of mean |activation| = **.441**
 (clears the registered >= .3 lean; ICC-share .381; n = 81 users, capped-corpus-limited).
 Signed DIRECTION r = −.128 — my "weaker but positive" lean WRONG: people are stable in
-HOW STRONGLY they gust, not in which direction. Susceptibility is an amplitude trait.
+HOW STRONGLY they gust, not in which direction. The original text called this an
+"amplitude trait". A later full-pipeline audit found overlapping axis discovery/test,
+an incomplete null, non-temporal cid parity, and missing opportunity/format/stranger
+controls. The licensed wording is now **descriptive susceptibility candidate** pending
+SIM-P3/P5/P6; no trait or person-measurement claim is currently licensed.
 KILL (r < .1) not fired.
 
 **(c) Essays contrast.** PANDORA activation variance ratio 1.678 (p < .005) vs Essays
@@ -1359,3 +1363,22 @@ was in the registration's own design (an unstated same-corpus assumption), not i
 code. Filed alongside E3's bounce (struck by W2a) and W9's inverted mechanism as another
 case where independent scrutiny changed the substantive conclusion, not just the
 numbers.
+
+## F18 — V6 identifiability correction and simulation license (2026-07-12)
+
+An independent audit found three blocking overclaims in the first V6 theorem wording:
+T1 used the iid `Gamma0/m` result as a general aggregation law; T2 omitted endpoint
+autocovariance; and T8 wrote `range(A) orthogonal ker(A)` even though the spaces differ.
+The corrected forms are T1-prime, T2-prime, and T8-prime in `THEORY_V6.md`.
+
+The executable SIM-W0..W8 matrix then underwent three adversarial revisions. Hard-coded
+guards, mixed statistical fields, an incorrect VAR standard error, an oracle alias
+detector, and under/over-covering flow intervals were each rejected and replaced. The
+final full run used 500 Monte Carlo repetitions and 1,000 paths per repetition; all 76
+row-level gates passed. Exact results and hashes are in
+`reports/V6_SIMULATION_PROOF_MATRIX.md`.
+
+**License:** internal algebra/estimator behavior in the named synthetic generators.
+**Not licensed:** a human dynamic personality dimension, questionnaire orthogonality,
+cross-register portability, clinical meaning, or detection lift. E4 and W10 do not
+become confirmatory through this simulation; their selection/null concerns remain open.

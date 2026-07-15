@@ -1,0 +1,15 @@
+{
+  "profile": "full",
+  "seed": 6071207,
+  "mc": 500,
+  "folds": 5,
+  "bootstrap": 999,
+  "var_n": 600,
+  "var_coupling": 0.32,
+  "cp_n": 256,
+  "cp_train_end": 160,
+  "cp_location": 128,
+  "cp_window": 16,
+  "choice_persons": 80,
+  "choice_length": 180
+}

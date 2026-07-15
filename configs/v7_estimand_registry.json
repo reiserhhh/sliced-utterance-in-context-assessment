@@ -1,0 +1,58 @@
+{
+  "registry_version": "v7.3-estimand-registry-1",
+  "manifests": [
+    {
+      "estimand_id": "V7.3-W2-identification-calibration",
+      "version": "v7.3-2",
+      "target_object": "shared_subspace",
+      "reference_population": {"id": "synthetic_v7_worlds", "sampling_frame": "seeded synthetic author panels", "decision_scope": "simulation calibration only"},
+      "occasion_definition": {"unit": "source-disjoint synthetic replicate", "replication_rule": "two independent replicates per author", "source_provenance": "all generated source identifiers retained"},
+      "operator_registry": {"registry_id": "v7-identification-worlds-1", "operators": ["shared", "private", "context", "nonlinear"]},
+      "representation": {"id": "synthetic-observed-feature-space", "frozen_before_confirmation": true},
+      "null_hypothesis": "No shared latent component yields neither context-adjusted subspace recovery nor relative pairwise-distance geometry above its declared null.",
+      "minimum_detectable_effect": {"metric": "relative_distance_spearman", "value": 0.25, "direction": "greater"},
+      "decision_rule": {"alpha": 0.05, "multiplicity": "familywise Monte Carlo matrix", "pass_status": "ESTIMATOR_CALIBRATED", "refuse_status": "REFUSE_ESTIMATOR_UNCALIBRATED"},
+      "claim_boundary": "Synthetic identification and error-calibration result only; no human or psychological claim."
+    },
+    {
+      "estimand_id": "V7.3-W3-temporal-relative-geometry",
+      "version": "v7.3-1",
+      "target_object": "relative_geometry",
+      "reference_population": {"id": "pandora_tier_u_fresh_temporal", "sampling_frame": "deterministic fresh PANDORA authors after prior V7 exclusions", "decision_scope": "relative within-corpus author geometry"},
+      "occasion_definition": {"unit": "earliest-versus-latest source-comment blocks", "replication_rule": "source and time disjoint blocks per author", "source_provenance": "source rows retained before operator construction"},
+      "operator_registry": {"registry_id": "v7.3-temporal-geometry-1", "operators": ["whole", "native", "sentence_pack_160", "fixed_128_cross", "fixed_128_within_comment"]},
+      "representation": {"id": "registered lexical-style-topic-noise control family", "frozen_before_confirmation": true},
+      "null_hypothesis": "Own-versus-stranger alignment after source/time separation is no greater than a shuffled author-pairing family.",
+      "minimum_detectable_effect": {"metric": "alignment_auc_minus_0_5", "value": 0.10, "direction": "greater"},
+      "decision_rule": {"alpha": 0.05, "multiplicity": "studentized max-T across registered controls", "pass_status": "TECHNICAL_GEOMETRY_SUPPORTED", "refuse_status": "TECHNICAL_GEOMETRY_UNRESOLVED"},
+      "claim_boundary": "Technical within-PANDORA geometry only; no personality, causal-context, or cross-domain claim."
+    },
+    {
+      "estimand_id": "V7.3-W4-multiview-baseline",
+      "version": "v7.3-1",
+      "target_object": "shared_subspace",
+      "reference_population": {"id": "pandora_tier_u_fresh_w4_multiview", "sampling_frame": "deterministic fresh PANDORA authors after E0--E4 and W3 exclusions", "decision_scope": "operator-family shared subspace comparison"},
+      "occasion_definition": {"unit": "one common capped source-comment panel transformed by five registered operators", "replication_rule": "author-disjoint discovery/calibration/confirmation partitions", "source_provenance": "source rows retained before representation fitting and operator construction"},
+      "operator_registry": {"registry_id": "v7.3-w4-multiview-method-benchmark-1", "operators": ["whole", "native", "sentence_pack_160", "fixed_128_cross", "fixed_128_within_comment"]},
+      "representation": {"id": "registered lexical-style-topic-noise control family", "frozen_before_confirmation": true},
+      "null_hypothesis": "A registered shared-subspace method does not exceed its broken-correspondence training null under the frozen author split.",
+      "minimum_detectable_effect": {"metric": "heldout_shared_r2", "value": 0.05, "direction": "greater"},
+      "decision_rule": {"alpha": 0.05, "multiplicity": "registered method family with rank capacity selected on calibration and a synchronized broken-correspondence max-T family", "pass_status": "SUBSPACE_COMPARISON_SUPPORTED", "refuse_status": "SUBSPACE_COMPARISON_UNRESOLVED", "rank_boundary": "transport capacity is not factor count; use a separate effective-rank diagnostic if the grid boundary is reached"},
+      "claim_boundary": "Compares mathematical representations only; it cannot identify a finite factor count, named axis, psychological construct, or method winner without paired superiority inference."
+    },
+    {
+      "estimand_id": "V7.3-future-fixed-response-design",
+      "version": "v7.3-1",
+      "target_object": "fixed_response_B",
+      "reference_population": {"id": "future_declared_target_population", "sampling_frame": "not yet collected", "decision_scope": "condition-specific response operator"},
+      "occasion_definition": {"unit": "randomized fixed prompt session", "replication_rule": "at least two independent sessions per participant-condition", "source_provenance": "session, prompt, operator and scorer hashes recorded"},
+      "operator_registry": {"registry_id": "future-frozen-before-collection", "operators": ["declared before collection"]},
+      "representation": {"id": "future-frozen-before-collection", "frozen_before_confirmation": true},
+      "null_hypothesis": "No person-specific response contrast is recoverable beyond design error.",
+      "minimum_detectable_effect": {"metric": "relative_dependability_G", "value": 0.10, "direction": "greater"},
+      "decision_rule": {"alpha": 0.05, "multiplicity": "predeclared response-family correction", "pass_status": "FIXED_RESPONSE_CANDIDATE", "refuse_status": "NOT_RUN_DESIGN_REQUIRED"},
+      "claim_boundary": "A future design declaration, not a result from existing natural text.",
+      "data_requirements": {"randomized_assignment": true, "minimum_sessions_per_person_condition": 2}
+    }
+  ]
+}

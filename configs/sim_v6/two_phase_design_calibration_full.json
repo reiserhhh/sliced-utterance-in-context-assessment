@@ -1,0 +1,20 @@
+{
+  "profile": "full",
+  "seed": 20260714,
+  "repetitions": 200,
+  "persons": 240,
+  "features": 8,
+  "conditions_grid": [2, 4, 6],
+  "fixed_repeats_grid": [1, 2, 3, 4, 6],
+  "free_trials_grid": [8, 16, 24, 48],
+  "reference_conditions": 4,
+  "reference_free_trials": 24,
+  "reference_fixed_repeats": 2,
+  "minimum_condition_breadth": 4,
+  "selection_strength": 1.8,
+  "condition_scale": 0.0,
+  "noise_scale": 0.28,
+  "minimum_fixed_level_recovery_r": 0.90,
+  "minimum_fixed_response_recovery_r": 0.75,
+  "minimum_free_selection_profile_r": 0.80
+}

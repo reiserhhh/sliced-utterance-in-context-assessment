@@ -1,0 +1,14 @@
+{
+  "profile": "full",
+  "seed": 6071201,
+  "persons": 240,
+  "occasions": 6,
+  "windows": 8,
+  "constructs": 6,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_rank": 3,
+  "null_draws": 1999,
+  "cluster_bootstrap": 1999,
+  "segmentation_jitter": 1.1
+}

@@ -1,0 +1,16 @@
+{
+  "profile": "quick",
+  "seed": 20260714,
+  "repetitions": 20,
+  "persons": 160,
+  "text_features": 6,
+  "grid_side": 4,
+  "basis_side": 3,
+  "rbf_width": 0.65,
+  "test_contexts": 48,
+  "fixed_repeats": 2,
+  "noise_scale": 0.22,
+  "ridge_alpha": 0.10,
+  "minimum_wide_response_recovery_r": 0.65,
+  "material_response_gap": 0.05
+}

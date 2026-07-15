@@ -1,0 +1,21 @@
+{
+  "version": "v7.4-representation-transport-1",
+  "seed": 20260715,
+  "repetitions": 120,
+  "persons": 240,
+  "features": 12,
+  "noise_scale": 0.06,
+  "anchor_fraction": 0.5,
+  "worlds": [
+    "common_coordinate",
+    "unknown_rotation",
+    "unknown_affine",
+    "unpaired_isotropic_orientation_ambiguity"
+  ],
+  "gates": {
+    "min_common_coordinate_retrieval": 0.75,
+    "max_rotation_naive_retrieval": 0.50,
+    "min_paired_alignment_retrieval": 0.75,
+    "max_affine_naive_r2": 0.50
+  }
+}

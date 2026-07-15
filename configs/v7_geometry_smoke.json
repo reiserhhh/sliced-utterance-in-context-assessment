@@ -1,0 +1,11 @@
+{
+  "version": "v7-geometry-smoke-1",
+  "operator_id": "native",
+  "representation_id": "tfidf_svd24_author_mean_std",
+  "feature_prefixes": ["mean::", "std::"],
+  "min_units_for_score": 12,
+  "landmark_count": 16,
+  "regularization": 0.001,
+  "support_radius_quantile": 0.99,
+  "seed": 20260715
+}

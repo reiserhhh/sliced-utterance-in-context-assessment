@@ -39,12 +39,8 @@ from scripts.suica_v4_lib import (  # noqa: E402
 )
 
 
-DEFAULT_INTELLIGENCE_DB = Path(
-    "/Volumes/projects/trading-agent/trading-agent-main/data/private/intelligence_store.sqlite"
-)
-DEFAULT_MARKET_DB = Path(
-    "/Volumes/projects/trading-agent/trading-agent-main/data/private/market_data.sqlite"
-)
+DEFAULT_INTELLIGENCE_DB = ROOT / "data_sets" / "trading" / "intelligence_store.sqlite"
+DEFAULT_MARKET_DB = ROOT / "data_sets" / "trading" / "market_data.sqlite"
 DEFAULT_OUTPUT_DIR = ROOT / "results" / "suica_market_measurement_first_v1"
 
 SCORE_COLUMNS = (

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUICA V7 Fixed/Free Observation Row",
+  "type": "object",
+  "required": ["participant_id", "phase", "session_id", "condition_id"],
+  "properties": {
+    "participant_id": {"type": "string", "minLength": 1},
+    "phase": {"enum": ["free", "fixed"]},
+    "session_id": {"type": ["string", "number"]},
+    "condition_id": {"type": ["string", "number"]},
+    "text": {"type": "string"},
+    "opportunity_id": {"type": ["string", "number"]},
+    "exposure_recorded": {"type": ["boolean", "string", "number"]},
+    "selected": {"type": ["boolean", "string", "number"]},
+    "assignment_randomized": {"type": ["boolean", "string", "number"]}
+  }
+}

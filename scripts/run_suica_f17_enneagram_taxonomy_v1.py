@@ -110,7 +110,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import bh_fdr  # noqa: E402,F401 (reused via f16.apply_bh_and_classify)
+from suica_core.suica import bh_fdr  # noqa: E402,F401 (reused via f16.apply_bh_and_classify)
 import scripts.run_suica_v6_w2a_delta2_dynamics_v1 as w2a  # noqa: E402
 import scripts.run_suica_f16_visibility_taxonomy_v1 as f16  # noqa: E402
 from scripts.run_suica_f16_visibility_taxonomy_v1 import (  # noqa: E402
@@ -128,7 +128,7 @@ from scripts.run_suica_f16_visibility_taxonomy_v1 import (  # noqa: E402
 # sub-imports are already cached in sys.modules) -- this second append here is
 # idempotent/defensive, kept for self-sufficiency and to document the hazard
 # in this file too, not because it changes behavior.
-RELEASE_ROOT = Path("/Volumes/mobile3/projects/Sliced Utterance In-Context Assessment")
+RELEASE_ROOT = ROOT
 if str(RELEASE_ROOT) not in sys.path:
     sys.path.append(str(RELEASE_ROOT))
 

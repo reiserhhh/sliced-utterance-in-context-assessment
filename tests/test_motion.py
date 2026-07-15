@@ -15,6 +15,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from suica_core.motion import (  # noqa: E402
+    FLOW_ENDPOINT_APPROX_FLAG,
     PERIOD2_SINGULAR_REASON, PERIOD2_UNESTIMABLE_REASON,
     _centered_lag_map, _centered_moment_coefficients, _invert_moments,
     _theta_from_ratio, motion_from_window_arrays, motion_profile,
@@ -354,6 +355,36 @@ def test_planted_flow_recovered_after_gust_correction():
     top_vec = np.array(out["flow_top_vector"])
     cos = abs(float(top_vec @ v))
     assert cos > 0.9
+    assert out["flow_flag"] == FLOW_ENDPOINT_APPROX_FLAG
+
+
+def test_endpoint_memory_correction_recovers_ar1_flow():
+    rng = np.random.default_rng(20260715)
+    phi, p, m, n_texts, planted = 0.7, 3, 5, 5000, 0.12
+    gamma0 = 1.0 / (1.0 - phi**2)
+    gamma_endpoint = (gamma0 * phi ** (m - 1)) * np.eye(p)
+    full_correction = 2 * gamma0 * np.eye(p) - gamma_endpoint - gamma_endpoint.T
+    arrays = []
+    k_col = np.arange(m)[:, None].astype(float)
+    for _ in range(n_texts):
+        g = _ar1_arrays(rng, 1, m, p, phi)[0]
+        slope = rng.normal(0.0, np.sqrt(planted), p)
+        arrays.append(g + k_col * slope)
+
+    exact = motion_from_window_arrays(
+        arrays, flow_gust_corrections={m: full_correction})
+    approximate = motion_from_window_arrays(arrays)
+    assert exact["flow_flag"] is None
+    assert approximate["flow_flag"] == FLOW_ENDPOINT_APPROX_FLAG
+    assert abs(exact["flow_lambda1"] - planted) < abs(
+        approximate["flow_lambda1"] - planted)
+
+
+def test_endpoint_memory_covariance_shape_is_checked():
+    arrays = _white_arrays(np.random.default_rng(20260716), 100, 5, 2)
+    with np.testing.assert_raises(ValueError):
+        motion_from_window_arrays(
+            arrays, flow_gust_corrections={5: np.eye(3)})
 
 
 # ---------------------------------------------------------------------------

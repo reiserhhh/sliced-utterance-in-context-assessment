@@ -1,0 +1,39 @@
+{
+  "version": "v7.3-multiview-method-benchmark-rank-extension-1",
+  "cohort_id": "v7.3-w4b-multiview-rank-extension-1",
+  "seed": 20260716,
+  "max_users": 200,
+  "min_comments_per_user": 32,
+  "max_source_comments_per_user": 32,
+  "max_source_tokens_per_user": 4096,
+  "max_units_per_user": 128,
+  "min_tokens_per_unit": 12,
+  "ridge_alpha": 10.0,
+  "rgcca_ridge": 0.1,
+  "rank_grid": [1, 2, 3, 4, 6, 8, 10, 12, 16],
+  "rank_boundary_action": "REFUSE_FACTOR_COUNT_USE_EFFECTIVE_RANK_DIAGNOSTIC",
+  "calibration_bootstrap_iterations": 99,
+  "confirmation_pair_bootstrap_iterations": 999,
+  "material_mean_r2_difference": 0.02,
+  "broken_correspondence_iterations": 99,
+  "exclude_w4_cohorts": [
+    {
+      "cohort_id": "v7.3-w4-multiview-method-benchmark-1",
+      "seed": 20260715,
+      "max_users": 240,
+      "min_comments_per_user": 32
+    }
+  ],
+  "operators": [
+    {"name": "whole", "kind": "whole"},
+    {"name": "native", "kind": "native"},
+    {"name": "sentence_pack_160", "kind": "semantic", "max_tokens": 160},
+    {"name": "fixed_128_cross", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross"},
+    {"name": "fixed_128_within_comment", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "within"}
+  ],
+  "representations": [
+    {"name": "WORD12_TFIDF_SVD24", "analyzer": "word", "ngram_range": [1, 2], "max_features": 5000, "svd_dimensions": 24},
+    {"name": "CHAR35_TFIDF_SVD24", "analyzer": "char", "ngram_range": [3, 5], "max_features": 5000, "svd_dimensions": 24}
+  ],
+  "multiplicity_family": "registered_multiview_method_comparison_rank_extension_fresh_cohort_broken_correspondence_studentized_max_t"
+}

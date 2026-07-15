@@ -1,0 +1,37 @@
+{
+  "run_name": "SUICA_V6_LINEAGE_TOKEN_SLICE_COMPATIBILITY_V1",
+  "seed": 20260716,
+  "cohort_namespace": "suica-v6-joint-process-j1",
+  "source_contract": {
+    "required_columns": ["author", "body", "created_utc", "subreddit"],
+    "external_labels_read": false,
+    "raw_text_persisted": false,
+    "personality_report_guard": "PERSONALITY_LEAK_RE"
+  },
+  "token_slice_estimator": {
+    "reporting_cohort": "confirmation",
+    "minimum_body_characters": 10,
+    "slice_tokens": 128,
+    "slices_per_view": 8,
+    "minimum_other_subreddits": 4,
+    "minimum_arm_span_ratio": 0.5,
+    "bootstrap_iterations": 999,
+    "historically_supported_constructs": [
+      "first_person_usage_v2",
+      "directive_action_v2",
+      "novelty_play_v2"
+    ],
+    "historically_state_like_construct": "tension_core_v2",
+    "promotion_rule": "all three historical style/choice deltas have bootstrap CI lower bounds above zero"
+  },
+  "interpretation": {
+    "estimand": "token-slice conditional expression precision under fixed versus mixed selected rind",
+    "technical_split": "two token-disjoint, evenly time-spread views per arm",
+    "not_event_disjoint": true,
+    "forbidden_inference": [
+      "event-dynamic inference",
+      "independent human occasion inference",
+      "personality factor identification"
+    ]
+  }
+}

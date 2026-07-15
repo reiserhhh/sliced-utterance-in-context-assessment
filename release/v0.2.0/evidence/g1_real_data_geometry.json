@@ -1,0 +1,52 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.0",
+  "evidence_id": "G1_REAL_DATA_GEOMETRY",
+  "status": "GEOMETRY_BUNDLE_REAL_DATA_SMOKE_COMPLETE",
+  "decision": {
+    "status": "GEOMETRY_BUNDLE_REAL_DATA_SMOKE_COMPLETE",
+    "bundle_id": "SU7-GEO-0c434ce57fb2f974c5ba7eb8",
+    "heldout_ready_rate_min": 0.7916666666666666,
+    "identifiers_persisted": false,
+    "external_labels_read": false,
+    "claim_boundary": "Executable held-out reference-relative geometry only. No factor, reliability, personality, clinical, or cross-domain validity claim."
+  },
+  "aggregate_tables": {
+    "support_summary.csv": [
+      {
+        "split": "discovery",
+        "n_rows": "141",
+        "n_ready": "139",
+        "ready_rate": "0.9858156028368794",
+        "n_outside_reference_radial_envelope": "2",
+        "n_insufficient_observation_support": "0"
+      },
+      {
+        "split": "calibration",
+        "n_rows": "51",
+        "n_ready": "47",
+        "ready_rate": "0.9215686274509803",
+        "n_outside_reference_radial_envelope": "4",
+        "n_insufficient_observation_support": "0"
+      },
+      {
+        "split": "confirmation",
+        "n_rows": "48",
+        "n_ready": "38",
+        "ready_rate": "0.7916666666666666",
+        "n_outside_reference_radial_envelope": "10",
+        "n_insufficient_observation_support": "0"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "1dadf14a2b283746847d4d38a278510d9e02ec1837b108c0eaa50da531b2ca7b",
+    "support_summary.csv": "e26ca28478e86717a8ca3127f3a85e30e9b1e686c3b5587769b29f5077bf02e2"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}

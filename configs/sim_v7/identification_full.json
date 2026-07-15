@@ -1,0 +1,21 @@
+{
+  "version": "v7.4-identification-3",
+  "seed": 20260715,
+  "repetitions": 160,
+  "persons": 240,
+  "features": 16,
+  "shared_rank": 3,
+  "context_rank": 2,
+  "noise_scale": 0.18,
+  "ridge_alpha": 10.0,
+  "worlds": ["shared_linear", "null", "axis_rotation_equivalence", "nonlinear_metric_without_linear_coordinate", "omitted_context_counterexample", "endogenous_context_overadjustment_counterexample", "measurement_error_context_counterexample", "view_private_structure_sensitivity"],
+  "gates": {
+    "max_rotation_error": 0.000000001,
+    "min_shared_context_adjusted_subspace_congruence": 0.75,
+    "max_null_alignment_auc": 0.60,
+    "min_nonlinear_relative_distance_spearman": 0.25,
+    "max_nonlinear_linear_r2": 0.35,
+    "min_omitted_context_residual_auc": 0.65,
+    "min_measurement_error_context_residual_auc": 0.65
+  }
+}

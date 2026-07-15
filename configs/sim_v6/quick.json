@@ -1,0 +1,8 @@
+{
+  "profile": "quick",
+  "seed": 60712,
+  "mc": 40,
+  "paths_per_mc": 160,
+  "null_permutations": 99,
+  "nested_bootstrap": 399
+}

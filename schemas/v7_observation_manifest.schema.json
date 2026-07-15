@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUICA V7 Observation Manifest",
+  "type": "object",
+  "required": ["operator", "input_schema", "n_users", "n_units", "support_summary"],
+  "properties": {
+    "operator": {"type": "object"},
+    "input_schema": {"type": "object"},
+    "n_users": {"type": "integer", "minimum": 0},
+    "n_units": {"type": "integer", "minimum": 0},
+    "support_summary": {"type": "object"}
+  }
+}

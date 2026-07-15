@@ -51,7 +51,7 @@ import pandas as pd
 SEED = 20260712
 N_REPLICATES = 2000
 
-REPO_ROOT = Path("/Volumes/mobile3/projects/project persona")
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 ESSAYS_PARQUET = REPO_ROOT / "results/suica_v6_e2_essays_motion/cache_essays_windows_scored19.parquet"
 PANDORA_PARQUET = REPO_ROOT / "results/suica_tgeo_p8_functionalization/cache_windows_scored19.parquet"

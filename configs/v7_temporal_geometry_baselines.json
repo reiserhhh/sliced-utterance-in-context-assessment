@@ -1,0 +1,26 @@
+{
+  "version": "v7.4-temporal-geometry-baselines-2",
+  "seed": 20260715,
+  "max_users": 300,
+  "min_comments_per_user": 48,
+  "min_comments_per_half": 16,
+  "max_comments_per_half": 16,
+  "min_tokens_per_comment": 12,
+  "ridge_alpha": 10.0,
+  "opportunity_ridge_alpha": 10.0,
+  "noise_dimensions": 24,
+  "permutation_iterations": 199,
+  "random_partition_repetitions": 25,
+  "thresholds": {
+    "min_alignment_auc": 0.6,
+    "min_relative_distance_spearman": 0.1,
+    "max_t_alpha": 0.05,
+    "opportunity_competitive_auc_margin": 0.02
+  },
+  "representations": [
+    {"name": "WORD12_TFIDF_SVD24", "analyzer": "word", "ngram_range": [1, 2], "max_features": 6000, "svd_dimensions": 24},
+    {"name": "CHAR35_TFIDF_SVD24", "analyzer": "char", "ngram_range": [3, 5], "max_features": 6000, "svd_dimensions": 24},
+    {"name": "WORD1_TFIDF_SVD24", "analyzer": "word", "ngram_range": [1, 1], "max_features": 6000, "svd_dimensions": 24}
+  ],
+  "multiplicity_family": "registered_temporal_early_late_raw_opportunity_adjusted_opportunity_only_noise_studentized_max_t"
+}

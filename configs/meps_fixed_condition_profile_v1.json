@@ -1,0 +1,33 @@
+{
+  "run_name": "SUICA_MEPS_FIXED_CONDITION_PROFILE_V1",
+  "seed": 20260714,
+  "language_scope": "Japanese within-corpus only",
+  "embedding": {
+    "model_id": "intfloat/multilingual-e5-large",
+    "revision": "3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3",
+    "input_prefix": "query: ",
+    "max_seq_length": 512,
+    "normalize_embeddings": true,
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "batch_size": 12
+  },
+  "analysis": {
+    "primary_conditions": ["meps_q1", "meps_q2", "meps_q3"],
+    "descriptive_condition": "free_chat",
+    "bootstrap_draws": 1999,
+    "permutation_draws": 4999,
+    "log_length_tolerance": 0.25,
+    "promotion_min_auc": 0.6,
+    "promotion_ci_floor": 0.55,
+    "familywise_alpha": 0.05
+  },
+  "claim_boundary": {
+    "labels_used": false,
+    "raw_text_persisted": false,
+    "assistant_text_scored": false,
+    "cross_language_equivalence_claim": false,
+    "personality_or_trait_claim": false,
+    "permitted_claim": "same-session, protocol-conditioned Japanese vector correspondence only"
+  }
+}

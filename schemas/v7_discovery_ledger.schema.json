@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUICA V7 Discovery Ledger Entry",
+  "type": "object",
+  "required": ["timestamp_utc", "candidate_id", "operator", "status", "claim_boundary", "author_split"],
+  "properties": {
+    "timestamp_utc": {"type": "string"},
+    "candidate_id": {"type": "string"},
+    "operator": {"type": "string"},
+    "status": {"type": "string"},
+    "claim_boundary": {"type": "string"},
+    "author_split": {"type": "object"}
+  }
+}

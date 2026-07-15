@@ -1,0 +1,770 @@
+{
+  "schema_version": "suica-v7-release-lockbox-1",
+  "release_version": "0.2.0",
+  "status": "V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES",
+  "highest_supported_claim": "OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN",
+  "n_files": 152,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 531,
+      "sha256": "322e4557da95c0156be9ea0c4eb5f72c10739177c0fce15e174ee4913b9de398"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 990,
+      "sha256": "32e63661533a29848ab8a4d9593d9acbcbdb008d370ba6b1a1e8604edb5f4837"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 584,
+      "sha256": "c1e4feda136e7ee74aeaf9053add66279fb54bef0af17a62032bcfce2225a5ae"
+    },
+    {
+      "path": "README.ja.md",
+      "bytes": 6513,
+      "sha256": "39ec79ca84af09a36d88409e476f02b0bdbe7496251c4ea706cfe49125864d01"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9072,
+      "sha256": "c193bf3abc4cc0ec5d1c3dbc0a7e418c656e13dab5203102c50c078b9868940a"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 5287,
+      "sha256": "a62cca823e2e388ff2c356b8a90538a7ff9994a23108202352ff09fe3f1d12c7"
+    },
+    {
+      "path": "configs/v7_condition_opportunity.json",
+      "bytes": 1824,
+      "sha256": "45809eb0d049b3803941d7ea7b5e91f86c4f09bd9052105549a6d95991293662"
+    },
+    {
+      "path": "configs/v7_construct_validation_manifest.template.json",
+      "bytes": 2342,
+      "sha256": "aceb1321b557e3ed240b63c3acffc64caee2b339ed7dbb0049417420ea053e95"
+    },
+    {
+      "path": "configs/v7_domain_transport_manifest.template.json",
+      "bytes": 1397,
+      "sha256": "d6bbedf4694817571bbda847d194f5e587cad1ba9e9b7658d6183852586bb5c6"
+    },
+    {
+      "path": "configs/v7_error_protocol_manifest.template.json",
+      "bytes": 1230,
+      "sha256": "5a3d7da5320f76795171fde07b380888e6faae57d625b66fbe49f662769f184a"
+    },
+    {
+      "path": "configs/v7_estimand_registry.json",
+      "bytes": 6085,
+      "sha256": "5598ac380f17408294adf386686bbb14df9fc4535860d4aec0024154b6b486b8"
+    },
+    {
+      "path": "configs/v7_external_anchor_manifest.template.json",
+      "bytes": 709,
+      "sha256": "75c5c97468ba237ce7414717d6c72fa45ab846591366a4d59322f7ec6e6d6ef2"
+    },
+    {
+      "path": "configs/v7_geometry_smoke.json",
+      "bytes": 298,
+      "sha256": "0c3a7e5aff30e6e89eb505a271ce3b2acac831a846b4cbdc1e631f53afc2b700"
+    },
+    {
+      "path": "configs/v7_multiview_method_benchmark.json",
+      "bytes": 1471,
+      "sha256": "c9697c0612b1d8538362fb5831f533b256e235c643974655703030ea77be1e1c"
+    },
+    {
+      "path": "configs/v7_multiview_method_benchmark_rank_extension.json",
+      "bytes": 1703,
+      "sha256": "979043bcea30f1cbd232dc30a67927dec031d625f829b97657a4f497c5b8a9ab"
+    },
+    {
+      "path": "configs/v7_multiview_projection.json",
+      "bytes": 1071,
+      "sha256": "4cd56666057a90ef67638d61ab79bb37d924bbc728188abe62af8bedcbcd6de3"
+    },
+    {
+      "path": "configs/v7_operator_boundary_audit.json",
+      "bytes": 1719,
+      "sha256": "b27ccbff4f812f76c4f1a4603d9cb6bf8a9dfb77e62b83c49646432a925bd7ac"
+    },
+    {
+      "path": "configs/v7_operator_family_registry.json",
+      "bytes": 1164,
+      "sha256": "fe7bb403abc6daebca5f35d0394515d45aef15fa344484488482e649cd9bdb5d"
+    },
+    {
+      "path": "configs/v7_operator_family_source_support_48.json",
+      "bytes": 1146,
+      "sha256": "641a760cd53ec6970e35e08b6d4445676530f8cdb3af93036d28c5273f67d205"
+    },
+    {
+      "path": "configs/v7_operator_smoke.json",
+      "bytes": 812,
+      "sha256": "0e0ff03d221dc336fc98f58d1a583628a041bdd5c8c35e0c7b26e3b9e93d6189"
+    },
+    {
+      "path": "configs/v7_temporal_geometry_baselines.json",
+      "bytes": 1062,
+      "sha256": "0f746d3a75d78366182155e81c12a47a340ebe7195d77692dc6b21ff5687b06d"
+    },
+    {
+      "path": "configs/v7_theory_closure.json",
+      "bytes": 1830,
+      "sha256": "4a08ad66324d316ae946cbe0137db970d72217b3f94bc1cdf76eb6332245ab7b"
+    },
+    {
+      "path": "docs/CLAIMS_LEDGER.md",
+      "bytes": 154121,
+      "sha256": "319fa36eac175f242dabb95234346a6c03c0833ef81a87d30e3b1777eeade592"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_V020.md",
+      "bytes": 2269,
+      "sha256": "c03dce63e7d3cafef7e51f1de1f8a3e80e1dd6325667e78ecf34608321204e51"
+    },
+    {
+      "path": "docs/V7_ACCEPTANCE_RULEBOOK.md",
+      "bytes": 7449,
+      "sha256": "4c13987be58642f19f48e1f2ccc5d8d1a7419783c9da8a139f3f00cab292ebc5"
+    },
+    {
+      "path": "docs/V7_DISCOVERY_LEDGER.md",
+      "bytes": 6846,
+      "sha256": "16244dd37983699916e13349ca0921ba00820569ef0d84014ceaa6fdf20ff608"
+    },
+    {
+      "path": "docs/V7_DOMAIN_TRANSPORT_PROTOCOL.md",
+      "bytes": 2644,
+      "sha256": "fad9e07eef6b52db8e934e08fd63b9ca2723ece63882ccafc72ce61aa057ca0b"
+    },
+    {
+      "path": "docs/V7_EVIDENCE_STATUS_LATTICE.md",
+      "bytes": 2246,
+      "sha256": "6023540659280ec063caefcfe7b7bbe0b103d59c23ebe84fe27221604814d100"
+    },
+    {
+      "path": "docs/V7_EXTERNAL_ANCHOR_PROTOCOL.md",
+      "bytes": 3092,
+      "sha256": "5f7b0e536648a9a5028e53bf543f8ccb9252f519dce5997c8de7b39fe2c02e3e"
+    },
+    {
+      "path": "docs/V7_FIXED_FREE_OCCASION_PROTOCOL.md",
+      "bytes": 3437,
+      "sha256": "9dcfc3b694cdaab196109831210362d80a688a05c58bd3976a6d85343d04a9c6"
+    },
+    {
+      "path": "docs/V7_GEOMETRY_OBJECT.md",
+      "bytes": 3850,
+      "sha256": "eea027291409486d600d20a4b9744025d5140ee4057af0f67c705483aab7b0bf"
+    },
+    {
+      "path": "docs/V7_LOCKBOX_V020.md",
+      "bytes": 2948,
+      "sha256": "66844cf5683301c94afa93642156d7feea325324fc0e2fd6c9465c92085acafa"
+    },
+    {
+      "path": "docs/V7_OPERATOR_INDEXED_MULTIVIEW_V71.md",
+      "bytes": 14358,
+      "sha256": "b0262017a3078c89c2f09e0bc81289b8eced0b58bbcd02909e06575ede7c6665"
+    },
+    {
+      "path": "docs/V7_PSYCHOMETRIC_PROJECTION.md",
+      "bytes": 4656,
+      "sha256": "404e0aba88421b8f841aecd7ef20cbbf39566fcdcf7b8c9bdf4a7e286c405f75"
+    },
+    {
+      "path": "docs/V7_REMEDIATION_CLOSURE.md",
+      "bytes": 7376,
+      "sha256": "87cae94f2581b3747824b5c6dff4c71cbcf032803b4e51aadb7efd92c9b70ec3"
+    },
+    {
+      "path": "docs/V7_REPEATED_MEASUREMENT_ERROR_PROTOCOL.md",
+      "bytes": 3434,
+      "sha256": "af1ee0d78e1716a34b61ee445ef532a1a4c1e462b12ce55e000b510b7afdf419"
+    },
+    {
+      "path": "docs/V7_THEORY_CLOSURE_CONTRACT.md",
+      "bytes": 1097,
+      "sha256": "9b4180207d58007667be0d2bf37014f64d610504067b83e7332e8cfefaabce83"
+    },
+    {
+      "path": "docs/V7_UNCERTAINTY_PROTOCOL.md",
+      "bytes": 1841,
+      "sha256": "e9f5945aab272a7ed6f8a427f05f4b64a23beb8ed198f13ab8d36581f48df2e4"
+    },
+    {
+      "path": "release/v0.2.0/TEST_REPORT.md",
+      "bytes": 716,
+      "sha256": "8bbf9c7246382466d18ae880b8d54410ad5246b63fc30dc7981cfda2e381aa19"
+    },
+    {
+      "path": "release/v0.2.0/evidence/g1_real_data_geometry.json",
+      "bytes": 1927,
+      "sha256": "0f6d272cf1d2e80e59729e097e239dd360d01cc7beed968cff4a12f86d8dc02a"
+    },
+    {
+      "path": "release/v0.2.0/evidence/w2_identification.json",
+      "bytes": 11281,
+      "sha256": "2375f9c238e73c136b2bd7e32f41c06cb568a3fc06b565770a1915b2c9f56f48"
+    },
+    {
+      "path": "release/v0.2.0/evidence/w3_temporal_random.json",
+      "bytes": 4846,
+      "sha256": "64f67d0cffb10c0f7f005de38963ddf472c0f3e1266ea7c64e02d18ad47f6dcd"
+    },
+    {
+      "path": "release/v0.2.0/evidence/w4_multiview_methods.json",
+      "bytes": 6323,
+      "sha256": "f0fffe6a257a48757826a0309ff41c6681990d2d202f26ea4b85d0fbc7051e5f"
+    },
+    {
+      "path": "release/v0.2.0/evidence/w4b_effective_rank.json",
+      "bytes": 3601,
+      "sha256": "f03008f92f040e7f31019e5f44d9cbf7a07b4d518bf6b4e258d88b6acf5b9b8c"
+    },
+    {
+      "path": "release/v0.2.0/evidence/w7_representation_transport.json",
+      "bytes": 7701,
+      "sha256": "bb94173f3691201bed73643e6ba33ac235148bf487808530da2719cd0a922855"
+    },
+    {
+      "path": "reports/README.md",
+      "bytes": 518,
+      "sha256": "e0c2344dd67745f38b6e8761d657515b74ed8c7a205b28edfae1397a3e1e247a"
+    },
+    {
+      "path": "reports/V7_CONDITION_OPPORTUNITY.md",
+      "bytes": 21624,
+      "sha256": "edfe57dab3243f80aed2be3c728ab8fe92d7bf9b8eee6b5c4b6648a4155e46b5"
+    },
+    {
+      "path": "reports/V7_CONDITION_OPPORTUNITY_SMOKE.md",
+      "bytes": 18984,
+      "sha256": "4e833c7210ceece66d1b229fc5a40cabe9d5c793bf5e158c661438d1a95c4aaf"
+    },
+    {
+      "path": "reports/V7_CROSSVIEW_EFFECTIVE_RANK.md",
+      "bytes": 3845,
+      "sha256": "ba4627becdf58f1c4baf63b94da0b12ba5e8cfa7b36605ace8ff10f1a647b86b"
+    },
+    {
+      "path": "reports/V7_IDENTIFICATION_CALIBRATION.md",
+      "bytes": 7041,
+      "sha256": "b6a63247910eb7aca7233bead6ce99b6068633af27105e5b219a56d81685d6fb"
+    },
+    {
+      "path": "reports/V7_IDENTIFICATION_CALIBRATION_QUICK.md",
+      "bytes": 4759,
+      "sha256": "6da741b798cb07a8aeb10fe53eb90a30abad8668fdf1fb7ece20ba450adfdd90"
+    },
+    {
+      "path": "reports/V7_MEPS_FIXED_FREE_PREFLIGHT.md",
+      "bytes": 1629,
+      "sha256": "caf252e1dac2b44003d5750fe4d31f8396740d4053a7e7706610d90b1b366319"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_METHOD_BENCHMARK.md",
+      "bytes": 9345,
+      "sha256": "c32d8834b25d56b313302138fa2cb8f7bb16237600ab07805ce6d53c9888aa60"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_METHOD_BENCHMARK_QUICK.md",
+      "bytes": 9349,
+      "sha256": "ebe80a28e4665639942a82abe461b3c330bebab7eda72c8056ead931d95914be"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_METHOD_BENCHMARK_RANK_EXTENSION.md",
+      "bytes": 14828,
+      "sha256": "0a0755c0593629cd85b6bb23828d55ce0d9051f3df3872b63b523a9f7346c1fd"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_METHOD_BENCHMARK_RANK_EXTENSION_QUICK.md",
+      "bytes": 12823,
+      "sha256": "b8745acf893134a5908f7be9ea2f6fef4f44a2b43ece42da99c02ff5456a4455"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_PROJECTION.md",
+      "bytes": 24801,
+      "sha256": "34ca37be346405c1eb82f5d1f22fa725ef3c78d21975e4d8996399f51cd7d5f3"
+    },
+    {
+      "path": "reports/V7_MULTIVIEW_PROJECTION_SMOKE.md",
+      "bytes": 24845,
+      "sha256": "189f5930ca68d6ea8893ef5b746821deacb4f4814dd42b0cb42fa8d2fb4cbc4e"
+    },
+    {
+      "path": "reports/V7_OPERATOR_ATLAS.md",
+      "bytes": 8310,
+      "sha256": "6977d5df4b6b38d07fdf5b7483261cf9a375b9d02134408da6ffcd16e5905747"
+    },
+    {
+      "path": "reports/V7_OPERATOR_ATLAS_SMOKE.md",
+      "bytes": 8326,
+      "sha256": "7690a302dccfd18ee53c93d9de17005e39b4788ea14887cd3673a589d67f3f79"
+    },
+    {
+      "path": "reports/V7_OPERATOR_BOUNDARY_AUDIT.md",
+      "bytes": 12482,
+      "sha256": "e34b73154f9b58824aae526e5135b950968b1eae910f93d9b8829fbf358e5dd1"
+    },
+    {
+      "path": "reports/V7_OPERATOR_BOUNDARY_AUDIT_QUICK.md",
+      "bytes": 12488,
+      "sha256": "6cc2841ea3709a136e194fddabd01522e7bc4d2d8a78ad57832a5500f2b2ac75"
+    },
+    {
+      "path": "reports/V7_OPERATOR_FAMILY.md",
+      "bytes": 15340,
+      "sha256": "ff452c5275ed0e2260268018dccecc09964797d87a47b29f18e829d67a6d4a45"
+    },
+    {
+      "path": "reports/V7_OPERATOR_FAMILY_SMOKE.md",
+      "bytes": 15417,
+      "sha256": "c7b6bc17937a352e98e8f9d4ef7fe4592c9ba672781876d54e12f5d26dc876ba"
+    },
+    {
+      "path": "reports/V7_OPERATOR_FAMILY_SOURCE_SUPPORT_48.md",
+      "bytes": 15394,
+      "sha256": "636f2c586a3a084e954ddae5dcc84f08a9e1a5a34c31b9cfc142e00eee5088df"
+    },
+    {
+      "path": "reports/V7_OPERATOR_PSYCHOMETRIC_SMOKE.md",
+      "bytes": 5027,
+      "sha256": "646e9a4b873595e7269f31d782a88bc5c5f8144e3e6c4cf719922bec1fc1e3e9"
+    },
+    {
+      "path": "reports/V7_REPRESENTATION_TRANSPORT_CALIBRATION.md",
+      "bytes": 4802,
+      "sha256": "bb7c65b6c9d93fa87ec7134ce91bca09474c49c262b16b1f5d4a5148a57774b0"
+    },
+    {
+      "path": "reports/V7_REPRESENTATION_TRANSPORT_CALIBRATION_QUICK.md",
+      "bytes": 4803,
+      "sha256": "3716b3731d85fd70855b7de1de250e7dd040e241518f3904f72022b6a0ea68cf"
+    },
+    {
+      "path": "reports/V7_TEMPORAL_GEOMETRY_BASELINES.md",
+      "bytes": 11276,
+      "sha256": "3a9b9b280b47fcc89f3ccd38101da7be38790cf64b47768bac022b210b0bed7e"
+    },
+    {
+      "path": "reports/V7_TEMPORAL_GEOMETRY_BASELINES_QUICK.md",
+      "bytes": 11243,
+      "sha256": "d497b85f13746eb4d5c48fbbcc03783417564730ccaf173512834e883f6aa52c"
+    },
+    {
+      "path": "reports/V7_TEMPORAL_RANDOM_CONTRAST.md",
+      "bytes": 4222,
+      "sha256": "0f73955d6e248de3257e5b4573c4e0c50eb7b9c3370af71f7de9656eadbd7732"
+    },
+    {
+      "path": "reports/V7_TEMPORAL_RANDOM_CONTRAST_QUICK.md",
+      "bytes": 2868,
+      "sha256": "a518500ec1a8c0f6c4b9796418cf68452250a8850c21a470124725eff199017a"
+    },
+    {
+      "path": "reports/V7_THEORY_CLOSURE_AUDIT.md",
+      "bytes": 1379,
+      "sha256": "35e908c65cbad73e8f22e7acc54e9edb0317419468ae121c3b9752646a26eb5d"
+    },
+    {
+      "path": "requirements-lock-v0.2.0.txt",
+      "bytes": 316,
+      "sha256": "47a11ea2e4e2c0a4406bfde84a9ced807246719eedabdfe5cbe15dcab0dff68a"
+    },
+    {
+      "path": "schemas/v7_discovery_ledger.schema.json",
+      "bytes": 490,
+      "sha256": "0c583dbcbc96274e5e2c8a89c6ae18bbb5b280739b13001f8acf8a837ce7fcbd"
+    },
+    {
+      "path": "schemas/v7_estimand_manifest.schema.json",
+      "bytes": 1668,
+      "sha256": "f04143b7f6c90585fde6ed6b7bb9b25d48564b3abb4ec414a21b910fa921f6b8"
+    },
+    {
+      "path": "schemas/v7_external_anchor_manifest.schema.json",
+      "bytes": 858,
+      "sha256": "f199638bda6e5c530855eff3de271a344ccb37db6079f75a79cf6329117bdd13"
+    },
+    {
+      "path": "schemas/v7_factor_bundle.schema.json",
+      "bytes": 2263,
+      "sha256": "970dca6a0678f78ff997432ee1aeb237794873bad418699469763b619a95cd4c"
+    },
+    {
+      "path": "schemas/v7_fixed_free_observations.schema.json",
+      "bytes": 716,
+      "sha256": "d97f68080374e4cbc3aaff12c979552812603bc7101598c2b8990763af5cd760"
+    },
+    {
+      "path": "schemas/v7_geometry_bundle.schema.json",
+      "bytes": 2174,
+      "sha256": "4c47669de47ba699f2f7f89c2fc506502c2fd3e033e6e1bd2426174b73859c3a"
+    },
+    {
+      "path": "schemas/v7_observation_manifest.schema.json",
+      "bytes": 454,
+      "sha256": "b9958f5254a5cda33b2905308f79465d9ad99b4d57744616a716fd76f3ade17f"
+    },
+    {
+      "path": "scripts/build_suica_v020_release_bundle.py",
+      "bytes": 5153,
+      "sha256": "ca2548a3f823a74a3dbda5bab0c2a982e703e37d26b39c82aff190f0395f29dd"
+    },
+    {
+      "path": "scripts/build_suica_v7_run_manifest.py",
+      "bytes": 1907,
+      "sha256": "f25bbb618389528bb2548d28dbd9e27974a61a902b16e16aa2c3e212dd32801a"
+    },
+    {
+      "path": "scripts/run_suica_v7_condition_opportunity.py",
+      "bytes": 95856,
+      "sha256": "803fa6d1d32ed7e87d1cb3694007ade3cd3b14eaad47987dec03fb0c2903aa7c"
+    },
+    {
+      "path": "scripts/run_suica_v7_crossview_effective_rank.py",
+      "bytes": 11087,
+      "sha256": "d0df759e6c72033e654430dd1024086148b8b61806357d50aaf2636fcb9676f9"
+    },
+    {
+      "path": "scripts/run_suica_v7_geometry_bundle_smoke.py",
+      "bytes": 6704,
+      "sha256": "1a1d3147f6f32cee62290ea5f33ad21051dfea86719f43a44ab94054581856cb"
+    },
+    {
+      "path": "scripts/run_suica_v7_gstudy_lst_preflight.py",
+      "bytes": 3120,
+      "sha256": "e17ecab3b6b758dc1893f39e5910ba137da28d87aabeab0e3c458607632393f6"
+    },
+    {
+      "path": "scripts/run_suica_v7_identification_matrix.py",
+      "bytes": 8118,
+      "sha256": "dd0fbd5eede344526bb3c775bb2afc2e64a30ca13226b21f9d7f4c19a9b46a59"
+    },
+    {
+      "path": "scripts/run_suica_v7_multiview_method_benchmark.py",
+      "bytes": 29514,
+      "sha256": "ee1a96c8251698816ea05e828dbb55d6ef35931516a0f1a5ae966a0140e457fa"
+    },
+    {
+      "path": "scripts/run_suica_v7_multiview_projection.py",
+      "bytes": 34599,
+      "sha256": "933fa043792b4148035d3f3c66bfbcaba3eecfbf6908b1213a1f0e43e50662e5"
+    },
+    {
+      "path": "scripts/run_suica_v7_operator_atlas.py",
+      "bytes": 10338,
+      "sha256": "cd3eff73052e8b44371dbce67a2afef9f143b85ad6d99f2d4d1dbe86d4740737"
+    },
+    {
+      "path": "scripts/run_suica_v7_operator_boundary_audit.py",
+      "bytes": 23413,
+      "sha256": "00ee8750d90bc3724b4386d4d0d8767ffb2dd8adca7ef561fe14a5412ee6c5aa"
+    },
+    {
+      "path": "scripts/run_suica_v7_operator_family_validation.py",
+      "bytes": 25691,
+      "sha256": "441d6c4351317b34b9edcf7f6303b0d721b6bcf414ca06a1e3b0ecc86b410bd9"
+    },
+    {
+      "path": "scripts/run_suica_v7_operator_smoke.py",
+      "bytes": 21668,
+      "sha256": "6a6a9651822c401450256700f85c2aaaefdacd2f7d50710b0c166c12b583bd01"
+    },
+    {
+      "path": "scripts/run_suica_v7_replay_audit.py",
+      "bytes": 4689,
+      "sha256": "5abff6a7bc32812285b4f2a5192609592f32ca706e86a6c9d26feb64f9912600"
+    },
+    {
+      "path": "scripts/run_suica_v7_representation_transport.py",
+      "bytes": 6993,
+      "sha256": "61415dec59923fd3f91dfd6266850f3539f29f3f4099e14cc33c595a63793753"
+    },
+    {
+      "path": "scripts/run_suica_v7_temporal_geometry_baselines.py",
+      "bytes": 26126,
+      "sha256": "f2f46afafd51ce3284a18f52875df8c19215a673c8df86f7bbf5bcd688814d1f"
+    },
+    {
+      "path": "scripts/run_suica_v7_temporal_random_contrast.py",
+      "bytes": 19990,
+      "sha256": "1e0d8a08c578c0fb89d2d4b8d317e33ad7c9370dbe5ce0072f1855ebe8d4fb79"
+    },
+    {
+      "path": "scripts/run_suica_v7_theory_closure_audit.py",
+      "bytes": 2319,
+      "sha256": "7c5f4826a764bce539c141744f355c906a36cf8d1ea5cc945c38b0d1d431b979"
+    },
+    {
+      "path": "scripts/validate_suica_v7_construct_validation.py",
+      "bytes": 1153,
+      "sha256": "7ec9bd4dcfe2553ddd42af84c05058eefa0a710b8ea739d4d1f68de8ac22c56c"
+    },
+    {
+      "path": "scripts/validate_suica_v7_domain_transport.py",
+      "bytes": 1274,
+      "sha256": "8dc9f4afbe5e0a8eb198fe324c7dde1bf8512665280b062fd1e1f1da77aead9f"
+    },
+    {
+      "path": "scripts/validate_suica_v7_error_protocol.py",
+      "bytes": 1107,
+      "sha256": "d5627d6baa5ffd692f968d99017cb0f8a60ae7f4e1d5b288fe8f2694a712c495"
+    },
+    {
+      "path": "scripts/validate_suica_v7_estimand.py",
+      "bytes": 1096,
+      "sha256": "63de75feed93daaf7f1fbfc527ce5c7a985eca178e286a15b00e55f87d5ae2a8"
+    },
+    {
+      "path": "scripts/validate_suica_v7_external_anchor.py",
+      "bytes": 1081,
+      "sha256": "ae0bbed6d7947f65bccc2ddaaeef01afa74f5ca8643db0fb498035e6488a205f"
+    },
+    {
+      "path": "scripts/validate_suica_v7_fixed_free_dataset.py",
+      "bytes": 1553,
+      "sha256": "09eae1a975370785ebf0d360b1b6a5a5a710a34df6a8b4dfcf4a3e1af998d177"
+    },
+    {
+      "path": "scripts/verify_suica_v020_lockbox.py",
+      "bytes": 697,
+      "sha256": "96f497444b7832cfb81cd14d0093ff508d99a7681619a2655fbfae9669e8a649"
+    },
+    {
+      "path": "suica_core/__init__.py",
+      "bytes": 84,
+      "sha256": "2d393c00455316a2453035853f2509c668cd51341c275caa9eabb308c93b9caf"
+    },
+    {
+      "path": "suica_core/v7_closure.py",
+      "bytes": 4300,
+      "sha256": "c9405c6f34400a809bc293ae8711dfca2cb1dfc6e18bb9d5a05fceb2f7745934"
+    },
+    {
+      "path": "suica_core/v7_condition_opportunity.py",
+      "bytes": 20466,
+      "sha256": "216fd63c9857d3272eecd8bc610a8380cbd527ea30b4174a98b81c7f6cdfca7d"
+    },
+    {
+      "path": "suica_core/v7_construct_validation.py",
+      "bytes": 4470,
+      "sha256": "310da12fce7410a41b59c3b5c872d29679c748cd65badd5562d3d83ac5f43383"
+    },
+    {
+      "path": "suica_core/v7_crossview_spectrum.py",
+      "bytes": 4881,
+      "sha256": "e0065c3b5be8617826e74431a951115185aeee0817376e97f3b42e15a78a6e92"
+    },
+    {
+      "path": "suica_core/v7_domain_transport.py",
+      "bytes": 8585,
+      "sha256": "a24d5c5b9c2418f6b7cd7da9a90717e205a0676cdbaee04ada4ae7169e4cf937"
+    },
+    {
+      "path": "suica_core/v7_error_protocol.py",
+      "bytes": 3331,
+      "sha256": "ec014ca161891b5f34eb13ec11cd7bd672dc3d85c54377dacb2d3630697bd3b3"
+    },
+    {
+      "path": "suica_core/v7_estimand.py",
+      "bytes": 7841,
+      "sha256": "26912d07ecc5e0e0f1ea4f33d2f380705386af82113580629a0eeed7e6f07de3"
+    },
+    {
+      "path": "suica_core/v7_geometry.py",
+      "bytes": 15955,
+      "sha256": "0d1088bbc26f53b1f8a7fab97b0d8703a24fcb15814c6f364fd226496bab4ef7"
+    },
+    {
+      "path": "suica_core/v7_governance.py",
+      "bytes": 10905,
+      "sha256": "4bd06eba25abde2703d187b3c7ed89adefc481f484ba6ea780a0547ba3c21871"
+    },
+    {
+      "path": "suica_core/v7_measurement_preflight.py",
+      "bytes": 7276,
+      "sha256": "ea4b3f9fe4cc42c3f42772b40f134faf932db592c64060b4026983bdc4776140"
+    },
+    {
+      "path": "suica_core/v7_multiview.py",
+      "bytes": 11437,
+      "sha256": "80fa4713e7cf37811ddc44ee71bc6f36e6896c31de8722a51177bd50c0606b6c"
+    },
+    {
+      "path": "suica_core/v7_multiview_baselines.py",
+      "bytes": 6870,
+      "sha256": "e019dd3463e2b96832a750963fa0fba8f6bd421d83a489bcddc5cedc36092acc"
+    },
+    {
+      "path": "suica_core/v7_observations.py",
+      "bytes": 22686,
+      "sha256": "d4dd37a218c6f1028898a41118e0e44bebea7a830048a51737729b454b3e4535"
+    },
+    {
+      "path": "suica_core/v7_operator_atlas.py",
+      "bytes": 6375,
+      "sha256": "f2e04c583d085ea78799baaf4f7a43b6293f1dbe5074193fa1b90a9348f28be2"
+    },
+    {
+      "path": "suica_core/v7_operator_controls.py",
+      "bytes": 15524,
+      "sha256": "9eec9b0739ef29b7377c19a9e339f776121a63af3698335c31f366dcd492c226"
+    },
+    {
+      "path": "suica_core/v7_psychometric.py",
+      "bytes": 25481,
+      "sha256": "40d9c8fae09be94a2c928f07e34dab6fee03771953ab504cb5cab8786f0e3090"
+    },
+    {
+      "path": "suica_core/v7_release.py",
+      "bytes": 3465,
+      "sha256": "2723a708c5e01921cc80b312dfef55f3522b18e845559a95eadaf156347968fa"
+    },
+    {
+      "path": "suica_core/v7_temporal_geometry.py",
+      "bytes": 20933,
+      "sha256": "deb14250585fc750359a94ec5d3667c47ededd9a7b0e0ba08cf265b00de4816c"
+    },
+    {
+      "path": "suica_core/v7_uncertainty.py",
+      "bytes": 3731,
+      "sha256": "07cc8ac93d18ef21ef7a39d74184c9916f8b1085bb224d4ef9f2c73b2561f620"
+    },
+    {
+      "path": "suica_core/v7_validation.py",
+      "bytes": 8373,
+      "sha256": "2124a8a18bface1a6cdff61324975986ed8d4f47553997ea7ee31c696beb060e"
+    },
+    {
+      "path": "suica_sim/v7_identification.py",
+      "bytes": 17535,
+      "sha256": "8cc2a7dedc7d3dec188873e81486f16366753ce72a260436c42f6024df7df45f"
+    },
+    {
+      "path": "suica_sim/v7_representation_transport.py",
+      "bytes": 8362,
+      "sha256": "74ce9d714c8c402d0865b098fc0878c90fb61696c6837d26d4361e3c2e9eac57"
+    },
+    {
+      "path": "tests/test_v7_closure.py",
+      "bytes": 1270,
+      "sha256": "59af56cdaa1627b61ea0df92511053835dafc9bfd45bbd8ff3d84b8c4603f9b1"
+    },
+    {
+      "path": "tests/test_v7_condition_opportunity.py",
+      "bytes": 8099,
+      "sha256": "80638cec9561cd48d4d70ab341aefd1cbe198833752ee614e7b34c5f5d17ca05"
+    },
+    {
+      "path": "tests/test_v7_construct_validation.py",
+      "bytes": 2572,
+      "sha256": "1dde1c1698790619a86d32303d1d003773faa9eba47f045199648fdbe10a4fec"
+    },
+    {
+      "path": "tests/test_v7_crossview_spectrum.py",
+      "bytes": 1648,
+      "sha256": "b61442efd36c522e256f42a15d59b594639a584c426058aaa499a643d7625a35"
+    },
+    {
+      "path": "tests/test_v7_domain_transport.py",
+      "bytes": 3035,
+      "sha256": "b56380438b7c001cf473c4fd26a35b6a11f91424f24eaef4eef28432511a1f83"
+    },
+    {
+      "path": "tests/test_v7_error_protocol.py",
+      "bytes": 1650,
+      "sha256": "708e1941d9a72c55d1056b923266b33e40c3910fb3e47ac6c4a8c424839188d1"
+    },
+    {
+      "path": "tests/test_v7_estimand.py",
+      "bytes": 2165,
+      "sha256": "20654bbd6417d93f8d37d0b5ce442b531efd9a28efe484cfdda56215d9f2aa67"
+    },
+    {
+      "path": "tests/test_v7_geometry.py",
+      "bytes": 5596,
+      "sha256": "d9811fed39c0898d967dee450cb552079e31041cd55cd99fb3306d9ffa87f70f"
+    },
+    {
+      "path": "tests/test_v7_governance.py",
+      "bytes": 2483,
+      "sha256": "5a5085cc66eb4ff18c94e971a153724b5083f565decc6432e4b5ea117a168568"
+    },
+    {
+      "path": "tests/test_v7_identification.py",
+      "bytes": 3115,
+      "sha256": "0c4726ed631e3d09f4d927a9ba0827bfa4123ce5045d4ad436f9bdd2e9512613"
+    },
+    {
+      "path": "tests/test_v7_measurement_preflight.py",
+      "bytes": 2072,
+      "sha256": "7d6c4075d49a035f76ae53b95746fd7710f350b11dd4ce7b11528b03d93479a2"
+    },
+    {
+      "path": "tests/test_v7_multiview.py",
+      "bytes": 3735,
+      "sha256": "2b66f8881b4901470e9e07d165126602e6e41ccb54f05392e393dadab89f6844"
+    },
+    {
+      "path": "tests/test_v7_multiview_baselines.py",
+      "bytes": 3153,
+      "sha256": "aa860c490749537637f6ac001108410cc09e1081221485d605d929dbf2f47f94"
+    },
+    {
+      "path": "tests/test_v7_observations.py",
+      "bytes": 6965,
+      "sha256": "bad91988afd33dff76d610ef3b1aedc95224da007d7e0e39d5df82aaae2d57c3"
+    },
+    {
+      "path": "tests/test_v7_operator_atlas.py",
+      "bytes": 1451,
+      "sha256": "1deaeb3b3bd37566d8197f12279368923327b3fc619e6a737688b8dce12113a5"
+    },
+    {
+      "path": "tests/test_v7_operator_controls.py",
+      "bytes": 4025,
+      "sha256": "39e75876811bb50d321d437bfbe996278b567dea6d53208dd1aa63686bb55708"
+    },
+    {
+      "path": "tests/test_v7_operator_family.py",
+      "bytes": 648,
+      "sha256": "aa12f9d05c633ecbed33dd68977888711f9d1def7dd0815129622eba317e13fd"
+    },
+    {
+      "path": "tests/test_v7_psychometric.py",
+      "bytes": 7595,
+      "sha256": "70f7dccfc90cc19af1bab9ddca4fabc57f5073ebb50579d3da2cee3e561eff7e"
+    },
+    {
+      "path": "tests/test_v7_release.py",
+      "bytes": 1135,
+      "sha256": "9502e1a33c7af921fbc50a4dfb09c01c5c31a94fe6838e2f92c79be50cc84978"
+    },
+    {
+      "path": "tests/test_v7_representation_transport.py",
+      "bytes": 1492,
+      "sha256": "38f77b5ea47289fb533392aa794e837e1e869a7ad6d64844f01d8a383a57e329"
+    },
+    {
+      "path": "tests/test_v7_temporal_geometry.py",
+      "bytes": 4220,
+      "sha256": "421c6d21874e794776f85cdbfcad8fa9c9d60a569b1a9b155e1186d776ad9da2"
+    },
+    {
+      "path": "tests/test_v7_uncertainty.py",
+      "bytes": 1258,
+      "sha256": "89c2ee387172bbb44b9043e4057adad8ab845e4df797417eb593f3aa26d46bbc"
+    },
+    {
+      "path": "tests/test_v7_validation.py",
+      "bytes": 2864,
+      "sha256": "298aba4e1d64ef86e830d34e096b462a096f2adf6c345646b20af90a73eb5de4"
+    }
+  ],
+  "claim_boundary": "This manifest seals code, protocols, schemas, tests, and deidentified aggregate evidence. It does not establish personality factors, reliability, clinical validity, universal language invariance, complete out-of-domain detection, or market prediction."
+}

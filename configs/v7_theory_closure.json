@@ -1,0 +1,51 @@
+{
+  "version": "v7-theory-closure-2-portable",
+  "release_manifest": "release/v0.2.0/LOCKBOX_MANIFEST.json",
+  "required_files": [
+    "docs/V7_GEOMETRY_OBJECT.md",
+    "docs/V7_UNCERTAINTY_PROTOCOL.md",
+    "docs/V7_REPEATED_MEASUREMENT_ERROR_PROTOCOL.md",
+    "docs/V7_EXTERNAL_ANCHOR_PROTOCOL.md",
+    "docs/V7_DOMAIN_TRANSPORT_PROTOCOL.md",
+    "docs/V7_EVIDENCE_STATUS_LATTICE.md",
+    "schemas/v7_geometry_bundle.schema.json",
+    "suica_core/v7_geometry.py",
+    "suica_core/v7_uncertainty.py",
+    "suica_core/v7_error_protocol.py",
+    "suica_core/v7_construct_validation.py",
+    "suica_core/v7_domain_transport.py"
+    ,"release/v0.2.0/LOCKBOX_MANIFEST.json"
+  ],
+  "evidence": [
+    {
+      "id": "W2_IDENTIFICATION",
+      "decision": "release/v0.2.0/evidence/w2_identification.json",
+      "allowed_statuses": ["IDENTIFICATION_CALIBRATION_PASS"]
+    },
+    {
+      "id": "W3_TEMPORAL_RANDOM",
+      "decision": "release/v0.2.0/evidence/w3_temporal_random.json",
+      "allowed_statuses": ["DESCRIPTIVE_TEMPORAL_RANDOM_MULTIPARTITION_COMPLETE"]
+    },
+    {
+      "id": "W4_MULTIVIEW_METHODS",
+      "decision": "release/v0.2.0/evidence/w4_multiview_methods.json",
+      "allowed_statuses": ["SUBSPACE_COMPARISON_SUPPORTED"]
+    },
+    {
+      "id": "W4B_EFFECTIVE_RANK",
+      "decision": "release/v0.2.0/evidence/w4b_effective_rank.json",
+      "allowed_statuses": ["CROSSVIEW_EFFECTIVE_RANK_DESCRIBED"]
+    },
+    {
+      "id": "W7_REPRESENTATION_TRANSPORT",
+      "decision": "release/v0.2.0/evidence/w7_representation_transport.json",
+      "allowed_statuses": ["REPRESENTATION_TRANSPORT_CALIBRATION_PASS"]
+    },
+    {
+      "id": "G1_REAL_DATA_GEOMETRY",
+      "decision": "release/v0.2.0/evidence/g1_real_data_geometry.json",
+      "allowed_statuses": ["GEOMETRY_BUNDLE_REAL_DATA_SMOKE_COMPLETE"]
+    }
+  ]
+}

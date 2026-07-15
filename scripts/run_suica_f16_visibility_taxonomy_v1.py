@@ -46,7 +46,7 @@ against per-person anchor labels the way the primary D_c(u)/S_c(u) channels can,
 reported as population-level descriptive tables (one per anchor population), explicitly
 separate from -- and never counted toward -- the primary static/dynamic classification grid.
 
-BH-FDR (project_persona.suica.bh_fdr) applied SEPARATELY to the pooled static-channel
+BH-FDR (suica_core.suica.bh_fdr) applied SEPARATELY to the pooled static-channel
 p-values (19 constructs x up to 14 anchor traits = 266 cells) and the pooled dynamic-channel
 p-values (same 266 cells) -- never pooled together, never split per-anchor-set.
 Classification per cell: pass = q_bh < .05 AND |r| >= .08.
@@ -75,7 +75,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import PERSONALITY_LEAK_RE, tokenize, bh_fdr  # noqa: E402
+from suica_core.suica import PERSONALITY_LEAK_RE, tokenize, bh_fdr  # noqa: E402
 import scripts.run_suica_c2_purity_all19_v1 as a19  # noqa: E402
 import scripts.run_suica_v6_w2a_delta2_dynamics_v1 as w2a  # noqa: E402
 import scripts.run_suica_v6_w10_invisible_anatomy_v1 as w10  # noqa: E402
@@ -90,7 +90,7 @@ import scripts.run_suica_dev_anchor_performance_v1 as dav  # noqa: E402
 # that are NOT byte-identical (verified: run_suica_c2_purity_all19_v1.py,
 # run_suica_dev_anchor_performance_v1.py, run_suica_op5_construct_discovery_v3.py
 # differ between the two repos -- only in their internal import source,
-# project_persona.suica vs suica_core.suica, themselves verified byte-identical
+# historical private-repo scorer vs suica_core.suica, previously verified byte-identical
 # modules, but a real shadowing hazard in general). Inserting RELEASE_ROOT
 # first (as an earlier version of this script did) silently resolved EVERY
 # "scripts.*" import above against the RELEASE repo's copies instead of these
@@ -98,7 +98,7 @@ import scripts.run_suica_dev_anchor_performance_v1 as dav  # noqa: E402
 # trusted. suica_core itself has no project-persona namesake, so appending
 # RELEASE_ROOT at the end, after all "scripts.*" submodules are already cached
 # in sys.modules, is sufficient and namespace-safe.
-RELEASE_ROOT = Path("/Volumes/mobile3/projects/Sliced Utterance In-Context Assessment")
+RELEASE_ROOT = ROOT
 if str(RELEASE_ROOT) not in sys.path:
     sys.path.append(str(RELEASE_ROOT))
 from suica_core.motion import motion_profile  # noqa: E402  (secondary descriptors only)

@@ -1,0 +1,28 @@
+{
+  "version": "v7.2-fresh-multiview-projection-replayable-1",
+  "seed": 20260714,
+  "max_users": 240,
+  "min_comments_per_user": 12,
+  "max_source_comments_per_user": 32,
+  "max_source_tokens_per_user": 4096,
+  "max_units_per_user": 128,
+  "min_tokens_per_unit": 12,
+  "mask_personality_terms": false,
+  "full_admissible_rank_search": true,
+  "calibration_bootstrap_iterations": 99,
+  "alignment_bootstrap_iterations": 199,
+  "rank_grid": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "ridge_alpha_grid": [0.1, 1.0, 10.0],
+  "operators": [
+    {"name": "whole", "kind": "whole"},
+    {"name": "native", "kind": "native"},
+    {"name": "sentence_pack_160", "kind": "semantic", "max_tokens": 160},
+    {"name": "fixed_128_cross", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross"},
+    {"name": "fixed_128_within_comment", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "within"}
+  ],
+  "representation": {
+    "max_features": 5000,
+    "ngram_range": [1, 2],
+    "svd_dimensions": 24
+  }
+}

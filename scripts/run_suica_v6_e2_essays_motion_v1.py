@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
+from suica_core.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
 import scripts.run_suica_c2_purity_all19_v1 as a19  # noqa: E402
 from scripts.run_suica_tgeo_p8_functionalization_v1 import scored_windows  # noqa: E402
 

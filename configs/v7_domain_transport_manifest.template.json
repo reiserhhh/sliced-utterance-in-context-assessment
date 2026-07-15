@@ -1,0 +1,35 @@
+{
+  "mode": "LOCAL_REFERENCE_ONLY",
+  "source_geometry_bundle": {
+    "path": "path/to/frozen_source_geometry_bundle.json",
+    "sha256": "sha256-of-frozen-source-geometry-bundle"
+  },
+  "target_schema": {
+    "author_id": {"field": "author_id", "availability": "AVAILABLE"},
+    "document_id": {"field": "document_id", "availability": "AVAILABLE"},
+    "occasion_id": {"field": "occasion_id", "availability": "AVAILABLE"},
+    "rind_id": {"field": "rind_id", "availability": "AVAILABLE"},
+    "timestamp": {"field": "timestamp", "availability": "AVAILABLE"},
+    "language": {"field": "language", "availability": "AVAILABLE"}
+  },
+  "target_reference_population": {
+    "reference_id": "target-local-reference-v1",
+    "sampling_frame": "predeclared target-domain text population",
+    "n_authors": 100,
+    "frozen_before_outcome_access": true
+  },
+  "target_runtime": {
+    "representation_hash": "target-frozen-representation-hash",
+    "operator_registry_hash": "target-frozen-operator-registry-hash",
+    "embedding_runtime": "declared runtime and version",
+    "tokenizer_or_segmenter": "declared tokenizer/segmenter and version"
+  },
+  "target_local_reference_plan": {
+    "build_target_reference": true,
+    "reuse_source_numerical_norms": false
+  },
+  "measurement_stage_only": true,
+  "market_prediction": false,
+  "outcome_labels_accessed": false,
+  "source_reference_reused": false
+}

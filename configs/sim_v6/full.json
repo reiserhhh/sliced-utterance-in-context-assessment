@@ -1,0 +1,8 @@
+{
+  "profile": "full",
+  "seed": 60712,
+  "mc": 500,
+  "paths_per_mc": 1000,
+  "null_permutations": 199,
+  "nested_bootstrap": 999
+}

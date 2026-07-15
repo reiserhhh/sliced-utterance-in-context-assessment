@@ -1,0 +1,14 @@
+{
+  "profile": "quick",
+  "seed": 6071302,
+  "alternative_draws": 3,
+  "persons": 60,
+  "occasions": 4,
+  "windows": 6,
+  "constructs": 5,
+  "outer_folds": 3,
+  "inner_folds": 2,
+  "max_rank": 2,
+  "cluster_bootstrap": 49,
+  "segmentation_jitter": 1.1
+}

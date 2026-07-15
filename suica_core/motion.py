@@ -81,11 +81,12 @@ flat at the quarter frequency -- the sharpest invariant); AR(1) phi:
 ((1-phi**2)/(1+phi**2), (1-phi)/(1+phi)), delta > 0; AR(2)-even a2:
 ((1-a2)/(1+a2), (1+a2)/(1-a2)), delta strongly < 0.
 
-Flow (F12.1.iii): the wide difference d = (w_last - w_first)/(m-1) has
-Cov(d) = Sigma_flow + 2*Gamma0/(m-1)**2 with no Gamma1 term (endpoint gap
->= 2), so subtracting the estimated gust term per m-stratum and
-precision-pooling (weights = n texts per stratum) recovers a corrected flow
-covariance -- when Gamma0_hat itself is estimable (T4 guard below).
+Flow (T2-prime): the wide difference d = (w_last - w_first)/(m-1) has
+Cov(d) = Sigma_flow + (2*Gamma0-Gamma_(m-1)-Gamma_(m-1).T)/(m-1)**2.
+Callers may supply independently estimated complete endpoint-gust covariance
+corrections per m-stratum. Without them the historical 2*Gamma0 correction is retained only
+as an explicitly flagged short-memory endpoint approximation; it is not an
+exact correction for AR/long-memory gusts.
 
 Finite-sample bias (closed, F12.4): the centering bias is now corrected by
 default via the F12.4 exact map above -- verified analytically and by
@@ -137,6 +138,9 @@ GAMMA0_UNESTIMABLE_REASON = (
     "motion structure is token-limited)"
 )
 FLOW_UNCORRECTED_FLAG = "uncorrected: gust moments not estimable"
+FLOW_ENDPOINT_APPROX_FLAG = (
+    "short-memory endpoint approximation: Gamma_(m-1) assumed zero"
+)
 
 # F12.7 period-2 (Nyquist) functional: band depth, pair thresholds, guards.
 PERIOD2_MAX_LAG = 4
@@ -346,6 +350,7 @@ def motion_from_window_arrays(
     window_arrays: list[np.ndarray],
     orig_m: list[int] | None = None,
     naive_inversion: bool = False,
+    flow_gust_corrections: dict[int, np.ndarray] | None = None,
 ) -> dict[str, Any]:
     """Internal moment/flow pipeline over already-scored (and, in
     ``motion_profile``, already pooled-sd-standardized) per-text window
@@ -362,7 +367,12 @@ def motion_from_window_arrays(
     ``D2_M_LO <= m <= D2_M_HI`` (the F12.3 registered corridor); every text
     with m >= 2 still contributes to level/slope and to the flow moment.
 
-    ``naive_inversion=False`` (default) applies the F12.4 finite-n
+    ``flow_gust_corrections[m]`` may provide an independently estimated full
+    ``2*Gamma0-Gamma_(m-1)-Gamma_(m-1).T`` matrix. This is intentionally the
+    complete correction: combining a true endpoint lag with a Gamma0 estimate
+    obtained under a misspecified gust model is not exact. When absent, flow uses the historical
+    short-memory approximation ``Gamma_(m-1)=0`` and reports this assumption
+    in ``flow_flag``. ``naive_inversion=False`` (default) applies the F12.4 finite-n
     corrected inversion; ``True`` applies the historical F12.1 identities.
     The primary dynamic output is ``memory_by_construct`` (signed r_c;
     positive = carry-over, negative = bounce); ``theta_by_construct`` is
@@ -509,7 +519,19 @@ def motion_from_window_arrays(
         if n_sel < 2:
             continue  # cross-text covariance undefined on a single observation
         cov_m = np.cov(rows_arr, rowvar=False)
-        sigma_m = cov_m - 2.0 * gamma0_hat / (m_val - 1) ** 2 if corrected else cov_m
+        if corrected:
+            supplied = None if flow_gust_corrections is None else flow_gust_corrections.get(m_val)
+            if supplied is None:
+                correction = 2.0 * gamma0_hat
+            else:
+                correction = np.asarray(supplied, dtype=float)
+                if correction.shape != gamma0_hat.shape:
+                    raise ValueError(
+                        f"flow_gust_corrections[{m_val}] must have shape {gamma0_hat.shape}"
+                    )
+            sigma_m = cov_m - correction / (m_val - 1) ** 2
+        else:
+            sigma_m = cov_m
         sig_sum += n_sel * sigma_m
         n_total += n_sel
 
@@ -521,7 +543,14 @@ def motion_from_window_arrays(
         sigma_flow = sig_sum / n_total
         flow_lambda1, top_vec = _top_eig(sigma_flow)
         flow_top_vector = top_vec.tolist()
-        flow_flag = None if corrected else FLOW_UNCORRECTED_FLAG
+        if not corrected:
+            flow_flag = FLOW_UNCORRECTED_FLAG
+        elif flow_gust_corrections is None or any(
+            m not in flow_gust_corrections for m in strata
+        ):
+            flow_flag = FLOW_ENDPOINT_APPROX_FLAG
+        else:
+            flow_flag = None
 
     return {
         "level_mean": (level_sum / n_texts).tolist(),

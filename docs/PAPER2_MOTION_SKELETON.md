@@ -53,9 +53,9 @@ spectral functionals, for which we ship a tested open-source estimator suite.
 
 | claim | status |
 |---|---|
-| Motion-only coherence exists (gust factor: supra-edge, person-disjoint rep .829, level-invisible, vocab-disjoint) | CONFIRMED, register-local (F10.8/T-GEO-P9; T6 via V6-E2: cross-corpus .200) |
-| Portability follows visibility (level-shadowed motion factors transport .94/.78) | CONFIRMED as empirical law with falsifier (V6-E2) |
-| Person-level motion style (statically invisible individual differences) | ESTABLISHED within-register, rep .777/.784 (V6-E4); portability untested |
+| Motion-only coherence candidate (gust factor: supra-edge, person-disjoint rep .829, level-invisible, vocab-disjoint) | EXPLORATORY, register-local; full-pipeline cross-fit null pending |
+| Portability follows visibility (level-shadowed motion factors transport .94/.78) | FALSIFIABLE HYPOTHESIS from V6-E2, not an empirical law |
+| Person-level motion style candidate (rep .777/.784) | SAME-SAMPLE EXPLORATORY; E4 residualization/axis selection must be cross-fitted before a person-level claim |
 | Gust memory: faint positive corpus mean, CI-solid (+.030 [.014, .048]) | CONFIRMED after exact centering-bias correction (W3; naive negative was artifact) |
 | Memory taxonomy: decaying carry-over / one-step echo / sparse bounce | CONFIRMED construct-by-construct across two leverage-free instruments (W2a×W3×W4) |
 | Even-lag structure at both signs (wcl_20 a2 = +.30; wcl_07 a2 = −.16, both CI-solid) | CONFIRMED (W7 quarter-frequency + W8 triangle) |

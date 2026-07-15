@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUICA V7 External Anchor Freeze Manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "bundle_path", "bundle_sha256", "pre_freeze_label_access",
+    "score_cohort_id", "anchor_cohort_id", "cohort_overlap_count",
+    "multiplicity_plan", "hypotheses"
+  ],
+  "properties": {
+    "bundle_path": {"type": "string", "minLength": 1},
+    "bundle_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "pre_freeze_label_access": {"type": "boolean"},
+    "score_cohort_id": {"type": "string", "minLength": 1},
+    "anchor_cohort_id": {"type": "string", "minLength": 1},
+    "cohort_overlap_count": {"type": "integer", "minimum": 0},
+    "multiplicity_plan": {"type": "object", "minProperties": 1},
+    "hypotheses": {"type": "array", "minItems": 1}
+  }
+}

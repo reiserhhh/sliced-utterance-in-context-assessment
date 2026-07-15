@@ -88,13 +88,11 @@ rather than a clean falsification — PANDORA, even fully uncapped, cannot suppl
 per-user long-text volume for a fair spectral test, sharpening the case for the native
 corpus (N4) as the necessary next instrument.
 
-v6.11 (2026-07-12): T8 formalizes the session's own throughline as a theorem — the
-static battery (range of the averaging operator A, measured rank ~4 via TGEO-P3's RMT
-edge) and the motion layer (ker(A), measured rank >=1 via three independent gated
-instruments: F10.8, E4, W10) are orthogonal by construction, so total personality
-dimensionality is structurally larger than any static instrument (Big5, MBTI, Enneagram,
-or SUICA's own v4 battery) can access — not a probabilistic near-miss but a kernel
-exclusion. Self-critical corollary applied immediately: F16's lone external-anchor hit
+v6.11 (2026-07-12; **superseded by v6.13**): T8 originally overreached from a valid
+operator fact to a personality claim. The valid statement is only that a mean operator
+cannot distinguish paths separated by an element of its kernel. It does not prove that
+the kernel contains stable author differences, questionnaire-independent constructs, or
+personality dimensions. Self-critical corollary applied immediately: F16's lone external-anchor hit
 (wcl_07 x MBTI T/F) is flagged as a likely floor-threshold artifact (its static channel
 missed the .08 floor by only .007 while clearing BH significance), not a clean
 ker(A)-only signal — standing instruction to report paired static/dynamic r+q on every
@@ -118,6 +116,23 @@ corpus assumption owned as the gap (not an executing-agent error). One narrower 
 (rho_pi alone, wcl_60-anchored) stays same-corpus-robust and open for a properly-
 designed follow-up.
 
+v6.13 (2026-07-13): the opportunity-conditioned measurement closure replaces the
+single-text personality reading. The operative model is
+
+    w_uort = mu_C/O(ort) + a_u + B_u z_ort + g_uort,
+
+where opportunity includes length, boundaries, prompt blocks, quotation/list/code
+affordance, numeric density, and information density. `a_u` is a reference-distribution
+level; `B_u` is an author-by-condition response operator; `g` is a colored,
+heteroskedastic innovation field. A path coordinate is not an author object, and an
+author-by-context parameter is not a cross-context trait. The synthetic full assay
+recovers B_u when opportunity is observed (r=.931; own-vs-stranger held-out delta-MSE
+=.152) and degrades sharply when it is hidden (r=.575; own MSE 1.346 vs .158). This
+licenses the procedure inside planted worlds, not a personality interpretation in human
+text. Single-context and single-occasion author claims are refused. Fixed-reference
+split-conformal error calibration reaches coverage .967 at 16 occasions (RMSE .024;
+MDD .076). See `V6_PUZZLE_LEDGER.md` and `../reports/V6_COMPOSITION_AUDIT.md`.
+
 **Lineage.** v3/v4 (this project): the static rind theory — text scores decompose into
 choice, base, and signature channels; frozen v4 battery and composite. v5 (field
 deployment, imported): form-first evolution and the T-geometry mathematical layer
@@ -129,11 +144,110 @@ personality-inference extension. Formal backing: SUICA_THEORY_FORMAL_NOTES_V1/V2
 every number is ledger-traceable (SUICA_CLAIMS_LEDGER.md); every directional prediction
 was committed before its run and its fate is recorded (Section 7).
 
+**Lineage compatibility amendment (2026-07-14).** V6 does not supersede the
+v3/v4 rind result because they target different objects. A new label-free,
+confirmation-only token-slice replication upheld the historical fixed-rind
+conditional-expression direction for first-person, directive, and novelty
+coordinates (n=584; all three bootstrap lower bounds >0) after matching token
+budget and restricting the fixed/mixed calendar-span ratio. A stricter
+comment-event-disjoint counterpart retained only n=32 and is therefore
+inconclusive rather than a reversal. Conversely, discovery-only subreddit
+residualization improved four-coordinate same-author AUC (.600 -> .650) while
+reducing scalar retest reliability for first-person, directive, and novelty
+(-.083/-.078/-.052, all bootstrap intervals below zero). This is a metric and
+estimand divergence: residualized vector geometry is not a replacement for a
+fixed-rind scalar construct, and neither object is a personality factor. See
+`reports/V6_LINEAGE_COMPATIBILITY_SYNTHESIS.md`.
+
+**Observed-opportunity profile amendment (2026-07-14).** A separate label-free
+source audit now distinguishes the event-level residualizer from the *view-level*
+distribution of available expression opportunities. After the pre-existing
+linear surface residualization, late strangers were matched progressively on
+comment/condition amount, ten surface means, ten surface dispersions, sampling
+cadence, and observed subreddit-set overlap. The primary `static_residual`
+strict-caliper row retained 1,303/1,640 confirmation authors (79.45%) and
+remained above chance at AUC=.599 [.589,.612]. The matcher demonstrably reduced
+the observed 26-coordinate profile distance to .843 of random pairing and
+increased community Jaccard by .091. This does not make the remainder a trait:
+the full-support AUC falls .597 -> .577 as observed surface/time/community
+matching is added, and the strict caliper changes both the support and negative
+pool. The licensed conclusion is only an **unknown stable author configuration
+after this observed screen**. Exact semantic topic, role, identity, editing, and
+unobserved opportunity remain live alternatives. See
+`docs/V6_OPPORTUNITY_PROFILE_AUDIT_PROTOCOL.md` and
+`reports/V6_OPPORTUNITY_PROFILE_AUDIT.md`.
+
+**Selection-preserving design amendment (2026-07-14).** The opportunity result
+does not license a universal operation that subtracts topic, situation, or their
+observed proxies. A planted two-world simulation makes the identification issue
+explicit:
+
+\[
+C_{ui}\sim\operatorname{Categorical}\{\operatorname{softmax}(\lambda L a_u+\eta_u)\},
+\qquad
+Y_{ui}=a_u+\mu_{C_{ui}}+B_{u,C_{ui}}+\epsilon_{ui}.
+\]
+
+When free condition choice depends on author position (`lambda > 0`), the
+population condition mean contains \(E[a_u\mid C=c]\); centering it changes the
+level estimand. Across 300 repetitions, raw free-level recovery was .978
+[.975,.981], compared with .960 [.952,.966] after free-condition centering,
+and the held-out choice log-score gain was .316 [.259,.364]. When condition was
+an independent shared nuisance, centering instead improved recovery from .956
+[.934,.972] to .990 [.987,.992]. In both planted worlds, a balanced fixed
+condition phase recovered the level at r=.991 and supplied complete response
+support, whereas the endogenous free phase supplied only .539 [.459,.622]
+response support. Thus the formal V6 collection architecture is **two-phase**:
+free text estimates a selection profile; repeated, balanced fixed prompts
+estimate conditional expression and response contrasts. These are distinct
+mathematical objects, not two preprocessing variants of the same personality
+score. This is a synthetic design theorem only, not evidence for a human trait,
+named factor, or clinical signal. See
+`docs/V6_SELECTION_PRESERVING_DESIGN_PROTOCOL.md` and
+`reports/V6_SELECTION_PRESERVING_DESIGN.md`.
+
+**Two-phase information-budget calibration (2026-07-14).** A second frozen
+simulation grid translates that distinction into a generator-local design
+envelope rather than a human sample-size prescription. In 200 repetitions per
+grid point, one fixed observation per condition failed the response-recovery
+criterion (r=.679 [.647,.711]); two repeats passed. The smallest numerical
+fixed contrast design was two conditions by two repeats (four observations),
+while the predeclared breadth-qualified design was four conditions by two
+repeats (eight observations; response recovery=.792 [.778,.806]). Separately,
+sixteen free observations across four conditions recovered the planted
+selection profile at r=.869 [.825,.898], but only .401 [.325,.492] of authors
+had accidental complete condition support. The implication is architectural,
+not substantive: more free text buys information about \(\pi_u\), not a
+substitute for balanced excitation needed for \(B_u\). See
+`docs/V6_TWO_PHASE_DESIGN_CALIBRATION_PROTOCOL.md` and
+`reports/V6_TWO_PHASE_DESIGN_CALIBRATION.md`.
+
+**Continuous condition-coverage amendment (2026-07-14).** A balanced design
+also needs a valid *coordinate system* for condition/opportunity and coverage
+of its support. In a separate two-dimensional planted world,
+
+\[
+Y_{ui}=a_u+m(z_{ui})+B_u\phi(z_{ui})+\epsilon_{ui},\qquad z\in\mathbb{R}^2,
+\]
+
+the wide exact arm recovered the held-out response function at r=.928
+[.922,.934] with MSE=.008 [.008,.009]. Giving the narrow exact arm the same
+32 observations per author but restricting it to one half of the manifold
+reduced recovery to .740 [.693,.785] and increased MSE to .026 [.022,.030].
+Keeping full schedule coverage but replacing the full condition map with a
+one-coordinate proxy reduced recovery further to .611 [.566,.648]. Hence
+``fixed condition'' means a declared condition representation \(z\), a
+declared response basis \(\phi(z)\), and an auditable coverage criterion, not
+simply a count of equal prompts. The finding is a synthetic context-coverage
+theorem, not validation of any human topic taxonomy, trait, factor, or clinical
+procedure. See `docs/V6_CONTINUOUS_CONDITION_COVERAGE_PROTOCOL.md` and
+`reports/V6_CONTINUOUS_CONDITION_COVERAGE.md`.
+
 ---
 
 ## 1. The object
 
-A person u emits texts; each text is read as a REALIZED PATH: windows k = 0..m−1 of
+An observed author u emits texts; each text is read as a REALIZED PATH: windows k = 0..m−1 of
 fixed token length carry a battery vector w_k ∈ R^p (p = 19, dictionary-disjoint wcl
 clusters + v2 lexica). The V6 generative skeleton per text:
 
@@ -148,28 +262,51 @@ with the static rind decomposition (v4) living inside p_text: y = f_u + b_r + γ
 entering E[w_k] as construct-specific profiles — flow-type (functions of relative
 position t), boundary-type (functions of zone distance), or flat.
 
-The PERSON, in V6, is the generator tuple:
+The **author-conditioned path generator**, in V6, is the provisional tuple:
 
-    P_u = ( μ_u,           level trait vector          — v4 object
-            shape_u,       position profiles           — F10.7 recipes
-            style_u,       motion style: loadings on Σ_flow/Γ factor structure — F11/E4
-            U_u )          personal frame on Gr(k,p)   — F10.3/P6
+    G_u = ( a_u,           fixed-reference author level, not a trait
+            shape_u,       context-conditional position profiles
+            style_u,       candidate motion/loadings coordinates, not a named axis
+            U_u )          individual path frame / machine representation
 
-Each component has its own estimator, its own nulls, and its own data economics (T4).
+Each component has its own estimator, nulls, and data economics (T4). `u` indexes an
+author in the observed corpus; it does not license a psychological property of a person.
+Neither `G_u` nor any component becomes a personality construct until an independently
+identified, same-person, cross-context validation design supplies the required evidence.
 
 ## 2. The measurement mapping (theorem set)
 
-**T1 (aggregation kills motion at 1/m).** Level aggregation reads Cov_L = Π + Γ/m (+
-vanishing flow terms with centered indices). Proof: independence of g_k across windows;
-LLN on the window mean. Univariate face = F8.2's clustered-noise curvature; the φ
-coordinate φ(r) = r/(1−r) makes reliability growth exactly linear, φ(r_W) = W·φ(ρ)
-(F8.1, proof in notes V2). CONSEQUENCE: "stop and the togetherness disappears" is a
-theorem, not a metaphor — any coherence carried by Γ alone is erased by averaging.
+**T1-prime (short-memory aggregation law; corrected 2026-07-12).** Let
+Gamma_h = Cov(g_k,g_{k+h}). For a stationary path,
 
-**T2 (contrast identification).** On m = 3 support with ℓ = (w₂−w₀)/2 and
-q = (w₀−2w₁+w₂)/√6: Cov_ℓ = Σ_flow + Γ/2, Cov_q = Γ, Cov(ℓ, q) = 0; hence
-Σ̂_flow = Cov_ℓ − Cov_q/2 is identified without any permutation machinery. Proof: direct
-computation under (M). This is how flow factors and gust factors are separated (F10.8).
+    Cov(mean(g_0,...,g_{m-1}))
+      = [Gamma_0 + sum_{h=1}^{m-1}(1-h/m)(Gamma_h+Gamma_h^T)] / m.
+
+If sum_h ||Gamma_h|| is finite, this is Omega/m + o(1/m), where Omega is the
+long-run covariance. The old Gamma_0/m statement is the iid special case. Long-memory,
+unit-root, random-slope, and low-frequency periodic worlds need not decay at 1/m and
+must trigger a guard. CONSEQUENCE: aggregation attenuates *short-memory* motion; it does
+not universally erase path information. SIM-W1/W2 license this conditional statement
+inside the registered synthetic worlds only (see V6_SIMULATION_WORLD_SPEC.md).
+
+**T2-prime (contrast mixture and endpoint identification; corrected 2026-07-12).** On
+m=3 support, with B_h=(Gamma_h+Gamma_h^T)/2 and s independent of g,
+
+    Cov(ell) = Sigma_flow + (Gamma_0-B_2)/2
+    Cov(q)   = Gamma_0 - (4/3)B_1 + (1/3)B_2
+    Cov(ell)-Cov(q)/2 = Sigma_flow + (2/3)(B_1-B_2).
+
+Thus the old exact separation holds only when B_1=B_2=0. In general, m=3 identifies a
+mixture, not unique flow. For an m-point endpoint slope d,
+
+    Cov(d) = Sigma_flow
+             + [2Gamma_0-Gamma_{m-1}-Gamma_{m-1}^T]/(m-1)^2.
+
+General recovery requires enough support to estimate the endpoint correction, s
+independent of g, and a non-singular moment map. SIM-W3 constructs two distinct m=3
+worlds with indistinguishable observations (AUC .501) and recovers planted flow at
+m=5/8 when the complete correction is observed. `motion.py` now labels the historical
+Gamma_{m-1}=0 route as a short-memory approximation rather than an exact correction.
 
 **T3 (support identifiability).** On 3-point support, a monotone flow in t and an
 additive boundary-zone model are observationally equivalent; they separate only on
@@ -179,14 +316,15 @@ parameter counting on the five observable (τ, δ) cells (notes V3/F10.7). CONSE
 flow coordinate. Instantiated: first_person transports as a function of relative t
 (deep-interior MAE 1.114 vs zones 4.167 vs constant 1.365 — F10.7/P8b).
 
-**T4 (measurement economics — occasions vs tokens).** Under (M) with N texts of m
-windows: Var(level estimate) ≍ (Var(p) + Γ_c/m)/N — occasion-limited; Var(gust-structure
+**T4 (measurement economics — occasions vs tokens).** Under short-memory (M) with N texts of m
+windows: Var(level estimate) ≍ (Var(p) + Omega_c/m)/N — occasion-limited; Var(gust-structure
 estimate) ≍ 1/(N·(m−2)) — token-limited, accumulating (m−2) contrasts per text. Discrete
 analogue of the drift-vs-diffusion asymmetry in diffusion statistics (drift needs time
 span; diffusion needs sampling frequency). CONSEQUENCE: motion-style descriptors are
-cheap in occasions and expensive in tokens; level traits are the reverse. A single long
-text can, in principle, estimate motion style but never a norm-referenced level — the
-formal basis for position of motion constructs in AI-native, single-document assessment.
+cheap in occasions and expensive in tokens; level estimates are the reverse. A single
+long text can estimate a path descriptor under sufficient within-text support, but
+cannot establish a reproducible author motion style. The latter requires repeated
+independent occasions and condition excitation.
 
 **T5 (nameability, restated from F10.2).** An axis earns a name only if its frame is
 (i) condition-invariant and (ii) person-shared. Empirical status by layer: the four
@@ -196,7 +334,7 @@ the shared frame); position bends PC3/PC4 (P5); so even the static battery's axe
 nameable only as population coordinates, not as person structures. Motion-layer axes are
 unnameable by default and are handled as machine coordinates (constitutive-AI stance).
 
-**T6 (portability follows visibility — new empirical law, falsifiable).** Motion factors
+**T6 (portability-follows-visibility hypothesis, falsifiable).** Motion factors
 WITH a level shadow transport across corpora; statically INVISIBLE structure is
 register-local. Evidence: the first_person-led slope factor crosses Reddit → Essays at
 congruence .940 (second factor .782; static frames .923 at rank 1), while the PANDORA
@@ -228,48 +366,30 @@ test undecidable — recorded, not forced). Personality reading: texture paramet
 register-anchored machine coordinates (T5/T6 apply); their person-level stability is
 untested (native-corpus item).
 
-**T8 (dimensionality is additive across the aggregation kernel; no static instrument
-can see all of personality — 2026-07-12, theory-enrichment track).** Let A be the
-person-level averaging operator that ANY static instrument is a function of —
-window-mean scoring, Big5/MBTI/Enneagram self-report (a person's own recalled/averaged
-self-judgment is itself an aggregation), or SUICA's own v4 battery. For any such linear
-A, range(A) and ker(A) are orthogonal complements — a pure linear-algebra fact, not an
-empirical claim. T1 already proves gust coherence lies in ker(A) (erased at 1/m by the
-window-mean LLN). CONSEQUENCE: total identifiable personality-signal dimensionality is
-AT LEAST rank(range(A)) + rank(ker(A) ∩ replicable structure) — strictly larger than
-what range(A) alone carries, and NO instrument built from A (however comprehensive its
-trait coverage) can ever recover ker(A)'s content, by construction, not by chance.
+**T8-prime (path decomposition and conditional innovation rank; corrected
+2026-07-12).** For the averaging operator
 
-Both ranks are independently MEASURED, not assumed: rank(range(A)) ≈ 4, via TGEO-P3's
-Marchenko-Pastur edge test on the static v4 battery (exactly 4 supra-edge components,
-cross-half congruence .985/.980/.932/.939). rank(ker(A) ∩ replicable) ≥ 1, certified
-through THREE independent gated instruments: F10.8's B-gust1 (supra-edge, replication
-.829, level-invisible at noise), E4's person-level motion style (comp1 λ=2.137,
-replication .784, after explicitly residualizing against the static top-4 frame — a
-direct empirical test that dynamic structure survives orthogonalization, not an
-assumption of it), and W10's person-anchored susceptibility (split-half r=.441, built
-from within-text-detrended residuals — orthogonal to level by construction). So the
-static battery's own measured rank (~4) is a LOWER BOUND on total personality
-dimensionality, not the whole of it — classical trait theory's "state variance" (the
-part averaged away as noise) contains at least one further, independently-replicating,
-BETWEEN-PERSON dimension that the trait/state split has always assumed was noise.
+    A_m=(1_m^T/m) tensor I_p : R^(mp) -> R^p,
 
-**Self-critical corollary (apply on every future external-anchor result).** Under a
-CLEAN model, an object purely in ker(A) has EXACTLY ZERO population correlation with any
-range(A)-based measure (Big5, MBTI, Enneagram) — not "small," zero, by the orthogonality
-argument above. So F16's one surviving DYNAMIC-ONLY cell (wcl_07 x MBTI T/F, r=-.093) is
-mildly surprising under the idealized model, and this is worth resolving rather than
-celebrating uncritically: wcl_07's STATIC channel on that same cell had r=-.073, q=1.7e-4
-— it CLEARED BH significance and missed the .08 effect floor by only .007. This means
-wcl_07 was likely never a clean ker(A)-only object for this anchor; it more plausibly sits
-close to a BOTH classification that a hard .08 floor pushed into DYNAMIC-ONLY. Standing
-instruction: every future dynamic-only classification must report its paired static
-r/q alongside the dynamic r/q (not just the pass/fail label) so floor-threshold artifacts
-are visible on the page, not laundered into a clean-sounding category name. This does not
-retract T8's dimensionality argument (rank(ker(A))≥1 is independently certified by THREE
-OTHER instruments that never touch external anchors at all) — it only means F16's
-specific external-validity anecdote is less clean than first reported, and F17 (in
-progress) is registered to report exactly this pairing for every hit it finds.
+the valid path-space decomposition is
+
+    R^(mp) = ran(A_m*) direct-sum ker(A_m),
+
+not `range(A) orthogonal ker(A)`: the latter generally live in different spaces.
+This path-space identity does not make Big5, MBTI, Enneagram, or self-report functions
+of A_m, and it does not imply that dynamic person parameters have zero population
+correlation with questionnaire scores.
+
+Let a_u denote static person parameters and d_u dynamic person parameters. Incremental
+person-level dimensionality is licensed only through the conditional innovation
+
+    Sigma_(d|a) = Sigma_dd - Sigma_da Sigma_aa^+ Sigma_ad.
+
+An added dimension requires a cross-fitted, stable positive rank of Sigma_(d|a), with
+an uncertainty/identifiability guard near the eigenvalue boundary. SIM-W8 verifies the
+Schur computation in easy synthetic worlds and explicitly refuses the boundary band;
+it does NOT prove a new human personality dimension. Earlier E4/W10 findings remain
+exploratory because their axis-selection/null procedures require cross-fitted reruns.
 
 ## 3. Theorem-similarity table (advanced tools ↔ SUICA objects)
 
@@ -278,14 +398,14 @@ progress) is registered to report exactly this pairing for every hit it finds.
 | Itô/semimartingale decomposition (drift + martingale) | (M): level + flow·k + gust | which statistics read which layer; differencing reads the martingale part | our "time" is token position; increments are windows, not infinitesimal |
 | Realized covariance vs microstructure noise; Epps-type locality | gust matrix Γ vs level/drift structure; T6 portability law | portable-fundamental vs local-texture split | no trading mechanism; "market" = register/genre; the bid-ask-bounce sub-analogy was tested and RETRACTED (W2a: axes white; wcl_60 the lone sparse-burst bouncer) |
 | MA(1) moment inversion; Δ² prewhitening (exact ρ1 = −2/3 under iid) | F12 identities: Γ̂0 = (7S0+8·symS1)/10, B̂ = (6Γ̂0−S0)/8; leverage-free dynamics test | exact estimator + audit of our own flow estimator (Σ̂ = Σ_flow + (2/3)B on m=3) | m = 3 support cannot separate Σ_flow from B (F12.2 theorem) |
-| Martingale LLN / averaging | T1: Γ/m attenuation — "stop and coherence disappears" | exact | — |
+| Short-memory LLN / long-run covariance | T1-prime: Omega/m attenuation | exact only under stationary summable autocovariance | long memory, roots, slopes and periodicity require guards |
 | Spearman–Brown as Möbius flow; projective line (F8) | φ(r) = r/(1−r) linearization; composites blend in φ | exact theorem | — |
 | Marchenko–Pastur edge (RMT) | factor claims vs shuffle edges (P3, F10.8, F11) | exact null construction | heteroscedasticity → empirical edges preferred |
 | Grassmann manifold, principal angles, frame bundles | condition-indexed frames V(t); personal frames U_u; nameability = flat shared section (T5) | distance/holonomy language; instruments P4–P6 | no connection is estimated; "flatness" tested only at sampled conditions |
 | Boundary-layer theory / matched asymptotics (inner-outer) | position profiles: zone coordinates vs similarity coordinate t (F10.7) | coordinate-race DESIGN; identifiability (T3) | composite inner+outer model gave no CV gain at current SNR (E2b) — analogy is a design tool, not a fitted necessity |
 | Group-theoretic invariance (F7 lattice) | every null = subgroup choice; artifact = statistic constant on a larger orbit | exact | — |
 | Drift-vs-diffusion estimation asymmetry | T4 measurement economics | rate structure (occasions vs tokens) | constants differ; discrete windows |
-| Orthogonal direct-sum decomposition (range/kernel of a linear operator); classical trait-state variance split | T8: range(A)=static battery (rank~4, P3) ⊕ ker(A)=motion layer (rank>=1, F10.8/E4/W10) | the STRUCTURAL (not probabilistic) reason no static instrument sees ker(A); reframes "state variance" from noise to a second trait layer | orthogonality of range/ker is exact for linear A; whether real self-report/averaging is close enough to linear A for the bound to bind tightly is assumed, not separately proven |
+| Adjoint-space decomposition and Schur complement | T8-prime: ran(A*) direct-sum ker(A); Sigma_(d|a) | separates path geometry from conditional person-level innovation | does not identify a human dimension; E4/W10 require cross-fitted reruns |
 
 ## 4. Extension to personality inference (人格推論への拡張)
 
@@ -296,17 +416,17 @@ progress) is registered to report exactly this pairing for every hit it finds.
   constructs → t-regression; boundary-type → zone offsets (open/close/interior);
   plateau → interior-only. GENRE-ANCHORED: directive and wcl_22 flip signs between
   Reddit and Essays (E2a) — position norms must be built per register.
-- MOTION STYLE (style_u): person-level loadings on motion factors — established as
-  statically invisible, replicating individual differences (E4: replication .777–.784
-  with static congruence ≤ .03). By construction, NO level-reading instrument
-  (questionnaires included) can measure them: they are erased by any averaging (T1).
-  They are also register-anchored (T6) — a motion style is a (person × register)
-  property until proven portable.
+- MOTION CANDIDATE (style_u): person-level loadings on exploratory path summaries.
+  Earlier E4 analyses reported replication .777–.784 with static congruence ≤ .03,
+  but later cross-fitted audits did not identify stable shared axes. Averaging erases
+  some path information; this does not imply that questionnaires cannot correlate
+  with dynamic person parameters. The candidate is an anonymous person-by-register
+  path object until reliability, source controls, and external anchors are supplied.
 - FRAME (U_u): orientation as identity (F10.3/P6); principal-angle metric; exploratory.
 
 **4.2 Inference licenses (what may be claimed today).**
-- Motion-style dimensions exist, replicate, and are orthogonal to the static battery —
-  Tier-U facts.
+- Distributed author/path information can survive outside low-dimensional static
+  summaries, but a stable shared motion-factor inventory has not been confirmed.
 - ANY CONFIRMATORY claim linking motion styles to Big5/MBTI or clinical outcomes is
   UNLICENSED: it requires a new prospective seal (not opening #2's registered
   candidates). The native corpus (OP-36) and the single-text sufficiency instrument
@@ -346,7 +466,7 @@ line against the F12 identities, and covered by 12 synthetic-recovery tests (MA(
 recovery at θ ∈ {0, .4}, planted-flow recovery after gust correction, the T4
 estimability guard, leak-drop semantics), grown through the W6b/W7b deployment cycles
 (period2_energy/truncated-mode tests, hybrid-functional shape-pair tests); full release
-package suite currently 72/72 passing (reverified 2026-07-12; this line was stale at
+package suite currently 86/86 passing (reverified 2026-07-12 after the simulation and endpoint-correction additions; this line was stale at
 "59/59" from the v6.1 deployment and is corrected here). Known finite-sample θ̂ bias
 documented in the module and listed as an open instrument (Section 6).
 

@@ -1,0 +1,17 @@
+{
+  "profile": "quick",
+  "seed": 20260714,
+  "repetitions": 20,
+  "persons": 120,
+  "features": 6,
+  "conditions": 4,
+  "free_trials": 16,
+  "fixed_repeats": 3,
+  "noise_scale": 0.28,
+  "selection_signal_strength": 1.8,
+  "selection_signal_condition_scale": 0.0,
+  "condition_nuisance_selection_strength": 0.0,
+  "condition_nuisance_condition_scale": 0.9,
+  "minimum_fixed_response_recovery": 0.6,
+  "maximum_free_response_support": 0.9
+}

@@ -1,0 +1,30 @@
+{
+  "occasion_scope": "global_calendar_occasion",
+  "session_order_plan": {
+    "order_source": "recorded_timestamp",
+    "counterbalancing": "predeclared",
+    "same_day_rule": "predeclared"
+  },
+  "carryover_control": {
+    "washout_or_spacing": "predeclared",
+    "prompt_order_randomized": true,
+    "period_effect_modeled": true
+  },
+  "bundle_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "d_study_target": "both_separately",
+  "variance_estimator_ci_method": {
+    "estimator": "restricted_maximum_likelihood_or_bayesian_hierarchical",
+    "confidence_interval": "participant_cluster_bootstrap_or_posterior_interval"
+  },
+  "multivariate_geometry_outcome": {
+    "estimand": "reference_relative_landmark_distance_profile",
+    "distance_or_kernel": "regularized_mahalanobis_landmark_distance",
+    "summary_rule": "predeclared_multivariate_generalizability_and_profile_distance"
+  },
+  "scoring_perturbation_plan": {
+    "scorer_or_embedding_runtime": "frozen_primary_plus_predeclared_alternate",
+    "window_or_operator": "registered_operator_family",
+    "reference_norm": "nested_reference_resampling",
+    "dependency_resampling": "participant_outer_source_inner_joint_bootstrap"
+  }
+}

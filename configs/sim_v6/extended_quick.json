@@ -1,0 +1,15 @@
+{
+  "profile": "quick",
+  "seed": 6071207,
+  "mc": 24,
+  "folds": 3,
+  "bootstrap": 199,
+  "var_n": 180,
+  "var_coupling": 0.32,
+  "cp_n": 128,
+  "cp_train_end": 80,
+  "cp_location": 64,
+  "cp_window": 16,
+  "choice_persons": 18,
+  "choice_length": 72
+}

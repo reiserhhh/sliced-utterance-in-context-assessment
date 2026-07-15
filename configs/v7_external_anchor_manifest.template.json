@@ -1,0 +1,21 @@
+{
+  "bundle_path": "/absolute/path/to/frozen_bundle.json",
+  "bundle_sha256": "replace_with_64_lowercase_hex_characters",
+  "pre_freeze_label_access": false,
+  "score_cohort_id": "development_score_cohort_id",
+  "anchor_cohort_id": "untouched_anchor_cohort_id",
+  "cohort_overlap_count": 0,
+  "multiplicity_plan": {
+    "omnibus": "frozen-score omnibus",
+    "component_followups": "max_t_or_freedman_lane",
+    "missing_data_rule": "predeclared complete-case or imputation rule"
+  },
+  "hypotheses": [
+    {
+      "id": "H-ANCHOR-001",
+      "score_components": ["SU7-FC-XXXX@version"],
+      "external_outcome": "predeclared_anchor_name",
+      "direction": "two_sided_or_predeclared_direction"
+    }
+  ]
+}

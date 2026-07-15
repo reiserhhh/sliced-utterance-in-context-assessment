@@ -1,0 +1,28 @@
+{
+  "version": "v7-operator-smoke-1",
+  "seed": 20260714,
+  "max_users": 180,
+  "min_comments_per_user": 12,
+  "max_comments_per_user": 32,
+  "min_tokens_per_unit": 12,
+  "mask_personality_terms": false,
+  "split_proportions": {
+    "discovery": 0.6,
+    "calibration": 0.2,
+    "confirmation": 0.2
+  },
+  "representation": {
+    "max_features": 5000,
+    "ngram_range": [1, 2],
+    "svd_dimensions": 24,
+    "factor_count": 4,
+    "bootstrap_repetitions": 24
+  },
+  "operators": [
+    {"name": "whole", "kind": "whole"},
+    {"name": "native", "kind": "native"},
+    {"name": "fixed_128", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128},
+    {"name": "semantic", "kind": "semantic", "max_tokens": 160},
+    {"name": "nested", "kind": "nested", "members": ["native", "fixed_128", "semantic"]}
+  ]
+}

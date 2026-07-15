@@ -75,7 +75,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
+from suica_core.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
 from scripts.run_suica_tgeo_p7_flow_curve_v1 import build_windows  # noqa: E402
 import scripts.run_suica_v6_e2_essays_motion_v1 as e2mod  # noqa: E402
 import scripts.run_suica_v6_w2a_delta2_dynamics_v1 as w2a  # noqa: E402

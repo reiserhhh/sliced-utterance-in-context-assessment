@@ -1,0 +1,92 @@
+{
+  "run_name": "SUICA_V6_JOINT_PROCESS_STAGE_J1",
+  "seed": 20260715,
+  "namespace": "suica-v6-joint-process-j1",
+  "source_contract": {
+    "required_columns": ["author", "body", "created_utc", "subreddit"],
+    "selection_variable": "subreddit",
+    "selection_is_signal_candidate": true,
+    "primary_observed_opportunity_variables": [],
+    "text_length_policy": "sensitivity_only_not_primary_adjustment",
+    "conditional_expression_separation": "not_identified_from_raw_pandora_fields"
+  },
+  "split": {
+    "discovery_buckets": [0, 49],
+    "calibration_buckets": [50, 74],
+    "confirmation_buckets": [75, 99]
+  },
+  "calibration": {
+    "simulations": 80,
+    "n_authors": 300,
+    "candidate_support_pairs": [
+      {"min_events": 24, "min_transitions": 8},
+      {"min_events": 48, "min_transitions": 16},
+      {"min_events": 72, "min_transitions": 24},
+      {"min_events": 96, "min_transitions": 32},
+      {"min_events": 120, "min_transitions": 40}
+    ],
+    "contexts": 8,
+    "expression_dimensions": 6,
+    "rff_dimensions": 48,
+    "signal_regimes": {
+      "null": {
+        "selection_sd": 0.0,
+        "expression_sd": 0.0,
+        "transition_sd": 0.0
+      },
+      "weak": {
+        "selection_sd": 0.10,
+        "expression_sd": 0.10,
+        "transition_sd": 0.08
+      },
+      "moderate": {
+        "selection_sd": 0.20,
+        "expression_sd": 0.20,
+        "transition_sd": 0.16
+      }
+    },
+    "minimum_weak_auc_median": 0.53,
+    "minimum_weak_auc_q05": 0.52,
+    "minimum_moderate_auc_q05": 0.60,
+    "maximum_null_promotion_rate": 0.05,
+    "promotion_auc": 0.60
+  },
+  "j0": {
+    "minimum_endpoint_authors": 300,
+    "minimum_body_characters": 10,
+    "technical_replication": {
+      "views": 2,
+      "nonoverlap_block_size": 3
+    },
+    "calibration_artifact": "results/v6_joint_process_stage_j1_calibration/calibration_decision.json",
+    "prohibited_before_j1": [
+      "embedding_endpoint_fitting",
+      "trait_or_label_reads",
+      "topic_residualization",
+      "matched_topic_requirement",
+      "posthoc_support_threshold_changes"
+    ]
+  },
+  "j1_preview": {
+    "representations": ["word_1to2_tfidf_svd", "char_3to5_tfidf_svd"],
+    "fit_cohort": "discovery",
+    "text_svd_dimensions": 48,
+    "text_max_features": 40000,
+    "selection_hash_dimensions": 128,
+    "event_rff_dimensions": 64,
+    "pair_rff_dimensions": 64,
+    "event_rff_weight_sd": 0.32,
+    "pair_rff_weight_sd": 0.22,
+    "permutations": 200,
+    "minimum_confirmation_authors": 300,
+    "promotion": {
+      "minimum_joint_auc": 0.55,
+      "maximum_alignment_permutation_p": 0.01,
+      "minimum_cross_rep_geometry_r": 0.2
+    },
+    "technical_split": "evenly_spaced_disjoint_three_event_blocks",
+    "primary_components": ["selection", "expression", "event_joint", "transition_joint", "joint"],
+    "no_external_labels": true,
+    "no_personality_or_clinical_claim": true
+  }
+}

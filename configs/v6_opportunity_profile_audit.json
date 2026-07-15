@@ -1,0 +1,16 @@
+{
+  "seed": 20260714,
+  "primary_object": "static_residual",
+  "profile_layers": [
+    "coarse",
+    "surface_mean",
+    "surface_distribution",
+    "surface_time"
+  ],
+  "community_weight": 1.0,
+  "strict_condition_jaccard": 0.1,
+  "minimum_caliper_coverage": 0.75,
+  "candidate_pool": 25,
+  "stranger_draws": 20,
+  "bootstrap_iterations": 500
+}

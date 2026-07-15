@@ -65,7 +65,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import tokenize  # noqa: E402
+from suica_core.suica import tokenize  # noqa: E402
 import scripts.run_suica_c2_purity_all19_v1 as a19  # noqa: E402
 import scripts.run_suica_v6_e2_essays_motion_v1 as e2  # noqa: E402
 

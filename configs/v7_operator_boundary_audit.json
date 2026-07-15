@@ -1,0 +1,33 @@
+{
+  "version": "v7.1-operator-boundary-audit-1",
+  "seed": 20260714,
+  "max_users": 180,
+  "min_comments_per_user": 12,
+  "max_source_comments_per_user": 32,
+  "max_source_tokens_per_user": 4096,
+  "max_units_per_user": 128,
+  "min_tokens_per_unit": 12,
+  "mask_personality_terms": false,
+  "source_bootstrap_repetitions": 12,
+  "source_disjoint_repetitions": 6,
+  "permutation_repetitions": 250,
+  "metric_bootstrap_repetitions": 300,
+  "representation": {
+    "max_features": 5000,
+    "ngram_range": [1, 2],
+    "svd_dimensions": 24,
+    "factor_count": 4
+  },
+  "operators": [
+    {"name": "whole", "kind": "whole"},
+    {"name": "native", "kind": "native"},
+    {"name": "sentence_pack_160", "kind": "semantic", "max_tokens": 160},
+    {"name": "fixed_128_cross", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross"},
+    {"name": "fixed_128_within_comment", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "within"},
+    {"name": "fixed_128_boundary_marker", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross_marker"},
+    {"name": "fixed_128_offset64", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross", "offset_tokens": 64},
+    {"name": "fixed_128_hash_offset", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross", "offset_strategy": "author_hash"},
+    {"name": "fixed_64_cross", "kind": "fixed", "window_tokens": 64, "stride_tokens": 64, "source_boundary_mode": "cross"},
+    {"name": "fixed_256_cross", "kind": "fixed", "window_tokens": 256, "stride_tokens": 256, "source_boundary_mode": "cross"}
+  ]
+}

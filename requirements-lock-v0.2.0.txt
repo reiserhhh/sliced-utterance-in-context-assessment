@@ -1,0 +1,12 @@
+# Exact environment used for the SUICA v0.2.0 release audit on 2026-07-15.
+# Optional embedding/LLM packages are intentionally excluded from this core lock.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+statsmodels==0.14.6
+pyarrow==23.0.1
+joblib==1.5.3
+pytest==9.0.3
+fugashi==1.5.2
+unidic-lite==1.0.8

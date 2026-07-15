@@ -4,7 +4,7 @@ compare against the v4 battery's purity results. Label-free (Tier-U dev
 users only; no criterion labels touched anywhere).
 
 Source of the v5 formulas (ported VERBATIM, with unit notes below):
-  /Volumes/projects/trading-agent/trading-agent-claude/
+  a separately obtained trading-agent checkout (not required by this script).
     scripts/run_suica_v5_form_first_retest_285a_mu.py   (lines ~146-245)
     docs/SUICA_V5_FIELD_EVOLUTION_PROPOSAL_20260710.md  (design)
     docs/SUICA_V5_P1_FORM_FIRST_RESULTS_20260710.md     (their gate results)
@@ -50,7 +50,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import scripts.run_suica_c2_purity_all19_v1 as a19  # noqa: E402
-from project_persona.suica import TOKEN_RE  # noqa: E402
+from suica_core.suica import TOKEN_RE  # noqa: E402
 
 OUT_DIR = ROOT / "results" / "suica_v5port_form_battery"
 V4_CSV = ROOT / "results" / "suica_c2_purity_all19_v1" / "all19_purity.csv"

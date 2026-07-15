@@ -1,0 +1,254 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.0",
+  "evidence_id": "W7_REPRESENTATION_TRANSPORT",
+  "status": "REPRESENTATION_TRANSPORT_CALIBRATION_PASS",
+  "decision": {
+    "status": "REPRESENTATION_TRANSPORT_CALIBRATION_PASS",
+    "checks": {
+      "common_coordinate_naive_retrieval": true,
+      "rotation_requires_paired_alignment": true,
+      "affine_requires_paired_alignment": true,
+      "unpaired_orientation_refusal_declared": true
+    },
+    "claim_boundary": "Synthetic transport calibration only. A frozen SUICA procedure may be reused in a target domain, but source numerical coordinates, landmarks, norms and factor labels are not transferable without the appropriate paired or independently validated alignment evidence."
+  },
+  "aggregate_tables": {
+    "summary.csv": [
+      {
+        "world": "common_coordinate",
+        "metric": "paired_relative_distance_spearman",
+        "n": "120",
+        "mean": "0.9918515607204604",
+        "q025": "0.990284262110484",
+        "q975": "0.9933032152106325"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "naive_coordinate_r2",
+        "n": "120",
+        "mean": "0.9927396986331283",
+        "q025": "0.9919767469401999",
+        "q975": "0.993423391506493"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "naive_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "procrustes_coordinate_r2",
+        "n": "120",
+        "mean": "0.9923261268639815",
+        "q025": "0.9915800671700062",
+        "q975": "0.9930864131103779"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "procrustes_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "affine_coordinate_r2",
+        "n": "120",
+        "mean": "0.9918486212919899",
+        "q025": "0.9909602571211773",
+        "q975": "0.9926306816459897"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "affine_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "separate_whitened_distance_spearman",
+        "n": "120",
+        "mean": "0.990951565064138",
+        "q025": "0.9890266624765203",
+        "q975": "0.992762478884903"
+      },
+      {
+        "world": "common_coordinate",
+        "metric": "source_target_covariance_frobenius_gap",
+        "n": "120",
+        "mean": "0.09512881315117447",
+        "q025": "0.07899381312900502",
+        "q975": "0.11404987077431751"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "paired_relative_distance_spearman",
+        "n": "120",
+        "mean": "0.8194989146983072",
+        "q025": "0.7812096483541429",
+        "q975": "0.8520819307979823"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "naive_coordinate_r2",
+        "n": "120",
+        "mean": "-1.8783060838164412",
+        "q025": "-2.301220605020296",
+        "q975": "-1.395866675692876"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "naive_retrieval_accuracy",
+        "n": "120",
+        "mean": "0.015208333333333334",
+        "q025": "0.0",
+        "q975": "0.050208333333333265"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "procrustes_coordinate_r2",
+        "n": "120",
+        "mean": "0.6919087631304363",
+        "q025": "0.6648695009657973",
+        "q975": "0.720135778276058"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "procrustes_retrieval_accuracy",
+        "n": "120",
+        "mean": "0.9990972222222223",
+        "q025": "0.9916666666666667",
+        "q975": "1.0"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "affine_coordinate_r2",
+        "n": "120",
+        "mean": "0.9908407363689347",
+        "q025": "0.9898313793386008",
+        "q975": "0.9917995855899725"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "affine_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "separate_whitened_distance_spearman",
+        "n": "120",
+        "mean": "0.9899303121754068",
+        "q025": "0.9872636214272117",
+        "q975": "0.9917137370080565"
+      },
+      {
+        "world": "unknown_affine",
+        "metric": "source_target_covariance_frobenius_gap",
+        "n": "120",
+        "mean": "5.128615257458846",
+        "q025": "4.59795071813785",
+        "q975": "5.754142166529147"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "paired_relative_distance_spearman",
+        "n": "120",
+        "mean": "0.9919525051948085",
+        "q025": "0.9902961391716416",
+        "q975": "0.9931791388895842"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "naive_coordinate_r2",
+        "n": "120",
+        "mean": "-1.3590177689705194",
+        "q025": "-1.6019552603194869",
+        "q975": "-1.0731995489337778"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "naive_retrieval_accuracy",
+        "n": "120",
+        "mean": "0.0018055555555555557",
+        "q025": "0.0",
+        "q975": "0.008541666666666595"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "procrustes_coordinate_r2",
+        "n": "120",
+        "mean": "0.9923222126029625",
+        "q025": "0.9916157081910997",
+        "q975": "0.9931133531043077"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "procrustes_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "affine_coordinate_r2",
+        "n": "120",
+        "mean": "0.991830400717123",
+        "q025": "0.9911294087168137",
+        "q975": "0.9926784316176612"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "affine_retrieval_accuracy",
+        "n": "120",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "separate_whitened_distance_spearman",
+        "n": "120",
+        "mean": "0.9910278528337211",
+        "q025": "0.9885680611335983",
+        "q975": "0.9928127391572408"
+      },
+      {
+        "world": "unknown_rotation",
+        "metric": "source_target_covariance_frobenius_gap",
+        "n": "120",
+        "mean": "1.1215298186316423",
+        "q025": "0.8499383271732156",
+        "q975": "1.3641086545373544"
+      },
+      {
+        "world": "unpaired_isotropic_orientation_ambiguity",
+        "metric": "source_target_covariance_frobenius_gap",
+        "n": "120",
+        "mean": "1.1219944414098082",
+        "q025": "0.8814216528479647",
+        "q975": "1.417129114086653"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "49f94144964ad57cda92f99809de9098a4aba72acbd2d2792747e544a4f8e1d5",
+    "summary.csv": "92690bbe0df7c5e25b81433fc10f4539095c1885251e65ac68b08395e62b8cf9"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}

@@ -122,7 +122,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
+from suica_core.suica import PERSONALITY_LEAK_RE, tokenize  # noqa: E402
 import scripts.run_suica_c2_purity_all19_v1 as a19  # noqa: E402
 import scripts.run_suica_expl3_motion_weightfit_v1 as expl3  # noqa: E402
 
@@ -132,7 +132,7 @@ import scripts.run_suica_expl3_motion_weightfit_v1 as expl3  # noqa: E402
 # package shadowing hazard (both repos ship a same-named, __init__.py-less PEP 420
 # "scripts" package; inserting RELEASE_ROOT first would silently resolve the
 # "scripts.*" imports above against the RELEASE repo's non-identical copies).
-RELEASE_ROOT = Path("/Volumes/mobile3/projects/Sliced Utterance In-Context Assessment")
+RELEASE_ROOT = ROOT
 if str(RELEASE_ROOT) not in sys.path:
     sys.path.append(str(RELEASE_ROOT))
 from suica_core import motion as motion_mod  # noqa: E402  (memory_by_construct, Gamma0, period2/shape)

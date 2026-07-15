@@ -30,7 +30,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.run_suica_v5port_form_battery_pandora_v1 import v5_slice_features  # noqa: E402
-from project_persona.suica import TOKEN_RE  # noqa: E402
+from suica_core.suica import TOKEN_RE  # noqa: E402
 
 TIER_DIR = ROOT / "data_sets" / "prepared" / "suica_tiers_v2"
 BIG5_LABELS = ROOT / "data_sets" / "prepared" / "pandora_official" / "pandora_official_big5_prepared.csv"

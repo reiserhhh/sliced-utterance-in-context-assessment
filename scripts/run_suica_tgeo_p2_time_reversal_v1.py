@@ -39,7 +39,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from project_persona.suica import PERSONALITY_LEAK_RE, fixed_token_slices_for_text  # noqa: E402
+from suica_core.suica import PERSONALITY_LEAK_RE, fixed_token_slices_for_text  # noqa: E402
 from scripts.suica_v2_lib import score_slices_v2  # noqa: E402
 
 TIER_DIR = ROOT / "data_sets" / "prepared" / "suica_tiers_v2"

@@ -1,5 +1,10 @@
 # SUICA Freeze & Independent Release Plan v1
 
+> Historical v0.1 plan. The realized v0.2.0 freeze is specified in
+> `V7_LOCKBOX_V020.md` and `RELEASE_NOTES_V020.md`. Opening #1 of the legacy P5
+> lockbox was spent after this plan was written; this text is retained for
+> provenance rather than rewritten as if it had predicted the result.
+
 Created: 2026-07-05. Status: PLAN (execution gated on the reviewer-readiness
 sweep and user go-ahead; precedes OP-3 lockbox opening by design).
 

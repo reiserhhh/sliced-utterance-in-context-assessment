@@ -1,0 +1,25 @@
+{
+  "version": "v7.2-source-disjoint-support-sensitivity-48-1",
+  "seed": 20260715,
+  "max_users": 240,
+  "min_comments_per_user": 48,
+  "max_source_comments_per_user": 48,
+  "max_source_tokens_per_user": 6144,
+  "max_units_per_user": 192,
+  "min_tokens_per_unit": 12,
+  "shared_rank": 4,
+  "ridge_alpha": 10.0,
+  "permutation_iterations": 199,
+  "operators": [
+    {"name": "whole", "kind": "whole"},
+    {"name": "native", "kind": "native"},
+    {"name": "sentence_pack_160", "kind": "semantic", "max_tokens": 160},
+    {"name": "fixed_128_cross", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "cross"},
+    {"name": "fixed_128_within_comment", "kind": "fixed", "window_tokens": 128, "stride_tokens": 128, "source_boundary_mode": "within"}
+  ],
+  "representations": [
+    {"name": "WORD12_TFIDF_SVD24", "analyzer": "word", "ngram_range": [1, 2], "max_features": 5000, "svd_dimensions": 24},
+    {"name": "CHAR35_TFIDF_SVD24", "analyzer": "char", "ngram_range": [3, 5], "max_features": 5000, "svd_dimensions": 24}
+  ],
+  "family": "exploratory_source_support_sensitivity_after_primary_32_comment_result"
+}
