@@ -94,6 +94,7 @@ def _critical_paths() -> list[str]:
         "configs/v7*.json",
         "schemas/v7*.json",
         "tests/test_v7*.py",
+        "tests/test_v6_pipeline_power.py",
         "docs/V7*.md",
         "reports/V7*.md",
         "release/v0.2.0/evidence/*.json",

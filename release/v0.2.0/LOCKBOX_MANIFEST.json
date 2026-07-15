@@ -3,7 +3,7 @@
   "release_version": "0.2.0",
   "status": "V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES",
   "highest_supported_claim": "OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN",
-  "n_files": 155,
+  "n_files": 156,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -427,8 +427,8 @@
     },
     {
       "path": "scripts/build_suica_v020_release_bundle.py",
-      "bytes": 5262,
-      "sha256": "c813806dcc043eef6ab5b75e5d3e256a8990951243e74e14de6c3c779eb092e3"
+      "bytes": 5305,
+      "sha256": "90d9f01dfe722ba1a3d8594a7ea447e624ba42f57742cc22d70f4179df2c6419"
     },
     {
       "path": "scripts/build_suica_v7_run_manifest.py",
@@ -664,6 +664,11 @@
       "path": "suica_sim/v7_representation_transport.py",
       "bytes": 8362,
       "sha256": "74ce9d714c8c402d0865b098fc0878c90fb61696c6837d26d4361e3c2e9eac57"
+    },
+    {
+      "path": "tests/test_v6_pipeline_power.py",
+      "bytes": 712,
+      "sha256": "10feb13eed454e7f53def31c6e692c31d645b20211e5a9d735e79bfa0d19cb67"
     },
     {
       "path": "tests/test_v7_closure.py",
