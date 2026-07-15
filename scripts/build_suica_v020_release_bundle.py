@@ -122,6 +122,8 @@ def _critical_paths() -> list[str]:
         "docs/CLAIMS_LEDGER.md",
         "docs/OPEN_PROBLEMS.md",
         "docs/PREREGISTRATION.md",
+        "docs/THEORY_FORMAL_NOTES_V3.md",
+        "docs/THEORY_V6.md",
         "docs/WORKED_EXAMPLE_MANUAL.md",
         "docs/V7_LOCKBOX_V020.md",
         "docs/RELEASE_NOTES_V020.md",

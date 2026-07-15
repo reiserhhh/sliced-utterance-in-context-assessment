@@ -1280,8 +1280,9 @@ like its genuine MBTI-T/F result in F16. The two external-anchor results for wcl
 qualitatively different, not just different in size.
 (c) CONFIRMED (0, within 0-3).
 **Soft-kill TRIGGERED (0 dynamic-only cells) — per the pre-committed framing, this does
-NOT retroactively falsify W10/T8** (rank(ker(A))>=1 remains independently certified by
-THREE OTHER anchor-free instruments: F10.8, E4, W10). It narrows wcl_07's finding from
+not by itself falsify the narrow T8 operator statement that averaging can erase path
+contrasts. F10.8, E4, and W10 motivate a residual/path-structure candidate; they do not
+independently certify a population kernel rank or a psychological dimension.** It narrows wcl_07's finding from
 "trait-general thinking/feeling-style signal" to "specific to MBTI's own T/F axis" —
 Enneagram, a structurally different (typological, not dimensional) taxonomy built from
 an almost-identical user population, does not replicate it.

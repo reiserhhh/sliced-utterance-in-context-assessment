@@ -68,9 +68,10 @@ v6.9 (2026-07-12): F16 swept the full static/dynamic/hybrid space (19 constructs
 anchor traits x PANDORA-Big5/PANDORA-MBTI/Essays-dev, BH-FDR per channel) instead of one
 hand-built composite. Result: 238 neither / 24 static-only / 3 both / **1 dynamic-only**
 — wcl_07 (the recurring motion-anomalous construct) x MBTI T/F, surviving 266-cell FDR
-correction; the program's first EXTERNAL-anchor evidence for a motion-only signal
-(previously only internal split-half/spectral replication). Standing kill (zero
-dynamic-only cells -> demote W10) did NOT fire; W10 is strengthened. Unregistered
+correction. This is a single exploratory external-anchor association, not external
+validity or evidence for a new psychological dimension. The count-based standing kill
+(zero dynamic-only cells -> demote W10) did not fire, but that does not strengthen W10
+beyond candidate status. Unregistered
 finding that must bind future work: the cap-sensitivity check FIRED against its own
 prior — first_person_usage_v2 (the H2-carrying construct) shifts -0.190 systematically
 between capped and N1-uncapped extraction (p=1.3e-40); capped-era and N1-era static
@@ -446,9 +447,10 @@ exploratory because their axis-selection/null procedures require cross-fitted re
 
 **4.3 Assessment design consequences.**
 - A short questionnaire and a long text are NOT interchangeable: they live on opposite
-  sides of T4 (occasions-rich/tokens-poor vs occasions-poor/tokens-rich). A single long
-  document supports motion-style estimation; population-referenced level claims need
-  either norms or many occasions.
+  sides of T4 (occasions-rich/tokens-poor vs occasions-poor/tokens-rich). A sufficiently
+  long document can support a descriptive within-text motion profile when the relevant
+  opportunities are present; it does not by itself establish a reliable author parameter.
+  Population-referenced level claims need declared norms and repeated occasions.
 - Battery v-next admits MOTION CONSTRUCTS as first-class candidates under the F10.8
   gates (supra-edge, person-disjoint replication, level-invisibility, vocabulary-overlap
   screen) plus a T6 portability tag (portable / register-local).
@@ -533,7 +535,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | W6 Nyquist ratio (ed971f1) | wcl_60 rho_pi > 1 CI-solid (ranking inversion); carry-over set < 1; wcl_20/tension > 1 | (a) CONFIRMED 2.51 [1.28, 7.35], inversion exact; (b) 3/5 CI-solid below 1; (c) FAILED INFORMATIVELY — wcl_20 .770 CI-solid BELOW 1 (standing-wave reading dead; even-lag anomaly inside carry-over spectrum); gamma0 5-moment functional ill-conditioned (premise half-wrong, registered fallback absorbed it); KILL not fired |
 | W5 gust ladder (6669ccc) | wcl_20/22 standing-wave (g4/g2 in (0.1,0.9)); wcl_60 lag-1-confined; memory set geometric; indeterminate-if-CIs-wide registered as (d) | (d) FIRED structurally: centering null direction (sigma_min .0087) makes lag coordinates ill-posed — coordinates unresolved 19/19, class rule vacuous (design flaw recorded); f(pi) tightly resolved and CONFIRMS the period-2 ordering with disjoint CIs (wcl_20 1.033/tension 1.016 vs wcl_60 .557/first_person .628); KILL not fired; new estimable-functional principle F12.6.3 |
 | W4 MA-vs-AR (5064a0a) | corpus R2 CI-solid positive; memory set AR; wcl_60 MA | corpus R2 +.021 directional only (CI spans 0); memory set 3/5 AR (wcl_35/36/13, φ̂ consistent with lag-1) with first_person/wcl_03 = one-step echo; wcl_60 MA ✓; UNREGISTERED: period-2 signature in wcl_20/wcl_22 (CI-solid lag-2 excess, both families fail) → W5 lag-3 separator |
-| F16 visibility taxonomy (32befcf) | most constructs static-only/neither; 1-4 dynamic-only from the gust1_P carrier set; BOTH rare (0-2); kill if 0 dynamic-only anywhere | (a) ✓ strongly (98.5%); (b) ✓ at the floor: exactly 1 dynamic-only cell, wcl_07 x MBTI T/F (carrier set, as leaned); (c) SLIGHT MISS: BOTH=3 vs band 0-2; (d) kill NOT fired — W10 strengthened by external-anchor evidence; UNREGISTERED: cap-sensitivity check fired against its own prior (5/19 constructs' static means shift capped-vs-uncapped, first_person_usage_v2 by -.190) |
+| F16 visibility taxonomy (32befcf) | most constructs static-only/neither; 1-4 dynamic-only from the gust1_P carrier set; BOTH rare (0-2); kill if 0 dynamic-only anywhere | (a) ✓ strongly (98.5%); (b) ✓ at the floor: exactly 1 dynamic-only cell, wcl_07 x MBTI T/F (carrier set, as leaned); (c) SLIGHT MISS: BOTH=3 vs band 0-2; (d) count-based kill not fired, but the lone cell remains a modest exploratory association and does not strengthen W10 beyond candidate status; UNREGISTERED: cap-sensitivity check fired against its own prior (5/19 constructs' static means shift capped-vs-uncapped, first_person_usage_v2 by -.190) |
 | EXPL-4b uncapped motion x Big5 (97ecca2) | Delta over EXPL-3's D in [+.000,+.015]; kill if 4a AND 4b both <=0 | ✗ Delta=-0.0332 (negative on all 5 traits); **STANDING KILL FIRES** (4a -.0096 + 4b -.0332); power-annotated split: position-layer-alone flip (+.0009→-.0051, n=799) is trustworthy, spectral layer's further drop rests on only 22/1058 (2.1%) covered users — marked UNDECIDED-LOW-POWER, not a clean falsification; verification caught 2 real issues (dead has_long column; a cited robustness number that did not reproduce) |
 | F17 Enneagram taxonomy (8afb3e3) | most cells static-only/neither; 0-3 dynamic-only, low-confidence lean toward wcl_07; BOTH rare (0-3); soft kill | (a) ✓ even more strongly (100% vs F16's 98.5%) but for a different reason (0 static-only too, not just 0 dynamic-only); (b) count✓(0) but wcl_07 sub-lean ✗ — clean null, not a near-miss; (c) ✓(0); soft-kill triggered but does NOT retract W10/T8. Complete null (171/171 NEITHER) independently verified as UNDERPOWERED (KS-test of all 342 p vs Uniform(0,1): p=.76), not a bug |
 | Shared-rhythm test (8afb3e3) | positive sign, n=19, p<.10 suggestive bar; kill if null/negative, esp. if wcl_60 doesn't rank high | Registered cross-corpus numbers computationally exact (Pearson r=.633 p=.0036) but verifier RE-RAN same-corpus and the primary statistic COLLAPSED (r~.15-.18, n.s.) — **DOWNGRADED to NOT SUPPORTED AS REGISTERED**, a register-specificity artifact (T6-consistent), not a bug. One component (rho_pi alone) stays same-corpus-robust with wcl_60 top-ranked — narrower thread left open, pending a properly-registered same-corpus follow-up |

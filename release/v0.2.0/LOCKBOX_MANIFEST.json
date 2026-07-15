@@ -3,7 +3,7 @@
   "release_version": "0.2.0",
   "status": "V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES",
   "highest_supported_claim": "OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN",
-  "n_files": 156,
+  "n_files": 158,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -117,8 +117,8 @@
     },
     {
       "path": "docs/CLAIMS_LEDGER.md",
-      "bytes": 152695,
-      "sha256": "fe5b74e760ddb6721532ef63bf4cac1a4062b1b0485cb623c1ce84c8ec3843c7"
+      "bytes": 152841,
+      "sha256": "6cacc3b61e65baa2af1161f26eae5e0348880f330c7572c776b0572b7dd2dbbd"
     },
     {
       "path": "docs/OPEN_PROBLEMS.md",
@@ -134,6 +134,16 @@
       "path": "docs/RELEASE_NOTES_V020.md",
       "bytes": 2269,
       "sha256": "93f29b02471aab41fcf11c50865de13120dbb451e739fd1eac8f5bd7e284f080"
+    },
+    {
+      "path": "docs/THEORY_FORMAL_NOTES_V3.md",
+      "bytes": 95953,
+      "sha256": "0d6645c20fa422e34071bc1cfa78ad3557bb0cc7ddb781a2c1dc490863361c01"
+    },
+    {
+      "path": "docs/THEORY_V6.md",
+      "bytes": 44855,
+      "sha256": "b3ef0adb231dfd60bb1a4c3809893434f5c1d6915a344b3bb696590f10a67153"
     },
     {
       "path": "docs/V7_ACCEPTANCE_RULEBOOK.md",
@@ -427,8 +437,8 @@
     },
     {
       "path": "scripts/build_suica_v020_release_bundle.py",
-      "bytes": 5305,
-      "sha256": "90d9f01dfe722ba1a3d8594a7ea447e624ba42f57742cc22d70f4179df2c6419"
+      "bytes": 5376,
+      "sha256": "b1724074ddb6405cd0783fc56d37638771eac6088de7367c60c154c88397b24d"
     },
     {
       "path": "scripts/build_suica_v7_run_manifest.py",
