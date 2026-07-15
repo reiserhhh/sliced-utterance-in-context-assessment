@@ -117,8 +117,8 @@
     },
     {
       "path": "docs/CLAIMS_LEDGER.md",
-      "bytes": 152841,
-      "sha256": "6cacc3b61e65baa2af1161f26eae5e0348880f330c7572c776b0572b7dd2dbbd"
+      "bytes": 152853,
+      "sha256": "11fa91bff6ffa0b7ad6d914b23b241e76475ff5aa2819c916b9c93cefd1c8afc"
     },
     {
       "path": "docs/OPEN_PROBLEMS.md",
@@ -137,8 +137,8 @@
     },
     {
       "path": "docs/THEORY_FORMAL_NOTES_V3.md",
-      "bytes": 95953,
-      "sha256": "0d6645c20fa422e34071bc1cfa78ad3557bb0cc7ddb781a2c1dc490863361c01"
+      "bytes": 95873,
+      "sha256": "994ca430c6a6feb699454aa182520937129e42d895d9f28e73b4f35a1b91a859"
     },
     {
       "path": "docs/THEORY_V6.md",

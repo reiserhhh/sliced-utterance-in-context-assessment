@@ -1002,21 +1002,19 @@ channel on this same cell also clears BH (q = 1.7e-04) but fails the |r|>=.08 ef
 floor (r_static = -0.073) — the cell is dynamic-only by a real but narrow margin, not an
 overwhelming one. This is wcl_07's third appearance as an out-of-family construct (after
 F12.8's CI-solid Delta_shape and its damped-oscillation texture) — the recurring
-motion-anomalous construct now also carries the program's first EXTERNALLY-anchored
-motion-only signal, not just internal split-half stability (W10) or internal spectral
-replication (F12.8/F12.9).
+motion-anomalous construct now also carries the program's first exploratory
+external-anchor association for a motion-only candidate, beyond its internal
+split-half and spectral observations. This is not external validity.
 (c) SLIGHT MISS: BOTH = 3 (registered band 0-2), one over the upper bound —
 first_person_usage_v2 x MBTI TF (static r=.152, dynamic r=.089), wcl_03 x MBTI TF
 (static r=.170, dynamic r=.088), wcl_23 x Essays Agreeableness (static r=-.140, dynamic
 r=-.112). Recorded as a real, if small, miss rather than rounded into the band.
-(d) **STANDING KILL NOT TRIGGERED** (dynamic-only is non-empty). Consequence: W10's
-headline finding is NOT demoted — it is *strengthened* by external validity. W10 showed
-gust1_P susceptibility is a stable INTERNAL property (split-half r=.441) of a
-hand-built composite; F16 now shows one of that composite's own RAW constructs
-(wcl_07) carries a motion-only signal against a genuine EXTERNAL personality anchor
-(MBTI T/F) that the static channel of the same construct does not carry. This is the
-first evidence of external validity for a motion-only object in this program, not
-merely internal reliability.
+(d) **STANDING KILL NOT TRIGGERED** (dynamic-only is non-empty). Retrospective V7
+adjudication: this count result preserves W10 only as an exploratory candidate; it does
+not strengthen W10 through external validity. W10's split-half result was a descriptive
+same-sample internal association, and F16 adds one modest MBTI T/F association whose
+static channel narrowly missed the pre-set effect floor. Neither result establishes
+reliability, external validity, or a psychological construct.
 
 **Unregistered but must-report finding: the cap-sensitivity check FIRED, against the
 registration's own prior.** Comparing STATIC person-means from the old capped Tier-U
@@ -1276,7 +1274,7 @@ anticipated.
 but the SPECIFIC low-confidence sub-lean (wcl_07 echoing via "head/thinking" types 5/6)
 is NOT supported. wcl_07 shows a CLEAN null here (largest static r=+.136 at type6,
 q=.307 — nowhere near BH; dynamic r=+.038/-.068 at types 5/6 — tiny), not a narrow miss
-like its genuine MBTI-T/F result in F16. The two external-anchor results for wcl_07 are
+like its exploratory MBTI-T/F association in F16. The two external-anchor results for wcl_07 are
 qualitatively different, not just different in size.
 (c) CONFIRMED (0, within 0-3).
 **Soft-kill TRIGGERED (0 dynamic-only cells) — per the pre-committed framing, this does
@@ -1291,7 +1289,7 @@ an almost-identical user population, does not replicate it.
 derived: SE(r) ~ .052-.058 at this n; the single largest observed |r| (.166) is only ~3
 SEs from zero — enough for uncorrected p<.05 but far short of what BH across 171
 (correlated, one-hot) tests requires. This is best read as UNDERPOWERED, not as
-evidence Enneagram is unrelated to these constructs — F16's own genuine hits against
+evidence Enneagram is unrelated to these constructs — F16's exploratory associations against
 Big5/MBTI were of similar magnitude (|r|~.09-.17) and needed larger, better-balanced
 covered populations to clear BH. Consequence for the operator's original objection (that
 Big5/MBTI's coverage might be insufficient for a high-dimensional scale): the LOGIC of
