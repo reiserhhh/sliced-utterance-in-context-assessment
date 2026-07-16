@@ -121,3 +121,25 @@ restoration (2026-07-17), not a silent rewrite.
    Families added after results are on disk are POST-HOC EXPLORATORY and must
    ship labeled as such. History operations (squashes, rebases) that destroy
    the registration evidence chain are prohibited on release branches.
+
+## CI lockbox policy correction (2026-07-17, follow-up)
+
+The first three CI runs after v0.2.1 exposed two defects, both diagnosed from the
+GitHub logs and fixed the same day:
+
+1. **Frozen-manifest-vs-living-main conflict.** The per-push job verified the evolving
+   working tree against the frozen v0.2.1 manifest, which seals living documents
+   (docs/V7_DISCOVERY_LEDGER.md). The first post-release ledger update (the V7.5-X1/X2
+   registration, 3a6f5b9) therefore failed CI — a structural false positive, not
+   tampering. Correction: the per-push job now verifies the SEALED v0.2.1 TAG TREE in a
+   worktree (still catches tag re-pointing to a tampered tree), and main evolves
+   freely. Policy for the next release: snapshot living ledgers into
+   release/vX.Y.Z/ at build time so the manifest seals immutable copies.
+2. **actions/checkout annotated-tag clobbering.** The tag-triggered job failed with
+   tag_is_not_annotated / manifest_hash_missing_from_tag_message because
+   actions/checkout rewrites a pushed annotated tag as a lightweight tag at the commit
+   (upstream issue #290); the local verification had passed. Correction: the job
+   re-fetches the real annotated tag object before verifying.
+
+Test/install steps were NOT implicated: both the 3.12 and 3.14 matrix legs installed
+the lock and passed the full suite on CI; only the verifier steps failed.
