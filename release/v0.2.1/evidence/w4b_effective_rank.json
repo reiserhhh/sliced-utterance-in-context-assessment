@@ -1,0 +1,94 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.1",
+  "evidence_id": "W4B_EFFECTIVE_RANK",
+  "status": "CROSSVIEW_EFFECTIVE_RANK_DESCRIBED",
+  "decision": {
+    "status": "CROSSVIEW_EFFECTIVE_RANK_DESCRIBED",
+    "rank_interpretation": "CAPACITY_DESCRIPTOR_NOT_FACTOR_COUNT",
+    "spectrum_estimand": "POSITIVE_OBSERVED_MODES_ABOVE_SPLIT_SPECIFIC_BROKEN_CORRESPONDENCE_95_PERCENT_ENVELOPE",
+    "null_calibration": "SPLIT_SPECIFIC_AUTHOR_COUNT",
+    "coordinate_requirement": "Common frozen feature coordinates within one representation only.",
+    "cohort_commitment": {
+      "cohort_recipe": {
+        "cohort_id": "v7.3-w4b-multiview-rank-extension-1",
+        "seed": 20260716,
+        "min_comments_per_user": 32,
+        "max_users": 200
+      },
+      "n_authors": 200,
+      "membership_sha256": "89c33105707a549d7d5ac2dfe77d5160c0d330e306904c920a620bff0384a677",
+      "raw_identifiers_persisted": false
+    },
+    "confirmation_reused_from_w4b": true,
+    "claim_boundary": "No factor count, personality, causal, clinical, or universal-language claim."
+  },
+  "aggregate_tables": {
+    "effective_rank_profiles.csv": [
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "split": "discovery",
+        "n_authors": "120",
+        "n_positive_excess": "46",
+        "entropy_effective_rank": "32.03438405778937",
+        "participation_effective_rank": "24.29678840284885",
+        "excess_energy_90_rank": "31"
+      },
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "split": "calibration",
+        "n_authors": "36",
+        "n_positive_excess": "34",
+        "entropy_effective_rank": "21.4569991567978",
+        "participation_effective_rank": "16.835439187101535",
+        "excess_energy_90_rank": "19"
+      },
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "split": "confirmation",
+        "n_authors": "44",
+        "n_positive_excess": "37",
+        "entropy_effective_rank": "22.749552820152907",
+        "participation_effective_rank": "17.02145366639593",
+        "excess_energy_90_rank": "21"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "split": "discovery",
+        "n_authors": "120",
+        "n_positive_excess": "45",
+        "entropy_effective_rank": "31.930696066591178",
+        "participation_effective_rank": "24.672957778338553",
+        "excess_energy_90_rank": "30"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "split": "calibration",
+        "n_authors": "36",
+        "n_positive_excess": "33",
+        "entropy_effective_rank": "20.237860902033194",
+        "participation_effective_rank": "15.741037951655652",
+        "excess_energy_90_rank": "18"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "split": "confirmation",
+        "n_authors": "44",
+        "n_positive_excess": "37",
+        "entropy_effective_rank": "22.927500840547022",
+        "participation_effective_rank": "16.7199943906928",
+        "excess_energy_90_rank": "21"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "ff3da32cf244acffc37882234faa7861aa1158cf29ae11ccc433cdddd26f0003",
+    "effective_rank_profiles.csv": "cc65ee8f2d7297e2dfb1e26866d262106dc06e711b66b9ee137f062971582398"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}

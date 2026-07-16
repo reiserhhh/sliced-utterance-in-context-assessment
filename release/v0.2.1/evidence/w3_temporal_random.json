@@ -1,0 +1,97 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.1",
+  "evidence_id": "W3_TEMPORAL_RANDOM",
+  "status": "DESCRIPTIVE_TEMPORAL_RANDOM_MULTIPARTITION_COMPLETE",
+  "decision": {
+    "status": "DESCRIPTIVE_TEMPORAL_RANDOM_MULTIPARTITION_COMPLETE",
+    "support": {
+      "temporal": 300,
+      "random": 300,
+      "confirmation": 57,
+      "random_partitions": 25
+    },
+    "temporal_order_provenance": "OBSERVED_NUMERIC_FOR_ALL_INCLUDED_RECORDS",
+    "claim_boundary": "Same-author within-PANDORA sampling contrast only; nested random-partition uncertainty included; no personality or clinical inference."
+  },
+  "aggregate_tables": {
+    "temporal_random_contrast.csv": [
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "n_features": "24",
+        "n_confirmation_authors": "57",
+        "n_random_partitions": "25",
+        "temporal_alignment_auc": "0.7556390977443609",
+        "temporal_relative_distance_spearman": "0.21488575190014025",
+        "temporal_linear_transport_r2": "-0.027069432121975767",
+        "random_alignment_auc_mean": "0.8081578947368421",
+        "random_alignment_auc_q025": "0.7611528822055139",
+        "random_alignment_auc_q975": "0.8613408521303257",
+        "random_relative_distance_spearman_mean": "0.28116904880295407",
+        "random_relative_distance_spearman_q025": "0.15267669884309296",
+        "random_relative_distance_spearman_q975": "0.4030212728721162",
+        "random_linear_transport_r2_mean": "0.04495962228821632",
+        "random_linear_transport_r2_q025": "0.01151074776213781",
+        "random_linear_transport_r2_q975": "0.0811105151722454",
+        "temporal_minus_random_alignment_auc_mean": "-0.05251879699248121",
+        "alignment_delta_ci_low": "-0.11424874686716792",
+        "alignment_delta_ci_high": "0.012226190476190462",
+        "pooled_author_sign_flip_max_t_p": "0.21"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "n_features": "24",
+        "n_confirmation_authors": "57",
+        "n_random_partitions": "25",
+        "temporal_alignment_auc": "0.7919799498746867",
+        "temporal_relative_distance_spearman": "0.15125051141288484",
+        "temporal_linear_transport_r2": "0.0285601544487063",
+        "random_alignment_auc_mean": "0.8174686716791979",
+        "random_alignment_auc_q025": "0.7745614035087719",
+        "random_alignment_auc_q975": "0.8765037593984961",
+        "random_relative_distance_spearman_mean": "0.30328098939961246",
+        "random_relative_distance_spearman_q025": "0.1902059461402922",
+        "random_relative_distance_spearman_q975": "0.4138531011585866",
+        "random_linear_transport_r2_mean": "0.06839872518160614",
+        "random_linear_transport_r2_q025": "0.025258984698618092",
+        "random_linear_transport_r2_q975": "0.10538124330650675",
+        "temporal_minus_random_alignment_auc_mean": "-0.025488721804511283",
+        "alignment_delta_ci_low": "-0.08186654135338348",
+        "alignment_delta_ci_high": "0.021709273182957383",
+        "pooled_author_sign_flip_max_t_p": "0.742"
+      },
+      {
+        "representation": "WORD1_TFIDF_SVD24",
+        "n_features": "24",
+        "n_confirmation_authors": "57",
+        "n_random_partitions": "25",
+        "temporal_alignment_auc": "0.7619047619047619",
+        "temporal_relative_distance_spearman": "0.10864200661199801",
+        "temporal_linear_transport_r2": "-0.013340917396056584",
+        "random_alignment_auc_mean": "0.801704260651629",
+        "random_alignment_auc_q025": "0.7614661654135338",
+        "random_alignment_auc_q975": "0.8658521303258144",
+        "random_relative_distance_spearman_mean": "0.23772810956929097",
+        "random_relative_distance_spearman_q025": "0.11782570552987408",
+        "random_relative_distance_spearman_q975": "0.367297224615904",
+        "random_linear_transport_r2_mean": "0.03589021296098712",
+        "random_linear_transport_r2_q025": "-0.00923844821457065",
+        "random_linear_transport_r2_q975": "0.07880808263195936",
+        "temporal_minus_random_alignment_auc_mean": "-0.03979949874686716",
+        "alignment_delta_ci_low": "-0.1088765664160401",
+        "alignment_delta_ci_high": "0.02769486215538845",
+        "pooled_author_sign_flip_max_t_p": "0.416"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "ed8bac2df4d157b97e5c89b369c8ce648cc30cdd89af7794c901d87d38a9ac1f",
+    "temporal_random_contrast.csv": "310b6276f1103c203bf7a745f5f60434638285842459f4d84f48936ede5e21f1"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}

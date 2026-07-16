@@ -1,0 +1,162 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.1",
+  "evidence_id": "W4_MULTIVIEW_METHODS",
+  "status": "SUBSPACE_COMPARISON_SUPPORTED",
+  "decision": {
+    "status": "SUBSPACE_COMPARISON_SUPPORTED",
+    "highest_supported_endpoint_descriptive_only": {
+      "representation": "WORD12_TFIDF_SVD24",
+      "method": "CONSENSUS_COVARIANCE",
+      "confirmation_mean_r2": 0.397016584941594
+    },
+    "method_superiority_status": "WITHIN_COHORT_MATERIAL_DIFFERENCE_SUPPORTED",
+    "direct_ridge_is_comparator_not_shared_subspace": true,
+    "rank_status": "RANK_UNRESOLVED_AT_REGISTERED_GRID_BOUNDARY",
+    "rank_boundary_action": "REFUSE_FACTOR_COUNT_USE_EFFECTIVE_RANK_DIAGNOSTIC",
+    "rank_selection_role": "TRANSPORT_CAPACITY_PARAMETER_NOT_FACTOR_COUNT",
+    "cohort_commitment": {
+      "cohort_recipe": {
+        "cohort_id": "v7.3-w4b-multiview-rank-extension-1",
+        "seed": 20260716,
+        "min_comments_per_user": 32,
+        "max_users": 200
+      },
+      "n_authors": 200,
+      "membership_sha256": "89c33105707a549d7d5ac2dfe77d5160c0d330e306904c920a620bff0384a677",
+      "raw_identifiers_persisted": false
+    },
+    "claim_boundary": "Mathematical multiview comparison only; no factor naming, personality, causal, or clinical claim."
+  },
+  "aggregate_tables": {
+    "confirmation_method_summary.csv": [
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "method": "CONSENSUS_COVARIANCE",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.397016584941594",
+        "observed_z": "35.68983694974732",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      },
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "method": "CONCAT_PCA",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.3959717369411743",
+        "observed_z": "42.3334786167376",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      },
+      {
+        "representation": "WORD12_TFIDF_SVD24",
+        "method": "RGCCA_SUMCOR",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.34148351652129944",
+        "observed_z": "44.66009493312695",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "method": "CONSENSUS_COVARIANCE",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.3949454184241131",
+        "observed_z": "39.90117266922427",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "method": "CONCAT_PCA",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.39516554647807006",
+        "observed_z": "49.826703439701056",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      },
+      {
+        "representation": "CHAR35_TFIDF_SVD24",
+        "method": "RGCCA_SUMCOR",
+        "selected_rank": "16",
+        "confirmation_mean_r2": "0.3529708934998978",
+        "observed_z": "48.96446957165663",
+        "max_t_fwer_p": "0.01",
+        "status": "FWER_POSITIVE_SUPPORTED"
+      }
+    ],
+    "paired_method_differences.csv": [
+      {
+        "first_method": "CONCAT_PCA",
+        "second_method": "CONSENSUS_COVARIANCE",
+        "mean_r2_difference_first_minus_second": "-0.0010448480004196514",
+        "ci_low": "-0.008959584012500483",
+        "ci_high": "0.0061416236395680605",
+        "material_threshold": "0.02",
+        "status": "NO_MATERIAL_PAIRED_DIFFERENCE_SUPPORTED",
+        "representation": "WORD12_TFIDF_SVD24"
+      },
+      {
+        "first_method": "CONCAT_PCA",
+        "second_method": "RGCCA_SUMCOR",
+        "mean_r2_difference_first_minus_second": "0.05448822041987489",
+        "ci_low": "0.03575188564720551",
+        "ci_high": "0.07765410284594884",
+        "material_threshold": "0.02",
+        "status": "MATERIAL_FIRST_OVER_SECOND_SUPPORTED",
+        "representation": "WORD12_TFIDF_SVD24"
+      },
+      {
+        "first_method": "CONSENSUS_COVARIANCE",
+        "second_method": "RGCCA_SUMCOR",
+        "mean_r2_difference_first_minus_second": "0.05553306842029454",
+        "ci_low": "0.038681212688449554",
+        "ci_high": "0.07831053469157523",
+        "material_threshold": "0.02",
+        "status": "MATERIAL_FIRST_OVER_SECOND_SUPPORTED",
+        "representation": "WORD12_TFIDF_SVD24"
+      },
+      {
+        "first_method": "CONCAT_PCA",
+        "second_method": "CONSENSUS_COVARIANCE",
+        "mean_r2_difference_first_minus_second": "0.00022012805395693613",
+        "ci_low": "-0.007839692098094802",
+        "ci_high": "0.00798000567810744",
+        "material_threshold": "0.02",
+        "status": "NO_MATERIAL_PAIRED_DIFFERENCE_SUPPORTED",
+        "representation": "CHAR35_TFIDF_SVD24"
+      },
+      {
+        "first_method": "CONCAT_PCA",
+        "second_method": "RGCCA_SUMCOR",
+        "mean_r2_difference_first_minus_second": "0.042194652978172265",
+        "ci_low": "0.02344629390172982",
+        "ci_high": "0.06587508564310991",
+        "material_threshold": "0.02",
+        "status": "MATERIAL_FIRST_OVER_SECOND_SUPPORTED",
+        "representation": "CHAR35_TFIDF_SVD24"
+      },
+      {
+        "first_method": "CONSENSUS_COVARIANCE",
+        "second_method": "RGCCA_SUMCOR",
+        "mean_r2_difference_first_minus_second": "0.04197452492421533",
+        "ci_low": "0.019905111941635217",
+        "ci_high": "0.06720843923960691",
+        "material_threshold": "0.02",
+        "status": "NO_MATERIAL_PAIRED_DIFFERENCE_SUPPORTED",
+        "representation": "CHAR35_TFIDF_SVD24"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "f73e6055189786d76d78446b6f8b25b3f0e6a7380d0a892d2586fbfac71acb99",
+    "confirmation_method_summary.csv": "ed2f6445b00688b7398166d1045db414e66fe7caf0cc6a4dbe05d8f28e4b7510",
+    "paired_method_differences.csv": "e877b42be0ebdf410282c90706b4ca27a0e2715a4e71511f1ea1594b9e0b9e93"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": "suica-v7-deidentified-evidence-1",
+  "release_version": "0.2.1",
+  "evidence_id": "W2_IDENTIFICATION",
+  "status": "IDENTIFICATION_CALIBRATION_PASS",
+  "decision": {
+    "status": "IDENTIFICATION_CALIBRATION_PASS",
+    "checks": {
+      "rotation_equivalence_exact": true,
+      "shared_context_adjusted_subspace_recovery": true,
+      "null_alignment_control": true,
+      "nonlinear_relative_geometry_linear_separation": true,
+      "omitted_context_counterexample": true,
+      "endogenous_context_overadjustment_counterexample": true,
+      "measurement_error_context_counterexample": true
+    },
+    "claim_boundary": "Synthetic calibration only. Counterexamples demonstrate non-identifiability boundaries; they do not describe human personality or PANDORA authors."
+  },
+  "aggregate_tables": {
+    "summary.csv": [
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.9998231719978573",
+        "q025": "0.9997605027334852",
+        "q975": "0.9998606501269269"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "1.0",
+        "q025": "1.0",
+        "q975": "1.0"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "raw_subspace_congruence",
+        "n": "160",
+        "mean": "0.8756643576034193",
+        "q025": "0.7847856317330527",
+        "q975": "0.9411359531950474"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "context_adjusted_subspace_congruence",
+        "n": "160",
+        "mean": "0.8756643576034191",
+        "q025": "0.784785631733053",
+        "q975": "0.9411359531950473"
+      },
+      {
+        "world": "axis_rotation_equivalence",
+        "metric": "rotation_max_abs_error",
+        "n": "160",
+        "mean": "3.550978955324524e-15",
+        "q025": "1.7763568394002505e-15",
+        "q975": "7.105427357601002e-15"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.9626927519177129",
+        "q025": "0.9449137029288703",
+        "q975": "0.9765516039051605"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.8673572508717541",
+        "q025": "0.8232036048430041",
+        "q975": "0.9011021618819718"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.7287443639826273",
+        "q025": "0.6618249119019141",
+        "q975": "0.7869078953512159"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.8361010503835427",
+        "q025": "0.7742542712691771",
+        "q975": "0.9091701534170155"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "raw_subspace_congruence",
+        "n": "160",
+        "mean": "0.9966522536922774",
+        "q025": "0.993592627721612",
+        "q975": "0.998389874336909"
+      },
+      {
+        "world": "endogenous_context_overadjustment_counterexample",
+        "metric": "context_adjusted_subspace_congruence",
+        "n": "160",
+        "mean": "0.7412002381980264",
+        "q025": "0.5087854494566013",
+        "q975": "0.9756246549471104"
+      },
+      {
+        "world": "measurement_error_context_counterexample",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.9789358873779637",
+        "q025": "0.9579441248256625",
+        "q975": "0.99206589958159"
+      },
+      {
+        "world": "measurement_error_context_counterexample",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.9759281082445398",
+        "q025": "0.9512546306677752",
+        "q975": "0.9901064486158654"
+      },
+      {
+        "world": "measurement_error_context_counterexample",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.9305908761683384",
+        "q025": "0.865599602963458",
+        "q975": "0.9711990601999908"
+      },
+      {
+        "world": "measurement_error_context_counterexample",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.973862229776848",
+        "q025": "0.945394438633194",
+        "q975": "0.9906119246861925"
+      },
+      {
+        "world": "nonlinear_metric_without_linear_coordinate",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.673701294456067",
+        "q025": "0.6296090481171548",
+        "q975": "0.7136100941422595"
+      },
+      {
+        "world": "nonlinear_metric_without_linear_coordinate",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.39263912814029434",
+        "q025": "0.3253366274834719",
+        "q975": "0.45853110468627645"
+      },
+      {
+        "world": "nonlinear_metric_without_linear_coordinate",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.06824822067255258",
+        "q025": "-0.07477216848111479",
+        "q975": "0.16564843081585776"
+      },
+      {
+        "world": "nonlinear_metric_without_linear_coordinate",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.6743143087517434",
+        "q025": "0.6277615062761507",
+        "q975": "0.7138511157601116"
+      },
+      {
+        "world": "null",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.4991214478730822",
+        "q025": "0.4715585774058577",
+        "q975": "0.5286371164574617"
+      },
+      {
+        "world": "null",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.0030670309400658074",
+        "q025": "-0.0584469413515735",
+        "q975": "0.06270427259946847"
+      },
+      {
+        "world": "null",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "-0.12007724687757042",
+        "q025": "-0.17169929809229803",
+        "q975": "-0.080676977693045"
+      },
+      {
+        "world": "null",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.4991103338563459",
+        "q025": "0.46956720711297073",
+        "q975": "0.5292425034867504"
+      },
+      {
+        "world": "omitted_context_counterexample",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.9998001656206416",
+        "q025": "0.9991444386331939",
+        "q975": "0.9999825662482567"
+      },
+      {
+        "world": "omitted_context_counterexample",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.9885403942450537",
+        "q025": "0.9794841991272857",
+        "q975": "0.9945266427875114"
+      },
+      {
+        "world": "omitted_context_counterexample",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.9730502355307289",
+        "q025": "0.9527753640880731",
+        "q975": "0.9838971839860422"
+      },
+      {
+        "world": "omitted_context_counterexample",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.9985490760111577",
+        "q025": "0.9964256450488146",
+        "q975": "0.9995297245467225"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.9963828233960947",
+        "q025": "0.99064809972106",
+        "q975": "0.9986602161785216"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.925412964580774",
+        "q025": "0.8927999496400252",
+        "q975": "0.9493663700498967"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.8612216241913778",
+        "q025": "0.7950914657926106",
+        "q975": "0.9008803031795236"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.969434383716876",
+        "q025": "0.9437822524407253",
+        "q975": "0.9806332810320781"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "raw_subspace_congruence",
+        "n": "160",
+        "mean": "0.5845404731385653",
+        "q025": "0.3896680374635356",
+        "q975": "0.8178210191581176"
+      },
+      {
+        "world": "shared_linear",
+        "metric": "context_adjusted_subspace_congruence",
+        "n": "160",
+        "mean": "0.9972943919885537",
+        "q025": "0.9951968903989769",
+        "q975": "0.9986478092920827"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "alignment_auc",
+        "n": "160",
+        "mean": "0.8115265428870295",
+        "q025": "0.778031729428173",
+        "q975": "0.8447511331938634"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "relative_distance_spearman",
+        "n": "160",
+        "mean": "0.3824320920892511",
+        "q025": "0.28316429470805116",
+        "q975": "0.4624283916173322"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "linear_transport_r2",
+        "n": "160",
+        "mean": "0.38222227598518355",
+        "q025": "0.2894317838389743",
+        "q975": "0.47018047624344933"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "residual_alignment_auc",
+        "n": "160",
+        "mean": "0.8112581720711297",
+        "q025": "0.7780095013947002",
+        "q975": "0.8425627615062762"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "raw_subspace_congruence",
+        "n": "160",
+        "mean": "0.9836672734545406",
+        "q025": "0.9625263204263435",
+        "q975": "0.9934825361852231"
+      },
+      {
+        "world": "view_private_structure_sensitivity",
+        "metric": "context_adjusted_subspace_congruence",
+        "n": "160",
+        "mean": "0.9835954798954146",
+        "q025": "0.9626861618681546",
+        "q975": "0.9932374073712398"
+      }
+    ]
+  },
+  "source_artifact_sha256": {
+    "decision.json": "7d4aa5f151fc6f53e287ca810fe2c1d8d88a10c560e363d7459901d9b9fc253d",
+    "summary.csv": "1a577c993fe7d6b1495d902cef3cce68bdb74be8e8462a0125c5ece0af794b88"
+  },
+  "privacy": {
+    "raw_text_included": false,
+    "raw_identifiers_included": false,
+    "per_person_scores_included": false
+  },
+  "replay_scope": "This snapshot verifies the released aggregate claim and source-artifact identity. Recomputing it from restricted corpora requires separately obtained source data."
+}
