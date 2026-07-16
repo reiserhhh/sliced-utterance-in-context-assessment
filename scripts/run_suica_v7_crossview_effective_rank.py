@@ -131,8 +131,16 @@ def main() -> int:
             )
             for split_index, split in enumerate(("discovery", "calibration", "confirmation"))
         }
+        # Pointwise columns are unchanged. The simultaneous (max-T style)
+        # envelope is computed alongside from the same null draws; it corrects
+        # the positive bias of counting positions above a pointwise envelope.
         profiles = {
-            split: excess_spectral_profile(blocks[split], view_names=views, null_upper=np.quantile(nulls[split], 0.95, axis=0))
+            split: excess_spectral_profile(
+                blocks[split],
+                view_names=views,
+                null_upper=np.quantile(nulls[split], 0.95, axis=0),
+                null_spectra=nulls[split],
+            )
             for split in blocks
         }
         for split, profile in profiles.items():
@@ -144,6 +152,8 @@ def main() -> int:
                 "entropy_effective_rank": profile["entropy_effective_rank"],
                 "participation_effective_rank": profile["participation_effective_rank"],
                 "excess_energy_90_rank": profile["excess_energy_90_rank"],
+                "n_positive_excess_simultaneous": profile["n_positive_excess_simultaneous"],
+                "null_upper_simultaneous": profile["null_upper_simultaneous"],
             })
         for target in ("calibration", "confirmation"):
             similarity_rows.append({
@@ -159,6 +169,11 @@ def main() -> int:
         "rank_interpretation": "CAPACITY_DESCRIPTOR_NOT_FACTOR_COUNT",
         "spectrum_estimand": "POSITIVE_OBSERVED_MODES_ABOVE_SPLIT_SPECIFIC_BROKEN_CORRESPONDENCE_95_PERCENT_ENVELOPE",
         "null_calibration": "SPLIT_SPECIFIC_AUTHOR_COUNT",
+        "simultaneous_envelope": (
+            "n_positive_excess_simultaneous / null_upper_simultaneous use a max-T style bound "
+            "(95% quantile of the per-draw max over positions); the pointwise n_positive_excess "
+            "is positively biased under a global null and is retained unchanged for comparability."
+        ),
         "coordinate_requirement": "Common frozen feature coordinates within one representation only.",
         "cohort_commitment": _cohort_commitment(source_panel["user_id"], recipe=recipe),
         "confirmation_reused_from_w4b": True,

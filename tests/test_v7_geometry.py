@@ -18,7 +18,6 @@ def _fit(values: np.ndarray):
         reference_population={"cohort_commitment": "test-only", "n_authors": len(values)},
         min_units_for_score=2,
         landmark_count=7,
-        seed=11,
     )
 
 
@@ -72,6 +71,60 @@ def test_geometry_refuses_out_of_domain_and_insufficient_support() -> None:
     bundle = _fit(rng.normal(size=(40, 4)))
     result = score_geometry_bundle(bundle, np.array([[100.0, 100.0, 100.0, 100.0], [0.0, 0.0, 0.0, 0.0]]), unit_counts=np.array([2, 1]))
     assert result["status"] == ["GEOMETRY_REFUSE_OUTSIDE_REFERENCE_RADIAL_ENVELOPE", "GEOMETRY_REFUSE_INSUFFICIENT_OBSERVATION_SUPPORT"]
+
+
+def test_default_scoring_path_reports_support_unverified_not_ready() -> None:
+    rng = np.random.default_rng(31)
+    values = rng.normal(size=(40, 4))
+    bundle = _fit(values)
+    target = np.vstack([values[:3], np.full((1, 4), 100.0)])
+
+    # (a) With no unit_counts, ready rows are distinguished as support-unverified,
+    # and radial-envelope refusal still takes precedence.
+    default = score_geometry_bundle(bundle, target)
+    assert default["status"][:3] == ["GEOMETRY_PROFILE_READY_SUPPORT_UNVERIFIED"] * 3
+    assert default["status"][3] == "GEOMETRY_REFUSE_OUTSIDE_REFERENCE_RADIAL_ENVELOPE"
+    assert "GEOMETRY_PROFILE_READY" not in default["status"]
+
+    # (b) Explicit counts below the frozen threshold refuse.
+    counted = score_geometry_bundle(bundle, target, unit_counts=np.array([2, 2, 1, 2]))
+    assert counted["status"] == [
+        "GEOMETRY_PROFILE_READY",
+        "GEOMETRY_PROFILE_READY",
+        "GEOMETRY_REFUSE_INSUFFICIENT_OBSERVATION_SUPPORT",
+        "GEOMETRY_REFUSE_OUTSIDE_REFERENCE_RADIAL_ENVELOPE",
+    ]
+
+    # (c) An explicit attestation reproduces the old default statuses.
+    attested = score_geometry_bundle(bundle, target, assume_support_verified=True)
+    assert attested["status"][:3] == ["GEOMETRY_PROFILE_READY"] * 3
+    assert attested["status"][3] == "GEOMETRY_REFUSE_OUTSIDE_REFERENCE_RADIAL_ENVELOPE"
+
+    # Scoring math is unchanged across the three modes.
+    assert np.allclose(default["landmark_distance_profile"], attested["landmark_distance_profile"])
+    assert np.allclose(default["landmark_distance_profile"], counted["landmark_distance_profile"])
+
+
+def test_fit_geometry_bundle_is_deterministic_and_takes_no_seed() -> None:
+    rng = np.random.default_rng(32)
+    values = rng.normal(size=(25, 3))
+    first, second = _fit(values), _fit(values)
+    assert first.bundle_id == second.bundle_id
+    with pytest.raises(TypeError):
+        _fit_with_seed(values)
+
+
+def _fit_with_seed(values: np.ndarray):
+    return fit_geometry_bundle(
+        values,
+        feature_names=[f"feature_{index}" for index in range(values.shape[1])],
+        operator={"id": "unit_test_operator"},
+        representation={"id": "unit_test_representation"},
+        runtime_artifact={"hash": "runtime-test"},
+        reference_population={"cohort_commitment": "test-only", "n_authors": len(values)},
+        min_units_for_score=2,
+        seed=11,
+    )
 
 
 def test_geometry_bundle_roundtrip_and_identifier_guard(tmp_path) -> None:

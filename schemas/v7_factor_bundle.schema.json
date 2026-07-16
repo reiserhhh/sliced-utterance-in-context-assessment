@@ -45,6 +45,11 @@
     "runtime_artifact": {"type": "object", "minProperties": 1},
     "reference_population": {"type": "object", "minProperties": 1},
     "claim_boundary": {"type": "string", "minLength": 1},
-    "created_utc": {"type": "string", "minLength": 1}
+    "created_utc": {"type": "string", "minLength": 1},
+    "factor_content_sha256": {
+      "description": "SHA-256 over all score-defining fields (2026-07 tamper binding). Optional so bundles frozen before the binding keep validating; null is treated as absent.",
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    }
   }
 }

@@ -94,7 +94,13 @@ def fit_rgcca_sumcor(
     are \(X_v^T X_w/n\).  It maximizes cross-view covariance rather than any
     within-view variance alone.  Component signs are aligned before averaging
     view-specific scores into an anonymous common coordinate.
+
+    ``ridge_alpha`` must be strictly positive: with \(\rho = 0\) the metric
+    \(C_{within}\) can be singular (always when a block has more features than
+    authors), making the generalized eigenproblem unreliable.
     """
+    if not float(ridge_alpha) > 0.0:
+        raise ValueError(f"fit_rgcca_sumcor requires ridge_alpha > 0 (got {ridge_alpha}); a singular metric makes the generalized eigenproblem unreliable.")
     matrices = [np.asarray(blocks[view], dtype=float) for view in view_names]
     n_rows = matrices[0].shape[0]
     if n_rows < 3 or any(matrix.shape[0] != n_rows for matrix in matrices):

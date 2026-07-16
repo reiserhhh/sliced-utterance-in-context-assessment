@@ -231,10 +231,14 @@ def fit_geometry_bundle(
     landmark_count: int = 16,
     regularization: float = 1e-3,
     support_radius_quantile: float = 0.99,
-    seed: int = 20260715,
     version: str = "v7-geometry-1",
 ) -> GeometryBundle:
-    """Freeze a reference-relative landmark geometry from author features only."""
+    """Freeze a reference-relative landmark geometry from author features only.
+
+    The fit is fully deterministic (imputation, centering, eigendecomposition,
+    and canonical landmark selection involve no random draws), so it takes no
+    seed parameter.
+    """
     if not feature_names or len(feature_names) != len(set(feature_names)):
         raise ValueError("feature_names must be a unique non-empty list.")
     if int(min_units_for_score) < 1 or not 0.0 < float(support_radius_quantile) <= 1.0:
@@ -291,10 +295,29 @@ def score_geometry_bundle(
     features: np.ndarray | list[list[float]],
     *,
     unit_counts: np.ndarray | list[int] | None = None,
+    assume_support_verified: bool = False,
 ) -> dict[str, Any]:
-    """Return frozen landmark-distance profiles plus explicit support refusals."""
+    """Return frozen landmark-distance profiles plus explicit support refusals.
+
+    Observation-support handling is explicit:
+
+    - ``unit_counts`` given: rows below the bundle's ``min_units_for_score``
+      receive ``GEOMETRY_REFUSE_INSUFFICIENT_OBSERVATION_SUPPORT``.
+    - ``unit_counts is None`` (default): support was never observed, so ready
+      rows receive the distinguished status
+      ``GEOMETRY_PROFILE_READY_SUPPORT_UNVERIFIED`` instead of silently
+      assuming sufficient support. Radial-envelope refusal still takes
+      precedence.
+    - ``unit_counts is None`` with ``assume_support_verified=True``: the
+      caller explicitly attests that every row satisfies the support rule and
+      ready rows receive ``GEOMETRY_PROFILE_READY``.
+
+    Scoring math is identical in all three modes; only the status labels
+    differ.
+    """
     frozen = bundle if isinstance(bundle, GeometryBundle) else GeometryBundle.from_dict(bundle)
     values = _as_matrix(features, width=len(frozen.feature_names))
+    support_unverified = unit_counts is None and not assume_support_verified
     counts = np.full(len(values), int(frozen.support_rule["min_units_for_score"]), dtype=int) if unit_counts is None else np.asarray(unit_counts, dtype=int)
     if counts.shape != (len(values),):
         raise ValueError("unit_counts must contain one count per feature row.")
@@ -305,10 +328,11 @@ def score_geometry_bundle(
     radius = np.linalg.norm(whitened, axis=1)
     threshold = float(frozen.reference_distance_summary["support_radius_threshold"])
     minimum = int(frozen.support_rule["min_units_for_score"])
+    ready_status = "GEOMETRY_PROFILE_READY_SUPPORT_UNVERIFIED" if support_unverified else "GEOMETRY_PROFILE_READY"
     status = [
         "GEOMETRY_REFUSE_INSUFFICIENT_OBSERVATION_SUPPORT" if int(count) < minimum else
         "GEOMETRY_REFUSE_OUTSIDE_REFERENCE_RADIAL_ENVELOPE" if float(value) > threshold else
-        "GEOMETRY_PROFILE_READY"
+        ready_status
         for count, value in zip(counts, radius, strict=True)
     ]
     return {

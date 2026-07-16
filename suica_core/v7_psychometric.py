@@ -74,6 +74,7 @@ class FactorBundle:
     reference_population: dict[str, Any]
     claim_boundary: str
     created_utc: str
+    factor_content_sha256: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         """Return the manifest intentionally required for a reproducible score."""
@@ -109,7 +110,37 @@ _FACTOR_BUNDLE_FIELDS = {
     "factor_loadings", "noise_variance", "factor_signs", "norm_mean",
     "norm_scale", "norm_quantiles", "support_rule", "runtime_artifact",
     "reference_population", "claim_boundary", "created_utc",
+    "factor_content_sha256",
 }
+# Bundles frozen before 2026-07 tamper binding lack factor_content_sha256.
+# They must keep validating, so the field is optional on load.
+_FACTOR_BUNDLE_OPTIONAL_FIELDS = {"factor_content_sha256"}
+# Excluded from the content hash: identity/provenance metadata that does not
+# define the score map, plus the hash field itself.
+_FACTOR_CONTENT_HASH_EXCLUSIONS = {"bundle_id", "created_utc", "factor_content_sha256"}
+
+
+def factor_content_sha256(payload: dict[str, Any]) -> str:
+    """Hash every score-defining factor-bundle field in canonical JSON form.
+
+    Covers loadings, centers/scales, norms, feature names, operator,
+    representation (including its seed), support rule and claim boundary —
+    everything that determines a score — mirroring the geometry-bundle
+    binding in :mod:`suica_core.v7_geometry`.
+    """
+    content = {
+        key: payload[key]
+        for key in sorted(payload)
+        if key not in _FACTOR_CONTENT_HASH_EXCLUSIONS
+    }
+    encoded = json.dumps(
+        content,
+        ensure_ascii=True,
+        sort_keys=True,
+        separators=(",", ":"),
+        allow_nan=False,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def _finite_vector(value: Any, *, name: str, length: int | None = None, positive: bool = False) -> np.ndarray:
@@ -126,16 +157,26 @@ def _finite_vector(value: Any, *, name: str, length: int | None = None, positive
     return vector
 
 
-def validate_factor_bundle_payload(payload: dict[str, Any]) -> None:
+def validate_factor_bundle_payload(payload: dict[str, Any]) -> dict[str, str]:
     """Validate the flat on-disk V7 factor-bundle contract without refitting.
 
     The project schema originally described a nested prototype that the actual
     runtime never emitted.  This native validator is deliberately dependency
     free and enforces the serialized runtime contract used by scoring.
+
+    Returns a status dictionary with a ``tamper_binding`` key:
+
+    - ``"VERIFIED"`` — ``factor_content_sha256`` is present and matches the
+      recomputed hash of every score-defining field.
+    - ``"ABSENT_PRE_BINDING_BUNDLE"`` — the payload predates the 2026-07
+      content-hash tamper binding; validation passes for backward
+      compatibility, but the score-defining content is not hash-bound.
+
+    A present-but-mismatching hash raises ``ValueError``.
     """
     if not isinstance(payload, dict):
         raise ValueError("Factor bundle payload must be an object.")
-    missing = sorted(_FACTOR_BUNDLE_FIELDS.difference(payload))
+    missing = sorted(_FACTOR_BUNDLE_FIELDS.difference(_FACTOR_BUNDLE_OPTIONAL_FIELDS).difference(payload))
     unknown = sorted(set(payload).difference(_FACTOR_BUNDLE_FIELDS))
     if missing:
         raise ValueError(f"Factor bundle missing required fields: {', '.join(missing)}")
@@ -170,6 +211,14 @@ def validate_factor_bundle_payload(payload: dict[str, Any]) -> None:
         raise ValueError("Factor bundle norm_quantiles must contain exactly one vector per factor.")
     for key, values in quantiles.items():
         _finite_vector(values, name=f"norm_quantiles.{key}")
+    stored_hash = payload.get("factor_content_sha256")
+    if stored_hash is None:
+        return {"tamper_binding": "ABSENT_PRE_BINDING_BUNDLE"}
+    if not isinstance(stored_hash, str) or not stored_hash.strip():
+        raise ValueError("Factor bundle factor_content_sha256 must be a non-empty string when present.")
+    if stored_hash != factor_content_sha256(payload):
+        raise ValueError("Factor bundle factor_content_sha256 does not match its score-defining content.")
+    return {"tamper_binding": "VERIFIED"}
 
 
 def _hash_bundle_id(operator_name: str, feature_names: list[str], seed: int) -> str:
@@ -388,6 +437,7 @@ def fit_factor_bundle(
         ),
         created_utc=datetime.now(UTC).isoformat(),
     )
+    bundle.factor_content_sha256 = factor_content_sha256(bundle.to_dict())
     return FittedOperator(bundle=bundle, representation=None, feature_columns=feature_columns)
 
 
@@ -454,6 +504,14 @@ def unit_bootstrap_sem(
     """
     if observations.empty:
         return pd.DataFrame(columns=["user_id"])
+    if not observations.index.equals(pd.RangeIndex(len(observations))):
+        raise ValueError(
+            "unit_bootstrap_sem requires observations indexed by pd.RangeIndex(len(observations)): "
+            "the bootstrap mixes label-based row lookup (observations.loc[chosen]) with positional "
+            "embedding lookup (embeddings[chosen]), which only address the same rows under a default "
+            "0..n-1 index. Call observations.reset_index(drop=True) and align embeddings row-for-row "
+            "before calling."
+        )
     rng = np.random.default_rng(seed)
     factor_columns = [f"SU7-FC-{index + 1:04d}@v1" for index in range(len(bundle.factor_loadings))]
     rows: list[dict[str, Any]] = []

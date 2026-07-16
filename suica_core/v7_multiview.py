@@ -65,12 +65,28 @@ def fit_block_scalers(
     view_names: tuple[str, ...],
     feature_names: list[str],
     discovery_user_ids: list[str],
+    allow_missing: bool = False,
 ) -> dict[str, BlockScaler]:
-    """Fit separate block scalers on discovery authors only."""
+    """Fit separate block scalers on discovery authors only.
+
+    Every requested discovery author must be present in every view; a missing
+    author would otherwise be silently mean-imputed by the reindex, biasing the
+    scaler toward the view mean. Pass ``allow_missing=True`` only to restore
+    that legacy imputing behavior deliberately.
+    """
     scalers: dict[str, BlockScaler] = {}
     discovery_ids = [str(user_id) for user_id in discovery_user_ids]
     for view in view_names:
         frame = feature_frames[view].set_index("user_id")
+        if not allow_missing:
+            present = set(frame.index.astype(str))
+            missing = [user_id for user_id in discovery_ids if user_id not in present]
+            if missing:
+                raise ValueError(
+                    f"fit_block_scalers: view '{view}' is missing {len(missing)} requested "
+                    f"discovery author(s): {sorted(missing)}. Missing authors would be silently "
+                    "mean-imputed; pass allow_missing=True only if that is intended."
+                )
         values = frame.reindex(discovery_ids)[feature_names].to_numpy(float)
         center = np.nanmean(values, axis=0)
         center = np.where(np.isfinite(center), center, 0.0)
@@ -136,9 +152,17 @@ def fit_consensus_model(
       G = \sum_{j<k} \frac{X_j X_k^T + X_k X_j^T}{2p}.
     \]
 
-    Only cross-view covariance enters \(G\), so view-private variation cannot
-    create a component by itself.  View decoders and encoders are then fit
-    conditionally on the resulting anonymous shared scores.
+    Only cross-view covariance enters \(G\), which *suppresses* view-private
+    variation relative to concatenated PCA — but it does **not** eliminate
+    finite-sample noise components. Independent view-private noise has nonzero
+    sample cross-view covariance, so \(G\) acquires large positive eigenvalues
+    from pure noise in finite samples (e.g. fully independent 30x6 blocks
+    yield in-sample shared_variance_ratio around 0.6 at rank 10). The actual
+    guards against interpreting such components are (1) calibrated rank
+    selection on held-out authors and (2) broken-correspondence (permuted
+    author) baselines — not this operator's algebraic form. View decoders and
+    encoders are then fit conditionally on the resulting anonymous shared
+    scores.
     """
     if not view_names:
         raise ValueError("Consensus model needs at least one view.")
@@ -218,7 +242,15 @@ def fit_direct_predictors(
     ridge_alpha: float,
     permutation_seed: int | None = None,
 ) -> dict[tuple[str, str], Ridge]:
-    """Fit direct cross-view Ridge maps, optionally breaking author alignment."""
+    """Fit direct cross-view Ridge maps, optionally breaking author alignment.
+
+    When ``permutation_seed`` is set, each target block is permuted **once**:
+    the resulting "permuted" baseline is a single draw from the
+    broken-correspondence null, not a null distribution. Comparisons against
+    it therefore carry one-draw sampling noise; use repeated draws (as in
+    ``broken_correspondence_spectra``) when a calibrated null quantile is
+    required.
+    """
     rng = np.random.default_rng(permutation_seed) if permutation_seed is not None else None
     models: dict[tuple[str, str], Ridge] = {}
     for source in view_names:
@@ -239,7 +271,12 @@ def evaluate_cross_view(
     direct_models: dict[tuple[str, str], Ridge],
     permuted_models: dict[tuple[str, str], Ridge],
 ) -> pd.DataFrame:
-    """Evaluate shared and direct maps on held-out aligned authors."""
+    """Evaluate shared and direct maps on held-out aligned authors.
+
+    ``permuted_direct_global_r2`` comes from a single permutation draw (see
+    ``fit_direct_predictors``); it is a one-draw broken-correspondence
+    baseline, not a null-distribution quantile.
+    """
     rows: list[dict[str, Any]] = []
     for source in model.view_names:
         for target in model.view_names:

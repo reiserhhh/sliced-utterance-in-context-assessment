@@ -1,8 +1,25 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 
+from scripts.run_suica_v7_representation_transport import ROOT, _build_parser, _default_report_path
 from suica_sim.v7_representation_transport import evaluate_transport_world, generate_transport_world, run_transport_matrix
+
+
+def test_report_default_stays_out_of_tracked_reports_tree() -> None:
+    args = _build_parser().parse_args([])
+    # No implicit tracked-path default: the report path is resolved from the
+    # (gitignored) results/ output directory unless passed explicitly.
+    assert args.report is None
+    output_dir = ROOT / "results" / "v7_representation_transport" / "some_run"
+    default = _default_report_path(output_dir)
+    assert default == output_dir / "V7_REPRESENTATION_TRANSPORT_CALIBRATION.md"
+    assert (ROOT / "reports") not in default.parents
+    report_action = next(action for action in _build_parser()._actions if "--report" in action.option_strings)
+    assert "untracked" in (report_action.help or "")
+    assert isinstance(default, Path)
 
 
 def test_rotation_preserves_within_geometry_but_needs_paired_alignment() -> None:

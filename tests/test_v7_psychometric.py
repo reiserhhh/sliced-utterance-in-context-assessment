@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+import pytest
 from sklearn.decomposition import FactorAnalysis
 from tempfile import TemporaryDirectory
 
@@ -9,11 +10,13 @@ from scripts.run_suica_v7_operator_smoke import _status_for_base, _summary_row
 
 from suica_core.v7_observations import ObservationSpec
 from suica_core.v7_psychometric import (
+    FactorBundle,
     RepresentationSpec,
     _fa_posterior_scores,
     author_features_from_embeddings,
     combine_nested_author_features,
     confirmation_subspace_similarity,
+    factor_content_sha256,
     fit_factor_bundle,
     read_factor_bundle,
     score_author_features,
@@ -118,6 +121,59 @@ def test_factor_bundle_validator_rejects_schema_drift_and_dimension_mismatch() -
         assert "feature_scale length" in str(error)
     else:
         raise AssertionError("dimension-mismatched bundle was accepted")
+
+
+def _fitted_bundle(seed: int = 33) -> FactorBundle:
+    observations, embeddings = _unit_observations(seed=seed)
+    features = author_features_from_embeddings(observations, embeddings)
+    fitted = fit_factor_bundle(
+        features,
+        operator=ObservationSpec(name="native", kind="native").to_dict(),
+        representation=RepresentationSpec(svd_dimensions=4, factor_count=2),
+        runtime_artifact={"test": True}, min_units_for_score=2, seed=seed,
+    )
+    return fitted.bundle
+
+
+def test_factor_content_hash_binds_score_definition_and_rejects_tampering() -> None:
+    bundle = _fitted_bundle()
+    payload = bundle.to_dict()
+    assert isinstance(payload["factor_content_sha256"], str) and payload["factor_content_sha256"]
+    assert validate_factor_bundle_payload(payload) == {"tamper_binding": "VERIFIED"}
+    # Mirrors tests/test_v7_geometry.py: mutate one score-defining value.
+    payload["factor_loadings"][0][0] += 0.1
+    with pytest.raises(ValueError, match="does not match"):
+        FactorBundle.from_dict(payload)
+    # Norms and operator metadata are also hash-bound.
+    for field, mutate in (
+        ("norm_mean", lambda p: p["norm_mean"].__setitem__(0, p["norm_mean"][0] + 0.5)),
+        ("operator", lambda p: p["operator"].update(name="swapped")),
+    ):
+        fresh = _fitted_bundle().to_dict()
+        mutate(fresh)
+        with pytest.raises(ValueError, match="does not match"):
+            validate_factor_bundle_payload(fresh)
+
+
+def test_pre_binding_factor_bundle_without_hash_still_validates() -> None:
+    bundle = _fitted_bundle(seed=34)
+    payload = bundle.to_dict()
+    del payload["factor_content_sha256"]
+    # Stored artifacts predating tamper binding must keep loading.
+    assert validate_factor_bundle_payload(payload) == {"tamper_binding": "ABSENT_PRE_BINDING_BUNDLE"}
+    restored = FactorBundle.from_dict(payload)
+    assert restored.factor_content_sha256 is None
+    # The recomputed hash of the untampered content matches the fitted one.
+    assert factor_content_sha256(payload) == bundle.factor_content_sha256
+
+
+def test_unit_bootstrap_sem_rejects_non_default_index() -> None:
+    observations, embeddings = _unit_observations()
+    bundle = _fitted_bundle(seed=35)
+    shifted = observations.copy()
+    shifted.index = shifted.index + 5
+    with pytest.raises(ValueError, match="RangeIndex"):
+        unit_bootstrap_sem(shifted, embeddings, bundle, repetitions=2, seed=4)
 
 
 def test_one_unit_operator_reports_missing_sem_instead_of_zero() -> None:

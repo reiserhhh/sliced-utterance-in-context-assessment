@@ -1,9 +1,34 @@
 import json
 import subprocess
+from pathlib import Path
 
 import pytest
 
 from suica_core.v7_release import build_lockbox_manifest, verify_lockbox_manifest, verify_release_identity
+
+
+def test_ci_runs_full_lockbox_verifier_and_closure_audit_on_release_tags():
+    """The per-push CI job is content-only; tag pushes must additionally run the
+    full verifier (identity check included) plus the theory closure audit, and
+    the test job must exercise the declared python-version matrix."""
+    workflow = (Path(__file__).resolve().parents[1] / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
+    # Tag-triggered full verification job exists and is gated on v* tags.
+    assert 'tags: ["v*"]' in workflow
+    assert "startsWith(github.ref, 'refs/tags/v')" in workflow
+    # The per-push job stays content-only, pointed at the CURRENT release
+    # verifier (v0.2.1; the v0.2.0 lockbox is only verifiable at its tag).
+    assert "verify_suica_v021_lockbox.py --content-only" in workflow
+    # The tag job runs the verifier WITHOUT --content-only (identity included)...
+    full_runs = [
+        line for line in workflow.splitlines()
+        if "verify_suica_v021_lockbox.py" in line and "--content-only" not in line
+    ]
+    assert len(full_runs) == 1
+    # ...and the closure audit.
+    assert "run_suica_v7_theory_closure_audit.py" in workflow
+    # Python version matrix on the test job.
+    assert '"3.12", "3.14"' in workflow
+    assert "${{ matrix.python-version }}" in workflow
 
 
 def test_release_manifest_round_trip_and_tamper_detection(tmp_path):

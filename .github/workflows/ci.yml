@@ -2,19 +2,64 @@ name: test
 
 on:
   push:
+    branches: ["**"]
+    tags: ["v*"]
   pull_request:
 
 jobs:
+  # Per-push job: tests plus a content-only lockbox check (no tag identity).
   core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.12 is the audited release interpreter; 3.14 guards forward
+        # compatibility of the same lock. If the lock ever fails to resolve
+        # on 3.14, drop it here rather than loosening the lock.
+        python-version: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements-lock-v0.2.0.txt
+      - run: python -m compileall -q suica_core suica_sim scripts tests
+      - run: python -m pytest -q -p no:cacheprovider
+      # v0.2.1 is the current release; the v0.2.0 lockbox is only verifiable
+      # at the v0.2.0 tag checkout (its manifest predates the 2026-07-17
+      # remediation) and is itself sealed inside the v0.2.1 manifest.
+      - run: python scripts/verify_suica_v021_lockbox.py --content-only
+
+  # Tag-triggered job: the FULL lockbox verifier (content + release-identity
+  # check, which requires the annotated tag at HEAD) plus the theory closure
+  # audit. This is the gate that would have caught tag re-pointing and
+  # post-freeze manifest regeneration.
+  release-lockbox:
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history and all tags so the annotated release tag object is
+          # available for the identity check.
+          fetch-depth: 0
+          fetch-tags: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-lock-v0.2.0.txt
-      - run: python -m compileall -q suica_core suica_sim scripts tests
-      - run: python -m pytest -q -p no:cacheprovider
-      - run: python scripts/verify_suica_v020_lockbox.py --content-only
+      # Full verification: tracked content hashes AND release identity
+      # (annotated v0.2.1 tag at HEAD carrying the manifest hash). Any future
+      # v* tag whose HEAD is not the sealed release commit fails here until a
+      # corresponding lockbox/verifier for that release exists — that is the
+      # intended ratchet against tag re-pointing.
+      - run: python scripts/verify_suica_v021_lockbox.py
+      # Closure audit over the registered theoretical-closure evidence set.
+      - run: >-
+          python scripts/run_suica_v7_theory_closure_audit.py
+          --output-dir "$RUNNER_TEMP/closure_audit"
+          --report "$RUNNER_TEMP/closure_audit/V7_THEORY_CLOSURE_AUDIT.md"

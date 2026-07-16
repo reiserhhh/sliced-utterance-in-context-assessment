@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+import pytest
 
 from scripts.run_suica_v7_multiview_method_benchmark import (
     _cohort_commitment,
@@ -36,6 +37,13 @@ def test_rgcca_sumcor_predicts_cross_view_signal() -> None:
     result = evaluate_shared_model(model, blocks)
     assert model.shared_scores.shape == (80, 3)
     assert np.mean([float(row["global_r2"]) for row in result]) > 0.1
+
+
+def test_rgcca_sumcor_rejects_nonpositive_ridge_alpha() -> None:
+    blocks, names = _blocks()
+    for alpha in (0.0, -1.0, float("nan")):
+        with pytest.raises(ValueError, match="ridge_alpha > 0"):
+            fit_rgcca_sumcor(blocks, view_names=names, rank=2, ridge_alpha=alpha)
 
 
 def test_rank_one_shared_coordinate_stays_two_dimensional_for_decoding() -> None:

@@ -80,20 +80,39 @@ def _report(path: Path, *, summary: pd.DataFrame, decision: dict[str, object], o
     )
 
 
-def main() -> int:
+def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=ROOT / "configs" / "sim_v7" / "representation_transport_full.json")
     parser.add_argument("--output-dir", type=Path, default=None)
-    parser.add_argument("--report", type=Path, default=None)
+    parser.add_argument(
+        "--report",
+        type=Path,
+        default=None,
+        help=(
+            "Report destination. Defaults to an untracked path inside the run's results/ "
+            "output directory so a rerun never dirties the tracked reports/ tree (which "
+            "would flip the release closure ruling). Pass this flag explicitly to publish "
+            "into tracked reports/."
+        ),
+    )
     parser.add_argument("--quick", action="store_true")
-    args = parser.parse_args()
+    return parser
+
+
+def _default_report_path(output_dir: Path) -> Path:
+    """Untracked default report location (results/ is gitignored)."""
+    return output_dir / "V7_REPRESENTATION_TRANSPORT_CALIBRATION.md"
+
+
+def main() -> int:
+    args = _build_parser().parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
     if args.quick:
         config["repetitions"] = min(20, int(config["repetitions"]))
         config["persons"] = min(120, int(config["persons"]))
     run_id = datetime.now(UTC).strftime("w7_transport_%Y%m%d_%H%M%S")
     output_dir = args.output_dir or ROOT / "results" / "v7_representation_transport" / run_id
-    report = args.report or ROOT / "reports" / "V7_REPRESENTATION_TRANSPORT_CALIBRATION.md"
+    report = args.report or _default_report_path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     manifest = write_run_manifest(
         output_dir / "run_manifest.json",

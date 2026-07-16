@@ -100,7 +100,6 @@ def main() -> int:
         landmark_count=int(config["landmark_count"]),
         regularization=float(config["regularization"]),
         support_radius_quantile=float(config["support_radius_quantile"]),
-        seed=int(config["seed"]),
         version=str(config["version"]),
     )
     bundle.write_json(args.output_dir / "geometry_bundle.json")
