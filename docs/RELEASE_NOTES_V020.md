@@ -46,3 +46,25 @@ the tracked v0.2.0 evidence bundle are authoritative for this release.
 Release audit: Python compilation passed; full suite 302/302 passed; V7 and
 release-lockbox subset 95/95 passed. Exact package versions are recorded in
 `requirements-lock-v0.2.0.txt` and `release/v0.2.0/TEST_REPORT.md`.
+
+## Corrections (2026-07-17)
+
+The body of this document above is the v0.2.0 record and is left unedited;
+corrections are appended here per house style.
+
+- **Effective-rank range corrected: "22.8--22.9" should read "22.7--22.9".**
+  The W4b artifact value for the WORD12 view is 22.7496, which rounds to 22.7;
+  the shipped range understated the low end. All other W4b numbers are
+  unchanged.
+- **Rank bridge (TGEO-P3 rank-4 vs W4b effective rank ~22.7--22.9 — different
+  objects, no conflict).** No V7 document had mentioned TGEO-P3's rank-4
+  result, leaving readers free to misread W4b as overturning it. They measure
+  DIFFERENT objects in different feature spaces: TGEO-P3 found exactly 4
+  supra-edge components in the frozen 19-construct battery's person-level
+  covariance against a Marchenko-Pastur (empirical within-column-shuffle)
+  edge, all 4 replicating across person-disjoint halves (congruence
+  .985/.980/.932/.939). W4b's effective rank ~22.7--22.9 is a TF-IDF/SVD-24
+  multiview CAPACITY DESCRIPTOR on comment slices — a distributed-capacity
+  summary of a high-dimensional text representation, explicitly "a capacity
+  descriptor, not a finite factor count" (V7.3-W4 ledger row). Neither result
+  overturns the other; TGEO-P3's ledger row is unedited and stands.

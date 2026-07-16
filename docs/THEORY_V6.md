@@ -391,6 +391,12 @@ an uncertainty/identifiability guard near the eigenvalue boundary. SIM-W8 verifi
 Schur computation in easy synthetic worlds and explicitly refuses the boundary band;
 it does NOT prove a new human personality dimension. Earlier E4/W10 findings remain
 exploratory because their axis-selection/null procedures require cross-fitted reruns.
+[2026-07-17 reconciliation: the "instruments do not certify kernel rank" statement is
+currently demonstrated for 2 of the 3 motivating instruments (W10 and E4, downgraded
+per `docs/V7_W10_AUDIT.md`); the third, TGEO-P9's B-gust1, was never re-audited under
+the V7 standard — its cross-fit re-audit is PENDING, its pre-V7-standard record stands
+as recorded in its ledger row, and no stronger status may be cited until that re-audit
+runs.]
 
 ## 3. Theorem-similarity table (advanced tools ↔ SUICA objects)
 
@@ -521,7 +527,7 @@ register. The frozen v4 level battery and composite weights are untouched by V6.
 | P7 continuization (e839ed9) | edge-localized everywhere | ✗ construct-specific: first_person true flow; tension/directive boundary |
 | P8a interpolation (c5a9b4f) | curvature helps tension/directive | ✗ person baseline wins for boundary types |
 | P8b coordinate race (c5a9b4f) | first_person zones | ✗ relative-t decisive (1.114 vs 4.167) |
-| P9 flow-only factors (a493ff6) | exists at gust layer; ordered flow too weak; person-level open | gust ✓ (all gates, vocab-disjoint); ordered flow CERTIFIED (lean too pessimistic); person-level died at rep .150 |
+| P9 flow-only factors (a493ff6) | exists at gust layer; ordered flow too weak; person-level open | gust ✓ (all gates, vocab-disjoint); ordered flow CERTIFIED (lean too pessimistic); person-level died at rep .150. [2026-07-17: pre-V7-standard record; under the V7 standard the cross-fit re-audit is PENDING — see the TGEO-P9 ledger marker] |
 | E1 gust robustness (8e2b0ba) | venue ≥.6; time ≥.7; demeaned ≥.8; scale64 .4–.6 | large venues .90–.93 ✓; small venues FAIL (power?); time .86–.97 ✓; demeaned .982 ✓; scale64 .622 ✓ |
 | E2 Essays transport (8e2b0ba) | first_person transports; gust congruence ≥ .5; essay-level invisible factor exists; composite wins CV | first_person ✓ (+ curvature); **gust .200 — KILLED as registered**; invisible factor ✗ (visible factors transport .94 instead); composite ✗ (no CV gain) |
 | E3 gust dynamics (8e2b0ba) | AR ≈ 0 white; boundary-elevated magnitude | ✗ anti-persistent (−.31 vs null −.19, bounce); magnitude arm INCONCLUSIVE (leverage flaw, recorded) — E3's bounce later STRUCK by W2a |

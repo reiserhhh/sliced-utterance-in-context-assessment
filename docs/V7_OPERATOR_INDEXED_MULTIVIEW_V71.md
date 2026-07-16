@@ -260,8 +260,9 @@ The source-disjoint result has two distinct layers:
   representation-by-operator endpoints). Fine-grained native, sentence, and
   fixed views had negative held-out R2. Raising source support from 32 to 48
   comments did not reverse this.
-- **Relative-position alignment:** a separate, registered own-vs-stranger
-  source-disjoint AUC family passed for all ten views at 32 comments
+- **Relative-position alignment (POST-HOC EXPLORATORY; relabeled 2026-07-17,
+  see dated correction below):** a separate own-vs-stranger source-disjoint AUC
+  family passed for all ten views at 32 comments
   (AUC=.719--.805, max-T p=.005). In the exploratory 48-comment support arm it
   rose to .791--.862, again all max-T p=.005.
 
@@ -270,6 +271,20 @@ independent text samples, but do not support a stable common linear coordinate
 map for fine-grained views. This is compatible with a rotating/high-dimensional
 configuration and is not evidence for named latent factors, personality, or a
 universal slice choice.
+
+**Process-audit correction (2026-07-17).** The own-vs-stranger alignment family
+was previously described in this document as "registered". The 2026-07-15
+process audit established that it was designed and added AFTER the 8/10
+fine-view transport failures were on disk. Timeline (2026-07-15 UTC): r1
+17:10:53Z contained same-source endpoints only; the registry config file was
+modified at 17:12:39Z; r2 17:15:31Z added the source-disjoint transport family
+and 8/10 endpoints FAILED; r3 17:21:17Z added the alignment family, which
+passed 10/10. The alignment result stands as computed — every number above
+(.719--.805, p=.005, and the 48-arm .791--.862) is unchanged, and the max-T
+machinery was independently verified — but its evidentiary tier is
+EXPLORATORY-POST-HOC, not registered-confirmatory. A genuinely registered
+own-vs-stranger confirmation on a fresh cohort, with the family committed
+before any source-disjoint run, is the listed follow-up.
 
 ## Claim Boundary
 

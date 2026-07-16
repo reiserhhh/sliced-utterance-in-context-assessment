@@ -53,7 +53,7 @@ spectral functionals, for which we ship a tested open-source estimator suite.
 
 | claim | status |
 |---|---|
-| Motion-only coherence candidate (gust factor: supra-edge, person-disjoint rep .829, level-invisible, vocab-disjoint) | EXPLORATORY, register-local; full-pipeline cross-fit null pending |
+| Motion-only coherence candidate (gust factor: supra-edge, person-disjoint rep .829, level-invisible, vocab-disjoint) | EXPLORATORY, register-local; full-pipeline cross-fit null pending. [2026-07-17 reconciliation: this is the controlling V7-standard wording for TGEO-P9. The ledger row's "CONFIRMED... passes all gates" holds only under the pre-V7 standard (registered gates as run); the V7-standard cross-fit re-audit is PENDING, and T8-prime's "instruments do not certify kernel rank" claim is demonstrated for 2/3 instruments (W10, E4) with TGEO-P9 the open third — see docs/CLAIMS_LEDGER.md TGEO-P9 marker and docs/V7_W10_AUDIT.md] |
 | Portability follows visibility (level-shadowed motion factors transport .94/.78) | FALSIFIABLE HYPOTHESIS from V6-E2, not an empirical law |
 | Person-level motion style candidate (rep .777/.784) | SAME-SAMPLE EXPLORATORY; E4 residualization/axis selection must be cross-fitted before a person-level claim |
 | Gust memory: faint positive corpus mean, CI-solid (+.030 [.014, .048]) | CONFIRMED after exact centering-bias correction (W3; naive negative was artifact) |

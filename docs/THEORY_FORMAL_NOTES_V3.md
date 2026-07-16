@@ -429,12 +429,14 @@ texture (score-talk, emphasis) coordinated across the style clusters. CAVEAT
 format-dense band — the digit enrichment may be partly stratum texture; the N1 uncapped
 re-run adjudicates.
 
-**(b) Person susceptibility — historical exploratory headline, downgraded
-2026-07-12.** Split-half r of mean |activation| = **.441**
+**(b) Person susceptibility — historical exploratory headline, downgraded in the
+2026-07-15 V7 audit (this passage's earlier "downgraded 2026-07-12" dating was
+backdated; corrected 2026-07-17).** Split-half r of mean |activation| = **.441**
 (clears the registered >= .3 lean; ICC-share .381; n = 81 users, capped-corpus-limited).
 Signed DIRECTION r = −.128 — my "weaker but positive" lean WRONG: people are stable in
 HOW STRONGLY they gust, not in which direction. The original text called this an
-"amplitude trait". A later full-pipeline audit found overlapping axis discovery/test,
+"amplitude trait". The V7 full-pipeline audit — now properly recorded as
+`docs/V7_W10_AUDIT.md` — found overlapping axis discovery/test,
 an incomplete null, non-temporal cid parity, and missing opportunity/format/stranger
 controls. The licensed wording is now **descriptive susceptibility candidate** pending
 SIM-P3/P5/P6; no trait or person-measurement claim is currently licensed.
