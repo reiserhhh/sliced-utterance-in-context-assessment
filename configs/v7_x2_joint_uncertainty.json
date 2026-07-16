@@ -1,0 +1,22 @@
+{
+  "version": "v7.5-x2-joint-uncertainty-1",
+  "seed": 20260717,
+  "primary_functional": "mean_landmark_distance",
+  "secondary_functional": "nearest_landmark_distance",
+  "target_splits": ["calibration", "confirmation"],
+  "n_source_cluster_draws": 256,
+  "n_model_refit_draws": 64,
+  "n_reference_norm_draws": 256,
+  "n_joint_nested_draws": 128,
+  "e1_dir": "results/v7_multiview_projection/e1_v72_full_20260715",
+  "g1_dir": "results/v7_geometry/g1_corrected_v2_full_20260715",
+  "e0_exclusion_scores": "results/v7_operator_boundary_audit/e0_full_20260714/scores_native.csv",
+  "component_definitions": {
+    "source_cluster": "Resample the scored author's non-overlapping native source comments (cluster bootstrap, with replacement, same unit count) under the frozen representation and frozen G1 bundle.",
+    "model_refit": "Refit the registered TF-IDF+SVD representation on a within-author resample of the discovery source-comment corpus with a fresh SVD seed, recompute discovery author features from their original units, refit the geometry runtime, and rescore the target author's original units. Reference-population membership is held fixed.",
+    "reference_norm": "Resample the 141 discovery reference authors (feature rows) with replacement under the frozen representation and refit the geometry runtime (center, metric, landmarks, support radius) before rescoring frozen target features.",
+    "joint_nested": "Protocol combination rule: resample discovery reference authors, refit representation and geometry runtime on that draw, resample the scored author's source clusters, and score the profile functional per draw."
+  },
+  "registered_lean": "source_cluster_component >= model_refit_component (weak lean, no kill)",
+  "claim_boundary": "Error decomposition of a technical geometry only; no reliability, MDD, or person-score validity claim."
+}

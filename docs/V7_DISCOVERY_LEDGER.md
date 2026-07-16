@@ -25,5 +25,30 @@ measurement claims. Candidate coordinates remain anonymous.
 
 | ID | Status | Evidence | Permitted conclusion | Explicit non-conclusion |
 | --- | --- | --- | --- | --- |
-| V7.5-X1 | `REGISTERED_BEFORE_RUN` | planned: research repo results/suica_x1_crossfit_motion/; registration: research repo docs/SUICA_THEORY_FORMAL_NOTES_V3.md section F18 (commit c029684) | Cross-fitted rescue-or-burial of the motion layer's three person-level legs (W10 susceptibility, TGEO-P9 B-gust1, V6-E4 motion style): discovery/evaluation author split, random text half-splits (never cid-parity), matched-stranger nulls, subreddit-matched pools. Leans: W10 cross-fitted stability [.15,.30] CI>0; TGEO-P9 survives (>=.6 held-out replication); E4 attenuates to [.5,.7]. Per-leg burial if CI includes 0 or stranger null absorbs; STANDING KILL if all three bury -> T8-prime's kernel-rank evidentiary base drops to zero certified instruments pending the native corpus. | No personality construct, reliability coefficient, or named factor regardless of outcome; survival licenses only "cross-fit-clean anonymous person-by-register path candidate". |
-| V7.5-X2 | `REGISTERED_BEFORE_RUN` | planned: results/v7_uncertainty/x2_g1_joint_20260717/ | First consumption of suica_core/v7_uncertainty.py: joint nested conditional uncertainty on the frozen G1 bundle (source-cluster bootstrap x model-refit x reference-norm draws), moving the lattice's conditional-uncertainty coordinate from "protocol implemented" to "empirically estimated". Weak lean: source-cluster component >= model-refit component. No kill — estimation infrastructure. | Error decomposition of a technical geometry only; no reliability, MDD, or person-score validity claim. |
+| V7.5-X1 | `RESCUED_WITH_DOWNGRADE_ALL_THREE_LEGS; STANDING_KILL_NOT_FIRED` (run + independently verified TRUST_WITH_CAVEATS, 2026-07-17) | planned: research repo results/suica_x1_crossfit_motion/; registration: research repo docs/SUICA_THEORY_FORMAL_NOTES_V3.md section F18 (commit c029684) | Cross-fitted rescue-or-burial of the motion layer's three person-level legs (W10 susceptibility, TGEO-P9 B-gust1, V6-E4 motion style): discovery/evaluation author split, random text half-splits (never cid-parity), matched-stranger nulls, subreddit-matched pools. Leans: W10 cross-fitted stability [.15,.30] CI>0; TGEO-P9 survives (>=.6 held-out replication); E4 attenuates to [.5,.7]. Per-leg burial if CI includes 0 or stranger null absorbs; STANDING KILL if all three bury -> T8-prime's kernel-rank evidentiary base drops to zero certified instruments pending the native corpus. | No personality construct, reliability coefficient, or named factor regardless of outcome; survival licenses only "cross-fit-clean anonymous person-by-register path candidate". |
+| V7.5-X2 | `EMPIRICALLY_ESTIMATED; LEAN_HELD` (run 2026-07-17) | planned: results/v7_uncertainty/x2_g1_joint_20260717/ | First consumption of suica_core/v7_uncertainty.py: joint nested conditional uncertainty on the frozen G1 bundle (source-cluster bootstrap x model-refit x reference-norm draws), moving the lattice's conditional-uncertainty coordinate from "protocol implemented" to "empirically estimated". Weak lean: source-cluster component >= model-refit component. No kill — estimation infrastructure. | Error decomposition of a technical geometry only; no reliability, MDD, or person-score validity claim. |
+
+**V7.5-X1 outcome (2026-07-17, appended).** No leg buried (every cross-fitted CI
+excludes 0; all matched-stranger/shuffle nulls reject at p<.05) — but none survives at
+its original strength/character: W10 cross-fitted stability .1173 [.058,.180] (below
+the registered [.15,.30] lean; subreddit-matched null mean .063 = ~half venue-shared);
+P9 held-out replication .964 with supra-edge BUT level-invisibility FAILS cross-fitted
+(vis 1.975 vs null95 1.030 uncapped; 1.200 marginal capped) — survives as a factor, not
+as an averaging-blind one; E4 excess co-movement CI [.176,.454] but held-out
+replication .176 primary arm (.832 capped — arm-dependent component identity).
+Consequence: TGEO-P9's pending re-audit is closed; T8-prime's "no instrument certifies
+kernel rank" now rests on 3/3 examined instruments — real held-out motion structure
+exists, but no cross-fit-clean instrument yet carries "invisible to averaging AND
+person-anchored". Verifier caveats: aggregates-only persistence; pre-split corpus-wide
+feature scoring; meta-level selection contact (post-hoc cross-fitting on existing
+data). Full record: research repo docs/SUICA_THEORY_FORMAL_NOTES_V3.md F18 results
+(commit 57c7a15); results/suica_x1_crossfit_motion/ (research repo).
+
+**V7.5-X2 outcome (2026-07-17, appended).** 85 authors decomposed (14 correctly refused
+outside the radial envelope). Pooled shares: source-cluster .503 / reference-norm .324 /
+model-refit .174 — weak lean HELD (98.8% of authors). Median joint SEM 1.68 (~15%
+relative); joint/independence ratio 1.37 (independence would understate ~37%).
+Secondary finding: draw-level ready rates low (median .06) — the frozen q99 envelope is
+tight vs source noise; support-policy calibration item. Evidence:
+results/v7_uncertainty/x2_g1_joint_20260717/; reports/V7_X2_G1_JOINT_UNCERTAINTY.md.
+The lattice's conditional-uncertainty coordinate moves to EMPIRICALLY ESTIMATED.
