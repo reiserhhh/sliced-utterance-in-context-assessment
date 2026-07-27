@@ -13,7 +13,7 @@ Passing one coordinate cannot promote another.
 | --- | --- | --- |
 | Geometry | absent / technical / replicated within declared cohort | technical and internally replicated candidates |
 | Scoreability | unavailable / frozen profile / support refusal active | frozen reference-relative profile implemented |
-| Conditional uncertainty | absent / partial / joint nested | protocol implemented; empirical joint estimates pending |
+| Conditional uncertainty | absent / partial / joint nested | joint nested estimate completed for one frozen G1 technical bundle; broader calibration pending |
 | Repeated-measurement reliability | untested / design ready / estimated | untested; future-data preflight implemented |
 | External construct validity | untested / protocol ready / anchored / independently replicated | untested; pre-label protocol implemented |
 | Cross-domain transport | none / local reference only / paired alignment / pretrained alignment | local-reference-only protocol; paired evidence absent |
@@ -36,6 +36,23 @@ observation operator, representation, runtime, reference cohort, and support
 rule. It does not mean that anonymous coordinates are personality factors,
 clinical scores, temporally stable traits, culture-free universals, or market
 predictors.
+
+## Post-Closure Research Reconciliation
+
+V7.5-X1 and X2 were run after the sealed V7 technical closure.
+
+- X1 retained three cross-fitted motion/path candidates, but all were
+  downgraded relative to their earlier interpretation. In particular, the P9
+  level-invisibility premise failed cross-fitting. The result supports
+  anonymous path structure, not a mean-invisible personality axis.
+- X2 supplied the first joint-nested conditional uncertainty estimate for one
+  frozen G1 technical geometry. Its median joint/independence SEM ratio was
+  about 1.37, demonstrating that an independence-summed total error would be
+  misleading in that object. This is not repeated-measurement reliability,
+  MDD, state-trait separation, or person-score validity.
+
+These results update separate evidence coordinates; they do not reopen or
+rewrite the sealed V7 release.
 
 ## Migration rule
 
