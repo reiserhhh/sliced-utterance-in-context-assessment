@@ -1,0 +1,39 @@
+{
+  "version": "suica-m3-mechanism-atlas-v1-discovery",
+  "estimand_id": "SUICA_M3_MICRO_MESO_MECHANISM_ATLAS_V1_DISCOVERY",
+  "seed": 314159265,
+  "repetitions": 10,
+  "event_frontier": [24, 48, 96],
+  "base_spec": {
+    "authors": 36,
+    "occasions": 6,
+    "response_dimensions": 3,
+    "condition_dimensions": 3,
+    "noise": 0.16
+  },
+  "worlds": [
+    "density_state_distribution",
+    "conditional_response_operator",
+    "metastable_slow_mode",
+    "interactional_alignment",
+    "higher_order_path",
+    "opportunity_only",
+    "mixed_superposition",
+    "null_author"
+  ],
+  "positive_worlds": {
+    "density_state_distribution": "distribution_kme",
+    "conditional_response_operator": "conditional_operator",
+    "metastable_slow_mode": "koopman_spectrum",
+    "interactional_alignment": "interaction_coupling",
+    "higher_order_path": "higher_order_path"
+  },
+  "discovery_gates": {
+    "minimum_expected_auc": 0.62,
+    "minimum_expected_geometry": 0.45,
+    "minimum_expected_win_fraction": 0.50,
+    "maximum_null_auc": 0.58,
+    "minimum_opportunity_auc": 0.75,
+    "maximum_opportunity_residual_auc": 0.62
+  }
+}

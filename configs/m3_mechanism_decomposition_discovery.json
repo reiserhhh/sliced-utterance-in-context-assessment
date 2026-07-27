@@ -1,0 +1,22 @@
+{
+  "version": "suica-m3-mechanism-atlas-v3-independent-pair-decomposition",
+  "estimand_id": "SUICA_M3_MECHANISM_ATLAS_V3_PAIR_DECOMPOSITION",
+  "seed": 141421356,
+  "repetitions": 8,
+  "mechanisms": ["density", "condition", "ar2", "interaction", "lag3"],
+  "base_spec": {
+    "authors": 40,
+    "occasions": 6,
+    "events": 160,
+    "dimensions": 3,
+    "noise": 0.16,
+    "component_scale": 0.65
+  },
+  "discovery_gates": {
+    "minimum_own_partial_geometry": 0.25,
+    "minimum_own_over_crosstalk": 0.15,
+    "maximum_knockout_geometry_abs": 0.2,
+    "minimum_same_author_auc": 0.6,
+    "minimum_pair_pass_fraction": 0.75
+  }
+}

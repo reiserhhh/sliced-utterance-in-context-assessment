@@ -1,0 +1,57 @@
+{
+  "version": "suica-m3-matched-family-v1-internal-60seed",
+  "estimand_id": "SUICA_M3_MATCHED_FAMILY_V1_INTERNAL_60SEED",
+  "seed": 314159265,
+  "repetitions": 60,
+  "worlds": {
+    "positive_linear_gaussian": {
+      "nonlinear": false
+    },
+    "positive_nonlinear_t5": {
+      "heavy_tail": true,
+      "nonlinear": true
+    },
+    "positive_shared_heteroskedastic": {
+      "heteroskedastic": true,
+      "nonlinear": true,
+      "shared_latent": true
+    },
+    "negative_no_common_support": {
+      "missing_common_support": true
+    },
+    "negative_single_occasion": {
+      "occasions": 1
+    },
+    "negative_rank_deficient": {
+      "rank_deficient": true
+    }
+  },
+  "base_spec": {
+    "authors": 96,
+    "reference_authors": 192,
+    "conditions": 8,
+    "condition_dimensions": 3,
+    "response_dimensions": 6,
+    "occasions": 4,
+    "fixed_repeats_train": 4,
+    "fixed_repeats_test": 4,
+    "free_events_train": 160,
+    "free_events_test": 160
+  },
+  "gates": {
+    "maximum_choice_js_upper": 0.08,
+    "minimum_choice_skill_lower": 0.02,
+    "minimum_position_geometry_lower": 0.70,
+    "maximum_position_nrmse_upper": 0.35,
+    "minimum_operator_correlation_lower": 0.60,
+    "minimum_nonlinear_correlation_lower": 0.40,
+    "minimum_nonlinear_increment_lower": 0.05,
+    "minimum_state_correlation_lower": 0.45,
+    "minimum_refusal_rate": 0.95,
+    "maximum_affine_or_coarse_error": 1e-10,
+    "minimum_invariance_geometry": 0.98,
+    "maximum_equivalent_observable_error": 1e-12,
+    "minimum_equivalent_micro_difference": 0.50
+  },
+  "claim_boundary": "This is an internal 60-seed matched-family repetition, not a sealed confirmation. A pass licenses known-basis additive projection, simple refusal guards, and algebraic invariants only. It does not establish recovery from a microscopic kernel, nonlinear out-of-family generalization, human-text existence, personality meaning, causality, construct validity, cross-language invariance, diagnosis, or clinical use."
+}

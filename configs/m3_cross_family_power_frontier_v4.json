@@ -1,0 +1,46 @@
+{
+  "version": "suica-m3-cross-family-power-frontier-v4",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_V4_EVENT_POWER_FRONTIER",
+  "seed": 161803398,
+  "repetitions": 6,
+  "stop_after_resolution": true,
+  "report_path": "reports/SUICA_M3_CROSS_FAMILY_POWER_FRONTIER_V4.md",
+  "families": {
+    "distribution": {
+      "worlds": ["cf_d_tail", "cf_d_multimodal"],
+      "event_frontier": [512, 1024, 2048, 4096],
+      "authors": 64,
+      "occasions": 4,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "path": {
+      "worlds": ["cf_kp_arch"],
+      "event_frontier": [512, 1024, 2048, 4096],
+      "authors": 48,
+      "occasions": 4,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 128,
+    "nystroem_components": 32,
+    "ridge": 0.35
+  },
+  "seed_pass": {
+    "minimum_expected_auc": 0.6,
+    "minimum_expected_geometry": 0.3,
+    "maximum_cheap_auc_deviation": 0.06,
+    "minimum_delta_auc": 0.0,
+    "require_positive_increment": false
+  },
+  "world_overrides": {
+    "cf_kp_arch": {
+      "require_positive_increment": true
+    }
+  },
+  "minimum_power": 0.8
+}

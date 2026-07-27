@@ -1,0 +1,64 @@
+{
+  "version": "suica-m3-cross-family-preflight-v3-full-matrix",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_FREEZE_CANDIDATE_PREFLIGHT",
+  "seed": 141421356,
+  "repetitions": 6,
+  "worlds": {
+    "cf_d_tail": {"spec": "distribution", "events": 256},
+    "cf_d_skew": {"spec": "distribution", "events": 256},
+    "cf_d_multimodal": {"spec": "distribution", "events": 256},
+    "cf_d_copula": {"spec": "distribution", "events": 1024},
+    "cf_o_spline": {"spec": "operator", "events": 192},
+    "cf_o_voronoi": {"spec": "operator", "events": 192},
+    "cf_o_neural": {"spec": "operator", "events": 192},
+    "cf_kp_hsmm": {"spec": "path", "events": 512},
+    "cf_kp_cycle": {"spec": "path", "events": 512},
+    "cf_kp_arch": {"spec": "path", "events": 2048},
+    "alias_hidden": {"spec": "path", "events": 512},
+    "alias_operator_support": {"spec": "operator", "events": 192},
+    "null_author": {"spec": "path", "events": 512}
+  },
+  "specs": {
+    "distribution": {
+      "authors": 64,
+      "occasions": 4,
+      "events": 256,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "operator": {
+      "authors": 64,
+      "occasions": 4,
+      "events": 192,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "path": {
+      "authors": 64,
+      "occasions": 4,
+      "events": 512,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 128,
+    "nystroem_components": 64,
+    "ridge": 0.35
+  },
+  "preflight_gates": {
+    "minimum_expected_auc": 0.6,
+    "minimum_expected_geometry": 0.3,
+    "minimum_positive_increment_fraction": 0.75,
+    "maximum_cheap_auc_deviation": 0.06,
+    "maximum_off_target_geometry": 0.15,
+    "maximum_knockout_geometry": 0.1,
+    "maximum_alias_geometry": 0.1,
+    "maximum_alias_auc_deviation": 0.06,
+    "maximum_null_auc": 0.56,
+    "maximum_second_order_range": 1e-8
+  }
+}

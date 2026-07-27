@@ -1,0 +1,164 @@
+{
+  "version": "suica-m3-two-phase-microkernel-v2-discovery",
+  "estimand_id": "SUICA_M3_TWO_PHASE_MICROKERNEL_V2_DISCOVERY",
+  "seed": 271828182,
+  "repetitions": 12,
+  "base_spec": {
+    "authors": 40,
+    "reference_authors": 64,
+    "conditions": 36,
+    "coordinate_dimensions": 2,
+    "response_dimensions": 6,
+    "emission_codes": 12,
+    "states": 3,
+    "train_occasions": 12,
+    "test_occasions": 12,
+    "fixed_repeats": 4,
+    "free_events": 80,
+    "author_scale": 0.55,
+    "state_scale": 0.7,
+    "choice_scale": 0.65,
+    "readout_noise": 0.15
+  },
+  "worlds": {
+    "P2_smooth_event_kernel": {
+      "condition_frequency": 0.6,
+      "nonlinear_scale": 0.5
+    },
+    "P3_nonlinear_t5": {
+      "condition_frequency": 1.0,
+      "nonlinear_scale": 0.7,
+      "heavy_tail": true
+    },
+    "P4_state_choice_heteroskedastic": {
+      "condition_frequency": 0.8,
+      "nonlinear_scale": 0.6,
+      "heteroskedastic": true
+    },
+    "N1_no_common_support": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "missing_common_support": true
+    },
+    "N2_single_occasion": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "single_occasion": true
+    },
+    "N3_fixed_not_randomized": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "fixed_phase_randomized": false
+    },
+    "N4_rank_deficient": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "rank_deficient": true
+    },
+    "N5_representation_drift": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "representation_drift": true
+    },
+    "N6_unknown_missingness": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "missingness_mechanism": "UNKNOWN"
+    },
+    "N7_dependent_technical_streams": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "technical_streams_independent": false
+    },
+    "N8_mixed_coarse_blocks": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "coarse_blocks_condition_homogeneous": false
+    },
+    "N9_reference_mismatch": {
+      "authors": 24,
+      "reference_authors": 36,
+      "conditions": 16,
+      "train_occasions": 4,
+      "test_occasions": 4,
+      "fixed_repeats": 2,
+      "free_events": 30,
+      "reference_mismatch": true
+    },
+    "N10_null_authors": {
+      "authors": 48,
+      "reference_authors": 64,
+      "conditions": 25,
+      "train_occasions": 12,
+      "test_occasions": 12,
+      "fixed_repeats": 4,
+      "free_events": 80,
+      "null_authors": true
+    }
+  },
+  "discovery_gates": {
+    "minimum_occupancy_correlation_mean": 0.8,
+    "minimum_transition_order_gain_mean": 0.015,
+    "minimum_personal_transition_skill_mean": 0.015,
+    "minimum_personal_transition_skill_lower95": 0.0,
+    "minimum_shared_transition_skill_mean": 0.1,
+    "maximum_null_personal_transition_skill_abs": 0.003,
+    "minimum_heldout_field_r2_mean": 0.02,
+    "minimum_projection_correlation_mean": 0.55,
+    "minimum_nonlinear_heldout_correlation_mean": 0.2,
+    "minimum_nonlinear_increment_lower95": 0.0,
+    "minimum_nonlinear_positive_seed_fraction": 0.75,
+    "minimum_state_relative_correlation_mean": 0.6,
+    "minimum_same_author_auc_mean": 0.65,
+    "null_same_author_auc_lower": 0.45,
+    "null_same_author_auc_upper": 0.55,
+    "minimum_refusal_rate": 1.0,
+    "maximum_invariance_error": 1e-10,
+    "minimum_invariance_geometry": 0.99,
+    "maximum_alias_occupancy_accuracy": 0.65,
+    "minimum_alias_transition_accuracy": 0.9,
+    "maximum_state_alias_observable_error": 1e-12,
+    "minimum_state_alias_truth_difference": 0.5
+  },
+  "claim_boundary": "Discovery only. The current generator and estimator are basis-blinded but near-family because random Fourier response functions and Gaussian RBF regression share a kernel family. A partial result may support two-phase synthetic recovery of occupancy, shared and author-specific transition information, public-coordinate response projection, and within-author relative occasion state under explicit design conditions. General nonlinear recovery, human text, personality meaning, psychological constructs, clinical use, and sealed confirmation remain unlicensed."
+}

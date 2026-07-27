@@ -1,0 +1,64 @@
+{
+  "version": "suica-m3-cross-family-preflight-v1",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_POWER_PREFLIGHT",
+  "seed": 314159265,
+  "repetitions": 6,
+  "worlds": {
+    "cf_d_tail": "distribution",
+    "cf_d_skew": "distribution",
+    "cf_d_multimodal": "distribution",
+    "cf_d_copula": "distribution",
+    "cf_o_spline": "operator",
+    "cf_o_voronoi": "operator",
+    "cf_o_neural": "operator",
+    "cf_kp_hsmm": "path",
+    "cf_kp_cycle": "path",
+    "cf_kp_arch": "path",
+    "alias_hidden": "path",
+    "alias_operator_support": "operator",
+    "null_author": "path"
+  },
+  "specs": {
+    "distribution": {
+      "authors": 48,
+      "occasions": 4,
+      "events": 256,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "operator": {
+      "authors": 48,
+      "occasions": 4,
+      "events": 192,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "path": {
+      "authors": 48,
+      "occasions": 4,
+      "events": 512,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 128,
+    "nystroem_components": 64,
+    "ridge": 0.35
+  },
+  "preflight_gates": {
+    "minimum_expected_auc": 0.6,
+    "minimum_expected_geometry": 0.3,
+    "minimum_positive_increment_fraction": 0.75,
+    "maximum_cheap_auc_deviation": 0.06,
+    "maximum_off_target_geometry": 0.15,
+    "maximum_knockout_geometry": 0.1,
+    "maximum_alias_geometry": 0.1,
+    "maximum_alias_auc_deviation": 0.06,
+    "maximum_null_auc": 0.56,
+    "maximum_second_order_range": 1e-8
+  }
+}

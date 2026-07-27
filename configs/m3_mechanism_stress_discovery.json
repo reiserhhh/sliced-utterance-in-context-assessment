@@ -1,0 +1,46 @@
+{
+  "version": "suica-m3-mechanism-atlas-v2-low-order-matched-discovery",
+  "estimand_id": "SUICA_M3_MECHANISM_ATLAS_V2_LOW_ORDER_MATCHED",
+  "seed": 161803398,
+  "repetitions": 10,
+  "event_frontier": [48, 96, 192],
+  "base_spec": {
+    "authors": 36,
+    "occasions": 6,
+    "dimensions": 3,
+    "noise": 0.1
+  },
+  "worlds": {
+    "equal_covariance_density_shape": {
+      "expected": "distribution_kme",
+      "cheap": "covariance_profile"
+    },
+    "matched_linear_nonlinear_response": {
+      "expected": "nonlinear_condition",
+      "cheap": "linear_condition"
+    },
+    "matched_lag1_ar2_slow_mode": {
+      "expected": "ar2_slow_spectrum",
+      "cheap": "lag1_spectrum"
+    },
+    "matched_lag12_lag3_path": {
+      "expected": "lag3_memory",
+      "cheap": "lag2_memory"
+    },
+    "matched_linear_nonlinear_interaction": {
+      "expected": "nonlinear_partner",
+      "cheap": "linear_partner"
+    },
+    "null_author": {
+      "expected": null,
+      "cheap": null
+    }
+  },
+  "discovery_gates": {
+    "minimum_expected_auc": 0.62,
+    "minimum_expected_geometry": 0.45,
+    "minimum_auc_increment": 0.05,
+    "minimum_geometry_increment": 0.1,
+    "maximum_null_auc": 0.58
+  }
+}

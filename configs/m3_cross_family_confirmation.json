@@ -1,0 +1,69 @@
+{
+  "version": "suica-m3-cross-family-artifact-sealed-confirmation-v1",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_ARTIFACT_SEALED_CONFIRMATION",
+  "root_seed": 1732050807,
+  "repetitions": 32,
+  "max_workers": 8,
+  "preflight_decision": "results/m3_cross_family_preflight_v3/decision.json",
+  "required_preflight_decision": "M3_CROSS_FAMILY_PREFLIGHT_POWER_READY",
+  "worlds": {
+    "cf_d_tail": {"spec": "distribution", "events": 256},
+    "cf_d_skew": {"spec": "distribution", "events": 256},
+    "cf_d_multimodal": {"spec": "distribution", "events": 256},
+    "cf_d_copula": {"spec": "distribution", "events": 1024},
+    "cf_o_spline": {"spec": "operator", "events": 192},
+    "cf_o_voronoi": {"spec": "operator", "events": 192},
+    "cf_o_neural": {"spec": "operator", "events": 192},
+    "cf_kp_hsmm": {"spec": "path", "events": 512},
+    "cf_kp_cycle": {"spec": "path", "events": 512},
+    "cf_kp_arch": {"spec": "path", "events": 2048},
+    "alias_hidden": {"spec": "path", "events": 512},
+    "alias_operator_support": {"spec": "operator", "events": 192},
+    "null_author": {"spec": "path", "events": 512}
+  },
+  "specs": {
+    "distribution": {
+      "authors": 160,
+      "occasions": 4,
+      "events": 256,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "operator": {
+      "authors": 128,
+      "occasions": 4,
+      "events": 192,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "path": {
+      "authors": 96,
+      "occasions": 4,
+      "events": 512,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 128,
+    "nystroem_components": 64,
+    "ridge": 0.35
+  },
+  "confirmation_gates": {
+    "minimum_expected_auc_ci_lower": 0.6,
+    "minimum_geometry_ci_lower": 0.3,
+    "minimum_increment_ci_lower": 0.0,
+    "minimum_positive_seeds": 27,
+    "maximum_cheap_auc_bias": 0.02,
+    "maximum_off_target_ci_upper": 0.15,
+    "maximum_knockout_mean_abs": 0.05,
+    "maximum_alias_auc_bias": 0.02,
+    "maximum_alias_geometry_abs": 0.1,
+    "maximum_null_auc_bias": 0.02,
+    "maximum_second_order_range": 1e-8,
+    "bootstrap_repetitions": 10000
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "version": "suica-m3-cross-family-v4-smoke",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_V4_SMOKE",
+  "seed": 271828182,
+  "repetitions": 2,
+  "ready_decision": "M3_CROSS_FAMILY_V4_SMOKE_PASS",
+  "partial_decision": "M3_CROSS_FAMILY_V4_SMOKE_DIAGNOSTIC",
+  "report_path": "reports/SUICA_M3_CROSS_FAMILY_PREFLIGHT_V4_SMOKE.md",
+  "worlds": {
+    "cf_d_tail": {"spec": "distribution", "events": 256},
+    "cf_d_skew": {"spec": "distribution", "events": 256},
+    "cf_d_multimodal": {"spec": "distribution", "events": 256},
+    "cf_d_copula": {"spec": "distribution", "events": 512},
+    "cf_o_spline": {"spec": "operator", "events": 96},
+    "cf_o_voronoi": {"spec": "operator", "events": 96},
+    "cf_o_neural": {"spec": "operator", "events": 96},
+    "cf_kp_hsmm": {"spec": "path", "events": 256},
+    "cf_kp_cycle": {"spec": "path", "events": 256},
+    "cf_kp_arch": {"spec": "path", "events": 512},
+    "alias_hidden": {"spec": "path", "events": 256},
+    "alias_operator_support": {"spec": "operator", "events": 96},
+    "null_author": {"spec": "path", "events": 256}
+  },
+  "specs": {
+    "distribution": {
+      "authors": 24,
+      "occasions": 4,
+      "events": 256,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "operator": {
+      "authors": 24,
+      "occasions": 4,
+      "events": 96,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    },
+    "path": {
+      "authors": 24,
+      "occasions": 4,
+      "events": 256,
+      "dimensions": 3,
+      "partners": 16,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 32,
+    "nystroem_components": 24,
+    "ridge": 0.35
+  },
+  "preflight_gates": {
+    "minimum_expected_auc": 0.55,
+    "minimum_expected_geometry": 0.15,
+    "minimum_positive_increment_fraction": 0.5,
+    "maximum_cheap_auc_deviation": 0.15,
+    "maximum_off_target_geometry": 0.35,
+    "maximum_knockout_geometry": 0.35,
+    "maximum_alias_auc_deviation": 0.15,
+    "maximum_alias_geometry": 0.35,
+    "maximum_null_auc_deviation": 0.15,
+    "minimum_density": 0.05,
+    "maximum_density_normalization_error": 1e-10,
+    "maximum_moment_tensor_error": 1e-9,
+    "maximum_poly3_projection_ratio": 1e-10,
+    "maximum_nuisance_constraint_error": 1e-10,
+    "maximum_theoretical_lag02_range": 1e-12,
+    "target_overrides": {
+      "direction": {
+        "minimum_expected_auc": 0.5
+      }
+    }
+  }
+}

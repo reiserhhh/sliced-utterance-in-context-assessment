@@ -1,0 +1,124 @@
+{
+  "version": "suica-m3-cross-family-artifact-sealed-confirmation-v4",
+  "estimand_id": "SUICA_M3_CROSS_FAMILY_ARTIFACT_SEALED_CONFIRMATION_V4",
+  "repetitions": 32,
+  "required_preflight": {
+    "path": "results/m3_cross_family_preflight_v4/decision.json",
+    "decision": "M3_CROSS_FAMILY_V4_READY_FOR_CLEAN_SEAL"
+  },
+  "worlds": {
+    "cf_d_tail": {
+      "spec": "distribution",
+      "events": 1024,
+      "knockout_targets": ["distribution"]
+    },
+    "cf_d_skew": {
+      "spec": "distribution",
+      "events": 512,
+      "knockout_targets": ["distribution"]
+    },
+    "cf_d_multimodal": {
+      "spec": "distribution",
+      "events": 1024,
+      "knockout_targets": ["distribution"]
+    },
+    "cf_d_copula": {
+      "spec": "distribution",
+      "events": 1024,
+      "knockout_targets": ["distribution"]
+    },
+    "cf_o_spline": {
+      "spec": "operator",
+      "events": 192,
+      "knockout_targets": ["condition", "partner"]
+    },
+    "cf_o_voronoi": {
+      "spec": "operator",
+      "events": 192,
+      "knockout_targets": ["condition", "partner"]
+    },
+    "cf_o_neural": {
+      "spec": "operator",
+      "events": 192,
+      "knockout_targets": ["condition", "partner"]
+    },
+    "cf_kp_hsmm": {
+      "spec": "path",
+      "events": 512,
+      "knockout_targets": ["hazard"]
+    },
+    "cf_kp_cycle": {
+      "spec": "path",
+      "events": 512,
+      "knockout_targets": ["direction"]
+    },
+    "cf_kp_arch": {
+      "spec": "path",
+      "events": 1024,
+      "knockout_targets": ["nonlinear_dynamics"]
+    },
+    "alias_hidden": {
+      "spec": "path",
+      "events": 512,
+      "knockout_targets": []
+    },
+    "alias_operator_support": {
+      "spec": "operator",
+      "events": 192,
+      "knockout_targets": []
+    },
+    "null_author": {
+      "spec": "path",
+      "events": 512,
+      "knockout_targets": []
+    }
+  },
+  "specs": {
+    "distribution": {
+      "authors": 96,
+      "occasions": 4,
+      "events": 1024,
+      "dimensions": 3,
+      "partners": 32,
+      "noise": 0.1
+    },
+    "operator": {
+      "authors": 64,
+      "occasions": 4,
+      "events": 192,
+      "dimensions": 3,
+      "partners": 32,
+      "noise": 0.1
+    },
+    "path": {
+      "authors": 64,
+      "occasions": 4,
+      "events": 512,
+      "dimensions": 3,
+      "partners": 32,
+      "noise": 0.1
+    }
+  },
+  "estimator": {
+    "frequency_directions": 128,
+    "nystroem_components": 64,
+    "ridge": 0.35
+  },
+  "confirmation_gates": {
+    "minimum_expected_auc_ci_lower": 0.6,
+    "minimum_geometry_ci_lower": 0.3,
+    "minimum_increment_ci_lower": 0.0,
+    "maximum_cheap_auc_bias": 0.02,
+    "maximum_knockout_mean_abs": 0.05,
+    "maximum_alias_auc_bias": 0.02,
+    "maximum_alias_geometry_abs": 0.1,
+    "maximum_null_auc_bias": 0.02,
+    "minimum_density": 0.05,
+    "bootstrap_repetitions": 10000,
+    "target_overrides": {
+      "direction": {
+        "minimum_expected_auc_ci_lower": 0.5
+      }
+    }
+  }
+}
