@@ -2,7 +2,7 @@
 
 Status: `INTERNAL_FRESH_AUTHOR_CONFIRMATION_PASS__BEHAVIOR_OBJECT_STOP`
 
-Run date: 2026-07-25  
+Run date: 2026-07-25
 Primary run:
 `results/v8_spectral_geometry_audit/pandora_opened_panel_v4_scale_residual_20260725`
 

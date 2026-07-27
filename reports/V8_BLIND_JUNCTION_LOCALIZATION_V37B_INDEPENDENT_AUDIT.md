@@ -110,4 +110,3 @@ or clinical meaning.
 6. Discover \(K\) on discovery data and report group-free primary metrics;
    true-group centering becomes sensitivity analysis only.
 7. Freeze the parent seal hash and exact threshold selection rule.
-

@@ -1,6 +1,6 @@
 # SUICA V8 Evidence-Bound Interpreter Experiment
 
-Execution date: 2026-07-24  
+Execution date: 2026-07-24
 Final decision: `V8_INTERPRETER_RENDERER_ONLY`
 
 ## Question
@@ -152,4 +152,3 @@ representation, not prompt fluency:
   `results/v8_interpreter_stability/pandora_formal_v2_20260724/`
 - frozen plan and amendments:
   `docs/V8_INTERPRETER_STABILITY_PLAN.md`
-

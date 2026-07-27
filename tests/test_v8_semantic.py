@@ -105,4 +105,3 @@ def test_nonstandard_json_constants_are_refused() -> None:
     )
     result = transduce_segments(provider, _spec(), _segments(), run_id="test-nan")
     assert result["status"] == "REFUSE_SEMANTIC_TRANSDUCTION"
-

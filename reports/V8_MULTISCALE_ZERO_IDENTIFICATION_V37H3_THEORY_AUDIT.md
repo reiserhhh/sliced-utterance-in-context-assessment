@@ -63,4 +63,3 @@ The next protocol should require:
 
 Until that adversary is passed, V3.7H.3 is a discovery-level additive-world
 identification result, not a general multiscale identification theorem.
-

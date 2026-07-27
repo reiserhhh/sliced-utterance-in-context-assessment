@@ -173,4 +173,3 @@ def test_persistent_confound_is_observationally_identical() -> None:
         confound_world["values"],
     )
     assert response_world["effect_source"] != confound_world["effect_source"]
-

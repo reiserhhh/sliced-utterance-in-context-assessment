@@ -412,4 +412,3 @@ def repeated_opportunity_excess(
             (float(energies["author_energy"]) - correction) / scale
         ),
     }
-

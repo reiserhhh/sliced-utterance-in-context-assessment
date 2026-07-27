@@ -208,4 +208,3 @@ intersection dimension, partial overlap, correlated noise, condition
 reparameterization attacks, and fresh geometric templates. Real-text or
 psychological interpretation remains closed until that technical gate is
 passed and an appropriate shared-condition dataset is available.
-

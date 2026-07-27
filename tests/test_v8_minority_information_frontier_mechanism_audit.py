@@ -46,4 +46,3 @@ def test_paired_bootstrap_detects_small_calibration_gap() -> None:
     )
     assert abs(difference) < 0.05
     assert lower < difference < upper
-

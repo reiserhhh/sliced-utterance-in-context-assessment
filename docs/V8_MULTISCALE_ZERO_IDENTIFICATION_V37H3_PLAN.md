@@ -175,4 +175,3 @@ multiscale component-identification calculus. It would not show:
 - that observational response is causal;
 - that the same decomposition exists in real text;
 - that a saturated author function generalizes to unseen conditions.
-

@@ -182,4 +182,3 @@ kernel. It cannot establish:
 The plan and source hashes provide a local prospective freeze. Because the
 worktree is not committed or externally timestamped, this is not claimed as
 third-party preregistration.
-

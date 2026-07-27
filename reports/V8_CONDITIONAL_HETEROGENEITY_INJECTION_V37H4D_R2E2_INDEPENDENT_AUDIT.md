@@ -99,4 +99,3 @@ five geometries, and the formal integrity check verifies exactly five
 geometry IDs and 800 geometry rows. This is a stale field name, not a seed
 or row-count failure. The generated artifacts were not edited after the
 run, preserving their passing manifests and inventories.
-

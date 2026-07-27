@@ -26,4 +26,3 @@ most `.005`.
 
 No step, dimension, coordinate scale, candidate gate, detector, sample size,
 or bootstrap rule changes. R2F.1 uses fresh smoke and formal root seeds.
-

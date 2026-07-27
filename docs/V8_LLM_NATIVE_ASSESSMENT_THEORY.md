@@ -1,6 +1,6 @@
 # SUICA V8: LLM-native Evidence-Carrying Assessment
 
-Status: `V8_CANONICAL_GEOMETRY_CONFIRMED__CURRENT_BEHAVIOR_OBJECT_STOP`  
+Status: `V8_CANONICAL_GEOMETRY_CONFIRMED__CURRENT_BEHAVIOR_OBJECT_STOP`
 This document reports technical experiments only. It reports no new
 personality, clinical, human-state, reliability, or external-validity result.
 

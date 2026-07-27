@@ -1,7 +1,7 @@
 # SUICA V8 C2 Topology-Margin Report
 
-Status: `V8_C2_TOPOLOGY_MARGIN_PLANTED_PASS`  
-Scope: planted stable C2 response-operator populations only  
+Status: `V8_C2_TOPOLOGY_MARGIN_PLANTED_PASS`
+Scope: planted stable C2 response-operator populations only
 Final run: `results/v8_topology_margin/v11_final_20260729`
 
 ## 1. Question

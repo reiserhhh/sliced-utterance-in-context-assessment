@@ -180,4 +180,3 @@ cluster trees, and cross-half/cross-observer barcode stability.
 - `results/v8_vanishing_individuality/v1_final_20260725/seed_metrics.csv`
 - `results/v8_vanishing_individuality/v1_final_20260725/report.md`
 - `results/v8_vanishing_individuality/v1_final_20260725/run_manifest.json`
-

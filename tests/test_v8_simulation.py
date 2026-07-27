@@ -58,4 +58,3 @@ def test_single_occasion_and_model_drift_refuse_person_components() -> None:
             ridge=0.25,
         )
         assert all(status.startswith("REFUSE_") for status in estimate["status"].values())
-

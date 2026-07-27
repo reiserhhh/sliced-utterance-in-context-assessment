@@ -96,4 +96,3 @@ Freeze the current synthetic detector tangent-search line. Do not reuse the
 lower thresholds. No candidate exists, so no fresh confirmation is run.
 The next evidence should come from an independent or real-text observable,
 not further mining of this generator.
-

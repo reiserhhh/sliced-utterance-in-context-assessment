@@ -72,4 +72,3 @@ The next experiment is a repeated-opportunity common-shock identification
 frontier. It must compare \(K=1\) with \(K=2,4,8\) and estimate schedule
 variation across opportunity replicates rather than relying only on technical
 stream differences.
-

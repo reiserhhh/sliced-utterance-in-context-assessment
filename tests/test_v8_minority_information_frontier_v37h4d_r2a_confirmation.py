@@ -34,4 +34,3 @@ def test_confirmation_is_narrow_and_fresh() -> None:
 def test_confirmation_source_lock_matches_discovery() -> None:
     config = _read(CONFIG)
     assert _source_lock(config)["pass"]
-

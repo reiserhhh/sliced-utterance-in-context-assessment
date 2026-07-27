@@ -35,4 +35,3 @@ Before any formal R2F discovery run, R2F.1:
 No initial smoke detector outcome was inspected to make the correction. The
 initial smoke is noncanonical and must not be used as scientific evidence.
 See `docs/V8_LOCAL_RESPONSE_OPERATOR_V37H4D_R2F1_CORRECTION.md`.
-

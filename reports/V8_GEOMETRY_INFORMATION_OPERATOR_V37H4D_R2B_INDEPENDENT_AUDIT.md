@@ -74,4 +74,3 @@ geometry label, or final detector result.
 Promotion requires fresh-seed calibration across halo strengths, support
 sizes, and both noise modes. If only oracle descriptors work, retain the
 mathematical mechanism and reject operational measurement claims.
-

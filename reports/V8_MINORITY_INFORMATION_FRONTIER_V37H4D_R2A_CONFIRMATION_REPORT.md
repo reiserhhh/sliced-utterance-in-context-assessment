@@ -54,4 +54,3 @@ Not confirmed:
 - `configs/v8_minority_information_frontier_v37h4d_r2a_confirmation.json`
 - `scripts/run_suica_v8_minority_information_frontier_v37h4d_r2a_confirmation.py`
 - `results/v8_minority_information_frontier/v37h4d_r2a_confirmation_4000rep_20260727/`
-

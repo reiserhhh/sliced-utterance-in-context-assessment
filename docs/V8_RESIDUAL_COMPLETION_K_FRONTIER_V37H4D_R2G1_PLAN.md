@@ -57,4 +57,3 @@ Confirmation always uses 128 fresh groups.
 This is an existence result under noiseless factor observation. It does not
 state that finite text can reach the limit, or that the recovered factors are
 psychological constructs.
-

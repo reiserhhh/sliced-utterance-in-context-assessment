@@ -75,4 +75,3 @@ spectrum, diagonal leverage, and maximum author-energy share.
 R2A confirms an iid operational boundary only. R2B must test whether a
 geometry-aware operator predicts held-out detector power across unseen
 interaction families without changing the detector.
-

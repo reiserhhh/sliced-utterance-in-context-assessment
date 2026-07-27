@@ -121,4 +121,3 @@ ontology, repeatability, missingness process, and psychological meaning.
 - `results/v8_behavior_c2_planted_world/v2_final_20260725/seed_metrics.csv`
 - `results/v8_behavior_c2_planted_world/v2_final_20260725/report.md`
 - `results/v8_behavior_c2_planted_world/v2_final_20260725/run_manifest.json`
-

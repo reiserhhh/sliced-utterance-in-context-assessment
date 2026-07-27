@@ -183,4 +183,3 @@ def test_holm_adjustment_controls_family_order() -> None:
     assert adjusted["crc"] == 0.03
     assert adjusted["rank"] == 0.08
     assert adjusted["gain"] == 0.20
-

@@ -178,4 +178,3 @@ def test_alias_and_near_kernel_boundaries_are_exact() -> None:
         individual_energy=0.1,
     )
     assert max(float(row["relative_error"]) for row in rows) < 1e-10
-

@@ -381,4 +381,3 @@ def validate_evidence_graph(
         if not isinstance(record, dict) or record.get("value") != node.get("observed_value"):
             errors.append(f"{key}:measurement_mismatch")
     return errors
-

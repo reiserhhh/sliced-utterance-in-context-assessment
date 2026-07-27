@@ -68,4 +68,3 @@ V3.7A establishes synthetic low-rank operator recovery under the registered
 four-group design. Variance-source attribution, formal single-author
 intervals, group-free recovery, and an information-theoretic sample limit
 remain open.
-

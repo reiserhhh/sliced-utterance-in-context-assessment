@@ -1,7 +1,7 @@
 # SUICA V8 Execution Plan
 
 Status:
-`V8_ROUTING_OPERATOR_SYNTHETIC_PASS_WITH_INFERENCE_CAVEATS__BLIND_LOCALIZATION_CANONICAL_PASS__REAL_TEXT_CLOSED`  
+`V8_ROUTING_OPERATOR_SYNTHETIC_PASS_WITH_INFERENCE_CAVEATS__BLIND_LOCALIZATION_CANONICAL_PASS__REAL_TEXT_CLOSED`
 Baseline: sealed `v0.2.1`; V7.5-X1/X2 are post-tag research results on `main`.
 
 The integrated route and current evidence boundaries for all later

@@ -81,4 +81,3 @@ cluster bootstrap intervals.
 
 The result can explain detector sensitivity only. It cannot name or validate a
 psychological construct.
-

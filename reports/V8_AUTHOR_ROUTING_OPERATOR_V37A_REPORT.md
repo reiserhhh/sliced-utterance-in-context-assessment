@@ -117,4 +117,3 @@ real-text localization.
 3. Derive or simulate-calibrate single-author uncertainty with a width and
    refusal gate.
 4. Test blind event localization separately before any real-text claim.
-

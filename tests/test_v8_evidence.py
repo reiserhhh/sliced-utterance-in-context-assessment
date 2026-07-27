@@ -57,4 +57,3 @@ def test_evidence_graph_detects_tampering(tmp_path: Path) -> None:
     errors = validate_evidence_graph({"E1": node}, repository_root=tmp_path)
     assert any("node_hash_mismatch" in error for error in errors)
     assert any("measurement_mismatch" in error for error in errors)
-

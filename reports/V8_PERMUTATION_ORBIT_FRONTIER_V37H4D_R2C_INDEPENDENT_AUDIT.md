@@ -83,4 +83,3 @@ noise parameters, and \(\mathcal C\) is independent calibration evidence.
 With only two mechanism panels, \(Q\) and unknown measurement variance are
 not nonparametrically separable. Any operational result must either use
 independent repeated-panel/W0 calibration or refuse.
-

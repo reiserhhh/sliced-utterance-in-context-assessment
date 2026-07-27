@@ -192,4 +192,3 @@ def test_geometry_plan_cycles_halo_lambda_only() -> None:
 
 def test_r2b_source_lock_matches_frozen_detector() -> None:
     assert _source_lock(_config())["pass"]
-

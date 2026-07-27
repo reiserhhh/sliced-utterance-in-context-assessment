@@ -223,4 +223,3 @@ the evidence source rather than the search parameters:
 - `results/v8_local_response_operator/r2f1_geometry_preflight_3600geometries_20260727/`
 - `results/v8_local_response_operator/r2f1_discovery_115200outcomes_20260727/`
 - `results/v8_local_response_operator/r2f1_discovery_analysis_20260727/`
-

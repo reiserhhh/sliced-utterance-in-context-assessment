@@ -61,4 +61,3 @@ next behavior experiment must change the measured object:
 This result concerns author-relative geometry and an explicit behavior
 codebook. It does not validate personality, diagnosis, clinical utility, or
 direct LLM psychological scoring.
-

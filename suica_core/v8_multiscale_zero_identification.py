@@ -690,4 +690,3 @@ def minority_near_kernel_assay(
                 ),
             })
     return rows
-

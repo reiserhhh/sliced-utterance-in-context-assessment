@@ -137,4 +137,3 @@ geometry, psychological meaning, or real-text validity.
 - `scripts/analyze_suica_v8_minority_information_frontier_v37h4d_r2.py`
 - `results/v8_minority_information_frontier/v37h4d_r2_discovery_11000rep_20260727/`
 - `results/v8_minority_information_frontier/v37h4d_r2_mechanism_audit_20260727/`
-

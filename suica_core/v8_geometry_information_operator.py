@@ -419,4 +419,3 @@ def geometry_information_coordinates(
         "operator_condition_coherence": condition_coherence,
         "operator_gram_effective_rank": gram_effective_rank,
     }
-

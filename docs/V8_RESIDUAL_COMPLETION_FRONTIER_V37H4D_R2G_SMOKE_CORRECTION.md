@@ -23,4 +23,3 @@ R2G therefore adds one bounded nonlinear positive-control path:
 No gate, effect size, discovery seed, confirmation seed, or claim boundary
 changed. The correction is intended to make the known quadratic world
 detectable without allowing `factor = target` or test-set tuning.
-

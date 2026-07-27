@@ -50,4 +50,3 @@ that result beyond low-noise affine planted templates.
 > near-equivalence of whole affine response maps. Nonlinear response sets,
 > persistent incidence, condition-matched population excess, real-text
 > structure, and psychological interpretation remain unvalidated.
-

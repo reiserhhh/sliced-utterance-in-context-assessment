@@ -87,4 +87,3 @@ A small \(p\alpha\) can create a dangerous false non-refusal even when
 affected authors change strongly. Pairing integrity should be enforced as a
 hard data contract; transient/reversal response follows after the minority
 and near-kernel frontier.
-
