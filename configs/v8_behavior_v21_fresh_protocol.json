@@ -1,0 +1,76 @@
+{
+  "version": "v8-behavior-v21-fresh-protocol-1",
+  "seed": 20260725,
+  "requires_human_gate_status": "V8_BEHAVIOR_V21_HUMAN_GATE_PASS",
+  "frozen_candidate_config": "configs/v8_behavior_v21_candidate.json",
+  "frozen_observer_prompt": "prompts/v8_behavior_observer_v2.txt",
+  "exclude_author_sources": [
+    "results/v8_behavior_v2_pilot/pandora_pilot_20260725",
+    "results/v8_canonical_geometry_fresh_panel/pandora_internal_fresh_20260724"
+  ],
+  "panel": {
+    "preextract_target_authors": 190,
+    "candidate_scan_authors": 300,
+    "discovery_authors": 60,
+    "calibration_authors": 20,
+    "confirmation_authors": 80,
+    "minimum_comments_per_author": 64,
+    "comments_per_half": 32,
+    "selection": "time_even_then_thread_disjoint",
+    "primary_comments_per_half": 12,
+    "extension_comments_per_half": 24,
+    "primary_repetitions": 2,
+    "audit_author_fraction": 0.20
+  },
+  "fresh_gates": {
+    "minimum_confirmation_authors": 80,
+    "minimum_primary_auc": 0.60,
+    "minimum_author_cluster_ci_lower": 0.50,
+    "maximum_pairing_permutation_p": 0.01,
+    "minimum_repetition_auc": 0.58,
+    "maximum_repetition_auc_gap": 0.08,
+    "maximum_extension_auc_drop": 0.02,
+    "minimum_nested_log_resolution_slope": 0.0,
+    "minimum_human_drift_coarse_macro_f1": 0.78,
+    "minimum_joint_delta_ci_lower_over_c1": 0.0
+  },
+  "c1": {
+    "object": "condition_choice_opportunity_and_format_profile",
+    "distance_metrics": [
+      "jensen_shannon",
+      "hellinger"
+    ],
+    "claim_boundary": "C1 is selected-context behavior, not nuisance, personality, or condition-invariant response."
+  },
+  "c2": {
+    "object": "response_under_shared_condition",
+    "reddit_preflight_status": "V8_BEHAVIOR_V21_C2_NOT_IDENTIFIABLE_IN_REDDIT",
+    "execution_scope": "separate_fixed_condition_data_only",
+    "exact_condition_minimum_discovery_authors": 10,
+    "exact_condition_minimum_discovery_segments": 50,
+    "shrinkage_candidates": [
+      8,
+      16,
+      32
+    ],
+    "shrinkage_selection_split": "calibration_only",
+    "condition_crossing": "hash_conditions_A_B_then_compare_left_A_to_right_B_and_left_B_to_right_A",
+    "minimum_opportunities_per_cell_family": 6,
+    "minimum_complete_confirmation_author_fraction": 0.70,
+    "gates": {
+      "minimum_ordinary_auc": 0.60,
+      "minimum_ordinary_ci_lower": 0.50,
+      "maximum_ordinary_permutation_p": 0.01,
+      "minimum_crossed_auc": 0.56,
+      "minimum_crossed_ci_lower": 0.50,
+      "maximum_crossed_permutation_p": 0.05,
+      "maximum_extension_auc_drop": 0.02,
+      "observer_direction_consistency_required": true
+    }
+  },
+  "stop_statuses": {
+    "fresh": "V8_BEHAVIOR_V21_FRESH_STOP",
+    "c2_unidentifiable": "V8_BEHAVIOR_V21_C2_NOT_IDENTIFIABLE_IN_REDDIT"
+  },
+  "claim_boundary": "A fresh pass establishes a replicated explicit verbal-behavior configuration in PANDORA. Only a separate C2 pass identifies response under shared conditions. Neither result alone validates personality, emotion, diagnosis, clinical utility, or the geometry bridge."
+}

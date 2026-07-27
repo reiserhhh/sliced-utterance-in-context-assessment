@@ -1,0 +1,641 @@
+# V8 Reliability Spectrum and Resolution Filtration V3.7G
+
+Status: `THEORY_CANDIDATE_NOT_YET_SEALED`
+
+This document reorganizes V3.7A-F into one next-generation measurement
+theory. It does not promote author structure to personality and does not
+replace the sealed V3.7F result.
+
+## 1. Theory upgrade
+
+V3.7A-F no longer support a deletion-oriented definition of SUICA. The
+appropriate candidate definition is:
+
+> SUICA is a reference-conditioned, resolution-indexed,
+> information-conserving measurement process for author-relative response
+> structure.
+
+The measured technical object is an author response field under a frozen
+reference population \(P_0\) and opportunity design \(Q_0\):
+
+\[
+G_u(c)
+=
+\mathbb E[\phi(X)\mid u,c]-\mu_0(c),
+\qquad
+\mu_0(c)
+=
+\mathbb E_{U\sim P_0}[\phi(X)\mid c].
+\]
+
+At event budget \(m\), SUICA returns a score and its uncertainty:
+
+\[
+\mathcal M_u(m)
+=
+\left(
+\widehat G_u^{(m)},
+\widehat{\mathcal U}_u^{(m)};
+P_0,Q_0
+\right).
+\]
+
+The output is therefore not one immutable point. It is a family of estimates
+whose resolution and uncertainty depend on the available evidence.
+
+## 2. What "noise tends to zero" may mean
+
+V3.7F supports only the following restricted statement:
+
+\[
+R_{\mathrm{event}}(m)\rightarrow 0
+\quad\text{in the registered exact-rank synthetic world.}
+\]
+
+It does not support:
+
+\[
+R_{\mathrm{total}}\rightarrow0
+\quad\text{or}\quad
+I(X_j;\Theta)>0\ \text{for every token or coordinate}.
+\]
+
+The dense-tail residual AUC of \(0.863\) shows that omitted low-energy
+directions can retain stable author information. The exact-rank oracle
+residual AUC of \(0.498\) shows that genuinely null directions can also
+exist. The state-alias floor of approximately \(0.243\) shows that infinite
+events within an insufficient design need not identify the stable object.
+
+The operational rule is therefore:
+
+\[
+\text{unselected coordinate}
+=
+\text{unresolved information channel},
+\]
+
+not:
+
+\[
+\text{unselected coordinate}
+=
+\text{noise}.
+\]
+
+A channel may be down-weighted after stability and risk tests, but it is not
+ontologically deleted.
+
+## 3. Reliability spectrum
+
+Assume two independent technical sessions at event budget \(m\):
+
+\[
+X_u^{(s,m)}=G_u+\varepsilon_u^{(s,m)},
+\qquad
+\operatorname{Cov}(\varepsilon^{(s,m)})=N_m.
+\]
+
+V3.7G works at a fixed registered budget. It therefore estimates the
+budget-specific event moment \(N_m\) directly; it does not estimate a
+budget-invariant \(\Sigma_E\) and then multiply the reliability ratio by
+\(m\) a second time.
+
+Because SUICA scores displacement from an external reference origin
+\(\widehat\mu_0\), the stable object is an external-origin second moment,
+not a covariance centered on the calibration sample:
+
+\[
+A_m
+=
+\operatorname{PSD}
+\left[
+\frac{1}{2n}
+\sum_{u=1}^{n}
+\left\{
+(X_u^{(1,m)}-\widehat\mu_0)
+(X_u^{(2,m)}-\widehat\mu_0)^\top
++
+(X_u^{(2,m)}-\widehat\mu_0)
+(X_u^{(1,m)}-\widehat\mu_0)^\top
+\right\}
+\right]
+\]
+
+and, with
+\(d_u=(X_u^{(1,m)}-X_u^{(2,m)})-\overline{(X^{(1,m)}-X^{(2,m)})}\),
+
+\[
+N_m
+=
+\frac{1}{2n}\sum_{u=1}^{n}d_ud_u^\top.
+\]
+
+Let \(\widetilde N_m\) be the registered shrinkage-and-floor regularization
+of \(N_m\). Because a generalized eigenbasis is not generally
+Euclidean-orthonormal, the implementation uses event whitening:
+
+\[
+L_m=\widetilde N_m^{-1/2},
+\]
+
+\[
+L_m A_m L_m^\top
+=
+U_m\operatorname{diag}(\widehat\eta_{j,m})U_m^\top.
+\]
+
+This is equivalent to the regularized generalized eigensystem
+
+\[
+A_m v_j
+=
+\eta_{j,m}\widetilde N_m v_j.
+\]
+
+Here \(\eta_{j,m}\) is a budget-specific stable-author to event-variation
+ratio. The oracle linear reliability weight is
+
+\[
+q_j(m)=\frac{\eta_{j,m}}{1+\eta_{j,m}}.
+\]
+
+The corresponding oracle-form spectral operator is
+
+\[
+W_m
+=
+\widetilde N_m^{1/2}
+U_m\operatorname{diag}\{q_j(m)\}U_m^\top
+L_m,
+\]
+
+\[
+\widehat G_u^{(m)}
+=
+\widehat\mu_0
++
+W_m(X_u^{(m)}-\widehat\mu_0).
+\]
+
+This spectrum unifies the prior findings:
+
+- exact low rank: null-tail weights approach zero and hard truncation can
+  have lower finite-sample variance;
+- dense stable tail: many small positive weights are needed, so hard
+  truncation creates capacity bias;
+- author permutation: cross-session covariance vanishes and all weights
+  should close;
+- adaptive residual AUC above chance: an estimated basis can leave stable
+  information unresolved even when the population object is low rank.
+
+The formula above is an oracle target. A finite estimator must regularize
+\(A_m\), \(N_m\), and the weight curve without using evaluation
+truth.
+
+The score channel alone is not information preserving. Information
+conservation refers to retaining the complementary unresolved channel:
+
+\[
+X_u^{(m)}-\widehat\mu_0
+=
+W_m(X_u^{(m)}-\widehat\mu_0)
++
+(I-W_m)(X_u^{(m)}-\widehat\mu_0).
+\]
+
+Both channels remain in the audit record even when only the first is reported
+as the current stable score.
+
+## 4. Resolution filtration
+
+Let \(\mathcal F_{u,m}\) be the information generated by the first \(m\)
+registered events. Define the ideal score process
+
+\[
+M_u(m)=
+\mathbb E[G_u\mid\mathcal F_{u,m},P_0,Q_0].
+\]
+
+For nested observations and square-integrable \(G_u\),
+
+\[
+\mathbb E[M_u(m_2)\mid\mathcal F_{u,m_1}]
+=
+M_u(m_1),
+\qquad m_1<m_2,
+\]
+
+and
+
+\[
+\mathbb E\|G_u-M_u(m_2)\|^2
+\le
+\mathbb E\|G_u-M_u(m_1)\|^2.
+\]
+
+These are theorem-level properties of conditional expectation, not yet
+properties of the implemented estimator. They create two new empirical
+requirements:
+
+1. score updates across event budgets must be approximately coherent rather
+   than redefining the author;
+2. uncertainty should contract as evidence increases unless state,
+   reference, or identification limits prevent it.
+
+The selected dimension is therefore allowed to grow with \(m\). A fixed
+factor count is a finite-resolution view, not necessarily the population
+dimension.
+
+## 5. Static, dynamic, hybrid, and unresolved objects
+
+The previous categories are not four interchangeable factor blocks.
+
+### Static position
+
+\[
+a_u=\int G_u(c)\,dQ_0(c)
+\]
+
+is the zero-frequency author-relative position under the common opportunity
+design.
+
+### Dynamic response operator
+
+\[
+B_u:\delta c\mapsto\delta G_u
+\]
+
+is an operator, transition kernel, or local derivative. Its modes may be
+eigenfunctions or invariant subspaces rather than ordinary factor axes.
+Treating \(B_u\) as another vector block is a category error unless an
+explicit vectorization and metric are justified.
+
+### Hybrid coupling
+
+\[
+K_u
+=
+\operatorname{CrossStructure}(a_u,B_u)
+\]
+
+describes how stable position and condition response co-vary. It belongs
+naturally to a tensor or product space.
+
+### Unresolved channel
+
+\[
+R_u^{(m)}
+=
+\left(I-W_m\right)
+\left(X_u^{(m)}-\widehat\mu_0\right)
+\]
+
+can contain stable tail information, temporary state, estimator error,
+reference error, and event error. These sources must be tested separately
+before psychological interpretation.
+
+A candidate author metric is consequently a product-space metric:
+
+\[
+d^2(u,v)
+=
+\|a_u-a_v\|_{W_a}^2
++\lambda_B\|B_u-B_v\|_{\mathrm{HS}}^2
++\lambda_K\|K_u-K_v\|^2,
+\]
+
+with weights learned only from reliability or a separately registered
+target, never from author-identification performance alone.
+
+## 6. Risk and irreducible limits
+
+Define design-specific risk
+
+\[
+R(m,s,n_0,n_c)
+=
+\mathbb E\|
+\widehat G_u^{(m,s;n_0,n_c)}-G_u
+\|^2,
+\]
+
+where \(s\) is the number of independent occasions, \(n_0\) the external
+reference size, and \(n_c\) the calibration size.
+
+The relevant sources are:
+
+- event sampling;
+- reference estimation;
+- spectral/estimator selection;
+- temporary-state aliasing;
+- support and opportunity mismatch;
+- fundamental non-identifiability.
+
+They need not be additive. Functional ANOVA is an implementation check under
+a balanced resampling design; nonlinear or dependent sources require a
+registered Shapley/Sobol risk allocation or an explicit hierarchical model.
+
+More events within one occasion primarily reduce event uncertainty. More
+independent occasions are required to reduce state aliasing. Larger and more
+representative \(P_0\) panels reduce reference uncertainty. No sample-size
+increase can repair a genuinely non-identifiable design without additional
+conditions or measurements.
+
+## 7. Psychometric boundary
+
+The technical object above is stable author-relative response structure.
+Psychological interpretation is a separate map:
+
+\[
+\Psi:
+\mathcal M_u
+\longrightarrow
+\text{psychological or behavioral construct}.
+\]
+
+Before \(\Psi\) is validated, high same-author AUC or strong structural
+recovery licenses neither a personality name nor a clinical conclusion.
+For a registered target \(\Theta\), author stability and target relevance are
+different quantities:
+
+\[
+\mathcal J_A(v)
+=
+I(\langle\phi(X),v\rangle;A\mid C),
+\]
+
+\[
+\mathcal J_\Theta(v)
+=
+I(\langle\phi(X),v\rangle;\Theta\mid C).
+\]
+
+A direction may have high \(\mathcal J_A\) but negligible
+\(\mathcal J_\Theta\), or may become target-relevant only through interactions
+with other directions. Marginal coordinate screening is therefore not a
+general proof of irrelevance.
+
+The psychometric spine remains:
+
+- cross-person comparability;
+- an explicit external reference population;
+- a frozen opportunity design or a documented support region;
+- repeated-measurement reliability;
+- uncertainty for each score;
+- later construct and behavioral validity.
+
+## 8. Primary breakthrough
+
+The strongest candidate breakthrough is not a new named factor. It is the
+following change of ontology:
+
+\[
+\boxed{
+\text{fixed factor score}
+\quad\Longrightarrow\quad
+\text{reference-conditioned reliability spectrum over evidence resolution}
+}
+\]
+
+This explains why population geometry can remain stable while axes rotate,
+why a dynamic mode may resist naming, why residuals can retain author
+information, and why the effective dimension grows with event budget.
+
+## 9. V3.7G falsification experiment
+
+V3.7G should test whether one observable-only procedure can preserve the
+benefits of hard estimation in sparse worlds and soft estimation in dense
+worlds.
+
+### Estimator family
+
+\[
+W_\eta
+=
+\widetilde N_m^{1/2}
+U_m\operatorname{diag}
+\{g_\eta(\widehat\eta_{j,m})\}U_m^\top
+L_m
+\]
+
+must include:
+
+- hard rank truncation;
+- Wiener reliability shrinkage;
+- power shrinkage;
+- monotone spline shrinkage.
+
+Fit the spectrum on calibration sessions 1-2. Select the weight family and
+hyperparameters using author-disjoint folds and the independent mean of
+sessions 3-4. Evaluation authors and scorer truth remain sealed.
+
+### Model-assisted measurement-error tolerance ball
+
+The scoring procedure may use only observable panels:
+
+- external reference-author resampling;
+- calibration-author resampling with complete refitting and reselection;
+- within-author event block bootstrap or registered count-model resampling;
+- held-out technical sessions.
+
+For fit authors define
+
+\[
+S_i=W_m\overline X_{i,12},
+\qquad
+P_i=\overline X_{i,34},
+\qquad
+D_i=P_i-S_i.
+\]
+
+Estimate
+
+\[
+\widehat b=\overline D,
+\quad
+\widehat C_D=\operatorname{LW}(D-\overline D),
+\quad
+\widehat C_U=
+\operatorname{LW}\left((X_3-X_4)/2\right),
+\]
+
+\[
+\widehat C_E=\Pi_+(\widehat C_D-\widehat C_U),
+\quad
+H=\widehat C_E+\widehat C_D/n_f,
+\quad
+G=(1+1/n_f)\widehat C_D,
+\]
+
+and the radial measurement-error map
+
+\[
+A=H^{1/2}G^{-1/2}.
+\]
+
+On disjoint radius authors compute
+
+\[
+R_i=\left\|A(D_i-\widehat b)\right\|_2.
+\]
+
+For content \(p=0.95\), confidence \(\gamma=0.95\), and \(n_r\) radius
+authors, choose the smallest order \(k\) satisfying
+
+\[
+\Pr\{\operatorname{Binom}(n_r,p)\le k-1\}\ge\gamma.
+\]
+
+At \(n_r=192\), \(k=188\) and the achieved confidence is \(0.96554\).
+The reported region is
+
+\[
+\mathcal R(x)=
+\left\{
+\theta:
+\|\theta-\widehat S(x)-\widehat b\|_2
+\le R_{(k)}
+\right\}.
+\]
+
+This is a strict nonparametric 95/95 tolerance statement for the radial
+distribution of the mapped proxy errors, conditional on the fit-half map.
+Its transfer to latent author error is model-assisted and additionally
+requires the registered additive, independent-session, homoskedastic
+Gaussian/elliptical profile model. It is not a per-author conditional 95%
+confidence interval, a distribution-free latent guarantee, or a
+psychological-validity statement.
+
+The interval must return `UNRESOLVED` when the fit/radius design is
+insufficient, no reliable score channel is selected, state-separated
+occasions are absent, reference calibration is mismatched, the radial map is
+ill-conditioned, pair-swap stability fails, or 1,000 fit-author bootstrap
+replicates show unstable radius estimation.
+
+Two exploratory alternatives were rejected before confirmation:
+
+- the original mapped Euclidean 95% quantile undercovered
+  (`0.924-0.935`) because map-estimation uncertainty was ignored;
+- a studentized PB-ME-SCPE ellipsoid alternated between severe
+  undercoverage and overcoverage because \(p=48,n_f=192\) did not support
+  stable axis-wise deconvolution and inversion.
+
+The tolerance ball is deliberately lower-resolution: it preserves a stable
+one-dimensional radial uncertainty statement instead of pretending that
+all 48 uncertainty axes are identified.
+
+### Required worlds
+
+- exact low rank;
+- dense power-law tail;
+- broken or clustered spectrum;
+- author permutation;
+- state alias;
+- reference mixture shift;
+- slow event-variance decay (not a sequence long-memory claim);
+
+MAR/MNAR opportunity support is deliberately outside V3.7G. This experiment
+starts from already constructed profile vectors and contains no opportunity
+observation process. Opportunity missingness belongs to V3.7I or a separate
+real-text design and cannot be claimed from this profile-level battery.
+
+### Candidate frozen gates
+
+- exact-rank excess NRMSE versus the best hard estimator: upper bound
+  \(\le0.01\);
+- dense-tail hard-floor reduction: lower bound \(\ge20\%\);
+- broken-spectrum hard-floor reduction: lower bound \(\ge15\%\);
+- worst-world regret versus the best candidate: upper bound \(\le0.015\);
+- permutation residual AUC 95% CI wholly within \([0.47,0.53]\);
+- every core world's repetition-cluster bootstrap CI for model-assisted
+  conditional coverage wholly within \([0.92,0.98]\);
+- state-alias intervals must be refused without state-separated occasions;
+- reference-shift intervals must be refused without shifted-population
+  calibration, even when score-direction transport is evaluated separately;
+- operator-transported planted reference-shift direction cosine lower 95%
+  bound \(\ge0.98\);
+- operator-transported planted reference-shift amplitude 95% CI wholly
+  within \([0.95,1.05]\);
+- maximum score-plus-unresolved reconstruction error \(\le10^{-10}\).
+
+Every publishable core interval must also satisfy:
+
+- fit-author bootstrap valid rate \(\ge0.99\);
+- tolerance-radius bootstrap CV \(\le0.10\);
+- bootstrap 95th/5th radius ratio \(\le1.25\);
+- session-pair swap radius ratio in \([0.80,1.25]\);
+- regularized \(G\) condition number \(\le10^6\).
+
+The final confirmation uses 60 independent repetitions. This exceeds the
+minimum 59 repetitions needed for a 30/30-style success count to have a
+one-sided 95% lower bound above approximately 0.95; no such binomial claim is
+made from the earlier 30-repetition discovery alone.
+
+### Audited discovery result
+
+The final pre-seal 30-repetition discovery produced:
+
+- exact-rank excess versus CV-min hard:
+  \(-0.0462\), 95% CI \([-0.0510,-0.0421]\);
+- dense-tail reduction: \(28.8\%\), CI \([28.1\%,29.5\%]\);
+- broken-spectrum reduction: \(21.0\%\), CI \([19.9\%,22.0\%]\);
+- worst-world regret upper bound: \(0.0108\);
+- permutation residual AUC: \(0.4984\), CI \([0.4878,0.5086]\);
+- core tolerance-ball coverage means \(0.955-0.968\), with all
+  repetition-cluster intervals inside \([0.92,0.98]\);
+- exact reconstruction error at most \(1.6\times10^{-15}\).
+
+The informative-precision secondary world covered \(0.9969\), which is an
+interval-efficiency warning and a heteroskedastic-model limitation, not a
+core success. These are discovery results and cannot be promoted until the
+fresh-seed prospective confirmation passes.
+
+### Falsification rule
+
+If one procedure cannot be noninferior in exact-rank worlds while improving
+dense worlds, a universal information-conserving estimator is rejected.
+SUICA must then use an observable spectrum-shape gate to select hard, soft,
+or `UNRESOLVED`, rather than hide the incompatibility in one default model.
+
+## 10. Subsequent experiments
+
+### V3.7H Resolution Coherence
+
+Test nested budgets \(32,64,128,256,512\) for:
+
+- approximate martingale coherence;
+- monotone information gain;
+- stable eigen-subspaces under basis rotation;
+- uncertainty contraction;
+- controlled activation of low-energy directions.
+
+### V3.7I Target-Specific Information
+
+Plant distinct author, state, opportunity, and target-construct channels.
+Test whether the same coordinate can be:
+
+- reliable author information;
+- nuisance for one target;
+- signal for another target;
+- unresolved at one event budget and measurable at another.
+
+This is the first synthetic step toward separating author fingerprinting
+from personality-relevant information. Human construct validation remains a
+later and independent gate.
+
+## 11. Current claim
+
+The theory candidate can be summarized as:
+
+\[
+\boxed{
+\mathrm{SUICA}
+=
+\text{an externally normed, resolution-indexed,
+information-conserving author-response measurement process}
+}
+\]
+
+V3.7F motivates this formulation but does not yet validate its observable
+estimator, confidence regions, or psychological interpretation. V3.7G is the
+next falsification gate.

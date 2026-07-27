@@ -1,0 +1,68 @@
+{
+  "version": "v8-behavior-c2-planted-world-2-final",
+  "seed": 20260726,
+  "repetitions": 500,
+  "jobs": 4,
+  "observations": [
+    "soft",
+    "binary"
+  ],
+  "ridge_candidates": [
+    0.0,
+    0.25,
+    1.0,
+    4.0
+  ],
+  "bootstrap_draws": 199,
+  "permutations": 999,
+  "binary_ci_bootstrap": {
+    "repetitions": 20,
+    "draws": 99,
+    "confirmation_authors": 12
+  },
+  "binary_score_track": {
+    "fixed_quota_only": true,
+    "uses_author_specific_standard_error": false,
+    "similarity": "cosine"
+  },
+  "spec": {
+    "discovery_authors": 60,
+    "calibration_authors": 20,
+    "confirmation_authors": 80,
+    "conditions": 8,
+    "condition_dimensions": 3,
+    "behavior_families": 5,
+    "forced_repeats": 6,
+    "extra_repeats": 96,
+    "noise_sd": 1.0,
+    "selection_strength": 2.0,
+    "half_state_sd": 0.25,
+    "intercept_sd": 0.45
+  },
+  "gates": {
+    "maximum_null_false_positive_rate": 0.03,
+    "minimum_c1_attack_auc": 0.70,
+    "minimum_c1_only_c2_auc": 0.48,
+    "maximum_c1_only_c2_auc": 0.52,
+    "maximum_c1_to_c2_cv_r2": 0.02,
+    "minimum_snr_050_power": 0.80,
+    "minimum_snr_050_surface_cosine": 0.60,
+    "minimum_snr_050_same_author_auc": 0.65,
+    "minimum_snr_050_distance_spearman": 0.50,
+    "maximum_joint_cosine_drop": 0.05,
+    "maximum_joint_auc_drop": 0.03,
+    "minimum_refusal_rate": 0.99,
+    "minimum_ci_coverage": 0.90,
+    "maximum_ci_coverage": 0.98,
+    "maximum_detectable_snr": 1.0,
+    "maximum_binary_estimator_gap": 0.05,
+    "maximum_standardized_bias": 0.10,
+    "maximum_inference_refusal_rate": 0.05,
+    "maximum_information_condition_number": 1000000.0,
+    "minimum_null_auc": 0.48,
+    "maximum_null_auc": 0.52,
+    "maximum_whitening_auc_gap": 0.05,
+    "minimum_extreme_prevalence_refusal_rate": 0.95
+  },
+  "claim_boundary": "A pass validates recovery and refusal of an author-specific response surface in planted shared-condition worlds only. It does not identify personality, emotion, diagnosis, clinical utility, or any human construct."
+}

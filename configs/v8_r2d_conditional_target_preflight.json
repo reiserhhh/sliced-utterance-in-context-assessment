@@ -1,0 +1,42 @@
+{
+  "version": "v8-r2d-conditional-target-preflight-posthoc",
+  "estimand_id": "V8_R2D_CONDITIONAL_TARGET_GATE0_POSTHOC",
+  "seed": 934,
+  "folds": 5,
+  "bootstrap_draws": 5000,
+  "logistic_c": 1.0,
+  "cell_columns": [
+    "noise_mode",
+    "active_test_authors",
+    "halo_lambda",
+    "halo_author_support",
+    "support_label"
+  ],
+  "mechanism_columns": [
+    "mechanism_n1",
+    "mechanism_n2",
+    "mechanism_n_inf",
+    "mechanism_sign_coherence",
+    "mechanism_positive_fraction",
+    "observed_crc",
+    "observed_low_rank",
+    "observed_hc",
+    "orbit_crc_raw_p",
+    "orbit_low_rank_raw_p",
+    "orbit_hc_raw_p"
+  ],
+  "oracle_columns": [
+    "operator_neff_author",
+    "operator_max_author_leverage",
+    "operator_neff_cell",
+    "operator_neff_condition",
+    "operator_rho3",
+    "operator_whitened_leakage",
+    "operator_neff_sign",
+    "operator_sign_coherence",
+    "operator_condition_coherence",
+    "operator_gram_effective_rank",
+    "operator_total_information"
+  ],
+  "claim_boundary": "Outcome-informed post-hoc resource gate only. It cannot confirm conditional heterogeneity, validate a posterior model, or support psychological, personality, real-text, diagnostic, causal, or clinical claims."
+}

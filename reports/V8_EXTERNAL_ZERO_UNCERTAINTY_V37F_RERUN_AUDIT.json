@@ -1,0 +1,18 @@
+{
+  "status": "BYTE_IDENTICAL_RERUN_PASS",
+  "canonical": "results/v8_external_zero_uncertainty/v37f_confirmation_final_20260726",
+  "rerun": "results/v8_external_zero_uncertainty/v37f_confirmation_rerun_20260726",
+  "files_compared": 9,
+  "all_identical": true,
+  "sha256": {
+    "metrics.csv": "d87e078952406c6c8fa140cc7d9a6b47775b71dbd195d6300f880f3afc52e246",
+    "uncertainty_metrics.csv": "455976c2e5aae9e16ab6d9d90de40fd81fef0c2d5789ed80332b64bc2b06cf9f",
+    "asymptote_summary.csv": "8960da67d812c81a6a76ed98731b3417aa972f79e40230351b49d29694c2f2ef",
+    "cell_summary.csv": "91a83883dbeeb369d2afa100ba0bac3c6ddaca56d586ecc7fd3070a123036cc5",
+    "uncertainty_summary.csv": "f73579af64b18a429766afec03981c337e7151254fd62ef6fc29c35d76da8896",
+    "decision.json": "9f44a2831834b2d3aa41910ba13408ea627ef14bf831d8d0f16cb0f0db58ba1a",
+    "config_effective.json": "f280d95173dd32ea89b24619dcfcf8ac5d2613bf45c39f23cc7022ae5922c7b6",
+    "report.md": "3e35dc214399ef2a40d5d85cd75c87a33035052e9e6b640e4036ef6c0aff8552",
+    "seed_audit.json": "51c9f3c23fd99a30d51933bbae8876a57aff74afe11894f7c0a9be953d6452bc"
+  }
+}

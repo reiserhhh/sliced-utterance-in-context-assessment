@@ -1,0 +1,14 @@
+{
+  "version": "v8-behavior-v21-meps-c2-preflight-1",
+  "source_metadata": "results/meps_ai_conv_feasibility_audit/view_metadata.csv",
+  "source_readiness": "results/meps_ai_conv_feasibility_audit/readiness_decision.json",
+  "fixed_conditions": [
+    "meps_q1",
+    "meps_q2",
+    "meps_q3"
+  ],
+  "minimum_complete_participant_fraction": 0.70,
+  "minimum_opportunities_per_condition_family": 6,
+  "requires_independent_repeated_condition": true,
+  "claim_boundary": "This metadata-only audit may assess whether the existing MEPS session can identify a C2 pilot. It cannot score behavior, estimate C2, validate personality or emotion, or support clinical use."
+}

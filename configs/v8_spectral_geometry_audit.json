@@ -1,0 +1,58 @@
+{
+  "version": "v8-spectral-geometry-audit-1",
+  "seed": 20260725,
+  "source_run": "results/v8_interpreter_stability/pandora_formal_v2_20260724",
+  "variance_target": 0.95,
+  "canonical_orbit": {
+    "enabled": true,
+    "relative_tolerance": 1e-08
+  },
+  "candidates": [
+    {
+      "variant_id": "spectral_energy_8",
+      "mode": "energy",
+      "max_components": 8
+    },
+    {
+      "variant_id": "spectral_energy_16",
+      "mode": "energy",
+      "max_components": 16
+    },
+    {
+      "variant_id": "spectral_scattering_8",
+      "mode": "scattering",
+      "max_components": 8
+    },
+    {
+      "variant_id": "spectral_scattering_16",
+      "mode": "scattering",
+      "max_components": 16
+    },
+    {
+      "variant_id": "spectral_combined_8",
+      "mode": "combined",
+      "max_components": 8
+    },
+    {
+      "variant_id": "spectral_combined_16",
+      "mode": "combined",
+      "max_components": 16
+    }
+  ],
+  "bootstrap_draws": 5000,
+  "permutations": 5000,
+  "primary_candidate": "canonical_orbit_scale_residual",
+  "selection_metric": "same_author_auc_cosine",
+  "gates": {
+    "minimum_same_author_cosine_auc": 0.63,
+    "minimum_cosine_auc_lower": 0.50,
+    "maximum_permutation_p": 0.01,
+    "minimum_delta_over_sorted_quantile": 0.10,
+    "minimum_delta_over_spectral_energy": 0.03,
+    "minimum_scale_conditioned_auc": 0.56,
+    "minimum_topology_shuffle_drop": 0.05,
+    "maximum_indexed_equivalence_error": 1e-12,
+    "maximum_invariance_error": 1e-08
+  },
+  "claim_boundary": "This exploratory audit tests whether a permutation- and isometry-invariant landmark-graph signature preserves source-disjoint author geometry better than the sorted distance multiset. It does not validate personality, diagnosis, clinical utility, or cross-domain score transport."
+}

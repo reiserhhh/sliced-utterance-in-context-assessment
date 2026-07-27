@@ -1,0 +1,22 @@
+{
+  "seal_version": "v8-v3.7b-prospective-content-seal-1",
+  "sealed_date": "2026-07-26",
+  "canonical_seed": 20330919,
+  "required_parent_seal": "configs/v8_author_routing_operator_v37a_seal.json",
+  "seal_scope": "Internal content-hash seal created after smoke and pre-seal power analysis but before any canonical V3.7B confirmation population was generated.",
+  "preseal_power_evidence": {
+    "path": "results/v8_blind_junction_localization/v37b_preseal_power_r3_20260726/decision.json",
+    "sha256": "b7d44252933d2ce637a25fa8c654f7570adde23e436fa701ff640effcbbbffc3",
+    "status": "V8_BLIND_JUNCTION_LOCALIZATION_V37B_PRESEAL_POWER_PASS",
+    "gates_passed": 12,
+    "gates_total": 12
+  },
+  "files": {
+    "configs/v8_blind_junction_localization_v37b.json": "8d43ef7533bfe891d1bed6d368ea80a3306e060016225a94309b7bcabcdd1d89",
+    "docs/V8_BLIND_JUNCTION_LOCALIZATION_V37B_PLAN.md": "8a0999612ccceea8e2aeccf91c57c2f92d0bd0083e2a7ba92b13bf99268f8e6c",
+    "suica_core/v8_blind_junction_localization.py": "b5914b32ef8fef8b345c92fd410869fde15c7f3fa7a93bf20fa6a7ea095c7587",
+    "scripts/run_suica_v8_blind_junction_localization_v37b.py": "94913f6a6bcb1ac621df32ce6638cd6d7228c2bad810b03512b19641ebab2628",
+    "tests/test_v8_blind_junction_localization_v37b.py": "e7d7740933d1d168ce47349c78709892f16cb0127ae65c06609d9423a1a752c7"
+  },
+  "claim_boundary": "This internal seal freezes the synthetic geometry-only locator and mask-aware routing bridge. It is not an external preregistration and licenses no real-text or psychological claim."
+}

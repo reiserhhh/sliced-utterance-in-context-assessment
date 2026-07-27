@@ -1,0 +1,73 @@
+{
+  "version": "v8-residual-completion-frontier-v3.7h.4d-r2g",
+  "estimand_id": "V8_RESIDUAL_COMPLETION_FRONTIER_V37H4D_R2G",
+  "smoke_seed": 29471031,
+  "discovery_seed": 29471057,
+  "confirmation_seed": 29471093,
+  "smoke_repetitions": 2,
+  "discovery_repetitions": 24,
+  "confirmation_repetitions": 60,
+  "jobs": 4,
+  "worlds": [
+    "pure_iid",
+    "author_low_rank",
+    "common_low_rank",
+    "nonlinear_common",
+    "irreducible_common_shock",
+    "overfit_null"
+  ],
+  "noise_modes": [
+    "gaussian",
+    "student_t5"
+  ],
+  "effect_shares": [
+    0.10
+  ],
+  "primary_effect_share": 0.10,
+  "training_groups": 32,
+  "calibration_groups": 24,
+  "confirmation_groups": 64,
+  "candidate_families": [
+    "linear",
+    "quadratic",
+    "rff"
+  ],
+  "candidate_ranks": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "ridge_alpha": 2.0,
+  "rff_components": 128,
+  "rff_gamma": 0.03125,
+  "quadratic_input_rank": 8,
+  "minimum_calibration_gain": 0.005,
+  "group_sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "spec": {
+    "dimensions": 32,
+    "latent_rank": 4,
+    "units_per_group": 128,
+    "opportunities_per_observation": 4,
+    "common_fraction": 0.75,
+    "student_df": 5.0
+  },
+  "gates": {
+    "practical_phi": 0.02,
+    "practical_floor_ratio": 0.01,
+    "minimum_structured_phi": 0.02,
+    "minimum_structured_floor_ratio": 0.01,
+    "minimum_completion_floor_reduction": 0.50,
+    "maximum_overfit_confirmation_r2": 0.01,
+    "minimum_overfit_training_r2": 0.95,
+    "maximum_null_nonzero_selection_rate": 0.20
+  },
+  "claim_boundary": "Synthetic identification of finite cross-view residual completion and population aggregation limits only. No exact-zero, real-text, personality, psychological, causal, diagnostic, or clinical claim."
+}

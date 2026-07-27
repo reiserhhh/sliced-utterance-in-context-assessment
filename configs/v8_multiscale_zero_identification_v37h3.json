@@ -1,0 +1,91 @@
+{
+  "version": "v8-multiscale-zero-identification-v3.7h.3-discovery",
+  "estimand_id": "V8_MULTISCALE_ZERO_IDENTIFICATION_V37H3",
+  "seed": 1839051741,
+  "smoke_seed": 704193583,
+  "discovery_repetitions": 60,
+  "smoke_repetitions": 2,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "zero_lambdas": [
+    0.125,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "background_amplitude": 0.15,
+  "full_stable_amplitude": 0.6,
+  "full_opportunity_amplitude": 0.35,
+  "full_technical_amplitude": 0.25,
+  "recovery_k": [
+    2,
+    3,
+    4
+  ],
+  "coarse_sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "coarse_units": 1024,
+  "coarse_dimensions": 6,
+  "selection_authors": 256,
+  "selection_forced_per_condition": 2,
+  "selection_extra_draws": 64,
+  "selection_strength": 2.5,
+  "selection_author_effect": 0.5,
+  "selection_condition_effect": 2.0,
+  "selection_noise_sd": 0.2,
+  "near_kernel_authors": 4096,
+  "near_kernel_prevalence": [
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "near_kernel_observable_fraction": [
+    0.0,
+    0.02,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "near_kernel_individual_energy": 0.1,
+  "student_df": 5.0,
+  "heteroskedastic_strength": 0.35,
+  "spec": {
+    "societies": 8,
+    "groups_per_society": 4,
+    "authors_per_group": 8,
+    "conditions": 6,
+    "response_rank": 2,
+    "opportunities": 4,
+    "technical_streams": 2,
+    "dimensions": 6
+  },
+  "gates": {
+    "maximum_reconstruction_error": 1e-10,
+    "minimum_k4_recovery_r2": 0.8,
+    "minimum_k4_split_panel_correlation": 0.8,
+    "minimum_zero_slope": 1.8,
+    "maximum_zero_slope": 2.2,
+    "maximum_off_diagonal_leakage": 0.02,
+    "minimum_independent_decay_slope": -1.15,
+    "maximum_independent_decay_slope": -0.85,
+    "minimum_common_persistence_slope": -0.15,
+    "maximum_common_persistence_slope": 0.15,
+    "minimum_selection_reversal_rate": 0.9,
+    "minimum_selection_recovery_rate": 0.9,
+    "maximum_balanced_to_raw_commutator_ratio": 0.1,
+    "maximum_alias_identity_error": 1e-10,
+    "maximum_near_kernel_relative_error": 0.02
+  },
+  "claim_boundary": "Synthetic discovery of multiscale component separation, zero signatures, aggregation flow, and non-identification boundaries only. No real text, psychological construct, personality, causal, diagnostic, or clinical claim."
+}

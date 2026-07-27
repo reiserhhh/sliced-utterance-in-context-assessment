@@ -1,0 +1,12 @@
+{
+  "suica-v8-synthetic-authority": {
+    "public_key_hex": "52ad635397f7107223ad50a4a3a7c1231dea5ae809fce95e57d96417fadac763",
+    "purposes": [
+      "auditor_attestation",
+      "language_license",
+      "evidence_status_ledger",
+      "clinical_signoff"
+    ],
+    "authorized_signer_ids": ["synthetic-human-reviewer"]
+  }
+}

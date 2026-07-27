@@ -1,0 +1,38 @@
+{
+  "version": "v8-geometry-information-operator-v3.7h.4d-r2b-analysis",
+  "estimand_id": "V8_GEOMETRY_INFORMATION_OPERATOR_V37H4D_R2B_LOGO",
+  "seed": 2471968305,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "ridge_c_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "bootstrap_draws": 5000,
+  "scalar_features": [
+    "log_information",
+    "log_information_squared",
+    "log_active_authors",
+    "noise_t5"
+  ],
+  "operator_features": [
+    "log_neff_author",
+    "log_neff_cell",
+    "logit_rho3",
+    "logit_whitened_leakage",
+    "condition_coherence",
+    "log_neff_sign"
+  ],
+  "gates": {
+    "minimum_counterexample_power_gap_lower": 0.1,
+    "minimum_log_loss_improvement_lower": 0.02,
+    "minimum_brier_improvement_lower": 0.005,
+    "minimum_intrinsic_log_loss_improvement_lower": 0.0,
+    "minimum_neff_sign_coefficient_lower": 0.0,
+    "maximum_family_calibration_error": 0.1
+  },
+  "claim_boundary": "Leave-one-geometry-family-out explanation of a frozen synthetic detector. Geometry labels are never predictor features. This analysis cannot establish psychological constructs, personality, real-text validity, diagnosis, causality, or clinical use."
+}
+

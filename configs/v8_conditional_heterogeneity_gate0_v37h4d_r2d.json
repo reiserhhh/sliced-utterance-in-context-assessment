@@ -1,0 +1,85 @@
+{
+  "version": "v8-conditional-heterogeneity-gate0-v3.7h.4d-r2d",
+  "estimand_id": "V8_CONDITIONAL_HETEROGENEITY_GATE0_V37H4D_R2D",
+  "seed": 3178054921,
+  "smoke_seed": 1409763253,
+  "bases_per_cell": 50,
+  "smoke_bases_per_cell": 2,
+  "outcome_replicates": 32,
+  "smoke_outcome_replicates": 4,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "active_test_authors": 4,
+  "active_conditions": 4,
+  "cells": [
+    {
+      "halo_lambda": 0.0,
+      "halo_author_support": 4,
+      "support_label": "core_only"
+    },
+    {
+      "halo_lambda": 0.01,
+      "halo_author_support": 8,
+      "support_label": "bounded_8"
+    },
+    {
+      "halo_lambda": 0.01,
+      "halo_author_support": 64,
+      "support_label": "all_test"
+    },
+    {
+      "halo_lambda": 0.03,
+      "halo_author_support": 8,
+      "support_label": "bounded_8"
+    }
+  ],
+  "anchor_active_cell_snr": 15.0,
+  "anchor_global_effect_share": 0.2,
+  "opportunity_prefixes": [
+    64,
+    128,
+    256
+  ],
+  "primary_opportunities": 128,
+  "permutations": 99,
+  "bootstrap_draws": 20000,
+  "smoke_bootstrap_draws": 200,
+  "holm_alpha": 0.05,
+  "main_reference_jsd": 0.15,
+  "author_tilt": 0.35,
+  "author_amplitude": 0.5,
+  "condition_amplitude": 0.35,
+  "society_amplitude": 0.15,
+  "group_amplitude": 0.2,
+  "panel_noise_amplitude": 0.08,
+  "technical_noise_amplitude": 0.35,
+  "student_df": 5.0,
+  "heteroskedastic_strength": 0.35,
+  "spec": {
+    "societies": 8,
+    "groups_per_society": 4,
+    "authors_per_group": 8,
+    "conditions": 16,
+    "dimensions": 6,
+    "panels": 4
+  },
+  "frozen_source_sha256": {
+    "suica_core/v8_reference_measure_frontier.py": "d41cc7d34c29a479607077111527861ea18c27fc68c0fb56a3970adbfbbaa6c9",
+    "suica_core/v8_minority_information_frontier.py": "e01638a6f5c11062566520f9037b664bab2ce21fffde690019420e745c6fdeaa",
+    "suica_core/v8_geometry_information_operator.py": "26bd6f46ca0c37f24948f311fd1a9ff55370fb69f3bcfe73e894aff0b50d9809",
+    "suica_core/v8_permutation_orbit_frontier.py": "32a83a3813a0fb757ca4d46187ac4fc7ccd9ef9a50a31a5a1e2d3fce02aa0df7",
+    "scripts/run_suica_v8_geometry_information_operator_v37h4d_r2b.py": "fb54994c22e472010c1564f4360679194809b21089e53bb9646991a52c0274f3"
+  },
+  "gates": {
+    "maximum_information_match_relative_error": 1e-6,
+    "minimum_go_brier_gain_lower": 0.005,
+    "minimum_go_log_loss_gain_lower": 0.02,
+    "minimum_go_cell_variance_lower": 0.005,
+    "minimum_go_cells": 2,
+    "maximum_stop_pooled_variance_upper": 0.005
+  },
+  "claim_boundary": "Fresh repeated-outcome synthetic resource gate only. It tests whether a base-level conditional target exists inside registered cells. It cannot validate a posterior model or support personality, psychology, real-text, diagnosis, causality, or clinical use."
+}

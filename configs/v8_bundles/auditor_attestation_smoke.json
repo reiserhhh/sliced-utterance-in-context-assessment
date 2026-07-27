@@ -1,0 +1,15 @@
+{
+  "attestation_id": "SU8-AUDITOR-INDEPENDENCE-SYNTHETIC-v1",
+  "issuer_authority_id": "suica-v8-synthetic-authority",
+  "purpose": "auditor_attestation",
+  "contract_id": "SU8-CONTRACT-SYNTHETIC-SMOKE",
+  "active_bundle_sha256": "22f71780a9eb4da8ac8d50a9fb2ba84a689d692e23b1de1064203d9634f398ba",
+  "candidate_bundle_sha256": "8033dddfd2fc25b30f3f517f1644c86aa9c627db345fc84c3f0ddff79ff6be31",
+  "auditor_agent_id": "synthetic-independent-auditor",
+  "auditor_session_id": "synthetic-audit-session",
+  "auditor_runtime_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "auditor_implementation_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+  "builder_agent_id": "synthetic-builder",
+  "builder_session_id": "synthetic-builder-session",
+  "signature_hex": "fe3ad20794a055c2aa21e0febad6552c88e570cbf93a6590772ed078e488984da180e011f9e43a88bd18283326bdbd2e81876370979c8a92987637fa04961e03"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "canonical_seed": 20410617,
+  "canonical_streams": 9840,
+  "canonical_unique_streams": 9840,
+  "canonical_kind_counts": {
+    "condition": 960,
+    "event_parent": 60,
+    "latent": 60,
+    "observed": 960,
+    "opp_base_child": 480,
+    "opp_base_parent": 960,
+    "opp_child": 480,
+    "opp_parent": 960,
+    "partition": 60,
+    "perm_order": 960,
+    "perm_selection": 960,
+    "population": 960,
+    "reference": 960,
+    "rep": 60,
+    "selection": 960
+  },
+  "development_streams": 3280,
+  "development_unique_streams": 3280,
+  "canonical_development_overlap": 0,
+  "registered_metrics_seed_count": 3960,
+  "note": "External reconstruction includes repetition, latent, partition, condition-root, permutation-order, opportunity-parent, and opportunity-child streams omitted from the built-in metrics seed count."
+}

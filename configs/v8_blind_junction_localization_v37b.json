@@ -1,0 +1,48 @@
+{
+  "version": "v8-blind-junction-localization-v3.7b",
+  "estimand_id": "V8_BLIND_JUNCTION_LOCALIZATION_V37B",
+  "seed": 20330919,
+  "jobs": 8,
+  "discovery_repetitions": 40,
+  "confirmation_repetitions": 200,
+  "path_points": 25,
+  "junction_min": 10,
+  "junction_max": 14,
+  "locator_window": 4,
+  "threshold_candidates": [0.20, 0.25, 0.30, 0.35, 0.40, 0.45],
+  "discovery_positive_paths": 1500,
+  "discovery_negative_paths": 3000,
+  "confirmation_positive_paths": 1000,
+  "confirmation_negative_paths": 2000,
+  "trajectory_noise_sd": 0.015,
+  "cue_distractor_rate": 0.35,
+  "cusp_amplitude_min": 0.14,
+  "cusp_amplitude_max": 0.30,
+  "pause_inner_min": 0.25,
+  "pause_inner_max": 0.45,
+  "branch_angle_jitter_sd": 0.08,
+  "operator_rank": 6,
+  "operator_lambda": 3.0,
+  "operator_events_per_context_session": 32,
+  "excluded_preseal_seed_ledger": {
+    "reason": "Used for locator construction, mask-aware repair, smoke, and power analysis; never eligible for canonical confirmation.",
+    "ranges": [
+      "20320701-20320720 (preseal discovery populations)",
+      "70320701-70320760 (preseal confirmation populations)"
+    ]
+  },
+  "gates": {
+    "minimum_precision": 0.85,
+    "minimum_recall": 0.75,
+    "minimum_f1": 0.80,
+    "maximum_median_location_error": 1.0,
+    "maximum_p95_location_error": 2.0,
+    "maximum_false_junctions_per_1000": 5.0,
+    "minimum_operator_correlation": 0.80,
+    "minimum_predictive_gain_retention": 0.80,
+    "minimum_blind_author_claim_rate": 0.80,
+    "minimum_blind_available_fraction": 0.95,
+    "maximum_cue_leak_author_claim_rate": 0.05
+  },
+  "claim_boundary": "A pass establishes only that a geometry-and-time-only locator can recover registered synthetic junction windows accurately enough to preserve most of the sealed V3.7A routing-operator signal. It does not establish localization in real text, thought nodes, intelligence, personality, clinical meaning, or causal cognition."
+}

@@ -1,0 +1,21 @@
+{
+  "version": "v8-incidence-graph-fairness-v3.3",
+  "estimand_id": "V8_INCIDENCE_GRAPH_FAIRNESS_V33",
+  "source_config": "configs/v8_incidence_strong_chain_v32.json",
+  "source_config_sha256": "27363997796b4a597544875a0e32a1195b996911c7641ff6ff71ea21a29c0cdb",
+  "seed": 20280917,
+  "seed_offset": 30000000,
+  "jobs": 8,
+  "confirmation_repetitions": 500,
+  "candidate_cap": 5000,
+  "node_cap": 25000,
+  "gates": {
+    "minimum_core_claim_rate": 0.90,
+    "minimum_core_group_f1": 0.90,
+    "minimum_core_group_ari": 0.90,
+    "maximum_chain_claim_rate": 0.03,
+    "minimum_chain_ambiguity_rate": 0.90,
+    "maximum_aggregate_pair_mae": 0.02
+  },
+  "claim_boundary": "A pass shows only that condition-aware pairwise adjacency is sufficient to distinguish the registered core-six and strong-chain worlds. It narrows V3.2 to aggregation information loss and does not establish personality, real-text structure, or common-ball uniqueness."
+}

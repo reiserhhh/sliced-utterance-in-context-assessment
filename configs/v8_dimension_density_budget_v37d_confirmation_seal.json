@@ -1,0 +1,25 @@
+{
+  "seal_version": "v8-v3.7d-prospective-content-seal-1",
+  "sealed_date": "2026-07-26",
+  "canonical_seed": 20400131,
+  "required_parent_seal": {
+    "path": "configs/v8_group_free_routing_transport_v37c_seal.json",
+    "sha256": "e683a0ecb299b40b860a66230060da64fc8c5b4e6c0b14c0e97553ca114b1630"
+  },
+  "seal_scope": "Internal content-hash seal created after excluded exploratory phase diagrams and smoke tests but before any paired canonical V3.7D confirmation population was generated.",
+  "smoke_evidence": {
+    "path": "results/v8_dimension_density_budget/v37d_confirmation_smoke_r2_20260726/decision.json",
+    "sha256": "e49a644b3f99c0af61e96683e1e1fdd257c44fefabb6405de8a462c3cfaaadf7",
+    "status": "V8_DIMENSION_DENSITY_EVENT_BUDGET_V37D_CONFIRMATION_SMOKE_PASS",
+    "gates_passed": 13,
+    "gates_total": 13
+  },
+  "files": {
+    "configs/v8_dimension_density_budget_v37d_confirmation.json": "6276ea028247447701d959dc4bdf966c95b8a3268a91e2ec931bef7c65ca3a5b",
+    "docs/V8_DIMENSION_DENSITY_EVENT_BUDGET_V37D_CONFIRMATION_PLAN.md": "08ed03bc00a6f6c8bb5c27ef719c57e9d95bdc82b510b3e6cf0df3a45779b282",
+    "suica_core/v8_dimension_density_budget.py": "317a98c4fbc75e90b6f652ea7add1874abcf2453ea630074d80e685b66db19b6",
+    "scripts/run_suica_v8_dimension_density_budget_v37d_confirmation.py": "0e20fdc251da04d8ee99f540614f68545ba1ad576ab23944846dfa4b316e7219",
+    "tests/test_v8_dimension_density_budget_v37d_confirmation.py": "a46f2623d888f1de254d7e9ecfa2909480f5f0a010adb42d4ab97625a18cd6d3"
+  },
+  "claim_boundary": "This internal seal freezes a paired synthetic confirmation of recovery-versus-identification separation. It is not an external preregistration and licenses no personality, real-text, clinical, causal, or universal dimensionality claim."
+}

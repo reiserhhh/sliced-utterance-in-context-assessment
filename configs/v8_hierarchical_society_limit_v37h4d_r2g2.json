@@ -1,0 +1,90 @@
+{
+  "version": "v8-hierarchical-society-limit-v3.7h.4d-r2g.2",
+  "estimand_id": "V8_HIERARCHICAL_SOCIETY_LIMIT_V37H4D_R2G2",
+  "seed": 31942711,
+  "repetitions": 30,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "student_t5"
+  ],
+  "cells": [
+    {
+      "world": "pure_iid"
+    },
+    {
+      "world": "author_iid"
+    },
+    {
+      "world": "group_iid"
+    },
+    {
+      "world": "society_completable"
+    },
+    {
+      "world": "group_ar1",
+      "rho": 0.5
+    },
+    {
+      "world": "group_ar1",
+      "rho": 0.9
+    },
+    {
+      "world": "correlated_hierarchy"
+    },
+    {
+      "world": "unavailable_society_shock"
+    },
+    {
+      "world": "local_to_unity"
+    },
+    {
+      "world": "correlated_view_noise"
+    }
+  ],
+  "group_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "author_sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "spec": {
+    "societies": 96,
+    "max_groups": 32,
+    "max_authors": 64,
+    "dimensions": 6,
+    "society_energy": 0.06,
+    "group_energy": 0.06,
+    "author_energy": 0.08,
+    "technical_energy": 0.06,
+    "private_noise_energy": 0.25,
+    "score_noise_energy": 0.5,
+    "score_opportunities": 64,
+    "raw_society_loading": 0.65,
+    "raw_group_loading": 0.55,
+    "local_to_unity_c": 1.5,
+    "student_df": 5.0
+  },
+  "gates": {
+    "simultaneous_alpha": 0.05,
+    "primary_endpoint_count": 36,
+    "practical_zero": 0.01,
+    "coefficient_absolute_error": 0.02,
+    "minimum_positive_floor": 0.03,
+    "maximum_rho_error": 0.1,
+    "maximum_centered_cross_level": 0.01,
+    "minimum_raw_cross_level": 0.02,
+    "maximum_local_model_nrmse": 0.2
+  },
+  "claim_boundary": "Synthetic hierarchical cross-view residual identification only. The run tests finite G,n formulas, dependence failures, conditional-projection accounting, and non-identifiability controls. It does not establish exact zero, real-text completeness, personality constructs, causal levels, a real society limit, diagnostic validity, or clinical use."
+}

@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "suica.v8.explanation_certificate.v2",
+  "title": "SUICA V8 Explanation Certificate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "certificate_id",
+    "contract_id",
+    "measurement_status",
+    "support_status",
+    "evidence_graph",
+    "claims",
+    "uncertainty",
+    "provenance",
+    "language_license",
+    "evidence_status_ledger"
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^(?!0{64}$)[0-9a-f]{64}$"
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "license_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "counterfactual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "performed",
+        "paired_delta",
+        "matched_random_delta",
+        "ci_lower",
+        "ci_upper"
+      ],
+      "properties": {
+        "performed": {"const": true},
+        "paired_delta": {"type": "number"},
+        "matched_random_delta": {"type": "number"},
+        "ci_lower": {"type": "number"},
+        "ci_upper": {"type": "number"}
+      }
+    },
+    "sentenceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sentence_id", "claim_id", "evidence_ids", "binding_sha256"],
+      "properties": {
+        "sentence_id": {"type": "string", "minLength": 1},
+        "claim_id": {"type": "string", "minLength": 1},
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "binding_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "statement",
+        "claim_type",
+        "renderer_template_id",
+        "evidence_ids",
+        "counterevidence_ids",
+        "necessity_test",
+        "sufficiency_test",
+        "sentence_bindings",
+        "artifact_hashes",
+        "claim_sha256"
+      ],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "claim_type": {
+          "enum": [
+            "technical_measurement_object",
+            "exploratory_text_behavior",
+            "psychological_construct",
+            "clinical_interpretation"
+          ]
+        },
+        "renderer_template_id": {
+          "enum": [
+            "technical_reference_difference_v1",
+            "exploratory_text_behavior_v1",
+            "psychological_association_v1",
+            "clinical_human_review_v1"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "counterevidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "necessity_test": {"$ref": "#/$defs/counterfactual"},
+        "sufficiency_test": {"$ref": "#/$defs/counterfactual"},
+        "sentence_bindings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sentenceBinding"}
+        },
+        "artifact_hashes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "claim_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "evidenceNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node_id",
+        "kind",
+        "artifact_path",
+        "artifact_hash",
+        "source_span_ids",
+        "measurement_field",
+        "observed_value",
+        "node_sha256"
+      ],
+      "properties": {
+        "node_id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["supporting", "counterevidence"]},
+        "artifact_path": {"type": "string", "minLength": 1},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "source_span_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "measurement_field": {"type": "string", "minLength": 1},
+        "observed_value": {
+          "oneOf": [
+            {"type": "number"},
+            {"type": "string"},
+            {"type": "boolean"}
+          ]
+        },
+        "node_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  },
+  "properties": {
+    "certificate_id": {"type": "string", "minLength": 1},
+    "contract_id": {"type": "string", "minLength": 1},
+    "measurement_status": {"const": "MEASUREMENT_READY"},
+    "support_status": {"const": "IN_SUPPORT"},
+    "evidence_graph": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/evidenceNode"}
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/claim"}
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["combination_method", "interval"],
+      "properties": {
+        "combination_method": {"const": "joint_nested"},
+        "interval": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [{"type": "number"}, {"type": "number"}],
+          "items": false
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_hashes", "bundle_id"],
+      "properties": {
+        "artifact_hashes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "bundle_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "language_license": {"$ref": "#/$defs/binding"},
+    "evidence_status_ledger": {"$ref": "#/$defs/binding"},
+    "human_signoff": {"$ref": "#/$defs/binding"}
+  }
+}

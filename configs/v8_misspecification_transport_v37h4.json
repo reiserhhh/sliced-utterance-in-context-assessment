@@ -1,0 +1,78 @@
+{
+  "version": "v8-misspecification-transport-v3.7h.4-discovery",
+  "estimand_id": "V8_MISSPECIFICATION_TRANSPORT_V37H4",
+  "seed": 1990317257,
+  "smoke_seed": 813607429,
+  "discovery_repetitions": 100,
+  "smoke_repetitions": 2,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "effect_shares": [
+    0.05,
+    0.2
+  ],
+  "worlds": [
+    "additive",
+    "nonlinear",
+    "nonergodic",
+    "latent_hierarchy"
+  ],
+  "rank_candidates": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "permutations": 99,
+  "smoke_permutations": 19,
+  "holm_alpha": 0.05,
+  "main_effect_amplitude": 0.4,
+  "opportunity_amplitude": 0.35,
+  "technical_amplitude": 0.25,
+  "student_df": 5.0,
+  "heteroskedastic_strength": 0.35,
+  "nonlinear_saturation": 1.25,
+  "nonergodic_author_correlation": 0.5,
+  "nonergodic_stable_fraction": 0.5,
+  "nonergodic_regime_persistence": 0.95,
+  "recovery_k": [
+    2,
+    4,
+    8
+  ],
+  "spec": {
+    "societies": 8,
+    "groups_per_society": 4,
+    "authors_per_group": 8,
+    "conditions": 16,
+    "train_conditions": 8,
+    "calibration_conditions": 4,
+    "test_conditions": 4,
+    "panels": 4,
+    "opportunities": 8,
+    "technical_streams": 2,
+    "dimensions": 6,
+    "latent_dimensions": 3,
+    "latent_subgroups": 4
+  },
+  "gates": {
+    "minimum_w0_recovery_lower": 0.9,
+    "minimum_w0_split_lower": 0.85,
+    "maximum_w0_false_refusal_upper": 0.05,
+    "maximum_w0_crc_abs_ci": 0.05,
+    "maximum_w0_gain_abs_ci": 0.02,
+    "maximum_operation_gap": 1e-10,
+    "minimum_strong_detection_lower": 0.9,
+    "minimum_strong_gap_closure_lower": 0.6,
+    "minimum_strong_crc_mean": 0.1,
+    "minimum_nonergodic_refusal_lower": 0.9,
+    "minimum_nonergodic_k8_k2_ratio": 0.5,
+    "maximum_specific_cause_upper": 0.05,
+    "maximum_alias_identity_error": 1e-12
+  },
+  "claim_boundary": "Synthetic discovery of additive-model misspecification and held-out-condition transport refusal only. Stable residual structure is not assigned a personality, psychological, causal, diagnostic, or clinical meaning."
+}

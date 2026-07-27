@@ -1,0 +1,28 @@
+{
+  "version": "v8-behavior-v21-human-gold-1",
+  "seed": 20260725,
+  "source_run": "results/v8_behavior_v2_pilot/pandora_pilot_20260725",
+  "candidate_config": "configs/v8_behavior_v21_candidate.json",
+  "packet_counts": {
+    "training": 48,
+    "natural": 336,
+    "enriched": 192
+  },
+  "consensus_review_fraction": 0.10,
+  "gates": {
+    "minimum_coarse_gwet_ac1": 0.75,
+    "ontology_stop_gwet_ac1": 0.60,
+    "minimum_primary_coarse_macro_f1": 0.80,
+    "minimum_coarse_precision": 0.80,
+    "minimum_coarse_recall": 0.70,
+    "minimum_coarse_f1": 0.75,
+    "minimum_opportunity_macro_f1": 0.80,
+    "minimum_opportunity_family_f1": 0.75,
+    "minimum_evidence_span_f1": 0.80,
+    "minimum_audit_coarse_macro_f1": 0.75,
+    "maximum_primary_audit_macro_f1_gap": 0.10,
+    "minimum_adjudicated_positives_per_coarse_family": 30,
+    "minimum_atomic_independent_scoring_f1": 0.65
+  },
+  "claim_boundary": "Human coding evaluates explicit opportunity/event ontology and evidence binding only. Coders must not infer personality, emotion state, diagnosis, clinical severity, author identity, or numerical person scores."
+}

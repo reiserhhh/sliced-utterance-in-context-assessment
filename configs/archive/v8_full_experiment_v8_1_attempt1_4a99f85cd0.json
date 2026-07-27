@@ -1,0 +1,109 @@
+{
+  "version": "v8-technical-core-1",
+  "seed": 20260724,
+  "semantic": {
+    "models": [
+      "deepseek-v4-pro",
+      "deepseek-v4-flash"
+    ],
+    "repetitions_per_cell": 50,
+    "temperature": 0.0,
+    "max_tokens": 8192,
+    "timeout_seconds": 120,
+    "max_retries": 4,
+    "concurrency": 8,
+    "gates": {
+      "min_parse_rate": 0.98,
+      "min_macro_f1_lcb": 0.70,
+      "min_worst_event_f1": 0.60,
+      "min_span_accuracy": 0.75,
+      "max_intensity_mae": 0.15,
+      "max_polarity_mae": 0.20,
+      "max_null_fpr": 0.05,
+      "min_run_icc": 0.75,
+      "min_prompt_model_cka": 0.70,
+      "max_standardized_drift": 0.10
+    }
+  },
+  "simulation": {
+    "persons": 400,
+    "sessions": 4,
+    "units_per_session": 8,
+    "dimensions": 6,
+    "condition_dimensions": 3,
+    "history_dimensions": 2,
+    "choices": 4,
+    "choice_opportunities": 24,
+    "choice_smoothing": 1.5,
+    "noise_sd": 0.30,
+    "ridge": 0.25,
+    "repetitions": 200,
+    "worlds": [
+      "identified_independent",
+      "identified_coupled",
+      "missing_menu",
+      "single_occasion",
+      "nonrandom_condition",
+      "hidden_history",
+      "model_drift",
+      "null_components"
+    ],
+    "gates": {
+      "min_theta_geometry_lcb": 0.70,
+      "min_theta_auc_lcb": 0.70,
+      "min_state_r_lcb": 0.60,
+      "max_state_share_error": 0.15,
+      "min_choice_r_lcb": 0.70,
+      "min_choice_logloss_skill": 0.10,
+      "min_response_r_lcb": 0.70,
+      "min_response_r2_lcb": 0.50,
+      "min_history_r_lcb": 0.60,
+      "min_history_r2_lcb": 0.40,
+      "min_target_crosstalk_margin": 0.10,
+      "max_null_auc": 0.55
+    }
+  },
+  "evidence": {
+    "authors": 400,
+    "segments_per_author": 12,
+    "dimensions": 16,
+    "causal_segments": 4,
+    "bootstrap_draws": 4000,
+    "gates": {
+      "min_precision_lcb": 0.75,
+      "min_recall_lcb": 0.75,
+      "min_sufficiency_median": 0.80,
+      "min_sufficiency_lcb": 0.70,
+      "max_paraphrase_change_sem_q95": 0.25,
+      "min_mechanism_flip_detection_rate": 0.80
+    }
+  },
+  "real_text": {
+    "segments_per_author": 6,
+    "max_authors": {
+      "pandora": 72,
+      "essays": 72,
+      "meps": 46,
+      "x_market": 72
+    },
+    "pandora_max_by_split": {
+      "discovery": 141,
+      "calibration": 51,
+      "confirmation": 48
+    },
+    "semantic_repetitions": 2,
+    "semantic_model": "deepseek-v4-pro",
+    "batch_size": 12,
+    "semantic_max_tokens": 16384,
+    "semantic_timeout_seconds": 180,
+    "pandora_geometry_units_per_half": 32,
+    "concurrency": 6,
+    "bootstrap_draws": 3000,
+    "gates": {
+      "min_delta_auc": 0.01,
+      "min_corpora_noninferior": 3,
+      "noninferiority_margin": -0.02,
+      "min_run_cka": 0.70
+    }
+  }
+}

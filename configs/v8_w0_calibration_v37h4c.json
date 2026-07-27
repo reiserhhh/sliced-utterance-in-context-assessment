@@ -1,0 +1,39 @@
+{
+  "version": "v8-w0-calibration-v3.7h.4c",
+  "estimand_id": "V8_MISSPECIFICATION_W0_CALIBRATION_V37H4C",
+  "seed": 3817192601,
+  "smoke_seed": 880143229,
+  "repetitions_per_noise": 1000,
+  "smoke_repetitions_per_noise": 2,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "permutations": 99,
+  "holm_alpha": 0.05,
+  "family_tail_alpha": 0.025,
+  "target_false_refusal": 0.05,
+  "calibrated_max_count": 36,
+  "miscalibrated_min_count": 65,
+  "power_rates": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05,
+    0.06,
+    0.08
+  ],
+  "detector_lock": {
+    "source_manifest": "results/v8_misspecification_transport/v37h4_discovery_100rep_20260726/run_manifest.json",
+    "config_path": "configs/v8_misspecification_transport_v37h4.json",
+    "config_sha256": "0562df6fb517e2099f6cfabfbe1de7c185a74008c9a7c38fbf034564358cd434",
+    "code_sha256": {
+      "suica_core/v8_multiscale_zero_identification.py": "7c45544f27abf0a2995aa69ec9b971d3a028c63247d9d1d171cb927ec89b0904",
+      "suica_core/v8_misspecification_transport.py": "03b7eec4879bc2c7aec80b294fe09ac7d331f3c51bb7a94c23c4b5d5b02feb8b",
+      "scripts/run_suica_v8_misspecification_transport_v37h4.py": "0cd0b24f933bd00e302072a80eee265ad15b1e9ed0de023d6841546d7f25b403"
+    }
+  },
+  "claim_boundary": "Synthetic W0 calibration of the unchanged V3.7H.4 99-permutation detector only. It does not validate real-text calibration, general misspecification awareness, causal localization, personality interpretation, diagnosis, or clinical use."
+}

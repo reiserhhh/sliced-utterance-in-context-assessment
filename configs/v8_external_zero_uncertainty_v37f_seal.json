@@ -1,0 +1,28 @@
+{
+  "version": "v8-external-zero-uncertainty-v3.7f-prospective-seal",
+  "created_at": "2026-07-26T00:00:00+09:00",
+  "parent_seal": {
+    "path": "configs/v8_adaptive_rank_fixed_reference_v37e_seal.json",
+    "sha256": "c75bf505f7b31ff341b807539d8efb1268aa995c6f2ee034043a29c0b712eee9"
+  },
+  "files": {
+    "suica_core/v8_external_zero_uncertainty.py": "c3659f672cce7dc4c09e70ea1d87793b6ba810bea06c295bfbbd044a8c38388e",
+    "scripts/run_suica_v8_external_zero_uncertainty_v37f.py": "d11cbbc6252add1a1741df0b266bb2146e8d2467cfbcc232296b72d0ed2298f4",
+    "tests/test_v8_external_zero_uncertainty_v37f.py": "8402437de1f0a06dcfac38f61564c4d9a1a00827130af4a7e9e0648c7a9fb520",
+    "configs/v8_external_zero_uncertainty_v37f_confirmation.json": "7ffa1cfb85a2bc997290e37495ddbdd123c9ed7b3af50cced79624a06e74da88",
+    "docs/V8_EXTERNAL_ZERO_UNCERTAINTY_V37F_PLAN.md": "90e61c93224005935fe2e5356b16ab1a39fc52ecb6f69d4b7372d51afcf4f8c1",
+    "docs/V8_EXTERNAL_ZERO_UNCERTAINTY_V37F_PROSPECTIVE_SEAL.md": "cdbf2f285741d47f5eafbe237940a78d52e76639548c42f87a9563c3a795cb91"
+  },
+  "excluded_development_artifacts": [
+    "configs/v8_external_zero_uncertainty_v37f_discovery.json",
+    "results/v8_external_zero_uncertainty/v37f_smoke_20260726",
+    "results/v8_external_zero_uncertainty/v37f_smoke_r2_20260726",
+    "results/v8_external_zero_uncertainty/v37f_smoke_r3_20260726",
+    "results/v8_external_zero_uncertainty/v37f_smoke_r4_20260726",
+    "results/v8_external_zero_uncertainty/v37f_smoke_r5_20260726",
+    "results/v8_external_zero_uncertainty/v37f_smoke_r6_20260726",
+    "results/v8_external_zero_uncertainty/v37f_discovery_final_20260726",
+    "results/v8_external_zero_uncertainty/v37f_discovery_r2_20260726",
+    "results/v8_external_zero_uncertainty/v37f_discovery_r3_20260726"
+  ]
+}

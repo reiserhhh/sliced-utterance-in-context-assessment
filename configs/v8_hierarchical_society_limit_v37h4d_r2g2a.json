@@ -1,0 +1,51 @@
+{
+  "version": "v8-hierarchical-society-limit-v3.7h.4d-r2g.2a",
+  "estimand_id": "V8_HIERARCHICAL_SOCIETY_LIMIT_V37H4D_R2G2A",
+  "seed": 87243119,
+  "repetitions": 80,
+  "jobs": 4,
+  "noise_mode": "student_t5",
+  "group_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "author_sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "spec": {
+    "societies": 96,
+    "max_groups": 32,
+    "max_authors": 64,
+    "dimensions": 6,
+    "society_energy": 0.06,
+    "group_energy": 0.06,
+    "author_energy": 0.08,
+    "technical_energy": 0.06,
+    "private_noise_energy": 0.25,
+    "score_noise_energy": 0.5,
+    "score_opportunities": 64,
+    "raw_society_loading": 0.65,
+    "raw_group_loading": 0.55,
+    "local_to_unity_c": 1.5,
+    "student_df": 5.0
+  },
+  "gates": {
+    "simultaneous_alpha": 0.05,
+    "family_size": 36,
+    "society_equivalence_margin": 0.01,
+    "minimum_naive_false_floor": 0.03,
+    "coefficient_absolute_error": 0.02,
+    "maximum_test_nrmse": 0.2,
+    "asymptotic_floor_absolute_error": 0.01
+  },
+  "claim_boundary": "Independent fresh-root precision extension for the standardized-t5 local-to-unity cell only. It does not overwrite the original R2G.2 PARTIAL decision, combine old and new roots, prove a zero total limit, identify unknown real-text dependence, establish personality structure, or support clinical inference."
+}

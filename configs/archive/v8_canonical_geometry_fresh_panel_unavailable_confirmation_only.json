@@ -1,0 +1,14 @@
+{
+  "version": "v8-canonical-geometry-fresh-panel-1-unavailable",
+  "seed": 20260725,
+  "source_run": "results/v8_interpreter_stability/pandora_formal_v2_20260724",
+  "opened_audit_run": "results/v8_spectral_geometry_audit/pandora_opened_panel_v4_scale_residual_20260725",
+  "candidate": "canonical_orbit_scale_residual",
+  "reference_fit_split": "discovery",
+  "fresh_panel_split": "confirmation",
+  "fresh_panel_rule": "exclude_every_author_in_the_opened_v8_geometry_panel",
+  "minimum_fresh_authors": 15,
+  "outcome": "UNAVAILABLE_BEFORE_METRIC_COMPUTATION",
+  "reason": "All 20 geometry-ready authors in the original confirmation split had already entered the opened V8 panel. The remaining original confirmation authors failed the frozen geometry support gate.",
+  "external_labels_read": false
+}

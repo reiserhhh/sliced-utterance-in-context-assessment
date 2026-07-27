@@ -1,0 +1,17 @@
+{
+  "version": "v8-behavior-v2-diagnostics-1",
+  "seed": 20260725,
+  "source_run": "results/v8_behavior_v2_pilot/pandora_pilot_20260725",
+  "resolutions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "headline_resolution": 12,
+  "ridge_alpha": 10.0,
+  "condition_matched_strangers": 5,
+  "bootstrap_draws": 5000,
+  "permutations": 5000,
+  "diagnostic_thresholds": {
+    "minimum_behavior_self_auc": 0.56,
+    "minimum_condition_matched_auc": 0.56,
+    "maximum_permutation_p": 0.05
+  },
+  "claim_boundary": "Opened, label-free diagnostics on an existing behavior-observer cache. Results may localize a representation or estimand failure but cannot promote a behavior construct, personality interpretation, emotion interpretation, clinical use, or geometry bridge."
+}

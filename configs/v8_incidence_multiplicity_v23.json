@@ -1,0 +1,70 @@
+{
+  "version": "v8-incidence-multiplicity-planted-v2.3-powered-per-null-world",
+  "estimand_id": "V8_INCIDENCE_MULTIPLICITY_PLANTED_V23",
+  "threshold_strategy": "powered_population_coverage_per_null_world",
+  "seed": 20280734,
+  "jobs": 8,
+  "discovery_repetitions": 40,
+  "calibration_repetitions": 120,
+  "confirmation_repetitions": 160,
+  "challenge_repetitions": 160,
+  "sensitivity_repetitions": 40,
+  "authors": 24,
+  "groups": 4,
+  "conditions": 65,
+  "halves": 2,
+  "observers": 2,
+  "noise_sd": 0.03,
+  "noise_scan": [0.01, 0.03, 0.06, 0.12],
+  "epsilon_grid": [1.0, 1.5, 2.0, 3.0],
+  "ridge_alpha": 0.001,
+  "minimum_group_coverage_for_claim": 0.75,
+  "clear_group_worlds": [
+    "group_regional_affine_2d",
+    "group_tangent_quadratic_2d",
+    "group_regional_affine_3d",
+    "common_anchor_plus_groups_2d"
+  ],
+  "boundary_worlds": [
+    "group_isolated_transverse_2d"
+  ],
+  "null_worlds": [
+    "global_common_anchor_2d",
+    "random_crossings_2d",
+    "pair_map_equivalence_2d",
+    "continuous_ring_2d",
+    "projection_crossing_3d"
+  ],
+  "attack_worlds": [
+    "observer_artifact_2d",
+    "half_artifact_2d",
+    "condition_permutation_2d",
+    "partial_support_2d"
+  ],
+  "challenge_worlds": [
+    "nonlinear_rbf_group_2d",
+    "heteroskedastic_group_3d"
+  ],
+  "sensitivity_worlds": [
+    "group_regional_affine_2d",
+    "common_anchor_plus_groups_2d",
+    "global_common_anchor_2d",
+    "observer_artifact_2d"
+  ],
+  "gates": {
+    "minimum_group_auc": 0.85,
+    "minimum_group_f1": 0.80,
+    "minimum_group_ari": 0.70,
+    "minimum_clear_group_claim_rate": 0.80,
+    "maximum_multiplicity_median_absolute_error": 1.0,
+    "maximum_condition_localization_error": 0.10,
+    "minimum_cross_view_spearman": 0.80,
+    "maximum_false_group_upper_95": 0.03,
+    "maximum_boundary_group_upper_95": 0.03,
+    "minimum_attack_refusal_rate": 0.90,
+    "minimum_challenge_auc": 0.75,
+    "minimum_challenge_nonrefusal_rate": 0.80,
+    "minimum_reparameterization_consistency": 0.95
+  },
+  "claim_boundary": "A pass shows that population-covering persistent same-condition incidence recovers anonymous planted co-membership while controlling every registered null world separately with an adequately powered calibration panel. It does not establish personality similarity, compatibility, clinical relation, social connection, or real-text validity."
+}

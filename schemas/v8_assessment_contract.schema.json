@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "suica.v8.assessment_contract.v2",
+  "title": "SUICA V8 LLM-native Assessment Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "version",
+    "measurement_components",
+    "observation_bundle",
+    "representation_bundle",
+    "semantic_transducer",
+    "measurement_bundle",
+    "role_separation",
+    "data_requirements",
+    "explanation_policy",
+    "uncertainty_policy",
+    "adaptation_policy",
+    "claim_boundary"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "measurement_components": {"contains": {"const": "free_selection_q"}}
+        }
+      },
+      "then": {
+        "properties": {
+          "data_requirements": {
+            "properties": {
+              "opportunity_menu_logging": {"const": true},
+              "selection_flag": {"const": true}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "measurement_components": {"contains": {"const": "fixed_response_B"}}
+        }
+      },
+      "then": {
+        "properties": {
+          "data_requirements": {
+            "properties": {
+              "randomized_repeated_conditions": {"const": true},
+              "minimum_sessions_per_person_condition": {"minimum": 2}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "measurement_components": {"contains": {"const": "session_state"}}
+        }
+      },
+      "then": {
+        "properties": {
+          "data_requirements": {
+            "properties": {"state_occasion_defined": {"const": true}}
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^(?!0{64}$)[0-9a-f]{64}$"
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent_id",
+        "session_id",
+        "model_revision",
+        "runtime_sha256",
+        "implementation_sha256"
+      ],
+      "properties": {
+        "agent_id": {"type": "string", "minLength": 1},
+        "session_id": {"type": "string", "minLength": 1},
+        "model_revision": {"type": "string", "minLength": 1},
+        "runtime_sha256": {"$ref": "#/$defs/sha256"},
+        "implementation_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "eventFields": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "prefixItems": [
+        {"const": "observation_id"},
+        {"const": "segment_id"},
+        {"const": "event_type"},
+        {"const": "source_span_ids"},
+        {"const": "polarity"},
+        {"const": "intensity"},
+        {"const": "confidence"},
+        {"const": "abstain"}
+      ],
+      "items": false
+    }
+  },
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "measurement_components": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "relative_geometry",
+          "stable_author_configuration",
+          "session_state",
+          "free_selection_q",
+          "fixed_response_B",
+          "interaction_history"
+        ]
+      }
+    },
+    "observation_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operator_registry_id", "occasion_definition", "context_fields", "support_rule"],
+      "properties": {
+        "operator_registry_id": {"type": "string", "minLength": 1},
+        "occasion_definition": {"type": "string", "minLength": 1},
+        "context_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "support_rule": {"type": "string", "minLength": 1}
+      }
+    },
+    "representation_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["representation_id", "runtime_revision", "frozen_before_confirmation"],
+      "properties": {
+        "representation_id": {"type": "string", "minLength": 1},
+        "runtime_revision": {"type": "string", "minLength": 1},
+        "frozen_before_confirmation": {"const": true}
+      }
+    },
+    "semantic_transducer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "role",
+        "provider",
+        "model_id",
+        "model_revision",
+        "prompt_path",
+        "prompt_sha256",
+        "output_schema_id",
+        "output_schema_path",
+        "schema_sha256",
+        "output_fields",
+        "decoding",
+        "repetitions"
+      ],
+      "properties": {
+        "enabled": {"const": true},
+        "role": {"const": "observation_semantic_transducer"},
+        "provider": {"type": "string", "minLength": 1},
+        "model_id": {"type": "string", "minLength": 1},
+        "model_revision": {"type": "string", "minLength": 1},
+        "prompt_path": {"type": "string", "minLength": 1},
+        "prompt_sha256": {"$ref": "#/$defs/sha256"},
+        "output_schema_id": {"const": "suica.v8.semantic_observation.v1"},
+        "output_schema_path": {"type": "string", "minLength": 1},
+        "schema_sha256": {"$ref": "#/$defs/sha256"},
+        "output_fields": {"$ref": "#/$defs/eventFields"},
+        "decoding": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["temperature", "top_p"],
+          "properties": {
+            "temperature": {"type": "number"},
+            "top_p": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+          }
+        },
+        "repetitions": {"type": "integer", "minimum": 2}
+      }
+    },
+    "measurement_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aggregation_runtime",
+        "aggregator_entrypoint",
+        "aggregator_path",
+        "aggregator_sha256",
+        "allowed_input_fields",
+        "reference_population",
+        "support_refusal_active"
+      ],
+      "properties": {
+        "aggregation_runtime": {"const": "deterministic_code"},
+        "aggregator_entrypoint": {
+          "const": "suica_core.v8_aggregation:aggregate_semantic_observations"
+        },
+        "aggregator_path": {"type": "string", "minLength": 1},
+        "aggregator_sha256": {"$ref": "#/$defs/sha256"},
+        "allowed_input_fields": {"$ref": "#/$defs/eventFields"},
+        "reference_population": {"type": "string", "minLength": 1},
+        "support_refusal_active": {"const": true}
+      }
+    },
+    "role_separation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "builder",
+        "auditor",
+        "semantic_transducer",
+        "interpreter",
+        "adaptation_agent",
+        "human_authority",
+        "auditor_attestation"
+      ],
+      "properties": {
+        "builder": {"$ref": "#/$defs/role"},
+        "auditor": {"$ref": "#/$defs/role"},
+        "semantic_transducer": {"$ref": "#/$defs/role"},
+        "interpreter": {"$ref": "#/$defs/role"},
+        "adaptation_agent": {"$ref": "#/$defs/role"},
+        "human_authority": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["authority_id"],
+          "properties": {"authority_id": {"type": "string", "minLength": 1}}
+        },
+        "auditor_attestation": {"$ref": "#/$defs/binding"}
+      }
+    },
+    "data_requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "opportunity_menu_logging",
+        "selection_flag",
+        "randomized_repeated_conditions",
+        "minimum_sessions_per_person_condition",
+        "state_occasion_defined"
+      ],
+      "properties": {
+        "opportunity_menu_logging": {"type": "boolean"},
+        "selection_flag": {"type": "boolean"},
+        "randomized_repeated_conditions": {"type": "boolean"},
+        "minimum_sessions_per_person_condition": {"type": "integer", "minimum": 0},
+        "state_occasion_defined": {"type": "boolean"}
+      }
+    },
+    "explanation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_graph_required",
+        "positive_and_counterevidence_required",
+        "necessity_test_required",
+        "sufficiency_test_required",
+        "sentence_binding_required",
+        "interpreter_input",
+        "renderer"
+      ],
+      "properties": {
+        "evidence_graph_required": {"const": true},
+        "positive_and_counterevidence_required": {"const": true},
+        "necessity_test_required": {"const": true},
+        "sufficiency_test_required": {"const": true},
+        "sentence_binding_required": {"const": true},
+        "interpreter_input": {"const": "evidence_graph_only"},
+        "renderer": {"const": "controlled_templates_v1"}
+      }
+    },
+    "uncertainty_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["components", "combination_method", "refuse_without_joint_draws"],
+      "properties": {
+        "components": {
+          "type": "array",
+          "minItems": 6,
+          "uniqueItems": true,
+          "contains": {"const": "source_cluster"},
+          "items": {
+            "enum": [
+              "source_cluster",
+              "representation",
+              "llm_run",
+              "prompt",
+              "reference_norm",
+              "model"
+            ]
+          }
+        },
+        "combination_method": {"const": "joint_nested"},
+        "refuse_without_joint_draws": {"const": true}
+      }
+    },
+    "adaptation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active_bundle_immutable",
+        "candidate_status_only",
+        "confirmation_hidden",
+        "independent_audit_required",
+        "human_authorization_required",
+        "promotion_status",
+        "active_bundle",
+        "candidate_bundle",
+        "candidate_parent_sha256",
+        "active_sha256_before",
+        "active_sha256_after",
+        "promotion_ledger"
+      ],
+      "properties": {
+        "active_bundle_immutable": {"const": true},
+        "candidate_status_only": {"const": true},
+        "confirmation_hidden": {"const": true},
+        "independent_audit_required": {"const": true},
+        "human_authorization_required": {"const": true},
+        "promotion_status": {"const": "CANDIDATE_ONLY"},
+        "active_bundle": {"$ref": "#/$defs/binding"},
+        "candidate_bundle": {"$ref": "#/$defs/binding"},
+        "candidate_parent_sha256": {"$ref": "#/$defs/sha256"},
+        "active_sha256_before": {"$ref": "#/$defs/sha256"},
+        "active_sha256_after": {"$ref": "#/$defs/sha256"},
+        "promotion_ledger": {"$ref": "#/$defs/binding"}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

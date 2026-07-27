@@ -1,0 +1,26 @@
+{
+  "version": "v8-reliability-spectrum-v3.7g-prospective-seal",
+  "created_at": "2026-07-26T00:00:00+09:00",
+  "parent_seal": {
+    "path": "configs/v8_external_zero_uncertainty_v37f_seal.json",
+    "sha256": "eb6bfca308847348c3487c87b7e90de2f27be0e8b4529cf4835e2ba3bd6b8ff7"
+  },
+  "files": {
+    "suica_core/v8_reliability_spectrum.py": "5f367a433afd4958850de54788d6c4f806d6c1f23721a58732b7fa2119a504aa",
+    "scripts/run_suica_v8_reliability_spectrum_v37g.py": "d9e138e8dc1018e068e31ad0c93fcd2545d9a13f5496e63d50002270f94c58e7",
+    "tests/test_v8_reliability_spectrum_v37g.py": "62991ce090f1b5e8479bc55d29cbd6d89ce3f5b9a8768c1627f410ae629c86bf",
+    "configs/v8_reliability_spectrum_v37g_confirmation.json": "dffb12cebbc76ebe13e4f253eafbcf5534008da6aa96c24b6e50689250a0896d",
+    "docs/V8_RELIABILITY_SPECTRUM_RESOLUTION_FILTRATION_V37G.md": "b5dcf36f31abe896103329095b25718d512f8d80150fef5d6d74d4a84acf9057",
+    "docs/V8_RELIABILITY_SPECTRUM_V37G_CONFIRMATION_PLAN.md": "174d36649944cdf8c3ac01a5a7acff6da0dae258837beafe8571f6e78542bcba",
+    "docs/V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md": "be68717a1b6faf513006595bbb906a7f495eaf5f8a29cf23687a0183cb4609d4"
+  },
+  "excluded_development_artifacts": [
+    "configs/v8_reliability_spectrum_v37g_discovery.json",
+    "results/v8_reliability_spectrum/v37g_discovery_r3_20260726",
+    "results/v8_reliability_spectrum/v37g_discovery_r4_30rep_20260726",
+    "results/v8_reliability_spectrum/v37g_pb_me_scpe_smoke_20260726",
+    "results/v8_reliability_spectrum/v37g_pb_me_scpe_smoke_r2_20260726",
+    "results/v8_reliability_spectrum/v37g_tolerance_ball_smoke_20260726",
+    "results/v8_reliability_spectrum/v37g_tolerance_ball_discovery_30rep_20260726"
+  ]
+}

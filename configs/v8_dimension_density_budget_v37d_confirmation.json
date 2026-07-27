@@ -1,0 +1,47 @@
+{
+  "version": "v8-dimension-density-budget-v3.7d-confirmation",
+  "estimand_id": "V8_DIMENSION_DENSITY_EVENT_BUDGET_V37D_CONFIRMATION",
+  "canonical_seed": 20400131,
+  "smoke_seed": 20391203,
+  "jobs": 8,
+  "repetitions": 40,
+  "latent_ranks": [2, 4, 8, 12],
+  "evaluation_author_counts": [32, 96, 192],
+  "event_budgets": [64, 128],
+  "training_authors": 96,
+  "maximum_evaluation_authors": 192,
+  "maximum_latent_rank": 12,
+  "author_rms": 0.3,
+  "primary_estimator_rank": 8,
+  "neighbor_count": 24,
+  "discovery_contexts": 12,
+  "confirmation_contexts": 8,
+  "extrapolation_contexts": 4,
+  "recovery_truth_threshold": 0.8,
+  "recovery_reliability_threshold": 0.5,
+  "identity_auc_threshold": 0.8,
+  "identity_top1_threshold": 0.5,
+  "gates": {
+    "minimum_rank2_joint_recovery_without_identity_rate": 0.8,
+    "minimum_rank8_joint_recovery_and_identity_rate": 0.75,
+    "minimum_rank12_joint_identity_without_recovery_rate": 0.75,
+    "minimum_mean_rank2_crowding_auc_delta": 0.2,
+    "maximum_absolute_random_neighbor_density_delta": 0.05,
+    "minimum_oracle_rank12_truth_correlation": 0.9,
+    "minimum_positive_budget_cells": 8
+  },
+  "required_parent_seal": {
+    "path": "configs/v8_group_free_routing_transport_v37c_seal.json",
+    "sha256": "e683a0ecb299b40b860a66230060da64fc8c5b4e6c0b14c0e97553ca114b1630"
+  },
+  "excluded_development_artifacts": [
+    "results/v8_dimension_density_budget/v37d_smoke_20260726",
+    "results/v8_dimension_density_budget/v37d_smoke_r2_20260726",
+    "results/v8_dimension_density_budget/v37d_exploratory_20260726",
+    "results/v8_dimension_density_budget/v37d_smoke_author_holdout_20260726",
+    "results/v8_dimension_density_budget/v37d_author_holdout_exploratory_20260726",
+    "results/v8_dimension_density_budget/v37d_confirmation_smoke_20260726",
+    "results/v8_dimension_density_budget/v37d_confirmation_smoke_r2_20260726"
+  ],
+  "claim_boundary": "A pass establishes only a paired synthetic finite-sample separation between author-operator recovery and author identification under fixed total signal, nested latent subspaces, 96 disjoint training authors, and the registered event budgets. It does not establish personality, real-text factors, clinical assessment, universal dimensionality, or universal sample-size thresholds."
+}

@@ -1,0 +1,28 @@
+{
+  "version": "v8-dimension-density-budget-v3.7d-exploratory",
+  "estimand_id": "V8_DIMENSION_DENSITY_EVENT_BUDGET_V37D",
+  "seed": 20380717,
+  "jobs": 8,
+  "repetitions": 8,
+  "latent_ranks": [2, 4, 8, 12],
+  "author_counts": [32, 96, 192],
+  "event_budgets": [16, 32, 64, 128],
+  "signal_regimes": [
+    "fixed_total_signal",
+    "fixed_per_latent_dimension"
+  ],
+  "base_author_rms": 0.3,
+  "signal_anchor_rank": 6,
+  "primary_estimator_rank": 8,
+  "denoiser_training_authors": 96,
+  "neighbor_count": 24,
+  "discovery_contexts": 12,
+  "confirmation_contexts": 8,
+  "extrapolation_contexts": 4,
+  "recovery_truth_threshold": 0.8,
+  "recovery_reliability_threshold": 0.5,
+  "identity_auc_threshold": 0.8,
+  "identity_top1_threshold": 0.5,
+  "cell_pass_rate": 0.75,
+  "claim_boundary": "Exploratory synthetic phase diagram only. It separates group-free operator recovery, repeated-measurement reliability, and local author identifiability. It does not establish personality, real-text structure, clinical measurement, or a universal event-count threshold."
+}

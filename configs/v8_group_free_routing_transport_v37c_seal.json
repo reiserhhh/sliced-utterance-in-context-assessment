@@ -1,0 +1,25 @@
+{
+  "seal_version": "v8-v3.7c-prospective-content-seal-1",
+  "sealed_date": "2026-07-26",
+  "canonical_seed": 20361123,
+  "required_parent_seals": {
+    "configs/v8_author_routing_operator_v37a_seal.json": "1febce9d39d1f414f7cdebc96287544ad27a306d37c9f48e3a938a7cc88e5167",
+    "configs/v8_blind_junction_localization_v37b_seal.json": "b9884f2505b9436349f96ab1a71d3c3cf105c63105f7199b61073c311a052f3a"
+  },
+  "seal_scope": "Internal content-hash seal created after smoke and bounded power analysis but before any canonical V3.7C confirmation population was generated.",
+  "preseal_power_evidence": {
+    "path": "results/v8_group_free_routing_transport/v37c_preseal_power_20260726/decision.json",
+    "sha256": "17b6267e860377b631656980f28e2e926ed66265e202ffb3c01c997a90c729d7",
+    "status": "V8_GROUP_FREE_ROUTING_TRANSPORT_V37C_PRESEAL_POWER_PASS",
+    "gates_passed": 20,
+    "gates_total": 20
+  },
+  "files": {
+    "configs/v8_group_free_routing_transport_v37c.json": "f2ef68cc91b90afa5cc53b9f4f3dc619859dcfadad9e8bc19e545355250c31b2",
+    "docs/V8_GROUP_FREE_ROUTING_TRANSPORT_V37C_PLAN.md": "8d4ccdaace61d5b4336b97c6533ac4544af6205177ffbcb07583497ef1f91a06",
+    "suica_core/v8_group_free_routing_transport.py": "1b9a1d78929dcdf1f73075085d79e2f9900319c7ef28ab384a402f579f42afbc",
+    "scripts/run_suica_v8_group_free_routing_transport_v37c.py": "5065802a079c84b13974afb3ae37461f79352b27992b93b38a6a4e1c3786e35d",
+    "tests/test_v8_group_free_routing_transport_v37c.py": "63006dc36bf3ee79299d790c61edd5f4896ed84776fe5b6ed3b69df648979237"
+  },
+  "claim_boundary": "This internal seal freezes a synthetic group-free low-rank routing estimator, geometry-and-order locator, and registered missingness analysis. It is not an external preregistration and licenses no personality, intelligence, thought-node, clinical, causal, real-text, or unrestricted open-world claim."
+}

@@ -1,0 +1,82 @@
+{
+  "version": "v8-permutation-orbit-frontier-v3.7h.4d-r2c",
+  "estimand_id": "V8_PERMUTATION_ORBIT_FRONTIER_V37H4D_R2C",
+  "seed": 3837421907,
+  "smoke_seed": 1957302641,
+  "discovery_repetitions": 300,
+  "smoke_repetitions": 2,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "active_test_author_grid": [
+    4,
+    8
+  ],
+  "active_conditions": 4,
+  "halo_lambda_grid": [
+    0.0,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "nonzero_halo_author_support": [
+    8,
+    64
+  ],
+  "anchor_active_cell_snr": 15.0,
+  "anchor_global_effect_share": 0.2,
+  "opportunity_prefixes": [
+    64,
+    128,
+    256
+  ],
+  "primary_opportunities": 128,
+  "outcome_permutations": 99,
+  "smoke_outcome_permutations": 99,
+  "orbit_draws": 999,
+  "smoke_orbit_draws": 129,
+  "orbit_resamples": 2000,
+  "smoke_orbit_resamples": 200,
+  "bootstrap_draws": 5000,
+  "smoke_bootstrap_draws": 200,
+  "holm_alpha": 0.05,
+  "main_reference_jsd": 0.15,
+  "author_tilt": 0.35,
+  "author_amplitude": 0.5,
+  "condition_amplitude": 0.35,
+  "society_amplitude": 0.15,
+  "group_amplitude": 0.2,
+  "panel_noise_amplitude": 0.08,
+  "technical_noise_amplitude": 0.35,
+  "student_df": 5.0,
+  "heteroskedastic_strength": 0.35,
+  "spec": {
+    "societies": 8,
+    "groups_per_society": 4,
+    "authors_per_group": 8,
+    "conditions": 16,
+    "dimensions": 6,
+    "panels": 4
+  },
+  "frozen_source_sha256": {
+    "suica_core/v8_reference_measure_frontier.py": "d41cc7d34c29a479607077111527861ea18c27fc68c0fb56a3970adbfbbaa6c9",
+    "suica_core/v8_minority_information_frontier.py": "e01638a6f5c11062566520f9037b664bab2ce21fffde690019420e745c6fdeaa",
+    "scripts/run_suica_v8_minority_information_frontier_v37h4d_r2.py": "732b6c6845ac2c374ac9137088453bf7070d4d2cd1df36e6db4b428729967930",
+    "results/v8_geometry_information_operator/v37h4d_r2b_frozen_operator_20260727/frozen_operator.json": "46c2329d697bbfe170f7e73387ff1ba6a2d44e23ff563d4bff942a9a831d4b6a"
+  },
+  "frozen_operator_path": "results/v8_geometry_information_operator/v37h4d_r2b_frozen_operator_20260727/frozen_operator.json",
+  "gates": {
+    "maximum_information_match_relative_error": 1e-6,
+    "minimum_m4_lambda03_power_gap_lower": 0.3,
+    "minimum_log_loss_improvement_lower": 0.02,
+    "minimum_brier_improvement_lower": 0.01,
+    "maximum_cell_calibration_point": 0.1,
+    "maximum_cell_calibration_upper": 0.15,
+    "maximum_m4_lambda03_calibration": 0.1,
+    "minimum_spectrum_retest_correlation": 0.8
+  },
+  "claim_boundary": "Fresh synthetic detector-mechanism experiment only. The mechanism panels are 0/1 and outcome panels are 2/3. The orbit score may not read geometry labels or outcome diagnostics. This cannot establish personality, psychological constructs, semantic interpretation, real-text validity, diagnosis, causality, or clinical use."
+}

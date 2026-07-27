@@ -1,0 +1,21 @@
+{
+  "seal_version": "v8-v3.7a-prospective-content-seal-1",
+  "sealed_date": "2026-07-26",
+  "canonical_seed": 20310429,
+  "seal_scope": "Internal content-hash seal created after smoke and pre-seal power analysis but before any canonical confirmation population was generated.",
+  "preseal_power_evidence": {
+    "path": "results/v8_author_routing_operator/v37a_preseal_power_r3_20260726/decision.json",
+    "sha256": "f1f4ee3beefcf64e6e9306249a43d0db6e7ff30307bf0128aa1a37de6148f43b",
+    "status": "V8_AUTHOR_ROUTING_OPERATOR_V37A_PRESEAL_POWER_PASS",
+    "gates_passed": 21,
+    "gates_total": 21
+  },
+  "files": {
+    "configs/v8_author_routing_operator_v37a.json": "6286aec2ca239ba7a382e62d263d746400b8f78ae3d468f6d0b4e0ee0bb2c499",
+    "docs/V8_AUTHOR_ROUTING_OPERATOR_V37A_PLAN.md": "7db0f15558c7164d2736cfcc086ebb4c81738920c5db249da6cf26cf4f873a5c",
+    "suica_core/v8_author_routing_operator.py": "3c59a586a68c552c3fb9d8ee3e4fb075f98d5a18217017eba0cc9039bdd048e2",
+    "scripts/run_suica_v8_author_routing_operator_v37a.py": "1882d03cb89cfdc0b288ccf3183aab5b216d7ad474549706e1c86abd09aea271",
+    "tests/test_v8_author_routing_operator_v37a.py": "c13d4f75bd7d0726b8417a23a1c1104caf977bf8576226cc18601e042443f5d3"
+  },
+  "claim_boundary": "This is an internal prospective seal in a dirty worktree, not an immutable external preregistration. It freezes the listed implementation for the canonical synthetic confirmation run only."
+}

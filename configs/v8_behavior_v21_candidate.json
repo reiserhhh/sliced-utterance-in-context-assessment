@@ -1,0 +1,62 @@
+{
+  "version": "v8-behavior-v21-candidate-1",
+  "seed": 20260725,
+  "source_run": "results/v8_behavior_v2_pilot/pandora_pilot_20260725",
+  "frozen_events": [
+    "assertion_commitment",
+    "epistemic_qualification",
+    "explicit_acceptance",
+    "positive_affect_expression",
+    "negative_affect_expression",
+    "self_state_report",
+    "self_action_report",
+    "alternative_generation",
+    "causal_explanation",
+    "evidence_example"
+  ],
+  "coarse_event_families": {
+    "stance": [
+      "assertion_commitment",
+      "epistemic_qualification",
+      "explicit_acceptance",
+      "explicit_rejection"
+    ],
+    "affect": [
+      "positive_affect_expression",
+      "negative_affect_expression"
+    ],
+    "self_report": [
+      "self_state_report",
+      "self_action_report"
+    ],
+    "action_guidance": [
+      "request_action",
+      "recommend_action"
+    ],
+    "generativity": [
+      "alternative_generation",
+      "causal_explanation",
+      "evidence_example"
+    ]
+  },
+  "reliability_event_f1_threshold": 0.70,
+  "opportunity_shrinkage": 8.0,
+  "posterior_strength": 8.0,
+  "headline_resolution": 12,
+  "nested_resolutions": [3, 6, 9, 12],
+  "nested_draws": 200,
+  "condition_matched_strangers": 5,
+  "bootstrap_draws": 5000,
+  "permutations": 5000,
+  "gates": {
+    "minimum_candidate_auc": 0.60,
+    "minimum_ci_lower": 0.50,
+    "maximum_permutation_p": 0.05,
+    "minimum_repetition_auc": 0.55,
+    "maximum_repetition_auc_gap": 0.08,
+    "minimum_cross_model_macro_f1": 0.65,
+    "minimum_nested_slope": 0.0,
+    "maximum_matched_condition_control_auc": 0.55
+  },
+  "claim_boundary": "Behavior-v2.1 is an opened, post-hoc technical candidate. It may be frozen for a fresh author panel but cannot support a geometry bridge, personality interpretation, emotion interpretation, diagnosis, clinical use, or observer-accuracy claim without fresh replication and adjudicated human coding."
+}

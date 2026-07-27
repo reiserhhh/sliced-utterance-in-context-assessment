@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "suica.v8.interpretation_critique.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profiles"],
+  "properties": {
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+          "required": [
+            "profile_id",
+            "atom_verdicts"
+        ],
+        "properties": {
+          "profile_id": {"type": "string", "minLength": 1},
+          "atom_verdicts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "atom_id",
+                "verdict",
+                "violation_codes",
+                "unsupported_evidence_ids",
+                "missing_counterevidence",
+                "required_scope_correction"
+              ],
+              "properties": {
+                "atom_id": {"type": "string", "minLength": 1},
+                "verdict": {"enum": ["pass", "qualify", "reject"]},
+                "violation_codes": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "enum": [
+                      "missing_support",
+                      "missing_counterevidence",
+                      "scope_overreach",
+                      "state_trait_conflation",
+                      "diagnostic_overreach",
+                      "coordinate_naming",
+                      "unsupported_causality",
+                      "none"
+                    ]
+                  }
+                },
+                "unsupported_evidence_ids": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {"type": "string", "minLength": 1}
+                },
+                "missing_counterevidence": {"type": "boolean"},
+                "required_scope_correction": {
+                  "enum": [
+                    "none",
+                    "author_relative",
+                    "session_bounded",
+                    "condition_specific",
+                    "interaction"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

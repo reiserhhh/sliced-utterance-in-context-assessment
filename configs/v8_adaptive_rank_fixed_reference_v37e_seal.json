@@ -1,0 +1,28 @@
+{
+  "seal_version": "v8-v3.7e-prospective-content-seal-1",
+  "sealed_date": "2026-07-26",
+  "canonical_seed": 20410617,
+  "required_parent_seal": {
+    "path": "configs/v8_dimension_density_budget_v37d_confirmation_seal.json",
+    "sha256": "43994fdd059db635419a6e09a053c9f98703d93517492ced8720397ee4190227"
+  },
+  "seal_scope": "Internal content-hash seal created after excluded smoke/discovery development artifacts and before any canonical V3.7E confirmation world was generated.",
+  "smoke_evidence": {
+    "path": "results/v8_adaptive_rank_fixed_reference/v37e_confirmation_smoke_20260726/decision.json",
+    "sha256": "d9a1110cc3872ba3b25bd6439465503d7d2f534a4598228a6a342bbbaa6a5e45",
+    "status": "V8_ADAPTIVE_RANK_FIXED_REFERENCE_V37E_SMOKE_PASS"
+  },
+  "discovery_evidence": {
+    "path": "results/v8_adaptive_rank_fixed_reference/v37e_discovery_r2_20260726/decision.json",
+    "sha256": "90ed54c58d196e310a35d834eca42614506f5fc186e02aa5aa13ef148f472c0e",
+    "status": "V8_ADAPTIVE_RANK_FIXED_REFERENCE_V37E_DISCOVERY_READY"
+  },
+  "files": {
+    "configs/v8_adaptive_rank_fixed_reference_v37e_confirmation.json": "89706957d8cb67627671adb58511676b96240baa30d070b94e66a8b126e82b1c",
+    "docs/V8_ADAPTIVE_RANK_FIXED_REFERENCE_V37E_PLAN.md": "ca85d0d76b4954c0b27ceeb09ef5b3c2ced1c3a2a565f995f016f45a7bcbd129",
+    "suica_core/v8_adaptive_rank_reference.py": "4619a43a7102e40dc7e4a3a7dc09d20776f51b4890208cacc6d2ab8791f79ef7",
+    "scripts/run_suica_v8_adaptive_rank_reference_v37e.py": "76e1730c72beed75c5ecaaab8e46ff9ee1a77805d503243bbe0232ca62c919fc",
+    "tests/test_v8_adaptive_rank_reference_v37e.py": "f4b3f8aa0d434e4904b493c3012dce3cdde04a165ae0c7d9d24fbd57f4f51a7a"
+  },
+  "claim_boundary": "This internal seal freezes a synthetic adaptive-rank and fixed-reference refutation. It is not an external preregistration and licenses no personality, real-text, clinical, universal-rank, or single-author uncertainty claim."
+}

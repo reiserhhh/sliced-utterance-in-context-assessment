@@ -1,0 +1,41 @@
+{
+  "version": "v8-c2-epsilon-hierarchy-planted-v1",
+  "seed": 20260727,
+  "repetitions": 500,
+  "jobs": 4,
+  "permutations": 999,
+  "ridge_candidates": [0.0, 0.25, 1.0, 4.0],
+  "epsilon_ladder": [0.0, 0.05, 0.1, 0.25, 0.5, 1.0],
+  "group_amplitude": 0.75,
+  "individual_amplitude": 0.5,
+  "spec": {
+    "discovery_authors": 60,
+    "calibration_authors": 20,
+    "confirmation_authors": 80,
+    "conditions": 8,
+    "condition_dimensions": 3,
+    "behavior_families": 5,
+    "forced_repeats": 6,
+    "extra_repeats": 96,
+    "groups": 4,
+    "intercept_sd": 0.45,
+    "half_state_sd": 0.25,
+    "selection_strength": 2.0
+  },
+  "gates": {
+    "minimum_positive_auc": 0.65,
+    "minimum_positive_ci_lower": 0.55,
+    "minimum_chance_auc": 0.48,
+    "maximum_chance_auc": 0.52,
+    "maximum_null_fpr_upper_95": 0.03,
+    "maximum_individual_all_within_gap": 0.03,
+    "minimum_epsilon_power": 0.8,
+    "minimum_scaling_slope": 1.6,
+    "maximum_scaling_slope": 2.4,
+    "minimum_scaling_r2": 0.9,
+    "minimum_group_cluster_ari": 0.5,
+    "minimum_continuous_distance_spearman": 0.5,
+    "minimum_predictive_geometry_advantage": 0.05
+  },
+  "claim_boundary": "This experiment identifies group, individual, continuous, and unstable components in planted shared-condition response surfaces. It does not identify personality types, psychological constructs, emotion, diagnosis, or clinical utility."
+}

@@ -1,0 +1,6 @@
+{
+  "bundle_id": "SU8-CANDIDATE-SYNTHETIC-v1",
+  "status": "CANDIDATE_ONLY",
+  "scope": "synthetic contract validation only",
+  "parent_active_sha256": "22f71780a9eb4da8ac8d50a9fb2ba84a689d692e23b1de1064203d9634f398ba"
+}

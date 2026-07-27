@@ -1,0 +1,58 @@
+{
+  "version": "v8-residual-completion-k-frontier-v3.7h.4d-r2g.1",
+  "estimand_id": "V8_RESIDUAL_COMPLETION_K_FRONTIER_V37H4D_R2G1",
+  "seed": 29471131,
+  "repetitions": 30,
+  "jobs": 4,
+  "worlds": [
+    "pure_iid",
+    "common_low_rank",
+    "nonlinear_common",
+    "irreducible_common_shock"
+  ],
+  "noise_modes": [
+    "gaussian",
+    "student_t5"
+  ],
+  "effect_share": 0.10,
+  "training_groups": [
+    32,
+    128
+  ],
+  "confirmation_groups": 128,
+  "score_opportunities": [
+    1,
+    4,
+    16,
+    64,
+    0
+  ],
+  "target_opportunities": 4,
+  "ridge_alpha": 2.0,
+  "rff_components": 128,
+  "rff_gamma": 0.03125,
+  "quadratic_input_rank": 8,
+  "group_sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "spec": {
+    "dimensions": 32,
+    "latent_rank": 4,
+    "units_per_group": 128,
+    "opportunities_per_observation": 4,
+    "common_fraction": 0.75,
+    "student_df": 5.0
+  },
+  "gates": {
+    "practical_phi": 0.02,
+    "practical_floor_ratio": 0.01,
+    "minimum_irreducible_floor_ratio": 0.01
+  },
+  "claim_boundary": "Synthetic score-resolution limit of the frozen R2G factor families only. K=0 denotes an oracle-noiseless score observation, not attainable real text. No exact-zero, real-text, personality, causal, diagnostic, or clinical claim."
+}
+

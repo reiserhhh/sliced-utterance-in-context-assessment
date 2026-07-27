@@ -1,0 +1,19 @@
+{
+  "status": "EXTERNAL_FULL_STREAM_SEED_AUDIT_PASS",
+  "canonical_seed": 20361123,
+  "root_spawn_keys_expected": 608,
+  "root_spawn_keys_observed": 608,
+  "locator_root_keys": 24,
+  "operator_root_keys": 24,
+  "confirmation_root_keys": 560,
+  "root_key_pairwise_overlap": 0,
+  "reconstructed_component_seeds": 6960,
+  "unique_reconstructed_component_seeds": 6960,
+  "recorded_operator_confirmation_component_seeds": 6888,
+  "unique_recorded_operator_confirmation_component_seeds": 6888,
+  "recorded_subset_matches_reconstruction": true,
+  "preseal_component_seeds": 1800,
+  "canonical_preseal_integer_seed_overlap": 0,
+  "pass": true,
+  "note": "The built-in audit covers operator and confirmation streams. This external reconstruction additionally covers 24 locator roots and 72 locator component seeds."
+}

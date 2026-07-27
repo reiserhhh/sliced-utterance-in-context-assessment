@@ -1,0 +1,99 @@
+{
+  "version": "v8-group-free-routing-transport-v3.7c-canonical",
+  "estimand_id": "V8_GROUP_FREE_ROUTING_TRANSPORT_V37C",
+  "seed": 20361123,
+  "jobs": 8,
+  "discovery_repetitions": 24,
+  "confirmation_repetitions": 80,
+  "authors": 96,
+  "groups": 4,
+  "discovery_contexts": 12,
+  "confirmation_contexts": 8,
+  "extrapolation_contexts": 4,
+  "sessions": 2,
+  "events_per_context_session": 128,
+  "rank_candidates": [0, 2, 4, 6, 8, 12, 16],
+  "lambda_candidates": [0.3, 1.0, 3.0, 10.0, 30.0, 100.0, 300.0],
+  "minimum_discovery_rank_reliability": 0.25,
+  "selection_loss_tolerance": 0.001,
+  "threshold_candidates": [0.20, 0.25, 0.30, 0.35, 0.40, 0.45],
+  "path_points": 25,
+  "locator_window": 4,
+  "discovery_positive_paths": 600,
+  "discovery_negative_paths": 1200,
+  "confirmation_positive_paths": 800,
+  "confirmation_negative_paths": 1600,
+  "local_neighbor_count": 24,
+  "mar_base_probability": 0.72,
+  "mar_probability_floor": 0.50,
+  "mar_probability_ceiling": 0.95,
+  "mnar_true_gamma": 0.8,
+  "mnar_gamma_grid": [-1.6, -0.8, 0.0, 0.8, 1.6],
+  "arms": [
+    "core_lr",
+    "low_budget",
+    "group_mix",
+    "out_of_family",
+    "high_noise",
+    "mar",
+    "mnar"
+  ],
+  "parent_seals": {
+    "configs/v8_author_routing_operator_v37a_seal.json": "1febce9d39d1f414f7cdebc96287544ad27a306d37c9f48e3a938a7cc88e5167",
+    "configs/v8_blind_junction_localization_v37b_seal.json": "b9884f2505b9436349f96ab1a71d3c3cf105c63105f7199b61073c311a052f3a"
+  },
+  "excluded_preseal_work": [
+    {
+      "artifact": "results/v8_group_free_routing_transport/v37c_smoke_20260726",
+      "role": "32-event diagnostic smoke; exposed underpowered direct projection"
+    },
+    {
+      "artifact": "unpersisted 64/128-event information-curve diagnostic",
+      "role": "selected 128 events for the primary arm and retained 32 events as a negative capacity control"
+    },
+    {
+      "artifact": "results/v8_group_free_routing_transport/v37c_smoke_r2_20260726",
+      "role": "spectral-Wiener shrinkage and missingness-summary debugging"
+    },
+    {
+      "artifact": "results/v8_group_free_routing_transport/v37c_smoke_r3_20260726",
+      "role": "directional smoke after rank-selection and metric corrections"
+    },
+    {
+      "artifact": "results/v8_group_free_routing_transport/v37c_preseal_power_20260726",
+      "role": "bounded 20-population-per-arm power check before canonical seed and content seal"
+    }
+  ],
+  "gates": {
+    "minimum_core_truth_correlation": 0.80,
+    "minimum_core_gain_retention": 0.85,
+    "minimum_core_local_auc": 0.80,
+    "minimum_stress_truth_correlation": 0.60,
+    "minimum_stress_gain_retention": 0.70,
+    "minimum_stress_local_auc": 0.65,
+    "minimum_core_f1": 0.80,
+    "minimum_stress_f1": 0.65,
+    "maximum_unconditional_median_error": 2.0,
+    "maximum_unconditional_p95_fraction": 0.35,
+    "maximum_false_junction_rate": 0.05,
+    "minimum_mar_available_fraction": 0.50,
+    "maximum_mar_available_fraction": 0.95,
+    "maximum_mar_aipw_excess_nrmse": 0.05,
+    "minimum_mnar_sensitivity_coverage": 0.80,
+    "minimum_isomorphic_auc": 0.45,
+    "maximum_isomorphic_auc": 0.55,
+    "minimum_group_sensitivity_auc": 0.65,
+    "maximum_low_budget_truth_correlation": 0.75
+  },
+  "stop_rules": [
+    "parent seal hash mismatch",
+    "duplicate SeedSequence spawn key",
+    "true group label read by fitting or primary scoring",
+    "oracle-test events reused by blind fitting",
+    "selected rank or lambda at upper search boundary",
+    "MAR positivity below 0.05",
+    "only available-case estimator passes",
+    "out-of-family or high-noise primary gate fails"
+  ],
+  "claim_boundary": "A pass establishes only that a group-free low-rank routing estimator, a geometry-and-order locator, and registered missingness corrections preserve a synthetic author-relative routing operator on independent oracle-test events across the specified mechanism families. It does not establish personality, intelligence, thought nodes, real-text junctions, clinical meaning, or unrestricted open-world localization."
+}

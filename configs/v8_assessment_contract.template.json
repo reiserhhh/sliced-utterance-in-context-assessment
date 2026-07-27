@@ -1,0 +1,158 @@
+{
+  "contract_id": "SU8-CONTRACT-TEMPLATE",
+  "version": "v8.0-dev2",
+  "measurement_components": [
+    "relative_geometry",
+    "session_state",
+    "free_selection_q",
+    "fixed_response_B",
+    "interaction_history"
+  ],
+  "observation_bundle": {
+    "operator_registry_id": "DECLARE_OPERATOR_REGISTRY",
+    "occasion_definition": "DECLARE_SESSION_OR_OCCASION",
+    "context_fields": ["condition_id", "turn_index", "speaker_role"],
+    "support_rule": "DECLARE_MINIMUM_TEXT_AND_OCCASION_SUPPORT"
+  },
+  "representation_bundle": {
+    "representation_id": "DECLARE_REPRESENTATION",
+    "runtime_revision": "DECLARE_IMMUTABLE_RUNTIME",
+    "frozen_before_confirmation": true
+  },
+  "semantic_transducer": {
+    "enabled": true,
+    "role": "observation_semantic_transducer",
+    "provider": "DECLARE_PROVIDER",
+    "model_id": "DECLARE_MODEL",
+    "model_revision": "DECLARE_MODEL_SNAPSHOT",
+    "prompt_path": "DECLARE_PROMPT_PATH",
+    "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "output_schema_id": "suica.v8.semantic_observation.v1",
+    "output_schema_path": "schemas/v8_semantic_observation.schema.json",
+    "schema_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "output_fields": [
+      "observation_id",
+      "segment_id",
+      "event_type",
+      "source_span_ids",
+      "polarity",
+      "intensity",
+      "confidence",
+      "abstain"
+    ],
+    "decoding": {"temperature": 0.0, "top_p": 1.0},
+    "repetitions": 3
+  },
+  "measurement_bundle": {
+    "aggregation_runtime": "deterministic_code",
+    "aggregator_entrypoint": "suica_core.v8_aggregation:aggregate_semantic_observations",
+    "aggregator_path": "suica_core/v8_aggregation.py",
+    "aggregator_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "allowed_input_fields": [
+      "observation_id",
+      "segment_id",
+      "event_type",
+      "source_span_ids",
+      "polarity",
+      "intensity",
+      "confidence",
+      "abstain"
+    ],
+    "reference_population": "DECLARE_REFERENCE_POPULATION",
+    "support_refusal_active": true
+  },
+  "role_separation": {
+    "builder": {
+      "agent_id": "DECLARE_BUILDER",
+      "session_id": "DECLARE_BUILDER_SESSION",
+      "model_revision": "DECLARE_BUILDER_MODEL",
+      "runtime_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "auditor": {
+      "agent_id": "DECLARE_AUDITOR",
+      "session_id": "DECLARE_AUDITOR_SESSION",
+      "model_revision": "DECLARE_AUDITOR_MODEL",
+      "runtime_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "semantic_transducer": {
+      "agent_id": "DECLARE_OBSERVER",
+      "session_id": "DECLARE_OBSERVER_SESSION",
+      "model_revision": "DECLARE_OBSERVER_MODEL",
+      "runtime_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "interpreter": {
+      "agent_id": "DECLARE_INTERPRETER",
+      "session_id": "DECLARE_INTERPRETER_SESSION",
+      "model_revision": "DECLARE_INTERPRETER_MODEL",
+      "runtime_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "adaptation_agent": {
+      "agent_id": "DECLARE_ADAPTER",
+      "session_id": "DECLARE_ADAPTER_SESSION",
+      "model_revision": "DECLARE_ADAPTER_MODEL",
+      "runtime_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "human_authority": {"authority_id": "DECLARE_HUMAN_AUTHORITY"},
+    "auditor_attestation": {
+      "path": "DECLARE_AUDITOR_ATTESTATION_PATH",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "data_requirements": {
+    "opportunity_menu_logging": true,
+    "selection_flag": true,
+    "randomized_repeated_conditions": true,
+    "minimum_sessions_per_person_condition": 2,
+    "state_occasion_defined": true
+  },
+  "explanation_policy": {
+    "evidence_graph_required": true,
+    "positive_and_counterevidence_required": true,
+    "necessity_test_required": true,
+    "sufficiency_test_required": true,
+    "sentence_binding_required": true,
+    "interpreter_input": "evidence_graph_only",
+    "renderer": "controlled_templates_v1"
+  },
+  "uncertainty_policy": {
+    "components": [
+      "source_cluster",
+      "representation",
+      "llm_run",
+      "prompt",
+      "reference_norm",
+      "model"
+    ],
+    "combination_method": "joint_nested",
+    "refuse_without_joint_draws": true
+  },
+  "adaptation_policy": {
+    "active_bundle_immutable": true,
+    "candidate_status_only": true,
+    "confirmation_hidden": true,
+    "independent_audit_required": true,
+    "human_authorization_required": true,
+    "promotion_status": "CANDIDATE_ONLY",
+    "active_bundle": {
+      "path": "DECLARE_ACTIVE_BUNDLE_PATH",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "candidate_bundle": {
+      "path": "DECLARE_CANDIDATE_BUNDLE_PATH",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "candidate_parent_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "active_sha256_before": "0000000000000000000000000000000000000000000000000000000000000000",
+    "active_sha256_after": "0000000000000000000000000000000000000000000000000000000000000000",
+    "promotion_ledger": {
+      "path": "DECLARE_PROMOTION_LEDGER_PATH",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "claim_boundary": "V8 development contract; no personality, clinical, or diagnostic claim."
+}

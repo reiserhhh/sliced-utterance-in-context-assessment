@@ -1,0 +1,6 @@
+{
+  "bundle_id": "SU8-ACTIVE-SYNTHETIC-v1",
+  "status": "ACTIVE_IMMUTABLE",
+  "scope": "synthetic contract validation only",
+  "operator_registry_id": "SU8-SYNTHETIC-OPS-v1"
+}

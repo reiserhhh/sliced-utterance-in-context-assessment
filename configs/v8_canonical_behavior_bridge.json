@@ -1,0 +1,45 @@
+{
+  "version": "v8-canonical-behavior-bridge-1",
+  "seed": 20260725,
+  "source_run": "results/v8_interpreter_stability/pandora_formal_v2_20260724",
+  "geometry_confirmation_run": "results/v8_canonical_geometry_fresh_panel/pandora_external_holdout_20260725",
+  "geometry_candidate": "canonical_orbit_scale_residual",
+  "relative_tolerance": 1e-08,
+  "opportunity_shrinkage": 10.0,
+  "minimum_nonzero_profiles": 8,
+  "maximum_nonzero_fraction": 0.95,
+  "behavior_feature_sets": [
+    "rates",
+    "rates_pairs",
+    "rates_transitions",
+    "joint_repeated"
+  ],
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "inner_group_folds": 5,
+  "selection": {
+    "primary_metric": "cross_modal_author_auc",
+    "tie_breakers": [
+      "element_spearman",
+      "evidence_supported_profile_rate"
+    ]
+  },
+  "confirmation_gates": {
+    "minimum_cross_modal_author_auc": 0.60,
+    "minimum_auc_bootstrap_lower": 0.55,
+    "minimum_element_spearman": 0.10,
+    "minimum_distance_spearman": 0.10,
+    "maximum_distance_permutation_p": 0.05,
+    "minimum_technical_coverage": 0.75,
+    "minimum_evidence_supported_profile_rate": 0.20,
+    "minimum_stable_links": 2,
+    "minimum_behavior_targets": 2,
+    "minimum_geometry_self_auc": 0.60,
+    "minimum_behavior_self_auc": 0.60
+  },
+  "claim_boundary": "This bounded no-new-LLM diagnostic tests whether internally confirmed canonical author geometry maps to the existing explicit behavior cache. It cannot validate personality constructs, diagnosis, clinical utility, observer accuracy, or direct LLM scoring."
+}

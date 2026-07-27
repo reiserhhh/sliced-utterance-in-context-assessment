@@ -1,0 +1,62 @@
+{
+  "version": "v8-behavior-v2-pilot-1",
+  "seed": 20260725,
+  "source_run": "results/v8_interpreter_stability/pandora_formal_v2_20260724",
+  "runtime": {
+    "provider": "deepseek",
+    "base_url_env": "DEEPSEEK_BASE_URL",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "primary_model_env": "DEEPSEEK_LEADER_MODEL",
+    "default_primary_model": "deepseek-v4-pro",
+    "audit_model_env": "DEEPSEEK_SUBAGENT_MODEL",
+    "default_audit_model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "thinking_mode": "disabled",
+    "max_tokens": 16384,
+    "timeout_seconds": 180,
+    "max_retries": 2,
+    "max_validation_retries": 2,
+    "batch_size": 2,
+    "concurrency": 4
+  },
+  "smoke": {
+    "split_counts": {
+      "discovery": 3,
+      "calibration": 1
+    },
+    "observer_repetitions": 1,
+    "audit_authors": 0
+  },
+  "pilot": {
+    "split_counts": {
+      "discovery": 18,
+      "calibration": 6
+    },
+    "observer_repetitions": 2,
+    "audit_authors": 8
+  },
+  "segments_per_half": 12,
+  "geometry_units_per_half": 32,
+  "max_spans_per_segment": 6,
+  "consensus_required_fraction": 1.0,
+  "resolutions": [3, 6, 12],
+  "opportunity_shrinkage": 8.0,
+  "pilot_min_opportunities_per_half": 3,
+  "condition_control_dimensions": 10,
+  "bootstrap_draws": 5000,
+  "permutations": 5000,
+  "gates": {
+    "minimum_parse_rate": 0.98,
+    "minimum_repeated_event_f1": 0.75,
+    "minimum_cross_model_event_f1": 0.65,
+    "minimum_usable_events": 8,
+    "minimum_event_prevalence": 0.03,
+    "maximum_event_prevalence": 0.80,
+    "minimum_author_opportunity_coverage": 0.70,
+    "minimum_behavior_self_auc": 0.56,
+    "minimum_behavior_minus_condition_auc": 0.03,
+    "maximum_author_permutation_p": 0.05
+  },
+  "formal_human_gold_required": true,
+  "claim_boundary": "This is an opened development pilot for an opportunity-conditioned explicit behavior object. It does not establish observer accuracy without adjudicated human coding and cannot validate personality, emotion state, diagnosis, clinical utility, or author-level psychological scores."
+}

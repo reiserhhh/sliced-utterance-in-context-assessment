@@ -1,0 +1,7 @@
+{
+  "ledger_id": "SU8-PROMOTION-LEDGER-SYNTHETIC-v1",
+  "status": "CANDIDATE_ONLY",
+  "active_bundle_sha256": "22f71780a9eb4da8ac8d50a9fb2ba84a689d692e23b1de1064203d9634f398ba",
+  "candidate_bundle_sha256": "8033dddfd2fc25b30f3f517f1644c86aa9c627db345fc84c3f0ddff79ff6be31",
+  "human_authorization_event": null
+}

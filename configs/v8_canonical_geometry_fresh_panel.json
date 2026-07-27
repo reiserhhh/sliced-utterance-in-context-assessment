@@ -1,0 +1,31 @@
+{
+  "version": "v8-canonical-geometry-fresh-panel-1",
+  "seed": 20260725,
+  "source_run": "results/v8_interpreter_stability/pandora_formal_v2_20260724",
+  "opened_audit_run": "results/v8_spectral_geometry_audit/pandora_opened_panel_v4_scale_residual_20260725",
+  "candidate": "canonical_orbit_scale_residual",
+  "reference_fit_split": "discovery",
+  "fresh_panel_split": "external_holdout",
+  "scoring_split_alias": "confirmation",
+  "fresh_panel_rule": "deterministic_hash_sample_after_excluding_all_v7_eligible_authors",
+  "fresh_candidate_pool": 180,
+  "target_fresh_authors": 100,
+  "minimum_fresh_authors": 80,
+  "relative_tolerance": 1e-08,
+  "bootstrap_draws": 10000,
+  "permutations": 10000,
+  "topology_shuffle_draws": 1000,
+  "scale_matched_neighbors": 5,
+  "gates": {
+    "minimum_same_author_cosine_auc": 0.63,
+    "minimum_cosine_auc_lower": 0.50,
+    "maximum_permutation_p": 0.05,
+    "minimum_delta_over_sorted_quantile": 0.10,
+    "minimum_delta_ci_lower": 0.0,
+    "minimum_scale_conditioned_auc": 0.56,
+    "minimum_topology_shuffle_drop": 0.05,
+    "maximum_invariance_error": 1e-08
+  },
+  "confirmation_status": "INTERNAL_FRESH_AUTHOR_PANEL_OUTSIDE_THE_FULL_V7_ELIGIBLE_AUTHOR_SET",
+  "claim_boundary": "This registered internal holdout tests source-disjoint author geometry only. Fresh authors were deterministically sampled after excluding every author in the full V7 eligible set, but they come from the same PANDORA corpus and frozen representation system. The result cannot validate personality, diagnosis, clinical utility, cross-domain transport, or independent external replication."
+}

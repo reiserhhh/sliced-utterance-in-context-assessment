@@ -1,0 +1,80 @@
+{
+  "version": "v8-conditional-heterogeneity-injection-v3.7h.4d-r2e",
+  "estimand_id": "V8_CONDITIONAL_HETEROGENEITY_INJECTION_V37H4D_R2E",
+  "seed": 2419793261,
+  "smoke_seed": 408152793,
+  "parents_per_noise": 40,
+  "smoke_parents_per_noise": 2,
+  "outcome_replicates": 32,
+  "smoke_outcome_replicates": 4,
+  "jobs": 4,
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "active_test_authors": 4,
+  "active_conditions": 4,
+  "baseline_halo_lambda": 0.01,
+  "halo_author_support": 64,
+  "normal_tau_grid": [
+    0.03,
+    0.06,
+    0.09
+  ],
+  "tangent_phi_grid": [
+    0.1,
+    0.2,
+    0.4
+  ],
+  "anchor_active_cell_snr": 15.0,
+  "anchor_global_effect_share": 0.2,
+  "opportunity_prefixes": [
+    64,
+    128,
+    256
+  ],
+  "primary_opportunities": 128,
+  "permutations": 99,
+  "bootstrap_draws": 20000,
+  "smoke_bootstrap_draws": 200,
+  "holm_alpha": 0.05,
+  "main_reference_jsd": 0.15,
+  "author_tilt": 0.35,
+  "author_amplitude": 0.5,
+  "condition_amplitude": 0.35,
+  "society_amplitude": 0.15,
+  "group_amplitude": 0.2,
+  "panel_noise_amplitude": 0.08,
+  "technical_noise_amplitude": 0.35,
+  "student_df": 5.0,
+  "heteroskedastic_strength": 0.35,
+  "spec": {
+    "societies": 8,
+    "groups_per_society": 4,
+    "authors_per_group": 8,
+    "conditions": 16,
+    "dimensions": 6,
+    "panels": 4
+  },
+  "frozen_source_sha256": {
+    "suica_core/v8_reference_measure_frontier.py": "d41cc7d34c29a479607077111527861ea18c27fc68c0fb56a3970adbfbbaa6c9",
+    "suica_core/v8_minority_information_frontier.py": "e01638a6f5c11062566520f9037b664bab2ce21fffde690019420e745c6fdeaa",
+    "suica_core/v8_geometry_information_operator.py": "26bd6f46ca0c37f24948f311fd1a9ff55370fb69f3bcfe73e894aff0b50d9809",
+    "suica_core/v8_permutation_orbit_frontier.py": "32a83a3813a0fb757ca4d46187ac4fc7ccd9ef9a50a31a5a1e2d3fce02aa0df7",
+    "suica_core/v8_conditional_heterogeneity_preflight.py": "4712cee9bd3f6225cf8ed6d982da64f4fc4464690df43069b20def9de0d703af",
+    "suica_core/v8_conditional_heterogeneity_injection.py": "d661f74ba6611c29d7a0dbbcd13bd0b247c4fda61eb9dc6746941fa19d566940",
+    "scripts/run_suica_v8_geometry_information_operator_v37h4d_r2b.py": "fb54994c22e472010c1564f4360679194809b21089e53bb9646991a52c0274f3",
+    "scripts/run_suica_v8_conditional_heterogeneity_gate0_v37h4d_r2d.py": "0cf07b60606465e12c64c27eae941d1715d0cb9ec40b06faaf159e3a710be50c",
+    "scripts/run_suica_v8_conditional_heterogeneity_injection_v37h4d_r2e.py": "b081823b8722e0ccef4b82f5e646d75e4e89b2048b6d61915265835a352ecf8f"
+  },
+  "gates": {
+    "maximum_information_match_relative_error": 1e-6,
+    "maximum_frame_error": 1e-10,
+    "maximum_marginal_error": 1e-10,
+    "maximum_halo_share_error": 1e-10,
+    "minimum_information_scale_ratio": 0.9,
+    "maximum_information_scale_ratio": 1.1,
+    "practical_variance_threshold": 0.005
+  },
+  "claim_boundary": "Fresh synthetic detector-mechanism discovery only. It separates known-margin and tangent-geometry sensitivity under controlled repeated outcomes. It cannot establish personality, psychological constructs, real-text validity, diagnosis, causality, intelligence, or clinical use. Any discovery GO requires 80 fresh parents per noise for confirmation."
+}
