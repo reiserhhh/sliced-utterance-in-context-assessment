@@ -1,0 +1,117 @@
+{
+  "version": "suica-m4-c34-creation-residual-attribution-smoke-v1",
+  "estimand_id": "SUICA_M4_C34_CREATION_RESIDUAL_ATTRIBUTION_SMOKE_V1",
+  "seed": 1732050807,
+  "alias_seed": 2236067977,
+  "permutation_seed": 2645751311,
+  "repetitions": 1,
+  "main_worlds": [
+    "endogenous_source_partition_matched",
+    "history_gated_ecology"
+  ],
+  "target_worlds": [
+    "endogenous_source_partition_matched",
+    "history_gated_ecology"
+  ],
+  "null_worlds": [
+    "linear_null_ecology"
+  ],
+  "base_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 16,
+    "reference_selection_points": 16,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 8,
+    "selection_occasions": 4,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "alias_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 16,
+    "reference_selection_points": 16,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 4,
+    "selection_occasions": 2,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "anchor_budget": {
+    "calibration": 4,
+    "selection": 2
+  },
+  "excitation_amplitude": 1.0,
+  "chart_candidates": [
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 8, "landmarks": 16},
+    {"family": "linear_pca", "dimensions": 3, "neighbors": 8, "landmarks": 16}
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 6,
+  "minimum_evaluation_coverage": 0.0,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.0,
+    "minimum_split_geometry": 0.0,
+    "minimum_trustworthiness": 0.0,
+    "minimum_continuity": 0.0,
+    "minimum_coverage": 0.0,
+    "maximum_author_leakage_auc": 1.0
+  },
+  "route_estimator": {
+    "ridge_grid": [0.005],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 8,
+    "complexity_penalty": 0.00001
+  },
+  "creation_estimator": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001,
+    "maximum_source_overlap_rate": 0.01
+  },
+  "alias_audit": {
+    "selection_threshold": 0.0,
+    "creation_threshold": 0.0,
+    "gate_threshold": 0.0,
+    "return_threshold": 0.0,
+    "minimum_conditional_skill": 0.0,
+    "minimum_alias_oracle_skill": 0.0,
+    "minimum_alias_skill_gap": 0.0,
+    "maximum_alias_retained_ratio": 1.0,
+    "alias_bootstrap_repetitions": 20
+  },
+  "bootstrap_seed": 3141592653,
+  "bootstrap_repetitions": 100,
+  "targets": {
+    "minimum_oracle_headroom": -10.0,
+    "minimum_joint_information_coverage": 0.0,
+    "minimum_source_at_risk_coverage": 0.0,
+    "minimum_observation_main_effect": -10.0,
+    "minimum_observation_positive_repetitions": 0,
+    "minimum_full_recovered_headroom": -10.0,
+    "minimum_target_world_recovered_headroom": -10.0,
+    "maximum_other_world_degradation": 10.0,
+    "maximum_hazard_relative_degradation": 10.0,
+    "maximum_permutation_gain": 10.0,
+    "maximum_null_false_success_rate": 1.0,
+    "maximum_gauge_difference": 10.0,
+    "maximum_common_shift_error": 1e-8,
+    "minimum_alias_information_loss_rate": 0.0
+  },
+  "output_directory": "results/m4_creation_residual_attribution_smoke",
+  "report_path": "reports/SUICA_M4_CREATION_RESIDUAL_ATTRIBUTION_SMOKE.md"
+}

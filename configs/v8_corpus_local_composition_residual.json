@@ -1,0 +1,14 @@
+{
+  "version": "v8-corpus-local-composition-residual-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "orbit_config": "configs/v8_permutation_orbit_phase.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "baseline_draws": 99,
+    "null_draws": 199,
+    "rank": 10,
+    "local_length_block": 16,
+    "seed": 20260816
+  },
+  "claim_boundary": "Exploratory corpus-local signed composition-residual test on opened authors. D0 natural sets freeze a rank-10 K support; D0 pseudo sets estimate context/replicate marginal-orbit baselines. D1/D2 use signed cross-replicate covariance without positive-part projection. A pass licenses a corpus-local stable event-composition residual only, not cross-corpus transport, sequence dynamics, personality, cognition, diagnosis, or clinical validity."
+}

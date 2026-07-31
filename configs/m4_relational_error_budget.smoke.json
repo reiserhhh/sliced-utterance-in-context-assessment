@@ -1,0 +1,71 @@
+{
+  "version": "suica-m4-c31-relational-error-budget-smoke-v1",
+  "estimand_id": "SUICA_M4_C31_RELATIONAL_ERROR_BUDGET_V1",
+  "seed": 223606797,
+  "repetitions": 1,
+  "worlds": [
+    "endogenous_source_partition_matched",
+    "endogenous_creation_expansion",
+    "source_rotated_feedback",
+    "history_gated_ecology",
+    "selection_creation_compensation"
+  ],
+  "base_spec": {
+    "reference_authors": 10,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 32,
+    "reference_selection_points": 24,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 2,
+    "selection_occasions": 1,
+    "evaluation_occasions": 2,
+    "events": 40,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "candidates": [
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 6, "landmarks": 10},
+    {"family": "global_isomap", "dimensions": 2, "neighbors": 6, "landmarks": 10},
+    {"family": "landmark_atlas", "dimensions": 2, "neighbors": 6, "landmarks": 10}
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 8,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.55,
+    "minimum_split_geometry": 0.55,
+    "minimum_trustworthiness": 0.75,
+    "minimum_continuity": 0.75,
+    "minimum_coverage": 0.45,
+    "maximum_author_leakage_auc": 0.72
+  },
+  "route_estimator": {
+    "ridge_grid": [0.001, 0.01, 0.05],
+    "hazard_ridge": 0.01,
+    "logistic_iterations": 20,
+    "complexity_penalty": 0.00001,
+    "alias_match_threshold": 0.999
+  },
+  "fault_strength": 0.35,
+  "bootstrap_seed": 244948974,
+  "bootstrap_repetitions": 500,
+  "targets": {
+    "maximum_identity_error": 1e-12,
+    "maximum_mobius_error": 1e-10,
+    "maximum_invariance_error": 1e-10,
+    "maximum_shapley_error": 1e-10,
+    "minimum_pooled_spearman": 0.8,
+    "minimum_cluster_lcb": 0.65,
+    "minimum_leave_one_out_spearman": 0.75,
+    "maximum_normalized_mae": 0.25,
+    "minimum_fault_localization_accuracy": 0.85,
+    "maximum_null_false_attribution_rate": 0.05,
+    "minimum_third_order_excess": 0.05
+  },
+  "output_directory": "results/m4_relational_error_budget/smoke",
+  "report_path": "reports/SUICA_M4_RELATIONAL_ERROR_BUDGET_SMOKE.md"
+}

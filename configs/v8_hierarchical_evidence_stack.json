@@ -1,0 +1,56 @@
+{
+  "version": "v8-hierarchical-evidence-stack-pandora-1",
+  "seed": 20260728,
+  "status": "EXPLORATORY_OPENED_PANDORA_HIERARCHICAL_ROUTING",
+  "score_output": "results/v8_pandora_external_connection/operator_aligned_clean_20260728",
+  "external_connection_config": "configs/v8_pandora_external_connection.json",
+  "routes": {
+    "upstream_only": [
+      "upstream48"
+    ],
+    "canonical_only": [
+      "canonical16"
+    ],
+    "opportunity_only": [
+      "opportunity"
+    ],
+    "canonical_opportunity": [
+      "canonical16",
+      "opportunity"
+    ],
+    "upstream_canonical": [
+      "upstream48",
+      "canonical16"
+    ],
+    "upstream_opportunity": [
+      "upstream48",
+      "opportunity"
+    ],
+    "all_declared_layers": [
+      "upstream48",
+      "canonical16",
+      "opportunity"
+    ]
+  },
+  "ridge_alphas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "logistic_c": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "direct_bootstrap_draws": 1000,
+  "bridge_bootstrap_draws": 2000,
+  "bridge_head_refit_draws": 200,
+  "bridge_permutations": 5000,
+  "noninferiority_margin": 0.01,
+  "bridge_noninferiority_margin": 0.1,
+  "claim_boundary": "This opened-label experiment tests whether source-only nested validation selects different frozen evidence levels for different external tasks. A task route is an ephemeral read path, not a new universal SUICA score. Bridge labels never select a route or model parameter. Results do not name a construct or establish confirmatory or clinical validity."
+}

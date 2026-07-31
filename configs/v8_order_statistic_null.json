@@ -1,0 +1,13 @@
+{
+  "version": "v8-order-statistic-null-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "calibration_draws": 99,
+    "outer_draws": 1999,
+    "rank": 10,
+    "maximum_underresolved_fraction": 0.05,
+    "seed": 20260812
+  },
+  "claim_boundary": "Exploratory statistic-level conditional order null. Exact 4! inner centering and the complete density-to-orientation mapping are randomized. A pass can establish sequence-sensitive adjacency structure under this opened operator only; it cannot establish time direction, personality, cognition, universality, or clinical validity."
+}

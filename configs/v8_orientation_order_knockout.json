@@ -1,0 +1,14 @@
+{
+  "version": "v8-orientation-order-knockout-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "calibration_draws": 99,
+    "bootstrap_draws": 199,
+    "rotation_draws": 499,
+    "maximum_rank": 48,
+    "minimum_rank": 2,
+    "seed": 20260811
+  },
+  "claim_boundary": "Exploratory paired order-shuffle falsification of the K-family orientation candidate. A pass establishes order sensitivity under this operator and these opened authors only; it does not establish a psychological dynamic, fresh confirmation, universality, or clinical validity."
+}

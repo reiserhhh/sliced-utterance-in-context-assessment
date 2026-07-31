@@ -1,0 +1,23 @@
+{
+  "version": "v8-marginal-background-quotient-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "spec": {
+    "background_draws": 499,
+    "null_draws": 1999,
+    "diagnostic_null_draws": 199,
+    "bootstrap_draws": 999,
+    "bootstrap_reference_worlds": 64,
+    "local_length_block": 16,
+    "covariance_shrinkage": 0.1,
+    "covariance_ridge": 1e-7,
+    "minimum_coverage": 0.9,
+    "seed": 20260817
+  },
+  "claim_boundary": "Prospective label-free measurement-background audit on opened real-text authors. A pass licenses only a corpus-local, source-disjoint natural grouping residual beyond corpus/context/slot/local-length-matched event marginals. It does not license cross-corpus coordinate transport, personality, emotion, cognition, diagnosis, language invariance, causal interpretation, or clinical validity. A failure rejects this M operator and design, not the existence of all author information."
+}

@@ -1,0 +1,159 @@
+{
+  "version": "suica-m4-c35-response-safe-eiv-chart-v1",
+  "estimand_id": "SUICA_M4_C35_RESPONSE_SAFE_EIV_CHART_V1",
+  "seed": 2718281828,
+  "permutation_seed": 1414213562,
+  "repetitions": 8,
+  "main_worlds": [
+    "endogenous_source_partition_matched",
+    "endogenous_creation_expansion",
+    "source_rotated_feedback",
+    "history_gated_ecology",
+    "selection_creation_compensation"
+  ],
+  "target_worlds": [
+    "endogenous_source_partition_matched",
+    "history_gated_ecology"
+  ],
+  "null_worlds": [
+    "linear_null_ecology",
+    "linear_exogenous_selection",
+    "fast_return_equal_marginal"
+  ],
+  "refusal_worlds": [
+    "author_leakage",
+    "response_leakage_circular",
+    "evaluation_support_shift",
+    "topology_mismatch"
+  ],
+  "base_spec": {
+    "reference_authors": 32,
+    "mechanism_authors": 16,
+    "reference_calibration_points": 96,
+    "reference_selection_points": 64,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 40,
+    "selection_occasions": 16,
+    "evaluation_occasions": 5,
+    "events": 120,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "anchor_budget": {
+    "calibration": 5,
+    "selection": 2
+  },
+  "excitation_amplitude": 1.0,
+  "chart_candidates": [
+    {
+      "family": "linear_pca",
+      "dimensions": 1,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "linear_pca",
+      "dimensions": 2,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "linear_pca",
+      "dimensions": 3,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 2,
+      "neighbors": 8,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 2,
+      "neighbors": 12,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 3,
+      "neighbors": 12,
+      "landmarks": 16
+    },
+    {
+      "family": "landmark_atlas",
+      "dimensions": 2,
+      "neighbors": 8,
+      "landmarks": 16
+    },
+    {
+      "family": "landmark_atlas",
+      "dimensions": 2,
+      "neighbors": 12,
+      "landmarks": 16
+    }
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 12,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.65,
+    "minimum_split_geometry": 0.65,
+    "minimum_trustworthiness": 0.85,
+    "minimum_continuity": 0.85,
+    "minimum_coverage": 0.8,
+    "maximum_author_leakage_auc": 0.72
+  },
+  "eiv_chart": {
+    "permutation_repetitions": 199,
+    "permutation_quantile": 0.99,
+    "maximum_rank": 8,
+    "covariance_tolerance": 0.0000001,
+    "whitening_tolerance": 0.0000001,
+    "maximum_principal_angle_degrees": 15.0,
+    "minimum_coverage": 0.8
+  },
+  "route_estimator": {
+    "ridge_grid": [
+      0.001,
+      0.005,
+      0.02
+    ],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 30,
+    "complexity_penalty": 0.00001
+  },
+  "creation_estimator": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001
+  },
+  "bootstrap_seed": 3141592653,
+  "bootstrap_repetitions": 2000,
+  "targets": {
+    "minimum_mean_recovered_headroom": 0.6,
+    "minimum_recovered_headroom_lcb": 0.5,
+    "minimum_positive_repetitions": 6,
+    "minimum_pca_advantage": 0.1,
+    "minimum_oracle_headroom": 0.05,
+    "minimum_target_world_recovery": 0.35,
+    "maximum_other_world_degradation": 0.01,
+    "maximum_hazard_relative_degradation": 0.02,
+    "maximum_shuffle_gain": 0.01,
+    "maximum_null_false_success_rate": 0.05,
+    "maximum_principal_angle_degrees": 15.0,
+    "minimum_coverage": 0.8,
+    "maximum_gauge_error": 0.000001,
+    "maximum_common_shift_error": 0.0000000001,
+    "maximum_response_hash_failures": 0,
+    "maximum_alias_false_recovery_rate": 0.0,
+    "minimum_forbidden_refusal_rate": 1.0,
+    "minimum_support_refusal_rate": 1.0
+  },
+  "output_directory": "results/m4_response_safe_eiv_chart",
+  "report_path": "reports/SUICA_M4_RESPONSE_SAFE_EIV_CHART.md"
+}

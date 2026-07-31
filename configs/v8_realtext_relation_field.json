@@ -1,0 +1,72 @@
+{
+  "version": "v8-realtext-relation-field-1",
+  "estimand_id": "V8_REALTEXT_SUPPORT_FIBERED_RELATION_FIELD",
+  "seed": 20260805,
+  "spec": {
+    "hash_dimensions": 32,
+    "random_directions": 8,
+    "transition_null_draws": 16,
+    "maximum_rank": 6,
+    "minimum_rank": 2,
+    "support_permutations": 99,
+    "relation_permutations": 199,
+    "support_subsamples": 39,
+    "minimum_split_authors": 24,
+    "minimum_context_authors": 12,
+    "alignment_floor": 0.35,
+    "relation_agreement_floor": 0.6,
+    "alias_residual_rank_floor": 1,
+    "ridge": 1e-05,
+    "seed": 20260805,
+    "gw_authors": 48,
+    "gw_iterations": 24
+  },
+  "data": {
+    "pandora": {
+      "path": "../project persona/data_sets/prepared/suica_tiers_v2/tier_u_comments.parquet",
+      "minimum_events": 8,
+      "maximum_events": 16,
+      "contexts": 4,
+      "maximum_authors_per_context": 260,
+      "minimum_text_characters": 40,
+      "excluded_contexts": [
+        "mbti",
+        "intj",
+        "intp",
+        "infj",
+        "infp",
+        "entj",
+        "entp",
+        "enfj",
+        "enfp",
+        "istj",
+        "istp",
+        "isfj",
+        "isfp",
+        "estj",
+        "estp",
+        "esfj",
+        "esfp",
+        "bigfive",
+        "enneagram",
+        "personality"
+      ]
+    },
+    "essays": {
+      "path": "../project persona/data_sets/prepared/big5/essays_original_prepared.csv",
+      "chunks": 8,
+      "chunk_tokens": 64,
+      "maximum_authors": 1200
+    },
+    "x_market": {
+      "path": "../project persona/data_sets/x_fullmarkettext/memory_semis_3m_20260318_20260617_merged/x_posts.csv",
+      "context_column": "query_group",
+      "minimum_events": 4,
+      "maximum_events": 12,
+      "contexts": 3,
+      "maximum_authors_per_context": 220,
+      "minimum_text_characters": 12
+    }
+  },
+  "claim_boundary": "Prospective label-free real-text technical experiment. It may identify replicated supports, relation spectra, context composition, and cross-corpus transport or refusal. It cannot name personality, emotion, diagnosis, causal mechanisms, language invariance, or clinical validity."
+}

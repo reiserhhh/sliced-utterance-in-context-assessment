@@ -1,0 +1,849 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "suica.foundation.study.v1",
+  "title": "SUICA Foundation Study Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "study_id",
+    "methodology_role",
+    "stage",
+    "study_question",
+    "claim",
+    "generalization_universe",
+    "observation_design",
+    "transformation_chain",
+    "identification",
+    "error_theory",
+    "validation_route",
+    "interpretation_boundary",
+    "application_overlay",
+    "forensic_overlay",
+    "governance"
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "layer": {
+      "enum": [
+        "L0_human_process",
+        "L1_expression_behavior",
+        "L2_text_record",
+        "L3_representation",
+        "L4_technical_object",
+        "L5_measurement_score",
+        "L6_psychological_construct",
+        "L7_use_decision"
+      ]
+    },
+    "facet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "definition",
+        "sampling_rule",
+        "scope_limit",
+        "refusal_consequence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "declared",
+            "bounded_open",
+            "not_applicable"
+          ]
+        },
+        "definition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "sampling_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "scope_limit": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "refusal_consequence": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "opening_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "edgeLicense": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "edge",
+        "status",
+        "assumptions",
+        "evidence_or_test",
+        "refusal_rule"
+      ],
+      "properties": {
+        "edge": {
+          "enum": [
+            "E01_production",
+            "E12_capture",
+            "E23_representation",
+            "E34_estimation",
+            "E45_reference_scoring",
+            "E56_construct_mapping",
+            "E67_use_decision"
+          ]
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "bounded_open",
+            "not_applicable"
+          ]
+        },
+        "assumptions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "evidence_or_test": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "refusal_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "opening_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "suica.foundation.study.v1"
+    },
+    "study_id": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "methodology_role": {
+      "enum": [
+        "foundation_research",
+        "instrument_derivation",
+        "application_validation"
+      ]
+    },
+    "stage": {
+      "enum": [
+        "synthetic_development",
+        "opened_real_text_development",
+        "sealed_confirmation",
+        "application_validation"
+      ]
+    },
+    "study_question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "question",
+        "targeted_openings"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "estimate_declared_object",
+            "falsify_open_assumption",
+            "test_transport",
+            "application_validation"
+          ]
+        },
+        "question": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "targeted_openings": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_layer",
+        "target_layer",
+        "target_estimand",
+        "claim_statement",
+        "evidence_level",
+        "edge_licenses",
+        "personality_claim",
+        "individual_score_claim",
+        "decision_claim",
+        "forensic_claim",
+        "forbidden_interpretations"
+      ],
+      "properties": {
+        "source_layer": {
+          "$ref": "#/$defs/layer"
+        },
+        "target_layer": {
+          "$ref": "#/$defs/layer"
+        },
+        "target_estimand": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "claim_statement": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence_level": {
+          "enum": [
+            "E0_engineering",
+            "E1_opened_development",
+            "E2_sealed_synthetic",
+            "E3_real_text_technical",
+            "E4_construct_validation",
+            "E5_applied_validation"
+          ]
+        },
+        "edge_licenses": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/edgeLicense"
+          }
+        },
+        "personality_claim": {
+          "type": "boolean"
+        },
+        "individual_score_claim": {
+          "type": "boolean"
+        },
+        "decision_claim": {
+          "type": "boolean"
+        },
+        "forensic_claim": {
+          "type": "boolean"
+        },
+        "forbidden_interpretations": {
+          "$ref": "#/$defs/stringArray"
+        }
+      }
+    },
+    "generalization_universe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_population",
+        "reference_population",
+        "context",
+        "opportunity",
+        "occasion_time",
+        "operator",
+        "language_culture",
+        "interaction_partner",
+        "administration",
+        "response_process"
+      ],
+      "properties": {
+        "target_population": {
+          "$ref": "#/$defs/facet"
+        },
+        "reference_population": {
+          "$ref": "#/$defs/facet"
+        },
+        "context": {
+          "$ref": "#/$defs/facet"
+        },
+        "opportunity": {
+          "$ref": "#/$defs/facet"
+        },
+        "occasion_time": {
+          "$ref": "#/$defs/facet"
+        },
+        "operator": {
+          "$ref": "#/$defs/facet"
+        },
+        "language_culture": {
+          "$ref": "#/$defs/facet"
+        },
+        "interaction_partner": {
+          "$ref": "#/$defs/facet"
+        },
+        "administration": {
+          "$ref": "#/$defs/facet"
+        },
+        "response_process": {
+          "$ref": "#/$defs/facet"
+        }
+      }
+    },
+    "observation_design": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_unit",
+        "design_mode",
+        "context_role",
+        "choice_channel",
+        "response_channel",
+        "event_count_rule",
+        "event_composition_rule",
+        "repeated_opportunity_rule",
+        "missingness_selection_rule",
+        "text_retention_policy",
+        "assisted_authorship_policy"
+      ],
+      "properties": {
+        "event_unit": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "design_mode": {
+          "enum": [
+            "free",
+            "fixed",
+            "mixed"
+          ]
+        },
+        "context_role": {
+          "enum": [
+            "condition",
+            "signal",
+            "nuisance",
+            "both_separated",
+            "bounded_open"
+          ]
+        },
+        "choice_channel": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "response_channel": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "event_count_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "event_composition_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "repeated_opportunity_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "missingness_selection_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "text_retention_policy": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "assisted_authorship_policy": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "transformation_chain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_record_version",
+        "representation_operator",
+        "slice_operator",
+        "fitted_components",
+        "fit_apply_separation",
+        "reference_operator",
+        "deterministic_scoring",
+        "llm_role",
+        "provenance_rule"
+      ],
+      "properties": {
+        "raw_record_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "representation_operator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "slice_operator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "fitted_components": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "fit_apply_separation": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "reference_operator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "deterministic_scoring": {
+          "type": "boolean"
+        },
+        "llm_role": {
+          "enum": [
+            "absent",
+            "semantic_observer",
+            "explanation_renderer",
+            "semantic_observer_and_explanation_renderer",
+            "final_scorer"
+          ]
+        },
+        "provenance_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "reference_measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active",
+        "reference_frame_id",
+        "reference_population_version",
+        "target_facet_measure",
+        "representation_operator_version",
+        "chart_version",
+        "occasion_universe",
+        "support_positivity_rule",
+        "effective_sample_size_rule",
+        "selection_identification_rule",
+        "panel_separation",
+        "joint_resampling",
+        "gauge_output_policy",
+        "reference_drift_action",
+        "event_count_and_composition_separated"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "reference_frame_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "reference_population_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "target_facet_measure": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "representation_operator_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "chart_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "occasion_universe": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "support_positivity_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "effective_sample_size_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "selection_identification_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "panel_separation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reference_fit_disjoint",
+            "reference_score_disjoint",
+            "fit_score_disjoint"
+          ],
+          "properties": {
+            "reference_fit_disjoint": {
+              "type": "boolean"
+            },
+            "reference_score_disjoint": {
+              "type": "boolean"
+            },
+            "fit_score_disjoint": {
+              "type": "boolean"
+            }
+          }
+        },
+        "joint_resampling": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reference_population",
+            "event_sampling",
+            "occasion_or_operator"
+          ],
+          "properties": {
+            "reference_population": {
+              "type": "boolean"
+            },
+            "event_sampling": {
+              "type": "boolean"
+            },
+            "occasion_or_operator": {
+              "type": "boolean"
+            }
+          }
+        },
+        "gauge_output_policy": {
+          "enum": [
+            "relation_or_distance_only",
+            "gauge_equivalence_class",
+            "reference_coordinates_with_transport_audit"
+          ]
+        },
+        "reference_drift_action": {
+          "enum": [
+            "refuse",
+            "register_new_version_and_recalibrate"
+          ]
+        },
+        "event_count_and_composition_separated": {
+          "const": true
+        }
+      }
+    },
+    "identification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_functional",
+        "identification_set",
+        "equivalence_class",
+        "assumptions",
+        "alias_or_counterworlds",
+        "support_condition",
+        "dependence_model",
+        "residual_semantics",
+        "residual_claim",
+        "nonidentifiability_action",
+        "refusal_rules",
+        "no_direct_personality_inference"
+      ],
+      "properties": {
+        "target_functional": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "identification_set": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "equivalence_class": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "assumptions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "alias_or_counterworlds": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "support_condition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "dependence_model": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "residual_semantics": {
+          "enum": [
+            "unresolved_mixture",
+            "bounded_open",
+            "identified_technical_error",
+            "decomposed_components"
+          ]
+        },
+        "residual_claim": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "nonidentifiability_action": {
+          "enum": [
+            "equivalence_class",
+            "interval",
+            "refusal"
+          ]
+        },
+        "refusal_rules": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "no_direct_personality_inference": {
+          "const": true
+        }
+      }
+    },
+    "error_theory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "facets",
+        "dependence_assumptions",
+        "variance_or_relation_decomposition",
+        "event_count_and_composition_separated",
+        "uncertainty_target",
+        "uncertainty_method",
+        "reference_uncertainty",
+        "individual_sem",
+        "minimum_detectable_difference",
+        "decision_consistency"
+      ],
+      "properties": {
+        "facets": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "person",
+              "context",
+              "opportunity",
+              "occasion_time",
+              "operator_method",
+              "language_culture",
+              "interaction_partner",
+              "response_process",
+              "reference_population",
+              "event_sampling",
+              "technical_replication"
+            ]
+          }
+        },
+        "dependence_assumptions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "variance_or_relation_decomposition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "event_count_and_composition_separated": {
+          "type": "boolean"
+        },
+        "uncertainty_target": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "uncertainty_method": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "reference_uncertainty": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "individual_sem": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "minimum_detectable_difference": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "decision_consistency": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "validation_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "development_confirmation_separation",
+        "fresh_confirmation_rule",
+        "negative_controls",
+        "falsification_worlds",
+        "invariance_facets",
+        "external_construct_evidence",
+        "field_replication",
+        "information_budget_plan",
+        "stop_rule"
+      ],
+      "properties": {
+        "development_confirmation_separation": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "fresh_confirmation_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "negative_controls": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "falsification_worlds": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "invariance_facets": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "external_construct_evidence": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "field_replication": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "information_budget_plan": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "stop_rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "interpretation_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "licensed_labels",
+        "prohibited_labels",
+        "construct_naming_allowed",
+        "person_score_allowed",
+        "decision_allowed",
+        "claim_boundary"
+      ],
+      "properties": {
+        "licensed_labels": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "prohibited_labels": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "construct_naming_allowed": {
+          "type": "boolean"
+        },
+        "person_score_allowed": {
+          "type": "boolean"
+        },
+        "decision_allowed": {
+          "type": "boolean"
+        },
+        "claim_boundary": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "application_overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active",
+        "intended_use",
+        "decisions_enabled",
+        "consequences_analysis",
+        "fairness_analysis",
+        "human_authority"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "intended_use": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "decisions_enabled": {
+          "type": "boolean"
+        },
+        "consequences_analysis": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "fairness_analysis": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "human_authority": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "forensic_overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active",
+        "jurisdiction",
+        "legal_question",
+        "response_style_model",
+        "collateral_sources",
+        "field_reliability",
+        "outcome_definition",
+        "base_rate_and_calibration",
+        "prediction_horizon",
+        "false_positive_negative_costs",
+        "contestability",
+        "chain_of_custody"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "jurisdiction": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "legal_question": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "response_style_model": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "collateral_sources": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "field_reliability": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "outcome_definition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "base_rate_and_calibration": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "prediction_horizon": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "false_positive_negative_costs": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "contestability": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "chain_of_custody": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol_path",
+        "preregistered",
+        "operator_frozen",
+        "builder_auditor_separation",
+        "provenance_complete",
+        "mutation_policy"
+      ],
+      "properties": {
+        "protocol_path": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "preregistered": {
+          "type": "boolean"
+        },
+        "operator_frozen": {
+          "type": "boolean"
+        },
+        "builder_auditor_separation": {
+          "type": "boolean"
+        },
+        "provenance_complete": {
+          "type": "boolean"
+        },
+        "mutation_policy": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "v8-permutation-orbit-phase-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "orbit_spec": {
+    "ridge_ratio": 0.1,
+    "rank": 10,
+    "bootstrap_draws": 199,
+    "rotation_draws": 499,
+    "block_sizes": [64, 64, 16, 8],
+    "seed": 20260813
+  },
+  "order_null_spec": {
+    "calibration_draws": 99,
+    "outer_draws": 1999,
+    "rank": 10,
+    "maximum_underresolved_fraction": 0.05,
+    "seed": 20260814
+  },
+  "claim_boundary": "Exploratory permutation-orbit decomposition on opened PANDORA and Essays authors. Set geometry describes the variation allowed by an unordered event multiset. Phase geometry describes the observed ordering after regularized within-orbit whitening. A positive conditional phase test can establish sequence-sensitive technical structure only; neither arm licenses time direction, cognition, personality, universality, diagnosis, or clinical use."
+}

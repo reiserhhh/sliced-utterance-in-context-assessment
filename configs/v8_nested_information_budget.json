@@ -1,0 +1,37 @@
+{
+  "version": "v8-cbq-nested-information-budget-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "nuisance_config": "configs/v8_nuisance_filtration.json",
+  "pandora_context_pair": [
+    "AskReddit",
+    "AskWomen"
+  ],
+  "budgets": [
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "pair_reveal_order": [
+    0,
+    5,
+    2,
+    3,
+    1,
+    4
+  ],
+  "primary_low_budget": 8,
+  "primary_high_budget": 12,
+  "background_draws": 499,
+  "null_draws": 1999,
+  "bootstrap_draws": 1999,
+  "schedule_sensitivity_null_draws": 499,
+  "rbf_scale": 0.5,
+  "material_delta_reference": 0.03,
+  "seed": 20260831,
+  "transport_spec": {
+    "nuisance_kernel_ridge": 0.1
+  },
+  "claim_boundary": "Opened-panel nested information-budget mechanism experiment on the previously inspected AskReddit--AskWomen D0/D1/D2 author cohort. The fixed-12 operator arm may distinguish added input information from budget-specific estimator refitting, but the result is development sensitivity rather than fresh confirmation. The deterministic reveal ladder is one content-blind design and does not establish optimal sampling. The experiment cannot establish personality, emotion, cognition, construct validity, causal situation response, population norms, language invariance, diagnosis, or clinical use."
+}

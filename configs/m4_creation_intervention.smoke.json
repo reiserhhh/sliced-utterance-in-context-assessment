@@ -1,0 +1,59 @@
+{
+  "version": "suica-m4-c32-creation-intervention-smoke-v1",
+  "estimand_id": "SUICA_M4_C32_CREATION_INTERVENTION_SMOKE_V1",
+  "seed": 271828183,
+  "repetitions": 1,
+  "worlds": ["endogenous_creation_expansion"],
+  "base_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 24,
+    "reference_selection_points": 16,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 2,
+    "selection_occasions": 2,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "chart_candidates": [
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 8, "landmarks": 16}
+  ],
+  "kernel_ranks": [2, 4],
+  "bandwidth_scales": [1.0],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 8,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": -1.0,
+    "minimum_split_geometry": -1.0,
+    "minimum_trustworthiness": 0.0,
+    "minimum_continuity": 0.0,
+    "minimum_coverage": 0.0,
+    "maximum_author_leakage_auc": 1.0
+  },
+  "route_estimator": {
+    "ridge_grid": [0.005],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 8,
+    "complexity_penalty": 0.00001
+  },
+  "bootstrap_seed": 314159266,
+  "bootstrap_repetitions": 50,
+  "targets": {
+    "minimum_creation_headroom": 0.05,
+    "minimum_headroom_lcb": 0.0,
+    "minimum_candidate_gain": 0.03,
+    "minimum_candidate_gain_lcb": 0.0,
+    "minimum_candidate_geometry": 0.70,
+    "minimum_recovered_headroom": 0.50,
+    "minimum_positive_repetitions": 1
+  },
+  "output_directory": "results/_smoke_m4_creation_intervention",
+  "report_path": "reports/_smoke_m4_creation_intervention.md"
+}

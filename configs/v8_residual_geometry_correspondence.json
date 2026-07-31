@@ -1,0 +1,31 @@
+{
+  "version": "v8-cbq-rgc-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "nuisance_config": "configs/v8_nuisance_filtration.json",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "background_draws": 499,
+  "geometry_spec": {
+    "d0_null_draws": 999,
+    "test_null_draws": 1999,
+    "bootstrap_draws": 999,
+    "bandwidth_multipliers": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "neighborhood_fractions": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "nuisance_kernel_ridge": 0.1,
+    "minimum_context_authors": 8,
+    "seed": 20260827
+  },
+  "claim_boundary": "Opened-panel axis-free residual-geometry audit. It tests whether D0-frozen opportunity-filtered technical replicates preserve author-to-author relation geometry under linear kernels, RBF kernels, or local neighborhoods. It cannot establish personality, emotion, cognition, a latent factor, causality, cross-corpus common coordinates, diagnosis, or clinical validity."
+}

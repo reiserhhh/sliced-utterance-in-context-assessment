@@ -1,0 +1,21 @@
+{
+  "version": "v8-support-containment-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "capacities": [4, 8, 16, 24, 32],
+    "tau_multipliers": [0.5, 1.0, 2.0, 4.0],
+    "bootstrap_draws": 199,
+    "rotation_draws": 99,
+    "calibration_subsamples": 39,
+    "maximum_calibration_authors": 420,
+    "maximum_confirmation_authors": 256,
+    "minimum_authors": 48,
+    "denominator_floor": 1e-06,
+    "minimum_grid_fraction": 0.8,
+    "approximate_containment_floor": 0.8,
+    "calibration_sign_fraction_floor": 0.8,
+    "seed": 20260806
+  },
+  "claim_boundary": "Exploratory label-free support-coverage audit. It can identify capacity-conditioned technical support overlap or directional coverage asymmetry after equal-author, equal-event, full-spectrum, global-metric, and rotation controls. It cannot establish personality, language universality, causal transport, clinical validity, or literal subspace inclusion."
+}

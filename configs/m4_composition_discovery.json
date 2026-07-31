@@ -1,0 +1,43 @@
+{
+  "version": "suica-m4-a-mechanism-composition-v1-discovery",
+  "estimand_id": "SUICA_M4_A_MECHANISM_COMPOSITION_GRAMMAR_V1",
+  "seed": 173205080,
+  "repetitions": 8,
+  "worlds": [
+    "additive_dependent",
+    "synergy",
+    "redundancy",
+    "suppression",
+    "gate",
+    "projection_order",
+    "composite",
+    "alias",
+    "null"
+  ],
+  "base_spec": {
+    "authors": 30,
+    "occasions": 4,
+    "events": 128,
+    "noise": 0.35
+  },
+  "estimator": {
+    "max_order": 3,
+    "ridge": 0.05
+  },
+  "diagnostic_thresholds": {
+    "support_threshold": 0.045,
+    "observational_threshold": 0.10,
+    "gate_threshold": 0.35,
+    "commutator_threshold": 0.15,
+    "null_value_threshold": 0.08
+  },
+  "discovery_targets": {
+    "minimum_type_macro_f1": 0.75,
+    "minimum_active_support_f1": 0.80,
+    "minimum_sign_accuracy": 0.90,
+    "minimum_target_geometry": 0.40,
+    "minimum_gate_direction_margin": 0.15,
+    "minimum_alias_refusal_rate": 0.95,
+    "maximum_null_false_positive_rate": 0.05
+  }
+}

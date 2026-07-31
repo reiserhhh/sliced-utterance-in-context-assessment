@@ -1,0 +1,14 @@
+{
+  "version": "v8-support-resolution-2",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "sharpness": [0.1, 0.25, 0.5, 0.75, 1.0],
+    "bootstrap_draws": 199,
+    "rotation_draws": 99,
+    "minimum_d0_half_authors": 24,
+    "minimum_confirmation_authors": 48,
+    "seed": 20260808
+  },
+  "claim_boundary": "Label-free scale-free technical resolution audit. It may identify a D1-discovered and D2-confirmed capacity-sharpness region for replicated anisotropic text density. It cannot name personality, emotion, state, language universality, causal mechanisms, or clinical validity."
+}

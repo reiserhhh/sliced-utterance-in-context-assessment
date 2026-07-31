@@ -1,0 +1,45 @@
+{
+  "version": "v8-exchangeable-background-audit-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "historical_marginal_cells": "results/v8_marginal_background_quotient/audit_20260817/quotient_cells.csv",
+  "historical_spectrum_cells": "results/v8_conditional_concordance_spectrum/audit_20260818/cells.csv",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "marginal_spec": {
+    "background_draws": 499,
+    "null_draws": 1999,
+    "diagnostic_null_draws": 199,
+    "bootstrap_draws": 999,
+    "bootstrap_reference_worlds": 64,
+    "local_length_block": 16,
+    "covariance_shrinkage": 0.1,
+    "covariance_ridge": 1e-7,
+    "minimum_coverage": 0.9,
+    "seed": 20260823
+  },
+  "spectrum_spec": {
+    "background_draws": 499,
+    "spectrum_null_draws": 499,
+    "test_null_draws": 1999,
+    "bootstrap_draws": 999,
+    "bootstrap_reference_worlds": 64,
+    "local_length_block": 16,
+    "gamma_grid": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      0.5
+    ],
+    "maximum_condition": 100.0,
+    "spectrum_quantile": 0.95,
+    "maximum_rank": 12,
+    "minimum_half_authors": 20,
+    "seed": 20260824
+  },
+  "claim_boundary": "Opened-panel exchangeability correction. It compares the historical no-self cyclic knockout with a uniform within-block permutation distribution whose support includes fixed points and the natural identity assignment. It can correct the technical null interpretation but cannot confirm a personality, emotion, cognition, causal, cross-corpus, diagnostic, or clinical claim."
+}

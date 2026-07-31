@@ -1,0 +1,28 @@
+{
+  "version": "v8-hjic-1a",
+  "estimand_id": "V8_REPLICATED_RELATIONAL_LIFT_SUPPORT",
+  "seed": 20260730,
+  "repetitions": 60,
+  "jobs": 4,
+  "spec": {
+    "authors": 2400,
+    "big5_dimensions": 5,
+    "mbti_dimensions": 4,
+    "shared_dimensions": 2,
+    "repeated_splits": 32,
+    "bootstrap_draws": 120,
+    "permutations": 199,
+    "view_noise": 0.55,
+    "anchor_private_noise": 0.8
+  },
+  "gates": {
+    "minimum_shared_relation_license_rate": 0.2,
+    "minimum_shared_mode_license_rate": 0.8,
+    "minimum_licensed_truth_fidelity_rate": 0.95,
+    "maximum_negative_relation_license_rate": 0.05,
+    "minimum_low_gap_relation_license_rate": 0.8,
+    "maximum_low_gap_mode_license_rate": 0.05,
+    "maximum_truth_usage_rate": 0.0
+  },
+  "claim_boundary": "Passing licenses a synthetic, replicated-observation rule for separating relation existence from unique-mode identification. It does not establish that human text follows the generator, that either margin is personality, or that an identified relation transports across populations."
+}

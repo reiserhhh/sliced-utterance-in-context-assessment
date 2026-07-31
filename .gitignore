@@ -1,6 +1,9 @@
 # Generated outputs
 results/
 logs/
+reports/_benchmark_*.md
+reports/_shard_*.md
+reports/_smoke_*.md
 
 # Local datasets. Keep only the empty reproducibility skeleton committed.
 data_sets/**

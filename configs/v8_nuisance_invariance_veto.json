@@ -1,0 +1,39 @@
+{
+  "version": "v8-hjic-1b",
+  "estimand_id": "V8_NUISANCE_INVARIANCE_VETO",
+  "seed": 20260731,
+  "repetitions": 60,
+  "jobs": 4,
+  "spec": {
+    "authors": 2400,
+    "big5_dimensions": 5,
+    "mbti_dimensions": 4,
+    "shared_dimensions": 2,
+    "repeated_splits": 32,
+    "bootstrap_draws": 120,
+    "permutations": 199,
+    "view_noise": 0.55,
+    "anchor_private_noise": 0.8,
+    "relation_norm_floor": 0.1,
+    "material_relation_shift": 0.1,
+    "material_cell_shift": 0.1
+  },
+  "gates": {
+    "minimum_shared_relation_license_rate": 0.95,
+    "minimum_shared_mode_license_rate": 0.8,
+    "minimum_null_high_dim_relation_license_rate": 0.95,
+    "maximum_positive_world_nuisance_veto_rate": 0.05,
+    "minimum_licensed_truth_fidelity_rate": 0.95,
+    "maximum_negative_relation_license_rate": 0.05,
+    "minimum_low_gap_relation_license_rate": 0.95,
+    "maximum_low_gap_mode_license_rate": 0.05,
+    "minimum_simpson_detection_rate": 0.95,
+    "maximum_simpson_final_license_rate": 0.05,
+    "minimum_collider_sensitivity_detection_rate": 0.95,
+    "maximum_collider_final_license_rate": 0.05,
+    "maximum_weak_relation_license_rate": 0.05,
+    "maximum_weak_relation_nuisance_veto_rate": 0.05,
+    "maximum_truth_usage_rate": 0.0
+  },
+  "claim_boundary": "Passing licenses only an observable veto for materially condition-sensitive relation claims under a frozen nuisance definition and residualizer. It does not identify causality, decide whether Z is confounder, mediator, moderator, collider, or construct signal, or establish human personality validity."
+}

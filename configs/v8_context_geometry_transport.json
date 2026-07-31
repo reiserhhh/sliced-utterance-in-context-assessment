@@ -1,0 +1,35 @@
+{
+  "version": "v8-cbq-context-transport-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "nuisance_config": "configs/v8_nuisance_filtration.json",
+  "matched_events_per_author_per_context": 8,
+  "information_budget_audit": [8, 12, 16, 24],
+  "background_draws": 499,
+  "pandora_context_pairs": [
+    ["AskReddit", "politics"],
+    ["AskReddit", "worldnews"],
+    ["AskReddit", "AskWomen"],
+    ["politics", "worldnews"],
+    ["politics", "AskWomen"],
+    ["worldnews", "AskWomen"]
+  ],
+  "x_context_pairs": [
+    ["china_korea_memory_context", "foundry_equipment_cycle"],
+    ["china_korea_memory_context", "ai_accelerator_readthrough"],
+    ["foundry_equipment_cycle", "ai_accelerator_readthrough"]
+  ],
+  "successful_rbf_scales": {
+    "pandora": [0.5],
+    "x_market": [0.5, 1.0]
+  },
+  "transport_spec": {
+    "d0_null_draws": 999,
+    "test_null_draws": 1999,
+    "bootstrap_draws": 999,
+    "nuisance_kernel_ridge": 0.1,
+    "minimum_held_authors": 24,
+    "normalized_cross_excess_floor": 0.25,
+    "seed": 20260828
+  },
+  "claim_boundary": "Opened-panel same-author cross-context technical transport audit. It reuses the D1/D2 panels opened by RGC and is exploratory rather than an independent replication. It tests whether opportunity-filtered author-relation correspondence survives between registered observed contexts. It cannot establish personality, emotion, cognition, causal situation response, construct invariance, cross-corpus coordinates, diagnosis, or clinical validity."
+}

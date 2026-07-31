@@ -1,0 +1,102 @@
+{
+  "version": "suica-m4-c33-opportunity-excitation-smoke-v1",
+  "estimand_id": "SUICA_M4_C33_OPPORTUNITY_EXCITATION_SMOKE_V1",
+  "seed": 618033987,
+  "alias_seed": 141421357,
+  "permutation_seed": 244948975,
+  "repetitions": 1,
+  "main_worlds": ["endogenous_creation_expansion"],
+  "null_worlds": ["linear_null_ecology"],
+  "base_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 24,
+    "reference_selection_points": 16,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "alias_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 24,
+    "reference_selection_points": 16,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 2,
+    "selection_occasions": 2,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "budget_grid": [
+    {"k": 1, "calibration": 2, "selection": 2},
+    {"k": 2, "calibration": 4, "selection": 4}
+  ],
+  "excitation_amplitude": 1.0,
+  "chart_candidates": [
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 8, "landmarks": 16}
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 8,
+  "minimum_evaluation_coverage": 0.0,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": -1.0,
+    "minimum_split_geometry": -1.0,
+    "minimum_trustworthiness": 0.0,
+    "minimum_continuity": 0.0,
+    "minimum_coverage": 0.0,
+    "maximum_author_leakage_auc": 1.0
+  },
+  "route_estimator": {
+    "ridge_grid": [0.005],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 8,
+    "complexity_penalty": 0.00001,
+    "alias_match_threshold": 0.999
+  },
+  "fisher_wiener": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001
+  },
+  "alias_audit": {
+    "selection_threshold": 0.02,
+    "creation_threshold": 0.02,
+    "gate_threshold": 0.02,
+    "return_threshold": 0.10,
+    "minimum_conditional_skill": 0.01,
+    "minimum_alias_oracle_skill": 0.0,
+    "minimum_alias_skill_gap": -1.0,
+    "maximum_alias_retained_ratio": 100.0,
+    "alias_bootstrap_repetitions": 50
+  },
+  "bootstrap_seed": 264575132,
+  "bootstrap_repetitions": 50,
+  "targets": {
+    "minimum_information_ratio": 1.0,
+    "minimum_endpoint_delta": -1.0,
+    "minimum_recovered_headroom": -100.0,
+    "minimum_endpoint_geometry": -1.0,
+    "minimum_positive_repetitions": 0,
+    "maximum_hazard_relative_degradation": 100.0,
+    "maximum_permutation_gain": 100.0,
+    "maximum_null_false_success_rate": 1.0,
+    "maximum_gauge_difference": 0.000001,
+    "maximum_common_shift_error": 1e-10,
+    "minimum_alias_information_loss_rate": 0.0
+  },
+  "output_directory": "results/_smoke_m4_opportunity_excitation_frontier",
+  "report_path": "reports/_smoke_m4_opportunity_excitation_frontier.md"
+}

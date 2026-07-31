@@ -1,0 +1,40 @@
+{
+  "version": "v8-nuisance-filtration-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "background_draws": 499,
+  "null_draws": 1999,
+  "bootstrap_draws": 999,
+  "local_length_block": 16,
+  "ridge_ratio": 0.1,
+  "content_directions": 8,
+  "seed": 20260825,
+  "tiers": {
+    "raw": [],
+    "opportunity": [
+      "opportunity"
+    ],
+    "opportunity_template": [
+      "opportunity",
+      "template"
+    ],
+    "declared_opportunity": [
+      "opportunity",
+      "template",
+      "collection"
+    ],
+    "aggressive_content_sensitivity": [
+      "opportunity",
+      "template",
+      "collection",
+      "content_proxy"
+    ]
+  },
+  "primary_tier": "declared_opportunity",
+  "claim_boundary": "Opened-panel sensitivity filtration. It asks whether corpus-local signed M concordance survives D0-frozen removal of declared opportunity, template, and collection predictors. The content-proxy tier is deliberately aggressive and cannot define noise. Survival cannot establish personality, emotion, cognition, causality, cross-language invariance, diagnosis, or clinical validity."
+}

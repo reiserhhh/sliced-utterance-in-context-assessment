@@ -1,0 +1,95 @@
+{
+  "version": "suica-m4-c32-fisher-wiener-confirmation-v1",
+  "estimand_id": "SUICA_M4_C32_FISHER_WIENER_CREATION_CONFIRMATION_V1",
+  "seed": 577215664,
+  "refusal_seed": 707106781,
+  "permutation_seed": 173205080,
+  "repetitions": 8,
+  "main_worlds": [
+    "endogenous_source_partition_matched",
+    "endogenous_creation_expansion",
+    "source_rotated_feedback",
+    "history_gated_ecology",
+    "selection_creation_compensation"
+  ],
+  "null_worlds": [
+    "linear_null_ecology",
+    "linear_exogenous_selection",
+    "fast_return_equal_marginal"
+  ],
+  "refusal_worlds": [
+    "condition_alias_ecology",
+    "hidden_opportunity_source_alias",
+    "evaluation_support_shift",
+    "author_leakage",
+    "response_leakage_circular"
+  ],
+  "base_spec": {
+    "reference_authors": 32,
+    "mechanism_authors": 16,
+    "reference_calibration_points": 96,
+    "reference_selection_points": 64,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 5,
+    "selection_occasions": 2,
+    "evaluation_occasions": 5,
+    "events": 120,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "chart_candidates": [
+    {"family": "linear_pca", "dimensions": 1, "neighbors": 10, "landmarks": 16},
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 10, "landmarks": 16},
+    {"family": "linear_pca", "dimensions": 3, "neighbors": 10, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 2, "neighbors": 8, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 2, "neighbors": 12, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 3, "neighbors": 12, "landmarks": 16},
+    {"family": "landmark_atlas", "dimensions": 2, "neighbors": 8, "landmarks": 16},
+    {"family": "landmark_atlas", "dimensions": 2, "neighbors": 12, "landmarks": 16}
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 12,
+  "minimum_evaluation_coverage": 0.80,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.65,
+    "minimum_split_geometry": 0.65,
+    "minimum_trustworthiness": 0.85,
+    "minimum_continuity": 0.85,
+    "minimum_coverage": 0.8,
+    "maximum_author_leakage_auc": 0.72
+  },
+  "route_estimator": {
+    "ridge_grid": [0.001, 0.005, 0.02],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 30,
+    "complexity_penalty": 0.00001,
+    "alias_match_threshold": 0.999
+  },
+  "fisher_wiener": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001
+  },
+  "bootstrap_seed": 223606797,
+  "bootstrap_repetitions": 2000,
+  "targets": {
+    "minimum_creation_headroom": 0.05,
+    "minimum_fisher_gain": 0.03,
+    "minimum_fisher_geometry": 0.70,
+    "minimum_recovered_headroom": 0.50,
+    "minimum_positive_repetitions": 6,
+    "maximum_hazard_relative_degradation": 0.02,
+    "maximum_permutation_gain": 0.01,
+    "maximum_null_false_success_rate": 0.05,
+    "maximum_gauge_difference": 0.000001,
+    "minimum_refusal_rate": 0.95,
+    "maximum_replay_difference": 1e-8,
+    "maximum_common_shift_error": 1e-10
+  },
+  "output_directory": "results/m4_fisher_wiener_creation_confirmation",
+  "report_path": "reports/SUICA_M4_FISHER_WIENER_CREATION_CONFIRMATION.md"
+}

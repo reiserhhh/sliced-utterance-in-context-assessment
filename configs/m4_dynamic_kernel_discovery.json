@@ -1,0 +1,40 @@
+{
+  "version": "suica-m4-a-dynamic-kernel-gate-order-v1",
+  "estimand_id": "SUICA_M4_A_DYNAMIC_KERNEL_GATE_ORDER_V1",
+  "seed": 223606797,
+  "repetitions": 8,
+  "worlds": [
+    "noncommuting_forward_gate",
+    "noncommuting_reverse_gate",
+    "commuting_null",
+    "gate_role_alias"
+  ],
+  "base_spec": {
+    "authors": 24,
+    "occasions": 6,
+    "events": 180,
+    "dimensions": 2,
+    "noise": 0.055
+  },
+  "estimator": {
+    "ridge": 0.03,
+    "minimum_calibration_events": 12
+  },
+  "audit": {
+    "minimum_order_margin": 0.02,
+    "minimum_resolvable_commutator": 0.04,
+    "maximum_commuting_commutator": 0.08
+  },
+  "discovery_targets": {
+    "minimum_order_accuracy": 0.80,
+    "minimum_commutator_geometry": 0.75,
+    "minimum_gate_parameter_spearman": 0.90,
+    "minimum_gate_direction_margin": 0.75,
+    "minimum_path_logscore_gain": 0.50,
+    "minimum_active_same_author_auc": 0.75,
+    "minimum_active_auc_increment_over_commuting": 0.15,
+    "maximum_commuting_order_margin_abs": 0.01,
+    "maximum_commuting_gate_margin_abs": 0.10,
+    "minimum_alias_refusal_rate": 0.95
+  }
+}

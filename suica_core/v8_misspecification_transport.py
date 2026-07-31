@@ -857,3 +857,4 @@ def main_component_recovery(
             ),
         })
     return rows
+

@@ -1,0 +1,116 @@
+{
+  "version": "suica-m4-c35-response-safe-eiv-chart-smoke-v1",
+  "estimand_id": "SUICA_M4_C35_RESPONSE_SAFE_EIV_CHART_SMOKE_V1",
+  "seed": 2718281828,
+  "permutation_seed": 1414213562,
+  "repetitions": 1,
+  "main_worlds": [
+    "endogenous_source_partition_matched",
+    "history_gated_ecology"
+  ],
+  "target_worlds": [
+    "endogenous_source_partition_matched",
+    "history_gated_ecology"
+  ],
+  "null_worlds": [
+    "linear_null_ecology"
+  ],
+  "refusal_worlds": [
+    "author_leakage",
+    "response_leakage_circular",
+    "evaluation_support_shift",
+    "topology_mismatch"
+  ],
+  "base_spec": {
+    "reference_authors": 8,
+    "mechanism_authors": 8,
+    "reference_calibration_points": 20,
+    "reference_selection_points": 20,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 8,
+    "selection_occasions": 4,
+    "evaluation_occasions": 2,
+    "events": 32,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "anchor_budget": {
+    "calibration": 4,
+    "selection": 2
+  },
+  "excitation_amplitude": 1.0,
+  "chart_candidates": [
+    {
+      "family": "linear_pca",
+      "dimensions": 2,
+      "neighbors": 8,
+      "landmarks": 16
+    },
+    {
+      "family": "linear_pca",
+      "dimensions": 3,
+      "neighbors": 8,
+      "landmarks": 16
+    }
+  ],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 6,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.0,
+    "minimum_split_geometry": 0.0,
+    "minimum_trustworthiness": 0.0,
+    "minimum_continuity": 0.0,
+    "minimum_coverage": 0.0,
+    "maximum_author_leakage_auc": 1.0
+  },
+  "eiv_chart": {
+    "permutation_repetitions": 19,
+    "permutation_quantile": 0.95,
+    "maximum_rank": 6,
+    "covariance_tolerance": 0.0000001,
+    "whitening_tolerance": 0.0000001,
+    "maximum_principal_angle_degrees": 90.0,
+    "minimum_coverage": 0.0
+  },
+  "route_estimator": {
+    "ridge_grid": [
+      0.005
+    ],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 8,
+    "complexity_penalty": 0.00001
+  },
+  "creation_estimator": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001
+  },
+  "bootstrap_seed": 3141592653,
+  "bootstrap_repetitions": 100,
+  "targets": {
+    "minimum_mean_recovered_headroom": -10.0,
+    "minimum_recovered_headroom_lcb": -10.0,
+    "minimum_positive_repetitions": 0,
+    "minimum_pca_advantage": -10.0,
+    "minimum_oracle_headroom": -10.0,
+    "minimum_target_world_recovery": -10.0,
+    "maximum_other_world_degradation": 10.0,
+    "maximum_hazard_relative_degradation": 10.0,
+    "maximum_shuffle_gain": 10.0,
+    "maximum_null_false_success_rate": 1.0,
+    "maximum_principal_angle_degrees": 90.0,
+    "minimum_coverage": 0.0,
+    "maximum_gauge_error": 0.000001,
+    "maximum_common_shift_error": 0.0000000001,
+    "maximum_response_hash_failures": 0,
+    "maximum_alias_false_recovery_rate": 0.0,
+    "minimum_forbidden_refusal_rate": 1.0,
+    "minimum_support_refusal_rate": 0.0
+  },
+  "output_directory": "results/m4_response_safe_eiv_chart_smoke",
+  "report_path": "reports/SUICA_M4_RESPONSE_SAFE_EIV_CHART_SMOKE.md"
+}

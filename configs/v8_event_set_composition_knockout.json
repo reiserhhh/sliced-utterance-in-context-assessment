@@ -1,0 +1,14 @@
+{
+  "version": "v8-event-set-composition-knockout-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "orbit_config": "configs/v8_permutation_orbit_phase.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "draws": 199,
+    "rank": 10,
+    "local_length_block": 16,
+    "reference_orbit_seed": 20260813,
+    "seed": 20260815
+  },
+  "claim_boundary": "Exploratory event-set composition knockout on opened PANDORA and Essays authors. Pseudo sets preserve corpus, D0/D1/D2 split, context, event position, every event-vector marginal, and local text-length rank while breaking natural within-author co-occurrence. A pass can attribute EPSG to natural event-set composition under this operator; it cannot identify personality, cognition, causality, universality, diagnosis, or clinical validity."
+}

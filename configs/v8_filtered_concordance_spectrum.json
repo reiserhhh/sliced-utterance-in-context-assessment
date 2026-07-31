@@ -1,0 +1,27 @@
+{
+  "version": "v8-filtered-concordance-spectrum-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "nuisance_config": "configs/v8_nuisance_filtration.json",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "background_draws": 499,
+  "gamma_by_corpus": {
+    "pandora": 0.1,
+    "essays": 0.1,
+    "x_market": 0.3
+  },
+  "spectrum_spec": {
+    "d0_null_draws": 999,
+    "test_null_draws": 1999,
+    "bootstrap_draws": 999,
+    "maximum_rank": 12,
+    "spectrum_quantile": 0.95,
+    "minimum_half_authors": 20,
+    "seed": 20260826
+  },
+  "claim_boundary": "Opened-panel filtered-spectrum falsification. It distinguishes significant full-dimensional residual concordance from a stable low-dimensional residual chart. It cannot establish a common cross-corpus factor, personality, emotion, cognition, causality, diagnosis, or clinical validity."
+}

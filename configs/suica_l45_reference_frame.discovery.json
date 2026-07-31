@@ -1,0 +1,68 @@
+{
+  "run_id": "l45_reference_frame_discovery_v1",
+  "estimand_id": "SUICA-L45-REFERENCE-FRAME-OPENED-DISCOVERY-V1",
+  "seed": 450701,
+  "repetitions": 30,
+  "worlds": [
+    "clean",
+    "composition_shift",
+    "reference_mixture",
+    "support_hole",
+    "aq_gauge_alias",
+    "choice_response_alias",
+    "person_occasion_alias",
+    "operator_kernel",
+    "correlated_replicate_shock",
+    "informative_precision"
+  ],
+  "noise_modes": [
+    "gaussian",
+    "heteroskedastic_t5"
+  ],
+  "spec": {
+    "reference_authors": 192,
+    "fit_authors": 96,
+    "test_authors": 64,
+    "facets": 16,
+    "occasions": 4,
+    "dimensions": 6,
+    "response_rank": 3,
+    "events_per_facet": 8,
+    "author_scale": 0.45,
+    "response_scale": 0.24,
+    "occasion_scale": 0.14,
+    "event_scale": 0.6,
+    "covariance_ridge": 0.0001
+  },
+  "candidate_ranks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "selection_folds": 4,
+  "soft_noninferiority_margin": 0.01,
+  "uncertainty_worlds": [
+    "clean",
+    "informative_precision"
+  ],
+  "uncertainty_repetitions": 10,
+  "uncertainty_draws": 24,
+  "tracked_authors": 16,
+  "summary_bootstrap_draws": 4000,
+  "gates": {
+    "minimum_clean_score_correlation_lower": 0.9,
+    "maximum_clean_normalized_error_upper": 0.25,
+    "minimum_composition_gain_lower": 0.1,
+    "minimum_reference_gain_lower": 0.4,
+    "maximum_truth_isolation_error": 1e-12,
+    "minimum_refusal_rate": 0.95,
+    "maximum_alias_identity_error": 1e-12,
+    "maximum_operator_transport_defect": 1e-10,
+    "minimum_uncertainty_coverage": 0.85,
+    "minimum_uncertainty_success_rate": 0.9,
+    "maximum_mdd_false_positive_upper": 0.15,
+    "minimum_two_mdd_power_lower": 0.8
+  },
+  "claim_boundary": "Opened synthetic discovery of the E45 reference-scoring edge only. Maximum licensed layer remains L4 until a separately sealed fresh-seed confirmation and a study-specific real-text G/D design."
+}

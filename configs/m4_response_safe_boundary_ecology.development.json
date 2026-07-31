@@ -1,0 +1,183 @@
+{
+  "version": "suica-m4-c35-r2c-boundary-ecology-development-v1",
+  "estimand_id": "SUICA_M4_C35_R2C_BOUNDARY_ECOLOGY_DEVELOPMENT_V1",
+  "phase": "development",
+  "protocol_path": "docs/SUICA_M4_C35_R2C_BOUNDARY_ECOLOGY_DEVELOPMENT_PROTOCOL.md",
+  "seed": 2622062650,
+  "repetitions": 2,
+  "main_worlds": [
+    "endogenous_source_partition_matched",
+    "endogenous_creation_expansion",
+    "source_rotated_feedback",
+    "history_gated_ecology",
+    "selection_creation_compensation"
+  ],
+  "eligible_worlds": [
+    "endogenous_creation_expansion",
+    "endogenous_source_partition_matched",
+    "source_rotated_feedback"
+  ],
+  "sentinel_worlds": [
+    "history_gated_ecology"
+  ],
+  "boundary_worlds": [
+    "selection_creation_compensation"
+  ],
+  "null_worlds": [
+    "linear_null_ecology"
+  ],
+  "null_repeats": {
+    "linear_null_ecology": 1
+  },
+  "coverage_target_counts": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "minimum_native_evaluation_count": 13,
+  "minimum_native_other_role_coverage": 0.875,
+  "coverage_threshold": 0.8,
+  "support_intervention_amplitude": 16.0,
+  "spec": {
+    "reference_authors": 32,
+    "mechanism_authors": 16,
+    "reference_calibration_points": 96,
+    "reference_selection_points": 64,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 40,
+    "selection_occasions": 16,
+    "evaluation_occasions": 5,
+    "events": 120,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "excitation_amplitude": 1.0,
+  "anchor_budget": {
+    "calibration": 5,
+    "selection": 2
+  },
+  "chart_candidates": [
+    {
+      "family": "linear_pca",
+      "dimensions": 1,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "linear_pca",
+      "dimensions": 2,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "linear_pca",
+      "dimensions": 3,
+      "neighbors": 10,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 2,
+      "neighbors": 8,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 2,
+      "neighbors": 12,
+      "landmarks": 16
+    },
+    {
+      "family": "global_isomap",
+      "dimensions": 3,
+      "neighbors": 12,
+      "landmarks": 16
+    },
+    {
+      "family": "landmark_atlas",
+      "dimensions": 2,
+      "neighbors": 8,
+      "landmarks": 16
+    },
+    {
+      "family": "landmark_atlas",
+      "dimensions": 2,
+      "neighbors": 12,
+      "landmarks": 16
+    }
+  ],
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.65,
+    "minimum_split_geometry": 0.65,
+    "minimum_trustworthiness": 0.85,
+    "minimum_continuity": 0.85,
+    "minimum_coverage": 0.8,
+    "maximum_author_leakage_auc": 0.72
+  },
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 12,
+  "rcca": {
+    "author_blocks": 4,
+    "support_permutation_repetitions": 199,
+    "support_permutation_quantile": 0.99,
+    "support_bootstrap_repetitions": 199,
+    "support_selection_probability": 0.8,
+    "minimum_support_stability_lcb": 0.75,
+    "minimum_consensus_eigenvalue": 0.6,
+    "minimum_consensus_eigengap_lcb": 0.0,
+    "minimum_native_consensus_affinity": 0.8,
+    "canonical_permutation_repetitions": 499,
+    "canonical_permutation_quantile": 0.99,
+    "canonical_bootstrap_repetitions": 199,
+    "null_trials": 25,
+    "gamma_grid": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "maximum_condition_number": 100.0,
+    "maximum_negative_mass": 0.1,
+    "maximum_asymmetric_mass": 0.3,
+    "minimum_projector_affinity": 0.8,
+    "minimum_heldout_cka": 0.9,
+    "minimum_coverage": 0.8,
+    "numerical_singular_tolerance": 0.00000001
+  },
+  "route_estimator": {
+    "ridge_grid": [
+      0.001,
+      0.005,
+      0.02
+    ],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 30,
+    "complexity_penalty": 0.00001
+  },
+  "creation_estimator": {
+    "hazard_model": "gate",
+    "epsilon_scale": 0.000001
+  },
+  "bootstrap_seed": 1622169719,
+  "bootstrap_repetitions": 1000,
+  "permutation_seed": 225417859,
+  "permutation_repetitions": 999,
+  "harm_threshold": -0.01,
+  "candidate_targets": {
+    "minimum_policy_value_lcb": 0.0,
+    "minimum_routing_value_lcb": 0.0,
+    "minimum_harm_auc_lcb": 0.65,
+    "minimum_oracle_error_r2": 0.1,
+    "maximum_oracle_error_permutation_p": 0.01
+  },
+  "r1_decision_path": "results/m4_response_safe_rcca_chart_confirmation/decision.json",
+  "chart_bundle_directory": "results/m4_response_safe_boundary_ecology_development_bundles",
+  "output_directory": "results/m4_response_safe_boundary_ecology_development",
+  "report_path": "reports/SUICA_M4_RESPONSE_SAFE_BOUNDARY_ECOLOGY_DEVELOPMENT.md"
+}

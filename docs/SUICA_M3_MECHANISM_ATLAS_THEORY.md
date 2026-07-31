@@ -208,10 +208,11 @@ discovery.
 
 ## 8. Formal discovery object
 
-The current finite discovery object is:
+The current finite discovery object is written in the 2026-07-30 foundation
+notation as an anonymous L4 object:
 
 \[
-\mathfrak M_u^{\mathrm{disc}}
+\mathfrak A_u^{\mathrm{disc}}
 =
 \Delta_{P_0}\left[
 D_u^\Omega
@@ -273,3 +274,180 @@ X_t-A_1X_{t-1}-A_2X_{t-2}-A_3X_{t-3}
 These are finite projections chosen for discovery. They must not be renamed
 as a complete distribution, general Koopman operator, full interaction
 mechanism, or general path signature until cross-family confirmation passes.
+
+## 9. M4-A composition upgrade
+
+The atlas is no longer the terminal mesoscopic object. The 2026-07-31 M4-A
+development adds an author mechanism-composition signature:
+
+\[
+\mathcal A_u
+\longrightarrow
+\Lambda_u
+=
+\left(
+\{d_u^\otimes(A)\},
+\{d_u^{\mathrm{obs}}(A)-d_u^\otimes(A)\},
+\{G_{g\rightarrow i}\},
+\{\Omega_{ij}\}
+\right).
+\]
+
+Finite synthetic discovery separated genuine structural synergy from
+dependence-induced redundancy and suppression, recovered pair/triple
+hyperedges, detected directional gating, and refused perfect aliases. This
+closes the original atlas attack “composite decomposition” only for the
+registered order-three multilinear world family. General dependent-input
+HOFD, human-text mechanism discovery, and completeness remain open. A
+designed dynamic extension additionally recovered noncommuting
+condition/history transition order, commutator geometry, and temporal gate
+strength, but its path-score gain combines marginal-kernel, order, and gate
+improvements. These results license M4-B development, not a causal or
+psychological interpretation. See
+`docs/SUICA_M4_MECHANISM_COMPOSITION_THEORY.md`.
+
+M4-B subsequently converted opportunity from a fixed precursor into an
+endogenous ecology. In finite matched-marginal worlds, the system separated
+conditional selection from expression-driven opportunity creation, recovered
+feedback-loop geometry, return/recovery dynamics, and observable history
+gates, and refused hidden source aliases. The full loop matrix survived; its
+spectral-radius author ranking did not. The validated extension is therefore
+an ecology operator family rather than a scalar stability trait. See
+`docs/SUICA_M4_ENDOGENOUS_OPPORTUNITY_ECOLOGY_THEORY.md`.
+
+M4-C then removed planted condition coordinates for a bounded response edge.
+It learned anonymous condition geometry from pre-response reference panels,
+transported relation geometry across two numeric sources, and preserved a
+frozen conditional-response surface while refusing author/response leakage,
+no-manifold inputs, and noninjective response aliases. The licensed object is
+a response-safe condition relation atlas, not a topic ontology or named
+factor. M4-C.2 then recovered atomic choice, creation, return, and recovery
+actions under the discovered chart but failed its composite loop and
+repetition gates. Thus the complete M4-B ecology is not yet transport-closed.
+M4-C.3 audits physical-edge composition; M4-D remains blocked. See
+`docs/SUICA_M4_CONDITION_MANIFOLD_THEORY.md`,
+`docs/SUICA_M4_CHART_COVARIANT_ECOLOGY_THEORY.md`, and
+`docs/SUICA_M4_PHYSICAL_EDGE_COMPOSITION_THEORY.md`.
+
+M4-C.3.1 subsequently repaired the statistical-object mismatch: a centered
+author-relation Möbius budget predicted loop loss with pooled Spearman `.9868`
+and allocated about 80% of symmetric loss to creation. A creation-only
+intervention then rejected calibration-only isotropic RBF remapping: the best
+arm reduced loop geometry from `.6702` to `.5316` despite `.2497` oracle
+creation headroom. This isolates the next question to author-specific
+derivative estimation, not further unsupervised chart smoothing. See
+`docs/SUICA_M4_RELATIONAL_ERROR_BUDGET_THEORY.md` and
+`docs/SUICA_M4_CREATION_ESTIMATOR_INTERVENTION_THEORY.md`.
+
+The subsequent cross-fitted Fisher-Wiener intervention improved loop geometry
+from `.7198` to `.7699` while satisfying predictive-risk, permutation, null,
+and gauge controls, but recovered only 25.4% of oracle creation headroom and
+passed 5/8 repetitions. This supports a partial author-derivative estimation
+noise mechanism while refusing closure at the current opportunity budget.
+The subsequent opportunity-excitation frontier increased minimum Fisher
+information `13.04x`, produced a positive geometry dose slope (LCB `.0222`),
+and raised the endpoint by `.0802` (LCB `.0611`). Yet it recovered only 44.0%
+of oracle headroom and again qualified in 5/8 repetitions. Passive opportunity
+contributed `.0611` of the endpoint and orthogonal excitation another `.0192`;
+geometry saturated by `K=4`, while world-specific headroom recovery ranged
+from negative to `.810`. Information is therefore a real mechanism variable
+but not a sufficient explanation. Additional `K`, chart-kernel replacement,
+and embedding replacement are stopped; the next M4-C object must model
+declared creation/history heterogeneity without oracle access.
+
+M4-C.3.4 tested that heterogeneous-observation explanation without changing
+the gate-zero direct creation estimand. A complete `C/S/P` attribution cube
+separated truth-open condition chart, target-aligned history/source
+likelihood, and cross-author pooling. The full cube recovered only `.3405` of
+oracle headroom. The proposed observation-law factor was negative in both
+target worlds on every repetition (mean `-.0844`, clustered LCB `-.1581`);
+pooling contributed only `.0090` by Shapley allocation. In contrast, the
+truth-open chart factor contributed `.0727`, led the next factor by a
+clustered LCB of `.0396`, and alone recovered `.7854` of headroom. This
+rejects omitted history/source likelihood as the dominant residual account
+and localizes the remaining recoverable error to the condition chart.
+
+That localization is diagnostic, not a chart solution. The positive chart
+cell reads truth, and alias information loss was detected in only `7/8`
+repetitions. The next admissible object is therefore a response-safe,
+truth-blind chart estimator evaluated against the frozen oracle attribution
+ceiling. It must not be confused with the previously rejected shared
+isotropic RBF smoothing route. M4-C.2 remains open and M4-D remains blocked.
+
+M4-C.3.5-R1 identified that response-safe chart with a replicated cross-source
+CCA quotient. R2B then tested downstream replacement under a physical
+Phase-A/Phase-B seal. The registered conditional effect was strong:
+eligible gain `.1227` (LCB `.0934`), oracle-headroom recovery `.8146` (LCB
+`.6798`), and accessible efficiency `.9874` (LCB `.9801`). The effect beat
+variance- and repeatability-matched equal-rank controls, while history,
+compensation, null, alias, source, gauge, CKA-permutation, and hazard controls
+passed.
+
+R2B nevertheless remains partial because the native zero-refusal gate failed:
+two of 160 cells fell outside the frozen calibration support, including one
+eligible main cell. This changes the mathematical object. The chart is not a
+total replacement map; it requires an explicit applicability description.
+R2C therefore evaluated the routed operator
+
+\[
+\Pi = A R + (1-A)B0
+\]
+
+on every planned cell, where \(A\) is determined before response opening.
+Deleting refused cells or reporting only accepted-stratum gains would change
+the target population and is not admissible.
+
+The first fresh R2C development had `16/16` accepted cells and thus identified
+implementation but not routing utility. A paired boundary-ecology experiment
+then held response truth fixed while moving evaluation points across the
+frozen scalar support boundary. It falsified the implied monotonicity
+
+\[
+C_i\downarrow\quad\Longrightarrow\quad
+d_i=\Gamma_{R,i}-\Gamma_{B0,i}\downarrow.
+\]
+
+Fallback lost `.0528` relative to always using `R`, refused cells retained
+mean forced-`R` gain `.0880`, and scalar harm AUC was only `.554`. The same
+coverage value represented beneficial source-partition extrapolation and
+harmful source-rotation mismatch. Hence scalar coverage is a support audit,
+not a sufficient statistic for relative chart utility.
+
+The admissible next object is direction-sensitive:
+
+\[
+d_i=f_w(q_i)+\varepsilon_i,\qquad
+q_i=\Phi_{\mathrm{pre}}(X_i),
+\]
+
+\[
+\mathcal D_R=
+\left\{
+q:
+E[d\mid q]\ge-\delta,\;
+P(d<-\delta\mid q)\le\alpha
+\right\}.
+\]
+
+The initial 24-component \(q\) pilot improved cross-world harm AUC only to
+`.588`, with negative OOF \(R^2\) and negative routing value. It is therefore
+unresolved. Before a larger study, departure direction must be independently
+varied at fixed coverage; otherwise support amount and support geometry remain
+confounded.
+
+That fixed-coverage experiment is now complete. It held support at `12/16` or
+`13/16` and crossed radial-dispersed, radial-concentrated, tangential, and
+source-asymmetric departures across eight repetitions. All 72 null gains and
+all replay errors were zero, but `Q` failed both transport views: LOWO harm
+AUC `.533` (LCB `.464`), gain \(R^2=-1.616\), routing value `-.0243` (LCB
+`-.0417`); LORO AUC `.512` (LCB `.477`), \(R^2=-.195\), routing value
+`-.0134` (LCB `-.0314`). The historical threshold lost `.0503` relative to
+always using `R`, while the scalar learner routed every cell to `R`.
+
+This closes the current applicability search negatively. The observables
+describe support geometry but do not identify relative chart utility. The
+admissible object is therefore a design-level domain license, not a learned
+cell gate: prospectively support `R` inside a declared world/study class and
+otherwise expose `B0/R` sensitivity or refuse. A new gate requires a genuinely
+new observable mechanism and fresh data, not threshold or feature retuning on
+this panel. M4-C.2 remains open and M4-D remains blocked.

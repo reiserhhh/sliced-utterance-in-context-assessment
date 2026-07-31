@@ -1,0 +1,14 @@
+{
+  "version": "v8-orientation-overlap-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "calibration_draws": 99,
+    "bootstrap_draws": 199,
+    "rotation_draws": 499,
+    "maximum_rank": 48,
+    "minimum_rank": 2,
+    "seed": 20260810
+  },
+  "claim_boundary": "Exploratory orientation-only audit after spectral-order refusal. Matched-spectrum HS is primary, root fidelity is secondary, principal-angle affinity and exact intersection are diagnostics. Current D2 is already opened, so no result is independent confirmation or a psychological construct."
+}

@@ -1,0 +1,255 @@
+{
+  "schema_version": "suica.foundation.study.v1",
+  "study_id": "DECLARE_STUDY_ID",
+  "methodology_role": "foundation_research",
+  "stage": "opened_real_text_development",
+  "study_question": {
+    "mode": "falsify_open_assumption",
+    "question": "DECLARE_ONE_ARROW_OR_OPEN_ASSUMPTION_TO_TEST",
+    "targeted_openings": [
+      "DECLARE_OPENING_ID"
+    ]
+  },
+  "claim": {
+    "source_layer": "L2_text_record",
+    "target_layer": "L4_technical_object",
+    "target_estimand": "DECLARE_TARGET_FUNCTIONAL",
+    "claim_statement": "DECLARE_MAXIMUM_ALLOWED_CLAIM",
+    "evidence_level": "E1_opened_development",
+    "edge_licenses": [
+      {
+        "edge": "E23_representation",
+        "status": "supported",
+        "assumptions": [
+          "DECLARE_REPRESENTATION_ASSUMPTION"
+        ],
+        "evidence_or_test": "DECLARE_REPRESENTATION_TEST",
+        "refusal_rule": "DECLARE_REPRESENTATION_REFUSAL"
+      },
+      {
+        "edge": "E34_estimation",
+        "status": "bounded_open",
+        "assumptions": [
+          "DECLARE_ESTIMATOR_ASSUMPTION"
+        ],
+        "evidence_or_test": "DECLARE_THE_TEST_THAT_TARGETS_THIS_OPENING",
+        "refusal_rule": "DECLARE_ESTIMATOR_REFUSAL",
+        "opening_id": "DECLARE_OPENING_ID"
+      }
+    ],
+    "personality_claim": false,
+    "individual_score_claim": false,
+    "decision_claim": false,
+    "forensic_claim": false,
+    "forbidden_interpretations": [
+      "personality",
+      "diagnosis",
+      "clinical or forensic decision"
+    ]
+  },
+  "generalization_universe": {
+    "target_population": {
+      "status": "declared",
+      "definition": "DECLARE_TARGET_OR_SAMPLED_POPULATION",
+      "sampling_rule": "DECLARE_SAMPLING_RULE",
+      "scope_limit": "DECLARE_POPULATION_SCOPE_LIMIT",
+      "refusal_consequence": "DECLARE_POPULATION_REFUSAL"
+    },
+    "reference_population": {
+      "status": "not_applicable",
+      "definition": "No L5 score is requested.",
+      "sampling_rule": "Not applicable at L4.",
+      "scope_limit": "No normed score.",
+      "refusal_consequence": "Refuse individual or norm-referenced interpretation."
+    },
+    "context": {
+      "status": "declared",
+      "definition": "DECLARE_CONTEXT_UNIVERSE",
+      "sampling_rule": "DECLARE_CONTEXT_SAMPLING",
+      "scope_limit": "DECLARE_CONTEXT_LIMIT",
+      "refusal_consequence": "DECLARE_CONTEXT_REFUSAL"
+    },
+    "opportunity": {
+      "status": "declared",
+      "definition": "DECLARE_OPPORTUNITY_UNIVERSE",
+      "sampling_rule": "DECLARE_OPPORTUNITY_SAMPLING",
+      "scope_limit": "DECLARE_OPPORTUNITY_LIMIT",
+      "refusal_consequence": "DECLARE_OPPORTUNITY_REFUSAL"
+    },
+    "occasion_time": {
+      "status": "declared",
+      "definition": "DECLARE_OCCASION_AND_HORIZON",
+      "sampling_rule": "DECLARE_TIME_SAMPLING",
+      "scope_limit": "DECLARE_TIME_LIMIT",
+      "refusal_consequence": "DECLARE_TIME_REFUSAL"
+    },
+    "operator": {
+      "status": "declared",
+      "definition": "DECLARE_OPERATOR_VERSION",
+      "sampling_rule": "DECLARE_OPERATOR_RULE",
+      "scope_limit": "DECLARE_OPERATOR_LIMIT",
+      "refusal_consequence": "DECLARE_OPERATOR_REFUSAL"
+    },
+    "language_culture": {
+      "status": "declared",
+      "definition": "DECLARE_LANGUAGE_CULTURE_SCOPE",
+      "sampling_rule": "DECLARE_LANGUAGE_CULTURE_SAMPLING",
+      "scope_limit": "DECLARE_LANGUAGE_CULTURE_LIMIT",
+      "refusal_consequence": "DECLARE_LANGUAGE_CULTURE_REFUSAL"
+    },
+    "interaction_partner": {
+      "status": "not_applicable",
+      "definition": "DECLARE_WHY_NO_INTERACTION_EXISTS",
+      "sampling_rule": "Not applicable.",
+      "scope_limit": "No interaction claim.",
+      "refusal_consequence": "Refuse interaction interpretation."
+    },
+    "administration": {
+      "status": "declared",
+      "definition": "DECLARE_COLLECTION_OR_ADMINISTRATION",
+      "sampling_rule": "DECLARE_ADMINISTRATION_RULE",
+      "scope_limit": "DECLARE_ADMINISTRATION_LIMIT",
+      "refusal_consequence": "DECLARE_ADMINISTRATION_REFUSAL"
+    },
+    "response_process": {
+      "status": "not_applicable",
+      "definition": "The claim begins at L2; DECLARE_RESPONSE_PROCESS_BOUNDARY.",
+      "sampling_rule": "Not modeled for this L2 claim.",
+      "scope_limit": "No human-production inference.",
+      "refusal_consequence": "Refuse intention, effort, disclosure, and strategy claims."
+    }
+  },
+  "observation_design": {
+    "event_unit": "DECLARE_EVENT_UNIT",
+    "design_mode": "free",
+    "context_role": "both_separated",
+    "choice_channel": "DECLARE_CHOICE_CHANNEL_OR_EXPLICITLY_SCOPE_IT_OUT",
+    "response_channel": "DECLARE_CONDITIONAL_RESPONSE_CHANNEL",
+    "event_count_rule": "DECLARE_EVENT_COUNT_RULE",
+    "event_composition_rule": "DECLARE_EVENT_COMPOSITION_RULE",
+    "repeated_opportunity_rule": "DECLARE_REPEATED_OPPORTUNITY_RULE",
+    "missingness_selection_rule": "DECLARE_MISSINGNESS_AND_SELF_SELECTION_RULE",
+    "text_retention_policy": "DECLARE_RAW_TEXT_AND_TRANSFORMATION_POLICY",
+    "assisted_authorship_policy": "DECLARE_AI_QUOTE_AND_COAUTHOR_POLICY"
+  },
+  "transformation_chain": {
+    "raw_record_version": "DECLARE_RAW_RECORD_VERSION",
+    "representation_operator": "DECLARE_ENCODER_TOKENIZER_VERSION",
+    "slice_operator": "DECLARE_SLICE_OPERATOR",
+    "fitted_components": [
+      "DECLARE_EACH_FITTED_COMPONENT"
+    ],
+    "fit_apply_separation": "DECLARE_FIT_APPLY_SPLIT",
+    "reference_operator": "Not applicable at L4.",
+    "deterministic_scoring": true,
+    "llm_role": "absent",
+    "provenance_rule": "DECLARE_HASH_VERSION_AND_INVENTORY_RULE"
+  },
+  "identification": {
+    "target_functional": "DECLARE_TARGET_FUNCTIONAL",
+    "identification_set": "DECLARE_OBSERVATIONALLY_EQUIVALENT_WORLDS",
+    "equivalence_class": "DECLARE_WHAT_IS_AND_IS_NOT_POINT_IDENTIFIED",
+    "assumptions": [
+      "DECLARE_IDENTIFICATION_ASSUMPTION"
+    ],
+    "alias_or_counterworlds": [
+      "DECLARE_AT_LEAST_TWO_ALTERNATIVE_WORLDS",
+      "DECLARE_NULL_OR_KNOCKOUT_WORLD"
+    ],
+    "support_condition": "DECLARE_SUPPORT_POSITIVITY_CONDITION",
+    "dependence_model": "DECLARE_WITHIN_AUTHOR_AND_BETWEEN_AUTHOR_DEPENDENCE",
+    "residual_semantics": "unresolved_mixture",
+    "residual_claim": "Residual is not noise or personality without separate identification.",
+    "nonidentifiability_action": "refusal",
+    "refusal_rules": [
+      "DECLARE_NONIDENTIFIABILITY_REFUSAL"
+    ],
+    "no_direct_personality_inference": true
+  },
+  "error_theory": {
+    "facets": [
+      "person",
+      "context",
+      "opportunity",
+      "occasion_time",
+      "operator_method",
+      "event_sampling",
+      "technical_replication"
+    ],
+    "dependence_assumptions": [
+      "DECLARE_RESAMPLING_UNIT_AND_DEPENDENCE"
+    ],
+    "variance_or_relation_decomposition": "DECLARE_ERROR_DECOMPOSITION",
+    "event_count_and_composition_separated": true,
+    "uncertainty_target": "DECLARE_UNCERTAINTY_ESTIMAND",
+    "uncertainty_method": "DECLARE_UNCERTAINTY_METHOD",
+    "reference_uncertainty": "Not applicable below L5.",
+    "individual_sem": "Not applicable without an individual score.",
+    "minimum_detectable_difference": "Not applicable without a change score.",
+    "decision_consistency": "Not applicable without a decision."
+  },
+  "validation_route": {
+    "development_confirmation_separation": "DECLARE_DEVELOPMENT_CONFIRMATION_SEPARATION",
+    "fresh_confirmation_rule": "DECLARE_FRESH_CONFIRMATION_RULE",
+    "negative_controls": [
+      "DECLARE_NEGATIVE_CONTROL_1",
+      "DECLARE_NEGATIVE_CONTROL_2"
+    ],
+    "falsification_worlds": [
+      "DECLARE_FALSIFICATION_WORLD"
+    ],
+    "invariance_facets": [
+      "DECLARE_INVARIANCE_FACET"
+    ],
+    "external_construct_evidence": "Not applicable below L6.",
+    "field_replication": "DECLARE_FIELD_REPLICATION_BOUNDARY",
+    "information_budget_plan": "DECLARE_COUNT_COMPOSITION_AND_POWER_PLAN",
+    "stop_rule": "DECLARE_HARD_STOP_AND_REFUSAL_RULE"
+  },
+  "interpretation_boundary": {
+    "licensed_labels": [
+      "anonymous technical object"
+    ],
+    "prohibited_labels": [
+      "personality",
+      "trait",
+      "state",
+      "diagnosis",
+      "clinical or forensic risk"
+    ],
+    "construct_naming_allowed": false,
+    "person_score_allowed": false,
+    "decision_allowed": false,
+    "claim_boundary": "DECLARE_EXACT_MAXIMUM_INTERPRETATION"
+  },
+  "application_overlay": {
+    "active": false,
+    "intended_use": "Methodological foundation research only.",
+    "decisions_enabled": false,
+    "consequences_analysis": "Not applicable; no decision enabled.",
+    "fairness_analysis": "Not applicable at this layer; preserve as a required future interface.",
+    "human_authority": "Not applicable; no person-level output."
+  },
+  "forensic_overlay": {
+    "active": false,
+    "jurisdiction": "Not applicable.",
+    "legal_question": "Not applicable.",
+    "response_style_model": "Not applicable.",
+    "collateral_sources": "Not applicable.",
+    "field_reliability": "Not applicable.",
+    "outcome_definition": "Not applicable.",
+    "base_rate_and_calibration": "Not applicable.",
+    "prediction_horizon": "Not applicable.",
+    "false_positive_negative_costs": "Not applicable.",
+    "contestability": "Not applicable.",
+    "chain_of_custody": "Not applicable."
+  },
+  "governance": {
+    "protocol_path": "DECLARE_PROTOCOL_PATH",
+    "preregistered": false,
+    "operator_frozen": false,
+    "builder_auditor_separation": true,
+    "provenance_complete": false,
+    "mutation_policy": "DECLARE_VERSIONING_AND_NO_OVERWRITE_POLICY"
+  }
+}

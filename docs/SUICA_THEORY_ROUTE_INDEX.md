@@ -1,0 +1,747 @@
+# SUICA Development and Theory Route Index
+
+Date: 2026-07-30  
+Status: active development map; not a release seal or a scientific promotion
+
+## 1. Purpose
+
+This file is the single navigation entry for how SUICA was developed, what
+mathematical object each stage added, how those objects now connect, and which
+mechanisms remain to be invented.
+
+SUICA has three different maps. They must not be confused:
+
+1. the **development map** records how the method acquired new objects;
+2. the **mechanism map** records how text events may generate author and
+   population structure; and
+3. the **evidence constitution** states what may be claimed about an object.
+
+The first two maps drive current research. The third is a supporting
+constraint, not the development roadmap.
+
+Recommended reading order:
+
+| Priority | Question | Primary documents |
+| --- | --- | --- |
+| 0 | What is the complete current system and its claim boundary? | [Unified Theory System V8](SUICA_UNIFIED_THEORY_SYSTEM_V8.md) |
+| 1 | How did the method evolve? | This index, [Rind Theory v3](THEORY.md), [Rind Theory v4](THEORY_V4.md), [Theory V6](THEORY_V6.md) |
+| 2 | What is the current mathematical object? | [V8 Conditional Response Geometry](V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md), [V8 Mathematical Route](V8_MATHEMATICAL_RESEARCH_ROUTE.md) |
+| 3 | What micro mechanisms can generate it? | [M3 Foundation](SUICA_M3_MICRO_MESO_MACRO_FOUNDATION.md), [M3 Mechanism Atlas](SUICA_M3_MECHANISM_ATLAS_THEORY.md) |
+| 4 | Which objects survived each experiment? | [Claims Ledger](CLAIMS_LEDGER.md), [V7 Discovery Ledger](V7_DISCOVERY_LEDGER.md), named reports |
+| 5 | What are the inference boundaries? | [Foundational Closure Standard](SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md), [Foundation Gap Ledger](SUICA_FOUNDATION_GAP_LEDGER.md) |
+
+## 2. Development lineage
+
+The versions are not a succession of failed systems. Each stage discovered a
+larger object and retained the useful part of the earlier one.
+
+| Stage | New object or mechanism | Problem it solved | What remains in the current system | Source status and links |
+| --- | --- | --- | --- | --- |
+| MCD origin | Condition-relative deviation \(x_{u,c}-E[X\mid c]\) | How to compare authors after locating topic/situation regions | Common-condition comparison and population-relative position | Historical source incomplete; [MCD-style node experiment](../scripts/run_suica_p2_condition_centering_v2.py), [later worked example](WORKED_EXAMPLE_MANUAL.md), and [claims reconstruction](CLAIMS_LEDGER.md) are secondary sources |
+| H-MCD / V-HMCD bridge | Token slices, recursive clusters, local blocks, author aggregation | How to turn long text into many item-like observations and return local structure to an author profile | Slicing, recursive local structure, and author position in a reference population | Historical theory source incomplete; [surviving recursive implementation](../suica_core/suica.py), [slice preparation](../scripts/prepare_suica_v2_phase2_slices.py), and [later token-slice compatibility audit](V6_LINEAGE_TOKEN_SLICE_COMPATIBILITY_PROTOCOL.md) are secondary reconstruction sources |
+| SUICA V3/V4 rind theory | Choice \(\pi_u\), expression base \(f_u\), condition reaction \(\gamma_{u,c}\), distinctive residual | Why subtracting topic/situation also removes stable author information | Choice/base/react channels; free and fixed conditions expose different information | [Theory v3](THEORY.md), [Theory v4](THEORY_V4.md), [Lineage synthesis](../reports/V6_LINEAGE_COMPATIBILITY_SYNTHESIS.md) |
+| V6 path theory | Path \(w_k=p+k s+g_k\), response operator \(B_u\), nonlinear conditional law \(\Pi_u(dy\mid h)\) | How to represent movement, memory, switching, and position information lost by a mean | Path is a first-class object; dynamics are not merely static residuals | [Theory V6](THEORY_V6.md), [Measurement Objects](V6_MEASUREMENT_OBJECTS_FORMAL.md), [Nonlinear Path Objects](V6_NONLINEAR_PATH_OBJECTS.md) |
+| V7 operator geometry | Parallel observation operators \(\Phi_j\), shared/private subspaces, relative geometry bundle | Why no single slice or factor chart remains optimal across views | Multiple slices are parallel measurement planes; stable author information may be high-dimensional and axis-free | [Operator-indexed Multiview](V7_OPERATOR_INDEXED_MULTIVIEW_V71.md), [Geometry Object](V7_GEOMETRY_OBJECT.md), [Psychometric Projection](V7_PSYCHOMETRIC_PROJECTION.md) |
+| V8 conditional geometry | Response field \(G_u(z)\), stable position \(a_u\), response operator \([B_u]\), response sets, incidence, junctions, routing | How an author changes with condition rather than occupying one fixed coordinate | Author structure is a conditional field, path operator, and relation geometry | [Conditional Response Geometry](V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md), [Mathematical Route](V8_MATHEMATICAL_RESEARCH_ROUTE.md) |
+| V8/M3 mechanism atlas | Event kernel and mechanism tuple \((\mu_u,\mathcal R_u,\mathcal K_u,\mathcal C_u,\mathcal P_u)\) | What microscopic processes can create the mesoscopic author geometry | Distribution, response, temporal, interaction, and higher-order path mechanisms | [M3 Foundation](SUICA_M3_MICRO_MESO_MACRO_FOUNDATION.md), [Mechanism Atlas](SUICA_M3_MECHANISM_ATLAS_THEORY.md), [Seam Closure](V8_MICRO_MESO_MACRO_SEAM_CLOSURE.md) |
+| Foundation constitution | Typed path from process to technical object, measurement, construct, and use | How to prevent one object from silently being renamed as another | A supporting type system and claim boundary for every new mechanism | [Closure Standard](SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md), [Gap Ledger](SUICA_FOUNDATION_GAP_LEDGER.md) |
+
+The MCD through H-MCD/V-HMCD phases predate the independent repository and
+have no single canonical theory file here. The linked implementations and
+later audits are secondary reconstruction sources, not substitutes for the
+missing historical theory records. A future archival task should consolidate
+those phases without rewriting their historical outcomes.
+
+The cumulative development is:
+
+```text
+condition-relative deviation
+  -> recursive token-slice observations
+  -> choice/base/react channels
+  -> static, dynamic, hybrid, and residual path objects
+  -> parallel observation operators and relative geometry
+  -> condition-indexed author response fields
+  -> micro mechanism atlas
+  -> author-to-relation and population geometry
+```
+
+## 3. What changed at each conceptual transition
+
+| Earlier formulation | Discovery that forced the transition | Current formulation |
+| --- | --- | --- |
+| Context is noise to remove | Condition centering removed stable author information because people select their contexts | Context is opportunity, selection, and response support |
+| One best factorization or slice | Factor axes and slicing advantages changed across samples/operators while author relations remained | Every slice/representation is an indexed observation operator |
+| Author is a vector of mean scores | Means discarded order, transition, switching, and condition response | Author is a field/operator plus static position and unresolved structure |
+| Dynamics are linear `flow/gust` factors | Shared dynamic axes were unstable and nonlinear paths can agree on low-order moments | Dynamics are conditional laws, generators, spectra, currents, and path functionals |
+| Residual is removable error | Residual retained distributed author structure and changed across resolution/operator | Residual is a mixture and a source of candidate mechanisms |
+| Population factors define the person | Stable relative geometry survived without stable global axes | Person structure may be a high-dimensional configuration or equivalence class |
+| Individual objects and group relations share one score | V8 relation experiments separated author vectors, dyadic relations, and population fields | `V`, `R`, and `P` are different output types with different mathematics |
+| V8 and M3 are sequential products | V8 describes mesoscopic/macro geometry while M3 explains candidate micro generators | M3 is the microscopic engine inside the V8 architecture |
+
+These are transformations, not deletions. The original question often
+survives after its first estimator is replaced.
+
+## 4. Current object-generation path
+
+Let \(\mathcal N_u^\ast\) denote the unobserved human event process and
+\(\mathcal D_u\) the captured record. Slice rule \(\lambda\) and
+representation \(v\) produce an observed event measure, not the latent
+process:
+
+\[
+\mathcal N_u^\ast
+\xrightarrow{\mathsf P_{\mathcal D}}
+\mathcal D_u
+\xrightarrow{S_\lambda,R_v}
+\widehat{\mathcal N}_{u,\mathrm{obs}}^{(v,\lambda)}
+\xrightarrow{\mathcal C_m}
+\widehat{\mathcal A}_u^{(m)}
+\xrightarrow{\mathscr L_s}
+\mathcal J_s
+\xrightarrow{\Gamma}
+(\mathcal J_W,\mathcal J_B,\mathcal J_T,H,\kappa)
+\longrightarrow
+\mathcal T_{\mathrm{population}}.
+\]
+
+Here \(\mathcal C_m\) is a mechanism-specific coarse-graining,
+\(\mathscr L_s\) a context-indexed relational lift, and \(\Gamma\) the
+context-to-macro aggregation operator.
+
+The latent process may be written conceptually as:
+
+\[
+\mathcal N_u^\ast
+=
+\sum_{o,t}
+\delta_{(o,t,O^\ast_{uot},C^\ast_{uot},S_{uo},\Xi^\ast_{uot})}.
+\]
+
+The observable measure contains only captured counterparts:
+
+\[
+\widehat{\mathcal N}_{u,\mathrm{obs}}^{(v,\lambda)}
+=
+\sum_j
+\delta_{(\widetilde t_j,\widetilde O_j,\widetilde C_j,
+\widetilde\Xi_j^{(v,\lambda)},\mathrm{provenance}_j)}.
+\]
+
+Latent state \(S\), uncaptured opportunities, intentions, and the complete
+human process are not produced by tokenization or embedding.
+
+The current mechanism atlas is:
+
+\[
+\mathcal A_u
+=
+\left(
+\pi_u,\,
+\mu_u,\,
+\mathcal R_u,\,
+\mathcal K_u,\,
+\mathcal C_u,\,
+\mathcal P_u
+\right),
+\]
+
+where:
+
+- \(\pi_u\) is opportunity/condition choice;
+- \(\mu_u\) is the distribution of expressed states;
+- \(\mathcal R_u\) is conditional response;
+- \(\mathcal K_u\) is temporal evolution;
+- \(\mathcal C_u\) is interactional coupling; and
+- \(\mathcal P_u\) is higher-order path information.
+
+Within a declared condition measure \(Q_0\), conditional response can be
+projected as:
+
+\[
+G_u(z)=a_u+B_u\varphi(z)+h_u(z).
+\]
+
+Here \(a_u\) is stable position, \(B_u\) a response operator, and \(h_u\)
+unresolved nonlinear response outside the registered basis. None is
+automatically noise.
+
+Across authors and contexts, the system may then form relation objects:
+
+\[
+\{\mathcal A_u\}_{u=1}^{n}
+\longrightarrow
+\mathcal J_s
+\longrightarrow
+(\mathcal J_W,\mathcal J_B,\mathcal J_T,H,\kappa)
+\longrightarrow
+\mathcal T_{\mathrm{population}}.
+\]
+
+This is the present micro-to-meso-to-macro skeleton. It is not yet a complete
+generative theory because the coupling laws between its components remain
+underspecified.
+
+## 5. Current mechanism inventory
+
+| Mechanism family | Existing object | What it can express | Present development gap |
+| --- | --- | --- | --- |
+| Opportunity and selection | \(O_t,\pi_u,K_u^C\) | entered, avoided, revisited, or selected contexts | Opportunity is still mostly treated as an available menu rather than something the author helps create |
+| Distribution | \(\mu_u,D_u^\Omega\) | modality, tails, dispersion, occupancy beyond a mean | Need richer mixed-family and nonstationary distribution dynamics |
+| Conditional response | \(G_u,\mathcal R_u,B_u,h_u\) | how expression changes under shared conditions | Condition coordinates are usually externally supplied rather than discovered |
+| Temporal evolution | \(\mathcal K_u\), routing kernel, spectral/path objects | persistence, switching, recovery, current, path dependence | No general author generator has replaced the historical linear motion axes |
+| Interaction | \(\mathcal C_u\) | response to another actor or input | Current form is mostly one-way and does not separate actor, partner, dyad, and group effects |
+| Higher-order path | \(\mathcal P_u\), path signatures and within-author motifs | loops, returns, ordered motifs, and path information beyond first-order transitions | Need a common algebra connecting path functionals to response and temporal mechanisms |
+| Observation multiverse | \(\{S_\lambda,R_v,\Phi_j\}\) | different slices and representations as parallel views | Need a theory of how mechanism information flows across scales/operators |
+| Author geometry | \(a_u,[B_u],\widehat{\mathcal G}_u\) | high-dimensional relative author position/configuration | Need to derive geometry from interacting mechanisms rather than fit it as a terminal object |
+| Relation field | \(\mathcal J_s,\mathcal J_W,\mathcal J_B,\mathcal J_T,H,\kappa\), incidence and hypergraph objects | local, between-context, total, heterogeneous, ecological, dyadic, and joint-feasibility relations | The map from individual mechanisms to relation topology is incomplete |
+| Resolution and residual | \(\mathcal F_m,R_u^{(m)}\) | finite-information limits and unresolved structure | Need a mechanism-discovery rule that separates alias, finite resolution, omitted mechanism, and private stable structure |
+
+## 6. Mechanisms still to be developed
+
+The main theoretical gaps are conversion mechanisms between existing
+objects, not missing low-dimensional factors.
+
+### M4-A. Mechanism composition algebra
+
+Development status (2026-07-31):
+`FINITE_STATIC_AND_DYNAMIC_SYNTHETIC_DISCOVERY_SUPPORTED`. The implemented
+V1 composition
+grammar separates structural interaction, dependence distortion, directional
+gating, projection non-commutation, and alias refusal. See
+[M4-A Mechanism Composition Grammar](SUICA_M4_MECHANISM_COMPOSITION_THEORY.md)
+and
+[the discovery report](../reports/SUICA_M4_MECHANISM_COMPOSITION_DISCOVERY.md).
+
+M3 currently supplies coarse-grained outputs but not a common grammar for the
+joint event generator. Begin with an abstract composition operator:
+
+\[
+K_u^{\mathrm{joint}}
+=
+\mathfrak C\left(
+K_u^O,K_u^S,K_u^C,K_u^X,K_u^I,K_u^H
+\right),
+\]
+
+where the kernels govern opportunity, state, condition choice, expression,
+interaction, and higher-order history. Suppose a common path space and
+dominating reference measure \(K_0\) are declared. For every mechanism subset
+\(A\), let \(\mathcal F_A\) be its generated sigma-algebra and define the
+conditional projection
+
+\[
+\mathsf P_A\ell
+=
+E_{K_0}[\ell\mid\mathcal F_A].
+\]
+
+A Möbius recursion can then define candidate interaction components:
+
+\[
+\ell_A
+=
+\mathsf P_A\ell
+-
+\sum_{B\subsetneq A}\ell_B,
+\qquad
+\ell=\log\frac{dK_u^{\mathrm{joint}}}{dK_0}.
+\]
+
+Under a product reference with commuting projections this gives the familiar
+unique orthogonal functional-ANOVA decomposition. With dependent mechanisms,
+components may be nonorthogonal and projection-order dependent; an ordered
+or Shapley-symmetrized decomposition must be declared instead. Finding which
+decomposition preserves the intended mechanism meaning is itself part of
+M4-A, not a settled theorem. V1 resolves the finite multilinear case with two
+declared games: an observational held-out game and a product-reference game.
+It does not yet implement a general dependent-input RKHS-HOFD or a true
+noncommuting transition-kernel world.
+
+The atlas objects \((\pi,\mu,\mathcal R,\mathcal K,\mathcal C,\mathcal P)\)
+are projections of this joint law, not terms that may be added directly. The
+new object is a decomposition of how opportunity, choice, response, state,
+interaction, and path mechanisms alter one another.
+
+The resulting author composition signature is
+
+\[
+\Lambda_u
+=
+\left(
+\{d_u^\otimes(A)\},
+\{d_u^{\mathrm{obs}}(A)-d_u^\otimes(A)\},
+\{G_{g\rightarrow i}\},
+\{\Omega_{ij}\}
+\right).
+\]
+
+Across the finite discovery worlds, active hyperedge F1 and sign recovery
+were 1.00, mean planted-parameter geometry was 0.736, alias refusal was 1.00,
+and the null false-positive rate was zero. A subsequent designed
+transition-kernel world recovered noncommuting condition/history order
+(accuracy 0.828), commutator geometry (0.940), temporal gate strength
+(Spearman 1.00), and a stable dynamic composition signature (AUC 0.856).
+This supplies the first conversion law between the M3 mechanism list and a
+joint author mechanism object in a finite synthetic space. The path-score
+gain is a joint kernel/order/gate gain rather than a pure order effect, and
+the next stage must separate calibration, mechanism selection, and final
+evaluation panels.
+
+### M4-B. Endogenous opportunity ecology
+
+Development status (2026-07-31):
+`FINITE_SYNTHETIC_DISCOVERY_PASS_WITH_SCOPE_CORRECTION`. See
+[M4-B Endogenous Opportunity Ecology](SUICA_M4_ENDOGENOUS_OPPORTUNITY_ECOLOGY_THEORY.md)
+and
+[the discovery report](../reports/SUICA_M4_OPPORTUNITY_ECOLOGY_DISCOVERY.md).
+
+The opportunity set must become dynamic:
+
+\[
+O_{t+1}
+\sim
+K_u^O(\cdot\mid H_t,C_t,\Xi_t,\text{others}).
+\]
+
+This adds environment creation, avoidance, persistence, and return to the
+current choice profile. It connects the original rind insight to a genuine
+process model. Across eight repetitions, mechanism macro F1 was 0.991,
+feedback-loop geometry was 0.920, matched selection-versus-creation
+discrimination was 0.998 while raw-menu half-\(L_1\) was 0.006 and choice TV
+was 0.013, return/recovery geometry exceeded 0.94, hidden-source aliases
+refused at 1.00, and the null false-positive rate was zero.
+
+The scalar spectral radius of the recovered loop did not preserve planted
+author rank (Spearman 0.473 versus the 0.80 target). The validated object is
+therefore the full ecology loop and its return/gate operators, not an author
+criticality score. This scope correction does not block M4-C: the next
+development problem is to discover the condition coordinates instead of
+planting them.
+
+### M4-C. Condition-manifold discovery
+
+Development status (2026-07-31):
+`FINITE_RESPONSE_SAFE_SYNTHETIC_DISCOVERY_PASS`. See
+[M4-C Response-Safe Condition Manifold](SUICA_M4_CONDITION_MANIFOLD_THEORY.md)
+and
+[the discovery report](../reports/SUICA_M4_CONDITION_MANIFOLD_DISCOVERY.md).
+
+Current \(z_c\) is usually supplied by topic, prompt, platform, or metadata.
+SUICA needs an author-independent and response-safe procedure for discovering
+which vector directions function as response conditions:
+
+\[
+z_j
+=
+\zeta_{-u}\left(
+\widetilde O_j,\widetilde C_j,X_j^{\mathrm{pre}}
+\right),
+\qquad
+G_u:z\mapsto\mathcal H.
+\]
+
+The chart is fitted on an independent reference panel or by author-level
+cross-fitting and may use only variables observed before the response being
+explained; \(X_j^{\mathrm{pre}}\) denotes pre-response context/provenance, not
+the response \(\widetilde\Xi_j\). A joint condition/response latent model is a
+separate, explicitly identified alternative. The goal is not to name topics,
+but to recover local condition charts and the transition maps that join them
+without circularly defining a condition from its own outcome.
+
+The V1 implementation registers robust linear PCA, global Isomap, and a
+landmark geodesic atlas. Across eight repetitions of eight finite worlds,
+identifiable charts resolved in 22/24 cells, held-out geodesic geometry was
+0.913, local-neighbour Jaccard was 0.774, and two-source relation geometry was
+0.963. After chart freezing, conditional-response retention was 0.925 relative
+to the synthetic oracle and author-response geometry was 0.960. Author
+fingerprint leakage, declared response leakage, no-manifold conditions, and
+noninjective condition aliases were refused; response permutation left every
+chart output invariant.
+
+This result does not establish general topology recovery. The registered
+graph/MST topology signature matched 0.833 overall among identifiable worlds,
+including only 4/8 circle labels under source rotation. The branched mismatch
+was detected after global-chart selection and refused; it was not automatically
+routed to the correct atlas. Reference calibration and selection panels use
+independent observations from the same reference authors, so strict
+author-fold cross-fitting remains unimplemented.
+
+#### M4-C.2. Chart-covariant ecology transport
+
+The discovered chart was inserted into the complete M4-B ecology rather than
+only a conditional-response head. For a menu measure
+
+\[
+\nu_{u,t}
+=
+\sum_{k:M_{u,t,k}=1}\delta_{\widehat z_{u,t,k}},
+\]
+
+freeze a reference basis \(\phi\) and form
+
+\[
+o_{u,t}=\int\phi(z)\,d\nu_{u,t}(z),
+\qquad
+c_{u,t}=\phi(\widehat z_{Q_t}).
+\]
+
+V2 used fresh seeds after V1 exposed a mismatched-menu DGP and an
+estimand-misaligned alias rule. Exact matched paths, truth-open alias
+information loss, source/null controls, and atomic action transport all passed.
+The composite loop did not: geometry was `.652 < .70`, and only `2/8`
+repetitions passed every gate. The frozen status is
+`M4_C2_NO_GO_CHART_TRANSPORT`.
+
+#### M4-C.3. Physical-edge composition audit
+
+Write the physical loop as
+
+\[
+L_u=A_uR_uD_u,
+\]
+
+where \(D\) is the menu-to-choice-measure edge, \(R\) the
+condition-to-response edge, and \(A\) the response-to-creation edge. M4-C.3
+constructs all eight oracle/discovered products, uses Shapley contrasts and
+path-conditioned error budgets to localize loss, and compares the Jacobian
+product with the full finite intervention.
+
+This diagnostic can explain why M4-C.2 failed but cannot convert it into a
+pass. M4-D remains blocked until a later independently frozen repair closes
+the composite action gate.
+
+#### M4-C.3.4. Creation residual attribution
+
+M4-C.3.4 held the C3.3 gate-zero creation estimand fixed and crossed
+condition chart (`C`), history/source observation likelihood (`S`), and
+cross-author pooling (`P`). The full cell recovered only `.3405` of oracle
+headroom. `S` was negative in both target worlds across all eight repetitions
+(effect `-.0844`, LCB `-.1581`), and `P` was small. The truth-open `C` factor
+alone recovered `.7854` of headroom and was the separated Shapley leader
+(margin LCB `.0396`), but it is nondeployable and its alias audit passed only
+`7/8`. The frozen status is
+`M4_C34_NO_GO_THREE_FACTOR_INCOMPLETE`.
+
+The result rejects omitted history/source likelihood as the dominant
+residual mechanism and routes one fresh chart-identification experiment. It
+does not reopen M4-C.2 or M4-D.
+
+#### M4-C.3.5. Response-safe cross-view quotient chart
+
+R1 replaced chart-family smoothing with an observable replicated-CCA
+quotient. Independent author blocks and numeric sources estimate a common
+pre-response condition subspace:
+
+\[
+\widehat S_1^{-1/2}
+\widehat C_{12}
+\widehat S_2^{-1/2}
+=
+U_r\Lambda_rV_r^\top,
+\qquad
+\widehat\phi_{\mathrm{RS}}
+\in
+[U_r,V_r]\pmod{O(r)}.
+\]
+
+Rank was selected by response-free permutation and replicate stability.
+Response, choice, author identity, synthetic truth, and relation endpoints
+remained forbidden. R1 confirmed the chart itself across eight repetitions.
+
+R2B then froze all charts in a pre-response Stage A and opened response/oracle
+truth only in Stage B. The three accessible worlds showed eligible gain
+`.1227` (LCB `.0934`), headroom recovery `.8146` (LCB `.6798`), and accessible
+efficiency `.9874` (LCB `.9801`). Equal-rank variance and repeatability
+controls, CKA permutation, history, compensation, null, alias, source, gauge,
+and hazard gates passed. Null false successes were `0/120`.
+
+The registered zero-native-refusal gate failed: two of 160 cells triggered
+`SUPPORT_SHIFT`, one in an eligible main world. The frozen status is therefore
+`M4_C35_R2B_PARTIAL_CONDITIONAL_EFFECT`; it does not license unconditional
+chart replacement. R2C implemented the abstention-aware policy
+
+\[
+\Pi_i =
+\begin{cases}
+R_i,&A_i=1,\\
+B0_i,&A_i=0,
+\end{cases}
+\qquad
+\Delta_\Pi=E[A_i(\Gamma_R-\Gamma_{B0})],
+\]
+
+where acceptance \(A_i\) is frozen from pre-response applicability evidence.
+Accepted-stratum performance is secondary; the primary estimand is full
+planned-population policy value.
+
+Fresh R2C development contained no refusals (`16/16` accepted), so it proved
+exact policy replay but not routing utility. Boundary-enriched development
+then held response truth fixed and moved evaluation conditions across the
+`.80` support boundary. The resulting scalar policy lost `.0528` relative to
+always using `R`; refused forced-`R` gain was `.0880`, versus `.0301` among
+accepted cells. Coverage predicted only `4.6%` of oracle-error variance and
+harm AUC was `.554`. Thus
+
+\[
+C=T(q)
+\]
+
+is a many-to-one audit summary, not an effect-ordering statistic. The
+operational threshold rule is retired; coverage is retained as one component
+of a response-safe vector applicability signature
+
+\[
+q=\Phi_{\mathrm{pre}}(X)
+=
+(q^{sup},q^{tail},q^{src},q^{panel},q^{RB},q^{id}).
+\]
+
+The first 24-component post-seal pilot did not resolve this signature:
+leave-one-world-out harm AUC was `.588`, OOF \(R^2=-.691\), and routing value
+remained `-.0616`. A fresh experiment must vary departure direction at fixed
+coverage before any vector gate can be evaluated. M4-D remains blocked. See
+`SUICA_M4_C35_R1_RESPONSE_SAFE_RCCA_CHART_PROTOCOL.md` and
+`SUICA_M4_C35_R2B_CONDITIONAL_CHART_PROTOCOL.md`,
+`SUICA_M4_C35_R2C_ABSTENTION_POLICY_DEVELOPMENT_PROTOCOL.md`, and
+`SUICA_M4_C35_R2C_BOUNDARY_ECOLOGY_DEVELOPMENT_PROTOCOL.md`.
+
+### M4-D. Dynamic generator discovery
+
+Because text paths are discrete and often irregularly sampled, define an
+augmented predictive state \(Y_t=(X_t,H_t)\). The primary object is a
+lag-indexed transition operator on that state:
+
+\[
+P_{u,\Delta}f(y)
+=
+E[f(Y_{t+\Delta})\mid Y_t=y,u].
+\]
+
+If a continuous-time embedding exists and
+\(\{P_{u,\Delta}\}_{\Delta\ge0}\) forms a sufficiently regular Markov
+semigroup on the augmented state, a generator may then be defined:
+
+\[
+\mathcal L_u
+=
+\lim_{\Delta\downarrow0}
+\frac{P_{u,\Delta}-I}{\Delta}.
+\]
+
+Its spectrum, eigenfunctions, probability current, non-normal modes,
+change-points, and recovery rates are candidate dynamic properties.
+Historical `flow/gust` factors become finite projections of the discrete
+operator family, not assumed continuous-time coordinates. If no finite
+history makes \(Y_t\) Markov, the development target must remain a
+history-dependent kernel, predictive-state representation, or memory
+operator rather than a semigroup generator.
+
+### M4-E. Multiscale coarse-graining and renormalization
+
+SUICA needs an explicit within-author coarse-graining chain:
+
+\[
+\text{token}
+\rightarrow\text{slice}
+\rightarrow\text{utterance}
+\rightarrow\text{occasion}
+\rightarrow\text{author}.
+\]
+
+For coarse-graining maps \(\mathcal C_{s\to s'}\), the research object is the
+flow of mechanism parameters across scale. Stable universality classes,
+fixed points, and scale-specific mechanisms are more plausible targets than
+one universal factor chart. Author-to-dyad/group movement is not another
+coarse-graining step; it is a type-changing relational lift:
+
+\[
+\{\mathcal A_u\}_{u=1}^{n}
+\xrightarrow{\mathscr L}
+\mathcal J
+\longrightarrow
+\mathcal T_{\mathrm{population}},
+\]
+
+and belongs to M4-G.
+
+### M4-F. Residual mechanism discovery
+
+The unresolved component has a non-unique candidate mixture:
+
+\[
+R
+=
+R_{\mathrm{resolution}}
++
+R_{\mathrm{alias}}
++
+R_{\mathrm{omitted}}
++
+R_{\mathrm{private}}
++
+R_{\mathrm{technical}},
+\qquad
+\operatorname{Cov}(R_i,R_j)\ \text{unrestricted}.
+\]
+
+The terms are not assumed orthogonal, independent, or uniquely identified.
+An orthogonal decomposition is allowed only after a reference inner product
+and fitted projection operators are declared.
+Cross-resolution, cross-operator, and cross-condition trajectories can be
+used to infer which class a residual component approaches. The target is to
+discover omitted mechanisms, not to force residual energy to zero.
+
+### M4-G. Individual mechanism to relation field
+
+The missing social-scale bridge is:
+
+\[
+\{K_u^{\mathrm{joint}}\}_{u=1}^{n}
+\longrightarrow
+\{G_u\}_{u=1}^{n}
+\longrightarrow
+J_{uv}(z)
+\longrightarrow
+\mathbb H_z^{\mathrm{rel}}
+\longrightarrow
+\mathcal T_{\mathrm{population}}.
+\]
+
+It should explain when similar response mechanisms generate proximity,
+temporary coalitions, stable relations, or population topology.
+
+### M4-H. Multi-actor interaction dynamics
+
+Interaction should separate:
+
+\[
+\Xi_{u\leftarrow v,t}
+=
+\alpha_u^{\mathrm{actor}}
++\beta_v^{\mathrm{partner}}
++\delta_{uv}^{\mathrm{dyad}}
++\gamma_g^{\mathrm{group}}
++\epsilon_t,
+\]
+
+with author, partner, dyad, and group effects. Dynamic interaction is then a
+history-dependent transition kernel:
+
+\[
+K_{uv}^{\mathrm{int}}
+\left(
+d\Xi_{t+1}\mid
+H_t,\alpha_u^{\mathrm{actor}},\beta_v^{\mathrm{partner}},
+\delta_{uv}^{\mathrm{dyad}},\gamma_g^{\mathrm{group}}
+\right).
+\]
+
+This kernel must represent accommodation, resistance, repair, entrainment,
+and turn transition. It is required before dialogue can be reduced to an
+individual author profile.
+
+## 7. Proposed development tree
+
+The next mechanism-development program is:
+
+```text
+M4-A mechanism composition algebra
+  |
+  +-- M4-B endogenous opportunity ecology
+  |     `-- M4-C condition-manifold discovery
+  |           `-- M4-C.2 chart-covariant ecology transport
+  |                 `-- M4-C.3 relation-space composition budget
+  |                       `-- M4-C.3.2 creation-estimator intervention
+  |                             `-- M4-C.3.3 opportunity-budget frontier
+  |                                   `-- M4-C.3.4 creation residual attribution
+  |                                         `-- M4-C.3.5 response-safe cross-view EIV chart
+  |
+  +-- M4-D dynamic generator discovery
+  |     `-- M4-E multiscale renormalization
+  |
+  +-- M4-F residual mechanism discovery
+  |
+  `-- M4-H multi-actor dynamics
+
+{M4-A, M4-C, M4-E, M4-F, M4-H}
+  `-- M4-G individual-to-relation field
+```
+
+Primary sequence:
+
+1. define the composition algebra and synthetic coupled-mechanism worlds;
+2. recover opportunity creation and condition coordinates without using
+   outcome labels, transport the complete ecology through that chart, and
+   separate chart error, information limitation, latent history, and
+   author-specific edge heterogeneity;
+3. replace finite motion axes with generator/operator objects;
+4. trace those objects across token-to-author scales and keep the later
+   relation lift separate;
+5. use residual trajectories to propose missing mechanism families; and
+6. combine individual, interaction, condition, scale, and residual mechanisms
+   to derive relation fields rather than fitting population geometry
+   independently.
+
+Parallel exploratory lines:
+
+- state-to-trait as a spectrum of time horizons rather than a binary label;
+- cross-language/culture mechanism isomorphism and culture-specific
+  deformation;
+- LLM translation of frozen anonymous mechanisms into behaviorally grounded
+  human explanations; and
+- archival reconstruction of the MCD/H-MCD/V-HMCD mathematical lineage.
+
+## 8. Development criteria
+
+A new mechanism is useful when it adds at least one of the following:
+
+1. a new identifiable object not reducible to the existing atlas;
+2. a conversion law between two existing levels;
+3. an explanation for a previously stable residual or relation pattern;
+4. an observable distinction between worlds that existing summaries treat as
+   equivalent; or
+5. a reusable coarse-graining rule across operators or scales.
+
+Prediction improvement is informative but not sufficient by itself. The
+development output should be a mathematical object, its estimator, its
+equivalence class, and the transformations under which it persists.
+
+## 9. Supporting evidence and governance map
+
+The evidence constitution remains necessary, but it does not choose the next
+mechanism. Its typed chain is:
+
+\[
+(\mathcal H,F)
+\to B
+\to X
+\to Z
+\to\mathfrak A^{(\tau)}
+\to\mathfrak M^{(\tau)}
+\to\Theta^{(\tau)}
+\to D^{(\tau)},
+\qquad \tau\in\{V,R,P\}.
+\]
+
+Use the following only after a mechanism question is selected:
+
+- [Foundational Closure Standard](SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md) for
+  the layer and output type;
+- [Foundation Gap Ledger](SUICA_FOUNDATION_GAP_LEDGER.md) for unresolved
+  evidence;
+- [Claims Ledger](CLAIMS_LEDGER.md) for historical outcomes;
+- [V7 Discovery Ledger](V7_DISCOVERY_LEDGER.md) for frozen operator results;
+  and
+- the named protocol/report for the local experiment.
+
+The current research decision is therefore:
+
+> SUICA now has a typed object ontology, a finite mechanism grammar, an
+> event-to-relation seam, and explicit reference/applicability rules. The
+> fixed-coverage directional experiment closed the current chart-routing
+> branch negatively: neither scalar coverage nor the present 24-component
+> pre-response signature identifies cell-level `R/B0` relative utility across
+> worlds or repetitions. Applicability must be fixed at study-design level,
+> with dual-path sensitivity or refusal outside licensed designs. The next
+> scientific work should target genuinely new observable mechanisms and human
+> repeated-design edges, not threshold tuning on the opened M4 panel.

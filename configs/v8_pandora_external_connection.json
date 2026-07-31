@@ -1,0 +1,43 @@
+{
+  "version": "v8-pandora-external-connection-1",
+  "seed": 20260728,
+  "analysis_status": "OPENED_PANDORA_EXPLORATORY_EXTERNAL_CONNECTION",
+  "score": {
+    "min_unit_tokens": 12,
+    "max_unit_chars": 1500,
+    "batch_authors": 256,
+    "relative_tolerance": 1e-08,
+    "pseudonym_salt": "suica-v8-pandora-external-20260728",
+    "raw_comments": "/Volumes/mobile3/projects/project persona/data_sets/PANDORA_official/all_comments_since_2015.csv",
+    "preparation_module_root": "/Volumes/mobile3/projects/project persona",
+    "sample_limit": 400,
+    "sample_seed": 42,
+    "operator_source_comment_cap": 32,
+    "operator_token_cap": 4096,
+    "raw_chunksize": 200000,
+    "geometry_bundle": "results/v7_geometry/g1_corrected_v2_full_20260715/geometry_bundle.json",
+    "representation_runtime": "results/v7_multiview_projection/e1_v72_full_20260715/artifacts/common_source_comment_representation.joblib"
+  },
+  "models": {
+    "ridge_alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "logistic_c": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ]
+  },
+  "cv_bootstrap_draws": 1000,
+  "bridge_bootstrap_draws": 2000,
+  "bridge_permutations": 5000,
+  "claim_boundary": "This is an exploratory external connection on previously opened PANDORA labels. It applies the frozen V8 native operator (12-token minimum, 32 temporally spread source comments, 4096-token budget) after personality-leakage cleaning, then tests frozen text geometry against external Big Five and MBTI anchors. It cannot confirm, name, rotate, or select a psychological construct."
+}

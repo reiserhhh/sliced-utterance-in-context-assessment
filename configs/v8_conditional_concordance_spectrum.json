@@ -1,0 +1,31 @@
+{
+  "version": "v8-conditional-concordance-spectrum-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "corpora": [
+    "pandora",
+    "essays",
+    "x_market"
+  ],
+  "matched_events_per_author": 8,
+  "spec": {
+    "background_draws": 499,
+    "spectrum_null_draws": 499,
+    "test_null_draws": 1999,
+    "bootstrap_draws": 999,
+    "bootstrap_reference_worlds": 64,
+    "local_length_block": 16,
+    "gamma_grid": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      0.5
+    ],
+    "maximum_condition": 100.0,
+    "spectrum_quantile": 0.95,
+    "maximum_rank": 12,
+    "minimum_half_authors": 20,
+    "seed": 20260818
+  },
+  "claim_boundary": "Exploratory opened-panel compression audit following the marginal-background quotient result. It asks whether corpus-local signed concordance is carried by a D0-resolved low-dimensional positive or negative generalized spectrum and whether the frozen positive spectrum repeats in D1/D2. It cannot confirm PANDORA after the prior knife-edge result, cannot align spectra across corpora, and cannot name personality, emotion, cognition, diagnosis, causality, or clinical validity. Formal confirmation requires a fresh author panel."
+}

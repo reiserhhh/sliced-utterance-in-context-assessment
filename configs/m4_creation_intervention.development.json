@@ -1,0 +1,72 @@
+{
+  "version": "suica-m4-c32-creation-intervention-development-v1",
+  "estimand_id": "SUICA_M4_C32_CREATION_INTERVENTION_DEVELOPMENT_V1",
+  "seed": 271828182,
+  "repetitions": 4,
+  "worlds": [
+    "endogenous_source_partition_matched",
+    "endogenous_creation_expansion",
+    "source_rotated_feedback",
+    "history_gated_ecology",
+    "selection_creation_compensation"
+  ],
+  "base_spec": {
+    "reference_authors": 32,
+    "mechanism_authors": 16,
+    "reference_calibration_points": 96,
+    "reference_selection_points": 64,
+    "categories": 16,
+    "sources": 2,
+    "pre_dimensions": 8,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 5,
+    "selection_occasions": 2,
+    "evaluation_occasions": 5,
+    "events": 120,
+    "pre_noise": 0.05,
+    "response_noise": 0.13,
+    "recency_decay": 5.0
+  },
+  "chart_candidates": [
+    {"family": "linear_pca", "dimensions": 1, "neighbors": 10, "landmarks": 16},
+    {"family": "linear_pca", "dimensions": 2, "neighbors": 10, "landmarks": 16},
+    {"family": "linear_pca", "dimensions": 3, "neighbors": 10, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 2, "neighbors": 8, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 2, "neighbors": 12, "landmarks": 16},
+    {"family": "global_isomap", "dimensions": 3, "neighbors": 12, "landmarks": 16},
+    {"family": "landmark_atlas", "dimensions": 2, "neighbors": 8, "landmarks": 16},
+    {"family": "landmark_atlas", "dimensions": 2, "neighbors": 12, "landmarks": 16}
+  ],
+  "kernel_ranks": [2, 4, 8, 12],
+  "bandwidth_scales": [0.5, 1.0, 2.0],
+  "rank_tolerance": 0.000001,
+  "maximum_rank": 12,
+  "chart_thresholds": {
+    "minimum_cross_source_geometry": 0.65,
+    "minimum_split_geometry": 0.65,
+    "minimum_trustworthiness": 0.85,
+    "minimum_continuity": 0.85,
+    "minimum_coverage": 0.8,
+    "maximum_author_leakage_auc": 0.72
+  },
+  "route_estimator": {
+    "ridge_grid": [0.001, 0.005, 0.02],
+    "hazard_ridge": 0.005,
+    "logistic_iterations": 30,
+    "complexity_penalty": 0.00001
+  },
+  "bootstrap_seed": 314159265,
+  "bootstrap_repetitions": 2000,
+  "targets": {
+    "minimum_creation_headroom": 0.05,
+    "minimum_headroom_lcb": 0.0,
+    "minimum_candidate_gain": 0.03,
+    "minimum_candidate_gain_lcb": 0.0,
+    "minimum_candidate_geometry": 0.70,
+    "minimum_recovered_headroom": 0.50,
+    "minimum_positive_repetitions": 3
+  },
+  "output_directory": "results/m4_creation_intervention_development",
+  "report_path": "reports/SUICA_M4_CREATION_INTERVENTION_DEVELOPMENT.md"
+}

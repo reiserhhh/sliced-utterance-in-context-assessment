@@ -2,12 +2,13 @@
 
 **English** | [日本語](README.ja.md) | [简体中文](README.zh.md)
 
-SUICA is a text-behavior measurement framework: it treats a person's
+SUICA is a foundational methodology for text-based measurement research: it treats a person's
 spontaneous writing as many small behavioral observations ("sliced
 utterances") measured inside their naturally occurring contexts, and builds
-auditable, reference-relative coordinates from them — a methodological
-foundation for future text-based assessment between questionnaires and
-free-response methods, not a completed personality scale.
+auditable, operator- and reference-relative objects from them. It is not a
+scale and does not require the current corpora to become one. Future
+text-based assessments may be constructed on this foundation only after
+their own construct, population, validity, and use evidence is supplied.
 
 *Suica (スイカ) is Japanese for watermelon: the method's core "rind model"
 holds that topic/situation is not noise to strip away but the rind that
@@ -66,11 +67,225 @@ ground truth without any real data. To reproduce the worked example, obtain
 the datasets per `docs/DATA_ACCESS.md` (this release ships no user text, no
 user IDs; SHA-256 manifests allow byte-identical preparation checks).
 
+## Current development route and foundation contract
+
+The canonical integrated statement of the current system is
+`docs/SUICA_UNIFIED_THEORY_SYSTEM_V8.md`. It defines SUICA's type system,
+reference-relative measurement spine, micro/meso/macro formulas, residual and
+applicability theory, version lineage, evidence boundaries, and the procedure
+for building future study-specific natural-language measurement systems.
+
+The development-first map is
+`docs/SUICA_THEORY_ROUTE_INDEX.md`. It reconstructs the MCD/H-MCD/V-HMCD,
+V3/V4, V6, V7, V8, and M3 lineage; links every retained mathematical object;
+and defines the next mechanism program around composition algebra, endogenous
+opportunity, condition-manifold discovery, dynamic generators, multiscale
+coarse-graining, residual discovery, and the individual-to-relation bridge.
+The evidence constitution below constrains those experiments, but it does not
+select the scientific development route.
+
+The first mechanism-program result, M4-A, is now implemented as a finite
+third-order mechanism-composition grammar. Across 8 repetitions of 9
+synthetic worlds it
+separated genuine synergy from redundancy and suppression, recovered sparse
+pair/triple hyperedges (support F1 1.00), preserved planted author-parameter
+geometry (mean Spearman 0.736), identified gate direction, refused perfect
+aliases, and remained null-calibrated. The new object is an author
+mechanism-composition signature rather than another factor score. This is a
+matched multilinear discovery, not yet a general joint-kernel algebra. See
+`docs/SUICA_M4_MECHANISM_COMPOSITION_THEORY.md`.
+
+The M4-A dynamic extension then estimated condition-only and history-only
+transition kernels and compared both composition orders on held-out joint
+paths. It recovered resolvable order with 0.828 accuracy, planted commutator
+geometry at 0.940, temporal gate strength at Spearman 1.00, and an independent
+panel dynamic-signature AUC of 0.856. A commuting control retained marginal
+author structure but correctly lost order and gate effects; a calibration-free
+role alias refused. This is a designed synthetic kernel result, not automatic
+identification from uncontrolled text.
+
+M4-B then made the opportunity set endogenous. Its three-role estimator fits
+selection, opportunity generation, expression response, return, and history
+gate kernels on calibration data, selects a registered family on a separate
+panel, and opens final evaluation only once. Across 8 repetitions, mechanism
+macro F1 was 0.991, feedback-loop geometry was 0.920, and selection versus
+creation remained 0.998 distinguishable despite matched raw-menu
+half-\(L_1=0.006\) and choice TV 0.013. Return and recovery geometry exceeded
+0.94, active author-signature AUC was 0.830, hidden-source aliases refused,
+and null false positives were zero. The scalar spectral-radius ranking failed
+(Spearman 0.473), so it remains diagnostic while the full ecology loop is
+retained. See `docs/SUICA_M4_ENDOGENOUS_OPPORTUNITY_ECOLOGY_THEORY.md`.
+
+M4-C now removes the planted-condition-coordinate assumption for one bounded
+conversion edge. A response-safe chart is selected only from pre-response
+context on independent reference panels, represented through source-specific
+PCA/Isomap or a landmark geodesic atlas, and frozen before any response is
+opened. Across 8 repetitions of 8 worlds, identifiable-chart resolution was
+22/24, held-out geodesic geometry was 0.913, local-neighbour Jaccard was
+0.774, and cross-source relation geometry was 0.963. The frozen chart retained
+0.925 of oracle conditional-response \(R^2\) and 0.960 author-response
+geometry. Declared author/response leakage, no-manifold worlds, condition
+aliases, and a branched topology conflict were all refused or routed
+correctly; response permutation changed no chart output. Topology labels
+remain a registered graph/MST diagnostic (0.833 match), not a general topology
+theorem. Full chart-covariant transport of M4-B selection, creation, return,
+recovery, and history-gate operators was tested next in M4-C.2. See
+`docs/SUICA_M4_CONDITION_MANIFOLD_THEORY.md`.
+
+M4-C.2 V2 corrected two defects exposed by its preserved V1 development
+NO-GO: realized rather than expected matched menus, and truth-open condition
+alias information loss rather than an absolute skill cutoff. Across 8 fresh
+repetitions of 15 worlds, the corrected alias audit passed 8/8; matched
+condition, environment, and union-menu paths were exactly equal; source alias,
+null, basis invariance, and response safety all passed. Atomic action transport
+was supported for choice (.790), creation (.774), return (.845), and recovery
+(.977). The composite loop failed (.652 versus the frozen .70 gate), however,
+and only 2/8 repetitions passed every substantive gate. The frozen decision is
+`M4_C2_NO_GO_CHART_TRANSPORT`: atomic edge recovery does not imply recovery of
+their plug-in product. M4-D remains blocked. M4-C.3 now audits the physical
+creation, response, and choice edges and nonlinear loop definition without
+reopening V2. See
+`docs/SUICA_M4_CHART_COVARIANT_ECOLOGY_THEORY.md` and
+`docs/SUICA_M4_PHYSICAL_EDGE_COMPOSITION_THEORY.md`.
+
+M4-C.3 showed that the physical product is algebraically correct and that
+Jacobian-versus-finite geometry exceeds .998, but an absolute edge-error
+budget did not match the author-relation endpoint. M4-C.3.1 repaired that
+statistical-object mismatch: its centered relational Möbius budget predicted
+composition loss at Spearman .9868 and allocated about 80% of symmetric loss
+to creation. A shared RBF chart remapping then failed all 12 development arms.
+The sealed cross-fitted Fisher-Wiener creation intervention gave a real but
+incomplete improvement: loop geometry .7198 -> .7699 (gain .0501, clustered
+LCB .0051), creation geometry .7347 -> .8054, hazard degradation 1.30%,
+permutation gain negative, and null false success zero. It recovered only
+25.4% of oracle headroom and qualified in 5/8 repetitions, so the frozen
+decision remains `M4_C32_NO_GO_FISHER_WIENER_CREATION`. This supports a
+partial author-derivative estimation-noise mechanism while redirecting the
+next experiment to opportunity-budget scaling rather than more kernel or
+embedding replacement.
+
+M4-C.3.3 then increased observable creation information through nested
+passive occasions and balanced orthogonal response excitation. The high/low
+Fisher-information ratio was 13.04 (LCB 12.41), geometry rose with
+log-information (slope LCB .0222), and the frozen endpoint improved by .0802
+(LCB .0611) to geometry .7523. This establishes a real information-dose
+effect, but not sufficiency: only 44.0% of oracle headroom was recovered and
+5/8 repetitions passed, below the frozen 50% and 6/8 gates. Passive
+opportunity supplied most of the gain (+.0611); excitation added +.0192 at
+K=8; performance saturated by K=4 and varied sharply by mechanism world.
+The decision is `M4_C33_NO_GO_INFORMATION_LIMIT`. The next bounded target is
+creation/history heterogeneity, not more `K`, kernels, or embeddings. M4-D
+remains blocked. See
+`docs/SUICA_M4_RELATIONAL_ERROR_BUDGET_THEORY.md`,
+`docs/SUICA_M4_CREATION_ESTIMATOR_INTERVENTION_THEORY.md`, and
+`reports/SUICA_M4_C33_MECHANISM_DECOMPOSITION.md`.
+
+M4-C.3.4 then held the gate-zero creation estimand fixed and crossed condition
+chart (`C`), history/source observation likelihood (`S`), and cross-author
+pooling (`P`) in an eight-cell attribution cube. The full cube recovered only
+34.1% of oracle headroom, so the frozen decision is
+`M4_C34_NO_GO_THREE_FACTOR_INCOMPLETE`. The decomposition is nevertheless
+informative: `C` alone recovered 78.5% of headroom and was the separated
+Shapley leader (`+.0727`, leading-margin LCB `+.0396`); `P` was small
+(`+.0090`); and `S` was harmful (`-.0434` overall, target-world effect
+`-.0844`, LCB `-.1581`, positive in `0/8` repetitions). Thus omitted
+history/source likelihood is rejected as the dominant residual mechanism,
+while condition-chart distortion becomes the next bounded target. The
+positive `C` cell is truth-open and nondeployable, and the alias audit reached
+only `7/8`, so no chart repair or transport closure has yet been demonstrated.
+M4-C.3.5-R1 then confirmed a response-safe replicated-CCA quotient chart using
+pre-response source/author views only. R2B tested that frozen chart in a
+strictly separated downstream experiment. The conditional chart effect was
+large and stable in the three registered accessible worlds (eligible gain
+`.1227`, cluster LCB `.0934`; oracle-headroom recovery `.8146`, LCB `.6798`;
+accessible efficiency `.9874`, LCB `.9801`). It also beat both equal-rank
+controls, passed all CKA/permutation, history, compensation, null, alias,
+source, gauge, and hazard gates, and produced zero false successes in 120 null
+cells (Wilson upper `.0310`).
+
+The frozen decision is nevertheless
+`M4_C35_R2B_PARTIAL_CONDITIONAL_EFFECT`, not GO. Two of 160 native cells
+triggered the preregistered `SUPPORT_SHIFT` refusal, including one of 40 main
+cells, so the zero-refusal gate failed.
+
+R2C then implemented the exact pre-response policy
+`Pi = A R + (1-A) B0`. Its fresh 16-cell development replay was exact, but
+all cells were accepted, so `Pi=R` and routing utility was unidentified. A
+separate paired boundary-ecology intervention then crossed the frozen `.80`
+coverage boundary while holding response truth fixed. The scalar gate was
+counterproductive: refused cells had larger forced-`R` gain than accepted
+cells (`.0880` versus `.0301`), and fallback lost `.0528` relative to always
+using `R` (development interval `[-.0824,-.0232]`). Harm discrimination was
+only AUC `.554`. Coverage remains an out-of-support warning, but no longer
+licenses automatic `R/B0` routing.
+
+A post-seal 24-component pre-response applicability signature improved
+leave-one-world-out harm AUC from `.450` to `.588`, but its OOF
+`R2=-.691` and routing value remained negative (`-.0616`). The signature is
+therefore not resolved. The fresh fixed-coverage experiment then crossed
+radial-dispersed, high-leverage-concentrated, tangential, and
+source-asymmetric departures at exact counts `12/16` and `13/16`. Its audited
+432-cell result is `M4_C35_PRE_RESPONSE_DOMAIN_NOT_IDENTIFIED`: all 72 null
+gains and all replay errors were zero, but LOWO `Q` harm AUC was only `.533`
+(LCB `.464`), gain `R2=-1.616`, and routing value over always-`R` was `-.0243`
+(LCB `-.0417`). LORO likewise failed (AUC `.512`, `R2=-.195`, routing value
+`-.0134`). The scalar learner selected `R` for every cell, while the historical
+threshold lost `.0503` relative to always-`R`.
+
+The current observables therefore do not identify a cell-level `R/B0` utility
+gate. Applicability is frozen as a study-design license: inside an independently
+supported design class use the registered chart; outside it report `B0/R`
+sensitivity or refuse. No outcome-driven threshold tuning is authorized, and
+M4-D remains blocked. See
+`docs/SUICA_M4_C35_R2B_CONDITIONAL_CHART_PROTOCOL.md`,
+`docs/SUICA_M4_C35_R2B_LOCKBOX_SEAL.md`, and
+`reports/SUICA_M4_RESPONSE_SAFE_CHART_REPLACEMENT_R2B_CONFIRMATION.md`,
+`reports/SUICA_M4_RESPONSE_SAFE_BOUNDARY_ECOLOGY_DEVELOPMENT.md`, and
+`reports/SUICA_M4_VECTOR_APPLICABILITY_SIGNATURE_PILOT.md`,
+`docs/SUICA_M4_C35_R2C_DIRECTIONAL_APPLICABILITY_DEVELOPMENT_PROTOCOL.md`,
+`reports/SUICA_M4_DIRECTIONAL_APPLICABILITY_DEVELOPMENT.md`, and
+`reports/SUICA_M4_DIRECTIONAL_APPLICABILITY_AUDIT_NOTE.md`.
+
+The binding pre-experiment constitution is
+`docs/SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md`; known empirical openings are
+tracked in `docs/SUICA_FOUNDATION_GAP_LEDGER.md`. It separates human process,
+expression behavior, stored text, representation, anonymous technical
+objects, reference-relative measurements, psychological interpretation, and
+use/decision into eight licensed layers. Unknowns may remain open, but no
+study may cross an open edge implicitly.
+
+Validate a study contract before data or compute access:
+
+```bash
+python scripts/validate_suica_foundation_study.py \
+  --contract configs/suica_foundation_study.smoke.json
+```
+
+Copy `configs/suica_foundation_study.template.json` for a new study. The
+unfilled template intentionally returns `REFUSE_EXPERIMENT_START`.
+
+The first bounded L4-to-L5 implementation is documented in
+`docs/SUICA_L45_REFERENCE_FRAME_PROTOCOL.md`. Validate its contract and
+reproduce the opened synthetic discovery with:
+
+```bash
+python scripts/validate_suica_foundation_study.py \
+  --contract configs/suica_foundation_study.l45_reference_frame.json
+python scripts/run_suica_l45_reference_frame.py \
+  --config configs/suica_l45_reference_frame.discovery_v3.json
+```
+
+V3 passed all registered opened-discovery gates, including a minimum
+condition-specific uncertainty-coverage lower bound of 0.925 and five
+mandatory refusal rates of 1.0. The maximum licensed layer remains L4:
+this is not a validated human score, personality construct, or application.
+
 ## Honest summary of evidence status
 
 Confirmed at held-out grade (T3): choice-axis stability (5/5 axes,
-shrinkage 0.027), 15/15 discovered constructs on unseen users, react
-signatures for 2 constructs under the stranger null. Falsified and retired:
+shrinkage 0.027), 15/15 legacy operational score families on unseen users,
+react signatures for 2 operational families under the stranger null.
+Falsified and retired:
 condition-mean centering (three independent ways), affect word-rates as
 trait or occasion-state measures, attention-weight interpretation as
 measurement evidence. Confirmatory (T4, lockbox opening #1, 2026-07-07):
@@ -158,7 +373,7 @@ including V3.7G/H, the H.4D/R2 residual-completion sequence, and M3, is
 `docs/V8_MATHEMATICAL_RESEARCH_ROUTE.md`. It distinguishes opened development,
 sealed confirmation, real-text technical evidence, psychological construct
 validity, and clinical use. The current integrated status is
-`V8_TECHNICAL_MATHEMATICAL_FRAMEWORK_INTEGRATED__M3_V4_AWAITING_CLEAN_SEAL__HUMAN_CONSTRUCT_VALIDITY_OPEN`.
+`V8_EVENT_TO_RELATION_SEAM1B_SUPPORTED_SYNTHETIC__M3_V4_FORMAL_CONFIRMATION_OPEN__HUMAN_CONSTRUCT_VALIDITY_OPEN`.
 
 M3-V4 mathematical development (2026-07-28) has reached
 `M3_CROSS_FAMILY_V4_READY_FOR_CLEAN_SEAL`. A generator-blind battery recovered
@@ -171,12 +386,92 @@ is not sealed or opened, and it makes no human-text or psychological claim.
 See `docs/SUICA_M3_CROSS_FAMILY_CONFIRMATION_PROTOCOL_V4.md` and
 `reports/SUICA_M3_CROSS_FAMILY_PREFLIGHT_V4.md`.
 
+Full-PANDORA exploratory external connection (2026-07-28): frozen,
+label-blind V8 scoring covered 10,090 authors and retained 7,523
+geometry-ready profiles. The invariant canonical score did not support
+direct Big Five prediction (official-fold mean r=-.005) and was weak for
+MBTI (mean AUC=.544). It did recover the held-out Big5-to-MBTI relation
+matrix (element r=.498, permutation p=.0086, bootstrap 95% CI
+[.383,.582]), exceeding a text-volume/format nuisance view by .289
+[.125,.430]. This is an exploratory cross-scale structural connection on
+previously opened labels, not a named construct or confirmatory personality
+validity result. See `reports/V8_PANDORA_EXTERNAL_CONNECTION_REPORT.md`.
+
+The hierarchical follow-up keeps the upstream author representation,
+canonical relation geometry, and opportunity surface separate. Source-only
+nested routing matched the upstream MBTI head (AUC .608 versus .607) but was
+unstable and noninferior-failing for Big Five (mean r=.049 versus .062).
+Its bridge relation was nonzero (element r=.463; source-head/bridge-author
+refit CI [.140,.621]) but did not outperform upstream. The current decision is
+`LAYER_SPECIALIZATION_PARTIAL_EXPLORATORY`: task-local layer access is a
+supported architecture candidate, while hard winner-take-all routing and a
+universal combined person score are rejected. See
+`docs/V8_HIERARCHICAL_EVIDENCE_STACK_THEORY.md` and
+`reports/V8_HIERARCHICAL_EVIDENCE_STACK_PANDORA.md`.
+
+The subsequent label-free synthetic identifiability line now treats V8 as a
+typed graph rather than a single score chain. `V8-HJIC-1` passed recovery,
+commutation, coverage, alias refusal, frozen-map information order,
+route-nonontology, confound refusal, and reference specificity, but remained
+partial because its shared-relation gate was logically too strong. HJIC-1A
+then separated a relation-matrix license from a unique-mode license; it
+preserved a partial result after `SIMPSON_MIXTURE` was falsely licensed in
+8/60 repetitions. The prospective HJIC-1B correction passed all 10 gates:
+shared relation/mode license rates were .983/.800, low-gap relation/mode rates
+were 1.000/.000, both global and localized Simpson effects were detected in
+all repetitions with zero final licenses, high-dimensional irrelevant
+nuisance caused zero vetoes, collider sensitivity was always vetoed, and
+synthetic truth was never read by licensing. HJIC-1B licenses only a
+condition-invariance veto, not causal deconfounding or personality validity.
+HJIC-1C then implemented the context-fibered relation field and an explicit
+ecological decomposition. In 60 frozen repetitions with 999 null permutations
+and 999 author bootstraps, all 13 gates passed. The covariance identity
+\(J_T=J_W+J_B\) held to q95 error \(1.94\times10^{-15}\); pooled nominal 95%
+coverage was .943. Global invariance, sign-reversal cancellation, ecological-
+only structure, composition reweighting, in/out-of-sieve nuisance behavior,
+low-singular-gap relation without a unique mode, and the context-reliability
+frontier were all classified at or above their registered gates. Ecological-
+only worlds received zero individual-relation licenses, and truth usage by
+licensing was zero.
+
+The subsequent event-to-relation seam preserved two informative partial
+results before reaching a pass. SEAM-1 passed 9/10 gate families but detected
+ecological structure in only .850 of repetitions because it incorrectly
+reused the max-context local null for the single between-context operator.
+SEAM-1A introduced a separate D0 between-null and raised ecological detection
+to .967 with zero individual, held-out-null, or mismatch false ecological
+licenses; it remained partial because the simulation had also silently
+changed the latent-to-event measurement support between D0 and confirmation.
+SEAM-1B made that assumption observable. It calibrates the worst principal-
+angle alignment of raw replicated M3 supports, separately refuses support
+non-invariance and support underresolution, and accepts rotations inside the
+same support. In the independent 60x999 formal run, all 13 gate families
+passed: clean seam and ecological detection were 1.000, both support-drift
+worlds were detected 1.000 with zero final seam licenses, support
+underresolution was detected 1.000, within-support-gauge false refusal was
+.017, population coverage was .924, and truth usage remained zero.
+
+This closes the registered synthetic event-to-M3-to-macro relation seam under
+an auditable support-invariance requirement. It does not close M3-V4's
+separate formal confirmation, identify a transport map after support drift,
+or establish psychological validity. See
+`docs/V8_HIERARCHICAL_IDENTIFIABILITY_PROTOCOL.md`,
+`docs/V8_RELATIONAL_LIFT_SUPPORT_PROTOCOL.md`,
+`docs/V8_NUISANCE_INVARIANCE_VETO_PROTOCOL.md`,
+`docs/V8_CONTEXT_FIBERED_RELATION_PROTOCOL.md`,
+`docs/V8_M3_HJIC_SEAM_PROTOCOL.md`,
+`docs/V8_M3_HJIC_SEAM_1A_PROTOCOL.md`,
+`docs/V8_M3_HJIC_SEAM_1B_PROTOCOL.md`, and the corresponding reports.
+
 The current mathematical measurement object is formalized in
 `docs/V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md`. It separates C1 opportunity
 selection, C2 shared-condition response, population hierarchy/topology,
 stable residual structure, uncertainty, and evidence. Anonymous technical
 objects are not personality constructs until a later external-validity
 mapping is supported.
+The complete event-to-relation type graph, assumptions, estimands, and refusal
+branches are consolidated in
+`docs/V8_MICRO_MESO_MACRO_SEAM_CLOSURE.md`.
 
 The initial V8.0 theory and executable refusal contract are documented in
 `docs/V8_LLM_NATIVE_ASSESSMENT_THEORY.md` and
@@ -569,6 +864,155 @@ weighting, not the claims that every token contains personality or that total
 prediction error is zero. See
 `reports/V8_EXTERNAL_ZERO_UNCERTAINTY_V37F_REPORT.md` and
 `reports/V8_EXTERNAL_ZERO_UNCERTAINTY_V37F_INDEPENDENT_AUDIT.md`.
+
+## V8 real-text density-resolution update (2026-07-29)
+
+A label-free three-corpus audit now distinguishes local replicated density,
+capacity resolution, cross-corpus spectral order, and psychological meaning.
+PANDORA and Essays each confirmed scale-free resolution regions for anonymous
+order-free marginal M and order-specific transition K families. PANDORA
+confirmed 671/835 M and 464/755 K capacity-sharpness cells; Essays confirmed
+700/835 M and 393/755 K cells. All four D0 internal Haar tests had p=.01 and
+effective ranks were about 35--41. X was refused because its D1/D2 author
+counts, 46/42, were below the frozen 48-author gate.
+
+The apparent opposite PANDORA/Essays mask nesting did not survive a
+pair-symmetric shared-gauge replay with equal D0/D1/D2 counts of
+420/296/269. The registered M direction reversed at the point-estimate level,
+and the K direction remained only a weak trend whose simultaneous band did
+not clear zero. The accepted result is therefore
+`LOCAL_SCALE_FREE_RESOLUTION_CONFIRMED__CROSS_CORPUS_SPECTRAL_ORDER_NOT_SUPPORTED`.
+This is technical real-text structure, not a factor inventory, personality,
+emotion, state, diagnosis, or clinical validity. See
+`reports/V8_SUPPORT_RESOLUTION_SCALE_FREE.md` and
+`reports/V8_SPECTRAL_ORDER_REPLAY.md`.
+
+## V8 permutation-orbit correction (2026-07-29)
+
+The K family is no longer treated as one presumed dynamic axis. Every
+four-event path is enumerated over all 24 permutations and decomposed into:
+
+- event-set susceptibility \(V\): what the fixed utterance multiset permits
+  under reordering;
+- observed phase \(q\): where the author's actual order lies after
+  regularized within-orbit whitening.
+
+The apparent common PANDORA--Essays event-set geometry is robust against a
+block-Haar null that preserves the four K feature blocks and all spectra,
+D1/D2 HS excess is .093/.159 and fidelity excess is .116/.170; all four
+max-family \(p=.002\), with positive bootstrap lower bounds.
+
+Observed-order phase is not supported. The full raw-K statistic-level null
+has maxT \(p=.762\)--.966. After orbit whitening, D1 remains only a trend
+(\(p=.211/.249\)) and D2 is below its random-order mean
+(\(p=.967/.955\)). The current headline is therefore:
+
+An additional composition knockout preserved corpus, split, context, event
+position, every event vector marginal, and local text-length rank while
+breaking natural within-author co-occurrence. These pseudo sets reproduced
+the common geometry: D1 maxT \(p=.635/.405\), D2
+\(p=.750/.755\). The final headline is therefore:
+
+`K_OPERATOR_MARGINAL_BACKGROUND_IDENTIFIED__NATURAL_COMPOSITION_AND_OBSERVED_PHASE_NOT_DETECTED`
+
+The final corpus-local signed residual test also finds no stable author
+composition increment. PANDORA D1/D2 maxT \(p=.865/.800\); Essays
+\(p=.995/.995\). No positive-part projection was used. The K branch is
+therefore closed at the **Conditional Marginal Orbit-Susceptibility
+Operator (CMOSO)**:
+
+\[
+\mathcal T_{K,c}
+=
+E_Z E_{\prod_j P_c(x_j\mid Z,j)}
+\operatorname{Cov}_{\pi\in S_4}[K(\pi\{x_1,\ldots,x_4\})].
+\]
+
+This is an operator calibration/background object, not an author
+condition/opportunity response, personality factor, time-arrow result,
+cognitive mechanism, diagnosis, or clinical score. See
+`reports/V8_ORDER_STATISTIC_NULL.md`,
+`reports/V8_PERMUTATION_ORBIT_PHASE.md`, and
+`reports/V8_EVENT_SET_COMPOSITION_KNOCKOUT.md`, and
+`reports/V8_CORPUS_LOCAL_COMPOSITION_RESIDUAL.md`.
+
+## V8 background-quotient concordance update (2026-07-30)
+
+The order-free M family was then tested against pseudo authors that preserve
+corpus, split, context, event slot, local length rank, and complete event
+vectors while perturbing natural author grouping. An audit found that the
+historical nonzero cyclic shift was a valid generative knockout but not an
+exact permutation null: it excluded fixed points and the observed identity
+assignment. The complete M analysis was therefore rerun with uniform
+within-block permutations whose support includes both.
+
+Under the corrected exchangeable null, normalized signed concordance survives
+in all three corpora. D1/D2 link excess is .01650/.01533 in PANDORA,
+.06299/.07299 in Essays, and .20973/.22887 in X-market; every paired lower
+bound is positive. The corresponding same-author AUCs (.560/.559,
+.691/.710, and .788/.786) remain descriptive technical statistics.
+
+Declared opportunity, template, and collection profiles were then fitted on
+D0 and applied unchanged. Signed concordance remains positive in all three
+corpora after this sensitivity filtration: PANDORA D1/D2
+\(.01354/.01741\), Essays \(.05526/.06491\), and X-market
+\(.07391/.10854\), with positive lower bounds and corrected significance.
+This is not subtraction of noise; it is survival relative to a declared
+opportunity model.
+
+The filtered spectrum resolves no stable global linear axis in any corpus.
+The earlier X rank-3 M and rank-1 strict-shape axes are therefore retained
+only as historical raw-quotient findings; they do not survive the declared
+opportunity layer. A subsequent axis-free relation audit finds:
+
+- PANDORA: short-scale RBF relation correspondence at multiplier .5;
+- X-market: multi-scale RBF relation correspondence at .5 and 1.0;
+- Essays: signed scalar concordance only;
+- no corpus: a replicated linear axis or a closed RBF-minus-linear nonlinear
+  increment.
+
+The result is a stronger **separation theorem for the empirical claims**:
+signed concordance, stable factor axes, and reproducible author-relation
+geometry are different objects. PANDORA and X preserve pairwise author
+relations in context-stratified block aggregates without furnishing a common
+coordinate chart. These aggregates weight retained within-context author
+pairs and contain no cross-context relation.
+
+The same-author cross-context follow-up remains underresolved. A subsequent
+strictly nested audit fixed the same 120 authors, the same twelve-event source
+pool, and one twelve-event-fitted operator while revealing 4/6/8/10/12-event
+subsets. In the primary twelve-minus-eight contrast, five of six relation
+cells increased, but D1 AskReddit decreased by .0848 and every pointwise and
+simultaneous interval crossed zero. Across all 15 possible eight-event
+pair-compositions, cross-context excess increased in 15/15 schedules in both
+held panels (median deltas .0620/.0637), whereas within-context directions
+varied by composition. This replaces the earlier informal “all cells rise”
+reading: event count and event composition are separate measurement facets,
+and neither transport nor a universal minimum text budget is established.
+The entire RGC/transport/budget chain remains opened-panel development. See
+`docs/V8_EXCHANGEABLE_BACKGROUND_AUDIT_PROTOCOL.md`,
+`reports/V8_EXCHANGEABLE_BACKGROUND_AUDIT.md`,
+`docs/V8_CBQ_CONCORDANCE_SPECTRUM_THEORY.md`,
+`reports/V8_NUISANCE_FILTRATION.md`,
+`reports/V8_FILTERED_CONCORDANCE_SPECTRUM.md`,
+`reports/V8_RESIDUAL_GEOMETRY_CORRESPONDENCE.md`,
+`reports/V8_CONTEXT_GEOMETRY_TRANSPORT.md`, and
+`reports/V8_CONTEXT_TRANSPORT_RESOLUTION_FRONTIER.md`,
+`docs/V8_NESTED_INFORMATION_BUDGET_PROTOCOL.md`, and
+`reports/V8_NESTED_INFORMATION_BUDGET.md`.
+
+A historical scale-development alignment audit stress-tests SUICA against
+representative design, Generalizability Theory, construct validation,
+state-trait theory, invariance, and argument-based validation. SUICA is a
+methodology foundation rather than a scale-development project. Its most important
+unclosed technical requirements are a declared generalization universe,
+frozen reference-population scoring, person-by-facet error decomposition,
+conditional score uncertainty, response-process evidence, and invariance.
+See `docs/SUICA_SCALE_DEVELOPMENT_ALIGNMENT_AUDIT.md`.
+
+Current real-text state:
+
+`K_BRANCH_CLOSED_AT_CMOSO__M_SIGNED_CONCORDANCE_ALL_THREE__FILTERED_GLOBAL_AXES_NONE__PANDORA_SHORT_SCALE_AND_X_MULTI_SCALE_CONTEXT_STRATIFIED_RELATION_CORRESPONDENCE__CONTEXT_TRANSPORT_INFORMATION_BUDGET_UNDERRESOLVED__HUMAN_CONSTRUCT_VALIDITY_OPEN`
 
 ## Provenance
 

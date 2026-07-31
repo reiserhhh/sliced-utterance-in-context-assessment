@@ -1,0 +1,57 @@
+{
+  "version": "suica-m4-b-endogenous-opportunity-ecology-v1",
+  "estimand_id": "SUICA_M4_B_ENDOGENOUS_OPPORTUNITY_ECOLOGY_V1",
+  "seed": 161803399,
+  "repetitions": 8,
+  "worlds": [
+    "null_exogenous",
+    "exogenous_selection",
+    "endogenous_creation_matched",
+    "fast_return_equal_marginal",
+    "slow_hysteresis_equal_marginal",
+    "history_gated_ecology",
+    "selection_creation_compensation",
+    "hidden_opportunity_alias"
+  ],
+  "base_spec": {
+    "authors": 32,
+    "categories": 4,
+    "response_dimensions": 2,
+    "history_dimensions": 2,
+    "calibration_occasions": 6,
+    "selection_occasions": 3,
+    "evaluation_occasions": 6,
+    "events": 160,
+    "response_noise": 0.16
+  },
+  "estimator": {
+    "ridge": 0.08,
+    "logistic_iterations": 18,
+    "complexity_penalty": 0.00035,
+    "alias_match_threshold": 0.995
+  },
+  "audit": {
+    "selection_threshold": 0.20,
+    "creation_threshold": 0.045,
+    "gate_threshold": 0.035,
+    "return_threshold": 0.10
+  },
+  "discovery_targets": {
+    "minimum_mechanism_macro_f1": 0.85,
+    "minimum_active_support_f1": 0.90,
+    "minimum_sign_accuracy": 0.90,
+    "minimum_loop_geometry": 0.70,
+    "minimum_rho_spearman": 0.80,
+    "minimum_return_spearman": 0.75,
+    "minimum_recovery_spearman": 0.75,
+    "maximum_matched_menu_half_l1": 0.03,
+    "maximum_matched_choice_tv": 0.03,
+    "minimum_matched_balanced_accuracy": 0.80,
+    "minimum_return_balanced_accuracy": 0.80,
+    "minimum_gate_direction_margin": 0.60,
+    "minimum_active_same_author_auc": 0.70,
+    "minimum_alias_refusal_rate": 0.95,
+    "maximum_null_false_positive_rate": 0.05,
+    "minimum_passing_repetitions": 6
+  }
+}

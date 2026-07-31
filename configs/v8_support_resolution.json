@@ -1,0 +1,17 @@
+{
+  "version": "v8-support-resolution-1",
+  "base_config": "configs/v8_realtext_relation_field.json",
+  "matched_events_per_author": 8,
+  "spec": {
+    "capacities": [2, 4, 8, 16, 24, 32, 48, 64, 96, 128],
+    "tau_multipliers": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "bootstrap_draws": 199,
+    "rotation_draws": 99,
+    "minimum_fit_authors": 24,
+    "minimum_confirmation_authors": 32,
+    "minimum_admissible_tau_fraction": 0.4,
+    "denominator_floor": 1e-06,
+    "seed": 20260807
+  },
+  "claim_boundary": "Label-free corpus-local technical resolution audit. It can distinguish replicated support existence from capacity-limited compressibility under the frozen event map. It cannot identify personality, emotion, language universality, causal mechanisms, or clinical validity."
+}

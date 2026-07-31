@@ -37,10 +37,11 @@ The terms are:
 - \(\delta_r\): observer effect;
 - \(e_{uictr}\): remaining measurement error.
 
-The technical measurement object is
+Under the 2026-07-30 foundation ontology, the anonymous L4 technical author
+object is
 
 \[
-\mathfrak M_u
+\mathfrak A_u
 =
 \left(
 a_u,\pi_u,[B_u],R_u^{\mathrm{stable}},
@@ -50,8 +51,9 @@ U_u,E_u;\mathcal P_{\mathrm{ref}}
 
 where \(U_u\) records uncertainty and refusal, \(E_u\) binds the estimate to
 auditable text evidence, and \(\mathcal P_{\mathrm{ref}}\) identifies the
-reference population. Without external validation, \(\mathfrak M_u\) is an
-author conditional-response structure, not a personality profile.
+reference population used by the technical procedure. Without a licensed E45
+reference-scoring edge, \(\mathfrak A_u\) is an author conditional-response
+structure, not an L5 person score or personality profile.
 
 ## 2. Distinct estimands
 
@@ -191,7 +193,7 @@ Passing an earlier layer does not promote a later layer.
 
 ## 7. Role of the LLM
 
-Deterministic SUICA code estimates \(\mathfrak M_u\). A frozen LLM may observe
+Deterministic SUICA code estimates \(\mathfrak A_u\). A frozen LLM may observe
 explicit behavior and render evidence-bound explanations, but it may not
 invent response operators, scores, construct names, diagnoses, or validity.
 
@@ -202,6 +204,7 @@ The later construct mapping
 \{\text{trait, state, emotion, behavior, or clinical construct}\}
 \]
 
+starts only after an E45-licensed L5 measurement \(\mathfrak M_u\) exists and
 remains closed until supported by separately designed external evidence.
 
 ## 8. Statements retired by V8
