@@ -175,3 +175,32 @@ then D-quality-at-fixed-route was NOT the binding path and the residual wall on
 non-flip rows is the Leg-4b floor already at work at 1x; record that the two-stage
 construction is exhausted and the wall passes fully to the design-change track
 (C3.3 excitation).
+
+## Leg 6 — does excitation move the D floor? (design-change track, first lever;
+## registered before run, 2026-08-02)
+
+Relation to prior work: C3.3 measured a Fisher-information frontier under its OWN
+estimator (Fisher-Wiener, single-stage) and ruled NO_GO_INFORMATION_LIMIT against
+its headroom target — but its geometry-vs-log-information slope was positive and
+CI-solid (.0294, LCB .0222), and excitation arms beat passive at every K. The M4-D
+arc since built two new instruments: the Leg-4b floor protocol (oracle-forced route,
+e_d_paired, budget grid) and the Leg-5 two-stage construction. Leg 6 asks the
+design-change question with the NEW instruments: does per-event orthogonal
+excitation (C3.3's balanced signed probes, reused as implemented) move the
+STRUCTURAL FLOOR itself, and does it stack with two-stage?
+
+Arms: {passive, orthogonal excitation} x budget {1x, 2x, 4x} under the Leg-4b
+protocol (oracle-forced route, per-world floors), plus a two-stage+excitation
+full battery at 1x for the stacking question. Same 5 worlds x 8 reps.
+
+Leans: (a) excitation lowers the pooled floor by >= .05 absolute at matched budget
+(pooled e_d_paired floor .39 -> <= .34); (b) BOTH readings registered for the
+scaling: (b1) excitation shifts the LEVEL but the budget-slope stays flat
+(|tail slope| < .15 — a floor translation), vs (b2) excitation RESTORES budget
+scaling (tail slope <= -.35 — the stronger, less likely reading; record which);
+(c) two-stage+excitation pooled loop geometry >= .78 (beyond Leg 5's .7605) with
+the gain concentrated in the two floor-pinned worlds (partition .6527,
+compensation .6209). PIVOT-IF: pooled floor moves < .02 under excitation — then
+the C3.3 information limit extends to the OBJECT level (excitation buys Fisher
+information but not D-resolution), and the design lever must be
+paired/interventional OCCASIONS, which becomes the next registered leg.
