@@ -118,3 +118,34 @@ layers are now repaired BY CONSTRUCTION; all remaining movement belongs to the
 design-change track (C3.3 per-event excitation, paired/interventional occasions,
 de-biased derivative estimators). Boundaries unchanged: truth-referenced diagnostic,
 V1/V2 NO-GO decisions stand, EXPLORATORY tier.
+
+## Addendum 2 (2026-08-02): Legs 6-7 — the floor's interpretation changes from
+## VARIANCE to BIAS; the variance-reduction fork of the design-change track is pruned
+
+Leg 6 (pivot fired): per-event orthogonal excitation moves the pooled floor only
+.0125 (.3902 -> .3777) — the C3.3 information limit extends to the OBJECT level;
+excitation buys LAW information (e_orc_true .376 -> .292; flips 196 -> 167 / 73 -> 54)
+but not disc-oracle resolution, and it does NOT stack with two-stage (.7387 < .7605,
+negative in all five worlds).
+
+Leg 7 (pivot fired; the planner's registered interpretation DIES): independent-
+realization averaging leaves the floor R-invariant (.418/.400/.387/.381 at
+R={1,2,4,8}; slope -.045 vs the predicted -.5; R=8 observed .381 vs .148 predicted).
+The pivot profile decomposes the floor into TWO R-INVARIANT BIAS COMPONENTS:
+law-level bias ~.37 (oracle-own-error, shared by both bases, flat in R — but
+EXCITATION-RESPONSIVE per Leg 6) and basis-mismatch bias ~.13 (estimator-minus-
+oracle gap, flat under everything tested). Leg 4b's oracle self-drift evidence
+(.16-.26) reproduces but is COMMON-MODE — both bases wobble together while their
+difference stays fixed; per-realization variance is only ~19.5% of the paired error
+scale.
+
+REVISED limit statement: the ~.39 floor is invariant to gauge correction, route
+repair, event budget, per-event excitation, AND independent-realization averaging —
+because it is BIAS, not variance. Candidate mechanisms, now separable by experiment:
+(1) the V2 ridge penalty's non-vanishing regularization bias (noted at Leg 4:
+the penalty scales with n by design; it is used in BOTH bases — consistent with the
+shared law-level component); (2) hazard-family misspecification; (3) discovered-
+frame subspace mismatch (the Leg-3 "span must match" thread) for the ~.13 gap.
+Next levers, in registered order: de-biased derivative estimation + family
+enlargement (law-level), subspace alignment (gap), paired/interventional occasions
+(only if the bias levers fail).

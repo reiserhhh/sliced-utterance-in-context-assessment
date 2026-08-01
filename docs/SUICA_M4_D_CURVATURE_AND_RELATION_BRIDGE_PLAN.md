@@ -238,3 +238,33 @@ estimator-family bias or a world-identifiability limit, and the next instrument 
 an oracle-vs-estimator bias decomposition at increasing R; record the
 interpretation's death honestly (it is my registered reading from the synthesis
 doc, so its failure must be recorded as my miss, not softened).
+
+## Leg 8 — bias anatomy: de-biasing, family enlargement, subspace alignment
+## (registered before run, 2026-08-02; loop cycle 3)
+
+The Leg-7 pivot profile split the floor into law-level bias ~.37 and basis-mismatch
+bias ~.13. Three registered levers, one battery:
+
+Arm A (de-biased oracle refit): the V2 ridge penalty's bias does not vanish with n
+by design (Leg 4 note) and appears in BOTH bases. Refit D at the oracle basis and
+oracle-forced route with (i) penalty -> 0 (unpenalized where numerically stable) and
+(ii) a penalty scaled to vanish (lambda ~ 1/n). Measure e_orc_true at 1x and 4x.
+Arm B (family enlargement): enlarge the hazard family at the oracle basis
+(registered enlargement: add pairwise interaction terms of the existing features;
+one step only, no search). e_orc_true at 1x/4x.
+Arm C (subspace alignment for the gap): project/align the DISCOVERED chart frame
+onto the oracle subspace (orthogonal Procrustes on frames; diagnostic only — the
+oracle is unavailable in operation) and refit D at the aligned frame; measure how
+much of the ~.13 estimator-minus-oracle gap closes.
+Arm D (stack): best-of-A/B + excitation (Leg 6 showed excitation moves the
+law-level component .376 -> .292) at the oracle basis; and best-of-A/B/C + two-stage
+full battery vs Leg 5's .7605.
+
+Leans: (a) de-biasing (A) alone cuts oracle-own-error from ~.376 to <= .25 at 1x in
+>= 3/5 worlds (the ridge-bias reading); (b) A or B combined with excitation reaches
+e_orc_true <= .18 pooled at 1x; (c) alignment (C) closes >= half the .136 gap
+(to <= .068); (d) the full stack (D) lifts two-stage pooled loop geometry to >= .80.
+PIVOT-IF: A and B together move oracle-own-error < .05 — then the law-level bias is
+neither regularization nor one-step family enlargement, and the recorded verdict
+becomes WORLD-IDENTIFIABILITY LIMIT with the next instrument an information-operator
+conditioning analysis of the creation estimand in these worlds.
