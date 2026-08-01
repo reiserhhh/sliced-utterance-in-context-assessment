@@ -26,12 +26,24 @@ to −.068). The "floor = per-realization variance" reading — the planner's
 registered interpretation from the synthesis document — **is recorded as
 the planner's miss, plainly: averaging independent realizations was the
 one intervention that interpretation guaranteed would work, and it does
-not.** The floor is a *displacement*, not a *scatter*: a law-level fit
-bias (~.37, shared by both bases, R-invariant) plus a basis-mismatch gap
-(~.13, R-invariant), with only a small averageable component (~20% of the
-paired error's squared scale) on top. The registered next instrument —
-the oracle-vs-estimator bias decomposition at increasing R — was pre-coded
-into this leg and is delivered below (section "Pivot profile").
+not.**
+
+**The headline is the pivot profile.** The floor decomposes into **two
+R-invariant BIAS components, not variance**: (1) a **law-level bias**
+~.37 — the oracle's own refit error vs the generator law, .376 → .366
+across R (slope −.013, flat), shared by both bases; (2) a
+**basis-mismatch bias** ~.13 — the estimator-minus-oracle gap,
+.136 → .132 (slope −.014, flat). Only a small averageable component
+(~20% of the paired error's squared scale) sits on top. Cross-referenced
+with Leg 6, the two components are **experimentally separable**: the
+law-level term responds to excitation (e_orc_true .376 → .292, persisted)
+while the paired disc-vs-oracle resolution does not (floor moved .0125),
+and both are averaging-invariant here. The limit statement's
+interpretation changes from VARIANCE to BIAS: averaging cannot fix it —
+family enlargement / de-biasing (law-level term) and subspace alignment
+(basis-mismatch term) become the next levers. The registered next
+instrument — the oracle-vs-estimator bias decomposition at increasing R —
+was pre-coded into this leg and is delivered below ("Pivot profile").
 
 ## Registered design and leans (verbatim intent from the plan)
 
@@ -162,6 +174,21 @@ and the discovered basis adds a stable ~.13 projection offset
 (basis-mismatch bias). **This is a world/design-level identifiability
 statement, not an estimator-variance statement.**
 
+**Cross-reference to Leg 6 — the two bias sources are experimentally
+separable.** Under per-event excitation (Leg 6, persisted statistics),
+the LAW-LEVEL component responds: `e_orc_true` fell .376 → .292 at 1x
+(excitation buys law information on the oracle's own leg; `e_d_true`
+.592 → .552 likewise), yet the paired disc-vs-oracle floor — the
+statistic the basis-mismatch displacement bounds — moved only .0125.
+Under realization averaging (this leg) BOTH components are flat. The
+factorial picture across the two legs: the law-level bias is
+excitation-responsive and averaging-invariant; the basis-mismatch
+displacement is invariant to both. The levers therefore split by
+component — **family enlargement / de-biasing** (richer hazard model
+family or vanishing-ridge derivative estimators) attacks the law-level
+term, **subspace alignment** (span-matching beyond rank-matching, Leg 3's
+disclosed lead) attacks the basis term. Averaging attacks neither.
+
 Implied-scale arithmetic (heuristic footnote, treating pooled medians as
 RMS-like scales, e(R)² = b² + σ²/R): paired error → bias b ≈ .375,
 per-realization σ ≈ .185 (variance share **19.5%**); oracle-vs-truth →
@@ -258,15 +285,19 @@ the floor's limit statement gains its strongest clause: **the ~.38–.39
 paired floor is a fixed displacement — law-level fit bias (~.37, shared
 by both bases; the ridge-scaling clause of Leg 4b) plus basis-mismatch
 bias (~.13) — that no amount of events, excitation, or independent
-realizations of this observation design can average away.** What remains
-movable, per the pivot profile: (i) the regularization component of the
-law-level bias (de-biased/unpenalized-limit derivative estimators — the
-ridge-vanishing experiment the V2 design forbids by construction);
-(ii) the basis-mismatch component (span-matching beyond rank-matching,
-Leg 3's disclosed lead); (iii) paired/interventional occasions (Leg 6's
-registered next lever), which attack the law-level identifiability term
-rather than the variance term. The design-change track continues with
-the variance-reduction fork now pruned.
+realizations of this observation design can average away.** The limit
+statement's interpretation changes from VARIANCE to BIAS, and the levers
+split by component (see the Leg 6 cross-reference): (i) **family
+enlargement / de-biasing** for the law-level term
+(de-biased/unpenalized-limit derivative estimators — the ridge-vanishing
+experiment the V2 design forbids by construction — or a richer hazard
+family; this is the excitation-responsive component); (ii) **subspace
+alignment** for the basis-mismatch term (span-matching beyond
+rank-matching, Leg 3's disclosed lead; invariant to everything tested so
+far); (iii) paired/interventional occasions (Leg 6's registered next
+lever), which attack the law-level identifiability term rather than the
+variance term. The design-change track continues with the
+variance-reduction fork now pruned.
 
 ## Claim boundary
 
