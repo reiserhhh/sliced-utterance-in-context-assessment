@@ -110,3 +110,46 @@ D-leg error reduction (within-cell rho between width-arm D-leg improvement and l
 improvement >= .5). Pivot-if: flips drop but geometry does not follow (< .70 pooled)
 — then the D-leg error is not selection-driven and the wall has a third layer;
 profile it.
+
+## Leg 3 outcome (2026-08-01, appended) and Leg 4 registration
+
+**Leg 3: PARTIAL — route stabilization without transport recovery; third layer
+identified.** Winning arm arm2_penalized (ridge on hazard feedback/gate, lambda .005
+by the registered OOF rule): flips 196->148 (-24.5%, lean (a) MISS vs halving), pooled
+geometry .6519->.6886, worlds >=.75 still 1/5 (lean (b) MISS), D-leg mediation HOLDS
+(rho .61/.74, lean (c)). Pivot PARTIALLY TRIGGERED (strict letter fires: flips drop,
+pooled .6886 < .70). Third-layer profile: un-flipped rows recover only to median
+e_loop .78; non-flip error floor flat (.6705->.6634); within cells D-leg error ranks
+remaining loop error (rho .69) over GC (.44); oracle-D substitution leaves .41 vs
+oracle-GC .45. **Route identification is necessary but nowhere near sufficient — the
+third layer is D-LEG (creation-derivative) ESTIMATION ERROR AT THE CORRECT ROUTE**,
+which reconnects to the four M4-C.3.x creation-estimator NO-GOs as one persistent
+bottleneck. Two disclosed leads: (i) span must MATCH, not shrink — rank-matching !=
+subspace-matching (width-7 truncation still dropped mechanism directions, flips
+1->12); (ii) the OOF-likelihood lambda rule is the binding constraint on arm 2 (rule
+is monotone in lambda, picked the grid boundary .005; an unregistered lambda=.125
+smoke showed far stronger stabilization — unlicensed, needs registered extension).
+
+## Leg 4 — is the D-leg floor structural or estimator-limited? (registered before run)
+
+Two parts, one script battery, same V2 worlds:
+
+**4a (lambda-grid extension, closes the arm2 question).** Extend the ridge grid to
+{.005,.025,.125,.625,3.125} with the SELECTION RULE CHANGED as registered here:
+choose lambda by out-of-fold ROUTE-IDENTIFICATION ACCURACY (not raw likelihood, which
+Leg 3 showed is monotone and binds at the boundary); rerun the full battery at the
+selected lambda. Leans: (a4a) flips <= 120 at the new selection; (b4a) pooled
+geometry >= .70. Soft: if route-accuracy selection also binds at a boundary, report
+the full lambda-response curve and call the mechanism saturated.
+
+**4b (D-leg resolution scaling — repair path vs limit theorem).** At the correct
+(oracle-forced) route, measure achievable D-leg error vs event budget: rerun creation
+estimation at event budgets {0.5x, 1x, 2x, 4x} of the V2 default per world-rep, with
+the oracle-route fixed, and fit the scaling of median e_d vs budget. Leans: (a4b) if
+e_d scales ~ budget^(-1/2) (estimator-limited), the M4-C.3.x wall is a BUDGET
+problem — record the projected budget to reach e_d <= .25 and the wall becomes a
+resource theorem; (b4b) if e_d plateaus by 2x (structural floor), record a RESOLUTION
+LIMIT for creation estimation at this observation design (the T4-style economics
+statement for the D leg) — either outcome is a theory deliverable, there is no bad
+result here. Kill: none (mapping experiment). Tier: EXPLORATORY, open-exploration
+phase rules.
