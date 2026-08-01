@@ -268,3 +268,42 @@ PIVOT-IF: A and B together move oracle-own-error < .05 — then the law-level bi
 neither regularization nor one-step family enlargement, and the recorded verdict
 becomes WORLD-IDENTIFIABILITY LIMIT with the next instrument an information-operator
 conditioning analysis of the creation estimand in these worlds.
+
+## Leg 9 — the bias-variance account of the paired floor + gap anatomy
+## (registered before run, 2026-08-02; loop cycle 4)
+
+Leg 8 outcome: law-level bias is largely ridge self-infliction (A_lam1n .376 -> .261,
+4/5 worlds; +excitation .194), but the THIRD consecutive stacking failure appeared —
+de-biased D damages paired transport (.6248 < .7605), after excitation (.7387) and
+realization-averaging (.7583) also failed to stack. Emerging hypothesis: the paired
+disc-vs-oracle transport metric REWARDS the V2 ridge's variance reduction; the loop
+floor is a BIAS-VARIANCE EQUILIBRIUM, not a hard limit. Also: the basis-mismatch gap
+(.136) is not orientation (alignment inverts it) and concentrates in three worlds
+(expansion/compensation/rotated .21-.26 vs gated/partition .026/.066).
+
+Arms:
+A (bias-variance decomposition): reuse Leg 7's R-panel machinery. For D estimators
+  {V2 ridge, lam1n, unpen} at budgets {1x, 4x}: decompose per-cell paired error into
+  bias^2 and variance across R=8 fresh panels (bias = error of the R-averaged
+  estimate; variance = mean squared deviation of per-panel estimates around their
+  average). Then run two-stage with each estimator at 1x and 4x (full 5x8 battery
+  per cell).
+B (gap anatomy swap): in the three high-gap worlds, decompose the .21-.26 gap by
+  content swap: (i) oracle basis + discovered support-weights vs (ii) discovered
+  basis + oracle support-weights (both refits at the oracle-forced route). Attribute
+  the gap to basis-content vs support-weighting.
+C (partition reference check): recompute partition's law-level bias under the
+  envelope-corrected reference flagged at Leg 7 (reference gap .645); adjudicate how
+  much of its .592 resistance is artifact.
+
+Leans: (a) the bias-variance signature appears: unpen/lam1n have lower bias and
+higher variance than V2 ridge at 1x, AND the two-stage ranking INVERTS at 4x
+(two-stage+lam1n >= two-stage+V2 at 4x while below at 1x) — if held, the paired
+floor is a bias-variance equilibrium and the limit statement gains its final clause
+(the floor moves with budget ONLY through the variance term of a de-biased
+estimator); (b) basis-content dominates the gap (>= 70% attribution) in >= 2 of the
+3 high-gap worlds; (c) partition's law-level bias at least halves (.592 -> <= .30)
+under the corrected reference. PIVOT-IF: (a)'s inversion does NOT appear at 4x —
+the bias-variance account dies; the paired floor's last layer is the gap itself;
+next instrument = the in-run conditioning profile already persisted at Leg 8
+(results/m4_d_bias_anatomy/conditioning_rows.csv) elevated to a full leg.
