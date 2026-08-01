@@ -61,3 +61,52 @@ Each leg writes one report + one ledger row with actual numbers and lean
 adjudication (hold/miss recorded as always); no prospective seal, no independent
 verification pass (deferred to the post-theory defense phase); nothing here may be
 cited above EXPLORATORY tier.
+
+## Leg outcomes (2026-08-01, appended) and Leg 3 registration
+
+**Leg 1: curvature conjecture NOT SUPPORTED — clean negative, all three leans miss.**
+Pooled Spearman(kappa, loop error) .6977 (knife-edge vs .70) but WITHIN world-rep
+cells the commutator does not rank failures (median rho .103 — the pooled number is
+ecological); path-ordered correction makes loops WORSE (median relative reduction
+-.2815); the commuting-knob construction cannot move the commutator (1.377->1.383)
+yet loop geometry rises .523->.683 as model-selection flips fall 36->22 — transport
+improves at constant commutator, a direct dissociation. The wall is ESTIMATOR-SIDE:
+15.3% hazard model-selection flips (discovered route picks `return`, forcing D=0 and
+loop error 1, where the oracle picks feedback/gate); flip count predicts world-rep
+loop geometry at rho = -.8044 (vs kappa's -.30); within cells the chart-free D-leg
+error ranks author loop error (median rho .699); mechanism: discovered charts
+OVERSPAN the oracle frame (widths 12-13 vs 7), inflating the hazard feedback
+parameterization; the one low-overspan world (history_gated, width 8, 5 flips)
+passes at .915. V1/V2 NO-GOs stand; curvature reading closed.
+
+**Leg 2: R->V bridge PARTIAL — (b),(c) hold, (a) misses.** Rigidity index licenses
+R->V at tau=.5; group-only refusal 200/200 with zero false licenses (not fooled by
+the vanishing-individuality trap; author AUC .84-.90 there while index .004-.075);
+knee/gap-closure adjacent grid points. (a) pooled AUC .8691 vs registered .90 —
+localized to the hard-refusal noise band + one knife-edge cell; at stricter label
+margin .929 (index encodes a stricter standard than the registered 2x criterion);
+adjudicated on the registered margin: miss. Bonus controlled reproduction of the
+F18 pattern: c2_joint eps=1.5 gives within-group author AUC .9933 with index .017 —
+near-perfect detection, zero licensable coordinates, now a PLANTED-WORLD phenomenon.
+
+## Leg 3 — overspan-controlled route identification (attacking where the wall
+## actually lives; registered before run)
+
+Target: Leg 1's pivot profile says the composite-loop wall is caused by chart
+OVERSPAN inflating the hazard feedback parameterization, flipping route selection
+to `return` (D=0). Existence proof that low overspan passes: history_gated
+(width 8, 5 flips, .915).
+
+Design: add width/parsimony control to chart estimation (candidate mechanisms, in
+registered order: (i) rank/width selection on the chart frame by the same
+negative-spectrum floor used in the Leg-2 bridge; (ii) penalized hazard fit;
+(iii) route selection by out-of-fold route-specific predictive score instead of
+in-fold fit). Rerun the exact V2 loop battery per arm.
+
+Leans: (a) width control cuts model-selection flips by >= half (196 total -> <= 98);
+(b) loop transport geometry crosses the original .75 NO-GO bar in >= 3 of 5 worlds
+(currently 1 of 5); (c) mediation: the width-arm's loop improvement is carried by
+D-leg error reduction (within-cell rho between width-arm D-leg improvement and loop
+improvement >= .5). Pivot-if: flips drop but geometry does not follow (< .70 pooled)
+— then the D-leg error is not selection-driven and the wall has a third layer;
+profile it.
