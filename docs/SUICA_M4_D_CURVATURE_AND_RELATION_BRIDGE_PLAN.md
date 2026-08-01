@@ -153,3 +153,25 @@ LIMIT for creation estimation at this observation design (the T4-style economics
 statement for the D leg) — either outcome is a theory deliverable, there is no bad
 result here. Kill: none (mapping experiment). Tier: EXPLORATORY, open-exploration
 phase rules.
+
+## Leg 5 — two-stage route-then-refit estimation (registered before run, 2026-08-02)
+
+Target: the trade-off law (synthesis section 2). If route selection and creation
+estimation are competing objectives at a single lambda, decouple them: STAGE 1
+selects the route exactly as Leg 4a's winning configuration (ridge lambda=.125,
+route-accuracy-selected — flips 73 by construction, unchanged); STAGE 2 refits the
+creation derivative (and the GC legs where the estimator couples them) at the
+STAGE-1-selected route with the V2 baseline (unpenalized) estimator. Loop transport
+recomputed from stage-2 fits. Secondary arm (cheap, licenses the Leg-4a discovery
+observation): single-stage lambda=.025 full battery (the discovery-loop-geometry
+peak; one grid point).
+
+Leans: (a) stage-2 median e_d at selected routes returns to <= .55 (from .783 under
+the flip-optimal ridge; baseline .487); (b) pooled loop geometry >= .70 (missed
+twice by .01 hairs — this is the decisive test of whether the D-distortion was the
+binding path on route-stabilized rows); (c) worlds >= .75: 2-3 of 5 (band, honest
+uncertainty; currently 2/5 under 4a). Pivot-if: (a) holds but (b) misses again —
+then D-quality-at-fixed-route was NOT the binding path and the residual wall on
+non-flip rows is the Leg-4b floor already at work at 1x; record that the two-stage
+construction is exhausted and the wall passes fully to the design-change track
+(C3.3 excitation).
