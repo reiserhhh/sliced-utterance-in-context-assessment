@@ -204,3 +204,37 @@ compensation .6209). PIVOT-IF: pooled floor moves < .02 under excitation — the
 the C3.3 information limit extends to the OBJECT level (excitation buys Fisher
 information but not D-resolution), and the design lever must be
 paired/interventional OCCASIONS, which becomes the next registered leg.
+
+## Leg 7 — realization averaging: the direct test of the floor's interpretation
+## (registered before run, 2026-08-02; loop cycle 2)
+
+Leg 6 outcome (pivot fired): orthogonal per-event excitation moves the pooled floor
+only .0125 (< .02) — the C3.3 information limit extends to the OBJECT level; reading
+B1 (level shift, flat tail); stacking with two-stage HURT (.7387 < .7605, excitation
+cuts flips but adds creation noise). The registered next lever: paired/interventional
+OCCASIONS.
+
+The Leg-4b interpretation ("the floor is the creation derivative's PER-REALIZATION
+variance") makes a sharp falsifiable prediction: averaging D estimates across
+INDEPENDENT REALIZATIONS of the same law must reduce the floor as R^(-1/2), where R
+is the number of realizations — this is exactly what "more events within ONE
+realization" (4b) and "richer excitation within one realization" (Leg 6) could not
+do. The generator supports fresh path realizations under frozen world semantics
+(4b's non-1x panels were exactly that).
+
+Design: at fixed 1x event budget, R in {1, 2, 4, 8} independent realizations per
+world-rep under identical law; D estimated per realization at the oracle-forced
+route (4b protocol), then realization-averaged (simple mean of D estimates;
+secondary: pooled joint fit); e_d_paired vs R per world. Stacking arm: two-stage +
+realization-averaged D at R = 4, full battery, vs Leg 5's .7605.
+
+Leans: (a) THE CONFIRMATION TEST of the 4b interpretation — pooled floor scales as
+R^(-1/2): log-log slope in [-.65, -.35] over R (at R=8, .39 -> ~.14 if exact);
+(b) at R=8 the pooled floor <= .20; (c) two-stage + realization-averaged D at R=4:
+pooled loop geometry >= .82 with the two floor-pinned worlds (partition,
+compensation) crossing .70. PIVOT-IF: the floor is R-INVARIANT too (slope > -.15) —
+then the "per-realization variance" interpretation of Leg 4b is WRONG, the floor is
+estimator-family bias or a world-identifiability limit, and the next instrument is
+an oracle-vs-estimator bias decomposition at increasing R; record the
+interpretation's death honestly (it is my registered reading from the synthesis
+doc, so its failure must be recorded as my miss, not softened).
