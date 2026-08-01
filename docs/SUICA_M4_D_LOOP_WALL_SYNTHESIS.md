@@ -94,3 +94,27 @@ route-then-refit estimation (kills the trade-off law's dilemma if it works);
 frontier) as the first lever; (3) bridge index calibration for heteroscedastic
 fields (Leg 2's C2 rank-cap note); (4) the lambda=.025 D-optimal battery
 (one grid point, cheap, licenses the discovery-peak observation).
+
+## Addendum (2026-08-02): Leg 5 closes the repairable half — the two-stage
+## construction is registered and CONFIRMED
+
+The "unregistered, open" two-stage construction of section 2 is now registered
+(Leg 5, commit 85e1481) and confirmed with ALL THREE leans holding — the arc's first
+full-hold leg: flips 73 (stage 1 = Leg 4a exactly, asserted at 1e-16), stage-2
+median e_d .4481 (better than baseline .4869 — a route-mix effect, not a better
+estimator: 94.3% flip-correct routes remove wrong-route D fits), pooled loop
+geometry .7605 (the twice-missed .70 bar cleared by +.06), worlds >= .75: 3/5,
+creation geometry .8234 (vs baseline .7736; stage 1 alone had destroyed it to .580).
+The stage-1-damaged gated world finishes ABOVE baseline (.9152 -> .7527 -> .9479).
+
+REFINED trade-off law: the DILEMMA is killed (route selection and creation
+estimation are separable objectives — penalize for selection, refit unpenalized at
+the selected route), while the SINGLE-LAMBDA clause survives (the licensed .025
+battery is the best single-stage point, .7230, and still trades D away). What
+remains below 1.0 is the Layer-3 structural floor: two-stage e_d .448 sits ~.03
+above the 1x oracle-forced value (.418), and the two sub-.75 worlds (partition
+.6527, compensation .6209) are exactly the two highest-floor worlds. The repairable
+layers are now repaired BY CONSTRUCTION; all remaining movement belongs to the
+design-change track (C3.3 per-event excitation, paired/interventional occasions,
+de-biased derivative estimators). Boundaries unchanged: truth-referenced diagnostic,
+V1/V2 NO-GO decisions stand, EXPLORATORY tier.
