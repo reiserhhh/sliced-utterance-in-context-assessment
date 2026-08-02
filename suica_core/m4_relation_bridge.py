@@ -92,14 +92,29 @@ def spectral_profile(
     *,
     rank_cap: int = 8,
     floor_multiplier: float = 2.0,
+    noise_floor_override: float | None = None,
 ) -> dict[str, Any]:
-    """Eigenvalue profile, negative-spectrum noise floor, and rank choice."""
+    """Eigenvalue profile, negative-spectrum noise floor, and rank choice.
+
+    ``noise_floor_override`` (leg 13, additive): when given, the rank floor
+    is the override instead of the negative-spectrum estimate; everything
+    else (selection rule, margin) is unchanged.  Default ``None`` keeps the
+    leg-2 behavior byte-identical.
+    """
     eigenvalues = np.linalg.eigvalsh(0.5 * (gram + gram.T))[::-1]
     top = float(max(eigenvalues[0], 0.0))
     negative = eigenvalues[eigenvalues < 0.0]
-    noise_floor = float(
-        max(-negative.min() if len(negative) else 0.0, 1e-12 * max(top, 1.0))
-    )
+    if noise_floor_override is None:
+        noise_floor = float(
+            max(
+                -negative.min() if len(negative) else 0.0,
+                1e-12 * max(top, 1.0),
+            )
+        )
+    else:
+        noise_floor = float(
+            max(float(noise_floor_override), 1e-12 * max(top, 1.0))
+        )
     selected = int(
         np.sum(eigenvalues > floor_multiplier * noise_floor)
     )
@@ -201,6 +216,99 @@ def _symmetric_noise(
     return noise
 
 
+def replicate_noise_sd_model(
+    field_one: np.ndarray,
+    field_two: np.ndarray,
+) -> np.ndarray:
+    """Per-cell noise-sd model from two replicate measurements (leg 13).
+
+    ``delta = (R1 - R2) / sqrt(2)`` is a per-cell noise realization with the
+    per-field noise variance (the shared truth cancels).  The raw per-cell
+    variance ``delta**2`` has one degree of freedom, so it is smoothed by a
+    multiplicative row/column model ``v_uv = m_u * m_v / mean(m)`` with
+    ``m_u`` the off-diagonal row mean -- exactly rank-one in the variances,
+    which is well-specified for per-author heterogeneity and deliberately
+    mis-specified for pair-magnitude noise (disclosed in the leg report).
+    """
+    left = np.asarray(field_one, dtype=float)
+    right = np.asarray(field_two, dtype=float)
+    if left.shape != right.shape or left.ndim != 2:
+        raise ValueError("replicate fields must share a square shape")
+    delta = (left - right) / np.sqrt(2.0)
+    n = len(delta)
+    v_raw = delta**2
+    row_mean = (v_raw.sum(axis=1) - np.diag(v_raw)) / max(n - 1, 1)
+    grand = max(float(row_mean.mean()), _EPS)
+    v_model = np.outer(row_mean, row_mean) / grand
+    sd_model = np.sqrt(np.maximum(v_model, 0.0))
+    np.fill_diagonal(sd_model, 0.0)
+    return sd_model
+
+
+def variance_weighted_floor(sd_model: np.ndarray) -> float:
+    """Analytic spectral edge of the weighted null (leg 13, V1).
+
+    For symmetric noise with independent entries of sd ``s_uv`` the
+    operator-norm edge is ``~ 2 * max_u sqrt(sum_v s_uv^2)`` (Bandeira-van
+    Handel first term); after the ``-1/2 J . J`` centering the Gram-side
+    noise edge is half that, i.e. ``max_u sqrt(sum_v s_uv^2)``.  In the
+    homoscedastic case this reduces to ``sigma * sqrt(n-1)``, matching the
+    negative-spectrum floor's scale, so the baseline's ``2x`` selection
+    multiplier is reused unchanged for this variant.
+    """
+    variance = np.asarray(sd_model, dtype=float) ** 2
+    row_power = variance.sum(axis=1) - np.diag(variance)
+    return float(np.sqrt(max(float(row_power.max()), 0.0)))
+
+
+def _centered_gram_noise(matrix: np.ndarray) -> np.ndarray:
+    """``-1/2 J W J`` via broadcasting (used only by the leg-13 floors)."""
+    row = matrix.mean(axis=1, keepdims=True)
+    col = matrix.mean(axis=0, keepdims=True)
+    return -0.5 * (matrix - row - col + matrix.mean())
+
+
+def permutation_floor(
+    field_one: np.ndarray,
+    field_two: np.ndarray,
+    *,
+    draws: int = 199,
+    quantile: float = 0.95,
+    seed: int = 0,
+) -> float:
+    """Row/col residual-permutation null spectral edge (leg 13, V2).
+
+    The replicate difference ``delta = (R1 - R2)/sqrt(2)`` carries the
+    per-cell noise magnitudes; each draw permutes the off-diagonal entries
+    WITHIN each row (preserving every row's magnitude profile, i.e. the
+    per-author heteroscedastic structure), symmetrizes, and records the top
+    eigenvalue of the doubly centered null Gram.  The floor is the null
+    ``quantile`` (registered .95, 199 draws) and is already a calibrated
+    positive edge, so the selection multiplier for this variant is 1.0
+    (parallel-analysis convention), not the baseline's 2.0.
+    """
+    left = np.asarray(field_one, dtype=float)
+    right = np.asarray(field_two, dtype=float)
+    if left.shape != right.shape or left.ndim != 2:
+        raise ValueError("replicate fields must share a square shape")
+    delta = (left - right) / np.sqrt(2.0)
+    n = len(delta)
+    mask = ~np.eye(n, dtype=bool)
+    off_diagonal = delta[mask].reshape(n, n - 1)
+    rng = np.random.default_rng(seed)
+    tops = np.empty(draws)
+    scratch = np.zeros((n, n))
+    for draw in range(draws):
+        order = np.argsort(rng.random((n, n - 1)), axis=1)
+        permuted = np.take_along_axis(off_diagonal, order, axis=1)
+        scratch[mask] = permuted.ravel()
+        null = (scratch + scratch.T) / np.sqrt(2.0)
+        tops[draw] = float(
+            np.linalg.eigvalsh(_centered_gram_noise(null))[-1]
+        )
+    return float(np.quantile(tops, quantile))
+
+
 def rigidity_report(
     relation: np.ndarray,
     *,
@@ -208,6 +316,11 @@ def rigidity_report(
     seed: int = 0,
     kind: str = "squared_distance",
     candidate_rank: int | None = None,
+    selector: str = "negative_spectrum",
+    replicate_field: np.ndarray | None = None,
+    permutation_draws: int = 199,
+    permutation_quantile: float = 0.95,
+    permutation_seed: int | None = None,
 ) -> dict[str, Any]:
     """Rigidity index and licensing decision from the observed field alone.
 
@@ -224,11 +337,46 @@ def rigidity_report(
     """
     relation = np.asarray(relation, dtype=float)
     gram = gram_from_relation(relation, kind=kind)
-    profile = spectral_profile(
-        gram,
-        rank_cap=config.rank_cap,
-        floor_multiplier=config.floor_multiplier,
-    )
+    if selector == "negative_spectrum":
+        profile = spectral_profile(
+            gram,
+            rank_cap=config.rank_cap,
+            floor_multiplier=config.floor_multiplier,
+        )
+        floor_multiplier_used = config.floor_multiplier
+    elif selector == "variance_weighted":
+        if replicate_field is None:
+            raise ValueError(
+                "variance_weighted selector needs a replicate field"
+            )
+        sd_model = replicate_noise_sd_model(relation, replicate_field)
+        floor_multiplier_used = config.floor_multiplier
+        profile = spectral_profile(
+            gram,
+            rank_cap=config.rank_cap,
+            floor_multiplier=floor_multiplier_used,
+            noise_floor_override=variance_weighted_floor(sd_model),
+        )
+    elif selector == "permutation":
+        if replicate_field is None:
+            raise ValueError(
+                "permutation selector needs a replicate field"
+            )
+        floor_multiplier_used = 1.0
+        profile = spectral_profile(
+            gram,
+            rank_cap=config.rank_cap,
+            floor_multiplier=floor_multiplier_used,
+            noise_floor_override=permutation_floor(
+                relation,
+                replicate_field,
+                draws=permutation_draws,
+                quantile=permutation_quantile,
+                seed=seed if permutation_seed is None else permutation_seed,
+            ),
+        )
+    else:
+        raise ValueError(f"unsupported selector: {selector}")
     rank = (
         int(candidate_rank)
         if candidate_rank is not None
@@ -242,6 +390,9 @@ def rigidity_report(
         "lambda_next": profile["lambda_next"],
         "spectral_margin": profile["spectral_margin"],
     }
+    if selector != "negative_spectrum":
+        base["selector"] = selector
+        base["floor_multiplier_used"] = float(floor_multiplier_used)
     if rank < 1:
         return {
             **base,
@@ -501,6 +652,117 @@ def planted_relation_world(
         "noise": float(noise),
         "sigma_abs": float(sigma_abs),
         "epsilon": float(epsilon),
+    }
+
+
+def heteroscedastic_relation_world(
+    family: str,
+    *,
+    mechanism: str,
+    authors: int = 80,
+    latent_rank: int = 3,
+    groups: int = 4,
+    epsilon: float = 0.0,
+    noise: float = 0.1,
+    author_sigma: float = 1.0,
+    seed: int = 0,
+    field_count: int = 2,
+) -> dict[str, Any]:
+    """Planted worlds observed under registered heteroscedastic noise (leg 13).
+
+    Truth construction is identical in structure to
+    ``planted_relation_world`` (families ``individual`` / ``group_only`` /
+    ``mixed``); only the observation noise differs.  Mechanisms (both
+    variance-matched in expectation to the homoscedastic battery at the
+    same ``noise`` level):
+
+    - ``pair_magnitude`` (H1): per-pair sd ``s_uv = noise * D2_uv`` -- close
+      pairs are nearly exact, far pairs very noisy.  Pair-mean variance
+      equals ``noise^2 * rms_offdiag(D2)^2`` exactly.
+    - ``author_lognormal`` (H2): per-author factors
+      ``f_u = exp(author_sigma * z_u - author_sigma^2 / 2)`` (mean one) and
+      ``s_uv = noise * rms_offdiag(D2) * sqrt(f_u * f_v)`` -- a
+      multiplicative row/column variance structure.
+    """
+    rng = np.random.default_rng(seed)
+    labels: np.ndarray | None = None
+    if family == "individual":
+        scales = 0.85 ** np.arange(latent_rank)
+        truth = rng.normal(size=(authors, latent_rank)) * scales[None, :]
+    elif family in {"group_only", "mixed"}:
+        if authors % groups:
+            raise ValueError("authors must be divisible by groups")
+        labels = np.repeat(np.arange(groups), authors // groups)
+        rng.shuffle(labels)
+        centroids = rng.normal(size=(groups, latent_rank))
+        truth = centroids[labels].astype(float)
+        if family == "mixed":
+            offsets = rng.normal(size=(authors, latent_rank))
+            for group in range(groups):
+                mask = labels == group
+                offsets[mask] -= offsets[mask].mean(axis=0, keepdims=True)
+            spread = float(
+                np.sqrt(
+                    np.mean(
+                        np.sum(
+                            (truth - truth.mean(axis=0)) ** 2, axis=1
+                        )
+                    )
+                )
+            )
+            offset_rms = float(
+                np.sqrt(np.mean(np.sum(offsets**2, axis=1)))
+            )
+            offsets *= epsilon * spread / max(offset_rms, _EPS)
+            truth = truth + offsets
+    else:
+        raise ValueError(f"unsupported planted family: {family}")
+    exact = squared_distance_field(truth)
+    base_scale = _offdiag_rms(exact)
+    author_factors: np.ndarray | None = None
+    if mechanism == "pair_magnitude":
+        cell_sd = noise * exact
+    elif mechanism == "author_lognormal":
+        draws = rng.normal(size=authors)
+        author_factors = np.exp(
+            author_sigma * draws - 0.5 * author_sigma**2
+        )
+        cell_sd = (
+            noise
+            * base_scale
+            * np.sqrt(author_factors[:, None] * author_factors[None, :])
+        )
+    else:
+        raise ValueError(f"unsupported hetero mechanism: {mechanism}")
+    cell_sd = 0.5 * (cell_sd + cell_sd.T)
+    np.fill_diagonal(cell_sd, 0.0)
+    fields = []
+    for _ in range(field_count):
+        raw = rng.normal(size=(authors, authors))
+        unit = (raw + raw.T) / np.sqrt(2.0)
+        noise_matrix = cell_sd * unit
+        np.fill_diagonal(noise_matrix, 0.0)
+        fields.append(exact + noise_matrix)
+    return {
+        "family": f"{'h1' if mechanism == 'pair_magnitude' else 'h2'}_{family}",
+        "truth": truth,
+        "group_labels": labels,
+        "fields": fields,
+        "latent_rank": latent_rank,
+        "noise": float(noise),
+        "sigma_abs": float(noise * base_scale),
+        "epsilon": float(epsilon),
+        "mechanism": mechanism,
+        "author_sigma": float(
+            author_sigma if mechanism == "author_lognormal" else float("nan")
+        ),
+        "cell_sd_rms": float(_offdiag_rms(cell_sd)),
+        "cell_sd_row_max": float(
+            np.sqrt((cell_sd**2).sum(axis=1).max())
+        ),
+        "author_factor_max": float(
+            author_factors.max() if author_factors is not None else float("nan")
+        ),
     }
 
 
