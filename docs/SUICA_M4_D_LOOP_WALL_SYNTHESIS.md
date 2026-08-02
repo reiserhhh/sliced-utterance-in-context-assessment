@@ -149,3 +149,46 @@ frame subspace mismatch (the Leg-3 "span must match" thread) for the ~.13 gap.
 Next levers, in registered order: de-biased derivative estimation + family
 enlargement (law-level), subspace alignment (gap), paired/interventional occasions
 (only if the bias levers fail).
+
+## Addendum 3 (2026-08-02): Legs 8-9 — the floor's final anatomy: ridge
+## self-infliction, common-mode cancellation, and the metric's true meaning
+
+**Leg 8 (1/4 leans; pivot not triggered).** The law-level component ~.376 is largely
+the V2 ridge's own non-vanishing penalty bias: lambda~1/n de-biasing cuts it to .261
+at 1x (4/5 worlds <= .25) and — decisively — RESTORES textbook budget scaling
+(log-log slope -.005 under V2 -> -.521 de-biased; 4x pooled .127).
+**RETROACTIVE CORRECTION TO LEG 4b:** its "RESOLUTION_LIMIT / budget cannot buy
+resolution" verdict was an artifact of the V2 penalty growing with n; under a
+de-biased estimator, budget buys resolution at the textbook rate. The 4b
+MEASUREMENT stands; its interpretation is corrected here (dated note; the 4b ledger
+row remains as recorded per append-only discipline, with this addendum controlling).
+Also: one-step family enlargement worsens (.480; unstable at 3.06 combined),
+alignment INVERTS the basis gap (.136 -> .155 — not orientation), and de-biased D
+DAMAGES paired transport (.625) — the third stacking failure.
+
+**Leg 9 (1/3 leans; the registered pivot fires — the bias-variance account of the
+paired floor is DEAD, informatively).** No ranking inversion at 4x (ts_lam1n .6488 <
+ts_v2 .7538 registered column; .6862 < .7003 on the unregistered lam1n-referenced
+secondary — no reference-bias rescue of the SIGN, though reference bias sets the
+MARGIN: .1357 -> .0220). The signature's bias half INVERTED: paired bias of
+de-biased estimators (.462/.642) EXCEEDS V2's (.381) because ridge shrinkage is
+COMMON-MODE in the pairing and cancels — while against the LAW the same estimators
+are exactly low-bias/high-variance (lam1n .2605 -> .0891 at R=8). The account was
+right about the estimators and wrong about the metric.
+
+**What the paired transport metric actually measures (consolidated).** Agreement
+with the oracle-BASIS fit under shared estimation conventions: it rewards
+common-mode shrinkage, punishes unilateral de-biasing, and its residual gap (.136)
+is pinned by Leg 9's content swap to PER-CATEGORY ROW-DIRECTION CONTENT of the
+discovered chart (basis-content share ~1.06-1.11; support-weighting ~0; oracle
+directions + discovered norms eliminate the gap). Partition's resistance is 30.2%
+reference-envelope artifact (.592 -> .413 corrected; residual real attenuation
+c* ~ .43).
+
+**The wall's story, three reductions deep:** geometry wall (dead, Leg 1) ->
+estimator wall (routes repaired by two-stage, Leg 5; law-bias repaired by
+de-biasing, Leg 8) -> METRIC READING (Leg 9): what remains in the paired diagnostic
+is (i) direction content of discovery — the one object-level deficit left — and
+(ii) the pairing's own common-mode structure, which is a property of the
+truth-referenced diagnostic, not of the estimand. Next: direction-content anatomy
+(Leg 10) with the conditioning profile elevated per the twice-registered hand-off.

@@ -307,3 +307,32 @@ under the corrected reference. PIVOT-IF: (a)'s inversion does NOT appear at 4x �
 the bias-variance account dies; the paired floor's last layer is the gap itself;
 next instrument = the in-run conditioning profile already persisted at Leg 8
 (results/m4_d_bias_anatomy/conditioning_rows.csv) elevated to a full leg.
+
+## Leg 10 — direction-content anatomy of the discovery step
+## (registered before run, 2026-08-02; loop cycle 5)
+
+Leg 9 pinned the residual gap to per-category ROW-DIRECTION content of the
+discovered chart (oracle directions + discovered norms eliminate it; support
+weights ~0). Question: WHERE does discovery lose the directions, and is the loss
+attributable?
+
+Arms:
+A (de-biased discovery): refit the DISCOVERY chart/hazard with lambda~1/n (the
+  Leg-8 lever applied at the discovery stage, not stage-2); measure per-category
+  row-direction alignment to oracle (principal angles / per-category cosine) and
+  the paired gap in the 3 high-gap worlds.
+B (response-safe relaxation, DIAGNOSTIC ONLY — operationally forbidden, label
+  loudly): fit discovery without the response-safe projection; attribute how much
+  direction deficit is the safety constraint's price.
+C (conditioning elevation, the twice-registered hand-off): per-world/per-category
+  information-operator conditioning (extend results/m4_d_bias_anatomy/
+  conditioning_rows.csv to per-category resolution) correlated with the
+  per-category direction deficit.
+
+Leans: (a) de-biased discovery closes >= half the gap in >= 2/3 high-gap worlds;
+(b) BAND, honest uncertainty: safety relaxation alone closes [10%, 60%] of the
+deficit (point-lean: below half — the safety constraint is not the main price);
+(c) conditioning predicts deficit: per-category Spearman >= .6 pooled across the
+three worlds. PIVOT-IF: none of A/B/C attributes >= half the gap -> the direction
+deficit source is UNIDENTIFIED; next instrument = perturbation analysis of the
+discovery objective (gradient of direction estimates w.r.t. panel composition).
