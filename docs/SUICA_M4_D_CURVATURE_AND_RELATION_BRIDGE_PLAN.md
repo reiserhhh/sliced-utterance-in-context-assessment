@@ -619,3 +619,34 @@ falls within factor-2 of the fitted law's prediction. PIVOT-IF: agreement stays
 FALSIFIED; the D3 design must change COMPOSITION (shared-context events,
 within-author condition pairing), not just scale — which becomes the registered
 next design question.
+
+## M4-F1 outcome (2026-08-02, appended)
+
+**1/3 leans (a); pivot does NOT fire — agreement rises off zero on both axes —
+but the measured law kills size-only rescue anyway.** Generator adjudication
+(register-noted in the report Part 0 before compute): no verbatim V8/M3
+generator reaches the registered regime (HJIC has no event axis, so the E1
+gauge cannot even be applied to it; M3's scalar-parameter worlds cap at
+support effective rank ~1-3 and their multi-dim variants CLT-wash through the
+deployed map's projection features) — the registered escape fired and the leg
+ran on the disclosed minimal composition `M4F1RelationWorld` (HJIC latent/
+loadings/taper lifted to event level, per-factor AR(1) chains as the
+order-sensitive carrier, deployed frozen map bit-identically batched, gates
+0.0). Calibration CALIBRATED and verified on 8x20: effM 42.61 / effK 39.64 /
+agreement +.0047 (t 1.03) vs targets 42.17 / 38.53 / ~0; the real
+quarter-budget K collapse reproduces untargeted (7.7-9.1 vs 8.48). Result:
+five swept cells rise off zero (lean a HOLD) but the exponents are tiny —
+events axis FITTED gamma = .153 (CI [.02, 1.22]), .5-agreement budget 10^14x
+with bootstrap lower edge ~155x, still outside the registered [4,50]; author
+axis DEGENERATE (1x->2x flat at the floor) with companion slope .404 > .153
+pointing lean (b)'s way but below the registered >= 3-cell standard (b MISS);
+the events-x16 held-out cell validates the law within factor-2 (obs .0123 vs
+pred .0107) yet the budget band fails by ~12 orders (c MISS). Practical D3
+corollary, stated as a measured-law consequence and NOT as a fired pivot: no
+feasible scale reaches .5 agreement on either axis — the D3 design question
+moves to COMPOSITION (shared-context events, within-author condition pairing).
+Interpretation (hedged): the author axis shows the spurious-field-to-true-
+relation crossover beginning only above ~2x authors; the events axis sharpens
+features while dissolving the realized-state heterogeneity the finite panel's
+field rides on — signal and noise shrink together. Panel design laws line
+continues from the composition question.
