@@ -437,3 +437,50 @@ positive margin in >= 3/4 of cases where baseline capped. PIVOT-IF: no variant
 restores AUC without breaking group-only refusal -> record the refusal-safety vs
 sensitivity TRADE-OFF FRONTIER as the bridge's documented operating curve (a valid
 deliverable, not a failure).
+
+## Leg 13 outcome (2026-08-02, appended) and Leg 14 registration
+
+**Leg 13: 0/3 leans; pivot fired as registered — the tau frontier is the
+deliverable.** Baseline hetero AUC .8372 (problem milder than leaned; weak spot
+author-lognormal .7764; C2 AUC NaN by construction — single-class family, lean was
+correctly registered on rank/margin). V1 variance-weighted DEGRADES (.7268; not
+variance misestimation — its worst-row analytic edge zero-ranks 22.6% of
+reconstructable worlds); V2 permutation ties baseline (.8316). Refusal batteries
+intact everywhere (designed-null 200/200 x3 arms; hetero group-only 360/360 x3;
+zero false licenses). Frontier: baseline at tau .275 dominates (sensitivity .708 at
+0/200 nulls — prospectively reproducing Leg 2's unadopted Youden point); the
+variants buy SPECIFIC repairs (V1: C2 un-cap 60/60 median margin .21; V2:
+deep-noise ordering .944 -> .995). Mechanism discovery: C2 fields are exact EDMs ->
+Gram PSD -> the negative-spectrum floor collapses (~2e-9); the profile-noise PSD
+mean shift is invisible to replicate-difference floors — a debiased cross-half
+floor is the queued candidate (NOT registered here).
+
+## Leg 14 — discovery-objective displacement reduction: the quadratic-basin
+## prediction test (registered before run, 2026-08-02; loop cycle 9)
+
+The arc's one genuine object-level residual: discovery lands a finite frame
+displacement from the oracle and the paired gap grows near-quadratically along it
+(Leg 11: gap ~ theta^1.8-1.9). Therefore any method that shrinks displacement by
+factor alpha should shrink the gap toward ~alpha^2 — a QUANTITATIVE theory
+prediction, not just a repair hope.
+
+Arms (one step each, no search; 3 high-gap worlds x 8 reps):
+A (consensus discovery): average per-rep discovered frames within each world
+  (Frechet/chordal mean on the frame manifold, all 8 reps), refit D at the
+  consensus frame per rep; measures whether displacement is rep-noise-driven.
+B (split-half agreement): fit discovery on half the panels with a registered
+  one-step shrinkage toward the frame fitted on the other half (symmetric,
+  averaged); measures within-rep noise contribution.
+C (prediction check): for every arm and rep, place (displacement fraction alpha,
+  gap fraction) on the Leg-11 basin curve; test gap_fraction ~ alpha^2 against the
+  fitted per-world basin exponents (1.84/1.76/1.87).
+
+Leans: (a) consensus reduces frame displacement by >= 30% in >= 2/3 high-gap
+worlds; (b) where displacement shrinks, the gap follows the basin prediction within
+a factor-2 band (gap_fraction within [0.5, 2.0] x alpha^exponent) in >= 2/3 worlds
+— THE QUANTITATIVE TEST of the quadratic-basin theory; (c) the combined best arm
+reduces the pooled high-gap paired gap by >= 25% vs gap_v2. PIVOT-IF: consensus
+does NOT reduce displacement (< 10%) — displacement is SYSTEMATIC BIAS of the
+discovery objective, not estimation noise; record it, and the objective-redesign
+item (beyond one-step) is deferred as the arc's closing open problem; the loop then
+moves to fresh question mining.

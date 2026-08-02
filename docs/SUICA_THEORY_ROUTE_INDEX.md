@@ -745,3 +745,28 @@ The current research decision is therefore:
 > with dual-path sensitivity or refusal outside licensed designs. The next
 > scientific work should target genuinely new observable mechanisms and human
 > repeated-design edges, not threshold tuning on the opened M4 panel.
+
+## M4-D arc and post-arc queue (2026-08-01..02, appended; open-exploration phase)
+
+Thirteen registered legs interrogated the M4-C loop-transport wall and the reserved
+R->V bridge. Full record: docs/SUICA_M4_D_CURVATURE_AND_RELATION_BRIDGE_PLAN.md
+(registrations + outcomes), docs/SUICA_M4_D_LOOP_WALL_SYNTHESIS.md (the wall in four
+parts, final form), ledger rows M4-D.1..M4-D.16. Headlines: curvature hypothesis
+dead; route flips repaired by construction (two-stage, flips 196 -> 73, pooled loop
+geometry .6519 -> .7605); Leg 4b's "budget-invariant structural floor" retroactively
+corrected (V2 penalty self-infliction; de-biased budget slope -.521 = textbook);
+paired truth-referenced diagnostics shown to reward common-mode shrinkage and to be
+SUBSIDIZABLE by contamination (the C.3 retrofit LOWERED the attribution Spearman
+.7264 -> .6677 while improving every loop statistic); the one genuine object-level
+residual is a smooth quadratic-basin direction-content deficit of discovery
+(gap ~ theta^1.8); the typed R->V bridge exists with a perfect designed-null refusal
+record (200/200 everywhere incl. all heteroscedastic arms) and a documented tau
+operating frontier (baseline at tau .275 dominates; variants buy specific repairs:
+V1 un-caps C2 60/60, V2 repairs deep-noise ordering .944 -> .995; the C2
+exact-EDM/PSD floor collapse is identified, debiased cross-half floor queued as
+candidate). Registered-vs-outcome across the arc: 5 pivots fired exactly as
+pre-committed, 2 planner interpretations killed by their own registered tests, 1
+append-only retroactive correction, 1 outcome outside both registered branches
+(recorded as such). Next registered thread: discovery-objective displacement
+reduction (Leg 14) — the quadratic basin predicts gap ~ alpha^2 under displacement
+fraction alpha, making the residual quantitatively attackable.
