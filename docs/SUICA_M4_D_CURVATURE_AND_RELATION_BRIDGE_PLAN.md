@@ -484,3 +484,49 @@ does NOT reduce displacement (< 10%) — displacement is SYSTEMATIC BIAS of the
 discovery objective, not estimation noise; record it, and the objective-redesign
 item (beyond one-step) is deferred as the arc's closing open problem; the loop then
 moves to fresh question mining.
+
+## Leg 14 outcome (2026-08-02, appended) — the M4-D thread's definitive close
+
+**0/3 leans; pivot fires 3/3 worlds; verdict DISPLACEMENT_IS_SYSTEMATIC_OBJECTIVE_
+BIAS.** Consensus averaging INCREASES displacement in all three worlds
+(-.256/-.264/-.216) and explodes the gap (.215 -> .680): the eight per-rep
+discovered frames share a COMMON bias direction — averaging removes noise, not the
+bias. Split-half agreement moves 4.6%. The basin prediction test was largely
+inapplicable (displacement never shrank). CLOSING OPEN PROBLEM (deferred): which
+term of the discovery objective produces the common displacement — objective
+redesign beyond one-step moves. The loop moves to fresh question mining per the
+registered hand-off.
+
+## M4-E1 — exporting the arc's core discovery to REAL TEXT: the convention gap
+## (registered before run, 2026-08-02; loop cycle 10, fresh thread)
+
+The arc's most consequential finding (Leg 8): the V2 ridge's non-vanishing penalty
+bias manufactured an illusory budget-invariant floor on synthetic worlds. QUESTION:
+does the same self-infliction operate in the REAL-TEXT V8 relation field?
+
+Real text has no oracle, so bias is invisible to split-half agreement (both halves
+share it). The label-free detector is the CONVENTION GAP: fit the relation-field
+estimate under the V2 penalty convention and under lambda~1/n on identical panels;
+measure (i) each convention's internal split-half agreement as event budget n grows
+(subsample fractions {1/4, 1/2, 1}), and (ii) the BETWEEN-convention gap at each n.
+Signature of operating self-infliction: internal agreement tightens with n for both
+conventions while the between-convention gap PERSISTS or grows — the persistent gap
+is the real-text analogue of the arc's disc-oracle law-level bias. Null outcome:
+the between-convention gap shrinks with n at the same rate as internal disagreement
+(penalty immaterial at real-text scale).
+
+Data: the OPENED D1/D2 real-text panels via the existing label-free loaders
+(scripts/run_suica_v8_realtext_relation_field.py machinery; PANDORA tier_u frozen
+parquet, Essays text-only read under the V6-E2 precedent). REUSE-DISCLOSURE: these
+panels are part of the route's declared adaptive exploratory chain (route index
+section 7 item 1); this run extends that chain and must carry the same banner — no
+fresh-panel confirmatory claim.
+
+Leans: (a) both conventions' internal split-half agreement improves monotonically
+with n on PANDORA (sanity); (b) the between-convention gap at full n exceeds 2x the
+internal split-half disagreement of either convention (self-infliction OPERATES) in
+the primary PANDORA field; (c) Essays shows the same sign (direction only, no
+magnitude lean — different register per T6 discipline). PIVOT-IF: the
+between-convention gap tracks internal disagreement (< 1.2x at full n) — penalty
+choice is immaterial on real text at current scales; record it and the arc's
+self-infliction lesson stays synthetic-scoped.
