@@ -373,3 +373,25 @@ distributed direction content, and the arc CLOSES with the residual accepted as
 object-level; final synthesis follows either way — Leg 11 is the arc's designated
 last leg before the loop moves to the standing queue (two-stage retrofit of the C.3
 attribution NO-GO; R->V bridge heteroscedastic calibration).
+
+## Leg 12 — two-stage retrofit of the M4-C.3 physical-edge attribution NO-GO
+## (registered before run, 2026-08-02; loop cycle 7 — first standing-queue item;
+## the M4-D arc itself is closed)
+
+The C.3 error-budget attribution NO-GO (budget Spearman .7264 < .75, passing reps
+4 < 6) was measured with V2 single-stage loops. The M4-D arc since established that
+two-stage route-then-refit removes route-flip contamination (196 -> 73) and improves
+every loop statistic it touched (pooled .6519 -> .7605). Question: does recomputing
+the C.3 attribution over TWO-STAGE loops lift the attribution ordering past its own
+registered bar?
+
+Design: rerun the exact C.3 attribution battery (its own protocol, worlds, and
+Spearman target) with loops/legs produced by the two-stage construction; no other
+change. Report the original NO-GO metrics side by side.
+
+Leans: (a) pooled budget Spearman >= .75 (the original bar; from .7264);
+(b) passing reps >= 6 (from 4); (c) the improvement concentrates in reps where
+stage-1 corrected flips. PIVOT-IF: Spearman moves < .01 -> the attribution deficit
+is independent of route contamination; record and return the item to the M4-C
+track's own queue unchanged. This is a bounded retrofit: one battery, no new
+estimators, no redesign of the attribution formula.

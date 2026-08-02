@@ -192,3 +192,55 @@ is (i) direction content of discovery — the one object-level deficit left — 
 (ii) the pairing's own common-mode structure, which is a property of the
 truth-referenced diagnostic, not of the estimand. Next: direction-content anatomy
 (Leg 10) with the conditioning profile elevated per the twice-registered hand-off.
+
+## Final addendum (2026-08-02): the arc closes — the loop wall, fully decomposed
+## in eleven legs
+
+Leg 11 (pivot fired, informatively): the paired gap is SMOOTH at the oracle point in
+3/3 high-gap worlds — a convex, near-quadratic basin (gap(theta) ~ theta^1.8; early
+rise share 4.5-8.4% vs the 50% knee bar; interval slopes rise monotonically). Nothing
+discrete flips: the evaluator's hard switches are inert along the entire path
+(soft-assignment functional reproduces the hard curves to 1e-12). The all-or-nothing
+reading of Leg 10 is WRONG (recorded); its decoupling is reinterpreted as PATH
+ANISOTROPY — the scalar direction-deficit statistic is not a path coordinate, and
+Legs 8/10's levers moved the frame in unproductive directions. The residual gap is
+genuinely distributed direction content, accrued across the whole oracle->discovered
+frame displacement (73-79% beyond t=.4).
+
+**THE WALL, FINAL FORM (exploratory tier; truth-referenced diagnostic; V1/V2 NO-GOs
+untouched).** The composite-loop paired transport deficit decomposes into exactly
+four parts:
+(i) ROUTE MISIDENTIFICATION under chart overspan — repairable by construction
+    (two-stage route-then-refit; flips 196 -> 73; Legs 3/4a/5);
+(ii) ESTIMATOR SELF-INFLICTION — the V2 penalty's non-vanishing bias, which also
+    manufactured the illusion of a budget-invariant "structural floor" (Leg 4b,
+    retroactively corrected); repairable by lambda ~ 1/n, restoring textbook
+    n^(-1/2) budget scaling (slope -.005 -> -.521; .127 at 4x; Leg 8);
+(iii) COMMON-MODE METRIC STRUCTURE — the pairing cancels shared shrinkage and
+    punishes unilateral convention change; a property of the truth-referenced
+    diagnostic, not of the estimand (Legs 6/7/9: three stacking failures explained;
+    reference bias sets margins, not signs);
+(iv) A SMOOTH, QUADRATIC-BASIN DIRECTION-CONTENT DEFICIT of the discovery step —
+    the one genuine object-level residual (~.21-.23 in 3/5 worlds, ~.03-.07 in 2/5),
+    not orientation (Leg 8), not norms or support weights (Leg 9), not safety-
+    constraint price or conditioning starvation (Leg 10), not a discrete cliff
+    (Leg 11): discovery simply lands a finite frame displacement from the oracle,
+    and the gap grows near-quadratically along that displacement.
+
+Consequence for future design: the productive lever for (iv) is not post-hoc
+alignment polish (path-anisotropic, Leg 10) but reducing frame displacement AT
+DISCOVERY — a better discovery objective is the registered future item, deferred
+with the arc's closure. Interpretation discipline: (iii) means paired truth-
+referenced diagnostics OVERSTATE operational deficits whenever estimation
+conventions differ between sides; any future use of such diagnostics must state the
+shared-convention assumption explicitly.
+
+Registered-vs-outcome record of the arc (honesty table): 11 legs, 3 full-holds
+(Legs 5, 6-lean-b-reading, 9-lean-b), 4 registered pivots fired exactly as
+pre-committed (Legs 6, 7, 9, 11), 2 planner interpretations killed by their own
+registered tests (per-realization variance, Leg 7; all-or-nothing, Leg 11), 1
+retroactive correction of a prior leg's interpretation under append-only discipline
+(Leg 4b, corrected in Addendum 3). The instruments decided, not the leans.
+
+The M4-D arc is CLOSED. The loop's standing queue resumes: two-stage retrofit of the
+M4-C.3 attribution NO-GO; R->V bridge heteroscedastic calibration.
