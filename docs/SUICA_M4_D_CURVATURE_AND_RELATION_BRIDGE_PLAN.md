@@ -530,3 +530,46 @@ magnitude lean — different register per T6 discipline). PIVOT-IF: the
 between-convention gap tracks internal disagreement (< 1.2x at full n) — penalty
 choice is immaterial on real text at current scales; record it and the arc's
 self-infliction lesson stays synthetic-scoped.
+
+## M4-E1 outcome (2026-08-02, appended)
+
+**Pivot fires by ~4,900x: penalty choice is immaterial on real text at current
+scales — the self-infliction lesson stays synthetic-scoped.** Mechanism pinned: the
+two conventions are near-perfectly PROJECTIVELY EQUIVALENT on real text (they clip
+the same eigen-block and differ by a near-global rescale — Frobenius ratio 3.3344
+vs pure-projective prediction 3.3372, 0.03-0.08% off — and the field's own
+comparison gauge, matrix cosine, is scale-invariant; Leg 8's synthetic detection
+was oracle-referenced and scale-SENSITIVE). Deeper finding, the SATURATED
+YARDSTICK: internal split-half agreement is nil at every measurable budget under
+EVERY convention including the deployed penalty-free reference — independently
+re-confirming V8's own REALTEXT_SOFT_SUPPORT_ONLY_RELATION_UNRESOLVED from a new
+angle: the binding constraint on real text is panel SIGNAL, not estimator
+convention. Substituted-knob caveat register-noted before compute (the deployed
+estimator is penalty-free; the whitened relation algebra's lambda was the closest
+live knob). Lean (c) held (Essays same sign); (a) null-regime artifact; (b) miss in
+the pivot direction.
+
+## M4-E2 — anatomy of the common offset (registered before run, 2026-08-02;
+## loop cycle 11; analysis-only on persisted artifacts)
+
+Leg 14's companion decomposition isolated the arc's final object: a REP-INVARIANT
+COMMON OFFSET (12.0-13.8 frame-distance, ~3/4 of per-rep displacement) between the
+discovered-frame cloud center and the oracle-anchor cloud center, unremovable by
+averaging. Question: WHICH objective structure carries it?
+
+Design (no new batteries; analysis of persisted Leg 10/14 frames + one cheap
+diagnostic refit per world): decompose the common-offset vector per world onto
+registered subspaces: (S1) the response-safety projection's complement; (S2) the
+span of supervision-target directions; (S3) normalization/scale modes; (S4)
+residual. Then a diagnostic projection: remove the offset's dominant component from
+each rep's discovered frame and refit D (V2, oracle-forced route) to measure gap
+closure.
+
+Leans: (a) the offset concentrates (>= 60% squared norm) in ONE subspace
+consistently across the 3 worlds — point-lean S1 (safety complement), given Leg 10
+arm B closed ~half the DIRECTION deficit; (b) the concentrated component's
+direction is stable across worlds (pairwise cosine >= .7) — one mechanism, not
+three; (c) removing the dominant component closes >= half the paired gap (the
+practical tie-back). PIVOT-IF: the offset spreads (< 40% in every subspace) — no
+single objective term is responsible; the open problem stays open exactly as
+registered at Leg 14, and the loop moves to fresh mining outside the M4-D/E line.
