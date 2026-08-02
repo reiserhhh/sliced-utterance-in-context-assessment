@@ -395,3 +395,45 @@ stage-1 corrected flips. PIVOT-IF: Spearman moves < .01 -> the attribution defic
 is independent of route contamination; record and return the item to the M4-C
 track's own queue unchanged. This is a bounded retrofit: one battery, no new
 estimators, no redesign of the attribution formula.
+
+## Leg 12 outcome (2026-08-02, appended) and Leg 13 registration
+
+**Leg 12: 0/3 leans; pivot non-fire; the outcome lands OUTSIDE both registered
+branches and is recorded as such.** Two-stage TRANSFERS cleanly to the C.3 worlds
+(flips 149 -> 57, pooled loop geometry .6278 -> .7421, all 5 worlds improve) — yet
+the attribution Spearman DROPS (.7264 -> .6677, passing reps 4 -> 2): the original
+NO-GO's ordering statistic was partially FLIP-SUBSIDIZED (flips injected extreme
+auto-co-ranked values into both budget and realized loss; touched-row medians:
+budget .825 -> .776 while realized loss collapses .449 -> .200). A pre-existing
+budget-denominator pathology was newly exposed (one corrected author's budget blows
+up to 1.73e9). M4_C3_NO_GO stands under BOTH constructions; the item returns to the
+M4-C queue as a better-understood NO-GO. Lesson filed with the arc's part (iii):
+truth-referenced ordering statistics can be SUBSIDIZED by the very contamination
+they sit on — cleaning the estimator can lower the score.
+
+## Leg 13 — R->V bridge: heteroscedastic calibration of the rank selector
+## (registered before run, 2026-08-02; loop cycle 8 — last pre-declared queue item)
+
+Leg 2's disclosed limitation: the rigidity index's auto-rank (negative-spectrum
+floor, eigenvalue > 2x|most negative|) hits the rank cap with near-zero margin under
+heteroscedastic empirical-logit noise (the C2 field family). This is instrument
+development (not deferred defense machinery): the bridge must behave on realistic
+noise fields.
+
+Design: extend the Leg 2 battery with registered heteroscedastic families
+(per-pair noise scaling with relation magnitude; per-author variance heterogeneity;
+empirical-logit profiles via the same hierarchical C2 generator Leg 2 used). Arms:
+baseline selector vs two calibrated variants (one step each, no search):
+(V1) variance-weighted eigen-floor (noise floor from a per-cell variance model);
+(V2) permutation floor (row/col residual permutation null spectrum, 199 draws).
+Measure: rank recovery, license AUC, group-only refusal (Leg 2's designed-null
+battery reused — MUST stay intact), and C2-field behavior (cap-hit rate, margin).
+
+Leans: (a) the problem is real: baseline license AUC <= .80 under the
+heteroscedastic families (vs .944 homoscedastic individual-family in Leg 2);
+(b) at least one calibrated variant restores AUC >= .88 while keeping group-only
+refusal >= 199/200; (c) on C2 fields the winning variant produces non-cap rank with
+positive margin in >= 3/4 of cases where baseline capped. PIVOT-IF: no variant
+restores AUC without breaking group-only refusal -> record the refusal-safety vs
+sensitivity TRADE-OFF FRONTIER as the bridge's documented operating curve (a valid
+deliverable, not a failure).
