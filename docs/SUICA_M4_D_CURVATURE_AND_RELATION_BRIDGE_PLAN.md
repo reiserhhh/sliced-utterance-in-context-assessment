@@ -573,3 +573,49 @@ three; (c) removing the dominant component closes >= half the paired gap (the
 practical tie-back). PIVOT-IF: the offset spreads (< 40% in every subspace) — no
 single objective term is responsible; the open problem stays open exactly as
 registered at Leg 14, and the loop moves to fresh mining outside the M4-D/E line.
+
+## M4-E2 outcome (2026-08-02, appended) — the M4-D/E line closes
+
+**0/3 leans; pivot fires; verdict OFFSET_SPREAD_NO_SINGLE_OBJECTIVE_TERM.** Shares:
+S1 safety-complement .20-.23, S2 supervision-span .01-.03 (the supervised block is
+NOT where the bias lives), S3 norm/scale .30-.38, S4 residual .40-.45 — nothing
+reaches 40% anywhere. Cross-world offset cosines .416-.452 sit AT the permutation
+null (~.43): world-specific directions, not one mechanism. Dominant-component
+removal DOUBLES the gap (.215 -> .480; closures -1.11 to -1.28) — the discovered
+frame is a jointly-adapted local optimum; amputating one direction breaks it
+(consistent with the Leg-11 smooth basin). CLOSING CHARACTERIZATION of the open
+problem: the discovery objective's common displacement is distributed across
+objective structure and world-specific in direction; the redesign will be neither a
+one-term fix nor a shared-direction fix. The M4-D/E line is CLOSED (14 legs + E1 +
+E2); fresh mining moves outside the line.
+
+## M4-F1 — the D3 panel sizing law (registered before run, 2026-08-02; loop cycle
+## 12, new line: panel design laws)
+
+M4-E1's saturated yardstick: real-text internal split-half agreement is nil at
+current D1/D2 panel scales under EVERY estimator convention — the binding
+constraint is panel signal. The V8 route's own item 1 requires a fresh D3 panel
+with event count and composition registered BEFORE opening. This leg supplies the
+principled sizing: a label-free, synthetic power law calibrated to the real-text
+regime.
+
+Design: use the existing V8/M3 relation-field world generators; calibrate the
+noise/support regime to the observed real-text diagnostics (effective rank ~39-42,
+internal agreement ~0 at current n, the D0/D1 panel shapes persisted in the
+realtext artifacts). Sweep panel scale on two axes SEPARATELY: authors x{1,2,4,8}
+at fixed events/author, and events/author x{1,2,4,8} at fixed authors. Measure
+internal split-half agreement (the field's own gauge) per cell; fit power laws;
+extrapolate the budget where agreement crosses .5; validate the extrapolation at
+one held-out large cell (16x on the cheaper axis).
+
+Leans: (a) agreement rises off zero within the swept range in the calibrated
+worlds (if it cannot, the calibration itself falsifies size-only rescue);
+(b) AUTHOR count dominates: the author-axis scaling exponent exceeds the
+events-per-author exponent (relation fields are pairwise objects — doubling
+authors quadruples pairs); (c) the .5-agreement budget lands within [4x, 50x] of
+current D1/D2 on the dominant axis (wide honest band), and the 16x held-out cell
+falls within factor-2 of the fitted law's prediction. PIVOT-IF: agreement stays
+~0 even at the largest swept cells in calibrated worlds -> SIZE-ONLY RESCUE
+FALSIFIED; the D3 design must change COMPOSITION (shared-context events,
+within-author condition pairing), not just scale — which becomes the registered
+next design question.
