@@ -336,3 +336,40 @@ deficit (point-lean: below half — the safety constraint is not the main price)
 three worlds. PIVOT-IF: none of A/B/C attributes >= half the gap -> the direction
 deficit source is UNIDENTIFIED; next instrument = perturbation analysis of the
 discovery objective (gradient of direction estimates w.r.t. panel composition).
+
+## Leg 11 — perturbation analysis: is the paired gap a non-smooth functional at the
+## oracle point? (registered before run, 2026-08-02; loop cycle 6)
+
+Leg 10 outcome (1/3; decoupling headline): de-biased discovery repairs direction
+ALIGNMENT (.24-.41 of the deficit) without closing the paired gap (+.113/-.140/-.138);
+safety relaxation closes .5008 of the direction deficit but only .213 of the gap;
+conditioning is dead as a predictor (within-world flat; pooled -.391 = Simpson
+artifact). Combined with Leg 9's exact-oracle swap eliminating the gap entirely, the
+gap appears NON-MONOTONE — effectively all-or-nothing — in direction content
+(rho(direction improvement, gap improvement) = .218/-.133). Registered hand-off:
+perturbation analysis of the discovery objective, sharpened here to the paired
+functional itself.
+
+Design (3 high-gap worlds x 8 reps):
+A (geodesic interpolation): interpolate chart frames from oracle to discovered along
+  the frame-manifold geodesic, t in {0,.05,.1,.2,.4,.7,1.0}; refit D at each t
+  (V2 estimator, oracle-forced route); gap(t) per world.
+B (controlled random perturbations): perturb ORACLE directions by fixed principal
+  angles theta in {1,2,5,10,20 degrees} (random within-category rotations, 8 draws
+  each); gap(theta).
+C (discrete-event instrumentation): instrument the paired evaluator to log every
+  discrete internal decision (category association, route agreement, support-cell
+  membership) along A's path; identify WHICH discrete decision flips at the knee,
+  if a knee exists.
+
+Leans: (a) NON-SMOOTHNESS: gap(t) jumps by >= half its full value within t <= .2
+(equivalently gap(theta) jumps by >= half by theta <= 5 degrees) in >= 2/3 worlds;
+(b) the jump co-occurs with an identifiable discrete event (C isolates a single
+flipping decision family in >= 2/3 worlds); (c) DIAGNOSTIC (unregistered-secondary
+reporting): a soft-assignment variant of the paired functional removes >= half the
+jump where (b) identifies the event. PIVOT-IF: gap(t) is SMOOTH (no knee; roughly
+proportional growth) -> the all-or-nothing reading is wrong, the deficit is genuinely
+distributed direction content, and the arc CLOSES with the residual accepted as
+object-level; final synthesis follows either way — Leg 11 is the arc's designated
+last leg before the loop moves to the standing queue (two-stage retrofit of the C.3
+attribution NO-GO; R->V bridge heteroscedastic calibration).
