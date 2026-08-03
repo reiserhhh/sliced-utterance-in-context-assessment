@@ -73,3 +73,18 @@ spent on 2026-07-07: the overall rule failed (2/7; required at least 4/7), H2
 and H6 individually passed, one legacy opening remains, and the Essays
 confirm-half remains unopened. Version 0.2.0 does not rewrite that frozen
 record or reset its budget.
+
+## 2026-08-03 note: Essays confirm-half text consumption
+
+The 2026-07-07 record above concerns the LABEL budget and remains intact: the
+Essays confirm-half labels have never been read. Separately, during the V8
+realtext runs of 2026-07-29..30 (`v8_corpus_local_composition_residual`,
+`v8_conditional_concordance_spectrum`, `v8_exchangeable_background_audit`),
+`load_essays_events` (scripts/run_suica_v8_realtext_relation_field.py) read
+the TEXT of every Essays row (`usecols=[user_id, text]`) and ordered authors
+by a fresh salt (`"v8rt-essays"`), bypassing the frozen 50/50 dev/confirm
+split. Consequence: the confirm-half is no longer a text-untouched cohort.
+Any future design that needs text-blindness must exclude the Essays
+confirm-half or obtain fresh data. The label lockbox itself is unchanged.
+Recorded by `docs/V8_PUSH_REMEDIATION_20260803.md` (item 2); ledger row
+V8-ESSAYS-TEXT1.

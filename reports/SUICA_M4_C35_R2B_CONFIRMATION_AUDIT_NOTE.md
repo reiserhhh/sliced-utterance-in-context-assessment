@@ -64,3 +64,23 @@ fallback must be frozen before response opening.
 - Do not claim unconditional chart replacement, causal mechanism recovery,
   natural-text transport, personality validity, clinical use, or M4-D
   readiness.
+
+## 2026-08-03 appendix — persistence status of the refusal-coverage figures
+
+Artifact-backed in `results/m4_response_safe_chart_replacement_r2b_confirmation/`:
+the refusal rate `.0125` (`decision.json` → `native_rcca_refusal_rate`), the
+two refused cells and their identities, the retained shared rank 6, and
+`rcca_refusal_reasons = SUPPORT_SHIFT` (`metrics.csv`, rows with
+`rcca_refused = True`: repetition 3 `fast_return_equal_marginal__draw_01`,
+repetition 7 `endogenous_creation_expansion`).
+
+NOT persisted in any artifact: the two coverage fractions `.6875` and `.75`
+quoted in "Failed gate" above. They were recomputed live during the
+2026-08-01 review session; the confirmation bundles persist score matrices
+only, so these two numbers cannot be reproduced from stored artifacts.
+Status: **SESSION_RECOMPUTED_UNPERSISTED** — cite the refusal facts from
+`metrics.csv`/`decision.json`, not the fractions. A bounded rerun of the
+pre-response gate on the two cells to persist per-condition coverage is
+optional queued work; `refusal_coverage_note.json` records this status beside
+the artifacts. Adjudicated in `docs/V8_PUSH_REMEDIATION_20260803.md`
+(item 5); ledger row V8-R2B-PERS1.

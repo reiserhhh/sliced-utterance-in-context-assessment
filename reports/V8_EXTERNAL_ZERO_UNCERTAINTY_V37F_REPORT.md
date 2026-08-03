@@ -35,7 +35,9 @@ V3.7F prospective seal passed.
 
 ## Results
 
-All 25 frozen checks passed.
+All 24 frozen checks passed. *(2026-08-03 correction: the original text said
+25; `decision.json` `checks` holds 24 named checks —
+`docs/V8_PUSH_REMEDIATION_20260803.md`, item 5.)*
 
 | Result | Canonical estimate |
 | --- | ---: |
@@ -45,7 +47,7 @@ All 25 frozen checks passed.
 | Permutation selected-rank <=2 rate | 1.000 |
 | Permutation residual AUC | 0.4990 |
 | Exact-rank oracle residual AUC | 0.4983 [0.4861, 0.5111] |
-| Dense-tail residual AUC | 0.8635 [0.8437, 0.8817] |
+| Dense-tail residual AUC (at event budget 256) | 0.8635 [0.8437, 0.8817] |
 | Dense-tail conditional residual gain | 0.3635 [0.3430, 0.3823] |
 | Exact-rank normalized capacity floor | 0.0102 |
 | Dense hard capacity floor | 0.0546 |
@@ -59,6 +61,14 @@ All 25 frozen checks passed.
 | External-zero variance reduction, 64 to 256 | 74.6% |
 | Null-change false positive | 0.0521 |
 | Two-MDC power | 1.000 |
+
+*2026-08-03 annotation (`docs/V8_PUSH_REMEDIATION_20260803.md`, item 5):* the
+dense-tail residual AUC row above is budget-indexed, not budget-invariant.
+Per-budget means from `cell_summary.csv`
+(`v37f_confirmation_final_20260726`): 32 → 0.8896, 64 → 0.9518, 128 → 0.9497,
+256 → 0.8635, 512 → 0.5393. At the 512-event budget the omitted-coordinate
+residual signal collapses toward chance; do not quote 0.8635 without its
+budget.
 
 At 256 events, event variation was the largest registered uncertainty source
 in both tracked worlds. Calibration/rank/subspace selection remained

@@ -47,7 +47,9 @@ measure choice as a channel).*
   `reports/suica_lockbox_opening_1.md`. H2 (first-person -> Neuroticism,
   r=+0.111, q=.002) and H6 (politics/news choice -> Openness, r=+0.096,
   q=.006) confirmed at lockbox tier. One opening remains; the Essays
-  confirm-half labels are still untouched.
+  confirm-half labels are still untouched, though its text was read by V8
+  realtext loaders on 2026-07-29..30 and it is no longer a text-blind cohort
+  (`docs/V8_PUSH_REMEDIATION_20260803.md`, item 2).
 - **Code** — `suica_core/` + `suica_sim/` + `scripts/` + `tests/`. The V7
   release lockbox is independently verifiable without restricted corpora.
 
@@ -56,7 +58,7 @@ measure choice as a channel).*
 ```bash
 pip install -r requirements.txt
 python -m pytest -q tests/test_suica.py          # 39 passed
-python -m pytest -q -p no:cacheprovider          # release audit: 302 passed
+python -m pytest -q -p no:cacheprovider          # release audit: 970 passed (2026-08-03; 318 at the v0.2.1 tag)
 python scripts/verify_suica_v021_lockbox.py       # portable v0.2.1 seal
 python scripts/run_suica_synthetic_ground_truth_v2.py   # P0: estimator
 python scripts/run_suica_p0b_thin_cell_regime_v3.py     # P0-B: thin cells

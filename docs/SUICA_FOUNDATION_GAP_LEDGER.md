@@ -32,7 +32,7 @@ Authority: `docs/SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md`
 | F13 | Language/culture transport | `EMPIRICALLY_BOUNDED_OPEN` | Shared embedding space is not measurement invariance. | Within-language stability plus cross-language/culture invariance and response-process evidence. | No universal-human or bias-free comparison. |
 | F14 | LLM observer/explanation | `CONSTITUTIONALLY_CLOSED` in role; `EMPIRICALLY_BOUNDED_OPEN` in fidelity | LLM cannot be final scorer or mutate evidence. | Model/rater perturbation, fidelity, calibration, and comprehension tests. | Renderer-only output with evidence and counterevidence. |
 | F15 | High-stakes/forensic overlay | `DOWNSTREAM_INACTIVE` | Jurisdiction, response style, collateral sources, base rates, costs, contestability, and custody are mandatory overlays. | Application-specific prospective and legal validation. | No high-stakes use. |
-| F16 | Frozen-source integrity | `EMPIRICALLY_BOUNDED_OPEN` in the current checkout | Source hashes are first-class governance evidence; a changed implementation is a new operator. | Reconstruct the originally locked source from its recorded commit or register a new study ID and seal. Five legacy H4C/R2D/R2E source-lock tests currently detect hash drift. | Do not relabel or rerun the old frozen protocol against changed source code. |
+| F16 | Frozen-source integrity | `EMPIRICALLY_BOUNDED_OPEN` in the current checkout | Source hashes are first-class governance evidence; a changed implementation is a new operator. | Reconstruct the originally locked source from its recorded commit or register a new study ID and seal. 2026-08-03 reconciliation: the five legacy H4C/R2D/R2E source-lock tests pass against the committed tree AND run-time artifact lock hashes match it — the earlier "currently detect hash drift" described a transient pre-commit working-tree state, since reverted; no re-bake occurred (see the dated note at the end of this document). | Do not relabel or rerun the old frozen protocol against changed source code. |
 | GAP-F17 | L4 output-type to L5 interface | `CONSTITUTIONALLY_CLOSED` as a typing rule; `EMPIRICALLY_BOUNDED_OPEN` for relation- and population-valued instances | L4 author vectors/operators (`V`), dyadic relations/distances (`R`), and population relation fields (`P`) are distinct. E45-V, E45-R, and E45-P cannot inherit one another's license. The current L45 V3 candidate covers E45-V only. | Type-specific reference object, dependence model, confidence region, detectable-difference rule, transport audit, and separately sealed confirmation. | No relation-to-person scalarization, ecological-to-individual inference, or person ranking from a population field. |
 
 ## Closure ruling
@@ -44,3 +44,20 @@ claim early.
 
 Any newly discovered gap must be added here before an experiment is designed.
 If it cannot yet be typed, the study status is `REFUSE_EXPERIMENT_START`.
+
+## 2026-08-03 F16 reconciliation note
+
+Three-way verification (`docs/V8_PUSH_REMEDIATION_20260803.md`, item 4):
+run-time `source_lock` expected/observed hashes persisted in the decision
+artifacts were compared against the committed tree. R2E 9/9 and 9/9; R2E1
+discovery 10/10 (the only mismatch anywhere is the superseded same-day
+corrected-smoke runner state, replaced before the discovery run); R2E2 11/11
+and 11/11; R2D 5/5 in all three runs; H4C recorded
+`detector_source_lock: true` at run time and its config lock (3 hashes)
+matches the tree. All five legacy lock tests pass. The 2026-07-30 row text
+"currently detect hash drift" described a transient pre-commit working-tree
+state that was reverted before commit `4eb0124`; the committed sources equal
+the originally locked sources, so no re-bake occurred and the F16 refusal
+rule was not violated in committed history. F16 remains
+`EMPIRICALLY_BOUNDED_OPEN` as a program: per-study source-reconstruction
+obligations are unchanged.

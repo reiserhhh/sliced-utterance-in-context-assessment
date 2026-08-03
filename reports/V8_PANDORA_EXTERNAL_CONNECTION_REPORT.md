@@ -86,3 +86,59 @@ python scripts/run_suica_v8_pandora_external_connection.py --stage all
 ```
 
 Detailed trait/axis rows, fold predictions, relation matrices, and the hash-bound score manifest are stored beside this report.
+
+## Post-hoc adjudication (2026-08-03)
+
+Status revision for the bridge headline:
+`OPENED_PANDORA_EXPLORATORY_EXTERNAL_CONNECTION` →
+**`POST_HOC_OPERATOR_SELECTED_EXPLORATORY`**. Recorded by the push-gate
+review (`docs/V8_PUSH_REMEDIATION_20260803.md`, item 1). The original text
+above is preserved unedited.
+
+**Provenance.** This report summarizes
+`results/v8_pandora_external_connection/operator_aligned_clean_20260728/`
+only; no run directory was named in the original text. No `run_manifest.json`
+exists in any of the three run directories (`smoke_20260728`,
+`full_20260728`, `operator_aligned_clean_20260728`); each carries a
+`score_manifest.json` only.
+
+**Undisclosed same-day two-run sequence (UTC 2026-07-28, from `decision.json`
+`completed_utc`).**
+
+| Time | Event | Bridge element r (v8_canonical) |
+|---|---|---|
+| 04:14:56Z | `smoke_20260728` completes | smoke scale |
+| 04:29:15Z | Run 1 `full_20260728` completes — official-prepared-input pipeline; geometry-ready 3,813; strict-bridge n=78 | **−.103** (element p=.666, permutation p=.673) |
+| ≈04:34Z | Run-1 `REPORT.md` duplicated byte-identically as `REPORT_OFFICIAL_PREPARED_INPUT.md` | — |
+| 05:04:42Z | Run 2 `operator_aligned_clean_20260728` completes — frozen native operator (12-token minimum units, 32 temporally spread comments, 4096-token budget, leakage cleaning); geometry-ready 7,523; strict-bridge n=264 | **+.498** (element p=.025, permutation p=.0086) |
+
+Only run 2 was written up. No tracked file disclosed run 1's existence, its
+null, or the temporal order.
+
+**Operator non-robustness.** Run-1 bridge rows (`full_20260728/bridge_summary.csv`,
+n=78): v8_canonical **−.103** (permutation p=.673); nuisance_only **+.384**
+(p=.028); v8_plus_nuisance **+.463** (p=.009); v7_author48 **+.438**
+(p=.0074). Under the first operator, every view except the headline
+(invariant-score) view showed bridge signal, and nuisance beat the invariant
+score by ≈.49. The operator switch specifically rescued the headline view
+(−.103 → +.498) while nuisance dropped (+.384 → +.209), flipping the sign of
+the headline contrast "V8 beyond nuisance" from ≈−.49 to +.289.
+
+**What stands, what is demoted.**
+
+- Unchanged and honest: the direct-prediction nulls (Big5 mean r=−.005, MBTI
+  mean AUC .544, both below nuisance), label-blind scoring before joins, zero
+  source/bridge overlap in both runs, the claim boundary, and "cannot
+  replenish the spent lockbox".
+- Demoted: bridge element r=.498 is post-hoc operator-selected exploratory.
+  It may motivate a design; it may not be cited as evidence of cross-scale
+  structure without simultaneously citing run 1 (−.103) and the selection
+  order.
+- Also on record: this campaign was the program's largest single-day label
+  consumption (Big5 1,401 + four MBTI axes 9,042 + strict both-label bridge
+  joined the same day) with no registration document written before the join.
+
+**Forward rule (binding).** Any future bridge claim requires (i) the operator
+fixed and registered before labels are joined; (ii) every operator run on the
+question reported together; (iii) fresh folds or fresh data for any
+confirmatory tier.

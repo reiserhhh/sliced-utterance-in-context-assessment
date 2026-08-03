@@ -194,7 +194,15 @@ def load_pandora_events(config: dict[str, Any]) -> tuple[pd.DataFrame, dict[str,
 
 
 def load_essays_events(config: dict[str, Any]) -> tuple[pd.DataFrame, dict[str, Any]]:
-    """Build buffered within-document pseudo-replicates without label columns."""
+    """Build buffered within-document pseudo-replicates without label columns.
+
+    2026-08-03 governance note: this loader reads the TEXT of every Essays row
+    and orders authors by fresh salt, ignoring the frozen dev/confirm 50/50
+    split. The Essays confirm-half is therefore no longer text-untouched
+    (labels were never read; the label budget is intact). Do not use this
+    loader for any design that claims a text-blind holdout — see ledger row
+    V8-ESSAYS-TEXT1 in docs/CLAIMS_LEDGER.md.
+    """
     path = _resolve(config["path"])
     raw = pd.read_csv(path, usecols=["user_id", "text"], dtype={"user_id": str})
     candidates = []

@@ -143,3 +143,20 @@ GitHub logs and fixed the same day:
 
 Test/install steps were NOT implicated: both the 3.12 and 3.14 matrix legs installed
 the lock and passed the full suite on CI; only the verifier steps failed.
+
+## 2026-08-03 appendix — V8-drop process rules (push remediation item 6)
+
+1. **Git granularity restored.** The V8 drop landed ~890 files in 5 commits
+   within minutes of each other, so no V8-era seal has an independent pre-run
+   commit; every seal in that range is self-attested only. Standing rule (as
+   practiced in the M4-D arc): the registration/seal goes in its own commit
+   BEFORE execution; results land in a separate later commit. A seal whose
+   registration and outcome share one commit is EXPLORATORY by construction.
+2. **Date-typed run-suffix ban.** Several V8 run directories carry date-like
+   suffixes that are not execution dates (e.g. `smoke_20260816` executed
+   2026-07-29; `audit_20260824` executed 2026-07-30). Suffixes that parse as
+   dates but encode seeds or configuration are forbidden going forward; use
+   non-date tokens so provenance timestamps stay unambiguous.
+3. **v0.3.0 numeric lockbox queued.** V8-era headline numbers receive a
+   hash-bound lockbox at the next release tag; until then, each report's
+   reproduction command plus its results directory is the only binding.

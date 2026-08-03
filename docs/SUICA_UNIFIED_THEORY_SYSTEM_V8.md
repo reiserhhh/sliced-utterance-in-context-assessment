@@ -363,7 +363,10 @@ rules or design constraints.
 ### Supported within named domains
 
 - Human corpora contain reproducible choice structure, some author-relative
-  geometry, and limited external relationships under explicit protocols.
+  geometry, and limited exploratory external relationships under explicit
+  protocols (the PANDORA cross-scale bridge headline is additionally post-hoc
+  operator-selected and sign-unstable across the two operators run that day;
+  see `docs/V8_PUSH_REMEDIATION_20260803.md`, item 1).
 - Synthetic work identifies distinct selection, response, temporal,
   interaction, and path mechanisms and their failure cases.
 - A support-comparability gate can close the synthetic event-to-relation seam.

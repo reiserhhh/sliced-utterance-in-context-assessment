@@ -194,6 +194,16 @@ representation is label-free but unsupervised-transductive, and direct
 prediction remains materially stronger in the upstream 48-coordinate
 representation.
 
+*2026-08-03 adjudication:* the bridge element figure above is post-hoc
+operator-selected. An earlier run the same day under the official-prepared
+input operator returned element \(r=-.103\) (permutation \(p=.673\), n=78,
+with the nuisance-only view at +.384) before the native-operator rerun
+produced +.498 (n=264); only the second was written up. Status:
+POST_HOC_OPERATOR_SELECTED_EXPLORATORY — cite only together with the first
+run and the selection order
+(`reports/V8_PANDORA_EXTERNAL_CONNECTION_REPORT.md` §Post-hoc adjudication;
+`docs/V8_PUSH_REMEDIATION_20260803.md`).
+
 A hierarchical follow-up then kept the upstream 48-coordinate author object,
 canonical 16-coordinate relational contraction, and 9-coordinate
 opportunity/observation surface as separate evidence levels. Source-only
