@@ -53,6 +53,30 @@ measure choice as a channel).*
 - **Code** — `suica_core/` + `suica_sim/` + `scripts/` + `tests/`. The V7
   release lockbox is independently verifiable without restricted corpora.
 
+## State of main after the sealed release (2026-08-03)
+
+Main has moved past v0.2.1 in three tracked layers (the sealed release above
+is unchanged and remains the verification anchor):
+
+- **V8 unified theory system** — `docs/SUICA_UNIFIED_THEORY_SYSTEM_V8.md`
+  (typed measurement chain with V/R/P output types and refusal-first
+  governance), with the M3 micro–meso–macro event-kernel layer and the M4
+  condition-manifold / composition-grammar layer;
+  `docs/SUICA_THEORY_ROUTE_INDEX.md` is the navigable map.
+- **M4-D/E/F experimental line (closed)** — 16 registered experiments
+  dissecting the composite-loop transport wall into four parts, with two
+  constructive repairs (two-stage route-then-refit; lambda~1/n de-biasing),
+  a typed R→V relation bridge with a perfect designed-null refusal record,
+  and the D3 panel sizing law (size-only rescue infeasible at ~10^14×;
+  composition must change). Ledger rows M4-D.1..M4-F1 in
+  `docs/CLAIMS_LEDGER.md`.
+- **Governance** — the V8 drop was adversarially reviewed before publication;
+  all findings and their dispositions are in
+  `docs/V8_PUSH_REMEDIATION_20260803.md` (notably: the PANDORA cross-scale
+  bridge headline is POST_HOC_OPERATOR_SELECTED_EXPLORATORY and must be cited
+  with its same-day null; the Essays confirm-half is no longer text-blind). A
+  v0.3.0 numeric lockbox over V8-era headline numbers is queued.
+
 ## Quickstart (no data required)
 
 ```bash

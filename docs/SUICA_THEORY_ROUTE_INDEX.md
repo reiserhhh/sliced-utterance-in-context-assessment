@@ -770,3 +770,48 @@ append-only retroactive correction, 1 outcome outside both registered branches
 (recorded as such). Next registered thread: discovery-objective displacement
 reduction (Leg 14) — the quadratic basin predicts gap ~ alpha^2 under displacement
 fraction alpha, making the residual quantitatively attackable.
+
+## M4-D/E/F line completion (2026-08-02..03, appended)
+
+The arc above closed with four further registered experiments; full records in
+docs/SUICA_M4_D_CURVATURE_AND_RELATION_BRIDGE_PLAN.md and per-leg reports.
+
+- **Leg 14 (displacement reduction)** — PIVOT FIRED: the discovery residual is a
+  systematic objective bias, not consensus-reducible noise (consensus worsens all
+  three worlds, gap .215 -> .680); the quadratic-basin alpha^2 prediction held in
+  form but the confound-disclosed consensus criterion moved only 4.6% split-half.
+  Objective redesign recorded as the arc's closing open problem.
+- **M4-E1 (convention gap, real text, label-free)** — PIVOT FIRED ~4,900x: the
+  V2-penalty self-infliction lesson is synthetic-scoped for a principled reason —
+  on real text the two conventions are near-perfectly projectively equivalent
+  (Frobenius ratio tracks lambda_i/lambda_ii to 0.03-0.08%). The deeper finding is
+  the SATURATED YARDSTICK: real-text internal split-half agreement is nil at every
+  budget under every convention, so the binding constraint is panel signal, not
+  penalty choice — reconfirming REALTEXT_SOFT_SUPPORT_ONLY_RELATION_UNRESOLVED.
+- **M4-E2 (offset anatomy)** — PIVOT FIRED: the common offset SPREADS (max single
+  share .38, S2 near-zero, directions world-specific at the permutation null;
+  removing the dominant term DOUBLES the gap). No single objective term and no
+  shared direction can absorb it. The M4-D/E line closed with the redesign problem
+  properly characterized (freeze-whitening 1/sqrt(eig) scale family recorded as
+  lead suspect at .39-.48 mass).
+- **M4-F1 (D3 panel sizing law)** — pivot letter did NOT fire (agreement rises off
+  zero on both axes) but the measured law kills size-only rescue: events exponent
+  gamma=.153 (the only axis that fits; authors degenerate, companion .404), the
+  .5-agreement budget extrapolates to 10^14x events (CI [10^2.2, 10^95.9];
+  bootstrap lower edge ~155x never enters the registered [4,50] feasibility band);
+  a held-out 16x cell validates the law within factor 2. Corollary hand-off: D3
+  must change COMPOSITION (shared-context events, within-author condition
+  pairing), not scale.
+
+Honesty record across the full 16-experiment M4-D/E/F line: registered pivots
+fired exactly as pre-committed in Legs 3, 6, 9, 11, 13, 14, E1 and E2; two planner
+interpretations were killed by their own registered tests (per-realization
+variance; all-or-nothing floor); one append-only retroactive correction (Leg 4b);
+two outcomes landed outside every registered branch and were recorded as such;
+F1's pivot letter missed while its measured law still decided the question. The
+instruments decided, not the leans.
+
+Governance: the 2026-08-01 V8-drop review and its push-gate remediation are
+recorded in docs/V8_PUSH_REMEDIATION_20260803.md (PANDORA bridge headline demoted
+to POST_HOC_OPERATOR_SELECTED_EXPLORATORY; Essays confirm-half text consumption;
+F16 reconciliation; V37F corrections; process rules).
