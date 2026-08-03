@@ -160,3 +160,12 @@ the lock and passed the full suite on CI; only the verifier steps failed.
 3. **v0.3.0 numeric lockbox queued.** V8-era headline numbers receive a
    hash-bound lockbox at the next release tag; until then, each report's
    reproduction command plus its results directory is the only binding.
+4. **Clean-checkout test discipline (added same day, after the first V8 CI
+   runs).** CI runs from a fresh clone with no `results/` artifacts, so any
+   test that touches an untracked artifact must (a) still enforce every
+   tracked-file check it can, and (b) skip the artifact-dependent remainder
+   with the reason on record — never fail on absence, never silently pass.
+   Two V8 lock tests (H4C detector lock; R2C frozen-source lock) violated
+   this and broke the first post-push CI runs; fixed accordingly. Local green
+   is not CI green: dependency locks and artifact assumptions must be
+   verified against a fresh clone before push.
