@@ -1,0 +1,24 @@
+# Living top-level lock for CI on main (added 2026-08-03).
+# The v0.2.0 release-audit lock (requirements-lock-v0.2.0.txt) is preserved
+# unchanged as the historical record of the 2026-07-15 audit environment.
+# This file carries the same pins plus the V8-tree dependencies that the
+# v0.2.0 lock predates (jsonschema / cryptography / persim / ripser /
+# requests) — their absence broke CI test collection on the first V8 push
+# (run 30786208657: ModuleNotFoundError jsonschema x18, persim x2,
+# cryptography x2). Pins mirror the local environment that passed the full
+# 970-test suite on 2026-08-03. A v0.3.0 release will freeze its own lock.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+statsmodels==0.14.6
+pyarrow==23.0.1
+joblib==1.5.3
+pytest==9.0.3
+fugashi==1.5.2
+unidic-lite==1.0.8
+jsonschema==4.26.0
+cryptography==49.0.0
+persim==0.3.8
+ripser==0.6.15
+requests==2.33.1
