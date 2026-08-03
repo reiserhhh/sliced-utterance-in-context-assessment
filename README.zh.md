@@ -2,58 +2,87 @@
 
 [English](README.md) | [日本語](README.ja.md) | **简体中文**
 
-SUICA 是一个文本行为测量框架:它将一个人的自发书写视为许多小的行为观察
-("切片话语",sliced utterances),在其自然发生的语境中进行测量,并由此
-构建可审计、相对于参照群体的坐标——这是用于未来文本心理测量的理论与
-工程基础，介于问卷法与自由反应评估之间，但不是已经完成的人格量表。
+SUICA 是一套面向文本测量研究的基础方法论:把一个人自发写下的文字视为
+大量在自然语境中测得的小型行为观察("切片话语",sliced utterances),
+并在其上构建可审计、随观测算子与参照群体相对化的技术对象。SUICA 本身
+不是量表,也不要求现有语料成为量表;未来的文本测评只有在补齐其自身的
+构念、人群、效度与用途证据之后,才可以建立在这一地基之上。
 
 *Suica(スイカ)在日语中意为"西瓜":本方法核心的"瓜皮模型"主张,话题/
 情境不是需要剥除的噪声,而是通过自我选择承载个人信号的"瓜皮"——本项目
 首先证伪了这一主张的朴素形式(统计上的条件中心化会摧毁信号),随后将其
-重建为设计原则(通过设计来控制语境;把选择本身作为一个通道来测量)。*
+重建为设计原则(通过设计控制语境;把选择本身作为一个通道来测量)。*
 
-## 本版本包含的内容 (v0.2.0)
+## 最新封存发布包含的内容 (v0.2.1)
 
-- **V7 技术核心** — 由观测算子与参照群体索引的相对文本几何、冻结 bundle、
-  拒绝规则、多视图校准、不确定性协议和未来数据 gate。最高可支持声明是
-  `OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN`，不是人格、
-  信度、临床、跨语言普适性或市场预测声明。
-- **方法** — `docs/THEORY.md`(瓜皮模型,三通道:choice / style /
-  react)、`docs/RULEBOOK.md`(具约束力的实验设计规则,每条均可追溯到
-  实测证据)、`docs/VALIDATION_PLAN.md`(P0-P5 证伪框架)。
-- **完整算例** — `docs/WORKED_EXAMPLE_MANUAL.md`:在 PANDORA(Reddit)
-  上完整、经审计地构建 19 构念电池 + 12 条选择轴,含开发层锚定性能
-  (如 MBTI thinking-feeling ridge CV r = 0.346;Essays 大五迁移平均
-  r ~ 0.144,来自 19 个可解释分数)及分数解读规则。
-- **审计记录** — `docs/CLAIMS_LEDGER.md`:每条主张的状态、七轮对抗性
-  审计、包括撤回。台账是权威记录;正文表述不得超出台账状态。
+- **V7 技术核心** — 由观测算子与参照群体索引的相对文本几何、冻结几何
+  bundle、拒绝规则、多视图校准、不确定性协议与未来数据闸门。最高受支持
+  声明是 `OPERATOR_INDEXED_RELATIVE_TEXT_GEOMETRY_WITHIN_DECLARED_DOMAIN`,
+  不是人格、信度、临床、跨语言普适或市场预测声明。
+- **方法** — `docs/THEORY.md`(瓜皮模型;三通道: choice / style / react)、
+  `docs/RULEBOOK.md`(具约束力的实验设计规则,每条均可追溯到实测失败)、
+  `docs/VALIDATION_PLAN.md`(P0–P5 证伪框架)。
+- **完整算例** — `docs/WORKED_EXAMPLE_MANUAL.md`:在 PANDORA(Reddit)上
+  经审计构建的 19 构念电池 + 12 选择轴(开发层锚定性能示例:MBTI
+  thinking-feeling ridge CV r = 0.346;Essays 大五迁移平均 r ~ 0.144),
+  以及分数解读规则。
+- **审计台账** — `docs/CLAIMS_LEDGER.md`:每条主张的状态、七轮对抗性
+  审计、包含撤回。台账是权威记录;行文不得超出台账评级。
 - **AI 操作标准** — `docs/AI_ANALYST_GUIDE.md`:角色分离(scorer /
   builder / coder / auditor / interpreter / human)、固定提示词、
   护栏 G1-G11(每条均可追溯到一次被实际捕获的失败)。
-- **已封存的预注册** — `docs/PREREGISTRATION.md`:封印即本仓库的初始
-  提交哈希。**开箱 #1 已于 2026-07-07 执行**(提交固定的脚本 + 对抗性
-  预审计):预注册的成功规则**未通过**(BH-FDR q<.05 下 2/7,规则要求
-  ≥4/7)——全部结果原样记录于 `reports/suica_lockbox_opening_1.md`。
-  H2(第一人称使用 → 神经质,r=+0.111, q=.002)与 H6(政治/新闻选择轴 →
-  开放性,r=+0.096, q=.006)在锁箱层级获得确认。剩余 1 次开箱;
-  Essays 确认半的标签仍未接触。
+- **封存的预注册** — `docs/PREREGISTRATION.md`:封印即本仓库初始提交哈希。
+  **开箱 #1 已于 2026-07-07 执行**:预注册成功规则**未通过**(BH-FDR
+  q<.05 下 2/7,规则要求 ≥4/7)——全部结果原样记录于
+  `reports/suica_lockbox_opening_1.md`。H2(第一人称 → 神经质,r=+0.111,
+  q=.002)与 H6(政治/新闻选择 → 开放性,r=+0.096,q=.006)在锁箱层级
+  获得确认。剩余 1 次开箱。Essays 确认半集的**标签**仍未开封(但其
+  **正文**已在 2026-07-29..30 的 V8 真实文本实验中被完整读取,不再是
+  "正文未接触"的保留集 — 见 `docs/V8_PUSH_REMEDIATION_20260803.md`
+  第 2 项)。
 - **代码** — `suica_core/` + `suica_sim/` + `scripts/` + `tests/`。
-  无需受限语料即可验证 v0.2.0 技术锁箱。
+  无需受限语料即可验证 v0.2.1 锁箱。
+
+## 封存发布之后 main 的现状 (2026-08-03)
+
+v0.2.1 封存不变(CI 在每次 push 时于独立 worktree 中校验标签树),
+main 在三个层面向前推进:
+
+- **V8 统一理论体系** — `docs/SUICA_UNIFIED_THEORY_SYSTEM_V8.md`:
+  类型化测量链 (H,F)→B→X→Z→𝔄→𝔐→Θ→D,三种输出类型 V(个体向量)/
+  R(关系)/ P(群体场)之间禁止隐式转换;M3 微观(事件机制)–中观
+  (复制关系几何)–宏观(群体关系场)层;M4 条件流形、机会生态与组合
+  语法层。导航图见 `docs/SUICA_THEORY_ROUTE_INDEX.md`;理论论文草稿见
+  `docs/V8_THEORY_PAPER.md`;实践手册见 `docs/V8_MANUAL.md`;开发史
+  (日文)见 `docs/V8_DEVELOPMENT_REPORT_JA.md`。
+- **M4-D/E/F 实验线(已收束)** — 16 个预注册实验把复合环路迁移之墙
+  分解为四部分:路径误认(两阶段构造修复,翻转 196→73,合并几何
+  .6519→.7605)、估计器自伤(岭罚偏差;λ~1/n 恢复教科书式 n^(−1/2)
+  标度)、成对指标的共模性质,以及发现目标函数中分散的、随世界而异的
+  公共偏移(正式登记的未解决问题)。类型化 R→V 桥带有 200/200 设计
+  空值拒绝的完整记录。D3 面板设计定律:仅靠规模的挽救需要约 10^14 倍
+  事件预算,不可行 — 必须改变面板的**构成**。台账行 M4-D.1..M4-F1。
+- **治理** — V8 落地在公开前经过对抗性评审,全部发现及其处置记录于
+  `docs/V8_PUSH_REMEDIATION_20260803.md`。特别地:PANDORA 跨量表桥接的
+  头条数值(element r=.498)为 **POST_HOC_OPERATOR_SELECTED_EXPLORATORY**
+  — 引用时必须同时给出同日先行运行的空结果(r=−.103)与选择顺序。
+  v0.3.0 将为 V8 数值加装锁箱。
 
 ## 快速开始(无需数据)
 
 ```bash
 pip install -r requirements.txt
 python -m pytest -q tests/test_suica.py          # 39 个通过
-python -m pytest -q -p no:cacheprovider          # 发布审计: 302 个通过
-python scripts/verify_suica_v020_lockbox.py       # 验证 v0.2.0 封印
+python -m pytest -q -p no:cacheprovider          # 970 个通过 (2026-08-03; v0.2.1 标签树为 318)
+python scripts/verify_suica_v021_lockbox.py       # 便携式 v0.2.1 封存校验
 python scripts/run_suica_synthetic_ground_truth_v2.py   # P0:估计器
 python scripts/run_suica_p0b_thin_cell_regime_v3.py     # P0-B:薄单元
 ```
 
-这些合成测试装置在不使用任何真实数据的情况下,以植入真值验证整个估计层。
-要复现完整算例,请按 `docs/DATA_ACCESS.md` 获取数据集(本版本不包含任何
-用户文本或用户 ID;SHA-256 清单可用于逐字节校验数据准备)。
+这些合成装置在不使用任何真实数据的情况下,以植入真值验证整个估计层。
+复现完整算例请按 `docs/DATA_ACCESS.md` 获取数据(本仓库不含任何用户
+文本或用户 ID)。`results/` 下的运行工件有意不入库;依赖这些工件的锁定
+测试在干净 checkout 中会带理由跳过(对入库文件的哈希检查始终执行)。
 
 ## 证据状态的诚实总结
 
@@ -61,19 +90,18 @@ python scripts/run_suica_p0b_thin_cell_regime_v3.py     # P0-B:薄单元
 构念在未见用户上的确认、陌生人零假设下 2 个构念的 react 签名。已证伪并
 退役:条件均值中心化(三种独立方式)、情感词频作为特质或场合状态的测量、
 注意力权重作为测量证据。验证性(T4,开箱 #1,2026-07-07):预注册成功
-规则未通过(2/7;全程记录,无再分析)——第一人称使用 → 神经质
-(r=+0.111)与政治/新闻选择 → 开放性(r=+0.096)为两条获锁箱级确认的
-关系;tension、novelty、directive、场所熵与游戏选择未获确认。剩余 1 次
-开箱仍封存。适用范围:英语、单一平台 + 学生作文;对话与临床应用已完成
-设计但未经检验(OPEN_PROBLEMS OP-7/8/14 — OP-7a 语域代理与 OP-8 第一
-阶段已于 2026-07-07 关闭,见 CLAIMS_LEDGER)。
+规则未通过(2/7)——仅第一人称 → 神经质与政治/新闻选择 → 开放性两条
+关系获锁箱级确认。适用范围:英语、单一平台 + 学生作文。
 
-## V7.3 当前状态
+V8 时代新增事实(台账永远是正典):
 
-v0.2.0 冻结 `V7_THEORETICAL_CORE_CLOSED_WITH_EMPIRICAL_GATES`。信度、MDD、
-state-trait 分解、外部构念效度、临床用途、语言/文化不变性和市场预测仍未验证；
-匿名坐标暂不命名为人格因子。详见 `docs/V7_LOCKBOX_V020.md` 与
-`docs/RELEASE_NOTES_V020.md`。
+- 真实文本的直接预测以空结果为诚实答案:V8 不变分数对大五的直接预测
+  r=−.005,低于冗余变量对照。所有亮眼数值都必须携带其评级
+  (EXPLORATORY / POST-HOC 等)。
+- 作者识别 AUC 不等于人格效度——已实证:在个体结构为零的合成世界中
+  仍可得到作者 AUC .864。
+- 拒绝是功能而非缺陷:类型系统、比较许可与支撑审计会把"不允许的比较"
+  作为异常抛出;R→V 桥在设计空值下误接受 0/200。
 
 ## 来源
 
@@ -81,5 +109,6 @@ state-trait 分解、外部构念效度、临床用途、语言/文化不变性�
 `154822a`, `05be394`, `cad83d5`, `c27727b`, `1c417fa`, `8447541`,
 `5189168`, `b9f65a6`, `0650936`, `5485a02`
 (+ 记录于 `docs/FREEZE_NOTES.md` 的冻结提交)冻结而来。在指南所记录的
-builder/auditor 协议下以 AI 辅助研究方式构建;七轮审计中有五轮捕获并
-修正了真实的伪影——审计记录本身即是方法的一部分。
+builder/auditor 协议下以 AI 辅助研究方式构建;多数审计轮次捕获并修正了
+真实的伪影——审计记录本身即是方法的一部分。V8 时代的开发史与教训见
+`docs/V8_DEVELOPMENT_REPORT_JA.md`(日文)。

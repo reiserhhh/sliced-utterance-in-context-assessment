@@ -62,7 +62,10 @@ is unchanged and remains the verification anchor):
   (typed measurement chain with V/R/P output types and refusal-first
   governance), with the M3 micro–meso–macro event-kernel layer and the M4
   condition-manifold / composition-grammar layer;
-  `docs/SUICA_THEORY_ROUTE_INDEX.md` is the navigable map.
+  `docs/SUICA_THEORY_ROUTE_INDEX.md` is the navigable map,
+  `docs/V8_THEORY_PAPER.md` the paper-form draft, `docs/V8_MANUAL.md` the
+  practitioner manual, and `docs/V8_DEVELOPMENT_REPORT_JA.md` the development
+  history (Japanese).
 - **M4-D/E/F experimental line (closed)** — 16 registered experiments
   dissecting the composite-loop transport wall into four parts, with two
   constructive repairs (two-stage route-then-refit; lambda~1/n de-biasing),
