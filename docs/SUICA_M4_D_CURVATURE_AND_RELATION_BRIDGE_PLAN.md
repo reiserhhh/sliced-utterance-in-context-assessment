@@ -1899,3 +1899,103 @@ row retained as non-gating validation.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f9_occasion_axis_repaired/`; report
 `reports/SUICA_M4_F9_OCCASION_AXIS_REPAIRED_REPORT.md`.
+
+## M4-F9 outcome (2026-08-03, appended)
+
+**G0 POWER: ADEQUATELY POWERED.** Target (M4-F5's persisted
+`authors_x16_shared_k05`, read verbatim): long-window recovery
+0.081307 +/- 0.010920 (matches the registration exactly). This leg's own
+realized paired-by-world `b8_x16 - b1_x16` difference on
+`truth_recovery_long` (FRESH seeds -- master-seed offset +90000000, folded
+into seed_key per Part 0.2's disclosed mechanism reading): mean -0.016323,
+SE 0.016755, 95% CI [-0.055943, +0.023298]; minimum detectable paired
+difference (half-width) **0.039620**, inside the registered 0.0407 bar
+(97.3% of it -- a markedly tighter margin than M4-F8's own 78.0%, reported
+plainly, not smoothed).
+
+**G5 (decorrelation, REPAIRED TO AN EQUIVALENCE FORM) PASSES under BOTH
+disclosed readings.** Reading 1 (ADOPTED, gating): every G5-applicable
+per-world correlation across the 3 block_count>=2 cells pooled into one
+n=24 sample, mean -0.0001871, 95% CI **[-0.0007441, +0.0003699]** --
+entirely inside +/-0.005 (CI half-width ~9x tighter than the bar). Reading
+2 (per-cell, not adopted, disclosed alongside): all three cells (b2/b4/b8)
+independently pass too (largest CI edge magnitude 0.0022 at b2). No
+disagreement between readings this run. Mandatory theoretical-residual
+coherence check: measured |pooled correlation mean| 1.871e-4 vs. the
+theoretical worst-case residual `phi_hi^41=1.063e-4` at the calibrated
+`phi_hi=.80` -- ratio 1.76x, **CONSISTENT** (within a 10x bar disclosed
+before compute, itself calibrated from M4-F8's own already-published
+per-cell ratios). For context only, NOT gating: the OLD nil-significance
+`|t|<2.0` rule would ALSO have passed at all three cells this run (max
+`|t|=1.899` at b8) -- this leg's fresh draw did not reproduce M4-F8's own
+`b4` near-miss, consistent with the planner note's diagnosis that the old
+rule's failures tracked pooled sample size, not a generator defect.
+
+**G6 CHANNEL LIVENESS: LIVE**, on this leg's own fresh seeds, with numbers
+essentially identical to M4-F8's own independently-drawn ones (ratio 1.0996
+vs. 1.0995 at B=1; 1.0383 vs. 1.0382 at B=8, both log-ratio 95% CIs
+excluding 0 by t=606/177) -- strong coherence evidence this is a stable,
+reproducible generator property at this kappa, not a seed-specific
+artifact. The non-gating kappa=1.0 context row (F7's own ORIGINAL seed
+lineage, deliberately not re-seeded) again reads EXACTLY ratio=1.000000 at
+8/8 worlds. Channel magnitude again modest and disclosed as a limitation
+independent of the outcome (~10.0% of between-author variance at B=1,
+~3.8% at B=8).
+
+**Gates G1-G4 all PASS** (G1/G2(a)/G2(b), all on the ORIGINAL seed lineage
+per Part 0.5's explicit lineage table, diffs at floating-point-epsilon
+scale against M4-F1's/M4-F6's/M4-F5's own persisted values, comfortably
+inside the <=1e-12 tolerance; G3 bit-identical; G4 exactly 0.0 on all 6
+computed cells regardless of which seed lineage each used).
+
+**ALL SIX GATES PASS -- `mechanical_gates_pass=True`, `all_pass=True`. THE
+LEG DOES NOT VOID** -- the first M4-F leg since M4-F7 to reach a full,
+ungated adjudication, and the first ever to do so while ALSO being both
+adequately powered and causally live.
+
+**THE FULL ADJUDICATION**, via `f8().adjudicate` -- the literal same
+function object M4-F8 itself used, not a re-typed copy, so the leans/pivot
+logic carries over word for word with no possibility of transcription
+drift. **Lean (a)** TRAIT AXIS EXISTS: **MISS** (paired B8-B1
+truth-recovery-long diff mean -0.016323, 95% CI [-0.055943, +0.023298],
+includes zero -- 5 of 8 world-index pairs negative, the least unanimous of
+the three occasion-axis legs at authors x16, vs. M4-F7's 8/8 and M4-F8's
+6/8). **Lean (b)**: **INAPPLICABLE** (long-window gain non-positive, per
+the registered rule). **Lean (c)** GAUGE BLINDNESS REPLICATES: **HOLD**
+(agreement 0.1897/0.1980/0.1857/0.1681 across B in {1,2,4,8}, all within a
++/-20% band of the B=1 reference under both the adopted per-point reading
+and the stricter max-minus-min reading).
+
+**PIVOT FIRES**: `adequately_powered=true` (G0) AND `causally_live=true`
+(G6) AND `no_rise_condition=true` (paired CI includes zero on B8-B1
+truth-recovery-long) -> verdict
+`CLOSURE_EARNED_TRAIT_LEVEL_UNCERTIFIABLE_ON_ALL_THREE_PANEL_AXES`.
+
+**THE CLOSURE IS EARNED.** Trait-level relation structure is not
+certifiable on any of the three panel axes (author, events, occasion) under
+this synthetic instrument. D3 is permanently restricted to occasion-bound
+objects. The M4-E2 objective redesign is the only remaining route.
+
+**Consequence.** The decisive test this line has been building toward
+across five legs (M4-F5 gauge validity -> M4-F6 occasion spread -> M4-F7
+properly-powered-but-inert -> M4-F8 properly-powered-and-live-but-void ->
+M4-F9 properly-powered-and-live-and-certified) is **formally resolved**.
+M4-F8's own void is not overturned by re-adjudicating its own draws under a
+friendlier rule -- it remains a void, on the record, exactly as reported --
+but the SAME decisive cell, on a genuinely fresh sample and a
+planner-repaired, non-defective gate, reaches the closure M4-F7's own
+(suspended) pivot and M4-F8's own (disclosed-but-not-adopted) Reading 2 both
+already pointed toward. Both legs' substantive numbers agree in direction
+(a decline, not a rise, in long-window recovery from B=1 to B=8) and in
+G6's channel-liveness magnitude (near-identical between two independent
+seed draws) -- what differs is that M4-F9 can CERTIFY this finding rather
+than merely observe and disclose it under a gate later shown to be
+defective. Per the registration's own adjudication instructions: trait-level
+relation structure is not certifiable on any of the three panel axes this
+program has tested (author-axis, events-axis, occasion-axis); D3 is
+permanently restricted to occasion-bound objects; the M4-E2 objective
+redesign (anatomy of the common offset, already the subject of its own
+closed M4-D/E line) is the only remaining route toward a trait-level
+object. Full numbers, both G5 readings, the master-seed-offset mechanism
+disclosure, the F8-vs-F9 coherence comparison, and the honest disclosures
+list are in `reports/SUICA_M4_F9_OCCASION_AXIS_REPAIRED_REPORT.md`.
