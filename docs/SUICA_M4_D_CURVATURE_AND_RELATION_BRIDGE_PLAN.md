@@ -730,3 +730,75 @@ the registered next question.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f2_composition/`; report
 `reports/SUICA_M4_F2_COMPOSITION_REPORT.md`.
+
+## M4-F2 outcome (2026-08-03, appended)
+
+**Lean (a) HOLD, lean (b) HOLD, pivot does NOT fire -- composition beats
+M4-F1's scale wall. Lean (c) PARTIAL -- the companion object holds
+decisively (t=20.5 / t=62.3), the main-gauge decline half misses at its one
+measurable point.** All four gates green (G4 did not fire; the leg is not
+void). Full numbers, tables, and the register-noted operationalizations this
+leg had to invent (the registration named the mechanism and axes but left
+several implementation choices open) are in
+`reports/SUICA_M4_F2_COMPOSITION_REPORT.md`.
+
+Gates: G1 reproduces M4-F1's persisted `base1x` (agreement_mean, agreement_se,
+both D0 effective ranks, n_retained) to abs diffs of 9.89e-17 / 1.12e-16 /
+0.0 / 7.11e-15 / 0 -- far inside the 1e-12 bar, because kappa<=0 makes the
+new generator literally return `f1().generate_world`'s own output, not a
+numerically-close reproduction. G2: all six adjudicated cells allocate
+exactly 12,784 events (M4-F1's raw base1x total 13,202, minus 418 dropped by
+the "largest common budget" resolution -- Q=2 and Q=4 both need each
+author's per-author budget to be a multiple of 4, applied uniformly to all
+six cells, not just the crossed arms, per the registration's own explicit
+fallback instruction). G3 bit-identical to the deployed feature map and
+halving. G4: `free_k00` and `shared_k00` match EXACTLY at all 8 worlds
+(agreement_mean, both eff ranks, n_retained, and the full 20-draw vector) --
+the manipulation only does what it claims.
+
+**Axis 1 (free vs shared x kappa): the clean result.** Paired-by-world
+(shared minus free, t-based 95% CI, df=7): kappa=0.5 mean +0.008836
+[0.004418, 0.013254] t=4.73; kappa=1.0 mean +0.026163 [0.019536, 0.032791]
+t=9.34. Both exclude zero (registered minimum was kappa=1.0 only); gain
+scales with kappa (2.96x). Pivot does not fire -- unlike M4-F1's scale axes
+(events-axis exponent 0.153, 10^14x budget to reach 0.5 agreement),
+composition at the SAME fixed budget moves the gauge by 2-5x its own
+base1x reference level. The registered composition hand-off from M4-F1
+is empirically supported.
+
+**Axis 2 (crossed Q in {2,4} at kappa=0): two-sided.** `crossed_q4`'s main
+per-context gauge is undefined at every one of 8/8 worlds
+(`ZERO_RETAINED_PSEUDO_AUTHORS`) -- verified by exact arithmetic before any
+compute: dividing an 8-16-event budget by 4 caps every author's slice at 4
+events, below the deployed gauge's own >=8 retention floor, for every
+author, always, regardless of the budget-truncation choice. `crossed_q2`'s
+main gauge IS computable but only on a population-restricted subset (282 of
+565 D1+D2 authors -- exactly the richest-budget, `m=16`, subgroup, the only
+one clearing the >=8 floor at Q=2); against the kappa=0 reference
+(free_k00==shared_k00) this comparison is statistically indistinguishable
+(t~0.41, nominally even slightly higher, not lower) -- the registered
+"monotone decline in Q" is NOT supported at the one point it could actually
+be measured, and is undecidable (structural non-computability, not a
+measured extreme) at the other. The companion object (this leg's own
+construction -- the registration named it but did not pin its equations)
+tells a different story entirely: non-nil split-half agreement at both Q=2
+(t=20.47, all 565 eligible authors) and Q=4 (t=62.28, the same 282-author
+subpopulation whose main gauge is undefined) -- the clearest possible
+instance of "pairing buys a different certifiable object, not a better
+version of the same one," exactly as registered, but the specific
+main-gauge-hurts mechanism the registration also predicted is not the one
+observed to be doing the work.
+
+Honest limitations (full list in the report): the crossed_q2-vs-reference
+comparison is population-confounded (richest-budget-only vs everyone), not
+corrected for after seeing the result in either direction; the companion's
+construction is a disclosed, deliberately-simplified same-primitives reuse,
+never level-compared to the main gauge; D0 K-effective-rank collapses to
+9.21 under crossed_q4 (independent replication of M4-F1's own quarter-budget
+K-collapse mechanism, not a new finding); axis-1's four cells share one
+random substrate per world by deliberate design (maximizes the registered
+paired statistic's power, disclosed rather than hidden). Training mainline
+unaffected; panel design laws line continues -- open question is whether a
+composition variant exists that lifts the main-gauge object under crossing
+without the population confound, or whether (per this leg's honest reading)
+crossing is simply a different-object lever, not a same-object repair.
