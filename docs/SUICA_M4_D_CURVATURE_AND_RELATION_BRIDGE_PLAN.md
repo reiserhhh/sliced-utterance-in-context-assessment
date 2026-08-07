@@ -1563,3 +1563,70 @@ remaining route with the panel side closed.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f7_occasion_axis_powered/`; report
 `reports/SUICA_M4_F7_OCCASION_AXIS_POWERED_REPORT.md`.
+
+## M4-F7 outcome (2026-08-03, appended)
+
+**G0 POWER: ADEQUATELY POWERED.** Target (M4-F5's persisted
+`authors_x16_shared_k10`, read verbatim): long-window recovery
+0.132169 +/- 0.008453. This leg's own realized paired-by-world
+`b8_x16 - b1_x16` difference on truth recovery long: mean -0.084972, SE
+0.020474, 95% CI [-0.133386, -0.036559]; minimum detectable paired
+difference (half-width) **0.048413**, inside the registered 0.066 bar
+(73.4% of it) -- not a close call.
+
+**PIVOT FIRES. THE CLOSURE IS EARNED.** At authors x16, kappa=1.0 (the
+registration's only scope for this leg), long-window truth recovery does
+NOT rise from B=1 to B=8 -- it declines significantly, CI entirely below
+zero. Per the registration's own pre-committed consequence: **trait-level
+relation structure is not certifiable on any of the three panel axes
+(authors, events, occasions) tested across the M4-F line; the D3 program's
+claims are permanently restricted to occasion-bound objects; and the M4-E2
+objective redesign is the only remaining route, with the panel side closed
+on all three axes.** This is a stronger result than M4-F6's own suspended
+attempt: F6's CI ([-0.069876, +0.019153]) straddled zero at a scale where
+the target itself was near its own noise floor; this leg's CI
+([-0.133386, -0.036559]) sits entirely below zero at a scale where the
+target is measured 15.6 SEs above zero.
+
+All six gates green (G0-G5). G1 (direct reuse of `f2().run_gate_g1`)
+matches to ~1e-16. **G2(a) construction check** (mult=1/block_count=1
+recomputed through this leg's generalized orchestration, using M4-F6's own
+seed_key/corpus-prefix/budget_label) reproduces M4-F6's persisted
+`b1_shared_k10` to 7.63e-17. **G2(b) anchor check** (RAW
+`authors_x16_shared_k10`, `f5().run_truth_sweep_world` unchanged on `f4()`'s
+own byte-identical mult=16 task) reproduces M4-F5's persisted
+`authors_x16_shared_k10` to 5.55e-17. G3 (direct reuse of
+`f3().run_gate_g3()`) bit-identical. G4 (truth-path invariance) exactly 0.0
+across all 6 computed cells. G5 (F6's own decorrelation rule, reused
+verbatim, 3 cells since kappa=0.5 is out of scope): all `|t|<2.0`, closest
+call b2 at t=+1.871 (comfortably under the bar, and a tighter G5 test than
+F6's own thanks to 16x more author-factor-boundary pairs pooled per world).
+
+Lean (a) MISS (CI excludes zero on the negative side, not the positive side
+the lean requires). Lean (b) INAPPLICABLE (the long-window gain is
+negative, per the rule this registration fixed in advance rather than
+discovering mid-report as M4-F6 did). Lean (c) HOLD, cleanly, under both
+readings (Reading 2 consumes only 29.4% of its tolerance, vs. F6's own
+95.9% at the same reading).
+
+**Honest disclosure.** Truth B is non-monotonic across B in {1,2,4,8}
+(rises to a peak at B=4, then drops sharply at B=8); the registered pivot
+is a B8-vs-B1 comparison and is unaffected, but no smooth dose-response
+should be inferred. All 8 of 8 world-index pairs show a negative B8-B1
+diff. A mechanistic reading (post-hoc, extending M4-F6's own kappa=1.0
+"blended_x=shock_x" finding, not a registered claim) argues the
+occasion-spread manipulation has zero causal channel at kappa=1.0 by the
+generator's own algebra, so the four adjudicated cells are, in population,
+statistically exchangeable; the large, consistent decline observed is best
+read as an unusually large instance of ordinary between-independent-draw
+sampling variability rather than a caused effect -- this does not soften
+the registered adjudication (computed exactly as specified regardless of
+mechanism), but it does mean the "robust across the one kappa where
+spreading could mechanically matter" component of the closure is inherited
+from M4-F6's own already-adjudicated kappa=0.5 finding, not independently
+reconfirmed by this leg (which tested kappa=1.0 only, per the
+registration's own explicit economization).
+
+Full numbers, the complete B-vs-metrics table, the per-world detail, and
+the honest anomalies list are in
+`reports/SUICA_M4_F7_OCCASION_AXIS_POWERED_REPORT.md`.
