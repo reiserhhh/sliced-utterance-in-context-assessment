@@ -128,3 +128,65 @@ and must be reported as prominently as a success would have been.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g1_whitening_intervention/`; report
 `reports/SUICA_M4_G1_WHITENING_INTERVENTION_REPORT.md`.
+
+## M4-G1 outcome (2026-08-03, appended)
+
+**PIVOT DOES NOT FIRE. Lean (a) HOLDS, lean (b) MISSES decisively under both
+truth variants, lean (c) MISSES. Verdict:
+`COSMETIC_LEVER_OFFSET_WITHOUT_TRANSFER`.** G0 and G2 first, as the standing
+rules require: G0 POWER is a mixed picture (3 of 6 candidate arms
+underpowered at the n=3-world replication ceiling) but lean (a)'s HOLD rests
+on `truncated_90` alone, which IS adequately powered (half-width 98.1% of
+the 12.5%-of-baseline-offset bar, 52.8% reduction, paired 95% CI [5.28,
+8.46]) — not on underpowered noise. G2 CHANNEL LIVENESS passes for every one
+of the seven non-baseline arms by a wide margin (smallest relative
+condition-number change 43.3%, vs a 10% materiality bar). G1 ANCHOR and G3
+TRUTH-PATH INVARIANCE both pass at floating-point-epsilon / exact 0.0.
+
+At the arm the registration's own rule selects for lean (b) — `truncated_50`,
+the candidate with the single lowest mean offset (5.19, a 59.9% reduction) —
+truth-referenced recovery does not transfer, it collapses: `e_arm_true` rises
+from baseline's ~0.567 to ~0.928 at BOTH truth-recovery budgets (4x and 8x
+events, regenerated from the frozen world law per Leg 4 Part 4b's own
+machinery), paired 95% CI entirely on the "worse" side at both
+(n=384 author-reps each). Lean (c) MISSES outright: `identity` (zero
+amplification) has the single LOWEST offset of all eight arms tested,
+including every regularized candidate — not merely "not worse," an
+inversion of the registered expectation.
+
+A disclosed, non-gating companion computed identically for every arm
+(paired, author-level, both budgets) sharpens the finding into a
+dose-response: `shrinkage_0.01` and `shrinkage_0.1` — the two mildest
+settings, offset reductions 10.9% and 24.9% — show small but statistically
+real truth-recovery IMPROVEMENTS (CIs entirely positive at both budgets).
+`shrinkage_0.1` misses the registered 25% actionable bar by 0.14 percentage
+points (24.86%), a knife-edge disclosure in the same spirit as M4-E2's own
+sub-40% clause. `shrinkage_1.0` (42.1% reduction) is ambiguous (CI includes
+zero). Every arm at or past 50%+ reduction (the three truncated arms,
+identity) shows large, decisive worsening. Spearman(offset, recovery error)
+across the 7 non-baseline arms = −0.786 (descriptive, n=7, not a registered
+test): lower offset associates with WORSE recovery, not better. **The scale
+family carries mass and is a real, adequately-powered lever on the offset
+metric — but only its mildest, sub-actionable settings preserve or help
+truth; every setting that clears the registered "actionable" bar makes
+recovery worse, and the setting with the single lowest offset (identity) is
+the second-worst for recovery of all eight arms tried.**
+
+Full numbers, gates, per-arm table, and the dose-response table:
+`reports/SUICA_M4_G1_WHITENING_INTERVENTION_REPORT.md`. Artifacts:
+`results/m4_g1_whitening_intervention/{decision.json, gates.json,
+offset_rows.csv, gap_rows.csv, truth_recovery_rows.csv,
+g2_spectrum_evidence.csv, g3_check_rows.csv}`.
+
+**Hand-off.** Neither the PIVOT's clean exoneration nor a usable estimator
+fix is licensed: the scale family plainly IS an offset-metric lever (lean a),
+and is plainly NOT a truth-transferring one past its mildest settings (lean
+b). The open question this leaves for the next registration in this line is
+sharply framed by the dose-response table: whether a NARROWER shrinkage
+ladder concentrated between this leg's "real but sub-bar" (~0.01–0.1) and
+"ambiguous" (~1.0) points can find a setting that is both actionable (>=25%
+offset reduction) and truth-transferring, or whether — as the monotone
+Spearman pattern suggests — those two properties are in this objective's
+structure fundamentally in tension, in which case the redesign target moves,
+as the PIVOT branch would have directed, to the residual block or the
+objective's functional form.
