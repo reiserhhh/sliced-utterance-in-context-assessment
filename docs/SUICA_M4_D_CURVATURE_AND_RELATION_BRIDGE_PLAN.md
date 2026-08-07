@@ -1102,3 +1102,115 @@ the Part 0/addendum register-notes (including the mandatory G0 null-switch
 disclosure, written before compute, and the G0 adjudication addendum,
 written upon first seeing the gate's data) are in
 `reports/SUICA_M4_F4_AUTHOR_AXIS_REPORT.md`.
+
+## M4-F4 planner adjudication note (2026-08-03, appended)
+
+The result stands as adjudicated (all three leans HOLD; saturation pivot does
+not fire; author-axis law FITTED 5/5, gamma 1.096 [.984, 1.218], .5-agreement
+budget 46.1x ~ 26,052 authors, x32 holdout predicted .4012 / observed .3861).
+Two qualifications belong on the record, both surfaced by the executing agent
+rather than found afterwards.
+
+**1. G0 carried an ambiguity that the registration should have resolved in
+advance, and the post-hoc resolution favoured the leg.** The registered text
+said both "indistinguishable from zero at EVERY author multiple" (a per-cell
+rule) and "if the null RISES with authors ... artifact" (a trend rule). Two of
+ten null cells cleared t=2 (t=6.01 at x1/kappa=.5; t=3.24 at x16/kappa=.5),
+so the per-cell reading fails while the trend reading passes decisively
+(Spearman agreement-vs-multiple rho=-.100 p=.873 at the primary kappa=1.0;
++.400 p=.505 at kappa=.5). The agent adopted the trend reading, disclosed the
+call as post-hoc, and supplied the multiplicity context (P(>=2 of 10 flagged |
+true null) = 6.6%). The planner accepts that reading because the registered
+RATIONALE for G0 named the scaling artifact specifically ("computed over more
+field entries as authors grow"), and a level offset present at every multiple
+is not that artifact. But the ambiguity is the planner's error, and the
+finding carries this qualification: **G0 licenses "no authors-scaling
+artifact", not "no offset".** Standing rule added for this line: any future
+designed-null gate must state its aggregation rule (per-cell vs trend, and
+the multiplicity treatment) BEFORE the run.
+
+**2. The null offset is real and bears on the headline number.** The null's
+pooled grand mean is +.00246 (t=2.99, p=.015), consistent in sign and size
+with M4-F1's own zero-structure reference (+.0047). At x32 (agreement .386)
+this is 0.6% of signal and immaterial; at x1 (.0061) it is ~40% of signal.
+Since an offset lifts the SMALL-n points, it FLATTENS the log-log slope, so it
+biases gamma DOWNWARD and the budget UPWARD -- i.e. 46.1x is conservative
+rather than optimistic under this mechanism. That argument is recorded here
+BEFORE it is tested; M4-F5 carries the offset-corrected refit as a registered
+secondary check, and if the corrected budget instead grows by more than a
+factor of 2, this note is wrong and the correction controls.
+
+## M4-F5 registration (2026-08-03, BEFORE run) — is the certificate valid?
+
+Four legs of this line have optimized ONE statistic: the deployed field's
+internal split-half agreement. M4-F4 now says a feasible D3 panel exists at
+~26,052 authors on shared occasions. Before that number is allowed to inform
+any design, the gauge itself must be audited against truth, because this
+program has already documented the exact pathology that would invalidate it:
+in Leg 12 a cleaning intervention IMPROVED every loop statistic while LOWERING
+the truth-referenced attribution correlation (.7264 -> .6677), and Leg 4b
+showed an estimator manufacturing an apparent floor. Self-consistency and
+correctness have moved in opposite directions in this line before.
+
+**Question.** Does split-half agreement certify the field? Specifically: does
+agreement co-move with truth-referenced recovery, and does the .5 target
+correspond to a field worth having?
+
+**Design.** Reuse M4-F4's exact swept cells (shared design, authors
+x{1,2,4,8,16} plus the x32 cell, kappa in {0.5, 1.0}, 8 worlds x 20 draws,
+gauge/map/D0/halving unchanged, identical world seeds). At every cell compute
+BOTH:
+- the split-half agreement already measured (must reproduce M4-F4's persisted
+  values to <=1e-12 — gate G2 below), and
+- TRUTH-REFERENCED RECOVERY: the same field-agreement functional evaluated
+  between the finite-panel estimated field and the world's TRUE field.
+The truth operationalization must be REGISTERED IN PART 0 BEFORE COMPUTE and
+must be the identical deployed path applied to noise-free author
+representations; report at least two variants (analytic noise-free, and a
+large-sample asymptotic approximation) with their sensitivity, because the
+choice is the leg's main researcher degree of freedom.
+
+**Leans.**
+(a) CO-MOVEMENT: truth recovery rises with agreement across every swept cell
+    (Spearman >= .9 pooled), with no cell pair where agreement rises and truth
+    recovery falls.
+(b) TARGET ADEQUACY: at the .5-agreement point, truth recovery >= .7
+    (interpolated on the measured curve; extrapolated with the status stated
+    plainly if .5 is not reached in range).
+(c) KAPPA STABILITY: at equal agreement, truth recovery at kappa=0.5 and
+    kappa=1.0 differ by <= .1 — i.e. the agreement-to-truth mapping is a
+    property of the gauge, not of how shared the occasions happen to be.
+
+**PIVOT-IF:** any swept regime shows agreement rising while truth recovery
+falls, OR truth recovery at the .5-agreement point is below .5 ->
+THE GAUGE IS NOT A VALID CERTIFICATE. The .5 target, the 46.1x budget, and the
+~26k-author D3 recommendation are all WITHDRAWN pending respecification of the
+target against a truth-referenced criterion, and that respecification becomes
+the registered next question. (Recording now, before the run: this outcome
+would invalidate the most useful result this line has produced, and that is
+precisely why the audit is being run before the number is used rather than
+after.)
+
+**Registered secondary check (not a lean).** Refit the M4-F4 author-axis law
+after subtracting the per-cell G0 null offset, and report the corrected gamma
+and .5-agreement budget. Pre-recorded expectation with its mechanism (see the
+M4-F4 planner note): an offset lifts small-n points, flattens the log-log
+slope, and therefore biases gamma DOWNWARD and the budget UPWARD, so the
+corrected budget should be <= 46.1x. If instead it exceeds 46.1x by more than
+a factor of 2, the planner note is wrong and the corrected number controls.
+
+**Gates.**
+- G1 anchor: kappa=0 free cell reproduces M4-F1's persisted `base1x` to
+  <=1e-12 (as in M4-F2/F3/F4).
+- G2 continuity: every reused cell reproduces M4-F4's persisted agreement to
+  <=1e-12 on identical world seeds; a mismatch voids the comparison.
+- G3 gauge invariance, equality-gated as in the prior legs.
+- G4 truth-path invariance: the truth-referenced field must be produced by the
+  IDENTICAL deployed featurize -> project -> field path as the estimate,
+  differing ONLY in the input being noise-free; demonstrate this by an
+  equality check on a degenerate case (truth path fed the finite sample must
+  reproduce the finite-sample field exactly).
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f5_gauge_validity/`; report
+`reports/SUICA_M4_F5_GAUGE_VALIDITY_REPORT.md`.
