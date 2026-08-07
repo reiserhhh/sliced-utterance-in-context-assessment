@@ -815,3 +815,39 @@ Governance: the 2026-08-01 V8-drop review and its push-gate remediation are
 recorded in docs/V8_PUSH_REMEDIATION_20260803.md (PANDORA bridge headline demoted
 to POST_HOC_OPERATOR_SELECTED_EXPLORATORY; Essays confirm-half text consumption;
 F16 reconciliation; V37F corrections; process rules).
+
+## M4-F panel design line CLOSED (2026-08-03, appended)
+
+Eight registered legs (M4-F1..M4-F9, including the voided F8) closed the panel
+question opened by M4-E1's saturated yardstick. Full synthesis:
+docs/SUICA_M4_F_PANEL_DESIGN_SYNTHESIS.md; registrations and outcomes in
+docs/SUICA_M4_D_CURVATURE_AND_RELATION_BRIDGE_PLAN.md; ledger rows
+M4-F1..M4-F9.
+
+Result in one line: **a finite panel can be made self-consistent, and cannot
+be made trait-certifying.** Scale alone is infeasible (events exponent .153,
+10^14x budget); composition works at fixed budget (shared occasions lift
+agreement from nil to +.0234, paired +.0262 [.0195,.0328]); the author axis is
+a clean validated power law (gamma 1.096, x32 holdout predicted .4012 /
+observed .3861) — but what it certifies is an occasion-bound, state-inclusive
+object: across authors x1->x32 the gauge rises 63x while long-window
+(trait-like) recovery plateaus near .15, and spreading observation across
+decorrelated occasions does not close that gap on a test that is both causally
+live and adequately powered. The gauge is provably blind to the occasion axis.
+This is foundation gap F10 (state/trait depends on the occasion universe and
+horizon) appearing as a measurement; V8's typing is hardened accordingly — the
+panel-certified relation field is a P-type object indexed by its occasion
+universe and is never promoted to a trait claim.
+
+Consequences on the books: D3 is permanently restricted to occasion-bound
+objects; the .5 agreement target, the 46.1x budget and the ~26,052-author
+recommendation produced by M4-F4 were WITHDRAWN by the M4-F5 audit registered
+to kill them; the M4-E2 objective redesign is the only remaining route to a
+trait-level object and is the line's next registration.
+
+Four planner registration defects of one family were caught and recorded
+(unstated aggregation rule; free base scale with no power requirement; an
+economized-away causal channel; a nil-significance gate that fails at scale),
+producing four standing rules, the last of which subsumes them: every gate
+bounds MATERIALITY via an equivalence form, never nil significance on a
+known-nonzero quantity.
