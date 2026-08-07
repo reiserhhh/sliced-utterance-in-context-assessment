@@ -1732,3 +1732,76 @@ rebuilt around it.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f8_occasion_axis_live/`; report
 `reports/SUICA_M4_F8_OCCASION_AXIS_LIVE_REPORT.md`.
+
+## M4-F8 outcome (2026-08-03, appended)
+
+**G0 POWER: ADEQUATELY POWERED.** Target (M4-F5's persisted
+`authors_x16_shared_k05`, read verbatim): long-window recovery
+0.081307 +/- 0.010920 (matches the registration exactly). This leg's own
+realized paired-by-world `b8_x16 - b1_x16` difference on
+`truth_recovery_long`: mean -0.036177, SE 0.013432, 95% CI
+[-0.067938, -0.004416]; minimum detectable paired difference (half-width)
+**0.031761**, inside the registered 0.0407 bar (78.0% of it).
+
+**G6 CHANNEL LIVENESS: LIVE.** Analytic coefficient `sqrt(1-0.5)=0.7071`,
+non-zero. Empirically: between-author variance with the AR(1) state intact
+vs. state-zeroed gives ratio **1.0995** at B=1 and **1.0382** at B=8 (both
+log-ratio 95% CIs exclude 0 on the positive side by a wide margin,
+t=428.7/266.5). A non-gating kappa=1.0 context row, reusing M4-F7's own
+world draws, shows the ratio is **exactly 1.000000 at all 8 of 8 worlds**
+(v_intact bit-identical to v_zeroed) -- converting the M4-F7 planner note's
+code-reading argument (that kappa=1.0's channel is structurally inert) into
+a directly measured fact rather than an inference. **The channel's own
+magnitude is modest** -- only ~9-10% of between-author variance at B=1 and
+~4% at B=8 -- a real, disclosed limitation on what any finding through this
+channel can support, independent of the outcome below.
+
+**G5 (decorrelation, M4-F6's own rule reused verbatim) FAILS.**
+`b4_x16_shared_k05` shows `|t|=3.497 >= 2.0` (correlation +0.000552,
+n_pairs/world=2,269,440); `b2`/`b8` pass (t=-0.289/-1.383). The correlation
+MAGNITUDE is unremarkable relative to every prior leg's own closest calls
+(F6: up to 0.00161; F7: up to 0.000860) -- what differs is pooled pair
+count, which shrinks the SE and inflates `t` for a fixed tiny residual as
+author scale grows, exactly the trend F7's own report already flagged
+("G5 becoming... a MORE sensitive test at this scale"). Per the registration
+and per F6's own established discipline (reused verbatim, required reading
+for this leg): **a G5 failure VOIDS the leg.** The gap was not increased and
+the leg was not re-run.
+
+**THE LEG IS VOID (Reading 1, adopted).** Two readings of leg-voidability
+were disclosed (full numbers under both in the report): Reading 1 (adopted)
+holds that G5 retains its pre-existing, verbatim-reused void-on-failure
+consequence regardless of G0/G6 both passing -- adopted because softening an
+established, explicitly-required-reading safeguard specifically because it
+produced an inconvenient result here would itself be the kind of post-hoc
+rescue this program's own process rules forbid. Under Reading 1, **no lean,
+no pivot, and no closure claim is licensed by this leg.** Reading 2 (not
+adopted, computed in full for transparency) treats only G0/G6 as
+leg-voiding for this specific registration and would adjudicate on the
+already-collected data: lean (a) MISS (paired diff -0.036177, 95% CI
+[-0.067938,-0.004416], excludes zero on the negative side), lean (b)
+INAPPLICABLE (gain non-positive), lean (c) HOLD (agreement B-invariant,
+largest deviation 20.0% inside a comfortable margin); pivot FIRES, would-be
+verdict `CLOSURE_EARNED_TRAIT_LEVEL_UNCERTIFIABLE_ON_ALL_THREE_PANEL_AXES`
+-- the SAME closure M4-F7 itself reached. This is disclosed in full, not
+adopted, and does not soften the VOID determination above.
+
+**Consequence.** The decisive test this line has been building toward across
+four legs (M4-F5 gauge validity -> M4-F6 occasion spread -> M4-F7 properly-
+powered-but-inert -> M4-F8 properly-powered-and-live) remains **formally
+unresolved**: the one cell that is simultaneously adequately powered and
+causally live cannot be adjudicated because a third, independent, pre-
+existing gate (decorrelation) fails at one of its three tested block counts.
+M4-F7's own suspended closure is NOT resolved by this leg either way -- it
+remains suspended, now joined by a VOID rather than a decision. Per this
+line's own standing-rule-after-defect convention (three prior planner notes
+already added rules after M4-F4/M4-F6/M4-F7's own registration gaps), a
+fourth candidate is disclosed but not unilaterally adopted by the executing
+agent: **G5's fixed `|t|<2.0` significance threshold does not hold its
+meaning as pooled pair count grows with author scale**, and a future
+registration revisiting the decorrelation check should consider an
+equivalence-style, magnitude-based bound instead of (or alongside) a
+significance test. Full numbers, the complete B-vs-metrics table, the
+per-world detail, both voidability readings in full, and the honest
+disclosures list are in
+`reports/SUICA_M4_F8_OCCASION_AXIS_LIVE_REPORT.md`.
