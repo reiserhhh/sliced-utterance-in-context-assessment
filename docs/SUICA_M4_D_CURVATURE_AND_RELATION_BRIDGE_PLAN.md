@@ -802,3 +802,76 @@ unaffected; panel design laws line continues -- open question is whether a
 composition variant exists that lifts the main-gauge object under crossing
 without the population confound, or whether (per this leg's honest reading)
 crossing is simply a different-object lever, not a same-object repair.
+
+## M4-F3 registration (2026-08-03, BEFORE run) — level or rate? the decisive fork
+
+M4-F2 established that COMPOSITION works where SCALE did not: at one fixed
+budget and inside one world, changing only the design (free-response ->
+shared-occasion) moved the deployed field's split-half agreement from nil
+(-.0028 at kappa=1.0) to +.0234, paired gain +.0262 [.0195, .0328], t=9.34,
+and the gain scaled 2.96x with kappa. But +.0234 is still nowhere near the .5
+agreement a certified D3 panel needs. Everything now turns on ONE question:
+
+**Did composition buy a LEVEL (a better intercept on the same hopeless curve),
+or a RATE (a steeper exponent, so that feasible scale can finish the job)?**
+
+M4-F1 measured the free-response events exponent gamma_free = .153 (CI
+[.02, 1.22]) and a .5-agreement budget of 10^14x. If the shared design merely
+shifts the intercept, the budget stays astronomically infeasible and NO
+composition can certify a finite panel on this gauge. If the exponent
+materially improves, a feasible D3 exists and this leg names its size.
+
+**Design.** Mirror M4-F1's sweep protocol exactly so exponents are comparable,
+but run BOTH designs on the SAME world substrate at the SAME kappa, so the
+comparison is within-world and within-kappa (never shared-at-kappa-1 versus
+free-at-kappa-0, which would confound design with world):
+
+- kappa = 1.0 primary (the regime where the design lever is strongest — a
+  failure there is decisive), kappa = 0.5 as the robustness axis.
+- events/author x {1, 2, 4, 8} at fixed authors, and authors x {1, 2, 4} at
+  fixed events/author, for BOTH designs, on identical world seeds.
+- 8 worlds x 20 draws per cell; the M4-E1/M4-F1 gauge, map, D0 path, and
+  halving unchanged.
+- Held-out validation: events x16 under the shared design at kappa=1.0.
+- Fits: log-log OLS as in M4-F1; the PRIMARY statistic is the PAIRED-by-world
+  difference delta_gamma = gamma_shared - gamma_free (both fitted on the same
+  world substrate), bootstrapped over worlds — deliberately chosen because
+  M4-F1's marginal exponent CI was very wide, and a paired bootstrap is the
+  powerful test of the question actually being asked.
+
+**Leans.**
+(a) RATE CHANGE: delta_gamma > 0 on the events axis at kappa=1.0 with the
+    paired bootstrap CI excluding 0. Mechanism: M4-F1 diagnosed that adding
+    events sharpens features while DISSOLVING the realized-state heterogeneity
+    the field rides on (signal and noise shrink together). Under a shared
+    occasion grid the between-author contrast at a common occasion is not
+    dissolved by averaging — the common component cancels in the contrast
+    instead of averaging into noise — so the rate itself should improve.
+(b) The .5-agreement events budget under the shared design at kappa=1.0 falls
+    below 10^6x (a wide honest band; M4-F1's free-response value was 10^14x).
+(c) The held-out x16 shared cell validates the fitted law within factor 2
+    (the same standard M4-F1 met).
+
+**PIVOT-IF:** delta_gamma's paired bootstrap CI includes 0 on the events axis
+at kappa=1.0 -> COMPOSITION BUYS A LEVEL, NOT A RATE. Then no composition plus
+feasible scale certifies this field at .5, the D3 certification problem is a
+GAUGE problem rather than a panel-design problem, and this line MERGES with
+the M4-E2 objective-redesign open problem — which becomes the registered next
+question. (Note that the M4-F2 pivot pointed at the same destination from the
+other side; arriving there twice by independent routes would be a strong
+result, not a disappointment.)
+
+**Gates.**
+- G1 anchor: the kappa=0 cells reproduce M4-F1's persisted `base1x` to <=1e-12
+  (as in M4-F2's G1).
+- G2 within-kappa/within-world pairing: for every fitted pair, the shared and
+  free cells share the identical world seed and identical event budget;
+  reported cell-by-cell as exact equality. A violation voids the comparison.
+- G3 gauge invariance: deployed map, D0 path, halving indices unchanged,
+  equality-gated as in M4-F1/M4-F2.
+- G4 budget conservation across the sweep: each swept multiple's total event
+  count is exactly equal between the two designs.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f3_composition_scaling/`; report
+`reports/SUICA_M4_F3_COMPOSITION_SCALING_REPORT.md`.
