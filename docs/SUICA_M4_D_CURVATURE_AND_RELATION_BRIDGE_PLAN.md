@@ -875,3 +875,51 @@ result, not a disappointment.)
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f3_composition_scaling/`; report
 `reports/SUICA_M4_F3_COMPOSITION_SCALING_REPORT.md`.
+
+## M4-F3 outcome (2026-08-03, appended)
+
+**0/3 leans; PIVOT FIRES: `COMPOSITION_BUYS_LEVEL_NOT_RATE_GAUGE_PROBLEM_MERGES_WITH_M4E2`.**
+All four gates green (G1 kappa=0 anchor to M4-F1's base1x, abs diffs
+9.89e-17/1.12e-16/0.0/7.11e-15, far inside 1e-12; G2 96/96 within-kappa/
+within-world seed+budget pairs exact; G3 bit-identical map/halving; G4 all 6
+swept multiples' event totals exact across kappa AND design). The decisive
+statistic -- delta_gamma's paired-by-world bootstrap CI on the events axis
+at kappa=1.0 -- is `[-0.839, +0.039]`, including 0, so the registered pivot
+fires by the letter of the rule. But the underlying mechanism is starker
+than "same law, different intercept": under kappa>0, NEITHER free nor
+shared design's events axis reaches even `DEGENERATE` status reliably (free:
+DEGENERATE at kappa=0.5, UNFITTABLE at kappa=1.0; shared: UNFITTABLE at
+both) -- M4-F1's own kappa=0 events law (gamma=.153) does not survive ANY
+context-occasion shock at all. Cell means at kappa=1.0 are flat-to-negative
+by mult=8 on both designs (free -.0011, shared -.0055) and the held-out
+16x shared cell stays negative (-.0017); no .5-agreement budget could be
+extrapolated (nothing to extrapolate from an UNFITTABLE fit) and the holdout
+validated nothing (`EVENTS_AXIS_UNFITTABLE_HOLDOUT_IS_A_PROBE`). Lean (a)
+MISS (CI includes 0), lean (b) MISS (status UNFITTABLE, no budget claim
+licensed), lean (c) MISS (no fitted law to validate against). The paired
+bootstrap's own `n_valid` is 18/2000 on the decisive row -- itself further
+evidence the events axis barely produces a well-defined exponent at kappa>0,
+not merely a caveat on an otherwise-clean number.
+
+Secondary, non-gating finding (authors axis, restricted by this leg's own
+registration to 3 multiples, licenses no lean): under `shared` design
+specifically, the authors axis -- DEGENERATE at M4-F1's own kappa=0 -- goes
+cleanly `FITTED` at both kappa=0.5 (gamma=0.860) and kappa=1.0 (gamma=1.104),
+with bootstrap failure rates of 1/2000 and 0/2000 (the most stable fit in
+the leg); `free` design's authors axis stays UNFITTABLE/DEGENERATE at both
+kappas. A real rate change from shared-occasion composition WAS measured in
+this leg's own data -- just on the axis the registration did not make
+decisive, reframing the merged line's open question as "why authors and not
+events," not "whether composition can ever buy a rate at all."
+
+Per the registration, the pivot MERGES the panel-design-laws line with the
+M4-E2 objective-redesign open problem (closed at
+`OFFSET_SPREAD_NO_SINGLE_OBJECTIVE_TERM`), which becomes the registered next
+question -- arrived at twice now, by M4-F2's fixed-budget pivot-that-did-not-
+fire and this leg's scaling pivot-that-did, from independent routes, exactly
+as the registration itself anticipated as a possible "strong result, not a
+disappointment." Full numbers, tables, and the register-noted
+operationalizations and one mechanical loading fix (Part 0.11, discovered
+before any gate number existed, confined to this script's own module loader,
+zero edits to M4-F1's or M4-F2's scripts) are in
+`reports/SUICA_M4_F3_COMPOSITION_SCALING_REPORT.md`.
