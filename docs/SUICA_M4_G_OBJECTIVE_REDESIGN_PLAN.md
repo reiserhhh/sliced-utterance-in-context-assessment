@@ -190,3 +190,115 @@ Spearman pattern suggests — those two properties are in this objective's
 structure fundamentally in tension, in which case the redesign target moves,
 as the PIVOT branch would have directed, to the residual block or the
 objective's functional form.
+
+## M4-G1 planner adjudication note (2026-08-03, appended) — the target metric is now the suspect
+
+The leg is adjudicated as the agent reported it: lean (a) HOLD on
+`truncated_90` (the one arm that clears 25% AND is adequately powered,
+52.8% reduction, paired CI [5.28, 8.46]), lean (b) MISS decisively under both
+truth variants, lean (c) MISS by inversion, pivot does not fire, verdict
+`COSMETIC_LEVER_OFFSET_WITHOUT_TRANSFER`.
+
+**But the arm table says something sharper than "cosmetic", and it points at
+the metric rather than at the lever:**
+
+| arm | offset | width | truth error @4x |
+|---|---|---|---|
+| baseline | 12.999 | 13 | 0.5562 |
+| shrinkage_0.01 | 11.571 | 13 | 0.5512 |
+| shrinkage_0.1 | 9.755 | 13 | 0.5539 |
+| shrinkage_1.0 | 7.503 | 13 | 0.5751 |
+| truncated_90 | 6.129 | 4 | 0.8801 |
+| truncated_75 | 5.572 | 3 | 0.9085 |
+| truncated_50 | 5.190 | 2 | 0.9574 |
+| **identity** | **4.352** | 13 | 0.8656 |
+
+The offset falls MONOTONICALLY as the whitening is weakened, and the single
+lowest offset in the whole table belongs to `identity` — no whitening at all —
+whose truth error is 56% worse than baseline's. Across the seven non-baseline
+arms the offset and the recovery error are anti-correlated at Spearman −.786.
+**Minimizing the registered target makes the objective worse at its job.**
+
+Two mechanisms could produce that, and they have very different consequences:
+
+1. **Units.** `offset_norm` is a norm in a space whose metric the whitening
+   itself sets. Weakening the whitening shrinks every distance in that space,
+   so the measured offset falls without anything improving. If so, the metric
+   cannot be compared across arms with different whitening scales — and
+   M4-E2's attribution of ~1/3–1/2 of the offset mass to the scale family may
+   itself be a units statement rather than a structural one.
+2. **A real trade-off.** The displacement genuinely trades against recovery,
+   and the objective cannot have both.
+
+There is also a plain **width confound** sitting on top of either: the
+truncated arms carry width 4/3/2 against baseline's 13, and a norm over fewer
+dimensions is mechanically smaller.
+
+The two mechanisms are cheaply separable and the next leg separates them. Note
+what is at stake: under mechanism 1, this line's stated target — and part of
+the prior leg's decomposition — is disqualified as an optimization objective.
+
+One more thing the leg found that the registered leans could not score, and
+which survives either mechanism: the two MILDEST arms (shrinkage .01 and .1)
+are the only ones whose truth recovery genuinely IMPROVES, both with CIs
+entirely on the better side — and shrinkage_0.1 misses the registered 25%
+actionable bar by 0.14 points (24.86%). The bar selected exactly the arms that
+hurt. That is recorded here as a registration critique, not as a rescue: no
+lean is re-scored on it.
+
+## M4-G2 registration (2026-08-03, BEFORE run) — is the offset metric measuring the world or its own units?
+
+**Question.** Does `offset_norm` inherit the whitening's units (and the
+retained width), or is it scale-invariant? The answer decides whether M4-G1's
+anti-correlation — and part of M4-E2's decomposition — is an artifact or a
+finding.
+
+**Design, in two registered diagnostics.**
+
+- **D1, the pure-scale ladder (decisive).** Take the deployed baseline
+  whitening W and form arms `c*W` for c in {0.25, 0.5, 1.0, 2.0, 4.0}. This
+  changes NOTHING structural: identical eigenvectors, identical relative
+  spectrum, identical condition number, identical width. It is a pure change
+  of units. Measure `offset_norm` and the truth-referenced recovery at every
+  c, on the M4-G1 world/objective path, unchanged.
+- **D2, the width companion.** Report `offset_norm / sqrt(width)` alongside
+  the raw value for all eight M4-G1 arms, to separate the dimension-count
+  effect from the scale effect. Declared as a diagnostic, not a new target.
+
+**Leans.**
+(a) UNITS: the log-log slope of `offset_norm` against c has a CI excluding 0
+    (report the point estimate and state plainly whether the CI contains 1).
+(b) TRUTH IS SCALE-FREE: truth-referenced recovery is invariant across the c
+    ladder — equivalence form, all pairwise differences inside +/- 0.02,
+    a margin justified as ~4% of baseline truth error (.556).
+(c) NORMALIZATION REPAIRS THE ORDERING: under a scale-normalized offset
+    (registered in Part 0 before compute, together with its justification),
+    the Spearman correlation between offset and truth error across M4-G1's
+    eight arms is no longer negative, and `identity` is no longer the minimum.
+
+**PIVOT-IF:** the log-log slope CI includes 0 -> THE METRIC IS SCALE-INVARIANT.
+M4-G1's anti-correlation is then a real property of the objective: reducing
+displacement genuinely costs recovery, M4-E2's scale-family attribution stands
+as structural, and the redesign faces a true trade-off rather than a units bug
+— which becomes the line's next registered question and a substantially harder
+one.
+
+**Gates.**
+- **G0 POWER** — M4-E2's anchored world count is only 3 (M4-G1 reported 3 of
+  6 candidate arms underpowered at that ceiling). Run the c ladder on MORE
+  worlds (target 8) since it is a fresh measurement, and state explicitly
+  which comparisons are E2-anchored (3 worlds) and which are fresh (8). Report
+  the realized MDE; underpowered comparisons adjudicate nothing.
+- **G1 ANCHOR** — c=1.0 reproduces M4-G1's persisted `baseline` offset and
+  truth recovery to <= 1e-12 on identical world seeds.
+- **G2 CHANNEL LIVENESS** — show that each c actually changes the applied
+  whitening operator while leaving eigenvectors, relative spectrum, condition
+  number and width unchanged; this is what makes D1 a pure-units manipulation
+  rather than a structural one. Report all four invariances explicitly.
+- **G3 TRUTH-PATH INVARIANCE** — degenerate equality check, as in M4-G1.
+- **G4 MATERIALITY FORM** — every gate an equivalence/margin bound; state
+  compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g2_metric_units/`; report
+`reports/SUICA_M4_G2_METRIC_UNITS_REPORT.md`.
