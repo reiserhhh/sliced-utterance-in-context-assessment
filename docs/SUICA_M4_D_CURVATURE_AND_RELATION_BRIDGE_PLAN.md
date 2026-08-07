@@ -1454,3 +1454,112 @@ Full numbers, the complete B-vs-metrics table (both kappas, all three
 gauges), the two-tier B=1 resolution's exact numbers, and the honest
 anomalies list are in
 `reports/SUICA_M4_F6_OCCASION_SPREAD_REPORT.md`.
+
+## M4-F6 planner adjudication note (2026-08-03, appended)
+
+**What M4-F6 earned.** All five gates green, including the new G5: the
+inter-block gap (40 steps, derived from the calibrated phi_hi=.80 so that
+.8^41 = 1.07e-4) genuinely decorrelates the latent state at every B
+(|r| <= .0016, t in [-1.976, +0.795], the closest call reported exactly rather
+than repaired). The manipulation is what it claims to be. And **lean (c)
+HOLDS**: split-half agreement is B-invariant (.0297-.0365 at kappa=1.0, inside
+the registered +/-20% band under both readings, the stricter one at 95.9% of
+tolerance and disclosed). That is a real, registered finding and it stands on
+its own: **the gauge cannot see the occasion axis at all.** Combined with
+M4-F5, the gauge is now known to be blind to the one design dimension that
+classical measurement theory says separates state from trait.
+
+**What M4-F6 did NOT earn, and why that is the planner's fault.** The pivot
+fired on lean (a) (paired B8-B1 long-window difference -.0254, CI
+[-.0699, +.0192]) and its registered consequence was written as
+"trait-level relation structure is not certifiable on ANY of the three panel
+axes". That consequence is NOT supported by this leg, because the sweep ran
+at the base cell where the target quantity is at its own noise floor:
+
+| authors (M4-F5, kappa=1.0) | long-window truth recovery |
+|---|---|
+| x1 | .0225 +/- .0049 |
+| x8 | .0889 +/- .0100 |
+| x16 | .1322 +/- .0085 |
+| x32 | .1501 +/- .0095 |
+
+M4-F6 swept occasions at authors x1 (further reduced to a common budget of
+7,880 events), where long-window recovery is .049 +/- .010 and the paired
+CI half-width is ~.045 — nearly the size of the quantity itself. A test for
+"does spreading occasions RAISE trait recovery" run where trait recovery is
+approximately zero cannot distinguish "spreading does not help" from "there is
+nothing here to raise". The agent chose the base cell for compute economy,
+disclosed that choice before compute, and was entitled to: the REGISTRATION
+left the base scale free and required no power statement. That omission is
+mine, and it is the second registration defect of this kind (M4-F4's G0
+aggregation rule was the first).
+
+**Standing rule added.** Every registered leg must state, BEFORE the run, (i)
+the scale at which its target quantity is measurably non-zero, with the prior
+leg's numbers cited, and (ii) the minimum detectable effect its design
+affords. A null measured where the target sits at its noise floor is reported
+as UNDERPOWERED, never as a null.
+
+**Consequence for the line.** The panel side is NOT closed. M4-F6's pivot
+consequence is suspended pending M4-F7, a properly powered re-test of the same
+occasion axis at authors x16, where long-window recovery is .1322 +/- .0085
+(~15 SE above zero). If the occasion axis does nothing THERE, the closure is
+earned and the panel side closes for good.
+
+## M4-F7 registration (2026-08-03, BEFORE run) — the occasion axis, properly powered
+
+**Declared re-test.** M4-F6's pivot fired but its consequence is suspended
+(planner note above): the occasion sweep ran at authors x1 where long-window
+truth recovery is ~.02-.05 with SEs ~.010, i.e. at its noise floor. This leg
+re-runs the SAME occasion axis at a scale where the target is measurable, and
+is the test that decides whether the panel side closes.
+
+**Mandatory pre-run power statement (new standing rule, stated here as the
+first requirement).** Before adjudicating anything, the leg must report:
+(i) the target's measured level at this scale from M4-F5 (authors x16,
+kappa=1.0: long-window recovery .1322 +/- .0085); (ii) the minimum detectable
+paired difference its own design affords, computed from its realized SEs.
+**If the paired CI half-width exceeds .066 (half of the target's measured
+level), the leg is declared UNDERPOWERED and adjudicates nothing** — it may
+not report a null.
+
+**Design.** Identical to M4-F6 except for scale: shared-occasion design,
+kappa=1.0 only (M4-F6 established the kappa=0.5 behaviour is qualitatively the
+same and it is not worth the compute), **authors x16**, total events per
+author held fixed across B via M4-F6's own common-budget construction,
+occasion-block count B in {1, 2, 4, 8} with M4-F6's verified gap of 40 steps.
+8 worlds x 20 draws. Gauge/map/D0/halving unchanged. Both M4-F5 truth variants
+computed at every cell by the identical deployed path.
+
+**Leans.**
+(a) TRAIT AXIS EXISTS: long-window recovery rises with B, paired-by-world
+    B8-B1 CI excluding 0.
+(b) DIFFERENT OBJECT, NOT BETTER ESTIMATE: same-occasion recovery rises by
+    less than half of any long-window gain (if the long-window gain is
+    negative or null, state that this lean is inapplicable rather than
+    scoring it — the ambiguity M4-F6 hit and disclosed).
+(c) GAUGE BLINDNESS REPLICATES: split-half agreement remains B-invariant
+    within +/-20% of its B=1 value at this scale too (M4-F6 found this at
+    authors x1; a replication at x16 turns one observation into a property).
+
+**PIVOT-IF:** the leg is adequately powered by its own pre-run standard AND
+long-window recovery does not rise with B -> **the closure is EARNED**:
+trait-level relation structure is not certifiable on any of the three panel
+axes (authors, events, occasions), the D3 program is permanently restricted to
+occasion-bound objects, and the M4-E2 objective redesign becomes the only
+remaining route with the panel side closed.
+
+**Gates.**
+- G0 POWER (above) — an underpowered leg adjudicates nothing.
+- G1 anchor: kappa=0 free cell reproduces M4-F1's persisted `base1x` to 1e-12.
+- G2 continuity: the B=1 cell reproduces M4-F6's own construction at the same
+  author scale where comparable, and the raw authors x16 anchor reproduces
+  M4-F5's persisted `authors_x16_shared_k10` (agreement + both truth variants)
+  to <=1e-12; state explicitly which object each check uses, as M4-F6 did.
+- G3 gauge invariance, equality-gated as in the prior legs.
+- G4 truth-path invariance (M4-F5 and M4-F6 both achieved exactly 0.0).
+- G5 decorrelation, with the same per-cell rule M4-F6 pre-stated and passed.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f7_occasion_axis_powered/`; report
+`reports/SUICA_M4_F7_OCCASION_AXIS_POWERED_REPORT.md`.
