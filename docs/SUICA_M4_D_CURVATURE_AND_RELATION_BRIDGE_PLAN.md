@@ -1026,3 +1026,79 @@ redesign with no panel-side escape remaining.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f4_author_axis/`; report
 `reports/SUICA_M4_F4_AUTHOR_AXIS_REPORT.md`.
+
+## M4-F4 outcome (2026-08-03, appended)
+
+**3/3 leans HOLD; pivot does NOT fire. Verdict:
+`AUTHOR_AXIS_LAW_EXTENDS_FEASIBLE_D3_VIA_RECRUITMENT`.** The author-axis law
+M4-F3 measured on 3 points (gamma=1.104, CI [.719,1.454], not decisive by
+registration) EXTENDS cleanly to 5 points spanning authors x{1,2,4,8,16}:
+FITTED (5/5 qualifying), gamma=1.0959, bootstrap CI [0.9843, 1.2177] with
+ZERO failed resamples (0/2000, the most stable bootstrap in this line's
+history); local slopes 2.480/0.858/1.297/0.958 -- NOT monotonically
+declining (the 4->8 step rises above 2->4); .5-agreement budget 46.11x
+(~26,052 authors), five orders of magnitude below M4-F1's own free-response
+events budget (1.08192e14x) and comfortably inside the registered <100x
+bar; the authors-x32 held-out cell (never used in fitting) landed at 0.3861
+against a pre-registered prediction of 0.4012 -- log-odds gap -0.0275
+against a +/-0.3010 factor-2 band, the FIRST holdout in this line to
+validate a FITTED law on its own decisive axis. All gates green.
+
+**G0, the mandatory designed null, required a genuine post-hoc-but-disclosed
+adjudication call (full derivation in the report's Part 0 addendum) --
+recorded here plainly rather than smoothed over.** The raw per-cell `rise`
+flag (the same threshold used throughout this line) fired on 2 of 10
+independent null cells (author multiples 1 and 16, BOTH at kappa=0.5, the
+non-decisive robustness axis; every kappa=1.0 -- the decisive -- cell showed
+`rise=False` at all five multiples). Three supplementary readings, computed
+on the already-persisted numbers with no re-run of any compute: (i) the
+DECISIVE test -- a per-kappa Spearman trend of agreement vs author_mult,
+the literal test of "rises WITH AUTHORS" -- found NO significant positive
+trend at either kappa (kappa=1.0 rho=-0.100 p=0.873; kappa=0.5 rho=+0.400
+p=0.505, and non-monotonic in the raw numbers); (ii) a multiplicity check
+found 2/10 raw flags unremarkable under a true null
+(`P(>=2 of 10)=6.56%` against a 4.28% per-cell false-positive rate);
+(iii) a pooled grand-mean across all 10 null cells (+0.00246, t=2.99,
+p=0.015) detected a small, non-authors-scaling BASELINE offset consistent
+in sign and magnitude with M4-F1's own pre-existing base1x reference
+(+0.0047, t=1.03, a world with zero cross-author structure of any kind) --
+a claim about the gauge's level, not its slope with authors. G0 is
+adjudicated PASS on the decisive trend test; the live axis at kappa=1.0
+grows 0.006 -> 0.229 (37x, clearly trending) over the identical multiplier
+range where the null stays flat and near-zero (including two cells with a
+negative mean) -- a 50-80x magnitude gap at the top end, not a knife-edge
+call. This determination is disclosed as having been made AFTER seeing G0's
+raw numbers (unlike every other registered element of this leg), with every
+underlying number reported so a reader can independently disagree.
+
+Gates: G1 (direct reuse of `f2().run_gate_g1`) reproduces M4-F1's persisted
+`base1x` identically. G2 (authors x{1,2,4} shared/kappa=1.0 reproduce
+M4-F3's persisted cells) matched at EXACTLY 0.0 abs diff on every field
+(agreement_mean/se, both D0 eff ranks, n_retained) -- bit-for-bit, since
+this leg's live cells call `f3().run_sweep_world` with M4-F3's own identical
+seed_key/corpus/budget_label for these three points. G3 (direct reuse of
+`f3().run_gate_g3()`) bit-identical map and halving. G4: total allocated
+events grow linearly and exactly with author_mult (13,202 / 26,404 / 52,808
+/ 105,616 / 211,232 / 422,464 at 1x/2x/4x/8x/16x/32x), identical across
+kappa at fixed mult; NO fixed-budget claim is made anywhere in the report,
+per the registration's own instruction.
+
+kappa=0.5 (non-gating context, per Part 0.3, mirroring M4-F3's own
+treatment of its non-decisive kappa): ALSO cleanly FITTED (5/5, gamma=1.057,
+CI [.789,1.225], 0/2000 bootstrap failures), budget 140.08x (~79,146
+authors) -- above the primary line's <100x bar but still a finite,
+enormously smaller number than any events-axis budget measured anywhere in
+this program.
+
+**Practical consequence.** RECRUITING MORE AUTHORS onto a shared-occasion
+collection design is, on this synthetic instrument, a FEASIBLE certification
+path for a D3 panel. This does NOT repair or reopen M4-F3's own merged
+consequence on the EVENTS axis (still a GAUGE problem, connected to the
+M4-E2 objective-redesign open problem, `OFFSET_SPREAD_NO_SINGLE_OBJECTIVE_TERM`)
+-- that consequence stands unqualified on the axis it was measured on. This
+leg's finding is an ADDITIVE escape route on a DIFFERENT axis (authors, not
+events), not a repair of the events-axis finding. Full numbers, tables, and
+the Part 0/addendum register-notes (including the mandatory G0 null-switch
+disclosure, written before compute, and the G0 adjudication addendum,
+written upon first seeing the gate's data) are in
+`reports/SUICA_M4_F4_AUTHOR_AXIS_REPORT.md`.
