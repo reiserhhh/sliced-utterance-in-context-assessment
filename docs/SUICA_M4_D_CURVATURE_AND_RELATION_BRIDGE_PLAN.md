@@ -650,3 +650,83 @@ relation crossover beginning only above ~2x authors; the events axis sharpens
 features while dissolving the realized-state heterogeneity the finite panel's
 field rides on — signal and noise shrink together. Panel design laws line
 continues from the composition question.
+
+## M4-F2 registration (2026-08-03, BEFORE run) — the D3 composition law
+
+M4-F1 measured the sizing law and killed size-only rescue (events exponent
+.153; .5-agreement budget 10^14x; bootstrap edge ~155x never inside the
+registered [4,50]) and issued a corollary hand-off: the D3 panel must change
+COMPOSITION — shared-context events, within-author condition pairing — not
+scale. This leg tests that hand-off at FIXED TOTAL EVENT BUDGET, so any gain
+is attributable to composition alone and not to size.
+
+**Mechanism this leg targets (from M4-F1's own interpretation).** In the
+free-response composition each author's events are their own idiosyncratic
+occasions, so part of the between-author difference the field rides on is
+occasion-SAMPLING nuisance, independent between halves and therefore pure
+noise on the split-half gauge. SUICA's own opportunity theory says the fix is
+to control the condition by design. A shared-occasion panel (every author in
+a context observed on the same occasion grid) removes that nuisance by
+construction at identical budget.
+
+**World.** M4F1RelationWorld with the calibrated knobs (k=48, rho=.50,
+w_mu=.15, w_x=.15, w_e=.70, phi in [.20,.80]), extended by a context-occasion
+common shock: at occasion t in context c a shock s_{c,t} shared by all authors
+of c enters each event with weight kappa, taken out of the author's own state
+share so total variance is preserved. kappa=0 recovers M4-F1's world exactly.
+
+**Design axes (all at the base1x total event count).**
+
+- Axis 1, occasion composition x kappa in {0.5, 1.0}:
+  - `free_k05`, `free_k10`: each author draws their own occasions (current
+    deployed/real-text composition);
+  - `shared_k05`, `shared_k10`: all authors of a context are observed on the
+    SAME occasion grid.
+  The comparison of interest is shared minus free AT THE SAME kappa: the
+  world (including how much shared structure exists) is held fixed and only
+  the design changes.
+- Axis 2, within-author condition pairing at kappa=0: `crossed_q2`,
+  `crossed_q4` — each author appears in Q contexts with m/Q events each, total
+  events unchanged. Read on the deployed per-context gauge AND on a declared
+  companion: the within-author cross-context contrast field's own split-half
+  agreement (a DIFFERENT typed object; levels are not comparable to the
+  per-context field, only the presence/absence of non-nil agreement is).
+
+**Gauge.** Unchanged from M4-E1/M4-F1: the deployed frozen realtext map,
+D0 soft calibration, per-context deployed soft field, weighted field
+agreement, seed-compatible event halving; 8 worlds x 20 draws per cell.
+
+**Leans.**
+(a) At fixed budget, shared-occasion beats free-response at the same kappa:
+    agreement(shared) - agreement(free) > 0 with the paired-world CI
+    excluding 0 at kappa=1.0 at minimum.
+(b) The gain scales with kappa (gain at 1.0 > gain at 0.5), because the
+    removed nuisance IS the occasion-sampling variance whose size kappa sets.
+(c) Crossed authors HURT the deployed per-context gauge (monotone decline in
+    Q, consistent with M4-F1's events-axis law at m/Q events per
+    author-context), WHILE the paired-contrast companion shows non-nil
+    agreement at Q>=2 (t>2 against its own zero) — i.e. pairing buys a
+    DIFFERENT certifiable object, not a better version of the same one.
+
+**PIVOT-IF:** neither kappa shows a shared-minus-free gain with a CI
+excluding 0 -> COMPOSITION-AT-FIXED-BUDGET ALSO FAILS on the deployed gauge.
+The D3 problem is then not a panel-design problem but a GAUGE problem, and
+this line MERGES with the M4-E2 objective-redesign open problem, which becomes
+the registered next question.
+
+**Gates (all must pass before adjudication).**
+- G1 anchor: the kappa=0 free cell reproduces M4-F1's persisted `base1x`
+  (agreement_mean .004733, se .004591, effM 42.610149, effK 39.637239,
+  n_retained 565) to <=1e-12.
+- G2 budget conservation: total event count is exactly equal across every
+  cell (integer equality, reported per cell).
+- G3 gauge invariance: deployed map, D0 path, and halving indices are the
+  M4-E1/M4-F1 functions, equality-gated as in M4-F1's gate 2.
+- G4 designed null: at kappa=0, `shared` equals `free` cell-for-cell (sharing
+  occasions can do nothing when there is no common shock). A G4 failure means
+  the manipulation is doing something other than what it claims and the leg
+  is void.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f2_composition/`; report
+`reports/SUICA_M4_F2_COMPOSITION_REPORT.md`.
