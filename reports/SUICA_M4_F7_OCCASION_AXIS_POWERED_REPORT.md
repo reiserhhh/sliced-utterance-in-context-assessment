@@ -277,9 +277,11 @@ registered `.066` bar (73.4% of it), not a close call. **G0 PASSES.**
   margin). Pooled grand mean across the 3 cells: +0.000249 (supplementary
   context only, not the gating statistic, per F6's own Part 0.7 rule).
   Correlation magnitudes are 3-4 orders of magnitude below the smallest SE
-  measured anywhere in this leg, and `n_pairs/world` is 16-126x larger than
-  M4-F6's own corresponding cells (985 authors -> 15,760), giving this
-  leg's own G5 an intrinsically tighter statistical test than F6's.
+  measured anywhere in this leg, and `n_pairs/world` is exactly 16x larger
+  than M4-F6's own corresponding cells at every matching block_count
+  (756,480/47,280 = 2,269,440/141,840 = 5,295,360/330,960 = 16.0, tracking
+  the registered 985 authors -> 15,760 author multiple exactly), giving
+  this leg's own G5 an intrinsically tighter statistical test than F6's.
 
 All six gates green: `gates.json` -> `{"G0": true, "G1": true, "G2": true,
 "G3": true, "G4": true, "G5": true}`.
