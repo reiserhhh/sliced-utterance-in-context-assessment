@@ -1370,3 +1370,87 @@ all three axes.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f6_occasion_spread/`; report
 `reports/SUICA_M4_F6_OCCASION_SPREAD_REPORT.md`.
+
+## M4-F6 outcome (2026-08-03, appended)
+
+**PIVOT FIRES. Verdict:
+`OCCASION_SPREAD_NOT_THE_LEVER_TRAIT_LEVEL_UNCERTIFIABLE_ON_ALL_THREE_AXES`.**
+At kappa=1.0 (primary), fixed authors (985, base1x) and fixed total events
+(7,880 = 985 x M_COMMON=8, identical across every swept B), long-window
+truth recovery (M4-F5's Variant B) does NOT rise from B=1 to B=8: the
+paired-by-world difference is -0.025362 (SE .018825, 95% CI
+[-0.069876, +0.019153], including zero, point estimate NEGATIVE). Per the
+registration's own pre-committed consequence: **trait-level relation
+structure is not certifiable on ANY of the three panel axes tested across
+this line (authors, events, occasions); the D3 program's claims are
+permanently restricted to occasion-bound objects, and the registered next
+question becomes the M4-E2 objective redesign
+(`OFFSET_SPREAD_NO_SINGLE_OBJECTIVE_TERM`) with the panel side closed on
+all three axes.**
+
+All five gates green. G1 (kappa<=0 anchor, direct reuse of
+`f2().run_gate_g1`) diffs ~1e-16/1e-15. G2 (new: the RAW `base1x_shared_k05`/
+`k10` gate-anchor cells, computed via a direct unchanged call to
+`f5().run_truth_sweep_world` on M4-F4's own byte-identical task, reproduce
+M4-F5's persisted agreement AND both truth-variant means) max diff 6.2e-17.
+G3 (direct reuse of `f3().run_gate_g3()`) bit-identical. G4 (truth-path
+invariance, identical mechanism to M4-F5) exactly 0.0 across all 10 computed
+cells x 8 worlds = 80 world-checks, matching M4-F5's own "exactly 0.0" in
+full. **G5 (wholly new, the decorrelation check)**: per its own
+pre-registered aggregation rule (stated BEFORE the run, per the standing
+rule added after M4-F4's G0 ambiguity) -- per-cell `|t|<2.0` at EVERY one of
+6 `(block_count>=2, kappa)` cells, pooling the realized correlation of the
+RAW AR(1) state `x` at the chosen gap across authors x factors x adjacent
+boundary pairs within each of 8 worlds -- **all 6 cells PASS**
+(correlation means -0.0016 to +0.0007, t-stats -1.976 to +0.795; closest
+call `b4_shared_k05` at t=-1.976, disclosed exactly, no repair/re-run
+followed). The GAP=40 (label step 41) was derived BEFORE compute from the
+calibrated `phi_hi=.80`: `0.8**41=1.065e-4`, three to four orders of
+magnitude below every measured SE, and G5 confirms this margin held.
+
+A genuine tension between "FIXED TOTAL EVENTS across the whole B sweep" and
+G2's bit-identical reproduction requirement was disclosed and resolved
+BEFORE compute (Part 0.2 of the report), mirroring M4-F2's own established
+precedent for the identical situation: M4-F5's own `base1x_shared_k05`/`k10`
+(RAW, untruncated, 13,202 events) serve ONLY as G2's gate anchor; the
+adjudicated B=1..8 sweep uses a SEPARATE, uniform `M_COMMON=8`
+events/author budget (7,880 events total, identical at every B), needed
+because per-author floor-to-nearest-multiple-of-B would have given
+different authors different block boundaries, breaking the cross-author
+occasion-label alignment the shared-occasion mechanism depends on. This
+costs 40.3% of the raw panel's events (concentrated in the 282-of-565
+`m=16` authors, who lose half their own data) -- disclosed, not hidden.
+
+Lean (a) MISS (CI includes zero, negative point estimate). Lean (b) MISS
+(same-occasion truth recovery's own paired diff, -0.005028, does not clear
+"half of lean (a)'s gain", -0.012681 -- though lean (a)'s "gain" was itself
+negative, a disclosed caveat registered before seeing this sign that does
+not rescue the literal MISS). **Lean (c) HOLD** -- split-half agreement is
+B-invariant at kappa=1.0 (0.0297-0.0365 across B in {1,2,4,8}, every point
+within +/-20% of the B=1 reference under the adopted reading, and the
+max-to-min spread also clears a stricter single-sided 20% reading, though
+by a tight 95.9%-of-tolerance margin, both readings disclosed per this
+line's ambiguity-disclosure convention) -- exactly the registered prediction
+that this would be "the sharpest and most falsifiable of the three... the
+one that would explain why four legs of gauge optimization never touched
+trait certification."
+
+**Mechanistic reading (post-hoc, disclosed as such, not a registered
+claim).** At kappa=1.0 exactly, the blend formula
+`blended_x = sqrt(1-kappa)*x + sqrt(kappa)*shock_x` reduces to
+`blended_x = shock_x` -- the author-private AR(1) state contributes NOTHING
+to the observed panel or either truth variant at the primary kappa, so the
+occasion-spread manipulation has, by the generator's own algebra, zero
+causal channel to any adjudicated quantity there; G5's PASS (verifying `x`
+itself decorrelates) is correct but causally disconnected from the
+kappa=1.0 leans. This alone would be a limited finding, but kappa=0.5
+(where `x` DOES have a genuine ~.707-weight causal channel) shows the SAME
+qualitative null (negative point estimate, CI including zero) as
+non-gating context -- strengthening rather than undermining the pivot: even
+on the one kappa where spreading mechanically CAN matter, no positive
+long-window effect appears in this data.
+
+Full numbers, the complete B-vs-metrics table (both kappas, all three
+gauges), the two-tier B=1 resolution's exact numbers, and the honest
+anomalies list are in
+`reports/SUICA_M4_F6_OCCASION_SPREAD_REPORT.md`.
