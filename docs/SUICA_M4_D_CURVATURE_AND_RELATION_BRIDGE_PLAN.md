@@ -1294,3 +1294,79 @@ in the report's honest-anomalies section rather than silently corrected.
 Full numbers, the complete agreement-vs-truth table for both variants, the
 per-clause SE context, and the T_LARGE sensitivity table are in
 `reports/SUICA_M4_F5_GAUGE_VALIDITY_REPORT.md`.
+
+## M4-F6 registration (2026-08-03, BEFORE run) — can occasion SPREAD certify the trait-level object?
+
+**Standing state after M4-F5.** The pivot fired and its consequence is in
+force: split-half agreement is not a valid certificate, and the .5 target,
+the 46.1x budget and the ~26,052-author recommendation are WITHDRAWN. What
+M4-F5 actually measured is sharper than "the gauge is broken": across authors
+x1 -> x32 at kappa=1.0, split-half agreement rises 63x (.0061 -> .3861),
+truth recovery against a NOISE-FREE SAME-OCCASION target rises 4.3x
+(.1497 -> .6371, extrapolating to .810 at the .5-agreement point), while
+truth recovery against a LONG-WINDOW target plateaus near .15 (.0225 ->
+.1501, extrapolating to .200) and does not move when the long window is
+quadrupled (.150 -> .143 at T 80 -> 320: stable, not under-converged). The
+finite panel recovers an OCCASION-BOUND, STATE-INCLUSIVE configuration well
+and a TRAIT-LIKE object poorly, and the gauge tracks the former.
+
+This is the foundation gap ledger's F10 (state/trait depends on the occasion
+universe and horizon) appearing as a measurement, and it names the missing
+design axis. Authors and events per author are both WITHIN-window axes. The
+classical answer to a state/trait separation is neither: it is spreading
+observation across OCCASIONS far enough apart that the realized state
+decorrelates.
+
+**Question.** At fixed total budget, does splitting the panel into B
+widely-separated occasion blocks certify the trait-like object that neither
+more authors nor more events could reach?
+
+**Design.** Shared-occasion design at kappa=1.0 primary (kappa=0.5 context),
+authors and TOTAL events held fixed at an M4-F4/M4-F5 cell, sweeping the
+occasion-block count B in {1, 2, 4, 8}: each author's events are divided
+equally among B blocks, and blocks are separated by a gap long enough that
+the AR(1) state is decorrelated across them (gap chosen from the world's own
+phi range and VERIFIED, see G5). 8 worlds x 20 draws; gauge/map/D0/halving
+unchanged; both M4-F5 truth variants (same-occasion noise-free, and
+long-window) computed at every cell by the identical deployed path.
+
+**Leans.**
+(a) TRAIT AXIS EXISTS: long-window truth recovery RISES with B at fixed
+    budget, paired-by-world CI excluding 0 from B=1 to B=8.
+(b) IT IS A DIFFERENT OBJECT, NOT A BETTER ESTIMATE: same-occasion truth
+    recovery does NOT rise with B by more than half the long-window gain
+    (spreading changes which object is estimable, it does not sharpen the
+    state-inclusive one).
+(c) THE GAUGE IS BLIND TO IT: split-half agreement is approximately
+    B-invariant (max-to-min across B within +/-20% of the B=1 value) — the
+    sharpest and most falsifiable of the three, and the one that would
+    explain why four legs of gauge optimization never touched trait
+    certification.
+
+**PIVOT-IF:** long-window truth recovery does not rise with B (paired CI
+includes 0) -> OCCASION SPREAD IS NOT THE LEVER EITHER. Then trait-level
+relation structure is not certifiable by ANY of the three panel axes
+(authors, events, occasions) in this world, the D3 program must permanently
+restrict its claims to occasion-bound objects, and the registered next
+question becomes the M4-E2 objective redesign with the panel side closed on
+all three axes.
+
+**Gates.**
+- G1 anchor: kappa=0 free cell reproduces M4-F1's persisted `base1x` to
+  <=1e-12.
+- G2 continuity: the B=1 cells reproduce M4-F5's persisted agreement AND both
+  truth-variant values to <=1e-12 on identical world seeds.
+- G3 gauge invariance, equality-gated as in the prior legs.
+- G4 truth-path invariance, as M4-F5 (degenerate equality check; M4-F5
+  achieved exactly 0.0 on 88 world-checks).
+- **G5 decorrelation check (the manipulation must be what it claims).**
+  Measure the realized cross-block autocorrelation of the latent state at the
+  chosen gap; it must be indistinguishable from zero at every B. If blocks
+  remain correlated, the sweep is a relabelled within-window sweep and the leg
+  is VOID. State the aggregation rule for this gate BEFORE the run (per-cell
+  vs trend, and the multiplicity treatment) — the standing rule added after
+  M4-F4's G0 ambiguity.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f6_occasion_spread/`; report
+`reports/SUICA_M4_F6_OCCASION_SPREAD_REPORT.md`.
