@@ -1214,3 +1214,83 @@ a factor of 2, the planner note is wrong and the corrected number controls.
 Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
 `results/m4_f5_gauge_validity/`; report
 `reports/SUICA_M4_F5_GAUGE_VALIDITY_REPORT.md`.
+
+## M4-F5 outcome (2026-08-03, appended)
+
+**PIVOT FIRES. THE GAUGE IS NOT A VALID CERTIFICATE. Verdict:
+`GAUGE_INVALID_CERTIFICATE_WITHDRAWN_46_1X_BUDGET_AND_26K_RECOMMENDATION_WITHDRAWN`.**
+At every one of M4-F4's own 11 persisted cells (authors x{1,2,4,8,16} at
+kappa in {.5,1.0}, plus the x32 holdout at kappa=1.0, identical world seeds),
+this leg computed truth-referenced recovery under two registered,
+noise-free truth constructions -- Variant A (analytic, same finite T,
+bit-identical to the live world minus the per-event noise term) and Variant
+B (large-sample asymptotic, `T_LARGE=80` synthetic occasions per retained
+author, quadrupled to 320 in a dedicated sensitivity check that found the
+result STABLE, not under-converged: at the x32 holdout, T=80 gives .150 and
+T=320 gives .143 -- moving further from, not toward, Variant A's .637).
+Split-half agreement correlates strongly with both variants in RANK terms
+(pooled Spearman .991 / .982, comfortably above the registered .9 bar), but
+the registration's own zero-tolerance co-movement clause is violated under
+BOTH variants (1 violation for A, 2 for B -- all three statistically weak,
+0.6-1.2 combined-SE, reported honestly but not used to soften the verdict,
+since the registered rule carries no significance threshold), and under
+Variant B the extrapolated truth recovery at the .5-agreement point is
+**0.200 -- decisively below the pivot's own 0.5 floor** (Variant A's own
+extrapolation, by contrast, clears lean (b)'s stricter 0.7 bar at 0.810; the
+divergence between the two truth operationalizations is itself a central
+finding). **Per the registration's own pre-committed consequence: the .5
+agreement target, the 46.1x author-multiple budget, and the ~26,052-author
+D3 panel recommendation that M4-F4 produced are ALL WITHDRAWN**, pending
+respecification of the certification target against a truth-referenced
+criterion -- which becomes the registered next question for this line.
+Lean (a) MISS, lean (b) MISS, lean (c) HOLD (the agreement-to-truth
+mapping's MAGNITUDE is stable across kappa, max gap .024-.029 against a .1
+bar, even though its exact rank-ordering is not preserved once kappa=0.5 is
+pooled in) -- lean (c)'s HOLD does not rescue (a)/(b) and does not gate the
+pivot. All 4 gates green (G1 diffs ~1e-16, three orders inside the 1e-12
+bar; G2 max diff 8.3e-17 across all 11 cells x 5 fields vs M4-F4's own
+persisted numbers; G3 bit-identical; G4 exactly 0.0 on all 88 world-checks,
+stronger than the registered 1e-9 tolerance).
+
+**Registered secondary check (offset-corrected refit): the letter of the
+planner's pre-recorded expectation is satisfied, but not by the predicted
+mechanism.** Corrected budget (kappa=1.0, primary SE-unchanged reading):
+**44.77x**, which does NOT exceed M4-F4's original 46.11x (in fact 3%
+lower) -- so the planner note's bottom-line number (<=46.1x) holds. But the
+planner's own described MECHANISM ("an offset lifts the small-n points,
+flattens the slope, biases gamma DOWN and budget UP") is not what happened:
+subtracting the null offset from `author_mult=1`'s mean, with its SE left
+unchanged, pushes that point BELOW `fit_axis`'s own qualifying bar
+(`mean-2*se>0`), so it DROPS OUT of the fit entirely (n_qualifying 5->4).
+The resulting 4-point gamma (1.1192) is marginally HIGHER, not lower, than
+the original 5-point gamma (1.0959) -- the lower budget follows from a point
+exiting the qualifying set, not from a lift-and-flatten of a fully-retained
+fit. Disclosed plainly rather than smoothed over, per the task's own
+instruction for exactly this situation.
+
+**Interpretation (a reading, not a registered claim, clearly separated from
+the adjudication above).** At kappa=1.0, agreement grows 63x from x1 to
+x32, Variant A grows only 4.3x, and Variant B grows 6.7x before plateauing.
+This is consistent with the finite panel and its split-half agreement
+statistic being well-suited to certifying an occasion-bound,
+state-inclusive configuration (Variant A) but poorly suited to certifying a
+longer-horizon, more trait-like target (Variant B, which deliberately
+averages the AR(1) state process toward its stationary long-run behavior)
+-- echoing `docs/SUICA_FOUNDATION_GAP_LEDGER.md`'s F10 ("state/trait depends
+on occasion universe and horizon... no trait claim from same-session
+split-half stability") as a plausible reading, not a claim this leg tests
+directly.
+
+**Process note.** A pre-compute memory-safety revision
+(`T_LARGE_PRIMARY`/`TRUTH_CHUNK_SIZE`: 150/1500 -> 80/1000, before any of
+the 11 registered cells were computed, driven by a 6.5GB-peak-RSS pilot
+measurement, not by any observed agreement/truth number) is disclosed in
+the report's Part 0.3. A column-naming bug in the non-gating sensitivity
+stage (stale `_t150`/`_t600` literals left over from that same revision,
+never touching the actual computed values, gates, or the 11 main cells) was
+found and fixed after the sensitivity stage completed, and is self-reported
+in the report's honest-anomalies section rather than silently corrected.
+
+Full numbers, the complete agreement-vs-truth table for both variants, the
+per-clause SE context, and the T_LARGE sensitivity table are in
+`reports/SUICA_M4_F5_GAUGE_VALIDITY_REPORT.md`.
