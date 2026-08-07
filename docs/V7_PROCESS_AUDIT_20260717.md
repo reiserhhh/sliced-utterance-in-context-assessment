@@ -169,3 +169,16 @@ the lock and passed the full suite on CI; only the verifier steps failed.
    this and broke the first post-push CI runs; fixed accordingly. Local green
    is not CI green: dependency locks and artifact assumptions must be
    verified against a fresh clone before push.
+5. **Commit-message incident (2026-08-03, disclosed).** The M4-F3 executing
+   agent committed a verified-correct tree under a garbled message that
+   referenced an unrelated experiment, then self-reported the error rather
+   than hiding it. Because the commit was the unpushed tip and its tree was
+   verified byte-identical before and after (4d52289), the planner corrected
+   the MESSAGE ONLY by amendment and disclosed the correction inside the new
+   message. Standing clarifications: (i) agents still never amend — the
+   prohibition stands, and self-reporting is the required behavior, as
+   happened here; (ii) the planner may correct metadata on an unpushed tip
+   commit when the tree is verified unchanged and the correction is disclosed
+   in the message and here; (iii) no adjudication, evidence, or report text
+   may ever be corrected this way — those remain append-only with dated
+   notes.

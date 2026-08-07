@@ -923,3 +923,106 @@ operationalizations and one mechanical loading fix (Part 0.11, discovered
 before any gate number existed, confined to this script's own module loader,
 zero edits to M4-F1's or M4-F2's scripts) are in
 `reports/SUICA_M4_F3_COMPOSITION_SCALING_REPORT.md`.
+
+## M4-F3 planner adjudication note (2026-08-03, appended)
+
+The M4-F3 pivot FIRED exactly as registered on its decisive axis, and that
+stands: on the events axis at kappa=1.0 the paired delta_gamma CI
+[-.839, +.039] includes zero, the shared design's events fit is UNFITTABLE,
+and the x16 holdout is negative. Composition buys a LEVEL, not a RATE, in
+events. The registered consequence — the D3 certification problem is a GAUGE
+problem, merging with the M4-E2 objective-redesign line — is recorded and
+remains on the books as an open destination.
+
+**One honest correction to the pivot's own consequence, made here rather than
+by quietly ignoring it.** That consequence was written as a general statement
+("no composition plus feasible scale certifies this field") at a time when the
+events axis was believed to be the only fittable axis, because M4-F1's author
+axis had been degenerate. M4-F3's own PRE-REGISTERED sweep — the authors axis
+was in the registered design, it simply carried no lean because 3 multiples
+fall below this line's fit standard — contradicts that generalization: under
+the shared-occasion design the authors axis is the leg's MOST stable fit,
+FITTED at both kappas (gamma .860 at kappa=.5, 1.104 at kappa=1.0; CI
+[.719, 1.454]; 2000/2000 and 1999/2000 qualifying resamples) with cell means
+.0061 -> .0332 -> .0586, while the free design stays flat. A rate change was
+measured; it was measured on the axis the registration had not made decisive.
+
+Therefore the panel line is NOT closed by this pivot, and saying so requires
+declaring the re-opening rather than smuggling it. The next leg (M4-F4) is
+registered as a DECLARED RE-OPENING of a line whose pivot fired, with two
+disciplines attached: (i) it is designed to KILL the author-axis hope
+(saturation pivot), not to confirm it; (ii) it carries a mandatory designed
+null, because a statistic computed over more field entries could rise for
+instrument reasons rather than world reasons — the exact failure mode that
+already cost this line two legs (the ridge self-infliction of Leg 4b and the
+common-mode metric of Leg 12). If the null rises, M4-F4 is void and the
+gauge-problem consequence stands unqualified.
+
+## M4-F4 registration (2026-08-03, BEFORE run) — the author-axis law, or its artifact
+
+**Declared re-opening.** M4-F3's registered pivot fired and its consequence
+(gauge problem) is on the books. This leg re-opens the panel line anyway,
+openly, for the reason stated in the planner note above: M4-F3's own
+pre-registered authors axis measured a rate change that the pivot's
+consequence had generalized away. The re-opening is declared, not smuggled,
+and this leg is built to KILL the author-axis hope rather than to confirm it.
+
+**The hope being tested.** Under the shared-occasion design at kappa=1.0, the
+deployed field's split-half agreement rose .0061 -> .0332 -> .0586 across
+authors x{1,2,4} with a FITTED exponent gamma ~ 1.10 (CI [.719, 1.454]),
+while the free design stayed flat. If that law extends, a certified D3 panel
+is reachable by RECRUITING MORE AUTHORS ONTO SHARED OCCASIONS — not by
+collecting more text per author, which M4-F1/M4-F3 showed is useless and
+eventually harmful. If it saturates, the panel line closes for good and the
+gauge-problem consequence stands unqualified.
+
+**Design.** Shared-occasion design, kappa=1.0 primary and kappa=0.5
+robustness, authors x{1,2,4,8,16} at fixed events/author, 8 worlds x 20 draws,
+the M4-E1/M4-F1/M4-F2/M4-F3 gauge/map/D0/halving unchanged, held-out
+validation at authors x32 (kappa=1.0, shared).
+
+**MANDATORY DESIGNED NULL (gate, not a lean).** The same author sweep run in a
+world with NO true cross-author relation structure (authors independent: the
+shared latent that creates the field is switched off while every other
+generator draw, the occasion grid, the budgets, and the gauge stay identical).
+Measured agreement must remain statistically indistinguishable from zero at
+EVERY author multiple. Rationale, stated before the run: the agreement
+statistic is computed over more field entries as authors grow, and this line
+has twice been burned by instrument structure masquerading as world structure
+(Leg 4b ridge self-infliction; Leg 12 common-mode metric). If the null rises
+with authors, the measured "author-axis rate" is an artifact of the statistic,
+M4-F4 is VOID, and M4-F3's gauge-problem consequence stands unqualified.
+
+**Leans.**
+(a) The author-axis law EXTENDS: FITTED status at authors x{1..16} under
+    shared/kappa=1.0 with the bootstrap CI lower edge above 0.5 (i.e. still a
+    steep rate, not a decaying one), and no monotone decline of the local
+    slope across the swept range.
+(b) The .5-agreement author budget extrapolates below 100x the current base
+    panel (roughly <= 60,000 authors at this line's base of 565) — feasible,
+    in contrast with M4-F1's 10^14x event budget.
+(c) The held-out authors x32 cell validates the fitted law within factor 2
+    (the standard M4-F1 met and M4-F3 could not test).
+
+**PIVOT-IF:** the local slope declines monotonically across the swept range,
+OR the x32 holdout falls below half the fitted prediction, OR the fit fails
+FITTED status -> SATURATION: the author-axis rise is a small-panel transient,
+not a law; the panel line closes, M4-F3's gauge-problem consequence stands
+unqualified, and the registered next question becomes the M4-E2 objective
+redesign with no panel-side escape remaining.
+
+**Gates.**
+- G0 designed null (above) — a rise voids the leg.
+- G1 anchor: the kappa=0 free cell reproduces M4-F1's persisted `base1x` to
+  <=1e-12 (as in M4-F2/M4-F3).
+- G2 continuity: the authors x{1,2,4} shared cells at kappa=1.0 reproduce
+  M4-F3's persisted values to <=1e-12 on identical world seeds (this leg
+  extends that sweep, it does not re-derive it).
+- G3 gauge invariance, equality-gated as in M4-F1 gate 2 / M4-F2 G3 / M4-F3 G3.
+- G4 budget accounting: total events per cell reported exactly; the author
+  axis necessarily grows total budget, so the leg reports cost per cell and
+  makes NO fixed-budget claim (unlike M4-F2, which was a fixed-budget leg).
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f4_author_axis/`; report
+`reports/SUICA_M4_F4_AUTHOR_AXIS_REPORT.md`.
