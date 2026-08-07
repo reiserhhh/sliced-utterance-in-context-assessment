@@ -1805,3 +1805,97 @@ significance test. Full numbers, the complete B-vs-metrics table, the
 per-world detail, both voidability readings in full, and the honest
 disclosures list are in
 `reports/SUICA_M4_F8_OCCASION_AXIS_LIVE_REPORT.md`.
+
+## M4-F8 planner adjudication note (2026-08-03, appended) — a defective gate, and the standard the agent set
+
+**The leg is VOID, correctly.** G5 failed at `b4_x16_shared_k05` (|t|=3.497)
+and the registered discipline says a G5 failure voids the leg regardless of
+anything else. The executing agent adopted that reading, did NOT weaken the
+bar or change the gap after seeing the number, and separately reported what
+the not-adopted alternative reading would have produced (pivot fires, closure
+earned) precisely so that its refusal to adopt it could be audited. **That is
+the standard for this line: the convenient reading was available, computed,
+and declined.** It is recorded here as such.
+
+**But G5 as written is a defective gate, and that is the planner's fault.**
+The gate is a NIL-SIGNIFICANCE test (|t| < 2.0) on a quantity that is
+small-but-NONZERO by construction: with the calibrated phi_hi = .80 and the
+40-step gap, the residual cross-block correlation is phi^41 = 1.06e-4, not 0.
+A nil test on a nonzero quantity fails with probability approaching 1 as the
+sample grows. The pooled pair counts here are 756,480 (b2), 2,269,440 (b4) and
+5,295,360 (b8) — roughly 16x M4-F6's, so the SE shrinks ~4x and a fixed
+residual of a few e-4 becomes "significant". The gate therefore becomes
+STRICTER as the experiment becomes BIGGER, which is backwards: a larger
+experiment should be better able to establish negligibility, not worse.
+
+Magnitudes make the point: the measured correlations are -1.8e-4, +5.5e-4,
+-2.2e-4, of the same order as the theoretical residual, while the quantities
+being adjudicated are .034-.072 with SEs ~.010-.017. Two to three orders of
+magnitude separate the "failure" from anything that could matter.
+
+**Fourth planner registration defect of the same family** (F4: aggregation
+rule unstated; F6: base scale free, no power requirement; F7: economized away
+the dimension carrying the causal channel; F8: a gate rule whose failure
+probability grows with sample size). The instruction to reuse F6's rule
+"verbatim" is exactly what carried the defect forward.
+
+**Standing rule added (fourth), and it subsumes the others.** Every gate must
+be stated as a bound on MATERIALITY — a margin justified from the generator or
+from the size of the adjudicated effect — never as a nil-significance test on
+a quantity known to be nonzero. Concretely: use an equivalence form (the
+confidence interval must lie INSIDE the margin), which correctly becomes
+easier to satisfy as precision improves, rather than a nil form, which becomes
+impossible to satisfy as precision improves.
+
+**Consequence.** The decisive occasion-axis test remains formally unresolved
+after four legs. It is repaired in M4-F9 — but the repair is registered
+before the run and executed on FRESH world seeds, because re-adjudicating the
+same observed draws under a friendlier rule would be exactly the result-
+shopping this program forbids. M4-F8's numbers stay on the record as a void.
+
+## M4-F9 registration (2026-08-03, BEFORE run) — the decisive cell, repaired gate, fresh seeds
+
+**Design.** Identical to M4-F8 in every scientific respect — shared-occasion
+design, kappa=0.5 (channel live at .7071 amplitude, G6-verified at ~4-10% of
+between-author variance), authors x16, common-budget construction, block
+counts B in {1,2,4,8}, 40-step gap, 8 worlds x 20 draws, unchanged
+gauge/map/D0/halving, both M4-F5 truth variants — with exactly two changes,
+both registered here before any compute:
+
+1. **FRESH WORLD SEEDS.** A new master-seed offset, disclosed in Part 0, so
+   this is a new sample and not a re-adjudication of M4-F8's observed draws.
+2. **G5 REPAIRED TO AN EQUIVALENCE FORM.** The residual cross-block
+   correlation of the raw AR(1) state must be NEGLIGIBLE, not zero: the 95%
+   CI of the pooled correlation must lie entirely inside +/- delta with
+   **delta = 0.005**. Justification, fixed before the run and derived from the
+   generator rather than from any observed value: the theoretical residual is
+   phi^41 = 1.06e-4 at the calibrated phi_hi = .80 (and 4.5e-13 at phi=.50),
+   so delta is ~50x the largest residual the construction can produce; a
+   correlation bounded by .005 can leak at most ~0.5% of the state channel,
+   which itself is ~4-10% of between-author variance, i.e. <=0.05% of the
+   adjudicated quantity, against effects of .03-.08. The leg must ALSO report
+   the theoretical residual beside the measured values as a coherence check,
+   and must state plainly if the measured values are inconsistent with it.
+
+**Leans and pivot: unchanged from M4-F8, word for word.** (a) long-window
+recovery rises with B, paired CI excluding 0; (b) same-occasion recovery rises
+by less than half any long-window gain, INAPPLICABLE if the gain is null or
+negative; (c) gauge B-invariance within +/-20%. PIVOT-IF adequately powered
+(G0) AND causally live (G6) AND no rise -> the closure is EARNED: trait-level
+relation structure is not certifiable on any of the three panel axes, D3 is
+permanently restricted to occasion-bound objects, and the M4-E2 objective
+redesign is the only remaining route. If recovery DOES rise, the occasion axis
+is the trait-certifying dimension and the D3 specification is rebuilt around
+it.
+
+**Gates.** G0 POWER (target from M4-F5's persisted `authors_x16_shared_k05`,
+.081307 +/- .010920; adequately powered iff the realized paired CI half-width
+<= .0407); G1 anchor to `base1x` at 1e-12; G2 continuity, stating which object
+each check uses; G3 gauge invariance; G4 truth-path invariance; G5 in the
+repaired equivalence form above; G6 channel liveness, analytic plus the
+empirical between-author-variance ratio, with the kappa=1.0 ratio-exactly-1.0
+row retained as non-gating validation.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f9_occasion_axis_repaired/`; report
+`reports/SUICA_M4_F9_OCCASION_AXIS_REPAIRED_REPORT.md`.
