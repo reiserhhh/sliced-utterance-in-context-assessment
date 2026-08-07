@@ -1630,3 +1630,105 @@ registration's own explicit economization).
 Full numbers, the complete B-vs-metrics table, the per-world detail, and
 the honest anomalies list are in
 `reports/SUICA_M4_F7_OCCASION_AXIS_POWERED_REPORT.md`.
+
+## M4-F7 planner adjudication note (2026-08-03, appended) — the closure is NOT earned
+
+M4-F7 executed its registration correctly and cleanly: G0 power PASSED on its
+own terms (paired CI half-width .0484 against the .066 bar, 73.4% of it),
+all six gates green (G2 to 5.6e-17 / 7.6e-17, G4 exactly 0.0, G5 closest call
+t=+1.871), lean (c) HOLD replicating gauge B-invariance at a 16x larger scale,
+lean (a) MISS with a paired b8-b1 long-window difference of -.0850
+[-.1334, -.0366], 8/8 worlds negative. By the letter of its registration the
+pivot fires and the closure is earned.
+
+**It is not, and the executing agent said so before I did.** Its disclosed
+mechanistic reading was that at kappa=1.0 the occasion-spread manipulation has
+no causal channel. I verified that claim directly in
+`generate_world_spread`:
+
+```
+blended_x = sqrt(1 - kappa) * x_at_labels + sqrt(kappa) * shock_x
+```
+
+At kappa=1.0 the coefficient on the author-specific AR(1) state `x` is
+exactly 0, and `shock_x` depends only on `(context, occasion)` — never on the
+author. The occasion GAP exists solely to decorrelate that AR(1) state across
+blocks. So at kappa=1.0 the knob this leg turned is **structurally inert by
+construction**: it cannot act, no matter how much power the design has. The
+significant decline observed is therefore between-cell sampling variation
+across independently seeded cells, exactly as the agent read it — not evidence
+about occasion spreading.
+
+**Where that leaves the closure argument.** It requires a test that is BOTH
+adequately powered AND causally live. Neither exists:
+
+| leg | kappa | channel | power | verdict |
+|---|---|---|---|---|
+| M4-F6 | 0.5 | LIVE (sqrt(1-k)=.707) | UNDERPOWERED (authors x1, target ~.02) | inconclusive |
+| M4-F6 | 1.0 | INERT | — | vacuous |
+| M4-F7 | 1.0 | INERT | adequate | vacuous |
+
+**This is my third registration defect of the same family** (M4-F4: G0's
+aggregation rule left unstated; M4-F6: base scale left free with no power
+requirement; M4-F7: a design dimension economized away without checking which
+value carries the causal channel). The economization was explicitly justified
+in the M4-F7 registration by citing M4-F6's kappa=0.5 arm as "qualitatively
+the same" — which was exactly backwards, since that arm was the underpowered
+one. Recorded plainly rather than quietly repaired.
+
+**Standing rule added (third).** Every registered leg must verify, BEFORE the
+run, that its manipulation has a NON-ZERO causal channel at every tested
+parameter value, by inspecting the generator rather than by assumption; a null
+measured on an inert knob is reported as VACUOUS, never as a null. This joins
+the aggregation-rule rule (after M4-F4) and the power rule (after M4-F6).
+
+**Consequence.** M4-F7's pivot consequence is SUSPENDED alongside M4-F6's. The
+panel side remains open pending M4-F8, the one cell that is both live and
+powered: kappa=0.5 at authors x16, where M4-F5 measured long-window recovery
+.0813 +/- .0109 (7.4 SE above zero) and the AR(1) state enters at 70.7%
+amplitude.
+
+## M4-F8 registration (2026-08-03, BEFORE run) — the decisive cell: live channel, adequate power
+
+**Design.** Identical to M4-F7 in every respect except kappa: shared-occasion
+design, **kappa=0.5**, **authors x16**, common-budget construction so total
+events are equal across B, occasion-block count B in {1,2,4,8} with the
+G5-verified 40-step gap, 8 worlds x 20 draws, gauge/map/D0/halving unchanged,
+both M4-F5 truth variants at every cell by the identical deployed path.
+
+**Gates (six, two of them the new standing rules).**
+- **G0 POWER**: target level is M4-F5's persisted `authors_x16_shared_k05`
+  long-window recovery, .081307 +/- .010920 (read from the artifact, not
+  retyped). The leg is adequately powered iff its realized paired CI
+  half-width is <= .0407 (half the target level). Above that it is
+  UNDERPOWERED and adjudicates nothing.
+- **G6 CHANNEL LIVENESS (new)**: verify from the generator, before compute,
+  that the AR(1) state enters with a non-zero coefficient at kappa=0.5
+  (sqrt(1-0.5) = .7071) AND demonstrate empirically that the state materially
+  contributes to between-author variance at this kappa — e.g. by comparing
+  between-author variance of the assembled events with the state term zeroed
+  versus intact, reported as a ratio. A channel indistinguishable from zero
+  makes the leg VACUOUS and it must say so instead of adjudicating.
+- G1 anchor to M4-F1 `base1x` to 1e-12; G2 continuity (raw
+  `authors_x16_shared_k05` reproduces M4-F5 to 1e-12, and the B=1 sweep cell
+  reproduces M4-F7's construction where comparable — state which object each
+  check uses); G3 gauge invariance; G4 truth-path invariance; G5
+  decorrelation by M4-F6's verbatim per-cell |t|<2.0 rule.
+
+**Leans.** Unchanged from M4-F7: (a) long-window recovery rises with B, paired
+CI excluding 0; (b) same-occasion recovery rises by less than half any
+long-window gain, INAPPLICABLE rather than scored if the gain is null or
+negative; (c) gauge B-invariance within +/-20% replicates at this kappa.
+
+**PIVOT-IF:** the leg is adequately powered (G0) AND causally live (G6) AND
+long-window recovery does not rise with B -> **the closure is finally EARNED**:
+trait-level relation structure is not certifiable on any of the three panel
+axes, D3 is permanently restricted to occasion-bound objects, and the M4-E2
+objective redesign is the only remaining route. If instead recovery DOES rise,
+the occasion axis is the trait-certifying design dimension that four legs of
+authors-and-events optimization could not reach, and the D3 specification is
+rebuilt around it.
+
+Tier: EXPLORATORY, label-free, synthetic-calibrated. Artifacts:
+`results/m4_f8_occasion_axis_live/`; report
+`reports/SUICA_M4_F8_OCCASION_AXIS_LIVE_REPORT.md`.
