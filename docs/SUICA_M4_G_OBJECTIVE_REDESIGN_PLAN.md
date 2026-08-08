@@ -2754,3 +2754,118 @@ applicable; G4 materiality-form compliance per gate.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_j2_harm_boundary/`; report
 `reports/SUICA_M4_J2_HARM_BOUNDARY_REPORT.md`.
+
+## M4-J2 outcome (2026-08-03, appended)
+
+**Executed as registered.** No new basis-construction or estimator code was
+written. Discriminators (i) baseline recovery error and (ii) baseline
+displacement were read directly (not recomputed) from M4-J1's own persisted
+`author_level_truth_rows.csv`/`disp_rows.csv` — identity by construction.
+Discriminators (iii) S3 share and (iv) S4 share were computed by a literal,
+unchanged call into `h2._arm_offset_and_shares` (M4-E2/M4-H2's own S1-S4
+decomposition), extended to the 5 `FRESH_COMPANION_WORLDS` H2 itself never
+touched (H2 is a 3-world leg) via the identical S1/S2-pattern-then-shares
+recipe H2's own `_run_arm` uses. Discriminator (v) — a condition-number
+statistic of the retained eigenspectrum — was computed via a literal,
+unchanged call into `h2._ingredients_for_arm(context, "deployed")`, the exact
+ingredients function H3/H4's shrinkage dispatch consumes for every ladder
+rung, independently cross-checked per repetition against
+`leg10._freeze_ingredients` (a separately-written copy of the same
+eigendecomposition) at exactly 0.0 abs diff over all 64 (world, repetition)
+pairs. All 8 worlds computed in under 2 minutes total foreground wall-clock,
+reusing M4-J1's own cached contexts read-only; zero mechanical problems.
+
+**G0/G2 first, as the outer task required.** G0: n=8 `D1_WORLDS`, n=6
+`VALID_TRUTH_WORLDS` for every truth-derived quantity — small, disclosed
+explicitly along with what this grain can and cannot detect. Rank-2
+separation is an EXACT, fully-powered fact at n=6 (not a sampling estimate);
+a 6-point nonparametric bootstrap over Spearman's rho has only
+**C(11,6) = 462 distinct resamples**, disclosed rather than hidden behind
+20,000 draws — CIs that include zero are reported UNDERPOWERED, never as
+confident nulls (the conditioning-number correlation's realized CI spans the
+entire possible range, [-1.0, 1.0]). G2: all 5 registered discriminators
+vary materially across the 8 worlds (registered bar: range ≥5% of median
+|value|) — **no discriminator is VACUOUS.**
+
+**G1 ANCHOR: PASS, stronger than M4-J1's own self-anchor.** Recomputed
+`disp_v2` (a side product of the S3/S4 machinery) matches M4-J1's persisted
+`disp_v2` at **exactly 0.0** over 64 checks, on **all 8 worlds** — not merely
+the 3 `HIGH_GAP_WORLDS` M4-J1 anchored itself against, since M4-J1's own file
+already covers all 8. S3/S4 shares and `offset_norm` match H2's persisted
+`offset_shares_by_arm.csv` to 5.55×10⁻¹⁷ on the 3 `HIGH_GAP_WORLDS` (H2 never
+computed the 5 fresh worlds — this is what licenses them as an extension).
+G3: N/A, stated as such — this leg introduces no new truth-recovery
+computation. G4: every gate/lean is an equivalence, exactness, rank-gap, or
+CI-exclusion bound; compliance stated per gate in the report.
+
+**Lean (a) BASELINE COMPETENCE PREDICTS HARM HOLDS**: Spearman rho = **0.886**
+between deployed baseline error and `basis_shrinkage_1.00`'s recovery benefit
+across `VALID_TRUTH_WORLDS` (budget 4.0), bootstrap CI **[0.185, 1.000]**,
+excluding zero, in the registered direction (low baseline error → repair
+harms; high baseline error → repair helps). Consistent across budget 8.0
+(identical) and the milder `basis_shrinkage_0.20` ratio (rho=0.771, CI
+[0.000,1.000] — same direction, a boundary-case companion).
+
+**Lean (b) IT SEPARATES CLEANLY HOLDS**: `history_gated_ecology` (0.4588)
+and `topology_mismatch` (0.3087) are exactly the two lowest baseline-error
+worlds of six; the next-lowest safe world sits at 0.5527 — gap 0.0939, the
+safe-world minimum 20.5% above the harm-world maximum. Exact, fully-powered
+at this n.
+
+**Lean (c) DISPLACEMENT MAGNITUDE IS NOT THE DISCRIMINATOR MISSES on its own
+literal criterion — a genuine, disclosed, not-softened finding.** Applying
+lean (b)'s own rank test to displacement, full-precision recomputation (not
+the rounded report-table values the registration's motivating text was read
+from) shows `history_gated_ecology` (7.008) and `topology_mismatch` (13.182)
+are ALSO exactly the two lowest of six — gap 3.747, safe-world minimum 28.4%
+above the harm-world maximum, a **larger** relative gap than baseline
+error's own 20.5%. This directly contradicts the registration's own framing
+("`topology_mismatch` is mid-range at 13.18"). The correlation companion
+offers partial, not decisive, specificity: displacement's benefit-correlation
+CI touches exactly 0.000 at its lower bound (rho=0.829) — a boundary case,
+weaker than baseline error's comfortable 0.185, but not a clean miss either.
+**Net: a 2-of-6 rank coincidence between two discriminators is, on its own,
+weak evidence at n=6; this leg reports the miss plainly rather than
+reframing lean (c) around the more favorable correlation reading alone.**
+
+**The other three registered items show no signal at all.** S3 share, S4
+share, and the conditioning-number/effective-rank pair separate by
+**neither** the rank test nor the correlation test — the conditioning-number
+correlation's CI spans the entire possible range, genuinely uninformative at
+this n, reported as UNDERPOWERED rather than a confident null.
+
+**PIVOT DOES NOT FIRE.** The registered condition requires every
+discriminator to fail; baseline recovery error alone already separates,
+decisively, by both tests — a single, pre-registered, primary, directional
+test, sufficient on its own to resolve the pivot without needing the other
+four items' both-direction, multiplicity-exposed checks. **The harm boundary
+is predictable from at least one measured, pre-repair-applicable world
+property; the basis-shrinkage repair is NOT undeployable in principle** in
+the sense this leg's registered pivot tests.
+
+**Verdict**:
+`HARM_BOUNDARY_PREDICTABLE_BUT_NOT_SPECIFIC_TO_COMPETENCE__PROVISIONAL_GATE_ONLY`
+— the honest middle finding the three independent leans were built to allow:
+(a) HOLDS, (b) HOLDS, (c) MISSES on its own literal criterion. Not softened
+toward either a clean "gateable" story or a clean "undeployable" one.
+
+**Hand-off.** A gate of the shape "do not apply the basis-shrinkage repair
+where deployed baseline recovery error is low" is directly, if provisionally,
+supported — rank-exact and correlation-CI-excluding-zero at the primary
+combination, direction-consistent across every budget/ratio combination
+tested. But this leg cannot distinguish "low baseline error" from "low
+baseline displacement" as the operative mechanism (the two discriminators are
+too entangled in this 6-world sample), and the underlying question M4-J1's
+own hand-off left open — WHY these two specific worlds respond adversely to
+the shrinkage lever — remains unanswered. A gate built on this evidence is a
+reasonable provisional heuristic, not a certified deployment control; it
+needs validation on a larger, independent world set (one that can vary
+baseline competence and baseline displacement independently) before being
+trusted for a real F16 deployment decision.
+
+Full numbers, gates, the Part 0 inventory, and the full 5-discriminator ×
+rank+correlation table: `reports/SUICA_M4_J2_HARM_BOUNDARY_REPORT.md`.
+Artifacts: `results/m4_j2_harm_boundary/{decision.json, gates.json,
+part0_inventory.csv, full_inventory_separation_table.csv,
+disp_v2_recomputed_rows.csv, g1_share_anchor_rows.csv, benefit_rows.csv,
+per-world partials}`.
