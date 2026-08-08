@@ -2548,3 +2548,117 @@ retained where a winner is named.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_j1_repair_generalization/`; report
 `reports/SUICA_M4_J1_REPAIR_GENERALIZATION_REPORT.md`.
+
+## M4-J1 outcome (2026-08-03, appended)
+
+**PIVOT DOES NOT FIRE. Lean (a) HOLDS (7/8 worlds, 87.5% >= the 75% bar).
+Lean (b) MISSES decisively for the basis-shrinkage repair at BOTH certified
+ratios, in two explicitly named worlds, but HOLDS for the G6 repair. Lean
+(c) HOLDS EXACTLY, 6/6 worlds, 36/36 checks all at 0.0, not a near-miss.
+Verdict:
+`REDUCTION_GENERALIZES__SAFETY_FAILS_IN_NAMED_WORLD__INVARIANCE_WORLD_INDEPENDENT`.**
+This is not an outcome outside the registered branches -- it is exactly the
+combination the registration's three independent leans were built to allow.
+
+No new basis-construction or estimator code was written: every arm is a
+literal call into already-certified machinery (`h3._basis_for_h3_arm`,
+`h4._basis_for_h4_arm`, `g6._resolve_all_params`/
+`g6._forced_route_derivative_for_arm`, `g2._whitening_for_c`).
+`colstd_alpha_0.10`'s displacement was not independently recomputed through
+a second GPA pipeline -- it was ASSIGNED from `deployed`'s own disp_v2 per
+(world, repetition), reusing M4-G7's own structural proof that the ridge
+never enters `context["v2_basis"]`, with the precondition (basis@c=1.0 ==
+deployed basis) verified bit-identical in all 8 worlds (64 checks, 0.0) before
+the assignment was trusted.
+
+**G0/G1/G2 first, as the standing rules require.** G1 ANCHOR is EXACT --
+not merely inside 1e-12 but 0.0 -- across 9,376 checks on the three
+`HIGH_GAP_WORLDS` (disp_v2 vs Leg 14/H3/H4/M4-G7's own persisted values;
+truth recovery vs H3/H4/M4-G6's own persisted values, including all three
+`colstd_alpha_0.10` c's against M4-G6's own 8-world file). This is what
+licenses the five `FRESH_COMPANION_WORLDS` as an EXTENSION, not a
+re-derivation. G2 REPAIR LIVENESS passes for all 16 (basis-arm, world)
+cells (smallest materiality ratio 48.9%, ~5x the 10% bar) and for
+`colstd_alpha_0.10` on both counts (ridge arithmetic exact 0.0; whitening
+Frobenius norm scales with c to 8.88e-16). G3 TRUTH-PATH INVARIANCE passes
+at exactly 0.0 over 48 checks. G0 POWER: this leg's own leans are worded
+PER WORLD, forcing a materially less-powerful grain than every prior leg in
+this line (paired-by-repetition n=8/world for lean (a); paired-by-author
+n<=256/world/budget for leans (b)/(c)) -- disclosed plainly, with 2/8 lean-a
+worlds and 30/36 lean-b comparisons flagged UNDERPOWERED against their own
+bars, but every one of the 8 lean-b OUTSIDE classifications sits 2.68x-10.3x
+past the +/-0.02 margin regardless, and every lean-c check is EXACT (0.0
+half-width), so no adjudicated classification rests on marginal power.
+
+**Lean (a) THE REDUCTION GENERALIZES holds at 87.5% (7/8 worlds)**, every
+holding world's paired CI (n=8 reps) excluding zero by a wide margin
+(smallest gap `condition_alias_ecology` [7.55,9.68]). The one miss,
+`history_gated_ecology` (21.5% reduction, CI [-1.25,5.19], underpowered AND
+below the point-estimate bar), is a visibly different world: its deployed
+disp_v2 (7.01) is under half of every other world's (13.18-22.73), and the
+ratio-1.00 repair barely moves it.
+
+**Lean (b) SAFETY GENERALIZES misses decisively for the basis-shrinkage
+repair, at BOTH `basis_shrinkage_0.20` (M4-H3's own actively-good setting)
+and `basis_shrinkage_1.00` (M4-H4's own harmless-ceiling setting), in
+exactly two worlds, both truth budgets, all eight (arm,world,budget) cells
+classified OUTSIDE the +/-0.02 "does not worsen" margin by 2.68x-10.3x --
+`history_gated_ecology` (+.148/+.148 at ratio 0.20; +.206/+.206 at ratio
+1.00) and `topology_mismatch` (+.054/+.056 at ratio 0.20; +.109/+.111 at
+ratio 1.00), harm larger at the more aggressive ratio in both worlds, the
+same target-vs-safety direction this program has found everywhere else, now
+crossing worlds rather than crossing strength.** These two worlds are named
+explicitly per the registration's own instruction, not averaged into an
+overall pass. Elsewhere the basis-shrinkage repair is safe or genuinely
+ambiguous at this leg's own per-world grain (11/24 WITHIN, 5/24 AMBIGUOUS of
+the remaining cells). **`colstd_alpha_0.10` worsens in ZERO of the 6 worlds**
+(8/12 WITHIN, 4/12 AMBIGUOUS, 0/12 OUTSIDE) and shows large, decisive
+IMPROVEMENT in the identical two worlds that break the other repair
+(history_gated_ecology -.22/-.24; topology_mismatch -.055/-.074) -- lean (b)
+HOLDS for the G6 repair specifically.
+
+**Lean (c) INVARIANCE IS WORLD-INDEPENDENT HOLDS EXACTLY**: every one of 36
+checks (6 valid worlds x 2 budgets x 3 c-pairs) shows mean diff exactly 0.0,
+CI [0.0,0.0] -- confirmed not a pooled statistical artifact but a row-level
+algebraic identity (a sampled cell's `e_arm_true` is bit-identical,
+`0.105885`, at c=0.25/1.0/4.0). M4-G5's reparameterization argument is a
+property of the per-column-standardization construction, not of the three
+worlds it was first shown on.
+
+**Pivot does not fire** (requires lean (a) to miss; it holds at 87.5%). One
+mechanical problem, caught and fixed before any hypothesis-relevant number
+existed: an unquoted shell variable containing a space
+(`/Volumes/.../project persona/.venv/bin/python3`) broke word-splitting on
+the first parallel-launch attempt, failing all four worker processes on
+their first command before any context was built; fixed by quoting, batch
+re-launched clean. ~22 minutes total foreground compute (one world run
+singly for timing calibration, then two batches of 4 and 3 worlds
+concurrent on 10 cores, matching this program's established internal-
+concurrency-inside-a-foreground-call precedent), zero Tracebacks or
+RuntimeErrors on any computational content.
+
+Full numbers, gates, the per-arm x per-world tables for both metrics, and
+the c-invariance evidence:
+`reports/SUICA_M4_J1_REPAIR_GENERALIZATION_REPORT.md`. Artifacts:
+`results/m4_j1_repair_generalization/{decision.json, gates.json,
+disp_rows.csv, truth_recovery_rows.csv, author_level_truth_rows.csv,
+g2_liveness_rows.csv, colstd_ridge_liveness_rows.csv, g3_check_rows.csv,
+lean_a_reduction_rows.csv, lean_b_safety_rows.csv,
+lean_c_invariance_rows.csv}`.
+
+**Hand-off.** The two certified repairs no longer stand or fall together.
+`colstd_alpha_0.10` (M4-G6) generalizes cleanly on every axis tested here --
+displacement-neutral by structural proof, exactly c-invariant world-
+independently, and safe-to-actively-good in every one of the 6 worlds where
+safety is measurable -- and is the stronger candidate for the F16
+new-operator-ID deployment step this line has deferred since M4-G6. The
+basis-shrinkage repair (M4-H3/H4) generalizes on its target but carries a
+now-named, well-powered, two-world material safety risk that its original
+3-world certification could not have surfaced (neither `history_gated_
+ecology` nor `topology_mismatch` is a `HIGH_GAP_WORLDS` member) -- adopting
+it as currently specified, at either certified ratio, is not supported by
+this leg's own evidence without first understanding why those two worlds
+respond oppositely to the lever. That mechanism question -- what
+`history_gated_ecology` and `topology_mismatch` share that the three
+original `HIGH_GAP_WORLDS` do not -- is the open question this leg leaves,
+not resolved or speculated on here.
