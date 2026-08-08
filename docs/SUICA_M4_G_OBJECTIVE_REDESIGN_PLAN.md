@@ -1911,3 +1911,93 @@ line has not previously needed to draw. And lean (b)'s partial confirmation
 is robust across the whole tested ladder, localized to
 `source_rotated_feedback` specifically -- a world-specific mechanism
 question this leg's design surfaces but does not resolve.
+
+## M4-H3 planner adjudication note (2026-08-03, appended) — the rule worked, and exposed its own successor
+
+**G5 earned its place.** A target-only rule would have picked
+`whitening_unscaled` (64.71% reduction, recovery destroyed at +.274/+.277) —
+the exact defect the sixth standing rule exists to prevent, reproduced on
+schedule and shown in the report rather than argued about. The registered
+joint rule excluded it and selected `basis_shrinkage_0.50`. Two disclosed
+ambiguities in the rule's reading were computed both ways and changed nothing.
+The rule is now demonstrated, not merely asserted.
+
+**Adjudication at the joint winner.** Lean (a) HOLDS (41.56% reduction, CI
+[6.790, 8.221], clearing the 25% bar by 1.66x). Lean (b) MISSES. Lean (c)
+MISSES — recovery at the winner is a well-powered null (half-width .0099
+under the .01 bar): not worse, not distinguishably better. Verdict
+`SAFE_BUT_MECHANISM_NOT_CONFIRMED_AT_WINNER`, a new outcome shape for this
+line, where previous carrier-found legs had (b) hold decisively and (c) miss
+decisively.
+
+**Three things this leaves, in order of how much they matter.**
+
+1. **The ceiling is not located.** The joint winner sits AT the registered
+   ladder's own non-extendable upper endpoint with reduction still rising. The
+   safe lever's actual ceiling is therefore unknown, and the registration
+   said in advance that locating it needs its own leg. It does.
+
+2. **The mechanism does not generalize across worlds.** S3 falls materially in
+   2/3 worlds (18.6%, 16.1%) but RISES in `source_rotated_feedback` (−2.2%),
+   and no rung anywhere on the ladder achieves any S3 fall in that world. This
+   is not a winner-specific knife-edge; it is a world where the lever reduces
+   the displacement without touching the subspace the mechanism predicts. That
+   is consistent with M4-E2's world-specific direction finding and it means
+   the carrier's mechanism is at best partial.
+
+3. **My joint rule, having fixed one selection bias, has a subtler one.**
+   "Largest reduction among safe arms" is still target-priority within the
+   qualifying set, so it picks the most aggressive qualifying arm — the one
+   least likely to clear the STRONGER safety level. It did:
+   `basis_shrinkage_0.20` independently satisfies both (a) at 34.66% and (c)
+   actively-good, and is arguably the better arm overall, but the rule chose
+   .50 because .4156 > .3466. The agent disclosed this rather than quietly
+   scoring the nicer arm.
+
+**Standing rule (seventh).** When the anti-cosmetic check has graded levels
+(harmless vs actively good), the registration must state WHICH level defines
+qualification, and the leg must report the best arm at EACH level. A single
+winner hides the trade the levels are there to expose.
+
+## M4-H4 registration (2026-08-03, BEFORE run) — where does the safe region end, and does the lever generalize?
+
+**Design.** Reuse M4-H3's worlds, anchors, arms plumbing and gate helpers.
+Ladder EXTENSION upward: lambda / median retained eigenvalue in
+{0.50, 1.0, 2.0, 4.0, 8.0}, with 0.50 carried as the anchor (must reproduce
+M4-H3's persisted values to <=1e-12) and `whitening_unscaled` retained as the
+known-unsafe reference. Metrics unchanged: Leg 14's displacement gap, M4-E2's
+S1–S4 shares, both M4-F5 truth variants.
+
+**Winner definition (seventh standing rule).** Report TWO winners explicitly:
+the best arm that is HARMLESS (recovery within ±.02 equivalence) and the best
+arm that is ACTIVELY GOOD (recovery CI entirely on the better side). Every
+lean below names which winner it is evaluated at.
+
+**Leans.**
+(a) CEILING LOCATED: at least one rung in the extended ladder is UNSAFE, so
+    the harmless region's upper bound is interior to this ladder rather than
+    an endpoint again.
+(b) GENERALIZES OR NOT — a registered either-way test: at the harmless
+    winner, does S3 fall in 3/3 worlds? A miss here confirms
+    `source_rotated_feedback`'s non-response is STRUCTURAL rather than a
+    strength effect, which is itself the finding and must be reported as one.
+(c) THE LEVELS SEPARATE: the actively-good ceiling is strictly below the
+    harmless ceiling, quantifying what pushing harder costs.
+
+**PIVOT-IF:** no rung in the extended ladder is unsafe -> the safe region
+extends beyond 8x median-eigenvalue shrinkage and has no located ceiling in
+this design. That would mean displacement reduction is safe at essentially any
+shrinkage, which is surprising enough that it demands a separate explanation
+of why the deployed value sits where it does — and that explanation becomes
+the line's next question rather than a footnote.
+
+**Gates.** G0 POWER with justified grain, citing M4-H3's persisted levels;
+G1 ANCHOR to <=1e-12 on `basis_shrinkage_0.50` and `whitening_unscaled`;
+G2 BASIS LIVENESS per arm; G3 truth-path invariance; G4 materiality-form
+compliance per gate; G5 DUAL-WINNER COMPLIANCE — publish the full arm x
+{reduction, S3 per world, recovery both variants} table and both winners, and
+state what a single-winner rule would have chosen.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h4_safe_ceiling/`; report
+`reports/SUICA_M4_H4_SAFE_CEILING_REPORT.md`.
