@@ -1336,3 +1336,54 @@ offset_displacement_by_world.csv, displacement_by_rep.csv,
 truth_recovery_rows.csv, author_level_truth_rows.csv,
 g2_ridge_profile_rows.csv, g3check_rows.csv, context_meta.csv, and
 partials}`.
+
+## M4-H1 registration (2026-08-03, BEFORE run) — re-decompose the displacement in valid units
+
+**The line that opened here closes with `docs/SUICA_M4_G_OBJECTIVE_LINE_SYNTHESIS.md`.**
+M4-G7 proved the displacement lives in basis construction (`context["v2_basis"]`),
+not in the ridge/whitening territory the M4-G line worked in. Before any work
+starts there, one debt must be paid.
+
+**Question.** M4-E2 decomposed the displacement into subspaces S1 (supervised
+core), S2 (supervision span), S3 (normalization/scale modes) and S4 (residual),
+and reported the scale family as the largest identifiable carrier (~1/3
+sequential, ~1/2 standalone) with the residual the largest single piece
+(.40–.45). It computed all of that on the RAW `offset_norm`, which M4-G2
+disqualified as unit-dependent (log-log slope .8796 under a pure change of
+units). **Does the attribution survive in valid units?**
+
+**Design.** Re-run M4-E2's decomposition unchanged in every respect — same
+worlds, same anchors, same S1–S4 construction, same registered sequential
+order, same reverse order, same standalone variants — with ONE substitution:
+the target quantity is M4-G2's registered scale-normalized offset instead of
+the raw one. Report the raw-metric shares alongside as the disqualified
+comparison, so the change (or its absence) is visible rather than asserted.
+
+**Leans.**
+(a) THE ATTRIBUTION MOVES: the scale family's share under the normalized
+    metric differs from its raw-metric share by more than 10 percentage
+    points, in either direction, in the registered sequential order.
+(b) THE RESIDUAL SURVIVES: the residual block remains the largest single piece
+    under the normalized metric (M4-E2's most consequential finding, tested
+    for unit-robustness).
+(c) WORLD-SPECIFICITY SURVIVES: the offset direction remains world-specific at
+    the permutation null. This is a units-INDEPENDENT property, so it doubles
+    as a control on the re-analysis: if it changes, the re-implementation
+    differs from M4-E2's in some way not registered here.
+
+**PIVOT-IF:** every subspace share moves by <= 10 points -> M4-E2's
+decomposition was units-robust after all. Its picture stands as structural,
+the debt is paid, and the basis line proceeds directly from it.
+
+**Gates.** G0 POWER with the grain justified and the target level cited from
+M4-E2's persisted artifacts; G1 ANCHOR — the RAW-metric re-run must reproduce
+M4-E2's persisted shares to <=1e-12, which is what proves the only change is
+the metric; G2 METRIC SUBSTITUTION LIVENESS — show the normalized and raw
+targets actually differ per world (they must, by M4-G2); G3 truth-path
+invariance where applicable; G4 materiality-form compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h1_normalized_decomposition/`; report
+`reports/SUICA_M4_H1_NORMALIZED_DECOMPOSITION_REPORT.md`. This leg opens the
+**M4-H basis-construction line**; subsequent M4-H registrations continue in
+this document until it warrants its own.
