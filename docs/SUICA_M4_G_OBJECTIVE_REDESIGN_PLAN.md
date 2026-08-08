@@ -2188,3 +2188,97 @@ gate. Report the full arm x subspace x world share table.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_h5_residual_carrier/`; report
 `reports/SUICA_M4_H5_RESIDUAL_CARRIER_REPORT.md`.
+
+## M4-H5 outcome (2026-08-03, appended)
+
+**Executed as registered.** Zero new Part 0 audit and zero new basis-
+construction code: all three arms (`deployed`, `basis_shrinkage_1.00` =
+H4's own HARMLESS winner, `basis_shrinkage_0.20` = H3's own ACTIVELY-GOOD
+winner) are literal calls into H3's/H4's own already-anchored dispatch
+functions; this leg's only new code is a 2-way arm router, the G1 anchor-
+chain assembly, the G2 DECOMPOSITION LIVENESS computation (new to this leg
+-- share-based, not basis-distance-based), and the qualifying-subspace lean
+logic. A disclosed, adopted scope reduction: the registration's own Design/
+Metrics/Leans sections name no `TRUTH_BUDGETS`, so Metric 3 (truth
+recovery, already adjudicated at both repaired arms by H3/H4 themselves) is
+out of scope -- the oracle-stage regeneration loop is skipped entirely, and
+G3 is satisfied instead by a lightweight world-build faithfulness spot-check
+(budget=1.0 regen vs. flat-style refit, 3 arms, 1 per world) that does not
+gate any lean. Gates exact: G1 registered-literal chain (shares vs M4-E2's
+own persisted `decision.json['offset_table']` for `deployed`; displacement
+vs M4-H4's/M4-H3's own persisted `disp_rows.csv` for the two repaired arms,
+24 row-level checks each) at **exactly 0.0**; disclosed superset (full
+shares for both repaired arms vs H3's/H4's own persisted
+`offset_shares_by_arm.csv`, plus `deployed`'s displacement vs both) at
+1.78e-15, three orders of magnitude under the 1e-12 tolerance; G2
+DECOMPOSITION LIVENESS live in 6/6 (arm,world) cells at 2.3x-5.2x its own
+10% bar (reused `LEAN_B_MATERIALITY_RATIO`); G3 world-build faithfulness
+`0.0` on 9/9 checks. One mechanical issue, a mislabeled (not miscomputed)
+disclosure string inside `gates.G0_power.rule3_vacuous_check` -- H4's/H3's
+own G2 ratios were cited without first dividing by the materiality bar,
+producing a misleading "0.70x the bar" instead of the correct "7.01x" --
+found and fixed AFTER `--assemble` had already produced every lean/pivot/
+verdict number; re-running `--assemble` (pure re-derivation from already-
+persisted partials) reproduced an identical verdict and identical gate
+booleans, confirming only the one prose string changed.
+
+**The full arm x subspace x world share table (both orderings), the
+central deliverable.** Under REGISTERED order (S1->S2->S3->S4, ADOPTED),
+S4_residual is the only subspace to ever clear 0.40 at either repaired arm,
+in any world (S3 comes closest, up to 0.3212, still 0.079 below the bar)
+-- it rises from an already-elevated deployed baseline
+(0.4015-0.4464, M4-E2's own "largest single piece" finding) to **0.5066-
+0.5247** at the harmless winner and **0.4517-0.4921** at the actively-good
+winner, in EVERY one of the 3 worlds, at BOTH arms. G2's own delta evidence
+confirms this is not assumed: S4's absolute registered-order share rises in
+all 6 (arm,world) cells tested (+0.5 to +12.3 percentage points), while S1
+FALLS in all 6 (-0.3 to -5.2 points) and S3 falls in 5 of 6 (the one
+exception, `basis_shrinkage_0.20`/`source_rotated_feedback`, is the same
+world H3 found totally non-responsive at every rung up to 0.50 -- S3 still
+does not fall there even under this leg's own fresh recomputation, but S4
+still gains 0.5 points, the smallest movement in the table but not a null).
+Under REVERSE order (S3->S2->S1->S4, disclosed companion), S3 -- not S4 --
+is the larger of the two at `deployed` and at `basis_shrinkage_0.20` in
+EVERY world, reproducing M4-E2's own disclosed reverse-order picture
+exactly; only at `basis_shrinkage_1.00` does S4 stay larger in all 3
+worlds, and in `source_rotated_feedback` specifically by a genuine
+knife-edge (S4=0.4313 vs S3=0.4302, gap 0.0012 -- the closest of all 18
+(arm,world,ordering) top1-vs-top2 comparisons by more than an order of
+magnitude; every other one of the 18 has a gap >=0.0185, and 15 of the
+remaining 16 clear 0.027, 14 of those 16 clear 0.08).
+
+**Adjudication.** (a) A NEW DOMINANT CARRIER EXISTS -- **HOLDS**, both
+orderings agree: S4 clears the 0.40 bar in 3/3 worlds (not merely the
+registered 2/3) at the harmless winner, under registered AND reverse order.
+The pivot does NOT fire under either ordering
+(`pivot.orderings_agree_on_pivot_decision = true`). (b) IT IS S4 --
+**HOLDS**, both orderings agree (S4 is the sole qualifier both ways, so the
+tie-break rule never activates). (c) STRENGTH-INVARIANT -- **HOLDS under
+the ADOPTED registered order** (S4 is again the sole qualifier, 3/3 worlds,
+at the actively-good winner) **but MISSES under the disclosed reverse-order
+companion** (S3, not S4, is the sole qualifier there, 3/3 worlds) --
+`lean_c.orderings_agree = false`. This traces directly to the share table
+itself: reverse order already has S3 durably ahead of S4 at `deployed` and
+at the milder `basis_shrinkage_0.20` repair; only the stronger
+`basis_shrinkage_1.00` repair pushes S4 past S3 under both orderings, and
+even then by a knife-edge in one world. **Verdict
+`NEW_DOMINANT_CARRIER_FOUND__IS_S4__STRENGTH_INVARIANT__ORDER_SENSITIVE_AT_ACTIVELY_GOOD_ARM`.**
+
+**Read plainly, per the registration's own instruction to give this the
+prominence a positive finding deserves (the pivot did not fire, so this is
+not the distributed-remainder branch, but the finding still needs stating
+without spin):** the safe lever's repair does not manufacture a new
+carrier from nothing -- it takes the block M4-E2 already found largest at
+`deployed` (S4, the residual) and makes it the clear majority of what
+survives (51-52% of the harmless winner's own displacement, up from a
+40-45% plurality pre-repair), in every world, under this line's own
+adopted ordering convention. But S4 is *defined* as whatever S1+S2+S3
+does not explain -- unlike S3, it has no operational, code-legible
+construction of its own (M4-E2's own inventory named three families for
+S3; S4 was never given one). The reverse-order disagreement at the milder,
+actively-good arm is itself informative, not noise: it suggests S4's
+apparent takeover may be a strength effect of pushing past the
+actively-good ceiling specifically, not an intrinsic property of removing
+S3-type mass. Whether S4 can be given an operational construction at all,
+and whether that construction is itself attackable, is the line's next
+question -- not registered or attempted here.
