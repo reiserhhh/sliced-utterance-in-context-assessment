@@ -2368,3 +2368,110 @@ in this statistic, so the null must be the shuffled-rep null, never zero.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_h6_residual_reproducibility/`; report
 `reports/SUICA_M4_H6_RESIDUAL_REPRODUCIBILITY_REPORT.md`.
+
+## M4-H6 outcome (2026-08-03, appended)
+
+**PIVOT FIRES. S4 IS REPETITION-SPECIFIC AND NOT ATTACKABLE BY ANY BASIS
+CONSTRUCTION. Verdict
+`PIVOT_S4_REPETITION_SPECIFIC_NOT_ATTACKABLE_BY_ANY_BASIS_CONSTRUCTION`.**
+G0 and G2 first, as this leg's own registration required. **G0 POWER**: the
+repetition-shuffled null (200 draws per arm, pooling 24 real S4_residual
+components into 3 random pseudo-groups of 8 and averaging the 84
+within-pseudo-group pairwise |Procrustes cosine| values per draw) has q95 =
+0.3313 (harmless winner) / 0.3821 (deployed), median 0.3260/0.3779, std of
+draw means 0.0028/0.0026. MDE, from the null's own pooled pair-level std
+(0.0362/0.0281, a non-circular pre-adjudication proxy): 0.0140 at
+within-world grain (n=28), 0.0051 at across-world grain (n=192) — an order
+of magnitude below the 0.5 materiality bar's own distance from the null
+(0.169–0.179), so the design is well-powered for a MATERIAL effect, though
+not for one at the scale of the null's own ~0.003 noise floor, a caveat
+carried honestly into the per-world reading. The disclosed, non-deciding
+random-matrix-null companion (E2's own construction) sits substantially
+HIGHER (q95 ≈ 0.46) than the repetition-shuffled null — an empirical
+confirmation, on this leg's own data, of exactly the non-interchangeability
+M4-E2's disclosure warned about. **G2 NULL LIVENESS**: both arms' null
+distributions are genuine, non-degenerate, sub-ceiling (range ≈0.015, std
+≈0.0028, median 0.326–0.378, nowhere near the trivial ceiling of 1.0) —
+live.
+
+**G1 ANCHOR** passes at exactly 0.0 (registered-literal: deployed's shares
+vs. M4-E2's decision.json, `basis_shrinkage_1.00`'s displacement vs.
+M4-H4's disp_rows.csv, 24 checks) and 9.02e-17 (disclosed superset: full
+shares vs. H4's own CSV, deployed's displacement vs. H3's AND H4's own
+CSVs) — bit-identical to H5's own persisted world-level numbers, confirmed
+by direct CSV comparison. A third, NEW anchor family — required because no
+predecessor leg ever computed a per-repetition delta — ties this leg's own
+new construction to already-anchored `disp_v2` values (7.11e-15 vs. a 1e-9
+tolerance, since these are two independently-ordered computations of a
+provably symmetric Procrustes distance) and to `leg14._align` itself
+(0.0 and 1.07e-14 vs. a 1e-12 tolerance, a pure floating-point identity).
+**G3** (world-build faithfulness, scope-reduced citing H5's own precedent,
+gates no lean): 0.0 on 6/6 checks.
+
+**Lean (a) REPRODUCIBLE WITHIN WORLD — MISSES: 0 of 3 worlds** (registered
+bar ≥2/3) at the harmless winner. Within-world mean |cosine| agreement
+(0.318–0.345, n=28 pairs each) sits essentially on top of the null (q95
+0.3313) in all 3 worlds; CI lower bounds fall 0.0009–0.0260 short. The miss
+is decisive in 2 of 3 worlds but a genuine knife-edge in the third
+(`source_rotated_feedback`, CI lower bound only 0.0009 below q95 — the
+closest of all 6 (arm, world) comparisons by nearly an order of magnitude;
+the second-closest, 0.0015, is the SAME world at `deployed`). Point
+estimates disagree in sign across worlds (2 of 3 marginally above q95, 1
+below even at the point estimate), so the near-miss is not corroborated by
+a second world. Worth naming: `source_rotated_feedback` is the same world
+M4-H3 found totally non-responsive to the shrinkage lever and M4-H4
+resolved as a strength effect rather than structural immunity — here it is
+again the outlier, at both arms, without crossing the bar. **Lean (b) NOT
+ACROSS WORLDS (the control) — HOLDS**: pooled across-world agreement
+(0.3232, n=192) sits below the null's q95 (0.3313), CI entirely below by a
+real but modest margin (0.0030, ≈58% of the CI's own half-width) — the
+control behaves exactly as M4-E2's world-specificity finding predicted,
+confirming lean (a)'s miss is not an artifact of the measurement picking up
+shared, non-world-specific structure. **Lean (c) — not applicable** (no
+world qualified under lean (a)).
+
+**Per-repetition S4 shares** (a genuinely new quantity this leg computes,
+disclosed as distinct from H5's own world-level, GPA-consensus shares) run
+substantially higher than the world-level figures — 0.72–0.79 mean per-rep
+share vs. 0.40–0.45 (deployed) / 0.51–0.52 (harmless) at the consensus
+level — an expected contrast: a single repetition's own raw displacement
+has not been denoised by GPA-averaging across 8 reps, so more of it falls
+outside what the consensus-fit S1/S2/S3 bases explain.
+
+**Mechanical notes.** A synthetic unit test of the new per-repetition delta
+construction (random matrices, no real data) was run BEFORE any real
+compute and directly verified: the symmetric-alignment identity (native
+delta's norm exactly reproduces the quotient distance), the
+rotation-extraction gate (exactly 0.0), the norm-preservation gate
+(1.4e-14), the algebraic commutation identity `align(B@R,A@R) =
+align(B,A)@R` this construction depends on (5.8e-15), and the
+gauge-invariance/equivariance contrast that motivates aligning each
+repetition's delta into the world's own consensus gauge before projecting
+it (a toy gauge-invariant basis gave identical shares on native vs.
+gauge-aligned delta, 0.0156170419530426 both ways; a toy gauge-equivariant
+basis, mirroring S3's own n2 construction, gave different ones, 0.0257 vs.
+0.0340, exactly as the math predicts). No mechanical problems arose in the
+real run: smoke test, all 3 worlds' G3 stages, all 6 (world,arm) compute
+stages, and assemble completed clean on the first attempt, entirely
+foreground with explicit per-call timeouts (no background jobs, no
+monitors), total compute wall-clock under 2.5 minutes. Data-integrity
+checks (row counts for all 12 output CSVs against their expected 2×3,
+2×3×8, 2×3×28, 2×3×64 and 2×200 shapes) passed before any hypothesis-
+relevant number was read.
+
+**Hand-off.** The M4-H basis line closes on this statement, exactly as the
+registration's own PIVOT branch specifies: the safe lever (`basis_
+shrinkage_1.00`) removes 45.79% of the discovery objective's frame
+displacement without harming truth-referenced recovery (M4-H4) — a real,
+bounded, partial repair, the first this program has had; what survives is
+dominated by S4, a block defined purely by exclusion with no operational
+construction of its own (M4-H5); and this leg shows, at a scale it was
+well-powered to detect had it existed, that S4's own direction does not
+even reproduce across independent repetitions of the SAME world — the
+across-world control confirms this is a real absence of structure, not a
+measurement artifact. **~46% is the M4-H line's definitive ceiling for
+subspace-targeted, objective-side repair of the displacement.** Closing
+that further would require an intervention past the discovery objective's
+own S1–S4 decomposition entirely — outside anything this line's thirteen
+legs (M4-G1 through M4-G7, M4-H1 through M4-H6) have tried, and not
+registered or attempted here.
