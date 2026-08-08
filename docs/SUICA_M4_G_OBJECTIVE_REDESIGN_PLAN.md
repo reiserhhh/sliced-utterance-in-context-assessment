@@ -2475,3 +2475,76 @@ that further would require an intervention past the discovery objective's
 own S1–S4 decomposition entirely — outside anything this line's thirteen
 legs (M4-G1 through M4-G7, M4-H1 through M4-H6) have tried, and not
 registered or attempted here.
+
+## M4-H6 planner adjudication note + BASIS LINE CLOSED (2026-08-03, appended)
+
+**The pivot fires, decisively, and the M4-H line closes on it.** Lean (a)
+MISSES in 0/3 worlds — S4's direction does not reproduce across 8 independent
+repetitions of the same world (decisive in two; a genuine knife-edge at −.0009
+in `source_rotated_feedback`). Lean (b), the control, HOLDS: across-world
+agreement sits entirely below the null, exactly as M4-E2's world-specificity
+predicts, which is what rules out "the measurement cannot see anything" as an
+explanation for (a). Lean (c) is not applicable. Verdict
+`PIVOT_S4_REPETITION_SPECIFIC_NOT_ATTACKABLE_BY_ANY_BASIS_CONSTRUCTION`.
+
+**The null handling is why this result can be believed.** The registered
+repetition-shuffled null sits at q95 = .3313 at the harmless winner, while the
+disclosed random-matrix companion sits at q95 ≈ .46 — empirically confirming
+M4-E2's warning that the two are not interchangeable. Against a zero null
+everything would have looked significant; against the random-matrix null
+everything would have looked trivially sub-null. Only the registered null
+answers the question that was asked.
+
+**Consequence, recorded as the discovery the registration said it would be:**
+the surviving majority of the displacement is repetition-specific residual.
+There is nothing stable there for a basis to capture, so ~46% is the
+definitive ceiling of subspace-targeted, objective-side repair. The
+displacement problem opened by Leg 14 is closed as a measured limit; the full
+arc is written up in `docs/SUICA_DISPLACEMENT_PROBLEM_RESOLVED.md`.
+
+## M4-J1 registration (2026-08-03, BEFORE run) — do the certified repairs generalize beyond the three worlds that produced them?
+
+**Why this is the next leg and not a deployment.** Two repairs are certified:
+M4-G6's per-column standardization at alpha = .10 x deployed ridge (exactly
+c-invariant, recovery tied-or-better, scale-free interior optimum) and
+M4-H3/H4's basis-whitening shrinkage (safe to ratio 1.0 at 45.79% displacement
+reduction; actively good to ratio .20 at 34.66%). Adopting either changes a
+frozen operator, which under F16 creates a NEW operator needing its own study
+ID and seal. Both were measured on M4-E2's THREE worlds. Before that decision
+is worth putting to anyone, the repairs need a generalization test — and if
+they fail it, the decision does not arise.
+
+**Design.** Apply both certified repairs on the WIDER world set already used
+by this program (M4-F/M4-H2's eight worlds), with M4-E2's three carried inside
+it as anchors. Arms: `deployed`; `colstd_alpha_0.10` (the G6 repair);
+`basis_shrinkage_0.20` (actively-good); `basis_shrinkage_1.00` (harmless
+ceiling). Metrics: Leg 14's displacement gap; both M4-F5 truth variants; and
+c-invariance of the G6 repair across c in {0.25, 1.0, 4.0}.
+
+**Leans.**
+(a) THE REDUCTION GENERALIZES: the basis-shrinkage repair at ratio 1.0
+    achieves >= 25% displacement reduction in >= 75% of the wider world set,
+    paired-by-world CI excluding zero.
+(b) SAFETY GENERALIZES: recovery does not worsen in ANY world under either
+    repair (equivalence, ±.02, both variants) — a single world where it
+    worsens is a material finding about deployment risk and must be named.
+(c) INVARIANCE IS WORLD-INDEPENDENT: the G6 repair's c-invariance holds
+    exactly in every world, testing whether M4-G5's reparameterization
+    argument is a property of the construction rather than of the three
+    worlds it was demonstrated on.
+
+**PIVOT-IF:** the reduction fails to reach 25% in >= 75% of the wider set ->
+the repairs are WORLD-SET-SPECIFIC. The M4-E2 three-world results stand as
+scope-limited, no deployment decision arises, and the finding is that the
+repair's generality was the untested assumption all along.
+
+**Gates.** G0 POWER with justified grain and the MDE stated; G1 ANCHOR — on
+M4-E2's three worlds every arm reproduces its persisted value to <=1e-12,
+which is what makes the five new worlds interpretable as an extension rather
+than a re-derivation; G2 REPAIR LIVENESS per arm per world; G3 truth-path
+invariance; G4 materiality-form compliance per gate; G5 DUAL-WINNER reporting
+retained where a winner is named.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_j1_repair_generalization/`; report
+`reports/SUICA_M4_J1_REPAIR_GENERALIZATION_REPORT.md`.
