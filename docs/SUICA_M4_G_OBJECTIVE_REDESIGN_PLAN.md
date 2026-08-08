@@ -582,3 +582,97 @@ pairing (e.g. paired-by-world×repetition) or explicitly register a larger
 world set. Absent either, the PIVOT question this leg's own registration
 posed remains formally undecided, even though the weight of (non-
 adjudicating) evidence leans toward "does not fire."
+
+## M4-G3 planner adjudication note (2026-08-03, appended) — the constant is found; the repair is not certified
+
+**What is established.** The scale dependence M4-G2 proved is localized in ONE
+constant: `hazard_ridge` (deployed 0.005,
+`suica_core/m4_chart_ecology_estimator.py:341-342`), on four converging lines
+of evidence — a priori math, an adaptive value consistent across all 64
+contexts at 4.6–18% of deployed, a decisive well-powered author-grain effect
+(CI [.040,.063] @4x, [.049,.073] @8x), and clean nulls on the other five
+inventoried constants (tolerance, weight floor, clip bound, probe epsilon all
+INERT at both grains; intercept small and NEGATIVE). Its adaptive arm recovers
+89.5%/95.5% of the c=4 gain at world grain (69.2%/72.3% author grain, CI
+excluding zero) at c=1, with the basis bit-identical to baseline — so lean (c)
+holds trivially and no cosmetic trade was made.
+
+**Why that is not yet a repair.** Lean (b), the gate registered precisely to
+separate a genuine scale-adaptive fix from a lucky reparameterization, MISSES
+decisively (n=745, all six pairwise checks outside ±.02). The adaptive arm's
+recovery is an inverted-U across c: worst at .25, best at 1.0, worse again at
+4.0. The mechanism is visible in the formula: the declared data-scale
+statistic is `RAW_SCALE = mean(raw retained eigenvalues)`, which is computed
+BEFORE whitening and is therefore c-INVARIANT, while the quantity the ridge
+regularizes lives AFTER whitening and scales with c. So the fix is calibrated
+at the deployed scale and cannot follow the scale it was built to track. It is
+context-adaptive, not scale-adaptive.
+
+**Pivot: outside every registered branch, and correctly reported as such.**
+Firing requires every arm to be a clean MISS; `hazard_ridge` and
+`adaptive_all` are UNDERPOWERED at the registered world grain, not MISS. The
+agent flagged that underpowering from M4-G2's persisted gain BEFORE running
+any adaptive arm, and declined to resolve the branch by picking a side.
+
+**Fifth planner registration defect, and its rule.** G0 required a pre-stated
+MDE but did not specify the analysis GRAIN, so the line's default (paired by
+world, n=6–8) was inherited — and it is structurally underpowered for effects
+of this size by more than 4x, while the author grain (n≈745) is adequately
+powered and was available all along. **Standing rule (fifth): the analysis
+grain must be chosen for power against the registered bar and justified before
+the run; inheriting the line's default grain is not a justification.**
+
+## M4-G4 registration (2026-08-03, BEFORE run) — the c-covariant ridge, at a grain that can see it
+
+**Question.** M4-G3 localized the scale dependence in `hazard_ridge` but its
+adaptive formula keyed off a pre-whitening statistic and so could not follow
+c. Does a ridge keyed off a POST-whitening scale statistic — one that scales
+with c by construction — deliver c-invariant recovery without losing the gain?
+
+**Design.** Reuse M4-G3's world set, objective path, arms plumbing and truth
+variants. **The registered analysis grain is the AUTHOR grain (n≈745)**, per
+the fifth standing rule; world-grain numbers are reported as a companion and
+adjudicate nothing.
+
+- `baseline` — deployed ridge at c=1 (anchor to M4-G3's persisted value).
+- `g3_raw_scale` — M4-G3's adaptive arm, the known point fix (anchor).
+- `covariant_<k>` — one arm per registered post-whitening scale statistic,
+  ridge = alpha * stat, with the statistic computed on the whitened quantity
+  the ridge is actually added to. Register the candidate statistics AND the
+  alpha calibration rule in Part 0 before compute; alpha must be fixed by a
+  rule (e.g. matching the deployed ridge at c=1), never tuned on outcomes.
+- Each arm evaluated across c in {0.25, 1.0, 4.0}.
+
+**Leans.**
+(a) C-COVARIANCE: at least one `covariant_<k>` arm is c-invariant at the
+    author grain — all pairwise differences across c inside ±.02.
+(b) NO LOSS: that arm's recovery at c=1 is not worse than `g3_raw_scale`'s
+    (equivalence form, margin registered in Part 0).
+(c) SPECIFICITY: the same covariant rule applied to one of M4-G3's INERT
+    constants does NOT produce c-invariance — the control that shows the ridge
+    is the mechanism rather than the rescaling being cosmetic anywhere.
+
+**PIVOT-IF:** no covariant candidate achieves c-invariance -> the dependence
+is not a simple ridge-scaling issue, M4-G3's localization is incomplete, and
+the redesign target moves to the objective's FUNCTIONAL FORM. That is the
+consequence M4-G3's own pivot could not deliver, and this leg is registered to
+deliver it either way.
+
+**Gates.**
+- **G0 POWER** — at the AUTHOR grain, against the c=4 gain persisted by
+  M4-G3; state the MDE and the bar before adjudicating. World-grain companion
+  numbers may not be used to adjudicate anything.
+- **G1 ANCHOR** — `baseline` and `g3_raw_scale` reproduce M4-G3's persisted
+  values to <=1e-12 on identical world seeds.
+- **G2 COVARIANCE LIVENESS** — for every `covariant_<k>`, demonstrate the
+  realized ridge value actually scales with c (report ridge(c=.25),
+  ridge(c=1), ridge(c=4) and their ratios). A candidate whose ridge does not
+  move with c is by definition not covariant: report it as INERT and its
+  result as VACUOUS, not as a null.
+- **G3 TRUTH-PATH INVARIANCE** — degenerate equality check.
+- **G4 MATERIALITY FORM** — every gate an equivalence/margin bound; state
+  compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g4_covariant_ridge/`; report
+`reports/SUICA_M4_G4_COVARIANT_RIDGE_REPORT.md`.
