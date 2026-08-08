@@ -1077,3 +1077,73 @@ invariance; G4 materiality-form compliance stated per gate.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g6_shape_and_strength/`; report
 `reports/SUICA_M4_G6_SHAPE_AND_STRENGTH_REPORT.md`.
+
+## M4-G6 outcome (2026-08-03, appended)
+
+Same design as the registration above, executed: eight arms (`baseline`,
+`g3_raw_scale` at c=1 only; `column_standardized` at deployed strength plus
+`colstd_alpha_<k>` for k in {0.05,0.10,0.20,0.50,1.00}, all at c in
+{0.25,1,4}), reusing `g5._forced_route_derivative_columnwise` completely
+UNCHANGED for every `column_standardized`-family arm -- the only new
+quantity is the scalar `ridge_used(alpha) = alpha * deployed_ridge` passed
+into it. A cheap `--stage smoke` pre-flight (one representative context
+per world, no full sweep) verified the alpha-ridge arithmetic and the
+`colstd_alpha_1.00`/`column_standardized` identity BEFORE the full 8-world
+truth sweep launched, and passed cleanly on its first run; the full sweep
+then completed on all 8 worlds with zero Tracebacks, RuntimeErrors,
+LinAlgErrors, or Killed signals (~40.6 minutes wall-clock, 8 concurrent
+against 10 cores, ~1.28x M4-G5's own ~31.75 minutes despite a ~1.43x
+larger per-world (arm,c) count, since this leg's single mechanism needs
+only one `_hazard_design` build per call, unlike `diagonal_ridge`'s two).
+
+**PIVOT DOES NOT FIRE. Lean (a) HOLDS EXACTLY for all five registered
+alphas, without exception** (0.0 paired difference, all 745 authors, every
+c-pair, both budgets) -- directly confirming, empirically, the leg's own
+pre-registered Part 0.1 argument that the reparameterized penalized
+objective is c-independent for ANY fixed scalar ridge, not merely the
+deployed one. **Lean (b) HOLDS for three of five alphas** (0.05, 0.10,
+0.20 -- all comfortably WITHIN the +/-0.02 margin at both budgets) and
+**MISSES for the remaining two** (0.50 AMBIGUOUS/OUTSIDE; 1.00 OUTSIDE
+both budgets, reproducing M4-G5's own persisted 0.0515/0.0605 MISS
+bit-for-bit, since `colstd_alpha_1.00` is bit-identical to
+`column_standardized` by construction -- confirmed to 0.0 by an
+assembly-time structural check, 12,288 rows). **Three alphas hold BOTH
+leans jointly**, decisively defeating the PIVOT-IF condition. The
+headline alpha -- lowest pooled error among the three -- is
+`colstd_alpha_0.10` (10% of deployed, near the midpoint of M4-G3's own
+measured 4.6-18% band): mean `e_arm_true` 0.5083/0.4946 (4x/8x) against
+`g3_raw_scale`'s own persisted 0.5068/0.4949, statistically tied and
+numerically ahead at 8x. **Lean (c), the sharpest lean, HOLDS under the
+adopted (mean, per-budget) reading**: the error-minimizing alpha is 0.10
+at c=0.25, 1.0, AND 4.0, for both budgets separately and pooled -- an
+INTERIOR optimum (error rises to both sides), so no ladder-endpoint
+question arises under this reading. A disclosed median-based robustness
+check names a DIFFERENT best alpha (0.05) -- also perfectly scale-free in
+its own right, six-for-six across (c,budget) -- but this reading's own
+optimum sits exactly at the ladder's lower endpoint, so per the outer
+task's own instruction this is disclosed plainly: any exploration below
+alpha=0.05 would need a separately-registered leg, not an extension of
+this one. G0 shows the deciding comparisons carry essentially zero (lean
+a) or comfortably small (lean b, half-widths 2.8-3.9x smaller than the
++/-0.02 margin) residual uncertainty. G1 anchor (three anchors plus one
+bonus internal-consistency check, 45,056 rows total) and G3 truth-path
+invariance (160 checks) both pass at exactly 0.0. G2 confirms the alpha
+multiplier is genuinely live at all 15 (alpha,c) cells, matching the
+registered alpha to 0.0 absolute difference and spanning exactly the
+registered 20x ladder ratio.
+
+**Verdict: shape (M4-G5's per-column standardization) and strength (this
+leg's weaker-than-deployed alpha) together DELIVER the repair.** The
+scale-dependence chased since M4-G2, localized to `hazard_ridge` by M4-G3,
+decomposed into shape (solved exactly by M4-G4/M4-G5) and strength
+(untouched by M4-G5, since its calibration anchored to the deployed
+value) is now closed on BOTH axes at once: a band of alphas (roughly the
+lower fifth of the registered ladder) achieves exact c-invariance AND
+recovery matching `g3_raw_scale`'s own best level, and the
+error-minimizing member of that band is the SAME member at every c
+tested, under the reading methodologically consistent with every other
+lean in this line. Full artifacts: `scripts/run_suica_m4_g6_shape_and_strength.py`;
+`results/m4_g6_shape_and_strength/` (decision.json, gates.json,
+error_surface_alpha_x_c_x_budget.csv, argmin_by_c_and_budget.csv,
+truth_recovery_rows.csv, author_level_truth_rows.csv, context_meta.csv,
+smoke_check.csv, and partials); `reports/SUICA_M4_G6_SHAPE_AND_STRENGTH_REPORT.md`.
