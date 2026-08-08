@@ -2662,3 +2662,95 @@ respond oppositely to the lever. That mechanism question -- what
 `history_gated_ecology` and `topology_mismatch` share that the three
 original `HIGH_GAP_WORLDS` do not -- is the open question this leg leaves,
 not resolved or speculated on here.
+
+## M4-J1 planner adjudication note (2026-08-03, appended) — the two repairs no longer stand or fall together
+
+**Adjudication.** Lean (a) HOLDS: 7 of 8 worlds clear 25% reduction (87.5%
+against a 75% bar), the sole miss being `history_gated_ecology` at 21.5% with
+a CI including zero — a world whose baseline displacement (7.01) is under half
+of every other world's. Lean (c) HOLDS EXACTLY: 36/36 c-invariance checks at
+0.0 in 6/6 worlds, verified row-level, so **M4-G5's reparameterization
+argument is a property of the construction and not of the three worlds it was
+demonstrated on**. Pivot does not fire. G1 anchored at exactly 0.0 across
+9,376 checks, which is what makes the five new worlds an extension rather than
+a re-derivation.
+
+**Lean (b) splits the two repairs, and that is the leg's real content.**
+
+- `colstd_alpha_0.10` (the M4-G6 repair) worsens recovery in **zero** of six
+  worlds and improves it sharply in two.
+- `basis_shrinkage_0.20` and `basis_shrinkage_1.00` (the M4-H3/H4 repair) both
+  worsen recovery decisively — 2.7x to 10.3x past the margin, at both budgets
+  — in **`history_gated_ecology` and `topology_mismatch`**, with the harm
+  LARGER at the more aggressive ratio. Neither world is a `HIGH_GAP_WORLDS`
+  member, so the original three-world certification could not have surfaced
+  this.
+
+**And the two repairs are anti-correlated exactly where it matters.** In those
+same two worlds, basis-shrinkage drives recovery error UP (.459 -> .607/.665;
+.309 -> .362/.418) while the G6 ridge repair drives it sharply DOWN
+(.459 -> .239; .309 -> .253). The worlds where one repair is most harmful are
+the worlds where the other is most helpful.
+
+**Deployment picture, stated plainly.**
+
+- **M4-G6's `colstd_alpha_0.10` generalizes essentially without
+  qualification** — exact c-invariance everywhere, no measured harm anywhere,
+  displacement unchanged by structural proof. It is the strong candidate for
+  the F16 new-operator-ID step, and that step is a decision for the operator,
+  not for this loop.
+- **M4-H3/H4's basis-shrinkage repair is NOT supported for adoption as
+  specified.** It generalizes on its target and fails on safety, in named
+  worlds, at both certified ratios.
+
+The executing agent declined to speculate about what those two worlds share.
+That restraint is right, and it defines the next leg.
+
+## M4-J2 registration (2026-08-03, BEFORE run) — is the harm boundary predictable, or is the basis repair undeployable in principle?
+
+**Question.** What distinguishes `history_gated_ecology` and
+`topology_mismatch` from the six worlds where the basis-shrinkage repair is
+safe? This is not idle taxonomy: if the harm boundary is predictable from a
+property measurable BEFORE applying the repair, the repair can be salvaged
+behind a gating rule. If it is not, then one cannot know in advance whether a
+new corpus is a harm case, and the repair is undeployable in principle
+regardless of how well it performs on average.
+
+**Part 0 discriminator inventory (registered before compute, fixed as the
+hypothesis space).** Measure each of the following at `deployed` on all eight
+worlds: (i) baseline recovery error; (ii) baseline displacement magnitude;
+(iii) S3 share; (iv) S4 share; (v) an effective-rank / conditioning statistic
+of the basis. Candidates discovered later may be reported but not scored.
+
+**Leans.**
+(a) BASELINE COMPETENCE PREDICTS HARM: baseline recovery error at `deployed`
+    correlates with the basis-shrinkage repair's recovery BENEFIT across the
+    eight worlds (Spearman, CI excluding zero) in the direction that means
+    the repair helps where the objective does badly and harms where it
+    already does well. Motivated directly by the observation that the two
+    harm worlds carry the two lowest baseline errors of the eight.
+(b) IT SEPARATES CLEANLY: the two harm worlds are exactly the two
+    lowest-baseline-error worlds — a rank separation, not merely a
+    correlation.
+(c) DISPLACEMENT MAGNITUDE IS NOT THE DISCRIMINATOR: baseline displacement
+    does NOT separate the harm worlds (`history_gated_ecology` is the lowest
+    at 7.01 but `topology_mismatch` is mid-range at 13.18). A specificity
+    check that the discriminator is competence rather than displacement size.
+
+**PIVOT-IF:** no discriminator in the registered inventory separates the two
+harm worlds from the six safe ones -> THE HARM BOUNDARY IS NOT PREDICTABLE
+from any measured world property available before applying the repair. The
+basis-shrinkage repair is then undeployable in principle, not merely
+unsupported as specified, and that is the finding — to be written with the
+prominence this line gives its measured limits.
+
+**Gates.** G0 POWER with justified grain and MDE stated (n=8 worlds is small;
+say so and state what it can and cannot detect); G1 ANCHOR — every reused
+quantity reproduces M4-J1's persisted values to <=1e-12; G2 DISCRIMINATOR
+LIVENESS — each candidate must actually vary across the eight worlds (a
+constant discriminator is VACUOUS, not a null); G3 truth-path invariance where
+applicable; G4 materiality-form compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_j2_harm_boundary/`; report
+`reports/SUICA_M4_J2_HARM_BOUNDARY_REPORT.md`.
