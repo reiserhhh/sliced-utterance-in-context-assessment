@@ -1577,3 +1577,149 @@ G4 materiality-form compliance stated per gate.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_h2_basis_normalization/`; report
 `reports/SUICA_M4_H2_BASIS_NORMALIZATION_REPORT.md`.
+
+## M4-H2 outcome (2026-08-03, appended)
+
+**PIVOT DOES NOT FIRE. A carrier is found, mechanistically CERTIFIED by lean
+(b), and disqualified on safety grounds by lean (c) -- the same shape of
+finding this line reached at M4-G1, now located one level up, in basis
+construction rather than estimator regularization.** Part 0 audited every
+normalization/scaling/centering/reference choice inside
+`freeze_m4_condition_transform` (`m4_condition_manifold_estimator.py:545-
+608`) and its callees with file:line references, classifying six as
+candidate carriers (per-source robust standardization; reference-panel
+centering, mean vs median; the eigenvalue rank-retention threshold; the
+whitening scale in both a regularized and an unnormalized reading; the
+constant mass column's scale) and four as excluded with a stated a priori or
+scope reason (chart family/dimensions/neighbors/landmarks/bandwidth, shared
+with the closed chart-selection line; source-averaging, a fusion choice not
+a normalization; the covariance denominator, a priori bounded at ~0.52%
+whitening effect for N=96 reference points, far below the 25% bar and
+degenerate with M4-G2's already-disqualified units axis; the whitening's
+numerical floor, verified never binding at 6.7e5-3.0e6x its own value).
+
+**Lean (a) A CARRIER EXISTS HOLDS: three of six `basisvar_<k>` arms clear
+the 25% bar with a paired CI excluding zero, at BOTH the adopted rep grain
+(n=24, primary, per M4-G7's own precedent for this identical metric) and
+the literal-text world grain (n=3, companion) -- the two readings agree on
+every arm's classification, so the grain ambiguity Part 0 disclosed did not
+end up mattering.** `basisvar_whitening_unscaled` (drop the 1/sqrt(eig)
+whitening entirely -- M4-G1's own "identity" extreme control, re-run one
+level up on the basis that actually builds `context["v2_basis"]`) cuts Leg
+14's gap by **64.71%** (rep grain; 64.54% world grain), the largest of any
+arm, CI [10.950, 12.423]. `basisvar_rank_tolerance_tight` (rank_tolerance
+1e-6 -> 1e-3) cuts 42.15% (CI [6.725, 8.500]) but is disclosed as partly a
+width artifact -- width falls from 13 to 6-10 depending on rep, and the
+`disp_v2/sqrt(width)` companion (this line's own D2 convention) shows only a
+20.8% width-independent reduction. `basisvar_whitening_shrinkage`
+(1/sqrt(eig+lambda), lambda = 0.10 x median(retained eig), M4-G1's own
+middle rung) cuts 28.93% (CI [4.635, 5.814]) at CONSTANT width -- a clean
+signal. The other three arms (center_median +7.19%, source_scale_off
++0.89%, intercept_matched_scale -3.11%, i.e. worse) all miss. G0 shows none
+of the six arms underpowered against the 25%-of-deployed-mean bar
+(half-widths 0.062-0.888 vs a 4.51 bar). Per the registered winner rule
+(largest reduction, fixed before results): **winner =
+`basisvar_whitening_unscaled`.**
+
+**Lean (b) MECHANISTICALLY CONSISTENT HOLDS, decisively.** At the winner,
+S3's registered-order share collapses by an order of magnitude in 3/3
+worlds (.3323->.0490, .3830->.0238, .2953->.0482; mean .3368->.0403) --
+exactly the subspace Part 0 predicted before compute (every candidate step
+is, by construction, an S3-normalization step), not a number moving for
+unexplained reasons. A side effect visible in the full share table, not
+adjudicated by any lean: the mass leaving S3 lands disproportionately in S1
+(safety-complement), which rises from .200-.232 to .497-.554, while S4
+(residual) stays roughly flat.
+
+**But lean (c) NOT COSMETIC MISSES, decisively, at both budgets and both
+grains.** Author-grain (n=384) truth-referenced recovery at the winner is
+WORSE by +.2741 [.2568,.2913] (4x) and +.2774 [.2603,.2944] (8x), both
+classified OUTSIDE the registered +/-.02 margin by 12-14x its own width; the
+world-grain companion agrees in sign and magnitude (+.307/+.303). G0 flags
+this comparison's half-width (.0172/.0171) as nominally over this line's own
+strict 0.01 power bar -- disclosed plainly, and disclosed as not undermining
+the classification, since the realized CI sits nowhere near the margin
+boundary the bar exists to resolve.
+
+**Disclosed dose-response companion (non-adjudicating, computed identically
+for every arm that cleared lean (a), mirroring M4-G1's own established
+practice): the MILDEST qualifying arm is the only one that is safe.**
+`basisvar_whitening_shrinkage` (28.9% reduction) shows truth recovery
+GENUINELY IMPROVING vs deployed, CI [-.0169,-.0054] at 4x, entirely on the
+better side and comfortably WITHIN the no-loss margin -- while
+`rank_tolerance_tight` (42.2%) and `whitening_unscaled` (64.7%, the winner)
+both MISS decisively (+.093 and +.274 at 4x). Spearman(reduction_pct,
+`e_arm_true`) across all six arms = **+0.600** (descriptive, n=6, not a
+registered test) -- the same-signed relationship as M4-G1's own
+Spearman(offset level, error) = -.786 on the downstream copy (a positive
+correlation between REDUCTION and ERROR is the same relationship, sign-
+flipped, as a negative correlation between remaining offset LEVEL and
+error). Smaller n and a different intervention family here, so the
+magnitude is not directly comparable, but the qualitative pattern --
+minimizing the registered target past a mild point makes the objective
+worse at its job -- reproduces exactly, one level up.
+
+G1 ANCHOR passes at exactly 0.0 (not merely inside 1e-12) across three
+independent chains: `deployed`'s per-rep `disp_v2` vs Leg 14's persisted
+`displacement_rows.csv` (24/24 checks), `deployed`'s offset_norm and all
+four share families vs M4-E2's persisted `offset_table` (3/3 worlds), and
+`deployed`'s budget=1x `e_v2_true` (via this leg's own new budget-
+regeneration machinery) vs Leg 14's persisted `gap_rows.csv` (3/3
+spot-checks) -- meaningful because `deployed`'s basis is independently
+RECOMPUTED via the same ingredients/whitening machinery every `basisvar_<k>`
+arm depends on, not read off `context["v2_basis"]` directly. G2 BASIS
+LIVENESS passes for all six arms by a wide margin (smallest 2.97x the 10%
+materiality bar, `basisvar_intercept_matched_scale`; largest 12.66x,
+`basisvar_whitening_unscaled`) -- no arm's result is VACUOUS. G3 TRUTH-PATH
+INVARIANCE passes at exactly 0.0 across 21 checks (all 7 arms x 3 worlds).
+
+**Verdict: `CARRIER_FOUND_MECHANISM_OR_TRANSFER_UNCERTIFIED`.** Per the
+registration's own instruction for a found carrier: the step is named
+(`basisvar_whitening_unscaled`, `m4_condition_manifold_estimator.py:580-
+583`), the closure is quantified (64.71% of Leg 14's gap), and lean (b) DOES
+certify it as the registered mechanism rather than an unexplained number
+movement -- but the carrier that reduces the displacement most is exactly
+the one lean (c) disqualifies. This is not the PIVOT branch (a carrier was
+found, so the "displacement is not in the basis's normalization either"
+conclusion does not apply) and not a clean HOLD (lean (c) misses too
+decisively to call this settled) -- it lands precisely in the branch the
+registration reserved for exactly this shape of outcome, stated exactly as
+found.
+
+One process note, disclosed as the standing convention requires: the first
+`--stage oracle` invocation exceeded the harness's foreground timeout and
+was auto-moved to a background task by the tool layer, not by any monitor
+built to wait on it; the harness's own completion notification was read
+once and every subsequent stage ran synchronously in the foreground with an
+explicit long timeout, as the process rules require. One efficiency fix,
+made before any hypothesis-relevant number existed: the per-(world,
+repetition, budget) world-regeneration call (~6-13s, arm-invariant) was
+initially recomputed once per arm; a disk cache cut arm-stage wall-clock
+from ~190s to ~15-28s per (world, arm) after the first arm of each world,
+verified to change no computed number (the `deployed` arm's numbers,
+cache-independent by construction, remain bit-identical to M4-E2's and Leg
+14's own persisted values).
+
+Full numbers, gates, the six-step Part 0 inventory with file:line
+references, the per-arm x per-world table for all three metrics, and the
+dose-response companion table: `reports/SUICA_M4_H2_BASIS_NORMALIZATION_
+REPORT.md`. Artifacts: `scripts/run_suica_m4_h2_basis_normalization.py`;
+`results/m4_h2_basis_normalization/{decision.json, gates.json,
+disp_rows.csv, g2_liveness_rows.csv, truth_recovery_rows.csv,
+author_level_truth_rows.csv, g3check_rows.csv, offset_shares_by_arm.csv,
+and per-(world,arm) partials}`.
+
+**Hand-off.** `basisvar_whitening_unscaled` is a second confirmed instance,
+at a different pipeline location, of this program's recurring cosmetic-
+lever pattern. The dose-response points at the safe direction being mild,
+not aggressive: `basisvar_whitening_shrinkage` (recovery genuinely
+improved) is the natural next candidate for a leg that registers a narrower
+shrinkage ladder around this one step, mirroring M4-G1 -> M4-G3's own
+narrowing move but now on the basis-construction path. Separately: because
+this leg found a carrier (even if disqualified on safety grounds), the
+question the registration reserved for a firing pivot -- whether the
+CONSENSUS/ALIGNMENT step is the remaining candidate inside basis
+construction -- is not reached by this leg's own registered branches and is
+not claimed here; it stays open precisely because this leg's own carrier
+failed on safety, not because basis normalization was exonerated as a
+location for the displacement.
