@@ -2967,3 +2967,128 @@ displacement table above.**
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_j3_gate_dissociation/`; report
 `reports/SUICA_M4_J3_GATE_DISSOCIATION_REPORT.md`.
+
+## M4-J3 outcome (2026-08-03, appended)
+
+**DISSOCIATION NOT ACHIEVED. Lean (a) MISSES cleanly under the leg's primary
+reading (0 of 3 pairwise comparisons among the usable new worlds dissociate,
+at either the bare or a registered 10% materiality bar). Per the
+registration's own instruction, the leg adjudicates nothing further: leans
+(b) and (c) are explicitly NOT ADJUDICATED, and the pivot's own precondition
+("in the dissociating worlds") is unsatisfied, so it neither fires nor
+cleanly does not fire. Verdict:
+`DISSOCIATION_NOT_ACHIEVED__GATE_STAYS_PROVISIONAL`.** This is the leg's own
+explicitly-sanctioned honest-negative branch, not an outcome outside the
+registered leans -- the registration named this exact possibility ("the two
+candidates are not separable with the machinery available... an acceptable,
+honest outcome") and it is what happened.
+
+**G0/G2/G6 first, as the standing rules require.** G0: a pairwise rank
+inversion is a deterministic fact once both worlds' deployed-arm values are
+measured (no sampling uncertainty), but a BARE inversion can be noise-level,
+so this leg required both axes' relative gap to clear a 10%-of-value
+materiality bar (reused unchanged from this program's own
+`G2_MATERIALITY_RATIO` convention) before crediting a dissociation --
+disclosed alongside the unfiltered count throughout. `found_slow_hysteresis_
+equal_marginal` was confirmed pathological exactly as anticipated (baseline
+error 7.91e9, the identical order-of-magnitude signature as M4-J1/M4-J2's
+own `EXCLUDED_TRUTH_WORLDS`), leaving 3 usable new worlds and 3 primary
+pairwise comparisons. **G2: 0/3 dissociate.** Both constructed hybrids'
+displacement values track their MECHANISM donor's own native value almost
+exactly (within 1-2%; e.g. `hybrid_lo_error_hi_disp` = mechanism(topology_
+mismatch)@seed(condition_alias_ecology) measured (0.3252, 13.349) against
+topology_mismatch's own native (0.3087, 13.182)) rather than moving toward
+the seed-donor's extreme -- an honest empirical finding stated as a
+hypothesis in Part 0.1 (unlike M4-G2's `offset_norm`, `disp_v2` compares
+against `oracle_basis`, which branches on mechanism identity, not seed
+alone) and now falsified for this specific lever. A disclosed,
+non-adjudicating companion (full population: 8 `D1_WORLDS` with
+`EXCLUDED_TRUTH_WORLDS` screened out + 3 usable new worlds, 36 pairs) finds
+exactly 2 materially-dissociating pairs, both anchored on `history_gated_
+ecology` -- but both against worlds ALREADY KNOWN (or shown, for the new
+member) to share the identical HARM outcome (`history_gated_ecology` vs
+`topology_mismatch`: M4-J1's own two harm worlds, compared against each
+other; `history_gated_ecology` vs `hybrid_lo_error_hi_disp`: the hybrid
+inherits topology_mismatch's own harmed status, +0.1378 vs +0.1091 at the
+primary combination, same sign, comparable magnitude) -- both classify
+`BOTH_HARMED` at all 4 tested (arm,budget) combinations, so even the most
+permissive reading of "two worlds exist" yields nothing lean (b) can use. An
+earlier draft of this companion check omitted the `EXCLUDED_TRUTH_WORLDS`
+screen on the anchor side and found 11 "dissociating" pairs, 6 spurious
+(driven by `fast_return_equal_marginal`/`linear_null_ecology`'s own ~1e9
+pathology); caught and fixed in the same assembly pass before the corrected
+result was used for anything. **G6: every cited fact verified CORRECT** --
+unlike M4-J2's own motivating-fact error, this registration's eight-world
+displacement table (`18.22/16.93/18.61/22.73/18.33/7.01/18.69/13.18`)
+matches the persisted `disp_v2` values 1:1 at full precision with no
+mismatches, and both cited rank-separation percentages re-derive within
+0.05 points (error 20.46% vs cited 20.5%; displacement 28.43% vs cited
+28.4%). `any_cited_fact_found_wrong = False`.
+
+**G1 ANCHOR passes exactly** (8 `D1_WORLDS` read directly from M4-J1's own
+files, identity by construction, PLUS an independent one-repetition
+self-validation of this leg's own new mechanism/seed-donor context-builder
+against M4-J1's persisted `history_gated_ecology` rep-0 value: disp_v2 diff
+0.0, truth diff 2.22e-16 across 16 authors). **G3 passes exactly** (0.0 over
+12 checks, 4 new worlds x 3 `BASIS_ARMS`). **G4 compliant**, stated per
+gate.
+
+**Order of operations, proven by file timestamp, not merely asserted.**
+`dissociation_evidence.json` (G2/lean(a), deployed-arm only) was written at
+2026-08-08T15:35:28 UTC; the earliest `partial_harm_*.csv` (the shrinkage
+arms' harm outcome) was written at 2026-08-08T15:39:35 UTC -- a 4-minute
+gap, and all 16 harm partials postdate the evidence file
+(`evidence_predates_every_harm_partial = True`). `--stage harm_arms` was
+first invoked only after `DISSOCIATION NOT ACHIEVED` had already printed,
+computed solely to disclose the ONE potentially-informative companion pair
+identified above, never to reverse the already-final lean (a) verdict.
+
+**Two mechanical findings, both caught and disclosed before any
+hypothesis-relevant number existed.** (1) `hybrid_lo_error_hi_disp`
+(mechanism=topology_mismatch @ seed-family=condition_alias_ecology) hit
+`chart.refused` at repetition 4 specifically -- an anticipated-in-principle
+but not anticipated-in-location risk (Part 0.1 disclosed the construction's
+fidelity was empirical, not assumed) -- resolved by catching the refusal
+per-repetition and continuing at n=7 reps for that label alone, disclosed in
+a `skipped_repetitions_*.json` file. (2) The full-population companion
+check's pathology-screen omission, described above.
+
+**Pivot: NOT APPLICABLE.** Its own registered precondition ("in the
+dissociating worlds") is unsatisfied with zero dissociating worlds in the
+primary population -- it neither fires (would need a clean miss inside an
+existing population) nor cleanly does-not-fire (would need lean (a) to have
+held). This is the same shape M4-G3's own pivot took when underpowered,
+except this leg is NOT underpowered (G0's rank-inversion criterion is
+deterministic and fully powered) -- it simply found no dissociation to test
+the pivot's condition against.
+
+Full numbers, gates, the full world x discriminator x harm table, the G6
+re-derivation, and the disclosed companion analysis:
+`reports/SUICA_M4_J3_GATE_DISSOCIATION_REPORT.md`. Artifacts:
+`results/m4_j3_gate_dissociation/{decision.json, gates.json,
+dissociation_evidence.json, dissociation_table.csv,
+dissociation_pairwise*.csv, g1_selfcheck.json,
+world_discriminator_harm_table.csv, anchor_deployed_table.csv,
+anchor_harm_table.csv, new_world_deployed_table.csv,
+new_world_harm_rows.csv, lean_b_competence_rows.csv,
+lean_b_companion_full_population_rows.csv,
+lean_c_threshold_classification_rows.csv, g3_check_rows.csv, per-world
+partials}`.
+
+**Hand-off.** M4-J2's own closing position stands entirely unchanged: the
+basis-shrinkage repair's harm boundary is predictable but not specifically
+attributable, a competence-and/or-displacement-keyed rule remains a
+reasonable heuristic screen, and no certified deployment gate exists.
+`colstd_alpha_0.10` (M4-G6) remains the clean, unaffected F16 candidate.
+This leg's own contribution is negative but load-bearing: it closes off the
+mechanism/seed-donor crossing as a viable lever for dissociating the two
+candidates (displacement is overwhelmingly mechanism-driven, not
+seed-driven, for this metric -- the opposite of what M4-G2 found for
+`offset_norm`), and it surfaces, for the first time, that the one genuine
+dissociation latent in the ALREADY-PUBLISHED 8-world data
+(`history_gated_ecology` vs `topology_mismatch`) is exactly the pair that
+cannot resolve the question, because both are already known to respond
+identically. If this question is pursued further, the next registration
+needs either a materially different construction lever, or must confront
+directly the possibility that competence and displacement are not
+separable scalars in this objective's world space at all.
