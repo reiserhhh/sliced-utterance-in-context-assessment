@@ -2869,3 +2869,101 @@ Artifacts: `results/m4_j2_harm_boundary/{decision.json, gates.json,
 part0_inventory.csv, full_inventory_separation_table.csv,
 disp_v2_recomputed_rows.csv, g1_share_anchor_rows.csv, benefit_rows.csv,
 per-world partials}`.
+
+## M4-J2 planner adjudication note (2026-08-03, appended) — the gate exists, is not specific, and my own motivating fact was wrong
+
+**Adjudication.** Lean (a) HOLDS: baseline recovery error at `deployed`
+correlates with the basis-shrinkage repair's recovery benefit
+(Spearman .886, CI [.185, 1.000], correct direction, 3 of 3 companions
+positive and 2 of 3 decisively excluding zero). Lean (b) HOLDS: an exact
+rank-2 separation with a 20.5% margin. Pivot does NOT fire. Verdict
+`HARM_BOUNDARY_PREDICTABLE_BUT_NOT_SPECIFIC_TO_COMPETENCE__PROVISIONAL_GATE_ONLY`.
+
+G0 is the model of how this line should state power: full power for one thing
+(a rank-2 separation is deterministic once six values are measured — no
+sampling uncertainty) and near-zero for another (a Spearman CI at n=6 admits
+only C(11,6)=462 distinct resamples; one discriminator's CI spans the entire
+[-1,1]). Where a CI included zero it was reported UNDERPOWERED, never as a
+null. G1 anchored `disp_v2` at exactly 0.0 across 64 checks on all eight
+worlds — stronger than M4-J1's own three-world self-anchor.
+
+**Lean (c) MISSES, and the reason is my error, not the leg's.** I registered
+the specificity control on the claim that displacement does not separate the
+harm worlds, citing "`history_gated_ecology` is lowest at 7.01 but
+`topology_mismatch` is mid-range at 13.18". Checked at full precision against
+the persisted table, that is simply false: the eight worlds' displacements are
+18.22 / 16.93 / 18.61 / 22.73 / 18.33 / **7.01** / 18.69 / **13.18**, so the
+two harm worlds are the two LOWEST of the eight, and displacement rank-
+separates them by an even larger relative gap (1.284) than baseline error's
+own (1.205). The control I wrote to establish specificity instead demonstrated
+its absence, and the agent said so plainly rather than softening it.
+
+**Eighth planner defect, and a new kind.** The first seven were defects in
+RULES — aggregation, power, channel, materiality form, grain, winner
+definition, graded levels. This one is a defect in EVIDENCE: a factual claim
+used to motivate a lean, not verified against the persisted data at full
+precision before the registration was committed. **Standing rule (eighth):
+every factual claim cited to motivate a lean must be checked against the
+persisted artifacts at full precision before the registration is committed. A
+wrong motivating fact does not merely weaken a leg — it makes the control test
+the wrong thing.**
+
+**Where this leaves deployment.**
+
+- The basis-shrinkage repair is **NOT undeployable in principle**: a real,
+  measured, pre-application gating signal exists.
+- But the gate is **not certified**: baseline competence and baseline
+  displacement are comparably predictive at n=6 and cannot be told apart as
+  distinct mechanisms, while S3 share, S4 share and conditioning number show
+  no signal at all. A competence-based gate is a reasonable provisional
+  heuristic, not a deployment control.
+- `colstd_alpha_0.10` (the M4-G6 repair) remains unaffected by any of this and
+  is still the clean F16 candidate.
+
+## M4-J3 registration (2026-08-03, BEFORE run) — can the two candidate gates be told apart?
+
+**Question.** Baseline recovery competence and baseline displacement are
+confounded across the eight worlds available: both rank-separate the harm
+worlds, neither can be credited. Can they be DISSOCIATED — and if so, which
+one actually predicts harm?
+
+**Design.** Search the program's existing world generators for, or construct
+by registered parameter variation, worlds that dissociate the two: HIGH
+baseline error with LOW displacement, and LOW baseline error with HIGH
+displacement. Apply `basis_shrinkage_0.20` and `basis_shrinkage_1.00` to them
+and record whether harm follows competence or displacement. Anchor all eight
+existing worlds unchanged.
+
+**Leans.**
+(a) DISSOCIATION ACHIEVED — a gate on the leg itself: at least two worlds
+    exist or are constructible in which the two discriminators rank
+    OPPOSITELY, verified before the harm outcome is computed. If dissociation
+    cannot be achieved, the leg adjudicates nothing further and says so: the
+    two candidates are not separable with the machinery available, and the
+    gate stays provisional.
+(b) COMPETENCE WINS: in the dissociating worlds, harm follows baseline
+    recovery error rather than baseline displacement.
+(c) THE GATE IS USABLE: a single threshold on the winning discriminator
+    classifies every world — the original eight plus the new ones — correctly,
+    with the threshold registered from the original eight BEFORE the new
+    worlds' outcomes are computed.
+
+**PIVOT-IF:** harm follows DISPLACEMENT rather than competence, or neither
+predicts in the dissociating worlds -> the provisional gate's stated basis is
+wrong. Either the correct gate is displacement (in which case say so and
+re-specify), or the boundary is not a single scalar at all and no gate can be
+certified from this design.
+
+**Gates.** G0 POWER with the dissociating-world count stated and its limits
+acknowledged; G1 ANCHOR — the eight existing worlds reproduce M4-J1/M4-J2's
+persisted values to <=1e-12; G2 DISSOCIATION LIVENESS — the constructed
+worlds' two discriminators must genuinely rank oppositely, shown before any
+harm outcome is read; G3 truth-path invariance; G4 materiality-form
+compliance; **G6 MOTIVATING-FACT VERIFICATION (new, from the eighth standing
+rule) — every factual claim this registration cites must be re-derived from
+the persisted artifacts at full precision and reported, including the
+displacement table above.**
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_j3_gate_dissociation/`; report
+`reports/SUICA_M4_J3_GATE_DISSOCIATION_REPORT.md`.
