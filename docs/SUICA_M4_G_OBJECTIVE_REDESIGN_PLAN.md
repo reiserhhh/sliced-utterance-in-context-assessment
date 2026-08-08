@@ -394,3 +394,103 @@ this leg found on the pure c-ladder (bigger c: worse raw offset, but BETTER
 truth recovery, opposite-signed to M4-G1's own non-uniform-regularization
 finding) reflects something about this objective's functional form that a
 normalized-offset redesign would need to reconcile.
+
+## M4-G2 planner adjudication note (2026-08-03, appended) — one artifact killed, one lever uncovered
+
+The verdict stands as adjudicated: slope .8796 [.8386, .9206] on a manipulation
+whose four invariances were confirmed at exactly 0.0, so **`offset_norm` is
+DISQUALIFIED as an optimization target in its raw form**. Lean (c) shows the
+repair works: under the pre-registered scale-normalized offset, Spearman with
+truth error flips from M4-G1's −.786 to **+.833**, and `identity` moves from
+raw-offset minimum to normalized-offset maximum. The width companion rules out
+the dimension-count explanation (identity's offset/sqrt(width) = 1.207 is
+still the minimum). M4-E2's own decomposition is NOT overturned — it never
+varied c — but M4-G1's cross-arm raw-offset comparisons, including its
+"identity is best" reading, inherit the disqualification.
+
+**Lean (b)'s MISS is the more interesting half, and it is a finding, not a
+failure.** Truth recovery was registered as scale-free and is not: it improves
+MONOTONICALLY along the ladder, .786 → .646 → .525 → .451 → .422, with 18 of
+20 pairwise CIs outside the ±.02 equivalence band. Since c is provably a pure
+change of units — eigenvectors, relative spectrum, condition number and width
+all identical to 0.0 — recovery cannot depend on it unless something
+DOWNSTREAM of the whitening compares a scale-carrying quantity against a FIXED
+ABSOLUTE CONSTANT. Multiplying the whitening by 4 then effectively weakens
+that constant, and recovery improves by 20% of its own magnitude.
+
+That is a third instrument finding in this line's short life, and unlike the
+first two it points at a repair rather than a retraction: if a fixed constant
+is being compared against a quantity whose scale is arbitrary, making it
+RELATIVE should deliver the c=4 improvement at c=1 — a real gain rather than a
+units trick. The next leg tests exactly that, and is registered to fail loudly
+if the scale dependence is not localizable in identifiable constants.
+
+Process note, recorded because it is the standard here: the executing agent
+hit three mechanical problems (two colliding world seeds; a degenerate
+replacement world; a near-zero-denominator blowup in two worlds' relative
+error) and disclosed each with its resolution — the first two fixed before any
+hypothesis-relevant number existed, the third found only AFTER lean (a) and
+the pivot were finalized, recomputed on the valid 6-world subset with both
+readings persisted and the MISS holding under each.
+
+## M4-G3 registration (2026-08-03, BEFORE run) — turn the units artifact into a repair
+
+**Question.** M4-G2 proved something downstream of the whitening compares a
+scale-carrying quantity against a fixed absolute constant, because a pure unit
+change moved truth recovery .786 → .422. Can that dependence be localized in
+identifiable constants, and does making them SCALE-ADAPTIVE deliver the c=4
+recovery at c=1?
+
+**Part 0 audit (before any compute, and gated).** Enumerate every constant in
+the objective path that is compared against, added to, or thresholds a
+scale-carrying quantity — regularizers, convergence tolerances, rank or
+support thresholds, floors, clip bounds. Publish the inventory in the report
+with file and line references. This inventory IS the leg's hypothesis space;
+constants discovered later may be reported but may not be scored.
+
+**Design.** Reuse M4-G2's world set (8 worlds, the valid-subset rule from its
+lean (b) carried over verbatim) and objective path.
+
+- `baseline` — c=1.0 as deployed (anchor).
+- `c4_reference` — c=4.0, the improvement to be matched (also an anchor: must
+  reproduce M4-G2's persisted c=4 recovery to <=1e-12).
+- `adaptive_<k>` — one arm per inventoried constant, with that constant alone
+  made relative to a declared data-scale statistic (registered in Part 0),
+  everything else at c=1.0.
+- `adaptive_all` — every inventoried constant made relative simultaneously.
+
+**Leans.**
+(a) LOCALIZABLE: at least one single-constant `adaptive_<k>` arm recovers
+    >= 50% of the c=4 truth-recovery gain at c=1 (gain measured as
+    baseline_error − c4_error, per budget), paired-by-world CI excluding zero.
+(b) DEFINITIONAL CHECK: the winning adaptive arm's truth recovery is invariant
+    across the c ladder {0.25, 1.0, 4.0} — equivalence form, all pairwise
+    differences inside +/- .02. This is what distinguishes a genuine
+    scale-adaptive repair from a lucky reparameterization.
+(c) NO NEW COSMETIC TRADE: the scale-normalized offset at the winning arm does
+    not worsen relative to baseline (equivalence form, margin registered in
+    Part 0).
+
+**PIVOT-IF:** no single-constant arm reaches 50% of the gain AND `adaptive_all`
+also fails to -> the scale dependence is NOT localized in identifiable
+constants. The redesign target then moves to the objective's FUNCTIONAL FORM,
+and this line's remaining hypothesis (that the displacement problem is a
+scaling problem at all) is retired.
+
+**Gates.**
+- **G0 POWER** — pre-state the c=4 gain from M4-G2's persisted artifacts and
+  the design's MDE; underpowered comparisons adjudicate nothing.
+- **G1 ANCHOR** — `baseline` and `c4_reference` reproduce M4-G2's persisted
+  values to <=1e-12 on identical world seeds.
+- **G2 CONSTANT LIVENESS** — for every inventoried constant, demonstrate it
+  actually carries scale dependence: perturb it alone at c=1 and show truth
+  recovery moves, in equivalence form against a registered margin. A constant
+  that does not move recovery is INERT, is reported as such, and its adaptive
+  arm's null is VACUOUS rather than a null.
+- **G3 TRUTH-PATH INVARIANCE** — degenerate equality check, as in G1/G2.
+- **G4 MATERIALITY FORM** — every gate an equivalence/margin bound; state
+  compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g3_scale_adaptive/`; report
+`reports/SUICA_M4_G3_SCALE_ADAPTIVE_REPORT.md`.
