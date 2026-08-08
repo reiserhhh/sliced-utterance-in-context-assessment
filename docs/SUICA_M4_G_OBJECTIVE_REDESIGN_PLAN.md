@@ -2001,3 +2001,104 @@ state what a single-winner rule would have chosen.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_h4_safe_ceiling/`; report
 `reports/SUICA_M4_H4_SAFE_CEILING_REPORT.md`.
+
+## M4-H4 outcome (2026-08-03, appended)
+
+**Executed as registered**, reusing H3's worlds/anchors/arms-plumbing/gate-
+helpers/G5-table-machinery throughout (imported as `h3`, which itself
+imports `h2`); this leg's only new code is arm-dispatch plumbing for the
+four genuinely new ratios (1.0/2.0/4.0/8.0 -- literal reuse of H3's own
+`_whitening_for_shrinkage_ratio`) plus the dual-winner selection/
+adjudication orchestration the seventh standing rule requires. `deployed`,
+`basis_shrinkage_0.50` and `whitening_unscaled` are computed by LITERAL
+calls into H3's own dispatch function, not reimplemented. Gates exact: G1
+anchor `9.71445146547012e-17` (registered-literal 2-chain AND disclosed
+superset 3-chain incl. `deployed`, both against H3's own persisted CSVs,
+full row-level joins); G2 all six arms live 6.2x-12.7x the bar, monotone in
+ratio; G3 `0.0` on 21/21; smoke test additionally confirmed the bridge rung
+bit-for-bit against H3's own dispatch (`0.0` exact) before any full-scale
+compute ran. A mechanical reporting-layer correction, found AFTER the
+hypothesis-relevant numbers existed: the script's own coarse width-
+invariance flag reads `false` because it conflates between-repetition and
+between-arm variation; the correct per-(world,repetition) check (computed
+directly from `disp_rows.csv`) confirms 0/24 disagreements -- no width
+confound, no adjudicated number changes.
+
+**G5 DUAL-WINNER COMPLIANCE.** `basis_shrinkage_{0.50,1.00}` qualify
+HARMLESS (does not worsen, both budgets); `basis_shrinkage_2.00` is
+AMBIGUOUS at both budgets (its own CI straddles the 0.02 margin);
+`basis_shrinkage_{4.00,8.00}` and `whitening_unscaled` are confirmed
+UNSAFE (OUTSIDE, both budgets). **HARMLESS winner: `basis_shrinkage_1.00`,
+45.79% reduction** (CI [7.515,9.025], rep grain). **ACTIVELY GOOD winner
+within this leg's own newly-tested ladder: NONE** -- the actively-good
+pool restricted to `{0.50,...,8.0}` is empty. What a SINGLE-winner rule
+(H3's own sixth-standing-rule "joint winner," harmless-only) would have
+chosen: the identical arm, `basis_shrinkage_1.00` -- reported alone, this
+would have hidden that no arm in this leg's own range is actively good and
+that the winner's own recovery classification has markedly less
+statistical headroom than H3's winner (8x buffer to the margin only 10.1%
+of the margin's width, vs H3's 65.9%) -- decisive, not underpowered at the
+decision-relevant margin, but honestly disclosed as thinner. Target-only
+winner (the original defect): `whitening_unscaled`, 64.71%, recovery
+destroyed -- reproduced a third time, on schedule.
+
+**Adjudication.** (a) CEILING LOCATED HOLDS: `basis_shrinkage_{4.00,8.00}`
+are confirmed unsafe (+.0375/+.0397 and +.0605/+.0630, OUTSIDE both
+budgets, CIs entirely above the margin) -- the harmless region's upper
+bound (1.0) is interior to this ladder, not another endpoint. One rung
+(`2.00`) is honestly reported AMBIGUOUS rather than forced to either side
+-- the boundary is precise about where safety ends and where unsafety
+begins, but the interval `(1.0, 4.0]` is not fully resolved by this
+ladder's own grain. (b) GENERALIZES HOLDS, resolving H3's open either-way
+test: at the harmless winner, S3 falls materially in 3/3 worlds --
+`source_rotated_feedback` (the world that ROSE or stayed flat at EVERY
+rung H3 ever tested) falls 11.1%, clearing the 10% floor, with a clean
+monotonic decline across the whole ladder past the 0.50 knife-edge (0.2953
+deployed -> 0.3019 @0.50 -> 0.2624 @1.0 -> 0.2335 @2.0 -> 0.2077 @4.0 ->
+0.1845 @8.0 -> 0.0482 @unscaled). Per the registration's own either-way
+framing, this IS the finding: the total non-response at every H3 rung was
+a STRENGTH EFFECT, not a structural immunity -- refuting, not merely
+failing to confirm, the "structural" alternative. (c) LEVELS SEPARATE
+HOLDS under the adopted Reading B (combined ladder: H3's own persisted
+0.02-0.20, cited not recomputed, + this leg's own 0.50-8.0, confirmed
+monotonic in reduction end to end, 9 points, 16.0%->52.2%) -- actively-good
+ceiling 0.2 (H3) sits strictly below harmless ceiling 1.0 (this leg), an
+order of magnitude apart; Reading A (this leg's own ladder alone) is
+honestly reported NOT COMPUTABLE (empty actively-good pool) rather than
+forced to a verdict. **Verdict
+`CEILING_LOCATED__MECHANISM_GENERALIZES_3_OF_3_WORLDS__LEVELS_SEPARATE`** --
+all three leans HOLD, a clean sweep and a new outcome shape for this line
+(every prior carrier-found leg left at least one lean missing or in a
+genuine middle ground).
+
+**Two disclosed nuances, neither smoothed over.** First, the harmless
+winner's own recovery classification, while decisive against the actual
+0.02 margin under BOTH one-sided (adopted) and two-sided (disclosed
+robustness check) readings, carries markedly thinner statistical headroom
+than H3's winner (Section G0 of the report). Second, the safe/unsafe
+boundary contains one genuinely unresolved rung (`2.00`, AMBIGUOUS) rather
+than a single clean crossing -- disclosed as a real resolution limit of
+this ladder's own grain, not glossed into a false-precision "ceiling is
+exactly 1.0" claim.
+
+No mechanical problems affecting any hypothesis-relevant number: smoke
+test, all 3 context+oracle stages (186.6s/189.2s/191.2s/world, matching
+H2/H3's own order of magnitude), all 3 G3 spot-checks, all 21 (world,arm)
+stages (21-28s/arm after cache warm-up), and assemble completed clean on
+the first attempt, entirely foreground with explicit long timeouts (no
+background jobs, no monitors).
+
+Hand-off: the harmless ceiling within the ladder tested to date is ratio
+1.0 (45.79% reduction), located with one honestly-disclosed unresolved
+rung (`2.0`) between it and the confirmed-unsafe region starting at `4.0`
+-- narrowing that interval further needs a tighter bracket or larger n at
+that specific point, not registered or performed here. The actively-good
+ceiling (0.2) and harmless ceiling (1.0) now diverge by a full order of
+magnitude, not merely at the margin -- settling the distinction this line
+first had to draw at H3. Most substantively, `source_rotated_feedback`'s
+total non-response across H3's whole ladder is resolved as a strength
+effect, not a structural one -- the mechanism is present in all three
+`HIGH_GAP_WORLDS`, just at different thresholds of the same lever, and why
+that specific world needs roughly double the push the other two need is a
+new, narrower, unregistered question this leg's design surfaces but does
+not resolve.
