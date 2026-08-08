@@ -1511,3 +1511,69 @@ could build on it. The M4-H basis-construction line (`context["v2_basis"]` /
 `_bases_from_whitening` / `build_m4_discovered_basis`, per M4-G7's own
 hand-off) proceeds directly from M4-E2's own numbers without needing to
 recompute them.
+
+## M4-H2 registration (2026-08-03, BEFORE run) — is the displacement in the basis's own normalization?
+
+**Where the search now stands.** M4-G7 proved the displacement lives in basis
+construction (`context["v2_basis"]`), not in the estimator's ridge or the
+whitening scale the M4-G line worked in. M4-H1 then confirmed that M4-E2's map
+of that displacement is valid as written — its shares are units-invariant by
+an identity — so the search can use M4-E2's own numbers, which point at S3
+(normalization/scale modes; .2953–.3830 registered, .4459–.5288 standalone)
+with the n2 scale family dominating inside it (.74–.79 of standalone S3), and
+S4 (residual) as the largest single piece.
+
+**Question.** The M4-G line applied audit-then-intervene to the ESTIMATOR's
+regularization and repaired it exactly. Does the same treatment applied one
+level up — to the normalization inside BASIS CONSTRUCTION — reduce the
+displacement itself?
+
+**Part 0 audit (gated, before any compute).** Enumerate every normalization,
+scaling, centering and reference choice inside the construction of
+`context["v2_basis"]`, with file and line references, and classify each as a
+candidate carrier or not with a stated reason. **This inventory is the leg's
+hypothesis space**; steps discovered later may be reported but not scored.
+This mirrors M4-G3's inventory discipline, which is what made that leg's
+localization decisive.
+
+**Design.** Reuse M4-E2 / Leg 14's worlds and anchors.
+- `deployed` — the basis as shipped (anchor: reproduce M4-E2 and Leg 14's
+  persisted values to <=1e-12).
+- `basisvar_<k>` — one arm per inventoried step, that step alone varied
+  (regularized, unnormalized, or alternatively centered as the step's nature
+  dictates; the variant form for each step is registered in Part 0).
+
+**Metrics (all three mandatory at every arm).**
+1. Leg 14's displacement gap on its own persisted definition — PRIMARY.
+2. M4-E2's S1–S4 shares, to test whether a reduction shows up as mass leaving
+   the subspace the mechanism predicts rather than as a number moving for
+   unexplained reasons.
+3. Truth-referenced recovery, both M4-F5 variants — because this program has
+   three times measured a target improving while truth worsened (Leg 12,
+   M4-F5, M4-G1) and no reduction is accepted here without checking.
+
+**Leans.**
+(a) A CARRIER EXISTS: at least one `basisvar_<k>` reduces Leg 14's gap by
+    >= 25% relative to deployed, paired-by-world CI excluding zero.
+(b) MECHANISTICALLY CONSISTENT: at the winning arm, S3's share falls (or, if
+    the winner is not an S3-type step, the share of the subspace its own
+    mechanism predicts falls) — a number moving for the registered reason.
+(c) NOT COSMETIC: truth-referenced recovery does not worsen under either
+    variant (equivalence form, margin registered in Part 0).
+
+**PIVOT-IF:** no arm reduces the gap by >= 25% with a CI excluding zero ->
+the displacement is NOT in the basis's normalization either. The remaining
+candidate inside basis construction is the CONSENSUS/ALIGNMENT step itself,
+and that becomes the line's next registered question.
+
+**Gates.** G0 POWER with the grain justified not inherited, citing Leg 14's
+persisted gap level and stating the MDE; G1 ANCHOR to <=1e-12 on both M4-E2
+and Leg 14 persisted values; G2 BASIS LIVENESS — every arm must actually
+change the basis, reported as a subspace angle or basis distance against
+deployed, with a materiality margin registered in Part 0 (an arm that does not
+move the basis is INERT and its result VACUOUS); G3 truth-path invariance;
+G4 materiality-form compliance stated per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h2_basis_normalization/`; report
+`reports/SUICA_M4_H2_BASIS_NORMALIZATION_REPORT.md`.

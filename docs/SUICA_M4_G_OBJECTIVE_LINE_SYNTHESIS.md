@@ -88,3 +88,34 @@ rather than a measurement.
 3. **Deploy or shelve the repair** — the certified fix is a change to a frozen
    operator, so adopting it creates a NEW operator under F16 and needs its own
    study ID and seal. Not done here, deliberately.
+
+---
+
+## Dated correction (2026-08-03, appended after M4-H1)
+
+Section 3 of this synthesis said M4-E2's attribution "is now a units statement
+of unknown structural content and must be recomputed under the normalized
+metric". **That was overcautious, and M4-H1 settled it: the attribution is
+units-invariant by an identity, proved before compute and confirmed at
+2.22e-16.**
+
+M4-G2's normalized offset is `offset_norm / GM(s)` — a per-world SCALAR
+division of an already-computed offset. Every M4-E2 statistic is
+`||component||^2 / ||Delta||^2` against bases (S1/S2/S3) that do not depend on
+Delta. Projection is linear, so every share is homogeneous of degree 0 in any
+scalar applied to Delta, and raw and normalized shares are forced identical.
+
+The distinction this draws is worth keeping: **M4-G2 disqualified the offset's
+LEVEL as an optimization target, not M4-E2's SHARES.** Ratios cancel the units
+that levels inherit. The debt named here is paid; M4-E2's picture stands as
+structural, and the M4-H basis line proceeds from its own numbers:
+
+- S4 (residual) is the largest single piece in 3/3 worlds (.4015–.4464,
+  registered order);
+- S3 (normalization/scale modes) carries .2953–.3830 in registered order and
+  .4459–.5288 standalone/reversed — M4-E2's disclosed knife-edge reproduced
+  exactly under both metrics;
+- within S3 the n2 scale family dominates (.7398–.7901 of standalone S3,
+  .8132–.8714 of registered-order S3);
+- the offset direction remains world-specific (cosines at or below the
+  permutation null's q95 in 3/3 pairs).
