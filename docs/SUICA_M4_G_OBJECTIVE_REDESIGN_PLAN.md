@@ -1723,3 +1723,104 @@ construction -- is not reached by this leg's own registered branches and is
 not claimed here; it stays open precisely because this leg's own carrier
 failed on safety, not because basis normalization was exonerated as a
 location for the displacement.
+
+## M4-H2 planner adjudication note (2026-08-03, appended) — a safe lever exists, and my "winner" rule hid it
+
+**The adjudication stands as reported.** Lean (a) HOLDS (3 of 6 arms clear
+25% with CI excluding zero); lean (b) HOLDS decisively (at the winner, S3
+collapses an order of magnitude, .337 -> .040, in 3/3 worlds — exactly the
+subspace the step's own mechanism predicts); lean (c) MISSES decisively
+(recovery worse by +.274/+.277, 12–14x outside the margin). Pivot does not
+fire. Verdict `CARRIER_FOUND_MECHANISM_OR_TRANSFER_UNCERTIFIED`. Gates are
+exact (G1 at 0.0 across three independent chains, G3 at 0.0 on 21/21, all six
+arms live at 2.97–12.66x the materiality bar), and the audit excluded four
+candidates with stated reasons rather than silently.
+
+**The pattern this reproduces.** M4-G1 found that aggressively reducing the
+offset destroyed recovery while the mildest arms were the only ones that
+helped. M4-H2 finds the same thing one level up, in the basis:
+Spearman(reduction, error) = +.60 across all six arms, the same phenomenon as
+M4-G1's Spearman(offset, error) = −.786. **Twice now, at two independent
+levels of the machinery, driving the displacement/offset target hard has cost
+recovery, and mild regularization has been the only safe direction.** That is
+starting to look like a property of this objective rather than a coincidence
+of either level.
+
+**And here is the defect, which is mine and is the sixth of its family.** My
+registration defined the leg's "winner" as the arm with the LARGEST target
+reduction, then tested the safety check at that arm. Target-only winner
+selection systematically picks the most aggressive arm — precisely the one
+most likely to be cosmetic. It did so here: lean (c) was evaluated at
+`whitening_unscaled` (64.71% reduction, recovery destroyed) while a QUALIFYING
+arm existed that was both effective and safe —
+**`basisvar_whitening_shrinkage` (lambda = 0.10 x median retained eigenvalue)
+cuts the gap 28.9%, clearing the registered 25% bar, and its recovery
+genuinely IMPROVES with the CI entirely on the better side.** The agent found
+and disclosed this as a non-adjudicating dose-response check because the
+registration gave it no way to score it. The same defect cost M4-G1 its own
+best arm (shrinkage .1, the only helpful one, missed the 25% bar by .14
+points).
+
+**Standing rule (sixth).** When a leg carries both a target metric and an
+anti-cosmetic check, the WINNING ARM must be defined jointly — the best arm
+among those that pass BOTH — never as the extremum of the target. A
+target-only winner is a selection rule biased toward cosmetic results.
+
+**Note worth carrying forward.** The safe arm's strength — 0.10 x a median
+eigenvalue scale — is the same 0.10 that M4-G6 certified one level down. Two
+independent optimizations landing on the same mild ratio is either a
+coincidence worth naming or a property worth testing; M4-H3 measures it rather
+than assuming it.
+
+## M4-H3 registration (2026-08-03, BEFORE run) — the safe lever's ladder, with the winner defined jointly
+
+**Question.** M4-H2 showed the basis whitening's shrinkage is a real,
+mechanistically-certified, and SAFE lever on the displacement at
+lambda = 0.10 x median retained eigenvalue. Where is its optimum, how much of
+the displacement can be removed safely, and does the safe region extend?
+
+**Design.** Reuse M4-H2's worlds, anchors, arms plumbing, inventory and gate
+helpers. Arms:
+- `deployed` (anchor: reproduce M4-H2's persisted values to <=1e-12).
+- `basis_shrinkage_<a>` for lambda / median retained eigenvalue in
+  {0.02, 0.05, 0.10, 0.20, 0.50} — a registered, NON-EXTENDABLE ladder
+  bracketing M4-H2's working value. If the optimum sits at an endpoint, say so
+  and note that any extension requires its own leg.
+- `whitening_unscaled` carried as the known-unsafe reference (anchor).
+
+**Metrics at every arm**: Leg 14's displacement gap; M4-E2's S1–S4 shares;
+both M4-F5 truth variants.
+
+**Winner definition (registered, per the sixth standing rule).** The JOINT
+winner is the arm with the largest displacement reduction AMONG those whose
+recovery does not worsen (equivalence, ±.02, both variants). Every lean below
+is evaluated at the JOINT winner, never at the target extremum. The report
+must publish the full arm x {displacement, recovery, S3 share} table and show
+the joint selection explicitly.
+
+**Leans.**
+(a) SAFE AND EFFECTIVE: a jointly-qualifying arm exists with >= 25%
+    displacement reduction.
+(b) MECHANISTICALLY CONSISTENT: at the joint winner, S3's share falls
+    materially (margin registered in Part 0).
+(c) ACTIVELY GOOD, NOT MERELY HARMLESS: at the joint winner, recovery is
+    IMPROVED — CI entirely on the better side, not just inside the
+    equivalence band. This is the stronger claim and is registered as such.
+
+**PIVOT-IF:** no arm is jointly qualifying at >= 25% -> the safe region and
+the effective region do not overlap above 25%. The displacement then has a
+bounded, partial, safe fix whose ceiling must be reported as the finding, and
+the line's next question becomes whether the unsafe remainder is reachable at
+all without cost.
+
+**Gates.** G0 POWER with justified grain, citing M4-H2's persisted gap and
+recovery levels; G1 ANCHOR to <=1e-12 on `deployed` and `whitening_unscaled`;
+G2 BASIS LIVENESS per arm against the registered materiality bar; G3
+truth-path invariance; G4 materiality-form compliance per gate; **G5 JOINT-
+WINNER COMPLIANCE — the report must demonstrate the winner was selected
+jointly and show what a target-only rule would have chosen instead**, so the
+sixth standing rule is visibly enforced rather than merely stated.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h3_safe_lever_ladder/`; report
+`reports/SUICA_M4_H3_SAFE_LEVER_LADDER_REPORT.md`.
