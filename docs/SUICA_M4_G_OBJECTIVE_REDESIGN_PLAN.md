@@ -302,3 +302,95 @@ one.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g2_metric_units/`; report
 `reports/SUICA_M4_G2_METRIC_UNITS_REPORT.md`.
+
+## M4-G2 outcome (2026-08-03, appended)
+
+**PIVOT DOES NOT FIRE. The log-log slope of `offset_norm` against a pure
+whitening-scale multiplier c is 0.8796, paired-by-world (n=8, fresh) 95% CI
+[0.8386, 0.9206] — materially nonzero, adequately powered (half-width 8.2%
+of the 0.5 bar), and sub-linear (the CI excludes both 0 AND 1). Per the
+registration's own branch: `offset_norm` is DISQUALIFIED as an optimization
+target in its raw form.** Lean (a) HOLDS. Lean (b) MISSES decisively — truth
+recovery is not scale-free; it improves monotonically and precisely as c
+rises (error .786→.422 at budget=4x across the ladder on the 6 numerically-
+valid worlds, 18 of 20 pairwise checks decisively outside the ±0.02
+equivalence margin, up to 15x). Lean (c) HOLDS decisively: under the
+registered scale-normalized offset (offset divided by the geometric mean of
+an arm's own per-direction scale factors), the Spearman correlation between
+offset and M4-G1's truth error flips from M4-G1's disclosed −0.786 to
+**+0.833** (identical at both truth budgets, no disagreement), and
+`identity` — M4-G1's spuriously "best" arm on raw offset — becomes the
+single WORST-scoring arm once normalized, now consistent with its actual
+poor truth-recovery. G0 primary (the slope CI, the decisive test) is
+emphatically not underpowered. G1 ANCHOR and G3 TRUTH-PATH INVARIANCE both
+pass at 0.0. G2 shows all four registered invariances (eigenvectors,
+relative spectrum, condition number, width) hold to floating-point
+exactness within every context while the whitening operator's Frobenius
+norm scales with c exactly — D1 is confirmed pure units, not structure.
+Verdict: **`METRIC_UNITS_DISQUALIFIED`.**
+
+**Two world-selection corrections and one statistical-validity correction
+were made mid-compute, all disclosed in full with both readings given, none
+altering lean (a)/pivot's already-finalized numbers.** (1) `leg3._world_seed`'s
+own pre-existing `matched_groups` table shares seeds across
+`{linear_exogenous_selection, endogenous_source_partition_matched}` and
+`{fast_return_equal_marginal, slow_hysteresis_equal_marginal}`; both pairs
+produced bit-identical (0.0 diff) `offset_norm`/G2 evidence despite genuinely
+different dynamic mechanisms — a deterministic, outcome-blind exclusion of
+each pair's second member was applied BEFORE any hypothesis-relevant number
+existed. (2) The replacement `linear_exogenous_selection` was then found
+degenerate (`D_true` below `FLIP_TOLERANCE`) on all 256 of its
+(rep,view,author) combinations — G3 inapplicable — and was replaced by
+`topology_mismatch` (checked non-degenerate from the archive before running
+it), again before any hypothesis-relevant number existed for the world in
+question. (3) AFTER lean (a)/pivot were finalized, lean (b)'s naive
+all-8-world computation produced nonsense means (10^8-10^9 scale); the
+arm-invariant diagnostic `e_orc_true` showed two worlds
+(`linear_null_ecology`, `fast_return_equal_marginal`) with median ~5e9 vs
+0.18-0.74 in the other six — a pre-existing `_relative_error`
+near-zero-denominator fragility on these two low/null-signal worlds' small
+`D_true` at the regenerated truth budgets, unrelated to the c-ladder (their
+OFFSET data remained sane throughout). Lean (b) was recomputed on the valid
+6-world subset (adopted) with both readings persisted; the MISS verdict
+holds under both.
+
+**Consequence for M4-E2's scale-family attribution, stated precisely as the
+registration requires**: M4-E2's decomposition was computed once, at a
+single fixed operator's own units, and never compared offset magnitudes
+across operators of different intrinsic scale — as a description of which
+displacement directions dominate AT that one fixed operator, it is not
+directly tested or overturned here. What IS undermined — demonstrated
+directly by lean (c)'s sign flip from −0.786 to +0.833 — is treating raw
+`offset_norm` as comparable, scale-free evidence ACROSS operators whose own
+intrinsic scale differs, which is exactly the cross-arm design M4-G1 used
+(arms whose geometric-mean-scale spans 32.6x to 1.0x): M4-G1's own headline
+"identity has the lowest offset" finding is shown here to be substantially a
+units artifact of that specific comparison, not evidence about the arms'
+relative structural quality.
+
+Full numbers, gates, the c-ladder table (offset and both truth variants per
+c), the per-world log-log regression table, the D2 width-companion table,
+and the full lean (b)/(c) tables (both naive and adopted readings):
+`reports/SUICA_M4_G2_METRIC_UNITS_REPORT.md`. Artifacts:
+`results/m4_g2_metric_units/{decision.json, gates.json, offset_rows.csv,
+truth_recovery_rows.csv, g2_invariance_evidence.csv, g3_check_rows.csv,
+scale_norm_rows.csv, d1_loglog_per_world_slopes.csv, d2_width_companion.csv,
+lean_b_pairwise_equivalence.csv,
+lean_b_pairwise_equivalence_naive_all8_worlds.csv,
+lean_b_truth_validity_diagnostic.csv}`.
+
+**Hand-off.** The raw discovery objective (`offset_norm`) is disqualified as
+an optimization target — M4-G1's own cross-arm comparisons built on it
+(including its central "identity is best" finding) inherit this
+disqualification. A scale-normalized version (Part 0.1 of this leg) is
+demonstrated, on M4-G1's own 8 arms, to repair the ordering into one
+directionally consistent with actual truth-recovery quality. The open
+question for the next registration in this line is whether that
+normalized metric (or a refinement of it) is viable as a REPLACEMENT
+optimization target in its own right — checked here only on the 8-arm,
+3-world setting M4-G1 already ran, not on a fresh design of its own — and,
+separately, whether the genuine (non-units) scale-vs-recovery relationship
+this leg found on the pure c-ladder (bigger c: worse raw offset, but BETTER
+truth recovery, opposite-signed to M4-G1's own non-uniform-regularization
+finding) reflects something about this objective's functional form that a
+normalized-offset redesign would need to reconcile.
