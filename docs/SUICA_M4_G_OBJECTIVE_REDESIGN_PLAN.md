@@ -767,3 +767,101 @@ c-scaling — can close the remaining 10.9%. Absent that, the line's own
 honest position is that M4-G2's scale-dependence finding is majority-
 explained and majority-repairable by a single constant, with a real,
 quantified, structurally-located remainder.
+
+## M4-G4 planner adjudication note (2026-08-03, appended) — the opaque problem now has a named mechanism
+
+The pivot fires cleanly, and unlike M4-G3 it fires on adequately powered
+evidence: the twelve comparisons deciding lean (a) all carry half-widths
+<= .0056 against a .01 bar. Lean (a) MISSES on the c=.25-vs-4.0 pair
+(CI [.026,.037] @4x, clearing the ±.02 margin by 30–36%), lean (b) MISSES,
+lean (c) SPECIFICITY is CONFIRMED decisively (the inert-constant control shows
+3.2–17.4x larger non-invariance on the same pairs). G2 is exact: the covariant
+ridges realize c-ratios of exactly 16.0 and 0.0625 in floating point, matching
+the algebra, while `g3_raw_scale`'s ridge ratio is exactly 1.0 — M4-G3's
+diagnosed flaw reproduced as a measured number rather than an inference.
+
+**No repair is certified, and the registered consequence stands: the target
+moves to the objective's FUNCTIONAL FORM.** But the leg did far more than fire
+a pivot. A scalar covariant ridge closes **89.1%** of the raw c-dependence,
+and the residual 10.9% has an identified structural cause:
+
+> `_hazard_design` mixes columns of different scale provenance — c-scaled
+> columns built from the whitened basis alongside c-invariant ones
+> (`generated_current` / `duration`, taken from raw data;
+> `feedback_0_d` / `gate_0_d`, crossed with the unscaled intercept).
+> **No single scalar ridge can be scale-consistent across a design matrix
+> whose columns do not share a scale.**
+
+That is worth stating plainly against where this line started. M4-E2 handed
+over "a distributed, world-specific frame displacement, largest single piece
+the residual at .40–.45, no single term removable". Four legs later the same
+phenomenon reads: the discovery objective regularizes a design matrix with
+heterogeneous column scaling using one scalar constant, so its behaviour
+inherits the whitening's units and no scalar fix — adaptive or covariant — can
+be scale-consistent. The problem moved from a statistical mystery to a named
+structural defect with an obvious candidate remedy.
+
+M4-G3's localization is sharpened rather than overturned: `hazard_ridge`
+remains the dominant channel; it is simply the wrong SHAPE of knob.
+
+## M4-G5 registration (2026-08-03, BEFORE run) — per-column scaling: does the named defect have the obvious fix?
+
+**Question.** M4-G4 named the mechanism: one scalar regularizer applied to a
+design matrix whose columns do not share a scale. Does making the
+regularization PER-COLUMN — so each column is regularized in its own units —
+complete the repair that scalar covariance could only take to 89.1%?
+
+**Design.** Reuse M4-G4's worlds, objective path, arms plumbing, truth
+variants and gate helpers. **Registered analysis grain: AUTHOR (n≈745)**, per
+the fifth standing rule; world-grain numbers are companions and adjudicate
+nothing. Every arm evaluated across c in {0.25, 1.0, 4.0}.
+
+- `baseline` (anchor), `g3_raw_scale` (anchor: the best point fix at c=1),
+  `covariant_var` (anchor: M4-G4's best scalar covariant, 89.1% closed).
+- `column_standardized` — standardize each `_hazard_design` column to unit
+  scale before the ridge is applied, so the single ridge acts in common units.
+- `diagonal_ridge` — a per-column ridge proportional to each column's own
+  scale statistic (registered in Part 0), leaving the design untouched.
+- A specificity control carried over from M4-G4: the same per-column rule
+  applied where it should do nothing.
+
+Register in Part 0, before compute: the column-scale statistic, the
+calibration rule fixing overall strength (it must reproduce the deployed ridge
+at c=1 in the homogeneous-column limit), and the exact column inventory of
+`_hazard_design` with each column's scale provenance (c-scaled vs c-invariant)
+stated from the code, with file:line references.
+
+**Leans.**
+(a) COMPLETION: at least one per-column arm is c-invariant at the author grain
+    — all pairwise differences across c inside ±.02, i.e. it clears the bar
+    M4-G4's scalar covariant missed by 30–36%.
+(b) NO LOSS: that arm's recovery at c=1 is not worse than `g3_raw_scale`'s
+    (equivalence form, margin registered in Part 0).
+(c) QUANTITATIVE IMPROVEMENT: the residual c-dependence it leaves is smaller
+    than the scalar covariant's 10.9%, reported on the same statistic M4-G4
+    used so the two numbers are comparable.
+
+**PIVOT-IF:** no per-column arm achieves c-invariance -> the scale
+heterogeneity is NOT confined to the design matrix's columns. The defect is
+then deeper than column scaling — in the hazard model's structure rather than
+its parameterization — and the line's next question becomes whether the
+displacement is IRREDUCIBLE at this level of the objective, which would be a
+result about the objective's construction rather than about any knob in it.
+
+**Gates.**
+- **G0 POWER** at the AUTHOR grain against M4-G4's persisted effects; state
+  the MDE and bar before adjudicating; world-grain companions adjudicate
+  nothing.
+- **G1 ANCHOR** — `baseline`, `g3_raw_scale` and `covariant_var` reproduce
+  M4-G4's persisted values to <=1e-12 on identical world seeds.
+- **G2 COLUMN-SCALE LIVENESS** — report the spread of column scales BEFORE
+  and AFTER each per-column treatment (e.g. max/min ratio across columns), at
+  every c. A treatment that does not materially reduce the spread is not the
+  registered manipulation: report it INERT and its result VACUOUS.
+- **G3 TRUTH-PATH INVARIANCE** — degenerate equality check.
+- **G4 MATERIALITY FORM** — every gate an equivalence/margin bound; state
+  compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g5_per_column_ridge/`; report
+`reports/SUICA_M4_G5_PER_COLUMN_RIDGE_REPORT.md`.
