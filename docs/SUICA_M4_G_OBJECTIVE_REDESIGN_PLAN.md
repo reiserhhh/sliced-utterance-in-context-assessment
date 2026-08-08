@@ -865,3 +865,127 @@ result about the objective's construction rather than about any knob in it.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g5_per_column_ridge/`; report
 `reports/SUICA_M4_G5_PER_COLUMN_RIDGE_REPORT.md`.
+
+## M4-G5 outcome (2026-08-03, appended)
+
+**The PIVOT DOES NOT FIRE. Lean (a) COMPLETION HOLDS decisively for BOTH
+per-column arms — not a knife-edge, but floating-point exact.**
+`column_standardized`'s recovery is bit-identical (0.0 paired difference,
+all 745 authors, both budgets, all three c-pairs) across c ∈ {0.25, 1.0,
+4.0}; `diagonal_ridge`'s is invariant to 1–4×10⁻¹⁴ (ordinary floating-point
+roundoff). Both are seven-plus orders of magnitude inside the registered
+±0.02 margin, at the registered AUTHOR grain (n=745), on comparisons that
+carry essentially zero residual uncertainty (paired differences ≈0, so the
+standard error itself is ≈0 — the strongest possible non-underpowered case,
+not merely an adequately-powered one). **Lean (c) QUANTITATIVE IMPROVEMENT
+HOLDS decisively for both arms, at both budgets: the residual c-dependence
+M4-G4 left at 10.9% of the raw swing is closed to 0.0% (`column_standardized`,
+exact) and ~3–8×10⁻¹² % (`diagonal_ridge`, floating-point zero) — 11–12
+orders of magnitude smaller than M4-G4's own residual, on the identical
+statistic.** Lean (c) SPECIFICITY is separately, decisively CONFIRMED: the
+identical mechanism applied to `weight_floor` (M4-G3-inert) produces large,
+non-invariant swings (0.06–0.30, all six checks OUTSIDE the margin,
+reproducing M4-G4's own persisted specificity-control numbers exactly) — the
+repair is specific to `hazard_ridge`, not a generic artifact. G2 shows both
+mechanisms unambiguously LIVE: `column_standardized` collapses the design's
+own column-variance spread from 38.8×–908.1× (growing with c, as the c² vs
+c⁰ column split predicts) to *exactly* 1.0× at every c; `diagonal_ridge`'s
+realized ridge spread exactly tracks that same 38.8×–908.1× heterogeneity,
+up from the deployed scalar's perfectly uniform 1.0×. G1 anchor (32,768
+rows across 4 anchor arms, including `specificity_weight_floor` at all
+three c — an additional disclosed anchor beyond the registration's three
+named arms, required by this leg's adopted reading of "carried over from
+M4-G4") and G3 truth-path invariance (112 checks) both pass at exactly 0.0.
+The column inventory (1,050 columns, 8 worlds × 4 hazard models, classified
+by direct empirical comparison of designs built at c=1 vs c=2) confirms the
+Part 0.1 analytical claim with zero exceptions: every column of
+`_hazard_design` is exactly degree-0 or exactly degree-1 in c, no column
+ever mixes both.
+
+**But lean (b) NO LOSS MISSES decisively for both arms.** At c=1, both
+arms' recovery is *worse* than `g3_raw_scale`'s by 0.051–0.062 (both
+budgets, CI entirely on the worse side) — almost exactly M4-G4's own
+persisted c=4 gain (0.059/0.068) — landing within 0.0002–0.0019 of
+`baseline`'s own (worse) c=1 level, not `g3_raw_scale`'s (better) one.
+**The mechanism is traceable directly to a Part 0 design choice, disclosed
+there though its lean (b) consequence was not explicitly forecast**: both
+`column_standardized`'s ridge (`ridge_deployed`, unmodified) and
+`diagonal_ridge`'s calibration constant (fixed so the homogeneous-column
+limit reproduces `ridge_deployed` exactly) are anchored to the *deployed*
+value, never to `g3_raw_scale`'s much weaker, specially-fit one — the
+identical pattern M4-G4 itself predicted and confirmed for its own scalar
+covariant arms, now found, unprompted, to recur in this leg's per-column
+arms. Achieving invariance was therefore never, by this registered
+construction, also going to recover `g3_raw_scale`'s specific gain.
+
+**This outcome satisfies neither of the registration's two named branches,
+stated plainly rather than forced or softened.** "Repair CERTIFIED" requires
+lean (a) HOLD *and* no loss — lean (b)'s decisive MISS fails that. "PIVOT
+FIRES" requires every arm to MISS lean (a) — neither does, and lean (a)'s
+HOLD is not a marginal or underpowered one. The honest, load-bearing
+finding: **invariance — the property this whole `M4-G` line has chased
+since M4-G1 — is now fully and completely solved, by two independently-derived
+mechanisms that agree with each other and with a provable, pre-registered
+mathematical argument (Part 0.5) exceeding M4-G4's own base-route-only
+guarantee; recovering `g3_raw_scale`'s specific numerical gain is a
+distinct, separable, still-open calibration-anchor question, not a further
+symptom of the column-heterogeneity defect.** G2's own evidence makes the
+separation mechanistic, not merely observed: the ridge/design manipulation
+is unambiguously LIVE and the resulting fit is unambiguously invariant,
+while the *level* that invariant fit settles at is a direct, provable
+consequence of which absolute constant (`ridge_deployed`) the per-column
+rule was registered to reproduce in the homogeneous limit.
+
+**Two mechanical items, both caught and fixed during the pre-compute
+`--stage inventory` smoke-testing pass, before any hypothesis-relevant
+truth-recovery number existed.** (1) `diagonal_ridge`'s naive formula
+(`ridge_j = K·var_j`, no fallback) gave `condition_0` — a literal-1 column
+structurally identical to the ridge-exempt `intercept` — a ridge of exactly
+0, reintroducing the `intercept`/`condition_0` collinearity the deployed
+scalar ridge's own uniform nonzero value was incidentally preventing;
+`np.linalg.solve` raised `LinAlgError: Singular matrix` on the
+`feedback`/`gate` routes. Fixed by falling back to the plain deployed ridge
+for any non-exempt, degenerate column, mirroring `column_standardized`'s own
+"leave a degenerate column unscaled" rule — making the two arms'
+degenerate-column treatment consistent by construction, not by coincidence.
+(2) An early diagnostic mis-labeled `_fit_logistic_columnstd`'s first return
+value (`beta`, the un-rescaled coefficient in original units, expected to
+vary with c) as `gamma` (the standardized-space fit Part 0.5 predicts is
+c-invariant), producing an apparently large discrepancy that contradicted
+the independently-verified fact that the standardized design itself was
+bit-identical across c. Traced to the mislabeling by directly re-deriving
+`design_std` equality (0.0 diff) before touching the comparison code; fixed
+by adding an explicit `coefficient_std` return value. Neither item touched
+any world's actual `--stage truth` compute; all 8 worlds' truth-stage runs
+completed with zero Tracebacks, RuntimeErrors, LinAlgErrors, or Killed
+signals.
+
+Full numbers, gates, the Part 0 column inventory/statistic/calibration-rule
+registration (including the two-mechanism provable-invariance argument),
+the per-arm × per-c table, and the full lean (a)/(b)/(c) tables:
+`reports/SUICA_M4_G5_PER_COLUMN_RIDGE_REPORT.md`. Artifacts:
+`results/m4_g5_per_column_ridge/{decision.json, gates.json,
+calibration_source.json, column_inventory.csv,
+g2_column_scale_spread_evidence.csv, provable_invariance_spot_check.csv,
+truth_recovery_rows.csv, author_level_truth_rows.csv, context_meta.csv,
+e_orc_true_validity_diagnostic.csv, g0_and_lean_pairwise_rows.csv}`.
+
+**Hand-off.** This line's central question — is M4-G2's proven scale
+dependence a scaling problem at all, and if so, where does it live — is now
+closed with a complete, mechanistically-verified answer: it lived entirely
+in `_hazard_design`'s mixture of c-scaled and c-invariant columns under one
+shared scalar regularizer, and a genuinely per-column treatment (either of
+two independently-derived constructions) removes it completely, to
+floating-point exactness, confirmed at the row level across 745 authors and
+specific to the named constant by a decisive control. What remains open is
+narrower and different in kind from anything this line has asked before:
+not a structural-defect question but a calibration-selection one — whether
+a per-column rule anchored to `g3_raw_scale`'s own (better, but itself only
+context-adaptive, not c-covariant, per M4-G3's own diagnosed flaw) level,
+rather than to the deployed ridge's homogeneous-limit value, can be both
+invariant and at least as good, or whether `g3_raw_scale`'s specific gain
+was itself an artifact of its own single-point calibration that a
+principled, non-tuned per-column rule has no obligation to reproduce. If
+pursued, the next leg in this line should register that calibration
+question directly rather than testing a third structural variant of the
+per-column family this leg has now closed out.
