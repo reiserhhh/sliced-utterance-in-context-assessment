@@ -494,3 +494,91 @@ scaling problem at all) is retired.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g3_scale_adaptive/`; report
 `reports/SUICA_M4_G3_SCALE_ADAPTIVE_REPORT.md`.
+
+## M4-G3 outcome (2026-08-03, appended)
+
+**This outcome lands outside every registered branch, and is reported as
+such — neither HOLD, nor a clean MISS, nor PIVOT FIRES.** Part 0's audit
+found six Category A constants on the truth-recovery call graph
+(`hazard_ridge`, an IRLS convergence tolerance, an IRLS weight floor, a
+logit clip bound, a finite-difference probe epsilon, and the basis's own
+literal intercept column) plus two Category B constants provably confined
+to the offset/GPA path alone (excluded from adaptive arms by call-graph
+inspection, not by empirical test). **`hazard_ridge` is confirmed, on
+four converging lines of evidence, as the (or the dominant) IDENTIFIABLE,
+LOCALIZED source of M4-G2's proven scale dependence**: (i) a provable a
+priori argument (an L2 penalty of the form `ridge·n·I` breaks the exact
+diagonal-reparameterization invariance unregularized IRLS otherwise has —
+textbook reason ridge implementations standardize features first); (ii)
+the adaptive ridge value (`hazard_ridge_deployed · mean(raw retained
+eigenvalues)`) is consistent and directionally stable across all 64
+sampled contexts (0.00023–0.00089, always 4.6–18% of the deployed 0.005,
+never crossing zero); (iii) its well-powered author-level companion CI
+(n≈745, the SAME grain lean (b) itself uses) decisively excludes zero,
+recovering 69–72% of the c=4 gain at both budgets ([0.0399,0.0628]@4x,
+[0.0488,0.0727]@8x); (iv) the other five constants are cleanly,
+adequately-powered nulls (`tolerance`/`weight_floor`/`clip_bound`/
+`probe_epsilon`, CIs within ~1e-4 of exactly [0,0]) or a small real
+negative (`intercept`), at the identical grain, ruling out "everything
+moves a little" as an alternative story. **But `hazard_ridge`'s own
+REGISTERED test — paired-by-world (n=6) — is severely underpowered: half-
+width ≈0.08 against a 25%-of-gain bar of ≈0.02, a >4x gap, disclosed in G0
+from M4-G2's own persisted numbers BEFORE any adaptive-arm compute ran**
+(the same design also leaves M4-G2's own raw c=4 gain barely/not
+significant at this grain — not a property invented for this leg). Per
+the standing rule that a null at the noise floor is reported UNDERPOWERED,
+lean (a) is UNDERPOWERED for `hazard_ridge`/`adaptive_all` (not MISS), and
+the **PIVOT is therefore UNDERPOWERED, not FIRES and not DOES-NOT-FIRE** —
+FIRES requires every arm to be a *clean* MISS, and an underpowered
+comparison cannot supply that. **Separately, and decisively (well-powered,
+n=745, all 3 pairwise c-comparisons × 2 budgets, every CI outside ±0.02):
+LEAN (b) MISSES.** The adaptive-ridge formula does not deliver invariant
+recovery across c∈{0.25,1,4} — it produces an inverted-U, worst at c=0.25,
+best at c=1.0 (its own calibration point), worse again at c=4.0 (though
+still better than c=0.25): mean diffs +0.084/+0.093 (0.25 vs 1, both
+budgets) and −0.034/−0.024 (1 vs 4, both budgets), every CI clear of the
+margin by 1.5–5x. Lean (c) HOLDS trivially and exactly: `hazard_ridge`'s
+basis is bit-identical to baseline's (0.0 max abs diff, all 8 worlds × 8
+reps × 3 roles — verified structurally, not merely argued), so its offset
+cannot have moved. G1 ANCHOR passes at exactly 0.0 (8,192 truth rows + 16
+offset rows vs M4-G2's persisted `c_1.0`/`c_4.0`). G3 passes at exactly
+0.0 (72 checks, all 9 arms × 8 worlds).
+
+**Verdict: `hazard_ridge` is the identified, load-bearing localized
+constant, but no formula tested here is CERTIFIED as a genuine, general
+repair** — lean (b), the gate explicitly built to distinguish a real
+repair from a lucky reparameterization, MISSES decisively and
+mechanistically-interpretably (the formula fixes ridge's ABSOLUTE value
+from context-level raw eigenvalues alone, not its ratio to each c's own
+realized design scale, so it only lands well at its own calibration point,
+c=1). The hypothesis that M4-G2's scale dependence is a scaling problem is
+**neither retired nor confirmed solved**: `hazard_ridge` is now the
+identified target for any future repair attempt, which must register a
+c-DEPENDENT (not merely context-dependent) functional form and MUST re-run
+lean (b) as its own certification gate — reusing this leg's localization
+finding is legitimate; skipping lean (b) would not be.
+
+Full numbers, gates, the Part 0 constant inventory with file/line
+references, the per-arm summary table, and the full lean (a)/(b)/(c)
+tables: `reports/SUICA_M4_G3_SCALE_ADAPTIVE_REPORT.md`. Artifacts:
+`results/m4_g3_scale_adaptive/{decision.json, gates.json,
+truth_recovery_rows.csv, author_level_truth_rows.csv, context_meta.csv,
+offset_rows.csv, e_orc_true_validity_diagnostic.csv,
+lean_a_per_constant.csv, g2_liveness_per_constant.csv,
+lean_b_pairwise_equivalence.csv}`.
+
+**Hand-off.** The next registration in this line, if this hypothesis is
+pursued further, must do two things this leg deliberately did not do
+(doing either after seeing lean (b)'s MISS would be a post-hoc rescue):
+(1) register a scale-adaptive ridge formula that is a function of each
+ARM's own realized design scale (not only the deployed baseline's raw
+eigenvalues), so that it is well-defined and, by construction, testable
+for genuine c-invariance rather than single-point calibration; (2)
+reconsider the registered statistical grain for truth-recovery gates —
+this leg's own G0 and M4-G2's own lean (b) both found the author-level
+(n≈745) grain adequately powered where the world-level (n=6) grain was
+not, so a future leg's PRIMARY test should either use a finer-grained
+pairing (e.g. paired-by-world×repetition) or explicitly register a larger
+world set. Absent either, the PIVOT question this leg's own registration
+posed remains formally undecided, even though the weight of (non-
+adjudicating) evidence leans toward "does not fire."
