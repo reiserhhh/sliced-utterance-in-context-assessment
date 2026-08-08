@@ -1242,3 +1242,97 @@ truth-path invariance; G4 materiality-form compliance per gate.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g7_repair_vs_displacement/`; report
 `reports/SUICA_M4_G7_REPAIR_VS_DISPLACEMENT_REPORT.md`.
+
+## M4-G7 outcome (2026-08-03, appended)
+
+Same design as the registration above, executed: two arms (`deployed`;
+`repaired` = `g5._forced_route_derivative_columnwise` with
+`treatment="column_standardized"` at `ridge_deployed = 0.10 x
+deployed_ridge`, M4-G6's headline, called UNCHANGED) x the 3
+`HIGH_GAP_WORLDS` (Leg 14's/M4-E2's own worlds, not the G-line's expanded
+8-world `D1_WORLDS`) x 8 repetitions. Part 0 proved, before any compute,
+that metrics 1 and 2 (`offset_norm`/its M4-G2 scale-normalized form, Leg
+14's `disp_v2`) are pure functions of `context["v2_basis"]` alone --
+`_forced_route_derivative_columnwise`'s signature takes a fixed basis and
+never returns one, and `context["v2_basis"]` is built once, before either
+arm exists as a concept, from a config whose `hazard_ridge` never varies
+between arms. All three foreground world passes and the assemble stage
+completed with zero Tracebacks or RuntimeErrors, all on the first attempt
+except one non-hypothesis-relevant diagnostic (below).
+
+**PIVOT FIRES. Lean (a) MISSES and lean (b) MISSES, both at an EXACT 0.0
+paired difference, not a near-miss.** Lean (a) (M4-G2's registered
+scale-normalized offset, paired-by-world, n=3 -- the metric's own native
+grain): per-world reduction 0.0/0.0/0.0, CI exactly [0.0, 0.0]. Lean (b)
+(Leg 14's own `disp_v2`, paired-by-repetition, n=24 -- chosen over the
+naive world-grain default per the fifth standing rule, since `disp_v2` is
+already a per-rep quantity; world-grain companion, n=3, agrees): reduction
+0.0 at all 24 (world, repetition) pairs, CI exactly [0.0, 0.0] at both
+grains. **Leg 14's displacement gap closes by exactly 0% of its own
+magnitude.** This is not a power failure: G0 shows neither comparison is
+underpowered against its own registered bar (12.5% of deployed's own mean
+scale-normalized offset for lean (a); Leg 14's own 10% `PIVOT_REDUCTION_BAR`
+for lean (b)) -- the realized half-widths are exactly 0.0 because the
+underlying per-unit difference is exactly 0.0, a direct, verified
+confirmation of Part 0.1's structural argument (`structural_identity_check`
+in `decision.json`: `pass_exactly_zero: true`), not sampling luck. **Lean
+(c) HOLDS at both budgets**: author-grain (n=384/budget) mean diff
+(repaired minus deployed) is -0.000243 (4x) and -0.007886 (8x), both CIs
+comfortably inside the registered +/-0.02 margin (upper bounds 0.0156 and
+0.0084) -- one-sided WITHIN at both budgets, if anything favoring
+`repaired`. G1 anchor (five independent persisted sources: M4-E2's
+`offset_table`; Leg 14's `displacement_rows.csv` and `displacement_table`;
+M4-G6's persisted `baseline` and `colstd_alpha_0.10` truth rows; M4-G1's own
+independent `baseline` rows as a disclosed secondary reading, since M4-E2
+itself persists no budget=4x/8x recovery for the `deployed` arm's metric-3
+anchor to literally target) passes at 1.78e-15 -- floating-point noise,
+comfortably inside 1e-12. G2 REPAIR LIVENESS confirms the repair genuinely
+differs from deployed on BOTH axes the outer task asked for: the scalar
+ratio is exactly 0.10 (cross-checked against M4-G6's own persisted G2
+evidence for `colstd_alpha_0.10`), and the per-column ridge profile --
+computed via `g5._standardize_design`, the exact floor-protected mechanism
+(`DESIGN_VAR_FLOOR=1e-12`, `DEGENERATE_STD_FALLBACK=1.0`) the real fit uses
+internally -- spreads 20.5x-281.8x across 24 sampled contexts against
+deployed's exactly-flat 1.0x profile. G3 truth-path invariance passes at
+0.0 (6 checks, both arms).
+
+**Verdict: `PIVOT_SCALE_INVARIANCE_AND_RECOVERY_ORTHOGONAL_TO_DISPLACEMENT`.**
+Per the registration's own consequence for this branch: M4-G6's certified
+repair stands, unmodified, as a real and useful improvement to the
+discovery objective's conditioning -- exactly c-invariant, at no cost to
+truth-referenced recovery, independently reconfirmed here. But it does not
+touch, at all, in any world or repetition, the frame displacement M4-D Leg
+14 found and M4-E2 decomposed. The mechanical reason is now proven, not
+merely inferred: every one of this line's six legs (M4-G1 through M4-G6)
+intervened on the whitening scale or the estimator's ridge penalty, both of
+which act strictly downstream of `context["v2_basis"]` -- the object Leg
+14's displacement is measured on -- so no repair built entirely within that
+downstream space could ever have moved it, regardless of how well-tuned.
+**The M4-G line closes here on a partial win, labeled exactly as such**:
+the objective's conditioning is repaired and certified; its systematic
+frame displacement is confirmed real, unmoved, and handed off as belonging
+to the basis-construction path (`_bases_from_whitening`/
+`build_m4_discovered_basis`), not the regularization path this entire line
+worked in.
+
+**One mechanical problem, found on the first run, fixed before any
+hypothesis-relevant number was affected.** The first G2 per-column
+ridge-profile pass used raw, unfloored design-column variance; several
+near-degenerate columns (e.g. `condition_0`) drove the reported spread
+toward float overflow (`~1e+301`, observed). This diagnostic feeds only G2
+REPAIR LIVENESS evidence, never a lean or the pivot, so nothing
+hypothesis-relevant existed yet. Fixed by calling `g5._standardize_design`
+directly (the real fit's own degenerate-column floor); all three worlds
+were then re-run in full, and every substantive number -- metrics 1/2/3,
+all gates, all leans -- reproduced identically before and after, as
+expected since the fix touched only that one diagnostic.
+
+Full numbers, gates, per-world/per-arm tables for all three metrics, and
+the complete faithfulness chain: `reports/
+SUICA_M4_G7_REPAIR_VS_DISPLACEMENT_REPORT.md`. Artifacts:
+`scripts/run_suica_m4_g7_repair_vs_displacement.py`;
+`results/m4_g7_repair_vs_displacement/{decision.json, gates.json,
+offset_displacement_by_world.csv, displacement_by_rep.csv,
+truth_recovery_rows.csv, author_level_truth_rows.csv,
+g2_ridge_profile_rows.csv, g3check_rows.csv, context_meta.csv, and
+partials}`.
