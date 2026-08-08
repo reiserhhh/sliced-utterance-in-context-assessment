@@ -676,3 +676,94 @@ deliver it either way.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_g4_covariant_ridge/`; report
 `reports/SUICA_M4_G4_COVARIANT_RIDGE_REPORT.md`.
+
+## M4-G4 outcome (2026-08-03, appended)
+
+**The PIVOT FIRES, cleanly — the one thing M4-G3's own pivot attempt could
+not do.** Two post-whitening statistics were registered (`covariant_var`,
+the direct post-whitening analogue of `RAW_SCALE`; `covariant_msq`, the more
+literal uncentered-second-moment reading of "the quantity the ridge is
+added to"), both provably homogeneous-degree-2 in c
+(`POST_SCALE_k(context,c) = c²·POST_SCALE_k(context,1)`, an exact algebraic
+identity from `whitening = c·whitening0`, confirmed empirically to 10+
+significant figures in the pooled G2 gate: realized ridge ratios exactly
+16.0/0.0625 at c=4/c=0.25 vs c=1, in direct contrast to `g3_raw_scale`'s own
+exactly-1.0 ratio, M4-G3's own flaw reproduced as a clean number). At the
+registered AUTHOR grain (n=745, well-powered — the decisive comparison's
+half-width, 0.0056, is barely over half the 0.01 power bar, not a marginal
+call), **both candidates cut the raw c-dependence by 89.1% relative to doing
+nothing to `hazard_ridge`** (the specificity control, `weight_floor` treated
+by the identical rule, reproduces `baseline`'s own raw swing almost exactly
+and is decisively confirmed NOT c-invariant on all six checks — the
+reduction is specific to `hazard_ridge`, not a generic artifact) **— but the
+residual 10.9% is itself decisively outside the registered ±0.02 margin**
+(CI [0.026, 0.037] @4x on the deciding c=0.25-vs-c=4.0 pair, clearing the
+margin by 30–36% of its own width, both arms, both budgets). Lean (a)
+MISSES cleanly for both arms; lean (c) SPECIFICITY is decisively CONFIRMED;
+lean (b) (disclosed companion, officially unreached since lean (a) never
+HOLDS) also MISSES decisively — at c=1 the covariant arms sit at
+`baseline`'s own worse level, not `g3_raw_scale`'s better one, exactly the
+pre-registered mechanistic prediction (alpha calibrated to match deployed
+ridge at c=1, not `g3_raw_scale`'s much weaker value). G1 anchor and G3
+truth-path invariance both pass at exactly 0.0.
+
+**Per the registration's own consequence for a firing pivot: the dependence
+is not a simple ridge-scaling issue, M4-G3's localization is incomplete, and
+the redesign target moves to the objective's FUNCTIONAL FORM.** The
+mechanism was registered, not discovered post-hoc: Part 0 disclosed, before
+compute, that `_hazard_design` mixes columns built from the whitened basis
+(which does satisfy the c-scaling identity, and which a covariant ridge can
+compensate) with columns built from raw world data
+(`generated_current`/`duration`) and from the *unscaled* intercept
+sub-column crossed with `response_next` (`feedback_0_d`/`gate_0_d`) — these
+do not scale with c and are not compensated by any scalar ridge, however it
+is keyed. G2's own numbers make this concrete: the ridge itself is exactly
+covariant (16.0/0.0625, floating-point exact) while only 89.1% of the
+recovery swing it was meant to fix actually closes — the gap lives
+downstream of the ridge's value, in how the design is assembled from
+mismatched column types.
+
+**Two mechanical items, both caught and disclosed before any
+hypothesis-relevant number was compromised.** (1) An early G1-anchor draft
+attempted to independently re-verify `g3_raw_scale`'s c=0.25/4.0 values
+against M4-G3's own persisted winner-ladder files — but `g3_raw_scale` is,
+by this leg's own registered compute-scope reduction, never computed away
+from c=1 in this leg's new compute, so the join correctly found 0 rows and
+raised the assembly's own `expected != len(joined)` assertion; fixed by
+removing the invalid anchor attempt (this arm's c=1 anchor, the only point
+this leg newly computes for it, remains independently verified at exactly
+0.0) — caught after all 8 worlds' truth-stage compute had already completed
+and persisted, but before it affected any lean, gate, or truth-recovery row.
+(2) `covariant_var` and `covariant_msq` turned out numerically
+near-indistinguishable throughout (differ in the 3rd–4th decimal) — a
+registered open question in Part 0 (whether a role's raw features are
+zero-mean relative to `center`), resolved empirically rather than by
+assumption, and reported as a real finding rather than suppressed.
+
+Full numbers, gates, the Part 0 statistic/calibration/specificity-control
+registration, the per-arm × per-c table, and the full lean (a)/(b)/(c)
+tables: `reports/SUICA_M4_G4_COVARIANT_RIDGE_REPORT.md`. Artifacts:
+`results/m4_g4_covariant_ridge/{decision.json, gates.json, calibration.json,
+truth_recovery_rows.csv, author_level_truth_rows.csv, context_meta.csv,
+e_orc_true_validity_diagnostic.csv, g2_ridge_vs_c.csv,
+g0_and_lean_pairwise_rows.csv}`.
+
+**Hand-off.** This line's original hypothesis — that M4-G2's scale
+dependence is a pure scaling problem, fixable by making one absolute
+constant relative to a data-scale statistic — is now closed out at the
+functional-form boundary it was always going to meet: `hazard_ridge` is
+confirmed, on two independent legs and four converging lines of evidence
+(M4-G3) plus a fifth (this leg's specificity control), as the dominant
+identifiable channel, and a genuinely covariant ridge closes the large
+majority (89.1%) of it — but not all, and the shortfall is structural, not
+a matter of finding a better statistic or a better alpha. The next
+registration in this line, if pursued, should not test a third
+`ridge = alpha · stat` variant (a fourth instance of a functional form this
+leg and M4-G3 together have now closed out) but should examine whether a
+column-type-aware treatment of the hazard design itself — separately
+regularizing or rescaling the `generated_current`/`duration`/
+`feedback_0_d`/`gate_0_d` blocks that do not share the whitened basis's own
+c-scaling — can close the remaining 10.9%. Absent that, the line's own
+honest position is that M4-G2's scale-dependence finding is majority-
+explained and majority-repairable by a single constant, with a real,
+quantified, structurally-located remainder.
