@@ -1824,3 +1824,90 @@ sixth standing rule is visibly enforced rather than merely stated.
 Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `results/m4_h3_safe_lever_ladder/`; report
 `reports/SUICA_M4_H3_SAFE_LEVER_LADDER_REPORT.md`.
+
+## M4-H3 outcome (2026-08-03, appended)
+
+**Executed as registered**, reusing M4-H2's worlds/anchors/arms-plumbing/
+Part-0/gate-helpers throughout; this leg's only new code is a parameterized
+near-duplicate of M4-H2's own shrinkage-whitening branch (varying
+lambda/median(retained eig) instead of M4-H2's hardcoded 0.10) plus the
+per-arm-metric and joint-winner-adjudicate orchestration around it. Gates
+exact: G1 anchor `9.71e-17` (three independent chains, 48+6+3072 row-level
+checks against M4-H2's own persisted CSVs, not decision.json summaries
+alone); G2 all six arms live 2.60x-12.66x the bar; G3 `0.0` on 21/21; width
+verified identical across all 7 arms in every one of 24 (world,rep) cells
+(no width confound); a disclosed, non-gate check confirms
+`basis_shrinkage_0.10` reproduces M4-H2's own `basisvar_whitening_shrinkage`
+bit-for-bit (0.0 over 24 checks) -- this leg's re-derivation of M4-H2's
+middle rung is exact.
+
+**G5 JOINT-WINNER COMPLIANCE, the leg's central deliverable.** All five
+ladder rungs (0.02-0.50) pass the recovery-safety filter (does not worsen,
+both budgets); only `whitening_unscaled` fails. Reduction rises
+monotonically with ratio: 16.04% -> 23.17% -> 28.93% -> 34.66% -> 41.56%
+(rep grain), with NO sign of flattening by 0.50. **Joint winner (registered
+rule -- largest reduction among the safe pool): `basis_shrinkage_0.50`,
+41.56%.** **Target-only winner (what the pre-sixth-standing-rule rule would
+have picked): `whitening_unscaled`, 64.71%, recovery destroyed (+.274/+.277,
+OUTSIDE both budgets)** -- the defect the sixth standing rule exists to
+prevent, reproduced on schedule. A disclosed ambiguity (is the reference
+arm eligible for joint-winner selection, given the registration names it
+separately from "the... ladder"?) was resolved (ladder-only) and verified
+not to matter: both readings pick the identical winner, since the reference
+fails safety either way.
+
+**The joint winner sits AT the ladder's own upper endpoint** -- registered
+NON-EXTENDABLE, not extended; the true safe ceiling is not yet located and
+would need its own leg past ratio 0.50.
+
+**Adjudication at the joint winner:** (a) SAFE AND EFFECTIVE HOLDS (41.56%,
+CI [6.790,8.221] excludes zero, 1.66x the bar). (b) MECHANISTICALLY
+CONSISTENT MISSES: S3 falls materially (>=10% relative, this leg's own
+registered margin) in 2 of 3 worlds (18.6%, 16.1%) but RISES in
+`source_rotated_feedback` (-2.2%, i.e. does not fall at all, by any
+margin) -- and this is not winner-specific: no rung on the entire ladder
+achieves any S3 fall in that world, though the 3-world MEAN does decline
+monotonically with ratio (0.337->0.298). (c) ACTIVELY GOOD MISSES: recovery
+at the winner is a genuine, well-powered null (CI [-.0142,.0057]@4x/
+[-.0129,.0068]@8x, both straddling zero, half-widths 0.0099 comfortably
+under this line's own 0.01 power bar) -- not worse, not distinguishably
+better. **Verdict `SAFE_BUT_MECHANISM_NOT_CONFIRMED_AT_WINNER`.** Pivot
+does NOT fire.
+
+**A new shape of outcome for this line.** M4-G1 and M4-H2 both found lean
+(b) HOLDING decisively and lean (c) MISSING decisively at their winners.
+Here, for the first time, lean (a) alone holds cleanly while both (b) and
+(c) land in a genuine middle ground -- partial-but-real mechanism (2/3
+worlds), null-but-not-harmful recovery -- rather than either a clean HOLD
+or a decisive MISS.
+
+**Disclosed, non-adjudicating dose-response companion.** The registered
+rule optimizes "largest reduction among safe arms", not "best arm on all
+three leans". `basis_shrinkage_0.20` (34.66% reduction) independently
+clears 25% AND its recovery IS improved (CI entirely negative, both
+budgets) -- had the rule instead been "largest reduction among ACTIVELY
+GOOD arms", leans (a) and (c) would both have HELD at `0.20`. Lean (b)
+would STILL have MISSED there too (its own `source_rotated_feedback` S3
+share also sits above deployed's) -- the mechanism-uniformity gap is a
+property of the whole safe range, not an artifact of the registered rule's
+specific pick. No post-hoc rescue is applied; the registered winner and
+its HOLD/MISS/MISS stand as the adjudicated result. This distinction
+between "safe" and "actively good" is new to the line -- M4-G1's and
+M4-H2's own safe arms were also their most-reduced safe arms, so the two
+notions never had to be told apart before.
+
+No mechanical problems: smoke test, all three context+oracle stages, all
+three G3 spot-checks, all 21 (world,arm) compute stages, and assemble
+completed clean on the first attempt, entirely foreground with explicit
+long timeouts, matching M4-H2's own reported wall-clock order of magnitude
+(~187-191s/world context+oracle, ~21-28s/arm after cache warm-up).
+
+Hand-off: the safe lever's ceiling within `{0.02,...,0.50}` is 41.56% with
+no sign of flattening -- locating the true ceiling needs a new,
+separately-registered ladder extending past 0.50. Separately, this leg's
+"actively good" property (available at 0.05-0.20, traded away by the
+registered rule in favor of raw reduction at 0.50) is a distinction this
+line has not previously needed to draw. And lean (b)'s partial confirmation
+is robust across the whole tested ladder, localized to
+`source_rotated_feedback` specifically -- a world-specific mechanism
+question this leg's design surfaces but does not resolve.
