@@ -1387,3 +1387,127 @@ Tier: EXPLORATORY, label-free, synthetic. Artifacts:
 `reports/SUICA_M4_H1_NORMALIZED_DECOMPOSITION_REPORT.md`. This leg opens the
 **M4-H basis-construction line**; subsequent M4-H registrations continue in
 this document until it warrants its own.
+
+## M4-H1 outcome (2026-08-03, appended)
+
+**PIVOT FIRES -- not on a near-miss but on an exact algebraic identity,
+proved in Part 0 before compute and confirmed empirically to floating-point
+precision. Every subspace share moves by at most 1.67e-14 percentage points
+between the raw and the scale-normalized metric (bar: 10 points), across all
+3 worlds, all 3 registered orderings (registered/reverse/standalone), and
+every within-S3 family split. Verdict:
+`PIVOT_UNITS_ROBUST_ATTRIBUTION_STANDS`.** Lean (a) THE ATTRIBUTION MOVES
+MISSES (max observed move 1.7e-14 points, nowhere near the 10-point bar).
+Lean (b) THE RESIDUAL SURVIVES HOLDS (S4 remains the largest single piece,
+registered order, all 3 worlds, unchanged to machine precision: .426948/
+.401458/.446432). Lean (c) WORLD-SPECIFICITY SURVIVES holds under this leg's
+own Part 0.2 operationalization (offset cosines at-or-below the permutation
+null's 95th percentile in all 3 pairs, both metrics, cosine identity vs. raw
+1.67e-16).
+
+**Why this is a proof, not a coincidence (Part 0.1).** M4-G2's registered
+`scale_normalized_offset(arm) := offset_norm(arm) / GM(s)` is a SCALAR
+division of the already-computed scalar offset_norm by a scalar summary of
+that arm's own whitening -- it does not touch the whitening, the discovered
+basis, or the offset's direction. Applied to the offset MATRIX
+(`Delta_normalized := Delta / GM_world`, GM_world = M4-G2's own formula
+averaged over the world's 8 reps, the one registered aggregation choice this
+leg introduces), every one of M4-E2's decomposition statistics -- sequential/
+reverse/standalone shares, within-S3 family shares, width-mismatch share,
+dominant share, top-1 singular share, and cross-world Procrustes cosines
+(raw values and both disclosed nulls) -- is a ratio of squared or nuclear
+norms of LINEAR IMAGES of Delta under FIXED, Delta-independent bases (S1/S2/
+S3 are built from Leg 10 arm-B directions, response-target patterns, and the
+consensus position `a_center` -- never from Delta itself). Projection onto a
+fixed basis is linear, so every such statistic is HOMOGENEOUS OF DEGREE 0 in
+any global per-world scalar applied to Delta -- an algebraic identity, not an
+empirical finding to be discovered. The two candidate readings of "substitute
+the target quantity" this leg disclosed (rescale the decomposed object vs.
+treat the substitution as a pure relabeling of the reported scalar) are
+consequently forced to the SAME numbers; this is the ambiguity's resolution,
+not an evasion of it. Refit-based statistics (M4-E2's task-4 diagnostic,
+dominant-component removal) are invariant for a separate, simpler reason
+(the removal direction is a component normalized by its own norm, already
+unitless) and are not one of this leg's three registered leans, so task 4 is
+not re-run -- disclosed, not silently skipped.
+
+**G0 POWER**: the three comparisons are deterministic recomputations on
+M4-E2's 3 registered worlds (a census, not a sample) -- WORLD is the grain
+because it is the only one at which a world's own decomposition share is
+defined (GPA consensus collapses 8 reps into one Delta before any share
+exists), matching M4-E2's own non-CI, world-level point-comparison design at
+this identical grain. Realized margin: 4.5e14x the registered 10-point bar
+(max share identity diff 2.22e-16, machine epsilon) -- not underpowered by
+any reading. **G1 ANCHOR** passes on two independent chains: (1) the RAW
+re-run reproduces M4-E2's persisted `decision.json` at 84/84 checks (every
+registered/reverse/standalone/S3-family share field plus 6 scalar
+companions, 3 worlds), offset_norm at 3/3 worlds, and cross-world cosines
+against M4-E2's persisted `cosine_rows.csv`, ALL at exactly 0.0 (or
+5.55e-17-scale floating-point noise for the cosines) -- proving the metric
+substitution is the ONLY thing that changed; (2) GM_world's own 24 per-rep
+inputs reproduce M4-G2's persisted `scale_norm_rows.csv` (arm=="baseline")
+at exactly 0.0, with Leg 10's own `_debias_gate` (confirms the lambda=0
+whitening rebuild reproduces `context["v2_basis"]` exactly) passing at 0.0
+across all 24 reps -- proving the scale factors used correspond exactly to
+the SAME whitening the offset was built from. **G2 METRIC SUBSTITUTION
+LIVENESS** holds decisively: `scale_normalized_offset` differs from
+`offset_norm` by 96.4-97.4% (relative) in every world, GM_world running
+27.5-38.6 -- the substitution changes the reported magnitude by roughly
+two-thirds to three-quarters of an order of magnitude while (per Part 0.1)
+being unable to move a single share. **G3** is NOT APPLICABLE, stated
+explicitly (no truth-referenced regeneration path in this leg). **G4**
+materiality-form compliance stated per gate in the report.
+
+The full registered/reverse/standalone share table under both metrics
+reproduces M4-E2's own numbers, including its disclosed order-sensitivity
+knife-edge (`selection_creation_compensation`'s registered-order S3 at
+.3830, .017 under the .40 pivot-share bar, while reverse-order S3 exceeds
+.40 in all 3 worlds at .446/.529/.498) exactly unit for unit under the
+normalized metric -- the order-sensitivity is a property of the
+decomposition's structure, not of the raw offset's units, and normalizing
+was never going to resolve it. The within-S3 family split (n2 = principal
+column-scale modes, the whitening's amplification family) reproduces at all
+three granularities M4-E2 reported (n2 alone: .3946/.4772/.4569; n2 within
+standalone S3: .7398/.7082/.7901; n2 within the registered-order sequential
+S3 component: .8227/.8132/.8714), identically between raw and normalized to
+<=2.2e-16 at every cell.
+
+**The consequence for the M4-G line's own synthesis, stated precisely, as
+that document required**: the debt flagged there -- "M4-E2's decomposition
+attributed ~1/3-1/2 of the identifiable carrier mass to the scale family
+using the RAW offset, which G2 disqualified... now a units statement of
+unknown structural content" -- is paid. M4-G2's units disqualification was
+about comparing the MAGNITUDE offset_norm ACROSS DIFFERENT WHITENING
+OPERATORS (M4-G1's 8 arms, the pure c-ladder) -- a cross-object comparison.
+M4-E2's attribution is a decomposition of ONE FIXED object into subspace
+fractions -- a within-object proportion, already unitless by construction.
+The two were never the same kind of quantity; this leg is what proves that
+formally, rather than merely arguing it. M4-E2's numbers stand exactly as
+originally reported: scale family ~1/3 of the mass in the registered order
+(~1/2 standalone, n2-dominated), residual .40-.45 the largest single piece,
+offset direction world-specific at the permutation null.
+
+No mechanical problems: all three foreground world computations (~35-60s
+each, 8 contexts per world) and the assemble step completed cleanly on the
+first attempt, zero Tracebacks or RuntimeErrors.
+
+Full numbers, gates, the complete subspace x ordering share table under
+both metrics, and the permutation-null evidence:
+`reports/SUICA_M4_H1_NORMALIZED_DECOMPOSITION_REPORT.md`. Artifacts:
+`scripts/run_suica_m4_h1_normalized_decomposition.py`;
+`results/m4_h1_normalized_decomposition/{decision.json, gates.json,
+decomposition_rows_both_metrics.csv, subspace_rows_both_metrics.csv,
+cosine_rows_both_metrics.csv, cosine_rows_raw.csv, cosine_rows_normalized.csv,
+g1_share_anchor_rows.csv, g1_offset_anchor_rows.csv, g1_cosine_anchor_rows.csv,
+gm_rows_with_g2_anchor.csv, share_identity_check.csv, lean_a_rows.csv,
+pivot_rows.csv, and per-world partials}`.
+
+**Hand-off.** M4-E2's map -- scale family the largest identifiable carrier at
+~1/3-1/2 of the mass, residual .40-.45 the largest single piece, offset
+direction world-specific, order-sensitive knife-edge at .3830 -- is now
+confirmed structural rather than a units artifact, closing the one debt the
+M4-G line's synthesis owed the record before the basis-construction line
+could build on it. The M4-H basis-construction line (`context["v2_basis"]` /
+`_bases_from_whitening` / `build_m4_discovered_basis`, per M4-G7's own
+hand-off) proceeds directly from M4-E2's own numbers without needing to
+recompute them.
