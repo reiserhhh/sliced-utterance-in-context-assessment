@@ -2102,3 +2102,89 @@ effect, not a structural one -- the mechanism is present in all three
 that specific world needs roughly double the push the other two need is a
 new, narrower, unregistered question this leg's design surfaces but does
 not resolve.
+
+## M4-H4 planner adjudication note (2026-08-03, appended) — clean sweep, and H3's world-heterogeneity reading overturned
+
+**All three leans HOLD** — the first clean sweep of any carrier-found leg in
+this line. Verdict
+`CEILING_LOCATED__MECHANISM_GENERALIZES_3_OF_3_WORLDS__LEVELS_SEPARATE`.
+
+- **(a) CEILING LOCATED.** Ratios 4.0 and 8.0 are confirmed UNSAFE (recovery
+  CIs entirely above the .02 margin at both budgets). Ratio 2.0 is reported
+  **AMBIGUOUS** — its own CI straddles the margin — rather than forced either
+  way, so the honest statement is that safety ends at <=1.0 and unsafety
+  begins at >=4.0, with the interval between genuinely undetermined.
+- **(b) GENERALIZES, at the HARMLESS winner (ratio 1.00).** S3 falls
+  materially in 3/3 worlds. `source_rotated_feedback` — which rose or stayed
+  flat at EVERY rung M4-H3 tested — falls 11.1% here, with a clean monotonic
+  decline the rest of the way. **M4-H3's apparent structural non-response is
+  REFUTED: it was a strength effect.** The registration made this an either-way
+  test and the answer came back the other way; recorded as such.
+- **(c) LEVELS SEPARATE**, under the disclosed combined-ladder reading (M4-H3's
+  .02–.20 plus this leg's .50–8.0, monotone across all nine points): the
+  actively-good ceiling (.2) sits a full order of magnitude below the harmless
+  ceiling (1.0). The this-leg-only reading is honestly reported NOT COMPUTABLE
+  (empty actively-good pool) rather than forced.
+
+**The seventh standing rule earned its place immediately.** A single-winner
+rule would have named the same arm — but reporting it alone would have hidden
+two things the dual report makes visible: that NO arm in this leg's range is
+actively good, and that this winner's recovery classification has far thinner
+headroom than M4-H3's (CI upper bound 17.5% / 10.1% of margin, versus
+65.9% / 71.7% there). And the target-only counterfactual picked
+`whitening_unscaled` for a third consecutive leg.
+
+**The lever is now characterized.** Safe to ratio 1.0 (45.79% displacement
+reduction); actively good only to ratio 0.2 (34.66%); unsafe at >=4.0;
+undetermined at 2.0; mechanism generalizes across all three worlds at the
+harmless ceiling. That is a real, bounded, mechanistically-supported partial
+repair of the displacement — the first this program has had.
+
+**And it leaves an obvious question.** Even at the harmless ceiling, **54% of
+the displacement remains**. The lever moves S3; M4-E2 said S4 (residual) was
+already the largest single piece at deployed (.4015–.4464). So what carries
+the remainder, and is it attackable at all? That is the next registration.
+
+## M4-H5 registration (2026-08-03, BEFORE run) — what carries the surviving 54%?
+
+**Question.** Under the safe lever, the displacement falls by ~46% and S3's
+share collapses. Does the surviving displacement have a new dominant carrier
+that can be attacked in turn, or has it become genuinely distributed — in
+which case ~46% is the practical ceiling of subspace-targeted repair and the
+line should say so.
+
+**Design.** Reuse M4-E2's S1–S4 decomposition machinery and M4-H4's worlds,
+anchors and arms plumbing. Decompose the RESIDUAL displacement under:
+- `deployed` (anchor: reproduce M4-E2's persisted shares to <=1e-12),
+- `basis_shrinkage_1.00` — M4-H4's HARMLESS winner,
+- `basis_shrinkage_0.20` — M4-H3's ACTIVELY-GOOD winner,
+both anchored to their persisted displacement values at <=1e-12.
+
+**Leans.**
+(a) A NEW DOMINANT CARRIER EXISTS: under the harmless winner, some subspace
+    carries >= 40% of the SURVIVING displacement in >= 2 of 3 worlds.
+(b) IT IS S4: that carrier is the residual block — the piece M4-E2 already
+    found largest at deployed.
+(c) STRENGTH-INVARIANT: the same subspace dominates under BOTH repaired arms,
+    so the finding is a property of removing S3-type mass rather than of one
+    particular strength.
+
+**PIVOT-IF:** no subspace carries >= 40% in >= 2 of 3 worlds under the
+harmless winner -> THE SURVIVING DISPLACEMENT IS GENUINELY DISTRIBUTED. There
+is then no attackable dominant piece left, ~46% is the practical ceiling of
+subspace-targeted repair, and the line's next question is whether a
+distributed remainder can be attacked at all — or whether this is where
+subspace-targeted work honestly stops. That outcome is to be written with the
+same prominence as a discovery, per this line's standing practice.
+
+**Gates.** G0 POWER with justified grain, citing M4-H4's persisted levels;
+G1 ANCHOR to <=1e-12 on all three arms (shares against M4-E2 for `deployed`,
+displacement against M4-H3/M4-H4 for the repaired arms); G2 DECOMPOSITION
+LIVENESS — the residual decomposition must actually differ from deployed's
+(it must, since S3 falls; report the per-world share deltas so this is shown);
+G3 truth-path invariance where applicable; G4 materiality-form compliance per
+gate. Report the full arm x subspace x world share table.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h5_residual_carrier/`; report
+`reports/SUICA_M4_H5_RESIDUAL_CARRIER_REPORT.md`.
