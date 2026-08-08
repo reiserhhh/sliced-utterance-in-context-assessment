@@ -989,3 +989,91 @@ principled, non-tuned per-column rule has no obligation to reproduce. If
 pursued, the next leg in this line should register that calibration
 question directly rather than testing a third structural variant of the
 per-column family this leg has now closed out.
+
+## M4-G5 planner adjudication note (2026-08-03, appended) — invariance solved exactly; strength is the remaining variable
+
+**Two decisive HOLDs and one decisive MISS, none of them ambiguous.**
+
+Lean (a) HOLDS to machine precision: `column_standardized` is BIT-IDENTICAL
+across c (0.0), `diagonal_ridge` invariant to 1–4e-14, both backed by the
+pre-registered provable linear-reparameterization argument and both
+route-general rather than base-route-limited. Lean (c) HOLDS: M4-G4's residual
+10.9% closes to 0.0% and ~1e-12% respectively — eleven to twelve orders of
+magnitude. G2 shows the mechanisms are live and enormous (column-scale spread
+38.8x/59.6x/908.1x before standardization, 1.0000000000002x after).
+
+The column inventory is itself a result worth keeping: across 1,050 columns,
+8 worlds and 4 models, **every column of `_hazard_design` is exactly degree-0
+or exactly degree-1 in c — never mixed, zero ambiguous cases.** The
+heterogeneity M4-G4 named is therefore exactly binary, which is precisely why
+a per-column treatment can remove it exactly rather than approximately.
+
+**So the scale problem this line has chased since M4-G2 is SOLVED, provably
+and exactly. And it did not buy the recovery.** Lean (b) MISSES decisively:
+both invariant arms sit at BASELINE's recovery level (.5583) rather than
+`g3_raw_scale`'s better one (.5068), a gap of .051–.062 that is about the size
+of M4-G4's whole c=4 gain.
+
+The reason is visible and was predicted by M4-G4 for its own arms: the
+registered calibration for both per-column arms anchors overall strength to
+the DEPLOYED ridge, while `g3_raw_scale`'s advantage came from being WEAKER
+than deployed (M4-G3 measured its adaptive value at 4.6–18% of deployed). So
+the per-column arms inherited deployed's strength — and with it deployed's
+recovery — while gaining exact invariance.
+
+**That separates two things this line had been treating as one.** Scale
+invariance is a property of the ridge's SHAPE (per-column vs scalar) and is
+now solved. Recovery quality is a property of its STRENGTH, and remains
+untouched. The registration's two named branches both assumed the repair
+would arrive as a single package; it did not, and neither branch applies
+cleanly. Recorded as an outside-every-branch outcome, exactly as reported.
+
+## M4-G6 registration (2026-08-03, BEFORE run) — shape and strength together, or a real trade-off
+
+**Question.** M4-G5 solved invariance with the ridge's SHAPE at deployed
+STRENGTH. M4-G3 found the recovery gain at a WEAKER strength with the wrong
+shape. Does the combination — per-column shape at the weaker strength — give
+both, or do invariance and recovery genuinely trade off?
+
+**Design.** Reuse M4-G5's worlds, objective path, arms plumbing, column
+inventory, truth variants and gate helpers. **Registered analysis grain:
+AUTHOR (n≈745).** Every arm evaluated across c in {0.25, 1.0, 4.0}.
+
+- Anchors: `baseline`, `g3_raw_scale`, `column_standardized` at deployed
+  strength (all must reproduce M4-G5's persisted values to <=1e-12).
+- `colstd_alpha_<k>` — `column_standardized` at an overall-strength ladder
+  alpha/deployed in {0.05, 0.10, 0.20, 0.50, 1.00}, chosen to bracket the
+  4.6–18% band M4-G3 measured. The ladder is registered here and may not be
+  extended after seeing results; if the optimum sits at an endpoint, say so
+  and register any extension as a separate leg.
+
+**Leans.**
+(a) INVARIANCE IS STRENGTH-FREE: every `colstd_alpha_<k>` arm remains
+    c-invariant within ±.02 (expected to be exact by M4-G5's
+    reparameterization argument — this lean tests that the argument does not
+    depend on strength).
+(b) RECOVERY RECOVERED: at some alpha, recovery is not worse than
+    `g3_raw_scale`'s at c=1 (equivalence form, margin registered in Part 0),
+    paired CI at the author grain.
+(c) TUNING IS ALSO SCALE-FREE: the alpha that minimizes recovery error is the
+    SAME at c=0.25, 1.0 and 4.0. This is the sharpest of the three — if the
+    best alpha itself moves with c, then invariance of the OUTPUT was not
+    enough and the objective's TUNING remains scale-bound.
+
+**PIVOT-IF:** no alpha in the registered ladder is both c-invariant and at
+least as good as `g3_raw_scale` -> INVARIANCE AND RECOVERY GENUINELY TRADE
+OFF at this objective. That is a structural limit of the current construction,
+not a tuning failure, and the line's next question becomes whether a different
+regularization FAMILY (not strength, not per-column shape) can hold both — or
+whether the displacement is irreducible here, which is the question M4-G5's
+pivot branch pointed at.
+
+**Gates.** G0 POWER at the author grain against M4-G5's persisted gap
+(.051–.062); G1 triple anchor to <=1e-12; G2 STRENGTH LIVENESS (report the
+realized ridge magnitude per alpha and confirm it moves as registered; an
+alpha whose realized ridge does not move is INERT and VACUOUS); G3 truth-path
+invariance; G4 materiality-form compliance stated per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g6_shape_and_strength/`; report
+`reports/SUICA_M4_G6_SHAPE_AND_STRENGTH_REPORT.md`.
