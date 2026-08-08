@@ -2282,3 +2282,89 @@ actively-good ceiling specifically, not an intrinsic property of removing
 S3-type mass. Whether S4 can be given an operational construction at all,
 and whether that construction is itself attackable, is the line's next
 question -- not registered or attempted here.
+
+## M4-H5 planner adjudication note (2026-08-03, appended) — the survivor has a name, and no handle
+
+**Adjudication.** Lean (a) HOLDS decisively under BOTH orderings: S4_residual
+clears the .40 bar in 3/3 worlds at the harmless winner (registered order
+.507–.525; reverse .431–.462). Lean (b) HOLDS, sole qualifier either way.
+Lean (c) HOLDS under the adopted registered order but MISSES under the
+disclosed reverse-order companion, and the agent traced that to its source
+rather than leaving it as a discrepancy: reverse order already has S3 ahead of
+S4 at deployed and at the milder repair, and only the stronger 1.00 repair
+pushes S4 past S3 — by a genuine .0012 knife-edge in `source_rotated_feedback`,
+the closest of all 18 (arm, world, ordering) comparisons by more than an order
+of magnitude. Pivot does not fire under either ordering. Verdict
+`NEW_DOMINANT_CARRIER_FOUND__IS_S4__STRENGTH_INVARIANT__ORDER_SENSITIVE_AT_ACTIVELY_GOOD_ARM`.
+
+**What it means.** The repair does not manufacture a new carrier; it
+ENTRENCHES the one M4-E2 already found largest. S4 goes from a 40–45%
+plurality at deployed to a **51–52% majority** of what survives at the
+harmless winner, rising in all 6 (arm, world) cells (+0.5 to +12.3 points;
++6.0 to +12.3 at the harmless winner), while S1 falls in all 6 and S3 falls in
+5 of 6.
+
+**And here is the wall.** S4 is the RESIDUAL block — defined by exclusion,
+as whatever survives projecting out S1, S2 and S3. **Unlike S3, it has no
+operational, code-legible construction to attack.** Every repair this program
+has landed — the estimator's ridge shape and strength, the basis whitening's
+shrinkage — worked because there was a named step in the code to vary. There
+is no S4 step. Subspace-targeted repair has therefore reached its own ceiling
+at ~46% removable safely, and the majority of the remainder lives in a block
+that currently exists only as a subtraction.
+
+That leaves exactly one question worth asking before this line closes, and it
+is decisive either way.
+
+## M4-H6 registration (2026-08-03, BEFORE run) — is the residual attackable at all?
+
+**Question.** Does the S4 residual carry REPRODUCIBLE structure — something a
+future basis could be built to capture — or is it repetition-specific, in
+which case the surviving majority of the displacement is irreducible at this
+level and ~46% is the program's definitive ceiling for objective-side repair?
+
+**Design.** At `deployed` (reference) and `basis_shrinkage_1.00` (the harmless
+winner), extract the S4 component per (world, repetition) using M4-E2's own
+S1–S4 construction, unchanged. Then measure:
+- WITHIN-WORLD reproducibility: agreement (cosine, absolute value, on the
+  Procrustes-aligned components) of S4's direction across repetitions inside
+  each world, against a **repetition-shuffled null** whose construction is
+  registered in Part 0 before compute.
+- ACROSS-WORLD agreement: the same statistic between worlds, which M4-E2's
+  world-specificity finding predicts should sit at the null — a consistency
+  control on the whole measurement.
+- Report both against the null's own q95, in equivalence/margin form.
+
+**Leans.**
+(a) REPRODUCIBLE WITHIN WORLD: S4's within-world across-repetition agreement
+    exceeds the repetition-shuffled null's q95, with a CI excluding it, in
+    >= 2 of 3 worlds at the harmless winner.
+(b) NOT ACROSS WORLDS: across-world agreement sits at or below the null's q95
+    — the control. A miss here means the measurement is picking up something
+    shared that M4-E2's world-specificity says should not be there, and the
+    leg must say so rather than proceed.
+(c) MATERIAL ENOUGH TO CAPTURE: where (a) holds, the within-world agreement
+    is >= .5, i.e. large enough that a per-world basis could plausibly capture
+    the reproducible part rather than merely detecting it.
+
+**PIVOT-IF:** within-world agreement does not exceed the null in >= 2 of 3
+worlds -> **S4 IS REPETITION-SPECIFIC AND NOT ATTACKABLE BY ANY BASIS
+CONSTRUCTION.** The displacement's surviving majority is then irreducible at
+this level, ~46% is the definitive ceiling of objective-side repair, and the
+M4-H basis line closes on that statement. Per this line's standing practice
+that outcome is written with the prominence of a discovery, because it is one:
+it would convert an open problem into a measured limit.
+
+**Gates.** G0 POWER — state the null's spread and the design's MDE before
+adjudicating, with the grain justified not inherited; G1 ANCHOR — both arms
+reproduce their persisted S1–S4 shares to <=1e-12; G2 NULL LIVENESS — the
+repetition-shuffled null must actually destroy the structure it is meant to
+destroy (report its own spread against the unshuffled statistic); G3
+truth-path invariance where applicable; G4 materiality-form compliance per
+gate. Note M4-E2's disclosed Procrustes-cosine null inflation and handle it
+explicitly — two independent random matrices of this shape are not orthogonal
+in this statistic, so the null must be the shuffled-rep null, never zero.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_h6_residual_reproducibility/`; report
+`reports/SUICA_M4_H6_RESIDUAL_REPRODUCIBILITY_REPORT.md`.
