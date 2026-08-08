@@ -1147,3 +1147,98 @@ lean in this line. Full artifacts: `scripts/run_suica_m4_g6_shape_and_strength.p
 error_surface_alpha_x_c_x_budget.csv, argmin_by_c_and_budget.csv,
 truth_recovery_rows.csv, author_level_truth_rows.csv, context_meta.csv,
 smoke_check.csv, and partials); `reports/SUICA_M4_G6_SHAPE_AND_STRENGTH_REPORT.md`.
+
+## M4-G6 planner adjudication note (2026-08-03, appended) — the repair is delivered
+
+**All three leans HOLD; the pivot does not fire; the verdict is
+`SHAPE_AND_STRENGTH_HOLD_AT_SOME_ALPHA`.** This is the first fully
+constructive result of the line.
+
+The alpha x c author-grain error surface (n=745, pooled) makes both halves
+visible at once:
+
+| alpha | c=0.25 (4x/8x) | c=1.0 (4x/8x) | c=4.0 (4x/8x) |
+|---|---|---|---|
+| 0.05 | .5123/.4963 | .5123/.4963 | .5123/.4963 |
+| **0.10** | **.5083/.4946** | **.5083/.4946** | **.5083/.4946** |
+| 0.20 | .5122/.5019 | .5122/.5019 | .5122/.5019 |
+| 0.50 | .5314/.5258 | .5314/.5258 | .5314/.5258 |
+| 1.00 | .5583/.5554 | .5583/.5554 | .5583/.5554 |
+
+Every row is identical across c — lean (a) holds EXACTLY at all five strengths
+(0.0 paired difference, no exceptions), confirming empirically that M4-G5's
+reparameterization argument does not depend on strength. Lean (b) holds at
+alpha .05/.10/.20 and misses at .50/1.00, the latter reproducing M4-G5's own
+miss bit-for-bit. Lean (c) — the sharp one — HOLDS: alpha = .10 minimizes
+error at every c, at both budgets, and pooled, and it is an INTERIOR optimum
+rather than a ladder endpoint. G2 is exact (realized ridge matches the
+registered alpha to 0.0 at all 15 cells), G1 anchors reproduce M4-G5 at
+exactly 0.0 over 32,768 rows, G3 is 0.0 over 160 checks.
+
+**Headline: `column_standardized` at alpha = 0.10 x deployed ridge is exactly
+c-invariant AND ties `g3_raw_scale`'s recovery (.5083/.4946 vs .5068/.4949,
+numerically ahead at 8x) — so the objective can be made scale-free without
+paying for it.** Disclosed qualification, stated rather than papered over: a
+median-based reading names alpha = .05 instead, which sits at the ladder's
+lower endpoint; the ladder was registered as non-extendable, so any test below
+.05 requires its own leg.
+
+Process note, also carried into the report: the leg's original monitor was a
+`tail -F` pipeline that by construction can never signal completion, which is
+why the agent had to be woken. It was killed and not rebuilt. All eight worlds
+computed correctly and independently, verified after the fact from each log's
+completion marker and partial-file presence.
+
+## M4-G7 registration (2026-08-03, BEFORE run) — take the repair back to the problem that opened the line
+
+**Question.** M4-G6 delivered a repair judged on truth-referenced recovery and
+c-invariance. But this line was opened to attack something else: the discovery
+objective's systematic FRAME DISPLACEMENT — Leg 14's finding, characterized by
+M4-E2 as distributed, world-specific, and not removable by any single term.
+Does the certified repair actually reduce THAT?
+
+This is the line's closing question, and it is registered to be able to end in
+an honest partial win: scale-invariance and recovery could both be real gains
+that are simply ORTHOGONAL to the displacement.
+
+**Design.** Reuse M4-E2 / Leg 14's own worlds, objective path and persisted
+anchors — the same ground the displacement was originally measured on.
+
+- `deployed` — the baseline objective as shipped (anchor: must reproduce
+  M4-E2's persisted values to <=1e-12).
+- `repaired` — `column_standardized` at alpha = 0.10 x deployed ridge, the
+  M4-G6 headline (anchor: must reproduce M4-G6's persisted recovery to
+  <=1e-12 where the paths coincide).
+
+**Metrics (all three mandatory).**
+1. The SCALE-NORMALIZED offset registered in M4-G2 — the raw `offset_norm` is
+   disqualified and may not be used as the primary.
+2. Leg 14's displacement gap, on its own persisted definition.
+3. Truth-referenced recovery, both M4-F5-style variants, to confirm the
+   reduction is not bought at recovery's expense.
+
+**Leans.**
+(a) DISPLACEMENT FALLS: the repaired objective's scale-normalized offset is
+    lower than deployed's, paired-by-world CI excluding zero.
+(b) THE ORIGINAL GAP FALLS: Leg 14's displacement gap is lower under the
+    repair, paired CI excluding zero.
+(c) NOT COSMETIC: truth-referenced recovery does not worsen under either
+    variant (equivalence form, margin registered in Part 0).
+
+**PIVOT-IF:** neither (a) nor (b) shows a reduction with a CI excluding zero
+-> SCALE-INVARIANCE AND RECOVERY ARE ORTHOGONAL TO THE DISPLACEMENT. The
+repair stands as a real and certified improvement to the objective's
+conditioning, the displacement is confirmed as a separate still-open defect,
+and the line closes with a partial win labeled exactly as such — not as a
+solution to the problem it was opened for.
+
+**Gates.** G0 POWER at the registered grain, stated with the target level from
+M4-E2's persisted artifacts and the MDE, with the grain justified rather than
+inherited (fifth standing rule); G1 dual anchor to <=1e-12; G2 REPAIR LIVENESS
+(the repaired arm must differ from deployed in the applied regularization —
+report the realized per-column ridge profile beside deployed's scalar); G3
+truth-path invariance; G4 materiality-form compliance per gate.
+
+Tier: EXPLORATORY, label-free, synthetic. Artifacts:
+`results/m4_g7_repair_vs_displacement/`; report
+`reports/SUICA_M4_G7_REPAIR_VS_DISPLACEMENT_REPORT.md`.
