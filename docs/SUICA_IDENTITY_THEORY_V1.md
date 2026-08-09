@@ -319,3 +319,72 @@ EXPLORATORY. Synthetic worlds calibrated to the real-text regime, through the
 deployed frozen machinery. IDT licenses grammar — typing rules, design priors,
 reader constructions, refusals — and no claim about any corpus, construct,
 person, or diagnosis. The claims ledger controls.
+
+---
+
+## Dated appendix A (2026-08-09, planner derivation, same day as v1): T6′ — the discriminator has a split-scheme gauge, and that gauge is a measurement channel
+
+T6 defines Id(i|F) as the occasion-resample-stable component of the deviation
+field. Derivation: **which component is "stable" depends on the resampling
+scheme**, because slow state is shared or separated by the split design:
+
+- **Interleaved splits** (odd/even occasions): both halves sample the same
+  state eras → s̄ is SHARED between halves → the "reproducible" component is
+  b + s̄ (the occasion-bound card, state included).
+- **Contiguous splits** (first half vs last half): state drift sits BETWEEN
+  the halves → if the half-span exceeds τ_s, s̄ decorrelates across halves →
+  the "reproducible" component approaches b alone.
+
+So T6 as stated in v1 was under-specified: Id(i|F) requires a DECLARED split
+scheme, and the scheme is part of the frame's expiry structure (h). This is
+not a defect but a channel:
+
+**T6′ (two-split state probe).** ρ_interleaved(i) − ρ_contiguous(i) is a
+per-person, card-level, reader-free estimator of the state share of person
+i's card at horizon h — the certificate's expiry date read off the difference
+between two split designs. In-generator it is exactly predictable from the
+same AR algebra as T4(b); on real designs it needs no access to the truth.
+
+Consequence for K2: the leg becomes a TWO-CHANNEL discrimination with an
+internal positive control (see plan-doc K2 charter refinement of this date).
+
+## Dated appendix B (2026-08-09, planner derivation): F9 reconciliation — T4-simple is NOT tested by F9, and the branch stays open on purpose
+
+Registered question: does F9's null (B8−B1 long-window = −0.01632278580727804,
+CI [−0.05594321814077245, +0.02329764652621637], κ=0.5, gap=40, m_common=8,
+AR(1) φ∈[0.2,0.8], authors ×16 — artifact precision, re-verified today)
+falsify T4-simple, which predicts occasion spreading improves trait recovery?
+
+Derivation (arithmetic verified before committing this note):
+
+1. The arrangement manipulation is REAL at card level: Var(s̄)/σ_s² for one
+   contiguous block of 8 is 0.17773 (φ=.2) / 0.31274 (φ=.5) / 0.60486 (φ=.8)
+   vs 0.12500 for 8 gap-40 singletons — a 1.42×–4.84× reduction.
+2. But the long-window baseline it acts on is tiny: r(B1) = 0.05963369493652382.
+   Under the attenuation form r = σ_b/√(σ_b²+V), the predicted B8 gain is
+   +0.0716 ONLY under the absurd bound (ALL card variance is state at φ=.8 —
+   excluded by the generator's own weights, w_e=.70); +0.0116 under a generous
+   half-state budget; **+0.0029 at the generator-plausible x-channel weight
+   (w_x=.15)**. Every physically plausible prediction sits deep inside F9's CI
+   (half-width 0.0396; power against +0.003–.012 is ~5–10%).
+
+**Verdict: F9's pivot rightly closed the PANEL question (no affordable trait
+axis via arrangement), but as a test of T4's mechanism it is structurally
+uninformative — the arrangement lever is too weak at this state share, not
+wrong.** T4-simple vs T4-reader-mediated remains open and moves to K2, whose
+design must manipulate the state SHARE and persistence (α, τ_s), where
+T4-simple's predicted swing can be made ≥3× the MDE — not the arrangement at
+a fixed tiny share, where no affordable world count discriminates.
+
+Two annotations, flagged as post-hoc readings of persisted numbers (they
+become predictions only if K2 registers them fresh):
+
+- F9 lean (b): same-occasion recovery DROPPED significantly under spread
+  (−0.03173098873449674, CI [−0.05238696612924556, −0.01107501133974793]).
+  T4(a)'s watermark reading fits the sign: at B1 the state era is coherent —
+  the state-inclusive object is sharp and same-occasion recovery profits from
+  it; at B8 the object averages 8 decorrelated eras and blurs. The state was
+  subsidizing the same-occasion reading.
+- F9's long-window row (0.0596, 0.0495, 0.0785, 0.0433 across B=1,2,4,8) is
+  non-monotone at se≈0.01 — the signature of a floor plus noise, consistent
+  with (not probative of) a reader-set floor.

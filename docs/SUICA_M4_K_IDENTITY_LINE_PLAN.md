@@ -221,6 +221,37 @@ trait recovery is flat where T4-simple's predicted gain exceeds the MDE on a
 G4-verified live channel, T4-simple is dead and T4-reader-mediated becomes
 the registered form (the gauge's state-inclusiveness carries the plateau).
 
+### K2 charter refinement (dated append, 2026-08-09 — planner derivation, BEFORE K1 adjudication and BEFORE K2 registration)
+
+The F9 reconciliation the charter assigned to K2's Part 0 was completed
+planner-side today (theory doc, dated appendix B): **F9 does not discriminate
+T4-simple vs T4-reader-mediated** — the arrangement lever at F9's state share
+predicts +0.0029..+0.0116 under T4-simple (bound +0.0716 only under an
+assumption the generator's own weights exclude), all inside F9's CI
+[−0.0559, +0.0233]. Power against the plausible prediction: ~5–10%.
+Consequently K2's registration (still to be written AFTER K1 adjudication,
+unless P3 fires) shall:
+
+1. Manipulate the state SHARE and persistence (α, τ_s / φ, and the κ blend)
+   — not the arrangement at fixed share. Rule-2 requirement: the sweep must
+   include at least two points where T4-simple's point-predicted swing in
+   long-window recovery is ≥3× the design MDE (predictions computed in
+   Part 0 from generator constants BEFORE arms).
+2. Run TWO channels per arm (theory doc appendix A):
+   - card-level, reader-free: the two-split state probe
+     ρ_interleaved − ρ_contiguous, whose in-generator prediction follows the
+     same AR algebra — the INTERNAL POSITIVE CONTROL that the manipulated
+     share actually moved at card level;
+   - field-level, reader-involved: the deployed long-window truth recovery.
+3. Adjudicate the branch by dissociation: if the card channel tracks the
+   designed share while field recovery stays floored where T4-simple
+   predicts ≥3×MDE swings → T4-reader-mediated PROVEN on a live, powered
+   channel. If field recovery tracks the attenuation curve → T4-simple
+   holds. If BOTH move but with incompatible forms → report as fitting no
+   registered branch.
+4. Re-verify today's cited F9/F2 numbers at artifact precision as a
+   mechanical Part-0 gate (rule 8), since this refinement cites them.
+
 ## M4-K3 — charter
 
 The similarity-geometry package (T7/T8): caricature (α-scaling) vs rotation
