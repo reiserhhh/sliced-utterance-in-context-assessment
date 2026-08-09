@@ -435,3 +435,125 @@ rule-19 fidelity table first); outcome appended here; ledger row; ONE
 commit (`feat(m4-l): L2 — ...`), never amended, not pushed by the agent.
 Budget: card-space; target < 25 min wall; stop-and-report at 2× any
 Part-0 stage estimate.
+
+### OUTCOME (appended 2026-08-09, after run; append-only)
+
+**`LOCALIZATION_FAILS__W1MW2MW3HW4M__P2M` — W-1 MISS · W-2 MISS · W-3 HOLD ·
+W-4 MISS → P2M.** Report: `reports/SUICA_M4_L2_THRESHOLD_CONTINUUM_REPORT.md`.
+Script: `scripts/run_suica_m4_l2_threshold_continuum.py`. All five Part-0 gates
+passed; every L1 anchor re-derived BIT-EXACTLY by calling L1's own path (ISO/
+ALIGNED ρ.55 ARIs 0.9664213102607500 / 0.4205650587388517, both floors, tax
+ratio 8.145911689523754 from drops 0.0994690680231981 / 0.8102662439562028; the
+audit offset reproduced as +0.0027534823998187526 from c_cont = 0.66525305625).
+Reconstruction residual 2.220446049250313e-16; the η-mixture's designed energy
+exact to 2.9% (η=1 has only k_τ=3 effective dims at 512 authors). The Δ ladder
+solved on a 34-point prediction-stream grid to ambient-ARI targets
+(.10,.25,.50,.75,.90) → Δ = 2.210909967446789 / 2.6016054931828423 /
+3.1758671500715328 / 4.066041381764518 / 5.036879557726254; **the bracket HOLDS**
+(pilot ambient 0.0974 → 0.9207) so the one pre-declared ladder shift did NOT
+fire and P1M was not reached. 15 cells × 8 worlds × 512 authors;
+139.226 s adjudicated compute (part0 93.648 written to disk BEFORE arms and
+enforced in code, arms 45.443, finalize 0.134) against a <25 min budget.
+
+**Standing rule 18's first application paid for itself immediately.** G2M
+reduced all nine knob-sharing T-arm clauses to sets of Δ and intersected all 36
+pairs BEFORE any arm ran. Result, PROVED on the grid: `{ambient ARI < 0.30}` =
+Δ ∈ [0.7500, 2.6978] and `{oracle-S ARI > 0.80}` = Δ ∈ [4.2386, 9.0000] are
+**disjoint by a factor 1.5711320335087848** — W-1's window is empty at every one
+of the 34 grid points, so no ladder could have contained a single T-cell, let
+alone the two the bar demands (**defect #31**). The mechanism is appendix Q.1
+itself: the `{oracle-S > 0.80}` set is IDENTICAL to the `{Bayes ceiling > 0.80}`
+set, because oracle-S sits ON the projection-invariant ceiling, and that ceiling
+is set by K2a's slow-state channel, which contributes 2.3× the identity's own
+boundary-normal variance at the ρ.55-equivalent energy and is free of both Δ and
+σ_b. **Defect #32**: the registered design clause "oracle-S floor < 0.005
+everywhere" is likewise jointly unsatisfiable with the bracket's low end under
+both readings (identity-only needs Δ ≥ 3.1362; full Bayes needs Δ ≥ 5.7283,
+above even the ladder's top rung).
+
+**W-1 MISSES 0/5 as registered — and the localization gain is REAL and LARGE.**
+The theorem-quantity second reading was pinned in Part 0 §0.5 before any
+main-world number (as L1 §0.6 pinned V-3(c)'s miss), and it holds in 4/5 cells:
+localization gap (oracle-S − ambient) = **+0.2571091862002618**
+[+0.24085764314672325, +0.2769365050856173] at T0 (ambient 0.0782933783 →
+oracle-S 0.3354025645, a **4.28×** ratio), +0.22879210873022762,
++0.12074128749937892, +0.030243778023137782, and +0.007370778741078776 (CI
+covering 0) at T4. In T0/T1/T2 oracle-S sits ON the Bayes ceiling (CI contains
+0) while ambient is decisively below it — exactly "ambient cannot localize, the
+projected instrument can, up to Bayes". **R2-restated did not die at its own
+quantity; the registered bar never tested it there.**
+
+**W-2 MISSES 0/5, and defect #33 explains it (rule-19 class, same family as
+#30).** All five rungs are on the detectable side (θ_min/√γ =
+1.7734492790446281 … 9.173517917654014, √γ = 0.3535533905932738), but the BBP
+law's own quantity is the SUBSPACE OVERLAP, and the same law predicts overlaps
+of only 0.618/0.759/0.860/0.926/0.956 there — it forecasts the bar's failure at
+the low rungs. Measured overlap 0.4326010144 / 0.6271676199 / 0.8004244064 /
+0.9091396379 / 0.9510052040, relative shortfall 30.1%/17.4%/7.0%/1.8%/0.5%:
+right shape, right magnitude, converging as θ grows.
+
+**W-3 HOLDS — the leg's clean positive.** The η-continuum floor law
+σ_u²(η) = η σ_b²/k_τ + (1−η) σ_b²/m is measured: containment 7/10 (exactly the
+bar) and η-ordering EXACT at both energies. Two of the three failures are a
+design-resolution artifact — the per-boundary rate is a Bernoulli mean over 1536
+tests (resolution 6.510416666666667e-4) against η=0 predictions of 4.05e-14 and
+3.53e-7 — so over the eight resolvable cells containment is **7/8**; the one
+genuine miss is C_rho55eq_eta0.25 (measured 0.007893880208333334
+[0.006429036458333334, 0.009358723958333332] vs 0.00982199837718639, 19.6%
+low). The η=1 poles reproduce L1's independent ALIGNED measurements to 5.6% and
+8.4% on fresh worlds under a fresh master seed (**defect #35** recorded for the
+resolution clause).
+
+**W-4: the bias half HOLDS decisively, the tracking half MISSES 2/10 — and
+appendix Q.5's "one calibration constant" is REFUTED.** Derivation 4 is
+measured: `same-data − cross-fitted` is negative in **10/10** cells, pooled
+**−0.005767022729929317** [−0.006438551315473723, −0.005165302746842192], 9.1×
+its own half-width and 5.4× the pilot MDE, growing monotonically with η at both
+energies. But tracking fails, and the three diagnoses do not point at the
+constant: (i) the calibration WORKS — B̂_cal = 0.2519…0.2521 against
+w_slow² = 0.25, while the L1-style theoretical-constant reading reproduces L1's
+own pathology on fresh worlds (B̂_theory = 0.2477…0.2481) — yet the calibrated
+meter tracks **2/10** while the UNCALIBRATED one tracks **5/10**, because the
+theory constant's downward bias partially cancels the meter's own low bias;
+(ii) cross-fitting halves the occasion budget and collapses the two-split
+contrast c_int − c_cont from L1's 0.0969198750000001 to 0.04499999999999993 (a
+2.1537750000000058× conditioning loss), which the registration did not budget;
+(iii) with TRUE groups on the identical audit half and the identical calibrated
+meter, tracking is **10/10** — the meter is sound; the residual is
+partition-borne, grows monotonically from −0.011 (η=0) to −0.030 (η=1) in share
+units against a ~0.015 CI half-width, and is caused by labels fitted on
+occasions {0,1,2,3} carrying slow-state structure (ar_cross_cov 0.66525305625 at
+φ=.90) into the audit half. **Defect #34** recorded: the registration had no
+clause able to distinguish "the constant is wrong" from "the partition is
+wrong".
+
+Rule 13: 1 clause triggered (C_rho35eq_eta0.25's tracking, distance
+0.0007948328539089432 vs MC endpoint sd 0.0004827646302271462), 0 BOUNDARY,
+STABLE at B = 20000. Routing is invariant under every declared second reading:
+W-1's second reading is routing-inert by construction; W-2 under the overlap
+companion is still 0/5; W-3 under the resolution-restricted count is 7/8, still
+HOLD; W-4 under the theoretical-constant meter is 5/10, still < 8 → MISS. P2M
+under all of them.
+
+**Registration defects recorded (#31–#35):** #31 W-1's two conditions jointly
+unsatisfiable, PROVED on the Δ axis before the arms (gap factor 1.571); #32 the
+"floor < 0.005 everywhere" design clause jointly unsatisfiable with the
+bracket's low end; #33 W-2's bar on an ARI where the BBP law owns an overlap
+(rule-19 class); #34 W-4's bar unable to separate the constant from the
+partition; #35 W-3's containment clause unresolvable at η=0 (1536 Bernoulli
+tests vs a 3.5e-7 prediction).
+
+**The brief to the planner, in one line each.** (1) P2M is executed as
+registered, but its stated reading ("the localization claim dies too") is NOT
+what was measured — the mechanism was measured at 4.28× in three independent
+cells. (2) What died is the gain's USABILITY at these dimensions, and that
+deserves appendix Q's second correction as a **localization window lemma**: the
+usable window [Δ*_ambient, Δ*_Bayes] has width governed by (d/n)^(1/4) against
+the required Bayes z, and at d=64, n=512, G=4, k_τ=3 with K2a's state channel it
+is EMPTY for any bar demanding a high absolute ARI on the projected side;
+widening it needs more authors, more dimensions, or a quieter state channel —
+all L3 knobs. (3) W-3 makes derivation 2 a measured object. (4) Q.5 needs its
+own correction: R3's meter is correct, and what is uncalibrated is its behaviour
+on an ESTIMATED partition — a different object. (5) L3 budget note: if the audit
+must be cross-fitted AND well-conditioned, n_occ must rise (16 restores L1's
+contrast on each half) or the split must be over PERSONS rather than occasions.
