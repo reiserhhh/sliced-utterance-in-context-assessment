@@ -3541,3 +3541,111 @@ rule 24. The six deliverables as always;
 `reports/SUICA_M4_K2F_LEVEL_LAW_REPORT.md`; ONE commit
 (`feat(m4-k): K2f — ...`), never amended, not pushed. Budget: Stage 1
 is arithmetic; Stage 2 one K2b arm; target < 25 min wall.
+
+### Outcome (appended 2026-08-10 by the executing agent; append-only)
+
+**`LEVEL_LAW_RESTORED` — rule-16 cell 2 (L-1 HOLD, L-2 HOLD).** Report:
+`reports/SUICA_M4_K2F_LEVEL_LAW_REPORT.md`; harness
+`scripts/run_suica_m4_k2f_level_law.py`; artifacts `results/m4_k2f_level_law/`.
+
+**Stage 1.** The compilation is **26 rows** exactly as registered — K2b 6
+(its `PRIMARY_ARMS`; C1 excluded by K2b's own machinery), K2c 7, K2d 6, K2e 6,
+D-open's M-4 1 — under RN-K2F-1 (one row per primary design arm, BOTH pair
+sides, because the object is a level law and the difference reading is what
+D-open convicted; the a-side-only and pair-mean readings both give 17 rows,
+adding C1 gives 27). Levels **26/26 bit-exact** against each leg's published
+`field_b_only` / `b_only_mean`, re-derived from the rawest per-world CSVs with
+round-trip parsing; `r` **25/25** and `V_person` **7/7** bit-exact against the
+persisted values, both re-derived through `predicted_attenuation` /
+`person_share_design`, never from field values. Fits:
+
+| form | λ′ | q′ | κ′ | p | in-sample RMSE | **LOO-RMSE** |
+|---|---|---|---|---|---|---|
+| **F2 (winner)** | 0.18021628978547316 | −0.009622064624441264 | 0.750086268225045 | 0.2064406330042716 | 0.005474614013402661 | **0.0061559195350209** |
+| F1 | 0.17346136414455723 | −0.15864657750225272 | 0.7247210056790004 | — | 0.005579849467280071 | 0.0061727757182724885 |
+| F3 | 0.18009724674725458 | 0.06164248438626035 | 0.6360902393932114 | — | 0.005763865953705927 | 0.006453886460034428 |
+
+Sealed baseline (FROZEN at λ 0.17417497661611914, q 1.8528700746510731,
+κ_hat −0.7220359963712748; not refitted, so its "LOO" is simply its residual
+RMSE, stated so): **0.11259090547752257**, with all 26 residuals negative
+(mean −0.10906524853261387, range [−0.1610876677874571, −0.05967241765543682]) —
+D-open's six-arm under-prediction extends to the whole corpus.
+**L-1 [.55] HOLDS:** 0.0061559195350209 ≤ 0.010 and ≤ 0.056295452738761284,
+an improvement factor of **18.28985983929699×** against a required 2×.
+
+**Stage 2.** F2's prediction **0.09036036155829047**, band ±2×LOO =
+**[0.07804852248824867, 0.10267220062833227]**, was written and hashed
+(`48dcabe6b813305a712e87e78eba05d03765a513c050e68073bd3dfc4184c420`) at
+`19:55:18.139607Z`; the permit re-hashed it from disk at `19:55:32.725509Z`,
+**+14.586 s**, with **0** fresh-arm generations before the stamp and **12**
+entry points wrapped across **4** k2b instances. Measured, 32 worlds:
+**0.09348041524223985**, CI [0.0840861788911068, 0.10345598492352123] —
+**inside**, at 25.3% of the half-width (signed error +0.003120053683949381).
+**L-2 [.60] HOLDS.** The sealed form on the same arm would have said
+−0.03217523530690303, missing by 0.12565565054914288 = 20.41× the winner's
+LOO-RMSE.
+
+**What the planner should carry forward, and what it should not.** κ′ ≈
+0.72–0.75 across all three forms is statistically indistinguishable from the
+sealed κ = 0.7220359963712748 — **the variance tax was never the error**. What
+collapses is the exponent: q′ ≈ 0 with an interval straddling zero in every
+form (F2: [−0.3792124136721057, 0.5313115708778163]), and F2's extra `p` also
+contains 0. To this corpus's resolution the fitted object is **an intercept
+minus the variance tax**. It cannot be claimed that `r` is irrelevant:
+corr(r, V) = −0.9643543785903034 across the 26 rows, so the two covariates are
+near-collinear by design and a decisive test needs arms that break the
+collinearity. Three further honesty limits, all disclosed before or with the
+numbers: (i) the F1/F2 selection separates by 1.6856183251588372e-05 = **0.27%**
+of the winner's LOO — rule 13 fired and the B=20000 re-run was executed; the
+tie is immaterial only because all three forms' fresh-arm predictions were
+written INSIDE the hashed file and span just 0.00083893757354285, all inside
+the band; (ii) share .45 lies BETWEEN training rows at .40 and .4974/.50, so
+L-2 is an **interpolation** test — extrapolation is untested; (iii) ten of the
+26 rows sit in three tied-(r,V) clusters (K2e's double-matched b-sides sit on
+their a-sides' covariates by design), giving irreducible floors of
+0.0020486044913194325 in-sample and 0.002735243174745005 LOO — computed in
+Part 0 as a rule-17 realizability argument before any fit.
+
+**Second readings, run and reported, adjudicating nothing.** Inverse-variance
+weighting (RN-K2F-2) leaves the ordering and the q′ ≈ 0 picture unchanged. The
+k2b world lineage (RN-K2F-3) gives 0.08709612152185398, CI
+[0.07961683287469572, 0.09477197120184305] — also inside the band; the two
+lineages differ by 0.006384293720385875 against a difference SE of
+0.006348549054442376 (1.01 SE, world-draw noise).
+
+**Gates.** G0f PASS (all six D-open S-4 anchors bit-exact; the 26-row
+compilation audited with per-row provenance). G1f PASS, **enforced not
+asserted**. G2f PASS (pilot worlds 9601/9602: 0.1122568775501732 /
+0.09868106447957786, finite, non-saturated, G4b route residuals 0.0; the
+declared fallback did not fire). G3f PASS (rule 11 satisfiability computed in
+Part 0 with the binding bar 0.01; rule 22 sides declared for all three clauses;
+rule 23 gate stages named; rule 13 at B=2000 seed=20260826 with the B=20000
+re-run at both flagged boundaries — Stage-2 containment unchanged, max endpoint
+shift 0.00024940381132219913). G4f PASS.
+
+**RN-K2F-4** (pinned before the run): the registration's ordering clause is
+absolute, so the rule-17 pilot ran AFTER the prediction stamp, not before it —
+a pilot is a measurement of the fresh arm. **RN-K2F-5**, a real property of the
+PUBLISHED machinery found while implementing Part 0: the legs load dependencies
+through private importlib loaders that ignore `sys.modules`, so `k2e.k2d()` is
+a different k2d object owning a different k2b object; K2d's `int:` dispatcher
+must be installed on both or `person_share_design` raises on the four
+interaction-carrier rows — and, more consequentially, an ordering guard on one
+k2b instance would have been enforceable in name only. All four instances are
+wrapped.
+
+**Rule 24 caught fourteen of this leg's own numbers before commit:** the
+26-row table in the report was first typed from derivation, and a mechanical
+re-read against `compiled_rows.csv` found 14 cells wrong (e.g. K2e:VS62a's
+level written 0.10083958722112 where the artifact says 0.10924229469593509,
+K2b:A2's r written 0.7849062126687159 where the artifact says
+0.7849057220233866). The table is now generated from the artifact.
+
+**Named follow-up (cell 2's route):** a D1-style prospective seal on the
+restored form, at arms chosen to BREAK the r/V collinearity and to sit OUTSIDE
+the .02–.66 share envelope, so the next test is extrapolation rather than
+interpolation and q′ becomes identifiable.
+
+**Timing.** Compute: Part 0 0.3 s, Stage 1 54.234 s, predict <1 s, arm 38.611 s
+(66 worlds), finalize <1 s — every stage inside its Part-0 estimate
+(120/300/5/120/60 s); no stage approached the 2× stop-and-report threshold.
