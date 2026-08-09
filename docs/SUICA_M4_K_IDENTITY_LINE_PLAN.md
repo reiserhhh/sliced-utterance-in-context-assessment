@@ -1258,6 +1258,129 @@ cells heavy — target < 45 min wall; stop-and-report at 2× any Part-0 stage
 estimate; the ×32 holdout inclusion rule is G0d's economy note, decided in
 Part 0, not mid-run.
 
+### Outcome (2026-08-09, appended after the run — executor's adjudication)
+
+**`AUTHOR_AXIS_IS_A_REPLICATE_AXIS__EXPONENT_SURVIVES_AUTHOR_DELETION__DELETION_RAISES_LEVEL_AT_EVERY_SCALE__FIT_QUALITY_NO_WORSE`.
+L-1 HOLD (on the band's edge), L-2 HOLD (maximal), L-3 HOLD (a
+non-rejection). No pivot fires.** Fresh master_seed 20260814, κ=1.0, shared
+design, F4's grid {×1,×2,×4,×8,×16} plus the ×32 holdout (admitted by the
+Part-0 economy rule), 8 worlds/cell, 20 draws/world, two arms per cell
+(intact; author-deleted = `mean_part` f2:178 removed by exact pre-map
+subtraction, which at this knob is the ENTIRE author channel since the AR
+coefficient `sqrt(1-kappa)` is exactly 0 at f2:195 per M4-F7) — **96
+adjudicated deployed-gauge runs**, plus 8 reserved Part-0 pilot runs on
+worlds 9401–9402. Wall-clock 06:53:17→07:20:05 UTC = **26.8 min** against the
+< 45 min target; the 2× stop-and-report rule never engaged.
+
+**G1d PASS, and the replication is strong, not marginal.** The fresh intact
+arm's fitted exponent is **γ = 1.1186793702102118** with F4's own
+`bootstrap_axis` CI **[0.9810050210740082, 1.2375507404943047]**, which
+*contains* F4's [0.9843434774823611, 1.2176831424523908] entirely. **P1d does
+not fire; F4's author-axis law reproduces at fresh seeds.** G0d PASS with all
+five cited F4 numbers bit-exact on F4's own code path (round-trip parsing
+deviates by ≤2 ULP, 9.023053842666835e-16 relative — see the report's R-0.1: a
+round-trip convention cannot retroactively reproduce a legacy number computed
+under pandas' default parser). G2d PASS at 0.06825177531394482 against a 1e-6
+bar, with this leg's memory-bounded `mean_part` extraction verified
+**bit-identical (0.0)** to `k1b.channels`'s canonical mirror. G3d PASS
+(projected Δγ half-width 0.11262789561542542 = 0.45× the ±0.25 band; 5/5
+clauses satisfiable, one-sided clauses stated one-sided). G4d PASS: the
+deleted channel carries **38.6–38.8 %** of the response RMS at every pilot
+world. G5d PASS.
+
+**L-1 HOLD, stated precisely (rule 4).** Δγ = γ_deleted − γ_intact =
+**+0.1259396729686626** [0.016883362223958802, 0.24832554505807228]
+(paired world-level bootstrap, 2000 draws, registered seed 20260814);
+γ_deleted = **1.2446190431788744** [1.1184843238134545, 1.3578623870533717],
+overlapping F4's band on [1.1184843238134545, 1.2176831424523908]. Both
+registered clauses are met, **but the CI excludes zero**: deletion does not
+leave the exponent alone, it **steepens** it. **The equivalence verdict is
+Monte-Carlo fragile and this must travel with the result:** at the registered
+B = 2000 the upper edge is 0.24832554505807228 (inside ±0.25 by
+0.0016744549419277222); at B = 100000 with the SAME registered seed it is
+0.25167594529642967 (outside by 0.0016759452964296706); across nine
+alternative B = 2000 seeds the upper edge ranges 0.2459–0.2736 and the clause
+holds at **5 of 10 seeds**. The registered reading controls — B and the seed
+were both fixed in Part 0 (R-0.5, on disk 06:54:52 UTC, before the 06:57
+arms) — so **L-1 is HOLD**, but the exponent-equivalence claim sits exactly on
+its own registered tolerance boundary and this leg does not resolve which side
+it falls on. **What IS resolved at every resolution and all ten seeds: Δγ > 0.**
+
+**Registered-branch gap (for the planner's defect account).** Under the high-B
+reading the configuration is "L-1 MISS **with** γ_deleted's CI still
+**overlapping** F4's band". P2d requires MISS **and DISJOINT**, so P2d would
+not fire, and **no registered branch covers that outcome** — reported as
+fitting no registered branch. Not hypothetical: the measurement sits on
+exactly that boundary.
+
+**L-2 HOLD, maximal.** The deleted arm's level exceeds the intact arm's at
+**5/5** grid points with the one-sided clause (CI lower edge > 0) satisfied at
+every one, sign positive in **8/8 worlds at every point — 40/40 world-points**.
+The contrast is not an offset but grows with scale: **+0.012034790822427564**
+(×1), **+0.02172220457061207** (×2), **+0.07394264943700614** (×4),
+**+0.12471963896605351** (×8), **+0.2095266552338645** (×16). Author deletion
+buys more the more replicates there are.
+
+**L-3 HOLD as a NON-REJECTION.** WRMSE ratio (intact/deleted) =
+**0.7074468507924991** [0.3859105177244442, 2.142092546684852] — the interval
+contains 1, so the registered one-sided clause is satisfied, but the point
+estimate is below 1 (in-sample the deleted arm fits its own power law slightly
+worse) and the interval is uninformatively wide. Disclosed second reading
+(rule 9), pointing the other way: on F4's own predict-then-holdout diagnostic
+at ×32, the **deleted** arm extrapolates better — log-odds gap
+**0.049043636423744374** (predicted 0.6439648605439744, observed
+0.6694153296715588) vs the intact arm's **0.08074971490742865** (predicted
+0.38377206783108325, observed 0.4285829511595591), both inside F4's own
+factor-2 band 0.3010299956639812.
+
+**What the leg establishes.** At F4's own knob, on fresh seeds, with the
+entire author channel deleted: **the author-scaling law is not a law about
+authors.** The exponent survives inside the registered band (at its edge), the
+level rises at every scale, and the ½-agreement author budget **more than
+halves** — 48.86511436544155× intact vs **19.877619351988358×** deleted. The
+generator's author-mean content is a **drag on the axis it was named after**.
+This extends IDT appendix F's "author content is interference" from the LEVEL
+of the composition contrast to the SLOPE of the scaling law. **L-1's
+registered consequence of HOLD (re-typing F4's row "author axis → replicate
+axis"; re-typing the D3 prior to "recruit replicates, not words") is the
+PLANNER's to execute** — this leg only adjudicates, and it hands over an
+antecedent that is HOLD *and* boundary-seated.
+
+**G-info-F5 (report-only, no adjudication).** F5's `truth_recovery_exact`
+(f5:494) and `truth_recovery_long` (f5:505) are the deployed field functional
+between the finite-sample ESTIMATED field and a **noise-free generator TRUTH
+field**: `events_true = mean_part + state_part` (f5:279, from
+`generate_truth_vectors_exact` f5:225-280) and `events_long = mean_part_chunk
++ state_part` (f5:367, from `generate_truth_vectors_long` f5:303-372).
+**From source the truth objects are MIXED**: `mean_part` (f5:260 / f5:331) is
+AUTHOR content (f2:178's object); `state_part` is built from
+`blended_x = sqrt(1-kappa)*x + sqrt(kappa)*shock_x` (f5:277 / f5:364) whose
+`x` is the author-private AR(1) state (redrawn in the long variant, f5:348-352,
+with the same per-author φ) and whose `shock_x`/`shock_long` is
+occasion-common content from the unchanged `f2().shock_vector` (f2:121-126,
+called at f5:360). With F1's calibrated shares w_mu=0.15, w_x=0.15, w_e=0.70:
+at **κ=1.0** the truth object is **exactly ½ author-mean and ½
+occasion-common** (the AR term's coefficient is exactly 0); at **κ=0.5** it is
+**¾ author** (½ mean + ¼ AR) and ¼ common. The isotropic noise channel — 70 %
+of the RESPONSE variance — is excluded from both. No adjudication offered;
+this feeds the F5 re-typing and the line synthesis.
+
+**Anomalies, all disclosed with timing.** (i) The `holdout` stage was invoked
+in the FOREGROUND (07:07:40 UTC) and the shell harness detached it to the
+background at its own 600 s cap, re-attaching on completion (exit 0, 710.3 s):
+no background job was launched by the executor, no monitor was used, and the
+invocation/stage/workers/outputs are exactly the foreground call's. (ii) G0d's
+parser reading (Part 0, before any arm). (iii) L-1's Monte-Carlo fragility
+(necessarily discovered after the arms; both readings reported, registered
+reading controls). (iv) The "MISS with OVERLAP" registered-branch gap.
+(v) L-3's in-sample and out-of-sample readings disagree in sign; both
+reported. (vi) Registration-text observation, recorded not repaired: G1d is
+listed among the "Part 0 gates" but is unmeasurable before the main intact arm
+exists — resolved before any arm as register-note R-0.6 (own stage,
+code-enforced stop). Stage estimates vs actual: arms 355.754 → 529.1 s
+(1.487×), ×32 holdout 734.460 → 710.3 s (0.967×). No background jobs launched,
+no monitors, no smoke runs.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
