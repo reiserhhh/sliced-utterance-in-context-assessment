@@ -784,3 +784,45 @@ inflation — K2d's 2-world pilots underestimated realized sd by up to
 7.8×, disclosed, inconsequential there). Instrument boundary recorded:
 K2a's two-split GAP predictions are validated only to equal-share w_int;
 attenuation predictions held at 0.278% max error even beyond it.
+
+## Dated appendix L (2026-08-09, after M4-K2e): T4 CLOSES — the reader-borne composite form
+
+**L.1 — Double matching decides.** With BOTH predicted attenuation and
+total person variance matched to ≤1e-16 (measured: attenuation 6–9×,
+V_person 54–85× inside their gates), K2d's "material species effect"
+collapses by **67.04–78.83%** — it was ΔV_person in disguise. The variance
+law was simultaneously confirmed OUT-OF-SAMPLE on a fresh pure-φ pair:
+predicted D = −0.0124, measured −0.0106 [−0.0152, −0.0057], error 0.0019
+(both registered clauses). What survives of the species term: SUB-SIG(+)
+in both DM pairs (+0.0064 [+0.0007, +0.0121]; +0.0089 [+0.0024, +0.0153])
+— genuine, sign-consistent, but sub-material at both margins and below its
+own realized MDE (0.74×, 0.95×): replication-fragile.
+
+**L.2 — T4: [OPEN] → [CLOSED, composite reader-borne form].**
+
+    field ≈ λ · r_card^q − κ · V_person − ε_species(occasion-bound)
+
+λ ≈ 0.174; **q = 1.83 [1.71, 1.98]** (the reader loses the trait like the
+square of card attenuation); **κ ≈ 0.72** (the reader taxes raw
+person-state variance, species-blind, beyond card algebra — quantitatively
+predicted and confirmed); **ε_species** bounded ≤ 0.0153 (CI upper) at
+these dims, fragile. The card/biography gap is **reader-borne in
+substance**: T4-simple survives only as the r-dependence inside a
+quadratic link; the flat floor is dead; **the F5 plateau re-attributes to
+the reader's own transformations, not to the card's information content.**
+Scope as always: this closes the branch for THE DEPLOYED READER on this
+world family, EXPLORATORY tier — it is a law about the instrument-world
+pair, not about persons.
+
+**L.3 — Method.** Defects #23 (routing consequence written at MAT grade,
+fired at SUB grade — executed graded per rule 7) and #24 (a false
+conservative premise about the instrument's validated range — rule-8
+family) recorded. The 4-world pilot is now a standing convention.
+
+**L.4 — What remains of IDT v1's program.** K3 (T7/T8 similarity geometry
+— the empirical stamp on the origin question C-4) is registered and
+dispatched; on P4 (all leans hold) the theory's registered empirical
+program is COMPLETE and the next planner actions are the line synthesis
+and IDT v1.1 consolidation, then K-R1 (the constructive repair test:
+does de-framing move λ, κ, or trait recovery — T9's counter-operations
+tested constructively).

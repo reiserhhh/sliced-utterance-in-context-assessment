@@ -2800,6 +2800,156 @@ currently inexpressible on this instrument; (iv) **rule 16 cost nothing and clos
 registered branch" failure mode structurally**; (v) **the 4-world pilot should be made a standing
 convention.**
 
+### Planner adjudication (2026-08-09, appended after the run) — THE T4 BRANCH CLOSES
+
+Scored as executed: **L-SPEC fires (both DM pairs SUB-SIG(+)), L-VS HOLDS
+on both clauses and both currencies — routing P-SPEC.** Adjudicated with
+the grade the cells license (rule 7 applied to routing): P-SPEC's
+registered text ("intrinsically expensive beyond (r, V)") was written for
+the MAT-SIG grade and both fired cells are SUB-SIG — **the closure
+executes in graded, composite form**, combining the two leans that
+actually held:
+
+**T4 — CLOSED (composite reader-borne form), 2026-08-09:**
+
+    field ≈ λ · r_card^q − κ · V_person − ε_species(occasion-bound)
+
+- **λ ≈ 0.174; q = 1.83 [1.71, 1.98]** (25 arms, R² 0.85): the reader
+  loses the trait like the SQUARE of card attenuation (reader-amplified —
+  K2b/K2c);
+- **κ ≈ 0.72** (R² 0.94 over 9 pairs; predicted −0.0124 vs measured
+  −0.0106 on the fresh out-of-sample pair, error 0.0019): the reader
+  taxes RAW person-state variance, species-blind, beyond card algebra —
+  this term carried **67.04–78.83% of K2d's apparent species effect**
+  (K2d's +0.0304/+0.0271 collapse to +0.0064/+0.0089 under double
+  matching);
+- **ε_species**: a genuine surcharge on occasion-bound person content —
+  both DM CIs exclude 0, signs consistent with K2d — but SUB-MATERIAL at
+  both margins and BELOW its own realized MDE (|D|/MDE = 0.74, 0.95):
+  bounded ≤ 0.0153 (CI upper) at these dims, recorded as
+  replication-fragile, not a headline.
+
+The card/biography gap is **reader-borne in substance**: T4-simple
+survives only as the r-dependence inside a quadratic link; the flat-floor
+form is dead (K2b); the F5 plateau re-attributes to the READER's own
+transformations (quadratic loss + variance tax), not to the card's
+information content. The registered follow-up (the constructive repair
+test — does de-framing move λ, κ, or b-recovery?) is queued as K-R1,
+AFTER K3 completes the theory's remaining empirical piece.
+
+**Planner registration defects recorded (#23, #24):** #23 — L-SPEC lumped
+MAT-SIG and SUB-SIG cells while P-SPEC's consequence text presumed the
+material grade (rule-7 instance at the routing level; executed graded, as
+above). #24 — the registration's premise that K2e's w_int "exceeds K2a's
+validated range" was factually WRONG for K2e's own solved shares
+(0.0857/0.1458 vs ceilings 0.2644/0.2161) — conservative direction, no
+impact, rule-8 family. **Convention adopted (from the executor's item v):
+the 4-world pilot is standing for all sd-based gates.**
+
+---
+
+## M4-K3 — The similarity geometry, measured (T7/T8 — the origin question's empirical stamp)
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Card-space only (no deployed gauge). This leg
+completes IDT v1's registered empirical program: it measures the T7/T8
+package that answers the program owner's second founding question (C-4:
+"deviation-close = personality-close? what about direction?").
+
+### Machinery
+
+`scripts/run_suica_m4_k3_similarity_geometry.py`, reusing K2a's expressive
+world and card machinery. Base config: φ_slow = .90, n_occ ∈ {8, 32},
+w_int = 0, plus one w_int = equal-share companion config (all three at
+8 worlds × 512 authors; master_seed 20260820). True pattern similarity :=
+cos(mean_part_i, mean_part_j); true cards := mean_part vectors; estimated
+cards and ρ_i from occasion splits as validated in K2a.
+
+### Sub-questions, leans, and Part-0 predictions
+
+- **L-1 (anti-direction bound, T8b) [designed identity + noise law;
+  prior .90]** — in TRUE cards: violation count of
+  {cosθ<0 ∧ ‖c_i−c_j‖² ≤ r_i²+r_j²} is EXACTLY 0 (theorem; any violation
+  = implementation defect → P1). In ESTIMATED cards: per-stratum
+  violation rate within CI of the Part-0 MC prediction computed from the
+  validated noise model (ρ-derived), ≥5/6 strata (2 configs × 3 norm
+  strata).
+- **L-2 (caricature vs rotation, T7) [prior .80]** — generator-level
+  per-author manipulations on a designated random 10% of authors:
+  α-scaling (α ∈ {1.5, 2}) of mean_part vs norm-preserving rotation
+  (φ_rot ∈ {30°, 60°}, random 2-plane through c_i). Leans: (a) scaled
+  authors' rank-1 hit rate non-decreasing vs their α=1 baseline
+  (per-α pooled CI lower ≥ −0.01, one-sided); (b) rotated authors'
+  own-direction match degrades consistent with cos φ_rot (measured
+  cos(ĉ_rot, ĉ_base) within CI of cos φ_rot × attenuation prediction,
+  both angles); (c) rotation hurts rank-1 more than same-displacement
+  scaling (paired CI excludes 0).
+- **L-3 (disattenuated distinctive cosine, T8d) [prior .75]** — pair
+  strata: NEAR-NORM (both r_i in bottom quintile), UNEQUAL (r ratio > 3),
+  STRONG (both top quintile), MID (remainder). Leans: (a) Spearman(true
+  cos, disattenuated cosine) ≥ Spearman(true cos, −raw distance) in ALL
+  strata; (b) the margin is MATERIAL (Δ Spearman ≥ 0.10 with CI excluding
+  0) in NEAR-NORM and UNEQUAL strata specifically (the sign-predicted
+  failure regimes); (c) raw distance's failure direction as T8a predicts:
+  in UNEQUAL strata, distance's errors concentrate on
+  same-direction-different-magnitude pairs (directional error
+  decomposition reported, sign gated).
+- **L-4 (angular vs distance crowding, T8e) [prior .70]** — per-author
+  misidentification vs angular-crowding rank and distance-crowding rank:
+  angular predictor dominates (ΔAUC > 0, pooled CI excluding 0; both
+  predictors' AUCs reported).
+- **L-5 (menagerie, T6/ρ) [prior .80]** — Spearman(ρ_i, per-author
+  rank-1 hit rate) ≥ 0.30 with CI excluding 0.15 (bars justified in
+  Part 0 from the pilot's noise model — rule 11 satisfiability check).
+
+### Part 0 gates
+
+- **G0k** — construction: reconstruction residual ≤ 1e-12; K2a anchor
+  cell re-derivation bit-exact; per-stratum pair counts reported (grain,
+  rule 5).
+- **G1k (rule 10)** — manipulations non-degenerate: scaled/rotated
+  authors' panels differ from baselines; strata non-empty (≥ 200 pairs
+  each; else merge rule pre-stated: UNEQUAL threshold relaxes 3→2.5→2
+  once each, disclosed).
+- **G2k (power, 4-world pilot per convention)** — MDEs for every CI
+  clause; rule-11 satisfiability with directions; rule-13 spec (B=2000,
+  seed=master, ≥10×B at boundaries).
+- **G3k (rule 3)** — noise-model liveness: estimated-card noise scale
+  matches the validated attenuation algebra per config (the L-1 MC
+  prediction's input, verified before it is used).
+- **G4k (rule 16)** — the enumeration: five leans, each with named
+  HOLD/MISS criteria; summary routing (below) covers all 2^5
+  combinations via the stated precedence; written as a table in the
+  report.
+- **G5k (hygiene)** — round-trip; chunked < 600 s; rule-12 header;
+  rule-14 self-check (all comparisons within card space; no cross-scale
+  gate); no background jobs/monitors.
+
+### Routing (precedence order; every combination covered)
+
+1. L-1's TRUE-card identity fails → **P1: VOID (implementation defect)**,
+   fix and re-dispatch; no theory reading.
+2. Else if ≥2 of {L-1(noise law), L-2, L-3, L-4, L-5} MISS → **P2:
+   T7/T8's estimator layer needs repair** — the theory doc keeps T7/T8 at
+   [PROVED in card space], the failing pieces named; a repair leg is
+   registered before any [MEASURED] promotion.
+3. Else if exactly 1 MISS → **P3: QUALIFIED** — T7/T8 move to [MEASURED
+   except the named piece]; the missing piece gets its own follow-up
+   charter.
+4. Else (all HOLD) → **P4: T7/T8 [MEASURED]** — IDT v1's empirical
+   program is COMPLETE; the line synthesis and IDT v1.1 consolidation
+   are the next planner actions (documents, no new legs), followed by
+   K-R1 (the constructive repair test).
+
+### Deliverables
+
+The six: script; `results/m4_k3_similarity_geometry/`;
+`reports/SUICA_M4_K3_SIMILARITY_GEOMETRY_REPORT.md` (Part 0 with MC
+predictions first); outcome appended here; ledger row; ONE commit
+(`feat(m4-k): K3 — ...`), never amended, not pushed by the agent.
+Budget: card-space; target < 20 min wall; stop-and-report at 2× any
+Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
