@@ -817,3 +817,107 @@ ledger row; ONE commit (`feat(defense): D-open — ...`), never amended,
 not pushed by the agent. Budget: the (192,256) ladder is the heavy
 cell; target < 40 min wall; stop-and-report at 2× any Part-0 stage
 estimate.
+
+### OUTCOME (appended 2026-08-10, after run) — `PREDICTED_3_2_0__S3_CONJECTURE_DEAD`
+
+**Hash MATCH. Measure-first ordering enforced and attested. 3 PREDICTED /
+2 MISSED / 0 UNRESOLVABLE. `LAWS-PREDICT` does NOT fire under either
+reading; routing is PER-ENTRY-ADJUDICATION. S-3, separately:
+`CONJECTURE-DEAD`.**
+
+- report: `reports/SUICA_DOPEN_SEAL_OPENING_REPORT.md`; script:
+  `scripts/run_suica_dopen_seal_opening.py`; artifacts:
+  `results/dopen_seal_opening/` (gitignored).
+
+**G1O — the leg's actual product.** `measured.json` stamped
+`2026-08-09T19:19:41.985528+00:00`, sha256
+`ee6d45a39261aa4f037b3c9260aae9785300f436111eda9b173456cfc4c3c42c`;
+FIRST read of `D1_SEALED_BUNDLE.json` at `2026-08-09T19:21:08.676665+00:00`
+— **+86.691 s AFTER** the stamp. `bundle_reads_before_stamp = 0`.
+Enforcement was six wrapped open entry points (`builtins.open`, `io.open`,
+`os.open`, `Path.open/read_text/read_bytes`) armed in every one of the
+eleven processes, with the unseal permit issued only after re-hashing
+`measured.json` from disk against its stamp. No refusal ever fired,
+because nothing tried.
+
+**The scorecard** (each against its OWN sealed band, no re-fitting):
+
+| entry | sealed | band | measured | cell |
+|---|---|---|---|---|
+| **S-1** η-floor, m=96/k_τ=4/G=5 | `2.31e-13` / `0.02034245439037237` / `0.06982469930521468` | abs `[0,0.001]`; rel `±39.26%` | `0.0` / `0.01875` / `0.07383578431372549` | **PREDICTED** (3/3) |
+| **S-2** tax ratio √(m/k_τ) | `4.898979485566356` + two order claims | `1e-12` algebraic | dev `8.88e-16`, ρ-free; ARI `0.982>0.685>0.453`; rates strictly up | **PREDICTED** |
+| **S-3** window at (192,256) | OPEN, width `0.2985157551658153` | binary call = the PRIMARY falsifier | **EMPTY**, width `−0.2851431442541803` | **MISSED** |
+| **S-4** variance tax, share .40 | `−0.015116265289181696` | `[−0.03295203892359688, 0.0027195083452334935]` | `0.09350089316336324` | **MISSED** (5.09 band widths) |
+| **S-5** taxometer η=.6, ρ.45-eq | `0.6` | certified `±0.125` | `0.595818186104668` (err `0.0042`) | **PREDICTED** |
+
+**Five bit-exact convergences** between Part-0 pins written blind and the
+bundle's own contents (S-1's three boundary z; the named companion's
+three rates; the (48,512) baseline edges; S-4's `r` and `V_person`;
+S-5's ρ.45-equivalent energy) confirm this leg measured the
+configurations D1 actually sealed. D1's S-1 even carries both readings
+under the names RN-DO-4 anticipated, so the pinned PRIMARY was D1's
+PRIMARY.
+
+**Adjudication material for the two misses (the executor names it; the
+planner adjudicates).**
+
+- **S-3.** Two independent components of the sealed formula failed: the
+  ambient scale factor measured `1.351480699772496` against the BBP
+  `8^¼ = 1.681792830507429`, and the "projection-invariant" oracle-S edge
+  MOVED by `−0.30744355709251225` (−7.25 %) where the formula says it
+  cannot. Both edges nonetheless sat inside their ±78.5 % bands — the
+  bands could not discriminate; the binary call carried all the
+  information. **Honest caveat, reported in full and NOT scored:** the
+  window misses by exactly ONE rung of L2's 7.8 %-spaced grid (at
+  Δ `3.645968947059166`, oracle-S `0.781036918160944` is `0.0190` short of
+  the 0.80 bar, ≈2.85 replicate SEM), and on an `np.interp` reading
+  (192,256) would be OPEN with width `0.07999699397241145`, 27 % of the
+  sealed value. The GRID reading governs — pinned as RN-DO-5 before
+  Stage 1, and the reading D1's own baseline edges are quoted from.
+- **S-4.** The inputs re-derive bit-exactly, so the failure is the law's.
+  Evaluating the same sealed law at K2b's own six published arms
+  under-predicts the measured `recovery_b_only` at EVERY arm by −0.060 to
+  −0.126, and the new arm's −0.109 sits inside that family; meanwhile the
+  measurement `0.093501` sits essentially at the midpoint of K2b's own
+  A3 (`0.109623`, share .30) and A4 (`0.075439`, share .50). **What
+  D-open falsified is the law's absolute LEVEL calibration, not anything
+  specific to share .40.** Structural note: κ was fitted through the
+  origin on within-pair DIFFERENCES (`k2d post_hoc_descriptive.json` rows
+  carry `D` against `dvar`, with `level` a separate column) and is used
+  here to predict a level; λ/q come from a 19-arm pooled power law across
+  three legs at R² `0.868`. The D2 fragility annex constrains the
+  quoting, moves no band, and does not rescue the sign (κ = −0.7146 gives
+  `−0.01422394572462872`; q ∈ {1.8327, 1.9338} give
+  `−0.014419927309595182` / `−0.017843375026999203`).
+
+**RN-DO-8 — a real defect in published machinery, found by the Part-0
+realizability check (executor-attributed, disclosed).**
+`l2.type_geometry_l2` (l2:220-224) and `l1.type_geometry` (l1:239-243)
+allocate group labels with `np.empty(n, int)` and fill only `G·(n//G)`
+entries, with NO guard: at G=5, n=512 the last two authors keep
+UNINITIALIZED MEMORY as their type label. It never bit L1/L2/L3 because
+512 % 4 == 0. Here it crashed on a garbage index before any measured
+value existed; the registered "512 authors" is realized as
+**n = 510 = 5 × 102** (−0.39 %) and the harness now refuses `n % G ≠ 0`.
+A silent mislabelling of two authors was the alternative.
+
+**Three further rule-9 pins the planner should note.** RN-DO-1: `DIM = 64`
+is mechanically UNREALIZABLE at m ∈ {96, 192} (orthonormal loadings need
+DIM ≥ m), so the dimension transport `DIM(m) = 4m/3` is forced, not
+chosen, and it reproduces k2a exactly at m = 48. RN-DO-2: the regular
+(G−1)-simplex generalizes `l1.TETRAHEDRON` with `σ_τ²/Δ² = (G−1)/(2G)`,
+verified to `2.2e-16` and equal to l1's own 3/8 at G = 4 and to D1's
+`c_5 = 0.4` at G = 5. RN-DO-7: both routing readings of "≥4/5 PREDICTED
+(S-3 counted separately)" were enumerated over all 243 outcomes; they
+agree on 235 and agree here.
+
+**Rule 24 caught one of this leg's own numbers before commit:** the named
+companion's σ_b² was written as `17.185466737795662` from arithmetic
+where the artifact says `17.18564350100706`; corrected in the report
+prior to commit. All 193 long decimals in the report were mechanically
+re-verified against `measured.json`, the opened bundle, the scorecard and
+the persisted CSVs.
+
+Wall: ~40 min end to end; Stage 1 + Stage 2 compute `~124 s`. Every stage
+came in under its Part-0 estimate — the "heavy cell" (192,256) took
+`28.2 s` against a `270 s` estimate — so no stop-and-report fired.
