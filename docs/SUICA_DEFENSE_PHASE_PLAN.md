@@ -245,3 +245,83 @@ worksheets — gitignored); `reports/SUICA_D2_ADVERSARIAL_VERIFICATION_REPORT.md
 (per-claim verdicts with evidence); outcome appended here; ledger row;
 ONE commit (`feat(defense): D2 — ...`), never amended, not pushed by
 the agent. Budget: artifact-space; target < 30 min wall.
+
+### D2 outcome (appended 2026-08-10, AFTER run)
+
+Executed by a dispatched agent independent of every original executor,
+refute-tasked. Harness
+`scripts/run_suica_d2_adversarial_verification.py` (re-runnable, 0.5 s);
+worksheets `results/d2_verification/` (gitignored); report
+`reports/SUICA_D2_ADVERSARIAL_VERIFICATION_REPORT.md` (Part 0 attack plan
+written before verification, then per-claim worksheets).
+
+**Verdicts: C1 CONFIRMED, C2 QUALIFIED, C3 CONFIRMED, C4 CONFIRMED,
+C5 CONFIRMED, C6 CONFIRMED, C7 CONFIRMED, C8 QUALIFIED, C9 QUALIFIED,
+C10 CONFIRMED — 7 / 3 / 0 / 0.** No REFUTED, no UNVERIFIABLE: every
+artifact the ten rows need exists locally and every headline number
+re-derives at least to display precision. **Routing: P3V** (P1V and P2V
+do not fire).
+
+The three qualifications, named exactly:
+
+- **C2** — the pooled issuer price is *stronger* than cited (it is the
+  exact rational 191/1970, whose nearest double is the cited
+  0.09695431472081219, 8/8 signs). But the 1/|P| slope
+  −1.0865327686128703 persisted in `m4_k1_issuer/decision.json` is
+  **1.179e-13** away from the exact-rational OLS of that same file's
+  `mu_err_var` column, which is **−1.0865327686127524**. Seven
+  independent estimator formulations agree with each other to 3.3e-15
+  and all disagree with the citation identically, so this is not
+  float64 noise; the fit consumed low-bit-different inputs upstream of
+  the persisted CSV. Digits 14–17 only; L3's operative clause
+  (slope ⊂ [−1.35, −0.65], a manipulation check) is untouched.
+- **C8** — L2's "7/10 + exact ordering" is confirmed exactly. The other
+  two confirmations are weaker than the row implies: **L1's poles are a
+  0.0-vs-0.0 check** on two cells the artifact itself records as
+  BIT-IDENTICAL panels (`/leans/V-1/note`), and **L3's containment is
+  7/10, not stated** — its three misses are cells with a degenerate
+  [0,0] measured CI against predictions of 3.57e-14, **2.18e-04** and
+  3.34e-07, the middle one not excusable as machine scale. The three
+  confirmations are three seed-and-grid variations of ONE prediction,
+  not three independent predictions.
+- **C9** — all cited numbers re-derive (10/10 within 0.125; median
+  0.024078 → 0.0241; Spearman exactly 1.0 in all 10 per-arm slices
+  across 5 estimators × 2 energy arms). Two qualifications: the
+  universal "**under every reading**" fails for the cross-arm pooled
+  reading (**0.9847**, all three principal estimators); and the row is
+  silent on lean **X-1**, whose state is **MISS** — only 2/4 poles are
+  calibrated, with both η=0 poles' CIs **excluding** the true value
+  (η̂ = 0.0924 CI [0.0315, 0.1554]; η̂ = 0.0495 CI [0.0089, 0.0915]).
+  The taxometer is biased up at zero and the leg routed P2N.
+
+Four **citation defects** found outside the D2 rows, for the planner's
+P3V stamp rather than for the verdict cells: (i) IDT appendix C.1's
+"31,520 … across all five norm arms" — 31,520 is four non-oracle arms
+(five gives 39,400) — and it drops the reader-A qualifier while reader
+B has **5,473** flips in the same cells (the leg report discloses this,
+the appendix does not); (ii) IDT appendix C.2's "free designs are inert
+(|Δ| ≤ 0.0045)" — the true max is **0.004512746557818383**, so the
+inequality as written is false by 1.27e-05; (iii) the C2 slope above;
+(iv) C10's "0/32 worlds positive anywhere" — the quantifier ranges over
+**192** arm-world deltas, all recomputed here from raw and all
+non-positive, so the true statement is strictly stronger.
+
+Near-misses and fragilities recorded even where CONFIRMED: C7's cos-law
+bound uses **99.8%** of its own 0.0035 headroom (measured 0.00349189);
+C5's γ is **weight-scheme dependent** (unweighted OLS moves it 0.007–0.010)
+and its "overlapping F4's band" is the same interval restated, not two
+independent estimates; C6's q is three different numbers across legs
+(1.8329 / 1.8529 / 1.9338) with R² 0.868 for the 19-arm fit, and κ's
+R² 0.9935 rests on six leveraged pairs (the 9-pair refit moves it to
+−0.7146, with two pairs at Δvar ≈ 0 producing per-pair κ of 4.6e+14 and
+null); C10's de-framed λ = 0.0008 is a boundary value on an
+**unidentified** power law, not a fitted estimate.
+
+Purity gate held: no worlds generated, no world/panel builder called,
+`suica_core/` untouched; `f1.fit_axis` was re-implemented from source
+text rather than imported so that C5's bit-exact agreement is evidence
+and not a tautology. Budget: harness 0.5 s, leg wall **~80 min against a
+< 30 min target — over budget, disclosed**; the overrun is entirely in
+reverse-engineering undocumented aggregation formulas (C5's WLS, C6's κ
+regression, C7's cos-law) from persisted artifacts, with the three
+timed anomalies listed in the report's Part 6.
