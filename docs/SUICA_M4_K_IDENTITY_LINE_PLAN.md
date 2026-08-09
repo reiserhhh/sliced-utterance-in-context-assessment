@@ -1521,6 +1521,111 @@ row; ONE commit (`feat(m4-k): K2a — ...`), never amended, not pushed by the
 agent. Budget: card-space only — target < 20 min wall; stop-and-report at 2×
 any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered. Script `scripts/run_suica_m4_k2a_expressive_world.py`;
+report `reports/SUICA_M4_K2A_EXPRESSIVE_WORLD_REPORT.md` (Part 0, with the G4a
+point-prediction table, written to disk before the `arms` stage — enforced in
+code by `require_part0()`); artifacts `results/m4_k2a_expressive_world/`.
+12 cells × 8 worlds × 256 authors (2048 pooled authors/cell), 2 events per
+occasion, `master_seed 20260815`, reserved Part-0 pilot worlds 9501–9502,
+card space only — the deployed gauge was never invoked. **Total compute 10.9 s**
+(part0 1.983 s, arms 1.997 s, finalize 6.749 s, post-hoc diagnostic 0.189 s).
+
+**Verdict:
+`TWO_SPLIT_PROBE_VALIDATED__ATTENUATION_ALGEBRA_EXACT__INTERACTION_OCCASION_BOUND`.
+V-1 HOLD, V-2 HOLD, V-3 HOLD. No pivot fires (P1a/P2a/P3a all no).**
+
+- **Part 0 — all five gates pass.** G0a: five-channel reconstruction residual
+  **2.220446049250313e-16**; realized shares within **0.0069843772** absolute of
+  design (relative max 0.0305321845, dominated by `common(o)`, whose realized
+  variance rests on only n_occ occasion draws — analytic relative sd 5.259% at
+  n_occ=8, so 0.58σ); the two occasion-keyed streams read independent
+  (|corr| ≤ 0.0724678130 against a sampling sd of 0.0510310363 = 1.42σ).
+  G1a: minimum card-panel RMS change over all non-zero channels
+  **0.0097964619** (floor 1e-6); w_int arms differ by RMS ≥ 0.0808514536
+  (response) / 0.0172921872 (card). **`common(o)`'s card-panel residual is
+  EXACTLY 0.0 — T3's designed cancellation, disclosed and excluded from the gate
+  by argument.** G2a: pooled lag-1 ACF reads back the pinned φ_slow in 12/12
+  cells family-wise (10/12 at an uncorrected per-cell 95%; the single miss is a
+  2.23σ fluctuation, confirmed against an independent Monte-Carlo of the
+  estimator's own expectation, max |E[φ̂] − φ| = 8.51e-04). G3a: MDEs per cell,
+  every clause satisfiability-checked with DIRECTIONS stated, the V-3a
+  equivalence margin set by a pre-stated ν∈{1,2,4} ladder (ν=1 at n_occ=8,
+  ν=4 at n_occ=32). G4a: the 12-cell point-prediction table computed from the
+  appendix A/B algebra before any arm.
+- **V-1 [.80] HOLD.** Gap CI contains the Part-0 prediction in **11/12** cells
+  (threshold 10), and — the sharper clause — **the (φ_slow, n_occ) ordering
+  matches the prediction EXACTLY in both arms and in the pooled 12-cell
+  reading**, including the algebra's non-monotonicity in φ and the
+  arm-dependent (0.98,32)/(0.9,8) rank swap that only RN-2's renormalization
+  produces. The single miss (`phi0.9_occ8_intequal`) is 0.00012 outside a
+  0.0051-wide interval and STABLE at B=20000.
+- **V-2 [.80] HOLD, 12/12** (and 12/12 under the author-centred second
+  reading). Largest absolute error 0.0021079, largest relative error **0.30%**,
+  under CI half-widths as tight as 0.0006. `r = σ_b/√(σ_b²+Var(s̄)+Var(s̄_int)
+  +σ_e²/n_eff)` with the exact AR sum at m = n_occ is exact on this world to
+  within measurement error at 2048 authors.
+- **V-3 [.75] HOLD, 6/6 and 6/6.** The interaction's contribution to the
+  CONTIGUOUS cross-half reproducible covariance clears the margin in all six
+  cells under **all three readings** (registered one-sided upper,
+  occasion-inflated upper, two-sided TOST) — and clears even the strictest ν=1
+  margin: largest one-sided upper anywhere **+0.0017942**, |λ| ≤ 0.0374 of one
+  shared occasion's worth. The same-occasion signature has one-sided lower CI
+  > 0 in all six cells **and lands on its predicted magnitude `(C/n_occ)(1−1/n)`
+  in 6/6**. The interleaved split (second reading, also predicted 0) agrees.
+  **IDT appendix E.2's missing object now exists, is measurable, and is typed
+  correctly: invisible across occasions, fully visible within one.**
+- **Rule 13, first application: 6 clauses triggered, ZERO BOUNDARY** — every
+  triggered verdict stable at B=20000, including `phi0.98_occ32_intequal`'s gap
+  sitting 1.8e-05 (0.43 MC sd) inside its CI edge. Cost ≈ 4 s; changed no
+  verdict.
+
+**The one non-exactness, and the K2b consequence (report §1.4).**
+`ρ_interleaved` **alone** contains its prediction in only 8/12 cells — and the
+misses partition perfectly by design: **6/6 containment where there is no
+interaction channel, 2/6 where there is.** Cause (pre-declared in G3a): the
+registered authors-within-world bootstrap CONDITIONS on each world's realized
+occasion-level draws, including the interaction shocks `S(o)`, whose realized
+second moments fluctuate at relative sd √(2/k)=20.4% per occasion (3.61% on the
+card's interaction variance at n_occ=8) — a ±0.0017–0.0019 wobble the
+conditional CI (se ≈ 0.0010–0.0015) cannot cover. A post-hoc world-block
+resample (flagged post-hoc, not a lean input) raises w_int>0 containment from
+2/6 to 5/6, confirming a coverage effect rather than an algebra error.
+**V-1's registered statistic survives because both splits carry the identical
+`C/m_h` interaction term, so the wobble largely cancels in the DIFFERENCE.**
+Standing consequence for K2b: *read the gap, not either half*; any clause about
+a single split's ρ must use a world-level resample or carry the analytic
+occasion-level term. Recorded second readings for the same object:
+mean-of-cosines **5/12**, mean-centred pooled Pearson **11/12**, registered
+uncentred pooled **11/12** — build on a pooled second-moment form, not a
+mean-of-cosines.
+
+**Two registration ambiguities were caught and resolved BEFORE any main arm and
+before any hypothesis-relevant number existed** (rule 9, both readings reported
+in the report's Part 0): (i) G2a's ACF clause pinned neither CI level nor
+multiplicity — resolved to family-wise 95% over the 6 distinct (φ, n_occ)
+pairs, since a 12-of-12 uncorrected per-cell 95% requirement fails 26.5% of the
+time on a correct generator; (ii) "realized shares within 1% of design" is
+unsatisfiable under a 1%-relative reading (a 0.19σ demand on `common(o)` at
+n_occ=8) — resolved to the absolute percentage-point reading, with the
+derivation. A third disclosure carries no ambiguity: `common(o)` is exactly
+inert in this leg's measurement space by T3, which is why its share
+fluctuation cannot touch V-1/V-2/V-3.
+
+**Construction audit (rule 8), run after the arms and disclosed as such:**
+this leg's `mean_part` + latent→64 mirror is verified **bit-identical
+(residual 0.0)** to f2's own `generate_world_composed` in all six
+(φ_slow, n_occ) configurations, using f2's own generator with
+`w_mu=1, w_x=0, w_e=0` as a bit-exact oracle. It was an asserted docstring
+claim at Part 0 and became a measured one only in the post-arms `diagnostic`
+stage; `gates.json`/`decision.json` were not rewritten, so the Part-0 audit
+trail is untouched.
+
+**The instrument is delivered and K2b is unblocked** on the T4-simple vs
+T4-reader-mediated branch, with a validated card-level positive control and a
+world that can express person×occasion content.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
