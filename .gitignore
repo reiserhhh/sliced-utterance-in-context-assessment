@@ -1,5 +1,6 @@
 # Generated outputs
 results/
+results_lockbox/
 logs/
 reports/_benchmark_*.md
 reports/_shard_*.md

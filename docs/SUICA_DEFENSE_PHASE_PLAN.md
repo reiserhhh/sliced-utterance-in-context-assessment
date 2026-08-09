@@ -406,3 +406,104 @@ committed manifest; `reports/SUICA_D3_ARTIFACT_LOCKBOX_REPORT.md`;
 outcome appended here; ledger row; ONE commit
 (`feat(defense): D3 — ...`), never amended, not pushed by the agent.
 Budget: I/O only; target < 15 min wall.
+
+### D3 outcome (appended 2026-08-10, AFTER run)
+
+**G3X: LOCKBOX-COMPLETE. Zero named gaps.** Harness
+`scripts/run_suica_d3_artifact_lockbox.py` (re-runnable, 11.5 s);
+archives `results_lockbox/` (gitignored, local); committed manifest
+`docs/SUICA_D3_LOCKBOX_MANIFEST.json` (79 KB, 363 file entries); report
+`reports/SUICA_D3_ARTIFACT_LOCKBOX_REPORT.md` (Part 0 — scope
+reconciliation, pinned conventions, tool versions — written and flushed
+to disk BEFORE the first archive was built).
+
+**Scope reconciliation, and a wording debt in this registration.** The
+Scope paragraph above says "the thirteen `results/` trees named in D2's
+registration, plus `results/d1_sealed/` and `results/d2_verification/`",
+and G0X then calls the total "the fifteen trees". Enumerating what D2's
+claim table actually names gives **fifteen** `m4_*` trees, not thirteen —
+C6's T4-composite row alone covers five (`k2a`/`k2b`/`k2c`/`k2d`/`k2e`)
+and C4 covers both `k1c_ownership_live_knob` and
+`k1c_prime_author_share`. The true total is **15 + 2 = 17**. D3 archived
+all **17** — the superset, so nothing the registration intended is
+missing under either reading. **Planner defect #41 (rule-8-in-prose,
+recorded):** the same arithmetic slip carried twice in one section.
+
+**Contents: 17 trees, 363 files, 168,659,718 source bytes →
+72,392,388 archive bytes (42.9%).** Largest trees `m4_k2c_matched_pairs`
+(37 files / 47.7 MB), `m4_k2d_frontier_carrier` and
+`m4_k2e_double_matching` (35 files / ~41 MB each); smallest
+`results/d1_sealed` (2 files / 20 KB).
+
+**G0X PASS.** D2's input list was extracted **by AST from D2's own
+source**, not read off by eye: 20 distinct literal `rt()`/`js()` paths,
+all 20 covered, plus 2 f-string path templates expanding to 48 archived
+files (the K-R1 per-world `cell_*_{intact,deframed}_w*.csv` chunks) —
+**68 D2 input files covered, 0 uncovered, 0 templates matching nothing**.
+Every one of the 363 files was opened and read to EOF while hashing: no
+unreadable file, no symlink, no special file, no size drift. D2's single
+non-`results/` read (`docs/SUICA_M4_F_PANEL_DESIGN_SYNTHESIS.md`) is a
+tracked repo file, recorded as covered-by-git rather than by the lockbox.
+
+**G1X PASS 17/17.** Every archive re-read from disk, re-hashed against
+its in-memory hash, decompressed and checked against its inner-tar hash,
+and one sampled member per tree (D3-R6: largest file) extracted and
+byte-compared with the original — **16,380,860 sampled bytes, all
+identical**.
+
+**Determinism: DETERMINISTIC.** The D3-R7 probe (`m4_kr1_deframing_repair`,
+most files) built twice in-process is byte-identical. Stronger, unplanned:
+the harness ran as **three separate processes** and all 17 archive
+SHA-256s were identical across every invocation, so determinism survives
+process restart.
+
+**G2X purity ENFORCED, not asserted:** stdlib imports only — not even
+`numpy` — audited by a `sys.modules` scan at exit (0 `suica*` modules at
+entry, 0 at exit). 0 worlds, 0 panels, 0 RNG calls, `suica_core/`
+untouched.
+
+Four observations, none changing a verdict. (1) The scope arithmetic
+above. (2) **`results_lockbox/` was NOT gitignored** when the leg began
+(`git check-ignore` returned 1); the rule was added to `.gitignore` in
+this leg's single commit — disclosed because it is a repository change
+the registration did not itemise, and without it ~69 MB of archives
+would have been commit-eligible. (3) **The committed manifest now
+carries an *unsalted* SHA-256 of `results/d1_sealed/D1_SEALED_BUNDLE.json`.**
+D1's public commitment is deliberately *salted*, and the salt exists to
+stop an adversary confirming a *guessed* plaintext; the registration
+binds this manifest to a per-file SHA-256 for every file in every
+in-scope tree, `d1_sealed` included, so it was published as instructed.
+Practical leak nil (a ~20 KB JSON, not a short guessable string) and the
+net effect is a strictly stronger commitment — flagged anyway, because it
+narrows a protection D1 bought on purpose. The sealed bundle itself was
+archived as **opaque bytes**: never parsed, never printed, never
+summarised. (4) Source file modes are normalised away (D3-R3) so the
+archive hashes do not inherit this volume's permission quirks; `d1_sealed`
+is mode 0700 here, not the 0600 D1's adjudication records.
+
+**Protocol, pinned by written rule before the run (rule 9).** Compressor
+by the rule *"zstd iff `import zstandard` succeeds in the declared
+interpreter, else gzip"* — `zstandard` is **not importable** in the venv
+(a `zstd` CLI exists on this machine but the rule says *in the venv*, and
+stdlib gzip is the more portable choice for an archive meant to survive
+this machine), so **gzip**, `compresslevel=9`, `mtime=0`, no FNAME.
+Tar: `USTAR_FORMAT`, members sorted by UTF-8 byte order, explicit
+directory entries, `mtime=0`, `uid=gid=0`, empty `uname`/`gname`, fixed
+0600/0700 modes, no atime/ctime field in the format at all. Member paths
+carry the `results/` prefix so `tar -xzf` at the repo root restores in
+place. **Both** the inner-tar and the compressed-archive SHA-256 are
+recorded (D3-R5), so content identity survives a future zlib version
+change. Verified with stock system tools outside the harness: BSD
+`tar -tzf` lists members cleanly, `shasum -a 256` reproduces the
+manifest hashes, and a `tar -xzf` + `diff -r` round trip of
+`m4_l1_typed_world` reports no difference.
+
+**Budget: 11.5 s harness, leg well inside the < 15 min target.** No
+run-time anomalies.
+
+**OWNER ACTION REQUIRED (same standing as D1's bundle, repeated in the
+report's Part 8):** the 17 archives exist ONLY at `results_lockbox/` on
+this machine, gitignored, 72,392,388 bytes total. The manifest is
+committed; the archives cannot be. **Copy the directory off-machine** —
+a committed manifest whose archives no longer exist proves only that the
+bytes were once hashed, not that anything is still verifiable.
