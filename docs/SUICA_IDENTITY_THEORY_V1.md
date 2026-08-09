@@ -1194,3 +1194,41 @@ containment bars). Line synthesis:
 `docs/SUICA_M4_L_TYPOLOGY_LINE_SYNTHESIS.md`. Scope as always:
 EXPLORATORY, synthetic, instrument-world claims; nothing here licenses
 claims about persons.
+
+## Dated appendix T (2026-08-10, after D2): the headline table is adversarially verified; corrections and the fragility annex
+
+**D2 (defense phase) re-derived the 10-row headline table from raw
+per-cell artifacts, refute-tasked and independent: 7 CONFIRMED, 3
+QUALIFIED, 0 REFUTED, 0 UNVERIFIABLE.** The table stands. The QUALIFIED
+rows are wording debts of this document and the syntheses, corrected
+here by dated note (defect #40, four instances, planner's prose):
+
+1. Appendix C.1: read "0 flips out of 31,520" as reader-A over the
+   FOUR non-oracle norm arms (five arms would be 39,400); reader B's
+   5,473 flips violate T3(c)'s hypothesis by construction, as the K1
+   report disclosed.
+2. Appendix C.2: the free-design inertness bound is ≤ 0.00452 (true
+   max 0.004512746557818383), not "≤ 0.0045".
+3. K-R1 (appendix N and the K synthesis): the true quantifier is
+   stronger — 0 positive of 192 arm-world deltas.
+4. The L synthesis's "three independent confirmations" of the floor
+   law reads honestly as: two independent curve confirmations (L2 and
+   L3, each 7/10 containment with EXACT η-ordering; L3's misses at
+   3.6e-14 / 2.2e-04 / 3.3e-07) plus L1's pole anchors, one of which
+   is a designed identity. Appendix S item 5's "under every reading"
+   scopes to the ten per-arm slices (Spearman 1.0 in 10/10); the
+   cross-arm pooled Spearman is 0.985.
+
+One artifact note: K1's persisted L3 slope differs from the
+exact-rational OLS of its own CSV by 1.18e-13 — sub-display-precision,
+containment unaffected, recorded.
+
+**Fragility annex (adopted; binds the D1 seal's opening
+expectations):** q is three numbers across legs (1.8327 / 1.8529 /
+1.9338; 19-arm R² 0.868) — cite it as a band, not a constant; κ's
+R² 0.9935 rests on six leveraged pairs (9-pair refit −0.7146); γ moves
+±0.01 under weight-scheme choice; the K3 rotation bound consumed 99.8%
+of its own headroom; de-framed λ = 0.0008 is a boundary value on an
+unidentified power law. None of these re-scores a lean; all of them
+constrain how the numbers may be QUOTED and how the sealed predictions
+must be judged at opening.

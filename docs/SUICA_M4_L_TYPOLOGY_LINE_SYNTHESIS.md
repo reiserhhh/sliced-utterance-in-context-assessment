@@ -59,3 +59,7 @@ arm, the defective verdict disclosed rather than overwritten.
 3. **Real-text transport** — as everywhere in the program: these are
    instrument-world laws at EXPLORATORY tier; no shared-occasion,
    typed real corpus exists; stated as a limitation, not a queued test.
+
+**Dated stamp (2026-08-10):** the L-line rows of the headline table were
+adversarially verified in defense leg D2: floor law and taxometer rows
+QUALIFIED on wording only (honest grading in IDT appendix T), 0 REFUTED.

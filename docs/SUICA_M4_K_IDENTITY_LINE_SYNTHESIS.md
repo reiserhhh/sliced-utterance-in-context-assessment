@@ -127,3 +127,8 @@ three retrospective re-typings executed, one theory built, measured, and
 closed. Per the program owner's standing phase instruction, the
 theory-completion condition is met and the DEFENSE phase charter opens
 (`docs/SUICA_DEFENSE_PHASE_CHARTER.md`).
+
+**Dated stamp (2026-08-10):** the K-line rows of the headline table were
+adversarially verified in defense leg D2 (refute-tasked, independent,
+raw-row re-derivation): C1–C7, C10 all CONFIRMED or QUALIFIED-on-wording,
+0 REFUTED. Wording corrections and the fragility annex: IDT appendix T.

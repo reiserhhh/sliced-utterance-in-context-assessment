@@ -325,3 +325,84 @@ and not a tautology. Budget: harness 0.5 s, leg wall **~80 min against a
 reverse-engineering undocumented aggregation formulas (C5's WLS, C6's κ
 regression, C7's cos-law) from persisted artifacts, with the three
 timed anomalies listed in the report's Part 6.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+**P3V executes: the 10-row headline table is D2-VERIFIED (7 CONFIRMED /
+3 QUALIFIED / 0 REFUTED / 0 UNVERIFIABLE)** — an adversarial,
+refute-tasked, independent re-derivation from raw per-cell rows, with
+every failed refutation attempt on the record. The three QUALIFIED rows
+and four citation defects are WORDING debts, all mine, none numeric at
+claim level; they are corrected by dated note (IDT appendix T), never
+rewritten. Highlights of the verification's strength: C4's share
+bit-exact from 128 raw world rows; C5's fitter re-implemented from
+source text so bit-exactness is evidence, not tautology; C10's 0/192
+recomputed from the 48 raw per-world files.
+
+**Planner defect #40 (recorded, 4 instances, rule-8-in-prose):**
+appendix C.1's "five arms" (31,520 is four; reader-A only); appendix
+C.2's "≤ 0.0045" (true max 0.004512746557818383); K-R1's "0/32 worlds"
+(true and stronger: 0/192 arm-worlds); synthesis wording on the floor
+law's "three confirmations" and the taxometer's "every reading"
+(cross-arm pooled Spearman is 0.985, not 1.0). One upstream artifact
+note: K1's persisted L3 slope differs from the exact-rational OLS of
+its own CSV by 1.18e-13 (−1.0865327686128703 vs −1.0865327686127524) —
+sub-display-precision, containment unaffected, recorded.
+
+**Fragility annex adopted (binds D1's opening expectations):** q is
+three numbers across legs (1.8327/1.8529/1.9338; 19-arm R² 0.868); κ's
+R² 0.9935 rests on six leveraged pairs (9-pair refit −0.7146; two
+Δvar≈0 pairs degenerate); γ is weight-scheme dependent (±0.01); C7's
+cos-law bound consumes 99.8% of its own headroom; de-framed λ = 0.0008
+is a boundary value on an unidentified power law. **Convention added:
+every future leg's decision.json aggregates name their computing
+function (file:line) — D2's 55-minute overrun was the price of
+undocumented aggregation.** D2's budget overrun (85 vs 30 min) is
+accepted as disclosed and well-caused.
+
+---
+
+## D3 — The artifact lockbox: verification must survive this machine
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. D2 proved every headline claim re-derives
+from local artifacts — which all live in gitignored, machine-local
+`results/` trees. D3 makes that verification portable: a
+content-addressed archive whose MANIFEST is committed, so that any
+future holder of (repo + archives) can re-run D2's harness.
+
+### Scope (the archive set)
+
+The thirteen `results/` trees named in D2's registration, plus
+`results/d1_sealed/` and `results/d2_verification/`. Per tree: a
+deterministic tar (sorted paths, fixed mtimes) compressed, its SHA-256,
+and a per-file manifest (path, size, SHA-256).
+
+### Gates
+
+- **G0X (completeness)** — the manifest covers every file D2's harness
+  read (cross-checked against the harness's own input list) and every
+  file in the fifteen trees; any file present-but-unreadable is a
+  defect.
+- **G1X (integrity)** — after writing, every archive is re-read,
+  re-hashed, and one sampled file per tree is extracted and compared
+  byte-for-byte.
+- **G2X (purity)** — no world generation; archival I/O only.
+- **G3X (rule 16, trivial)** — LOCKBOX-COMPLETE / LOCKBOX-PARTIAL
+  (named gaps) / LOCKBOX-FAIL.
+
+### Committed vs local
+
+COMMITTED: the manifest (`docs/SUICA_D3_LOCKBOX_MANIFEST.json` — paths,
+sizes, per-file and per-archive SHA-256, creation protocol). LOCAL
+(gitignored): the archives under `results_lockbox/`, with the owner
+copy instruction repeated in the report (same standing as D1's bundle:
+off-machine copies are the owner's action).
+
+### Deliverables
+
+The six: `scripts/run_suica_d3_artifact_lockbox.py`; the archives +
+committed manifest; `reports/SUICA_D3_ARTIFACT_LOCKBOX_REPORT.md`;
+outcome appended here; ledger row; ONE commit
+(`feat(defense): D3 — ...`), never amended, not pushed by the agent.
+Budget: I/O only; target < 15 min wall.
