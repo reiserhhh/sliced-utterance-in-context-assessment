@@ -931,3 +931,113 @@ PROVED (global)**. The certificate metaphor closes exactly: there is no
 ID without an issuer, no line-up without a gallery, no reading without
 coordinates — only the choice of which price to pay, and the prices are
 now measured.
+
+## Dated appendix P (2026-08-09, evening): IDT-R — the reverse reading. Typology, identity removal, and what "error = 0" asserts
+
+Origin (program owner, same date): *the old hypothesis — assuming error = 0
+is assuming there is no identity; conversely, if identity were REMOVED,
+would correct personality GROUPING become possible? Can this be proven?*
+
+**P.1 — The figure-ground inversion.** Extend A1 with a TYPE layer:
+
+    x(i,o) = μ(o) + τ_{g(i)} + b_i + s(i,o) + ε(i,o)
+
+where g(i) ∈ {1..G} is a latent group, τ_g the type vector (shared within
+a group), and b_i the WITHIN-TYPE individual identity (deviation from
+one's own type centroid). The K-line read b as the signal and everything
+shared as frame; the reverse reading takes τ as the signal and b as
+interference. This is the **complementarity principle**, third
+instantiation: every layer (frame / type / identity / state / noise) is
+signal for exactly one question and interference for the others; a reader
+must declare its target layer, and suppression operations are only valid
+for the structure they exploit (averaging kills ε; frame refreshment
+kills s and issuer forgeries; cross-person pooling reveals τ; and b has
+NO intrinsic suppression operation — which is exactly why typology is
+hard in identity-bearing worlds, and why identity was the hard signal in
+the K-line).
+
+**P.2 — Theorem R1 (circularity, and its resolution). [PROVED]**
+"Remove identity, then group" is circular as stated: b_i is DEFINED as
+c_i − τ_{g(i)}, so removing it requires knowing g — the very output of
+grouping. Made algorithmic, the proposal is exactly alternating
+minimization: (given groups, estimate identities as residuals and remove
+them) ⇄ (given identity-removed cards — the centroids — re-group). This
+is Lloyd's algorithm / EM for a mixture. Consequently: (i) the
+procedure's fixed points are the local optima of the joint
+type+assignment objective — the conjecture cannot be proven as an
+unconditional algorithm, because its algorithmic form inherits
+clustering's local-optimum structure; (ii) it IS provably correct in the
+separation regime of R2. The owner's proposal, formalized, is the E-step
+read as an identity operation — and that identification is itself the
+first result.
+
+**P.3 — Theorem R2 (the geometry dichotomy — when identity removal is
+possible without knowing groups). [PROVED, sketch]** Let cards be
+c_i = τ_{g(i)} + b_i + η_i with types supported in a k_τ-dimensional
+subspace S of R^m, minimum centroid separation Δ.
+
+- **ISO case** (identity isotropic: energy σ_b² spread over all m
+  dimensions): distance-based grouping suffers the FULL identity energy
+  (within-type squared distances inflate by ~2σ_b²), but projection onto
+  S (estimable from the top of the pooled spectrum without group labels)
+  retains only ~(k_τ/m)·σ_b² of it — an **SNR improvement of order
+  m/k_τ**, and grouping is consistent whenever Δ² ≳ (k_τ/m)σ_b² + noise.
+  Here the conjecture is TRUE and quantified: identity CAN be suppressed
+  before grouping, because it lives off the type axes.
+- **ALIGNED case** (identity supported IN S — people differ along the
+  same axes that distinguish types): projection removes nothing;
+  b displaces persons across type boundaries irreducibly, and grouping
+  error has a FLOOR ≈ Φ(−Δ/(2σ_{b,u})) per boundary (σ_{b,u} the
+  identity sd along the boundary normal). Here the conjecture is FALSE
+  in principle: "removing identity" would remove position in trait space
+  itself — the types are discretizations of the very continuum identity
+  lives on.
+
+**The dichotomy is the honest answer to "can it be proven": the
+conjecture is provable exactly when identity is geometrically off-axis
+from type structure — and whether it is, in any given world, is an
+empirical taxometric fact, not a theorem.** (This is the classical
+types-vs-dimensions question — Meehl's taxometrics — restated as a
+subspace geometry condition inside IDT.)
+
+**P.4 — Theorem R3 (what "error = 0" asserts, and the completeness
+audit). [PROVED as definition-consequence]** The zero-error/typological
+assumption asserts b ≡ 0 and s ≡ 0 within types: all members of a type
+are exchangeable. IDT makes this FALSIFIABLE with instruments we already
+validated: within-type deviations must carry NO frame-refreshed,
+occasion-reproducible component (T6″). Hence:
+
+- **Audit criterion:** a typology's *completeness defect* := the
+  surviving-identity share of its within-group deviations (measured by
+  the T6″ discriminator). Zero ⟺ the typology's own error-free claim
+  holds on that population.
+- **Impossibility half:** in an identity-bearing world (σ_b > 0), EVERY
+  typology has completeness defect ≥ the b-share — typological
+  completeness is impossible there, and its failure is a measurable
+  number, not a philosophical complaint.
+- **Distinction kept:** partition-CORRECTNESS (groups match g) and
+  completeness (no surviving identity) are different properties; correct
+  partitions still fail the completeness audit whenever b > 0. The
+  owner's 誤差=0 hypothesis is thereby converted from an assumption into
+  a STOPPING RULE and audit meter for any grouping method.
+
+**P.5 — R4 (the identity tax on grouping — registered for measurement).**
+The K-line measured identity content taxing FRAME reading (negative
+author share) and person-variance taxing TRAIT reading (κ ≈ 0.72). The
+reverse reading predicts the third tax: grouping accuracy (ARI) declines
+in identity share at fixed Δ along an R2-geometry curve, with oracle
+identity removal restoring it in ISO worlds and NOT in ALIGNED worlds.
+This, the audit calibration, and the dichotomy's floor are the M4-L
+line's instrument leg (L1), registered before run in
+`docs/SUICA_M4_L_TYPOLOGY_LINE_PLAN.md`.
+
+**P.6 — Literature anchors (positioning only, citation pass PENDING).**
+Taxometrics and the types-vs-dimensions debate: Meehl 1992, 1995;
+personality-type literature (resilient/over-/under-controlled types:
+Asendorpf; Specht et al.; Herzberg & Roth); mixture separation and
+provable clustering (model-based clustering: Fraley & Raftery; separation
+conditions for Gaussian mixtures and spectral methods: Achlioptas &
+McSherry, Vempala & Wang); EM/Lloyd fixed-point structure. No specific
+claims asserted from memory.
+
+Scope unchanged: EXPLORATORY, synthetic, instrument-world claims only.
