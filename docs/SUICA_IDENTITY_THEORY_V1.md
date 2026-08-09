@@ -388,3 +388,61 @@ become predictions only if K2 registers them fresh):
 - F9's long-window row (0.0596, 0.0495, 0.0785, 0.0433 across B=1,2,4,8) is
   non-monotone at se≈0.01 — the signature of a floor plus noise, consistent
   with (not probative of) a reader-set floor.
+
+## Dated appendix C (2026-08-09, after M4-K1): T3(f) decided AGAINST the idealization — the deployed gauge AMPLIFIES the frame; and T6 is forgeable without frame refreshment
+
+M4-K1 executed (agent commit 10cea75; adjudication in the plan doc). What it
+did to the theory:
+
+**C.1 — What survived, at machine precision.** The card-space layer is fully
+intact. T3(a–c): 0 rank-1 decision flips out of 31,520 probe cells across all
+five norm arms (0 ties excluded), card-difference matrices invariant to
+4.09e-16 / 4.14e-16 against a 1e-9 bar — with norms actually subtracted, no
+algebraic shortcut. T3(e)'s issuer price on a deployable absolute reader is
+large, lawful, and free-design-specific: oracle − est8 = +0.09695431472081219,
+CI [0.08819796954314721, 0.10596763959390862], 8/8 worlds, 6.3× MDE; the
+1/|P| law lands at slope −1.0865327686128703, CI [−1.0990, −1.0735]; the
+design × issuer-quality interaction is +0.022461928934010153, CI
+[0.011796, 0.032487], 7/8.
+
+**C.2 — What died: T3(f).** Structural audit (G2) returned Branch B: the
+deployed gauge consumes norm position directly (absolute means and quantiles,
+quadratic lag products, tanh currents, a fixed D0 standardizer). And L5
+MISSED with a POSITIVE sign: a pre-map common occasion shift — content no
+card-space contrast can see — INCREASES the gauge's split-half agreement:
+Δ = +0.015881141 at 0.5× (CI [0.003953, 0.027809]), **+0.092543049 at 1× (CI
+[0.057781, 0.127306]) — 3.54× the entire F2 composition effect** — and
++0.549686516 at the 2× stress arm, while free designs are inert (|Δ| ≤
+0.0045). The deployed relational gauge is not issuer-robust; it is
+**issuer-amplifying**: shared-frame content is read as agreement. T5's price
+table gains a line — the relational reader's price is not only gallery
+composition but amplification of shared-frame content into apparent identity
+consistency.
+
+**C.3 — Annotation to §4's F2 retrodiction row (annotation, not rewrite).**
+The ownership of F2's +0.026163263306726227 is now genuinely open: F2's
+shared arms contain NATIVE common structure (w_mu = 0.15, the same scale
+class as the author channel w_x = 0.15), and the gauge responds to a 1×
+common shift with 3.54× the whole effect. Until M4-K1b decomposes it, the F2
+row licenses only "composition changes what the gauge reads" — NOT
+"composition improves author reading". The D3 design prior inherits this
+caveat.
+
+**C.4 — T6″ (frame-refreshed discriminator).** K1's disclosed by-product:
+under the T3(c)-hypothesis reader in the free design, issuer sampling error
+becomes a person-specific, occasion-half-REPRODUCIBLE component that IMPROVES
+re-identification (est8 beats oracle: pooled −0.050127, CI [−0.056726,
+−0.043782], 0/8 in the registered direction, monotone the wrong way) — **a
+forged identity that passes T6's own discriminator**, manufactured by issuer
+error interacting with person-specific occasion sampling. Patch, now part of
+the theory and under test as K1b lean L-d: **Id(i|F) requires stability under
+JOINT resampling of occasions AND frame** (the issuer re-estimated
+independently per replicate). Reproducibility measured under a shared frame
+is forgeable; reproducibility under frame refreshment is the licensed
+discriminator.
+
+**C.5 — Reader-design lemma (informal, from the same by-product).** A
+split-half re-identification reader cannot simultaneously satisfy T3(c)'s
+common-norm hypothesis and remove the occasion effect; the two constructions
+are inequivalent instruments. Every constructed reader must declare which it
+is (plan-doc standing rule 9). Input to K3.

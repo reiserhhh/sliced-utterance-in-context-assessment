@@ -268,6 +268,169 @@ jurisdiction-misalignment shares, knowing the statistic responds +0.0925 to a
 shift no card can see. IDT §4's F2 retrodiction row is to be **annotated, not
 rewritten**, and T3(f) recorded as decided against on the deployed gauge.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Leans scored as executed: L1 HOLD (designed identity confirmed at 4.1e-16,
+0/31,520 flips), L2 HOLD clean (8/8, 6.3× MDE), L3 HOLD (slope −1.0865 ⊂
+[−1.35, −0.65]), L4 HOLD at the bar (7/8, pooled CI excludes 0), **L5 MISS
+with a positive sign — amplification, not mere leakage**. P1/P2/P4 do not
+fire; **P3 fires and is binding**: K1b (below) replaces K2 as the next
+registration; K2's two-channel charter stays queued behind it. Theory
+consequences recorded in IDT dated appendix C (T3(f) decided against on the
+deployed gauge; T5 price table extended; T6″ frame-refreshed discriminator
+proposed from the disclosed forged-identity by-product; F2 retrodiction row
+annotated).
+
+**Planner registration defect (ninth in the program's account), recorded not
+repaired:** the K1 registration underdetermined R-abs's norm convention —
+T3(c)'s hypothesis (one common probe/gallery norm) and the deployable
+construction (per-half estimated norms) are inequivalent readers, and the
+registration named one reader where two exist. The executing agent caught it
+BEFORE the pilot, resolved it by theory argument, computed BOTH readers for
+every cell, and pinned the per-lean assignment in Part 0 — the correct
+behavior under the conventions. **Standing rule 9 (added 2026-08-09, paid for
+by this defect):** a registration that introduces a constructed instrument
+pins every convention that changes its hypothesis-relevance, or pre-delegates
+the choice with an explicit decision rule; an instrument ambiguity discovered
+mid-leg is resolved before any hypothesis-relevant number exists and ALL
+readings are reported.
+
+Smoke-run disclosure adjudicated: an 80-author smoke run confirming the
+mechanism preceded the report's Part-0 writeup (agent disclosed it with its
+numbers, §R-0.10). The leans and priors were committed at c902498 BEFORE
+dispatch, so registration-level pre-commitment is intact; recorded, no lean
+re-scored. Convention tightened for future dispatches: smoke runs touching
+the hypothesis channel run AFTER Part 0 is written, or are declared part of
+Part 0.
+
+---
+
+## M4-K1b — Ownership of the composition effect: author-reading or frame-amplification?
+
+**REGISTERED 2026-08-09, BEFORE RUN** (P3's binding consequence). Planner:
+this document's author. Executor: dispatched agent.
+
+### Question
+
+K1-L5 proved the deployed gauge converts common-frame content into agreement
+(+0.092543049 at a 1× pre-map shift = 3.54× F2's whole composition effect;
+free designs inert, |Δ| ≤ 0.0045). F2's shared arms contain NATIVE common
+structure (w_mu = 0.15 — the same scale class as the author channel
+w_x = 0.15). K1b decomposes F2's composition effect (+0.026163263306726227)
+into (i) a **frame-amplification share** — removed when the common structure
+is removed — and (ii) a **jurisdiction-alignment share** — surviving its
+removal. Secondary question: validate T6″ (frame-refreshed discriminator)
+against K1's measured forged identity.
+
+### Facts cited (rule 8)
+
+F2 numbers re-verified 2026-08-09 at artifact precision (K1 registration
+above). K1 numbers cited from the agent's run are re-verified bit-exactly by
+gate G1b below before any new arm.
+
+### Machinery
+
+Extend K1's script machinery. New script:
+`scripts/run_suica_m4_k1b_composition_ownership.py`. **32 fresh worlds**,
+master_seed 20260811, F2 knobs, F2 designs (shared κ=1.0, free) and the
+deployed gauge unchanged.
+
+### Arms (deployed gauge R-rel throughout the primary question)
+
+- **A0** shared, intact (fresh-seed F2 replication);
+- **A2** free, intact;
+- **A1** shared, common structure REMOVED — primary path: exact pre-map
+  subtraction of the generator's own common channel; pre-registered fallback
+  (decision rule, no discretion): if G2b's additivity check fails at 1e-12,
+  use twin generation with w_mu = 0 at identical seeds as THE arm;
+- **A3** free, common structure removed (specificity control);
+- **A4** shared, ESTIMATED subtraction — per-occasion μ̂(o) from 32 disjoint
+  authors' responses (the deployable-repair arm).
+
+Per world: Δ0 = A0 − A2; Δ1 = A1 − A3; amplification share
+Ŝ = (Δ0 − Δ1)/Δ0 pooled. Removal effects: R_or = A0 − A1; R_est = A0 − A4.
+
+Secondary (card level, K1's R-abs machinery, free design, first 8 of the 32
+worlds): reader A (T3(c)-hypothesis, one norm shared across halves) vs
+reader A′ (frame-refreshed: INDEPENDENT est8 norm samples per occasion
+half). Contrast tracked: rank-1(est8) − rank-1(oracle) under each reader.
+
+### Part 0 gates (written into the report before arms)
+
+- **G0** — dims pinned to K1's (985 authors/world; m-multiset {8:272,
+  12:200, 16:513}; 4 contexts; 565 retained); verify unchanged at the fresh
+  seeds' first world.
+- **G1 (replication gate)** — Δ0 pooled CI (32 worlds) must OVERLAP F2's
+  [0.01953599084902978, 0.032790535764422674]. FAIL → **STOP, leg VOID on
+  non-replication** (its own headline; no downstream interpretation).
+- **G1b (anchor)** — re-derive K1's L5 1× value +0.092543049 and L2's
+  +0.09695431472081219 from `results/m4_k1_issuer/` artifacts bit-exactly.
+- **G2b (surgical verification)** — response(with common) − oracle_common ==
+  twin response(w_mu=0) at identical seeds, max abs diff ≤ 1e-12 per event,
+  2 pilot worlds; verify author+noise channels bit-identical and the removed
+  channel exactly the common one. Additivity fails → declare and use the
+  fallback path.
+- **G3b (power, rule 2)** — from a 4-world pilot, sd of per-world (Δ0 − Δ1);
+  require MDE(80%, α=.05, paired t, n=32) ≤ 0.0130816 (= a 50% share of
+  F2's effect). Pilot forecast misses → escalate 32→64 worlds once; still
+  short → run and pre-declare the attained resolution, with claims tiered to
+  it. Aspirational resolution 0.0065408 (25% share) reported against
+  achieved MDE.
+- **G4b (channel liveness, rule 3)** — reproduce the 1× amplification on 3
+  fresh-seed worlds (sign + CI excluding 0); confirm the native common
+  channel's RMS lies within [0.5×, 2×] of the author-deviation RMS (the
+  scale-comparability premise).
+- **G5** — hygiene: manifest, per-stage seeds, wall-times, foreground
+  chunks, no monitors.
+
+### Leans (planner's committed priors) and aggregation (rule 1)
+
+32 worlds; per-world signs: clean ≥26/32, qualified ≥21/32, else fail;
+pooled paired bootstrap 2000 draws, 95% CI; leans adjudicated separately, no
+omnibus.
+
+- **L-a [prior .70]** — the amplification share is material: (Δ0 − Δ1)
+  pooled CI excludes 0 AND Ŝ ≥ 0.25.
+- **L-b [prior .60]** — a jurisdiction-alignment share survives: Δ1 pooled
+  CI > 0. (A MISS here with a large Ŝ is the retrospective-consequence
+  branch — see P2b.)
+- **L-c [prior .75]** — specificity: A3 − A2 pooled CI inside
+  ±0.006540815826681557 (same margin and justification as K1-L5).
+- **L-d [prior .65]** — T6″ holds: under reader A′ the forged advantage
+  collapses — |rank-1(est8) − rank-1(oracle)| pooled CI inside ±0.0251
+  (half K1's forged effect 0.050127) — while oracle rank-1 moves < 0.01
+  between A and A′ (frame refreshment must not damage genuine identity).
+- **L-e [prior .55; adjudicated ONLY if (Δ0 − Δ1) CI excludes 0, else
+  INAPPLICABLE]** — the deployable repair works: R_est CI excludes 0 and
+  pooled R_est/R_or ≥ 0.5.
+
+### Pivots (pre-committed)
+
+- **P1b** — G1 fails → leg VOID on non-replication; F2 non-replication
+  becomes its own registered follow-up.
+- **P2b** — L-a HOLD, L-b MISS, and Ŝ point estimate ≥ 0.75 → REGISTERED
+  CONSEQUENCE: the program's append-only retrospective mechanism opens for
+  every consumer of "composition works at fixed budget" (M4-F synthesis
+  §2/§3, the displacement-resolution doc's F-row, IDT §4 row 1): dated
+  claim-strength downgrade to "composition changes what the gauge reads;
+  author-reading share not established", and the D3 design prior re-typed
+  accordingly.
+- **P3b** — L-d MISS (forged advantage survives frame refreshment) → T6″ is
+  wrong as stated; the forged component is not issuer-sampling content; its
+  localization becomes the next registration; the discriminator stays
+  flagged unsafe.
+- **P4b** — G2b fails on BOTH paths (channels not separable) → leg blocked,
+  report, redesign; no silent arm substitution.
+
+### Deliverables
+
+The six as always: script; `results/m4_k1b_composition_ownership/`
+(manifest.json, gates.json, per-cell CSVs, decision.json);
+`reports/SUICA_M4_K1B_COMPOSITION_OWNERSHIP_REPORT.md` (Part 0 first);
+outcome appended here; ledger row; ONE commit
+(`feat(m4-k): K1b — ...`), never amended, not pushed by the agent. Budget:
+target < 30 min wall; stop-and-report at 2× any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
