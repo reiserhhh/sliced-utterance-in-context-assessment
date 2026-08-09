@@ -709,6 +709,137 @@ amended, not pushed by the agent. Budget: ~7 arms × 128 worlds ≈ 900
 deployed-gauge runs; target < 30 min wall; stop-and-report at 2× any Part-0
 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+**Verdict:
+`REGISTERED_FRAME_SHARE_DECOMPOSITION_DEGENERATE_AT_EVERY_KAPPA__PROVED_FROM_SOURCE_BEFORE_ARMS__P4C_FIRES__NO_ARMS_RUN`.
+**G2c FAILS: the registered A1/A3 decomposition is DEGENERATE at κ=0.5 — and,
+proved from f2's source, at EVERY κ ∈ (0,1]. P4c FIRES: STOP, planner defect,
+NO ARMS RUN.** L-a″/L-b″/L-c″/L-d″/L-e″ all **NOT ADJUDICATED**; P1c/P2c/P3c
+do not fire (their antecedents were never measured). Report
+`reports/SUICA_M4_K1C_OWNERSHIP_LIVE_KNOB_REPORT.md`; artifacts
+`results/m4_k1c_ownership_live_knob/`; script
+`scripts/run_suica_m4_k1c_ownership_live_knob.py`; **74.3 s total compute**,
+all foreground, **68 deployed-gauge runs, every one on a reserved Part-0 seed;
+0 adjudicated worlds**. Standing rule 10 — added yesterday and paid for by
+K1b — did exactly the work it was created to do, at 74 s instead of a 900-run
+leg.
+
+Part 0, written to the report before anything else. **G0c** dims `==` K1's on
+every field (985 authors, 12,784 allocated events, {8:272, 12:200, 16:513}, 4
+contexts, 565 retained), fresh κ=0.5 world 0 seed 3936073819076212475.
+**G1bc** bit-exact from `results/m4_k1b_composition_ownership/arms_a.csv` +
+`arms_b.csv` (recomputed, not read off the summary): Δ0
+**0.02416454033421539**, Δ1′ **0.04709060297774369**, L-e ratio
+**0.943890194474869**, each `==` `decision.json` `==` the registration text;
+F2's κ=0.5 block re-verified at artifact precision (free 0.0005009098594400375,
+shared 0.009337063556542562, paired 0.008836153697102524, CI
+[0.004418364530893362, 0.013253942863311687], `shared − free == paired`
+exactly).
+
+**G2c — the leg's result. The registration's premise is a non-sequitur, and
+the decomposition is degenerate at every knob.** From source:
+`occasion_mode` enters `f2.generate_world_composed` at exactly one place
+(`f2:180`), feeding exactly one object (`f2:184-193`, `shock_x`); `loadings, z,
+zeta, phi, x, noise` are drawn from a single `default_rng(world_seed)` **before**
+that loop while `shock_vector` opens its own generator (`f2:120-126`, invariance
+stated at `f2:139-145`); so `mean_part` (`f2:178`) and `noise_part` (`f2:197`)
+are design-invariant, and `state_part` (`f2:196`), being LINEAR in
+`blended_x = √(1−κ)x + √κ·shock_x` (`f2:195`), splits exactly into a
+design-invariant `ar_part` and the sole design-carrying `common_part`.
+**Therefore `response − common_part` is design-invariant for every κ ∈ (0,1]:
+A1 and A3 are the same panel and Δ1 ≡ 0.** √(1−κ) > 0 does keep the author AR
+state in the panel — but that state is design-invariant, so it cannot rescue
+the contrast. κ rescales `common_part` by √κ and changes nothing about WHICH
+channel carries the design. **K1b's report attributed the collapse to the
+κ=1.0 identity `blended_x == shock_x`; that attribution was too narrow — the
+collapse is general.** Measured on reserved worlds 9301–9302 at 985 authors:
+`mean_part`, `ar_part`, `noise_part` shared-vs-free **exactly 0.0**;
+`common_part` shared-vs-free **0.32733131995696163 / 0.3310376783451957** (the
+only design-carrying channel, and equal to the A0-vs-A2 panel gap to the last
+digit); post-removal panel A1 vs A3 **3.331e-16**; twin(shared) vs twin(free)
+**exactly 0.0**; four-channel reconstruction residual **exactly 0.0**. Through
+the deployed gauge: **Δ1 = −1.734723475976807e-17 and −8.673617379884035e-18**
+(bar: not identically 0 at 1e-12 — missed by five orders of magnitude), and the
+rule-9 second reading (K1b's literal whole-state object, arms A1w/A3w) is
+degenerate identically (Δ1 max 3.729655473350135e-17). The registered
+end-to-end confirmation repeats on all eight G3c pilot worlds (|Δ1| ≤ 7.81e-17).
+**A5/A6 are NOT degenerate**: panel A5 vs A6 = 0.3310376783451957, exactly the
+A0-vs-A2 gap.
+
+**G3c PASS** (reserved 8-world pilot 9101–9108, 56 gauge runs): sd(Δ0−Δ1)
+0.006362014258526332 → **MDE(80 %, α=.05, paired t, n=128) = 0.0015876092906212693**;
+sd(Δ0−Δ0′) 0.008560686670660837 → **MDE = 0.0021362771506247724**. Both inside
+the registered bar 0.004418076848551262 (2.78× / 2.07×) **and** inside the
+aspirational 0.002209038424275631. No escalation; the leg did not stop for want
+of power. *Disclosed with its status attached:* pilot Δ0′ exceeds pilot Δ0 in
+8/8 reserved worlds (pilot mean Δ0−Δ0′ = −0.010180448568810086, the same sign
+K1b measured at κ=1.0) — **reserved-seed power material, NOT an answer to
+L-b″**, which was never adjudicated and for which no CI, sign band or share
+exists.
+
+**G4c PASS — the knob is fine; the contrast was not.** Author AR state intact
+vs zeroed (the registered reading, M4-F8's G6 diagnostic re-expressed on f2's
+generator): between-author variance ratio **1.0772786802493795–1.0860125411681176**,
+mean 1.0822512197016676, **> 1 at 8/8** worlds (at κ=1.0 this ratio is exactly
+1 by M4-F7's inertness result). Author-MEAN channel (the one A5/A6 actually
+delete, reported under rule 9): **2.8194500501220903–2.865341972610127**, 8/8.
+Removal channel live: `common_part` carries **27.4 %** of response RMS
+(0.27447485652733755), non-zero at every pilot world. G4c(iii) not computable
+without the blocked arms.
+
+**G4c-info (report-only, adjudicates nothing).** Neither F4 nor F5 persisted a
+`manifest.json`; κ facts re-derived from `cells.csv` / `decision.json` /
+`gates.json` at artifact precision. **Both legs ran BOTH knobs and persisted
+both**: 5 cells / 40 world-runs at κ=0.5 and 6 cells / 48 world-runs at κ=1.0,
+each at master_seed 20260802, 8 worlds/cell × 20 draws, knob_tag
+`k48-r0.50-mu0.15-x0.15-e0.70-p0.20_0.80`. **F4's adjudicated claims are
+κ=1.0-ONLY** — its own record states κ=0.5 "gates no lean or the pivot (all
+three leans, the budget claim, the holdout, and the pivot are specified at
+kappa=1.0 only …) and is reported for context"; holdout cell
+`authors_x32_holdout_shared_k10`; leans a/b/c all HOLD. **F5 carries an
+adjudicated κ-stability lean that HELD** (lean_c), with lean_a (co-movement)
+and lean_b (target adequacy) MISS; `t_large_primary` = 80. Planner's
+retrospective scope follows from this; no adjudication here.
+
+**G5c PASS, and rule 11's first clean pass**: all ten CI clauses of the K1c
+registration checked arithmetically satisfiable at the pilot sd before arms —
+empty unsatisfiable list. Half-widths at n=128: Δ0 0.001112745488887191,
+(Δ0−Δ1) 0.0011127454888871938 vs pilot point 0.008100794057102949, (Δ0−Δ0′)
+0.0014973033834037816 vs pilot point −0.010180448568810086, |A3−A2|
+0.0009236085890751873 and |A6−A2| 0.0011335194525164446 vs margin
+0.004418076848551262, R_est 0.000809411049756907 vs pilot point
+0.004051794736468587; L-e″'s two clauses satisfiable at K1b's own anchor
+(reader-A′ −0.06230964467005076 [−0.07106916243654822, −0.05418781725888325],
+oracle move 0.0025380710659898). **The registration's statistical clauses were
+sound; the structural premise was not — precisely the division of labour
+between rules 11 and 10.**
+
+Registration defects recorded, not repaired (all caught in Part 0, before any
+hypothesis-relevant number existed): (i) **G2c's stated rationale is a
+non-sequitur** — the retained AR state is design-invariant, so √(1−κ) > 0
+cannot prevent the collapse; (ii) rule-9 ambiguity, "K1b's verified exact
+surgery" vs "occasion-common structure" name different objects at κ<1 (the
+registered arm was resolved to the semantic reading, since G2c's own rationale
+presupposes the AR state is retained; the literal reading was computed in full
+as A1w/A3w and is degenerate identically); (iii) rule-9 ambiguity, G4c's
+"author state" vs the A5/A6 arms' "author channel" (both readings computed,
+both live). Executor deviations, both declared in Part 0 before the numbers:
+the A1w/A3w second reading, and computing G3c/G4c after G2c had already failed
+(the stop is registered as "no ARMS"; these are Part-0 objects on reserved
+seeds, cost 59 s, adjudicate nothing).
+
+**Executor's input to the re-registration (planner decides).** The registered
+question is answerable with the arms already implemented, because the
+author-deletion contrast is not degenerate. A K1c′ dropping A1/A3/Ŝ_frame and
+keeping Δ0 = A0−A2, Δ0′ = A5−A6, Ŝ_auth = (Δ0−Δ0′)/Δ0, plus A4 for the repair
+lean and the unchanged secondary, is 5 arms × 128 worlds = 640 runs and
+inherits this Part 0 wholesale (G0c/G1bc/G3c/G4c/G5c all pass; MDE for
+(Δ0−Δ0′) = 0.0021362771506247724). A genuine *frame-share* arm, if still
+wanted, must retain design-carrying content — an ESTIMATED or PARTIAL common
+subtraction, or a manipulation at the level of `occasion_labels` — never an
+exact channel removal, at any κ.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
