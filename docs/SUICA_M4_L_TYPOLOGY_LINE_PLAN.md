@@ -131,3 +131,70 @@ first, timestamped before arms); outcome appended here; ledger row; ONE
 commit (`feat(m4-l): L1 — ...`), never amended, not pushed by the agent.
 Budget: card-space; target < 25 min wall; stop-and-report at 2× any
 Part-0 stage estimate.
+
+---
+
+## L2 charter + planner derivation (dated append, 2026-08-10 — BEFORE L1
+adjudication; the L2 registration follows L1 per L1's routing)
+
+L1's arms are the pure poles (ISO / ALIGNED). Real worlds live on the
+continuum between them. This iteration's planner question, solved by
+derivation while L1 runs: **what are the laws on the η-continuum, and
+what can be done LABEL-FREE?** Let the identity decompose as
+b = √(1−η)·b_iso + √η·b_aligned (η = the aligned fraction of identity
+energy; b_aligned isotropic WITHIN S).
+
+**Derivation 1 (the interpolated projection gain).** Distance-based
+grouping suffers the identity energy retained in the working space.
+Raw space: E_raw = σ_b². After projection onto S (dim k_τ of m):
+E_proj = η·σ_b² + (1−η)·σ_b²·(k_τ/m). Hence the projection gain
+
+    G(η) = E_raw / E_proj = 1 / (η + (1−η)·k_τ/m)
+
+— at η = 0 it is m/k_τ (L1's ISO prediction, = 16 at 48/3); at η = 1 it
+is exactly 1 (no gain, the ALIGNED pole). One-parameter law, registered
+as L2's quantitative prediction curve.
+
+**Derivation 2 (the floor generalizes).** Along a boundary normal
+u ∈ S, post-projection identity sd is
+σ_u²(η) = η·σ_b²/k_τ + (1−η)·σ_b²/m, so the irreducible error floor per
+boundary is ≈ Φ(−Δ/(2σ_u(η))) — continuous in η, reducing to L1's
+ALIGNED floor at η = 1 and to a negligible floor at η = 0. Consequence
+worth stating plainly: **the owner's conjecture degrades GRACEFULLY —
+identity removal by projection buys G(η), never less than 1, and the
+un-buyable remainder is exactly the aligned fraction.**
+
+**Derivation 3 (label-free estimability of η — the spectral taxometer).**
+The pooled card covariance separates the poles by WHERE identity energy
+sits: ISO identity raises the BULK (all m dims, +(1−η)σ_b²/m per dim);
+ALIGNED identity feeds the same k_τ SPIKES as the types. Since the
+per-card noise variance is independently estimable from split-half
+disagreement (the K2a-validated machinery), the bulk excess over noise
+identifies (1−η)σ_b², label-free. The aligned share then needs one more
+number (total σ_b²), obtainable within-group AFTER provisional grouping
+— which motivates the CROSS-FITTED design below. Detectability caveat,
+stated as the registered form: the type spikes are label-free
+recoverable only above the spiked-covariance (BBP-type) threshold —
+type-axis variance must exceed ~√(m/N) × bulk variance; L2's Part 0
+computes the exact constant for its dims and MUST verify every arm sits
+on the intended side (rule 3/17).
+
+**Derivation 4 (the audit needs cross-fitting).** Auditing completeness
+on ESTIMATED groups is biased optimistic: assignment to nearest centroid
+truncates within-group variance at the boundaries (overfitting absorbs
+identity into the partition), so the same-data audit UNDERSTATES
+surviving identity. The honest instrument is cross-fitted: cluster on
+one half of occasions/persons, audit on the held-out half. L2 validates
+the cross-fitted audit against the oracle-group audit (L1's V-4
+calibration) and measures the same-data bias as a named quantity.
+
+**L2's charter (registration to be written after L1 adjudicates, per
+routing):** arms on the η-continuum (η ∈ {0, .25, .5, .75, 1} at 2–3
+identity shares), label-free instruments only — estimated-S projection
+(spiked-PCA), the spectral taxometer η̂, the cross-fitted completeness
+audit — against L1's oracle companions as upper bounds. Leans: (i) G(η)
+curve containment; (ii) floor curve containment; (iii) η̂ operating
+characteristic (monotone, calibrated at the poles L1 certified); (iv)
+cross-fitted audit tracks oracle audit while same-data audit shows the
+predicted optimistic bias. Rule-16 enumeration and the full gate set as
+always; margins from L1's realized variances.
