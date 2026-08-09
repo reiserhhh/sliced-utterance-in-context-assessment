@@ -507,3 +507,103 @@ this machine, gitignored, 72,392,388 bytes total. The manifest is
 committed; the archives cannot be. **Copy the directory off-machine** —
 a committed manifest whose archives no longer exist proves only that the
 bytes were once hashed, not that anything is still verifiable.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+**LOCKBOX-COMPLETE accepted.** Determinism verified across process
+restarts (stronger than registered); D2-input coverage proved by AST
+extraction, 68/68; G1X 17/17 with 16.4 MB of byte-compared samples;
+purity held at stdlib-only. The gitignore gap was found pre-run and
+fixed in-commit, disclosed.
+
+**Ruling on anomaly 2 (the unsalted bundle hash in the committed
+manifest):** SAFE AS PUBLISHED, no redaction. D1's bundle EMBEDS its
+32-byte random salt inside the sealed bytes, so the manifest's unsalted
+SHA-256 commits to content containing 256 bits of entropy — a
+confirm-a-guess attack must guess the salt too. Net effect is a
+strictly stronger commitment, exactly as the executor analyzed.
+**Convention added (defense):** every sealed artifact EMBEDS its salt
+within the sealed bytes (as D1 did), so any future manifest, backup, or
+lockbox hash of a sealed file remains guess-proof by construction.
+
+**Planner defect #41 recorded** (rule-8-in-prose, twice in one
+section): the D3 registration's "thirteen trees…the fifteen" — D2's
+table names fifteen m4 trees; true scope 17. The executor archived the
+superset and reconciled in Part 0, correctly. Mode-bit volume quirk
+(0600 recorded vs 0700 reported) noted, no action.
+
+**OWNER ACTION (updated, cumulative):** copy off-machine —
+`results/d1_sealed/` (the seal's plaintext+salt) AND `results_lockbox/`
+(17 archives, 72,392,388 bytes). With those two copies plus the repo,
+every headline verification and the D1 opening survive this machine.
+
+---
+
+## D4 — Real-text governance rule (planner-written; operationalizes IDT §8)
+
+**EXECUTED 2026-08-10 as a planner document** —
+`docs/SUICA_REALTEXT_GOVERNANCE.md` (normative, append-only). Defense
+legs license no new theory claims; this one licenses REFUSALS. Summary
+of its binding rules: no per-person claims outside a sealed,
+owner-signed protocol; identity readings on real text REQUIRE the
+frame-refreshed discriminator (T6″ — shared-frame reproducibility may
+not be published as person-content, per T9); NO cross-corpus author
+linkage is ever computed (the capability T3/T6 prove possible is
+exactly what governance forbids exercising outside owner-signed defense
+audits with no retained linkage tables); de-framing is diagnostic-only
+(scaffold corollary); any grouping published on real text carries its
+completeness defect (cross-fitted, with the precision statement); raw
+text never enters the release repo; sealed artifacts embed salts;
+exceptions only via new study ID + owner sign-off + D2-style adversarial
+pass. Native-corpus work remains paused by the owner's 2026-07-12
+decision; nothing here unpauses it.
+
+---
+
+## D5 — The rule machine, replayed (the defense phase's closing leg)
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Document-space only (purity: no worlds, no
+artifact recomputation — this leg audits the METHOD, not the numbers).
+
+### Question
+
+The program has recorded 41 planner defects and paid for 21 standing
+rules plus conventions. Replay: for each recorded defect #1–#41, would
+TODAY'S rule set have caught it, and at what stage? The output is a
+coverage table and at most three PROPOSED (not enacted) refinements.
+
+### Method
+
+1. **Compile the defect registry** — `docs/SUICA_DEFECT_REGISTRY.md`:
+   one row per defect (#1–#41): where recorded (doc+section), one-line
+   description, the rule it paid for (if any), family. Sources: the
+   M4-D/G plan docs (defects 1–8 era), the M4-K plan doc (#9–#26), the
+   M4-L plan doc (#27–#38), the defense plan (#39–#41). This registry
+   is itself a durable deliverable.
+2. **Replay classification** per defect: (a) covering rule(s) today;
+   (b) catch stage under today's gates — REGISTRATION-TIME (rule
+   text/enumeration/satisfiability would refuse it), PART-0 (a gate
+   catches it before arms), POST-HOC (only adjudication catches it),
+   UNCOVERED (no current rule addresses the class); (c) whether the
+   historical catch stage was later than today's (the machine
+   improved) or the same.
+3. **Coverage stats** + at most three proposed refinements for
+   UNCOVERED classes, each with the defect(s) motivating it — PROPOSED
+   status only; enactment is the planner's, by dated note.
+
+### Gates
+
+G0R: registry completeness — every defect number cited in any plan doc
+appears exactly once (grep-verified, counts reported). G1R: purity
+(document reads only). G2R (rule 16): verdict ∈ REPLAY-COMPLETE /
+REPLAY-PARTIAL (named gaps) / REPLAY-FAIL.
+
+### Deliverables
+
+The six: `scripts/run_suica_d5_rule_replay.py` (the grep/compile
+harness); `docs/SUICA_DEFECT_REGISTRY.md` (committed — the registry IS
+a deliverable); `reports/SUICA_D5_RULE_REPLAY_REPORT.md` (the coverage
+table + proposals); outcome appended here; ledger row; ONE commit
+(`feat(defense): D5 — ...`), never amended, not pushed by the agent.
+Budget: document-space; target < 20 min wall.
