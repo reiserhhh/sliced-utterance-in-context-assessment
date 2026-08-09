@@ -607,3 +607,107 @@ a deliverable); `reports/SUICA_D5_RULE_REPLAY_REPORT.md` (the coverage
 table + proposals); outcome appended here; ledger row; ONE commit
 (`feat(defense): D5 — ...`), never amended, not pushed by the agent.
 Budget: document-space; target < 20 min wall.
+
+### D5 outcome (appended 2026-08-10, AFTER run) — `REPLAY-PARTIAL`
+
+Executed as registered. Deliverables: `scripts/run_suica_d5_rule_replay.py`
+(stdlib-only grep/compile harness, 0.10 s), `docs/SUICA_DEFECT_REGISTRY.md`
+(GENERATED from the harness's DEFECTS table — the registration's "structured
+data file" is that table, kept inside the harness so the leg stays at six
+committed deliverables), `reports/SUICA_D5_RULE_REPLAY_REPORT.md`.
+
+**G0R PASS.** 41 registry rows, contiguous #1..#41, 0 duplicates; **41**
+distinct defect numbers cited across the AUDITED corpus (the corpus before
+this leg's own documents existed) over **103** citing lines and **17**
+expanded ranges; 0 cited-but-absent; 0 rows never cited. The post-commit
+corpus is larger — this leg's report, this append and the ledger row all cite
+defect numbers — and G0R passes in that state too; the report tabulates both.
+**Pre-#9 reconciliation (explicit, as the gate demands):** F-synthesis §4
+counts *four* (F-line: F4/F6/F7/F8), G-synthesis §4 counts *two further*
+(G3's grain → rule 5, and G1's 25% actionable bar → **no rule at that
+date**), `SUICA_DISPLACEMENT_PROBLEM_RESOLVED.md` counts *seven rules* at the
+2026-08-03 arc close (adding the H-line's rules 6 and 7, which the G-synthesis
+predates), and the M4-J2 record + M4-K header count *eight* ("the first seven
+were defects in RULES — aggregation, power, channel, materiality form, grain,
+winner definition, graded levels" + J2's evidence defect). Resolution adopted:
+F(4) + G(1 rule-producing) + H(2) + J(1) = **8**, in the J2 enumeration's own
+order, confirmed by the next defect being labelled "ninth in the program's
+account". **Rule-9 both-readings note:** a second reading counting every
+recorded critique yields **nine**, the extra being G1's actionable-bar defect;
+the registry adopts eight and annotates #6 with the G1 instance. Because the
+era predates the `#N` convention, #3–#8 are cited numerically only by D5's own
+`#1–#41` range, so the harness additionally scans the era's ORDINAL anchors
+and located all eight.
+
+**G1R PASS** (enforced, not asserted): stdlib-only imports, `sys.modules`
+audited at entry and exit for `suica*` (0 both times), no world generated, no
+`results/` path opened — or cited for context.
+
+**Coverage.** TODAY: **REGISTRATION-TIME 30 / PART-0 6 / POST-HOC 0 /
+UNCOVERED 5**. HISTORICALLY: REGISTRATION-TIME 0 / PART-0 21 / POST-HOC 20 /
+UNCOVERED 0. **Improved 33, same 3 (#13, #25, #26 — all three the machine
+already working), not-improved 5 (exactly the UNCOVERED set).** Per era:
+pre-#9 8, K-line 18, L-line 12, defense 3. The headline is **POST-HOC = 0**:
+49% of the program's defects were historically found only after the numbers
+existed; under today's rules every covered defect is refused at registration
+or stopped in Part 0, and all residual risk sits in the five uncovered
+classes. Most recurrent family: fact-verification 5/41 (7/41 if the two
+prose-citation defects are read as rule-8 instances, which is how the corpus
+itself types them).
+
+**Five UNCOVERED classes, named:** #15 clause-direction (a two-sided band that
+punishes improvement; the record itself says rule 11 checks satisfiability,
+not direction); #16 gate-stage-feasibility (a gate scheduled where its inputs
+do not yet exist); #34 lean-identifiability (a lean whose two named
+alternatives are confounded by design); #40 and #41 prose-citation (wrong
+numbers and counts in published prose and in a registration's scope
+statement — "rule-8-in-prose", named three times, never enacted).
+
+**Three PROPOSED refinements (status PROPOSED; enactment is the planner's, by
+dated note).** **P1 / proposed rule 22** — every band, tolerance or bound
+clause declares one- vs two-sided AND which side improvement lies on
+(motivated by #15). **P2 / proposed rule 23** — clauses declare they can do
+their job: every gate names the stage at which all its inputs exist, and every
+two-alternative lean names the observable that separates them (motivated by
+#16 and #34). **P3 / proposed rule 24** — rule 8 extends to published prose:
+every numeric or enumerative claim in a synthesis, appendix, registration
+scope statement or ledger row is verified before commit, not only facts cited
+to motivate a lean (motivated by #40 and #41).
+
+**G2R verdict `REPLAY-PARTIAL`**, gaps named: G-a the pre-#9 count (8 adopted
+/ 9 alternative, both written) and G-b…G-f the five uncovered classes. **The
+second reading is on the record and was not adopted:** read narrowly — "did
+the replay execute?" — the verdict is `REPLAY-COMPLETE` (all 41 classified,
+G0R mechanical PASS, no record too thin to place, and UNCOVERED is an output
+category this registration anticipates). It was not adopted because COMPLETE,
+published while five classes have no covering rule, would state more than the
+leg established. The planner adjudicates.
+
+**Anomalies with timing.** A-1 (~15 min in, before any classification number
+was reported): first harness run returned G0R FAIL on a spurious ZERO — the
+citation regex matched the markdown heading `### 0.2 … registration defect` in
+`reports/SUICA_M4_L1_TYPED_WORLD_REPORT.md:91`; fixed by forbidding whitespace
+after `#` and a preceding `#`; **the fix changed the scanner only, and the
+classification table was authored before the first run**, so no judgement
+followed a count (42→41 distinct, 108→103 lines). A-2: three CLAIMS_LEDGER
+lines carry both "defect" and lockbox "opening #1/#2" tokens, inflating those
+two counts — a precision artifact disclosed rather than filtered; G0R needs
+recall, which is unaffected. A-3: the pre-#9 reconciliation, resolved in Part
+0 before classification. A-4: three rows carry a disclosed second reading for
+their HISTORICAL stage (#23, #24) or family typing (#36 — both readings give
+REGISTRATION-TIME). A-5: wall ≈ 33 min against a < 20 min target, all of it
+source reading (the pre-#9 defects are recorded ordinally across two ~2–3k-line
+plan docs); harness runtime 0.10 s. A-6 (found at the final re-run, after the
+classification was complete and unchanged by it): the harness scans `docs/`
+and `reports/`, so its own deliverables enter the corpus it audits — and the
+ledger row's prose, quoting A-1's spurious token verbatim, made G0R FAIL on
+this leg's own writing. Fixed by rewording all three documents, NOT by
+teaching the scanner to ignore the token; a gate that special-cases the number
+it dislikes is not a gate.
+
+**Scope.** The registry is a bibliographic object and the stages are
+judgements about rule TEXT. A rule catches a defect only when the registrant
+applies it — #22 (rule 15 applied at the wrong level) and #23 (rule 7 not
+applied at the routing level) both post-date their rules. Those two are
+counted as covered TODAY, which is the optimistic reading, and the report says
+so.
