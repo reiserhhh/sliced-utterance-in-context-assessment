@@ -3115,6 +3115,146 @@ the next registration rather than rediscovered; (vi) **the 4-world pilot caught
 both defects AND the L-4 sign before a single main world was built** — it is now
 paying for more than MDEs.
 
+### Planner adjudication (2026-08-09, appended after the run) — IDT v1's registered empirical program COMPLETES
+
+Scored as executed: **L-1 HOLD** (the anti-direction bound is EXACT — 0
+violations in 3,139,584 true-card pairs, and it BINDS: 50.48% of pairs are
+anti-direction; the estimated-card noise law 6/6 to max error 0.00043),
+**L-2 HOLD 6/6** (caricature raises identification +0.265/+0.299; rotation
+follows the cos-law to errors ≤0.0035; rotation hurts more than
+same-displacement scaling, both CIs excluding 0 — T7 in full),
+**L-3 BOUNDARY** (the estimator wins 12/12 strata and MATERIALLY in the two
+predicted failure regimes 6/6; the (c) directional decomposition is
+boundary ×2 because this world family cannot express magnitude-dominant
+errors — near-homogeneous distinctiveness, max r-ratio 2.14; and the
+disclosed secondary: in a ρ-homogeneous world the margin is carried by the
+ANGLE, not the disattenuation), **L-4 MISS — a resolved refutation**
+(angular crowding predicts misidentification at CHANCE, AUC 0.5005;
+distance crowding 0.637; the PROBE'S OWN READABILITY is the best predictor,
+AUC 0.664 — same sign in every config, protocol, and reading), **L-5 HOLD**
+(menagerie Spearman 0.540 [0.522, 0.555]).
+
+**Routing P3 (QUALIFIED): T7/T8 → [MEASURED except T8(e)]. T8(e) is
+FALSIFIED in this regime and REPLACED:** in a sparse, near-homogeneous
+gallery, misidentification is driven by the probe's own readability
+(ρ/own-norm), not by gallery crowding of either kind — the menagerie, not
+the twins. A dense-regime crowding charter is NAMED but not queued ahead
+of K-R1.
+
+**Planner registration defects #25, #26, recorded not repaired:** #25 —
+the UNEQUAL stratum is UNREALIZABLE in this family at every registered
+rung (0 pairs at ratio>3 and >2.5; 19 of 1.57M at >2), because F2-family
+trait latents are a single N(0, I_48) draw — near-homogeneous
+distinctiveness; #26 — the split-half rank-1 task sits at CEILING (0
+misses in the pilot), making three leans unscorable as posed. Both were
+absorbed by pre-declared fallback ladders (UNEQUAL-Q; protocol PA→PB→PC).
+**Standing rule 17 (added 2026-08-09, paid for by #25+#26):** every
+registered stratum and task carries either a generator-derived
+realizability argument or a Part-0 realizability check with a pre-declared
+fallback ladder. **Instrument boundaries recorded** for future
+registrations: near-homogeneous distinctiveness (the magnitude channel is
+1–3% of squared distance even in the most unequal pairs this family can
+produce) and split-half identification at ceiling.
+
+Consequences executed today: IDT appendix M (v1.1 consolidation — the
+theorem status table as measured); the line synthesis
+(`docs/SUICA_M4_K_IDENTITY_LINE_SYNTHESIS.md`); the route-index entry.
+Next and final registered leg of this arc: **K-R1** (below).
+
+---
+
+## M4-K-R1 — The constructive repair test: does de-framing make the reader a better TRAIT instrument?
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. T9's counter-operations tested constructively:
+K1b/K1c′ certified per-occasion ESTIMATED de-framing as removing 94.4%
+(κ=1.0) / 73.5% (κ=0.5) of the frame amplification. T4's closure
+(appendix L) says the reader's pathology is a quadratic link (q ≈ 1.83)
+plus a variance tax (κ ≈ 0.72). Question: **does de-framing the gauge's
+input improve the reader AS A TRAIT INSTRUMENT — raise b-only recovery
+(λ), lower the variance tax (κ), or flatten the link (q)?**
+
+### Arms (master_seed 20260821; 32 worlds/arm)
+
+K2b's six state arms (A1..A6, identical solved shares) × two gauge
+variants: **G-intact** (deployed gauge as everywhere) and **G-deframed**
+(per-occasion μ̂(o) from 32 disjoint authors subtracted pre-map — K1b's A4
+construction applied to the expressive world). 12 cells. Per cell: b-only
+field recovery + mixed recovery (descriptive) + the card channel
+(positive control, unchanged by gauge variant — designed invariance,
+G2r).
+
+### Part 0 gates
+
+- **G0r (anchors)** — bit-exact: K2b's six per-arm b-only recoveries and
+  its λ, q; K2e's κ̂ −0.7220359963712748; K1c′'s R_est/R_or
+  0.7347498869811525.
+- **G1r (power, 4-world pilot)** — MDE(80%, α=.05, paired across worlds,
+  n=32) for the per-arm intact-vs-deframed recovery difference ≤ 0.010;
+  escalate 32→64 once; still short → run and tier.
+- **G2r (designed invariance, rule 10)** — the CARD channel is
+  bit-identical across gauge variants (the manipulation lives inside the
+  gauge's input path only); any card-channel difference = implementation
+  defect, STOP.
+- **G3r (rules 11+13)** — satisfiability with directions; B=2000,
+  seed=master; ≥10×B at boundaries.
+- **G4r (rule 3)** — de-framing liveness: the subtraction moves the
+  gauge's input panels (RMS > 0 reported per arm); the F2-composition
+  collapse under G-deframed reproduces directionally (consistency with
+  K1b/K1c′'s A4, descriptive).
+- **G5r (hygiene)** — round-trip; chunked < 600 s; rule-12 header
+  (μ̂ construction by K1b's source objects); rule-14 self-check (all
+  within-instrument: recovery-vs-recovery per arm; the (λ, q, κ) refits
+  are descriptive summaries with CIs, not cross-scale gates).
+
+### Adjudication object (rule 16 — enumeration)
+
+Per parameter, from the 6-arm refit under each variant (paired bootstrap
+B=2000): Δλ = λ_def − λ_int; Δq = q_def − q_int; Δκ = κ_def − κ_int; and
+per-arm recovery differences d_a = recovery_def(a) − recovery_int(a).
+Margins: m_rec = 0.010 (per-arm recovery, the K2-series scale);
+parameter cells use CI-vs-0 with rule-13 stability. Cells per parameter:
+UP (CI > 0), DOWN (CI < 0), FLAT (CI straddles 0). Per-arm recovery
+pattern: n_up = #{a: d_a CI > 0}, n_down = #{a: d_a CI < 0}.
+
+- **L-R1 (helps) [prior .45]** := n_up ≥ 5 AND n_down = 0.
+- **L-R2 (neutral) [prior .30]** := n_up + n_down ≤ 1.
+- **L-R3 (harms) [prior .10]** := n_down ≥ 2.
+- **L-R4 (mixed) [prior .15]** := every other (n_up, n_down) combination.
+  (Enumeration: the four predicates partition all (n_up, n_down) pairs
+  with n_up+n_down ≤ 6: L-R1 requires (≥5, 0); L-R3 any n_down ≥ 2;
+  L-R2 total ≤ 1 [excluded from L-R1 by n_up ≤ 1 there]; L-R4 the rest —
+  checked exhaustively in Part 0, stated in the report. Precedence
+  L-R3 > L-R1 [impossible jointly, kept for form] > L-R2 > L-R4.)
+- **Parameter story (descriptive, no gate):** the (Δλ, Δq, Δκ) triple
+  with CIs — reported under whichever lean fires.
+
+### Routing
+
+- **L-R1 → P-R1:** de-framing IMPROVES the trait instrument → an F16
+  adoption memo is DRAFTED for the program owner's decision (the third
+  certified-unadopted repair, now with trait-instrument evidence);
+  nothing is adopted by the planner.
+- **L-R2 → P-R2:** de-framing is HYGIENE, not enhancement — it changes
+  what the gauge reads (composition collapse) without improving trait
+  reading; T9's counter-operations are re-typed accordingly (licensing
+  language only).
+- **L-R3 → P-R3:** de-framing HARMS trait reading — a deployment caution
+  is added to the certified repair's record; the mechanism question
+  (what did the frame content scaffold?) becomes a named charter.
+- **L-R4 → P-R4:** arm-dependent — the pattern is published and the
+  interaction (which state regimes benefit) becomes the named follow-up.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_kr1_deframing_repair.py`;
+`results/m4_kr1_deframing_repair/`;
+`reports/SUICA_M4_KR1_DEFRAMING_REPAIR_REPORT.md` (Part 0 first); outcome
+appended here; ledger row; ONE commit (`feat(m4-k): K-R1 — ...`), never
+amended, not pushed by the agent. Budget: 12 cells × 32 worlds (K2b-scale
+compute ×2); target < 20 min wall; stop-and-report at 2× any Part-0 stage
+estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

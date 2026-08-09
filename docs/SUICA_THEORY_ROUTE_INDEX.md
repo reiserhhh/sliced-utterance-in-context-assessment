@@ -851,3 +851,26 @@ economized-away causal channel; a nil-significance gate that fails at scale),
 producing four standing rules, the last of which subsumes them: every gate
 bounds MATERIALITY via an equivalence form, never nil significance on a
 known-nonzero quantity.
+
+## M4-K — the identity line (IDT), 2026-08-09
+
+Opened on the program owner's conjecture (identity = the structured
+residual; the certificate metaphor; the similarity/direction question) and
+closed its registered empirical program the same day: eleven executed legs
+(K1..K3), theory document `SUICA_IDENTITY_THEORY_V1.md` (T1–T9, appendices
+A–M), synthesis `SUICA_M4_K_IDENTITY_LINE_SYNTHESIS.md`, plan/ledger
+`SUICA_M4_K_IDENTITY_LINE_PLAN.md`. Headlines: the deployed gauge AMPLIFIES
+common-frame content (T3(f) dead; forged identities pass plain
+reproducibility — T6″ frame refreshment is the licensed discriminator); the
+F2/F4/F5 re-typings (frame-owned composition; replicate axis; mixture
+truths) via dated retrospective notes; T4 CLOSED in composite reader-borne
+form (field ≈ λ·r^q − κ·V_person − ε; q = 1.83, κ ≈ 0.72 confirmed
+out-of-sample) — the F5 plateau re-attributed to the reader; the similarity
+geometry measured (anti-direction bound exact and binding; caricature/
+rotation cos-law; the licensed three-coordinate estimator; crowding
+falsified in sparse galleries, readability is the driver). Standing rules
+9–17 and conventions added, each paid for by a recorded planner defect
+(#9–#26). Repairs certified and UNADOPTED per F16: estimated de-framing
+(94.4%/73.5%, regime-dependent) beside `colstd_alpha_0.10`; K-R1 (in
+flight) tests whether de-framing improves trait reading. EXPLORATORY,
+synthetic, instrument-world laws only.

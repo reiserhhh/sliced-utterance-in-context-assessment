@@ -826,3 +826,45 @@ program is COMPLETE and the next planner actions are the line synthesis
 and IDT v1.1 consolidation, then K-R1 (the constructive repair test:
 does de-framing move λ, κ, or trait recovery — T9's counter-operations
 tested constructively).
+
+## Dated appendix M (2026-08-09, after M4-K3): v1.1 consolidation — the theory as measured
+
+K3 returned P3 (QUALIFIED): the registered empirical program of IDT v1 is
+COMPLETE. The theorem status table, controlling as of this date:
+
+| object | status | anchor measurements |
+|---|---|---|
+| T1 gauge trichotomy | PROVED | H1 import; K1's three channels each live |
+| T2 invariant layer | PROVED + MEASURED | cancellation at 4.1e-16, 0/31,520 flips (K1) |
+| T3(a–e) issuer theorems | PROVED + MEASURED | issuer price +0.0970 (6.3×MDE); 1/|P| slope −1.0865; free-design specificity +0.0225 (K1) |
+| T3(f) deployed-gauge immunity | **DECIDED AGAINST** | the gauge AMPLIFIES common shifts: +0.0925 at 1× = 3.54× F2's effect (K1) |
+| T4 card ≠ biography | **CLOSED, composite reader-borne** | field ≈ λ·r^q − κ·V_person − ε_species; q = 1.83 [1.71, 1.98]; κ ≈ 0.72 confirmed out-of-sample; ε ≤ 0.015 fragile (K2b–K2e); F5 plateau re-attributed to the reader |
+| T5 no anchor-free reading | PRICED (C-NFI still conjecture) | absolute: issuer error; relational: composition + amplification (K1, K1b) |
+| T6 discriminator | PATCHED TWICE, both patches MEASURED | T6′ split-scheme probe (11/12 + exact ordering, K2a); T6″ v2 frame refreshment (forgery +0.055/+0.059 → inversion −0.062/−0.087 at both knobs) |
+| T7 direction reads | **MEASURED** | caricature +0.265/+0.299; rotation cos-law to ≤0.0035 error; rotation > scaling harm, CIs exclude 0 (K3) |
+| T8(a) decomposition | PROVED; magnitude channel tiny in this family | 1–3% of squared distance (instrument boundary) |
+| T8(b) anti-direction bound | **MEASURED EXACT** | 0 violations / 3,139,584 true-card pairs; BINDS at 50.48%; noise law 6/6 (K3) |
+| T8(c) near-norm unreadability | SUPPORTED | via the validated noise law (K3 L-1) |
+| T8(d) licensed similarity estimator | **MEASURED** | wins 12/12 strata; MATERIAL (ΔSpearman ≥ 0.106) in both predicted failure regimes 6/6; in ρ-homogeneous worlds the margin is the ANGLE, disattenuation neutral (K3) |
+| T8(e) angular crowding | **FALSIFIED here, REPLACED** | angular crowding at CHANCE (AUC 0.5005); the driver is the probe's own readability (AUC 0.664) — menagerie, not twins (K3 L-4/L-5) |
+| T9 forgery principle | MEASURED at both knobs | individual + collective forgeries and both counter-operations (K1–K2e) |
+
+Answers to the origin conjecture, final form for v1: **C-1** upheld with
+the discriminator — and the discriminator itself needed two frame patches
+(reproducibility without frame refreshment is forgeable). **C-2** a
+theorem (three gauges), not an obstacle. **C-3** exact: certificates have
+issuer, jurisdiction, expiry — and the certificate-reader itself is now
+priced (quadratic loss + variance tax). **C-4** measured: personality
+closeness is direction on the invariant layer, read after reproducibility
+and reliability corrections; the feared distance/direction divergence is
+confined to the near-norm regime by an exact bound that BINDS in half of
+all pairs; and one estimator lesson beyond the conjecture — who gets
+misread is set by their own readability, not by their neighbors, in
+sparse galleries.
+
+Method ledger for the line: standing rules 9–17 created, each paid for by
+a recorded planner defect (#9–#26); the 4-world pilot, round-trip
+parsing, Part-0 verification of bit-identity claims, and chunked-stage
+conventions adopted. Companion synthesis:
+`docs/SUICA_M4_K_IDENTITY_LINE_SYNTHESIS.md`. Scope unchanged:
+EXPLORATORY, synthetic, instrument-world laws — no claims about persons.
