@@ -711,3 +711,109 @@ applies it — #22 (rule 15 applied at the wrong level) and #23 (rule 7 not
 applied at the routing level) both post-date their rules. Those two are
 counted as covered TODAY, which is the optimistic reading, and the report says
 so.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+**REPLAY-PARTIAL accepted** with its six named gaps. The headline is the
+machine's report card: under today's rules, 30/41 defects die at
+REGISTRATION-TIME, 6 at Part-0, and **zero survive to post-hoc** —
+historically 20/41 did. The three proposals are ENACTED as standing
+rules, effective immediately:
+
+- **Rule 22 (from P1, paid by #15):** every band/tolerance/bound clause
+  declares one- vs two-sidedness AND which side improvement lies on.
+- **Rule 23 (from P2, paid by #16 + #34):** clauses declare they can do
+  their job — each gate names the stage at which its inputs exist; each
+  two-alternative lean names the observable that separates the
+  alternatives.
+- **Rule 24 (from P3, paid by #40 + #41 — and by E-1, the same leg's
+  own live demonstration):** rule 8 extends to published prose — every
+  numeric or enumerative claim in syntheses, appendices, registration
+  scopes, and ledger rows is verified against artifacts before commit.
+
+**Dated correction (defect #42, executor-attributed, disclosed
+same-leg, covered by the just-enacted rule 24):** D5's report, plan
+append, and ledger row state "wall ≈ 33 min against a < 20 min target".
+That number was estimated, not measured, and is WRONG: first tool call
+03:37:08, commit 03:56:03 → wall 18 m 55 s, INSIDE the target. No
+overrun occurred. The registry gains row #42 by this note.
+
+**And the D1 opening trigger has FIRED by its own terms** ("the defense
+phase reaching D4, whichever first" — D4 is executed). D-open is
+registered below as the phase's finale.
+
+---
+
+## D-open — Opening prospective seal #2: do the laws PREDICT?
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. The trigger condition in D1's opening
+protocol is met. Binding order of operations (the whole point):
+
+**STAGE 1 — MEASURE FIRST.** Run the five sealed configurations fresh
+and write every measured value into the report and a persisted
+`measured.json`, WITHOUT opening the sealed bundle. Enforced in code:
+the script hashes `measured.json` and records its timestamp BEFORE its
+first read of `results/d1_sealed/D1_SEALED_BUNDLE.json`; any earlier
+access to that path is a defect → STOP. The five measurements:
+
+- **M-1 (for S-1):** L1 machinery at m=96, k_τ=4, G=5, n_occ=8,
+  ρ.55-equivalent energy; η ∈ {0, 0.5, 1}: measured per-boundary
+  error rates (true-card, as L2/L3 measured them). 8 worlds × 512.
+- **M-2 (for S-2):** at that config, ISO vs ALIGNED at matched
+  identity energy: measured floor ratio and ARI-drop direction.
+- **M-3 (for S-3):** the T-arm ladder machinery at (m=48, n=512)
+  [L2's dims, window measured empty there] and (m=192, n=256):
+  measured ambient-break Δ* and Bayes-shoulder Δ* → measured window
+  widths at both dims.
+- **M-4 (for S-4):** the K2b instrument, one new arm (share .40,
+  φ .90), 32 worlds: measured b-only field recovery.
+- **M-5 (for S-5):** the L3 taxometer at η = 0.6, ρ.45-equivalent
+  energy: measured η̂ (primary route, with its CI).
+
+**STAGE 2 — UNSEAL AND SCORE.** Open the bundle, verify the committed
+hash (3a1971b827210b7f3611b4769496f9d55d4ea815b6b8b577cae81f64b1fe00f8)
+against bundle+salt, then score each entry against its OWN sealed band
+with NO re-fitting: cells per entry ∈ {PREDICTED (measured value inside
+the sealed band), MISSED (outside), UNRESOLVABLE (the measurement
+failed mechanically — named)}. S-3 is scored as CONJECTURE-GRADE per
+its sealed label: its miss kills the (d/n)^¼ conjecture only, never
+the measured laws. The D2 fragility annex (IDT appendix T) binds
+interpretation but may not move any band.
+
+### Gates
+
+G0O: anchors (D1's committed hash; the fragility annex; K2b/L1/L2/L3
+machinery reuse with rule-12 provenance). G1O: the measured-first
+ordering enforcement (in code, attested in the report with timestamps).
+G2O: realizability (rule 17) — pilot checks that each config produces
+finite, non-saturated measurements; pre-declared fallback: an
+unrealizable config scores UNRESOLVABLE, never re-designed. G3O: rules
+11/13/18/22/23 satisfiability with directions and stages; B=2000,
+seed=master_seed 20260825. G4O: hygiene + rule-16 enumeration (5
+entries × 3 cells + the routing below) + rule 24 (every number in the
+outcome prose re-verified against measured.json before commit).
+
+### Routing
+
+- **≥4/5 PREDICTED (S-3 counted separately):** verdict
+  **LAWS-PREDICT** — the defense synthesis closes the phase with that
+  stamp; any single miss is named and chartered.
+- **≤3/5 PREDICTED:** per-entry adjudication — each MISS becomes a
+  dated qualification of the specific law (never a silent band
+  widening), and the failing law's next-step charter is named.
+- **S-3 separately:** PREDICTED at (192,256) and empty-confirmed at
+  (48,512) → the (d/n)^¼ conjecture earns its first quantitative
+  support; MISSED → the conjecture dies, the window lemma stands.
+
+### Deliverables
+
+The six: `scripts/run_suica_dopen_seal_opening.py`;
+`results/dopen_seal_opening/` (measured.json with its pre-unseal hash
+and timestamps, per-config artifacts — gitignored);
+`reports/SUICA_DOPEN_SEAL_OPENING_REPORT.md` (Stage-1 measured table
+FIRST, then the unsealing, then the scorecard); outcome appended here;
+ledger row; ONE commit (`feat(defense): D-open — ...`), never amended,
+not pushed by the agent. Budget: the (192,256) ladder is the heavy
+cell; target < 40 min wall; stop-and-report at 2× any Part-0 stage
+estimate.
