@@ -2665,6 +2665,141 @@ first); outcome appended here; ledger row; ONE commit
 Budget: 6 arms × 32 worlds (K2d scale ≈ 136 s); target < 15 min wall;
 stop-and-report at 2× any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered. Script `scripts/run_suica_m4_k2e_double_matching.py` (K2d's apparatus
+imported and called UNMODIFIED — `install_species_weights`, `predicted_attenuation`,
+`solve_slow_for_target`, `clause_vector`, `assign_cell`, `enumerate_cell_space`, `pooled_q`,
+`rederive_anchors`; the single new measurement object is `realized_person_shares()`, k2b:698-703's
+own arithmetic factored out so realized variance shares run on EVERY world, verified bit-exact
+against k2b's verify route, residual 0.0); report `reports/SUICA_M4_K2E_DOUBLE_MATCHING_REPORT.md`
+(Part 0 — κ coefficients, solved shares, BOTH matching residuals, the rule-16 three-layer
+enumeration, the registered VS prediction, all six gates — written to disk **BEFORE** the `arms`
+stage, enforced in code by `require_part0()`); artifacts `results/m4_k2e_double_matching/`.
+6 arms × **32 worlds** (4-world pilot ladder selected 32 for all three pairs, **no escalation**),
+`master_seed 20260819`, salt `m4k2e-world`, K1-pinned panel (985 authors, **565 retained**), card
+channel 18 080 pooled authors/arm, **192 adjudicated deployed-gauge world runs** + 24
+reserved-pilot runs (worlds 9901–9904). **Total compute 142.548 s** (part0 17.307, arms
+56.527 + 56.697, finalize 12.017) — the arms stage ran 113.224 s against a Part-0 estimate of
+133.086 s, well inside the 2× stop threshold (266.172 s).
+
+**Verdict: `DM68_SUBSIG_POS__DM56_SUBSIG_POS__L_SPEC__LVS_HOLD__MATCH_EXACT__P_SPEC`.
+Both double-matched pairs return POSITIVE, significant, SUB-MATERIAL D — so **H-VAR is dead as a
+COMPLETE account**, by the registration's own solvability argument. **L-SPEC fires** (prior .30,
+against L-VAR's .60) and **L-VS HOLDS** under both registered currencies. Routing:
+(L-SPEC, any) → **P-SPEC**. 0 pairs VOID; rule 13 clean (0 triggered, 0 BOUNDARY).**
+
+- **The double match is exact, and it survived contact with the panels.** κ(.90) =
+  **0.6748147425129817**, κ(.98) = **0.9194934207437646**, κ_int = **0.08461422543701025**
+  (κ_int < κ(.90) < κ(.98) holds; the card charges persistent state **7.98×** what it charges
+  occasion-bound state). Closed-form solutions: **DM-68** v_A = 0.29267462506992153 @ φ.90 vs
+  v_B = **0.20690025098519338** @ φ.98 + w_B = **0.08577437408472816**; **DM-56** v_A =
+  0.4973617623232523 vs v_B = **0.3515995738630727** + w_B = **0.14576218846017958**. Part-0
+  residuals: |Δ predicted attenuation| **0.0 / 0.0**, |Δ predicted V_person| **1.388e-17 / 0.0** —
+  both clauses, 2/2, five orders inside 1e-12. The registration's closed form is EXACT, not a
+  linearization: matching the person total holds the trait weight A identical across the pair, so
+  the attenuation is exactly linear in (B_slow, C_int) there. Post-arms: measured within-pair
+  attenuation differences **−0.000175 / −0.000281 / −0.000242** (CIs 6–9× tighter than ±0.005) and
+  realized V_person differences **+5.893e-05 / +9.345e-05** (53–85× inside ±0.005). **0 VOID.**
+- **D per pair (paired world-block bootstrap, B=2000, n=32) and CELL:** **DM-68 D =
+  +0.006424123811148958** CI [+0.000695362260562535, +0.012064857982504633] → **SUB-SIG(+)**;
+  **DM-56 D = +0.008917886817207595** CI [+0.002382409106492113, +0.015253364806094327] →
+  **SUB-SIG(+)**; **VS-62 D = −0.010598278269700216** CI [−0.015213711891300446,
+  −0.005701069068586025] → SUB-SIG(−). Per-world sign counts 21/32, 22/32 positive, 26/32 negative.
+  Paired-t CIs agree on every sign.
+- **L-VS HOLDS — the κ coefficient made a real out-of-sample point prediction and hit it.**
+  Registered Part-0 prediction (design currency, PRIMARY) **−0.012449509445450275**; measured
+  **−0.010598278269700216**; **CI contains it** and **|D − pred| = 0.0018512311757500587 ≤ 0.010**.
+  Secondary (pilot-realized) reading **−0.012594511837627172**: same verdict, both clauses. The
+  arms-realized ΔV_person (0.017331264392805933) sits between the two.
+- **THE HEADLINE NUMBER: two-thirds to four-fifths of K2d's species finding was ΔV_person in
+  disguise.** At r ≈ .68 the species D falls from K2d's **+0.030351** (ΔV unmatched) to
+  **+0.006424** (ΔV matched) — **78.83% was raw variance**; at r ≈ .56, from **+0.027061** to
+  **+0.008918** — **67.04%**. K2d's MATERIAL composition finding does **not** survive double
+  matching: the genuine species remainder is significant but **sub-material at both margins**
+  (|D| < M1 = 0.020; lower(|D|) = 0.000695 / 0.002382 < M2 = 0.010).
+- **RULE 16's FIRST FULL APPLICATION IS CLEAN — the first K-leg with a defect-free adjudication
+  object at every level.** Layer 1 (per-pair cells): 25 155 triples, 30/64 combinations realizable,
+  **0 overlaps**, all seven signed cells realized. Layer 2 (lean predicates over all 49 ordered
+  DM-cell pairs): **49/49 unique, 0 overlap, 0 gap**, checked BEFORE precedence so precedence could
+  not mask an overlap (it never had to be invoked — exactly one predicate fired); the
+  registration's own gloss "L-UND ⟺ ≥1 INDET and no significant cell" evaluated as an independent
+  predicate and agreed on **all 49**; counts L-NEG 24 / L-SPEC 16 / L-UND 5 / L-VAR 4. Layer 3
+  (routing over all **98** (cell-pair, L-VS) combinations): **98 routed, 0 gap, 0 overlap**, all
+  five named outcomes reachable. A result fitting no registered branch was structurally
+  impossible, and none occurred.
+- **THE NEW PILOT CONVENTION WORKS, AND SHOULD BE MADE STANDING.** 4-world pilot paired sd
+  0.013859 / 0.012906 / 0.014317 → MDE @32 **0.007088 / 0.006600 / 0.007322** (target 0.010, no
+  escalation). Realized paired sd 0.016964 / 0.018362 / 0.013863 — **1.22× / 1.42× / 0.97×** the
+  pilot's, against K2d's **2.05×–7.83×** on 2-world pilots. **All three realized MDEs (0.008676 /
+  0.009390 / 0.007090) meet the registered target: no shortfall, no tiered claim** (K2d's A-5 does
+  not recur). Cost: 12 extra arm-worlds, ≈8 s.
+- **Δmixed (descriptive) is loud on BOTH double-matched pairs, unlike K2d's species pairs.**
+  DM-68 **+0.022363** [+0.015616, +0.028662]; DM-56 **+0.043165** [+0.033618, +0.051835]; VS-62
+  **+0.041970** [+0.036175, +0.047578] — all CIs excluding 0, at **3.48× / 4.84× / 3.96×** the
+  trait channel's |D|. K2d found Δmixed absent on its species pairs (SP-68 CI included 0); here,
+  with V_person held fixed, the arms differ in what the reader ASSIGNS far more than in what it
+  LOSES. Card ledger: within-pair GAP ratios **4.669 / 4.696 / 3.993** — the DM pairs look like
+  *persistence* pairs to the card (K2c's series 4.04/4.08/3.98), not like K2d's species pairs
+  (1.79/1.75).
+- **q-update (descriptive, no gate): q = 1.8327227969464843 CI [1.7109560851209855,
+  1.9795061744015678]** over **25 arms**, R² 0.8546, one-sided 5th pct 1.7311635750465104,
+  λ-invariance residual 4.440892098500626e-16, shift vs K2d's 19-arm value
+  **−0.020147277704588795**. The quadratic reading survives; the CI's upper end dips below 2.0 for
+  the first time. **κ re-fit over 9 pairs (declared descriptive in Part 0):** κ =
+  **−0.7145934082034173** (shift +0.00744), R² **0.9395** (was 0.9935), max |residual| **0.008918**
+  — the whole degradation is the two DM pairs, which sit at Δvar = 0 and whose residual IS their D.
+- **Rule 13: 0 clauses triggered, 0 BOUNDARY.** Closest approaches (post-hoc descriptive): 4.03
+  MC-sd (DM-68's CI-excludes-0 clause, the leg's tightest), 12.30 (DM-56), 18.97 (VS-62).
+- **Rule 14 verified on this leg's own gates:** G0e re-derives K2b/K2c/K2d against themselves; G1e
+  is card-vs-card and share-vs-share; every cell and every lean predicate is field-vs-field
+  within-pair. **L-VS is cross-scale and legal under rule 14's FIRST clause** — the registration
+  pins the link and its coefficient. The q-update and the κ re-fit are declared descriptive.
+- **G0e: every anchor bit-exact, residual 0.0** — K2d's three D and all six CI endpoints AND their
+  three CELLS re-derived from K2d's own field CSVs and picks; K2d's 19-arm q **1.8528700746510731**
+  [1.7147417060355998, 1.999586491101811]; **κ̂ = −0.7220359963712748 re-fitted from scratch** with
+  R² **0.9935185860651237** and max |residual| **0.002518007987644547**, and all six of its
+  person-variance columns re-derived bit-exactly from each leg's own `part0_arms.json` shares;
+  K2c's three D_k (−0.0033349254353831808 / −0.012167516605861444 / −0.01355928388620139) and CIs;
+  K2c's q 1.9337620539521978 [1.7337263621727161, 2.1932591297891246]; λ 0.17417497661611914;
+  K2b's A1 0.177888649457317 and A4 0.07543949574114414.
+- **Anomalies (with timing).** **A-1 (pre-Part-0, before any world or field number):** a pure
+  card-algebra check of the registration's closed form preceded script authorship; no world built,
+  no field number produced, all numbers re-derived identically in `--stage part0`; impact none.
+  **A-2 (Part 0, before any hypothesis number):** the registration's premise that this leg's
+  `w_int` "exceeds K2a's validated range" is **not borne out** — solved interaction signal
+  fractions 0.0858 / 0.1458 against K2a's equal-share ceilings 0.2644 / 0.2161, both INSIDE; the
+  no-GAP-gate instruction was obeyed regardless and the disclosure is corroborated after the fact
+  (**GAP contained its prediction 6/6**, where K2d's two large-`w_int` arms missed). **A-3 (Part 0,
+  before any hypothesis number):** the χ²-90% df-inflated reading of the 4-world pilot would have
+  escalated all three pairs and still declared them short; it is an upper bound on σ from a 3-df
+  estimate, the registered gate is the plain 4-world MDE, and the realized sds vindicated the plain
+  reading. **A-4 (Part 0, continuity):** DM68a/DM56a solve to shares bit-identical to K2c's
+  P2a/P3a and K2d's SP68slow/SP56slow. **A-5 (Part 0, provenance):** corpus tags read
+  `m4k2b-K2E-<arm>-w<k>` because `k2b.run_field_world` is unmodified; hash labels only, disjoint
+  from K2b/K2c/K2d. **A-6 (finalize, after the numbers existed):** both DM effects are significant
+  yet **below their own realized MDE** (|D|/MDE = 0.74 and 0.95), so the species remainder is
+  reported as sub-material and replication-fragile rather than as a settled magnitude; no repair
+  attempted. No crashes, no re-runs, no background jobs, no monitors, no stage over its Part-0
+  estimate.
+
+**K2e's brief to the planner:** (i) **P-SPEC fires, but it carries the opposite finding in size to
+K2d's** — the species term shrinks 67–79% under double matching and lands sub-material; the honest
+summary is *the reader taxes raw person variance at κ ≈ 0.72 (now confirmed out-of-sample) and
+pays a small additional surcharge on occasion-bound content that is significant but below
+materiality*; (ii) **the candidate law's error has a shape**: `field ≈ λ·r^q − κ·V_person` predicts
+VS-62 to 0.0019 and predicts the DM pairs to be null, but they are +0.0064 and +0.0089, and the
+residual grows with the interaction variance share (0.0257 → 0.0437 gives 0.0064 → 0.0089) — a
+linear-in-`w_int` surcharge of slope ≈ 0.14, i.e. `field ≈ λ·r^q − κ·V_person − c·V_int` is a
+one-parameter extension testable on the same machinery, which this executor did NOT register;
+(iii) **the carrier is still not isolated** — species and φ move together in the DM-b arms by the
+registration's own construction (which the registration pre-empted), though a descriptive
+triangulation favours species: VS-62 is a *pure φ contrast* whose κ-law residual is only +0.0019,
+3.5×–4.8× smaller than the DM residuals; a same-φ double match needs a third state species and is
+currently inexpressible on this instrument; (iv) **rule 16 cost nothing and closed the "fits no
+registered branch" failure mode structurally**; (v) **the 4-world pilot should be made a standing
+convention.**
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
