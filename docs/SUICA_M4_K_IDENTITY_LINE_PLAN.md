@@ -431,6 +431,104 @@ outcome appended here; ledger row; ONE commit
 (`feat(m4-k): K1b — ...`), never amended, not pushed by the agent. Budget:
 target < 30 min wall; stop-and-report at 2× any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after adjudication — the registration above is unedited)
+
+**Verdict:
+`REGISTERED_DECOMPOSITION_DEGENERATE_BY_CONSTRUCTION__SHARE_IS_UNITY_BY_IDENTITY__COMPOSITION_EFFECT_SURVIVES_AUTHOR_DELETION__FRAME_OWNED__T6dd_MISS__P2B_FIRES`.
+L-a HOLD (by construction), L-b MISS (by construction), L-c HOLD, L-e HOLD,
+L-d MISS (overshoot, not survival). **P2b FIRES; P3b fires mechanically with a
+FALSE stated antecedent; P1b/P4b do not.** Report
+`reports/SUICA_M4_K1B_COMPOSITION_OWNERSHIP_REPORT.md`; artifacts
+`results/m4_k1b_composition_ownership/`; script
+`scripts/run_suica_m4_k1b_composition_ownership.py`; 303.9 s total compute,
+all foreground, 240 deployed-gauge runs.
+
+Part 0, written before any arm. **G0** dims `==` K1's on every field (985
+authors, 12,784 events, {8:272, 12:200, 16:513}, 4 contexts, 565 retained).
+**G1b** bit-exact: K1's L5 1× re-derives to +0.09254304863282958 (sd
+0.041580915483140586, CI [0.05778053334840726, 0.1273055639172519]) and L2 to
++0.09695431472081219. **G2b PRIMARY PATH** — three-channel reconstruction
+residual exactly 0.0, subtraction vs twin 1.11e-16 ≤ 1e-12, removed channel's
+across-author spread within a (context, occasion) exactly 0.0; the fallback
+does not fire. **G3b** MDE(n=32) 0.005151623455652202 ≤ bar 0.0130816 and ≤ the
+aspirational 0.0065408; no escalation. **G4b SPLIT** — 3/3 positive, +0.0807,
+native-common/author-deviation RMS ratio 0.8529867606271943 ∈ [0.5, 2], but the
+n=3 CI [−0.0288, +0.1902] fails a clause that is **unsatisfiable at the anchor's
+own effect size** (K1's sd 0.041581 gives an n=3 half-width 0.10329 > the anchor
+mean 0.092543; smallest satisfiable n = 4); pre-declared remedy at the anchor's
+own n=8: 8/8 positive, +0.10049101454141054, CI [+0.0503319615961654,
++0.1506500674866557]. **G1 (replication) PASS** — Δ0 = +0.02416454033421539, CI
+[0.02115502110256099, 0.027207370259371894] (paired-t [0.020951696576987606,
+0.027377384091443174]), 32/32 signs, overlapping F2's [0.01953599084902978,
+0.032790535764422674] on both readings; P1b does not fire.
+
+**The leg's principal structural finding, derived and disclosed BEFORE any arm
+(Part 0 §G2b / R-0.2), then confirmed at machine precision: the registered
+decomposition is DEGENERATE in F2's generator.** `occasion_mode` enters
+`f2.generate_world_composed` only through `occasion_labels → shock_x`
+(f2:180-193), and at κ=1.0 `blended_x == shock_x` exactly (f2:195), so removing
+the common channel makes the shared and free panels the SAME panel
+(twin(shared) − twin(free) = 0.0 exactly). Δ1 = A1 − A3 is therefore identically
+zero (measured −6.27e-18, max per-world |Δ1| 1.01e-16) and Ŝ ≡ 1
+(1.0000000000000002, CI [0.99999999999999940, 1.000000000000001]). This holds
+for ANY operationalization of "remove the common structure" — de-commonizing at
+preserved variance is literally F2's own free design, giving Δ1 = 0 again. L-a
+HOLDs and L-b MISSes as arithmetic, not as measurement, and P2b's registered
+trigger is satisfied by that identity.
+
+Measured leans. **L-c HOLD** — A3 − A2 = +0.0006924504528088422, CI
+[−0.0012007858348831182, +0.002624154951447348] ⊂ ±0.006540815826681557 (2.5×
+inside); removing the occasion channel from a free design is materially inert.
+**L-e HOLD (applicable)** — R_or = +0.02347208988140655 (CI [0.020699778192917094,
+0.026399521942678278], 32/32), R_est = +0.022155075482892434 (CI
+[0.019464560887616736, 0.024830430727009353], 32/32), ratio **0.943890194474869**
+[0.902330511257102, 0.9879058376381377]: a per-occasion norm estimated from 32
+disjoint authors strips 94 % of what an oracle subtraction strips. This is the
+only registered lean whose HOLD is a measurement.
+
+**Standing rule 9 resolution, and the reading that actually answers the
+question.** The registration names the removed channel two ways that pick out
+different objects: by semantics the occasion-common channel (the state slot at
+κ=1, weight √w_x, f2:195-196), by name `w_mu`, which in the code is the
+per-author mean (f2:178) — the AUTHOR channel. Resolved before any
+hypothesis-relevant number: the registered arm is the semantic one (the lean
+texts are only coherent under it); the literal-`w_mu` reading was computed in
+full as a disclosed second reading adjudicating nothing. It is the only arm in
+the design that can dissociate the two shares, and it is emphatic: with every
+trace of author identity deleted, **Δ1′ = A1′ − A3′ = +0.04709060297774369** (CI
+[0.042167168538819556, 0.052023150832290276], 32/32) — the composition contrast
+**doubles**. Frame share of Δ0 = **1.948748137826835** [1.7631609956850758,
+2.1520391802330505]; author-reading share = **−0.9487481378268351**
+[−1.1583888879836097, −0.7532210144189037]. Deleting the authors RAISES shared
+agreement by +0.023006372890384656 [0.018958716925446557, 0.026933761216768787],
+31/32 worlds, while the free design reads zero with or without authors (A2
+−0.000917, A3′ −0.000837, difference −8.03e-05 with a CI straddling 0). On the
+deployed gauge at F2's dimensions there is **no detectable author-reading share
+in the composition effect**, and its point estimate is negative — this, not the
+Ŝ ≡ 1 identity, is the live evidence for P2b's content.
+
+Secondary (T6″, 8 worlds, 1024-author norm pool split into two disjoint 512
+sub-pools so the oracle arm is frame-refreshed too). Reader A (one shared norm):
+est8 − oracle = **+0.058756345177664974** [+0.05228426395939086,
++0.06535532994923858], 8/8 — K1's forged advantage (+0.050127) reproduces at
+fresh seeds. Reader A′ (independent norms per occasion half): **−0.06230964467005076**
+[−0.07106916243654822, −0.05418781725888325], 0/8 — the forgery is destroyed and
+inverted into a genuine issuer penalty, while the oracle moves only
+**0.0025380710659898** (< the registered 0.01 bar). **L-d MISSES its registered
+±0.0251 zero-equivalence band by overshooting on the correct side.** P3b's
+mechanical trigger ("L-d MISS") fires, but its stated antecedent ("forged
+advantage survives frame refreshment") is FALSE: T6″'s direction and its
+do-no-harm clause are vindicated; only its zero-equivalence operationalization
+fails. Reported as fitting no registered branch; planner adjudicates.
+
+Registration defects recorded, not repaired (both caught before any
+hypothesis-relevant number): (i) the channel-naming ambiguity above (standing
+rule 9 applied as written); (ii) G4b's CI clause is unsatisfiable at n=3 given
+the anchor's own variance. Executor deviations, both declared in Part 0 before
+the arms: the disclosed second reading (rule-9 mandated) and G4b's n=8
+supplementary reading (target n fixed by the anchor's arithmetic, not by running
+until the gate passed).
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
