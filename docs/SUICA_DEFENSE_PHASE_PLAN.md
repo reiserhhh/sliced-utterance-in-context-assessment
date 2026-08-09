@@ -159,3 +159,89 @@ CONJECTURE-GRADE and its failure kills the `(d/n)^(1/4)` window conjecture
 only. S-1/S-2/S-4/S-5 misses fall on the measured laws. S-2 in particular is
 exact algebra with no numeric freedom — a miss there would mean the
 boundary-z derivation itself is wrong.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+**SEAL-COMPLETE accepted.** The hash mechanic is OP-31's verbatim; the
+concealment deviation was pre-declared and is correct (D1's targets are
+runnable today, OP-31's were not). G1D's purity was ENFORCED, not
+asserted (15 generators stubbed, 0 fired; the single SUICA-attributed
+RNG call is the frozen gauge-direction constant, disclosed as D1-PN-1
+and correctly judged not-a-world). **Planner defect #39 (rule-8 family,
+recorded):** my registration cited κ at the wrong path AND with the
+wrong sign convention; the executor corrected with disclosure and
+re-derived bit-exactly from the true sources. Noted for the record:
+OP-31's own results-bundle is absent on this machine — its seal of
+record is the tracked doc + script constant.
+
+**OWNER ACTION REQUIRED (surfaced in the session report):** the sealed
+plaintext bundle exists ONLY at
+`results/d1_sealed/D1_SEALED_BUNDLE.json` on this machine (gitignored,
+mode 0600). It must be copied off-machine; a lost bundle voids the
+seal. The committed hash proves nothing without it.
+
+---
+
+## D2 — Adversarial verification pass over the program's headline table
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent, INDEPENDENT of every original executor and
+tasked to REFUTE, not to confirm. Artifact-space only — a G1D-style
+purity gate binds (no world generation; verification by re-derivation
+and cross-document consistency only).
+
+### The claim table (10 rows, verbatim targets)
+
+- **C1** K1-L1: shared-design cancellation exact — 0 flips / 31,520,
+  card-difference invariance ≤ 4.2e-16.
+- **C2** K1-L2/L3: issuer price +0.09695431472081219 pooled with 8/8
+  signs; 1/|P| slope −1.0865327686128703 ⊂ [−1.35, −0.65].
+- **C3** K1-L5: deployed-gauge amplification +0.092543049 at 1× =
+  3.54× F2's composition effect (+0.026163263306726227).
+- **C4** K1b/K1c′: author-reading share −0.949 [−1.158, −0.753] at
+  κ=1.0 and −0.9443843417103447 [−1.2340, −0.7046] at κ=0.5.
+- **C5** K1d: γ_deleted = 1.2446190431788744 [1.1185, 1.3579]
+  overlapping F4's band; half-agreement budget 48.865× → 19.878×.
+- **C6** T4 composite constants: λ = 0.17417497661611914,
+  q = 1.8528700746510731 [1.7147, 1.9996], κ = −0.7220359963712748
+  (R² 0.9935185860651237); K2e DM collapse 67.04–78.83%.
+- **C7** K3: anti-direction bound 0 violations / 3,139,584; binds at
+  50.48%; rotation cos-law max error ≤ 0.0035.
+- **C8** L-line floor law: three independent confirmations (L1 poles,
+  L2 curve 7/10 + exact ordering, L3 fresh-seed reproduction).
+- **C9** L3 taxometer: |η̂ − η| ≤ 0.125 in 10/10 with median 0.0241;
+  ordering Spearman 1.0 under every reading.
+- **C10** K-R1: de-framing harms — all six arms DOWN, 0/32 worlds
+  positive anywhere; λ 0.1821 → 0.0008.
+
+### Method (per claim)
+
+Re-derive every cited number from persisted artifacts at full precision
+(round-trip parsing; raw per-cell files preferred over summaries);
+attempt refutation: recomputation where formulas are published,
+cross-document consistency (decision/gates vs report vs plan-doc vs
+ledger vs IDT appendices), unit and sign checks, CI-endpoint
+recomputation from persisted draws where present. Verdict per claim ∈
+{CONFIRMED, QUALIFIED (named discrepancy at or below display
+precision), REFUTED (a cited number is wrong at full precision, with
+the true value), UNVERIFIABLE (artifact gap — name the missing file)}.
+Enumerated; no other cell.
+
+### Routing (rule 16)
+
+- Any REFUTED → **P1V:** the planner writes a dated correction and
+  claim-strength downgrade for that row (the program's retrospective
+  mechanism); remaining rows still reported.
+- Any UNVERIFIABLE → **P2V:** the missing artifacts feed D3's lockbox
+  specification (that is D3's charter input).
+- All CONFIRMED/QUALIFIED → **P3V:** the headline table gains a
+  D2-verified stamp (dated note in IDT and both syntheses).
+
+### Deliverables
+
+The six: `scripts/run_suica_d2_adversarial_verification.py` (the
+re-derivation harness); `results/d2_verification/` (per-claim
+worksheets — gitignored); `reports/SUICA_D2_ADVERSARIAL_VERIFICATION_REPORT.md`
+(per-claim verdicts with evidence); outcome appended here; ledger row;
+ONE commit (`feat(defense): D2 — ...`), never amended, not pushed by
+the agent. Budget: artifact-space; target < 30 min wall.
