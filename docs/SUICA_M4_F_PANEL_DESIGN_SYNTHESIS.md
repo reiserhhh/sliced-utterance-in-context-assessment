@@ -171,3 +171,30 @@ question — whether F4's scaling exponent survives author deletion —
 registered as M4-K1d before run. F4/F5 rows stay unannotated until K1d
 adjudicates (F4's claims are κ=1.0-only by its own record; F5's truth
 objects are being re-derived from source in K1d's Part 0).
+
+## Dated retrospective note III (2026-08-09, after M4-K1d — L-1's registered consequence)
+
+**The F4 row re-types: "author axis" → "replicate axis" (frame-readout
+economics).** At F4's own knob, on fresh seeds, through F4's own fitter, the
+law replicates strongly (fresh intact CI contains F4's whole band) and
+SURVIVES total deletion of the author channel: γ_deleted = 1.2446 [1.1185,
+1.3579], overlapping F4's band; Δγ = +0.1259 [0.0169, 0.2483], inside the
+registered ±0.25 immateriality band — **boundary-seated** (Monte-Carlo
+status disclosed in the K1d report; the positive sign is robust). Author
+deletion RAISES the level at every scale (40/40 world-points, the contrast
+growing +0.0120 at ×1 → +0.2095 at ×16), predicts better on F4's own ×32
+holdout protocol (gap 0.0490 vs 0.0807), and more than halves the
+half-agreement author budget (48.865× → 19.878×). **The axis named after
+authors is steeper and cheaper without them; what scales is frame readout,
+and any replicates averaging the same frame would serve.** §3's "recruit
+authors, not words" re-types: **"recruit replicates, not words."**
+
+**F5 row, factual annotation (source-derived, K1d G-info-F5; no
+re-adjudication implied):** F5's `truth_recovery_exact/long` are agreements
+against noise-free MIXTURES — at κ=1.0 exactly ½ author-mean + ½
+occasion-common; at κ=0.5 ¾ author + ¼ common. F5's recovery numbers
+measure recovery of those mixtures, not of a trait; its wall conclusion
+(occasion-bound, state-inclusive object) stands and is strengthened by the
+K-line's frame-ownership results. Registrations and numbers:
+`docs/SUICA_M4_K_IDENTITY_LINE_PLAN.md` (K1d);
+`docs/SUICA_IDENTITY_THEORY_V1.md` appendix G.

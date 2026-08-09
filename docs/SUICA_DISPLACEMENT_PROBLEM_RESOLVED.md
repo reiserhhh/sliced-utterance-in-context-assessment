@@ -103,3 +103,12 @@ appendix E), the re-typing is family-wide: composition's gain is
 common-frame content at every tested knob; author content is interference.
 The F4 scaling exponent's survival under author deletion (M4-K1d) is the
 last open piece of the "recruit authors" prior.
+
+**Addendum II (same date, after M4-K1d):** it survived — and more. The
+scaling law replicates on fresh seeds, holds with the entire author channel
+deleted (γ_deleted 1.2446 [1.1185, 1.3579] overlapping F4's band; Δγ
+boundary-seated inside the ±0.25 immateriality band, sign robust), rises at
+every scale without authors, and costs less than half the "author" budget
+(48.9× → 19.9×). §3's F4 row is re-typed **"replicate axis"**; the D3 prior
+is now **"recruit replicates, not words"**. Details: K1d in the M4-K plan
+doc; IDT appendix G.

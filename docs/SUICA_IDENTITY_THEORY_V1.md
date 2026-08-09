@@ -591,3 +591,48 @@ exponent (γ = 1.096) survive author deletion? If yes, the author axis is a
 REPLICATE axis (frame-readout economics — more noise-bodies averaging the
 same frame); if no, scaling and composition ownership dissociate. Registered
 as M4-K1d before run.
+
+## Dated appendix G (2026-08-09, after M4-K1d): the author axis is a replicate axis; interference extends from level to slope
+
+**G.1 — The result.** At F4's own knob (κ=1.0, shared), fresh seeds, F4's own
+fitter: the law replicates strongly (γ_intact = 1.1187 [0.9810, 1.2376] —
+the fresh CI CONTAINS F4's whole band), and **survives total deletion of the
+author channel**: γ_deleted = 1.2446 [1.1185, 1.3579], overlapping F4's band
+under every reading. Δγ = +0.1259 [0.0169, 0.2483] — inside the registered
+±0.25 immateriality band, **boundary-seated** (registered B=2000 reading
+holds by 0.0017; a 100000-draw reading lands outside by 0.0017; the positive
+SIGN is robust at 10/10 seeds). L-1 HOLD under its registration; every
+consequence carries the boundary status; standing rule 13 (Monte-Carlo
+verdict stability) was created from this.
+
+**G.2 — Interference, now at the slope.** Deleting the authors RAISES the
+level at every scale (40/40 world-points; +0.0120 at ×1 growing to +0.2095
+at ×16), steepens the exponent, predicts BETTER out-of-sample on F4's own
+×32 protocol (holdout gap 0.0490 deleted vs 0.0807 intact), and **more than
+halves the half-agreement budget (48.865× → 19.878× authors)**. The axis
+named after authors is cheaper and cleaner without them. With K1b/K1c′ this
+completes the arc: author content is interference to the deployed gauge's
+frame reading at the composition LEVEL and at the scaling SLOPE. **The
+"author axis" is a replicate axis: frame-readout economics, where any
+noise-bodies averaging the same frame would serve.** The D3 prior re-types:
+recruit replicates, not words.
+
+**G.3 — F5's truth objects are mixed (source-derived fact, K1d G-info-F5).**
+`truth_recovery_exact/long` in F5 are field agreements against noise-free
+mixtures: at κ=1.0 exactly **½ author-mean + ½ occasion-common**; at κ=0.5
+**¾ author (½ mean + ¼ AR) + ¼ common** (noise, 70% of response variance,
+excluded). Every F5 "truth recovery" number is recovery of that mixture, not
+of a trait. Recorded so no reader mistakes it; any re-adjudication of F5's
+rows would be its own registered leg. This composition table is also a
+required input to K2b's T4-branch reading.
+
+**G.4 — Method.** Defects #16 (a gate unmeasurable at its registered
+position) and #17 (a pivot space with a gap exactly where the measurement
+landed) recorded; rule 13 added; the legacy-parser naming convention added
+for pre-round-trip artifacts.
+
+**G.5 — What the K-line still owes.** K2a (instrument: expressive world with
+slow state + person×occasion channel; two-split probe validated against
+designed identities — registered, dispatched), then K2b (the T4 branch:
+simple vs reader-mediated, on the validated instrument), then K3 (similarity
+geometry, T7/T8), then the line synthesis.

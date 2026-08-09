@@ -1381,6 +1381,146 @@ code-enforced stop). Stage estimates vs actual: arms 355.754 → 529.1 s
 (1.487×), ×32 holdout 734.460 → 710.3 s (0.967×). No background jobs launched,
 no monitors, no smoke runs.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Leans scored as executed: **L-1 HOLD — the registered reading controls, and
+the verdict is BOUNDARY-SEATED** (registered B=2000 upper 0.24832554505807228
+inside ±0.25 by 0.0017; B=100000 outside by 0.0017; 5/10 alternate seeds;
+Δγ > 0 at 10/10 seeds and both B). No re-scoring — re-choosing among readings
+after seeing them would break the same discipline the registration protects —
+but every consequence below carries the boundary status in its text. L-2 HOLD
+maximal (40/40 world-points; the contrast GROWS with scale, +0.0120 at ×1 →
++0.2095 at ×16). L-3 HOLD as a non-rejection, with the rule-9 second reading
+(F4's own predict-then-holdout) favoring the DELETED arm out-of-sample
+(gap 0.0490 vs 0.0807). G1d replication is strong (fresh intact CI contains
+F4's whole band). No pivot fires.
+
+**L-1's registered consequence executes today:** F4's row re-types
+**"author axis → replicate axis (frame-readout economics)"** and the D3
+prior re-types **"recruit replicates, not words"** — dated note III appended
+to `docs/SUICA_M4_F_PANEL_DESIGN_SYNTHESIS.md` (which also records the
+G-info-F5 truth-object fact), addendum to
+`docs/SUICA_DISPLACEMENT_PROBLEM_RESOLVED.md`, theory consequences in IDT
+appendix G. The honest content of the re-typing: the law survives total
+author deletion with its form intact and its exponent within F4's own band
+under every reading; the axis is STEEPER (Δγ +0.1259 [0.0169, 0.2483],
+sign robust), HIGHER at every scale, better-predicting out-of-sample, and
+less than half as expensive (half-agreement budget 48.865× → 19.878×)
+without the authors it was named after. Author-mean content drags the axis —
+interference extended from the composition LEVEL (K1b/K1c′) to the scaling
+SLOPE.
+
+**Planner registration defects recorded (#16, #17):**
+- **#16** — G1d was listed among "Part 0 gates" though unmeasurable before
+  the intact arm exists; the executor's R-0.6 stage-with-enforced-stop was
+  the correct repair-in-place. Registration structure flaw.
+- **#17** — the pivot space had a GAP: P2d covered "L-1 MISS ∧ γ_deleted
+  DISJOINT" but not "MISS ∧ OVERLAPPING", and the measurement sat exactly on
+  that boundary. Future pivot antecedents must PARTITION the outcome space.
+
+**Standing rule 13 (added 2026-08-09, paid for by L-1's fragility):** every
+registered interval clause names its resampling spec (B and seed policy) in
+the registration; at adjudication the executor checks verdict stability at
+≥10× B, and if the clause boundary lies within achievable Monte-Carlo error
+of the estimate, the lean is scored **BOUNDARY** — neither HOLD nor MISS —
+and every downstream consequence carries that status. (Applied prospectively
+from K2a; K1d's HOLD stands under its own registration.)
+
+**Convention note (from anomaly ii):** a bit-exact anchor against a
+PRE-round-trip-convention artifact must name the parser that produced the
+legacy number; K1d's dual-reading table is the template.
+
+---
+
+## M4-K2a — Instrument leg: an expressive world (slow state + person×occasion channel) and the two-split probe validated
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Purpose: IDT appendix E.3(a) — the F2 family
+cannot express person×occasion content, and K2's T4-branch adjudication
+needs (i) a world that can and (ii) a validated card-level state probe
+(appendix A's two-split probe). **This leg builds and VALIDATES the
+instrument against designed identities; it adjudicates NO theory branch.**
+
+### Machinery
+
+`scripts/run_suica_m4_k2a_expressive_world.py` — the extended generator
+lives in the LEG SCRIPT (suica_core untouched; f2 imported for its objects,
+rule-12 naming). Response of author i, event t, occasion o:
+
+  x(i,t,o) = w_mu·mean_part_i + w_slow·slow_i(t) + w_int·s_int(i,o)
+             + w_c·common(o) + w_e·noise(i,t)
+
+- `mean_part_i` — f2:178's object (the trait; **trait b := this vector**);
+- `slow_i(t)` — f2's author AR construction (f2:172-176) with PINNED φ_slow
+  per arm (the state whose τ_s the probe must read);
+- `s_int(i,o) = ⟨a_i, shock_int(o)⟩/√k` — NEW person×occasion interaction:
+  per-author unit loading a_i (fresh seeded rng) applied to an
+  occasion-keyed shock stream independent of `common(o)`;
+- `common(o)` — f2:121-126's shock object (the frame channel);
+- weights sum-of-squares normalized per arm; realized shares reported.
+
+### Arms (card-space only — no deployed-gauge runs in this leg)
+
+φ_slow ∈ {0.5, 0.9, 0.98} × n_occ ∈ {8, 32} × w_int ∈ {0, equal-share};
+12 cells × 8 worlds, master_seed 20260815. Occasions iid within cell
+(spacing/decorrelation structure per cell pinned in Part 0).
+
+### Part 0 gates
+
+- **G0a** — channel construction verified: four-channel reconstruction
+  residual ≤ 1e-12; realized variance shares within 1% of design per cell.
+- **G1a (rule 10)** — each channel's presence changes panels (RMS > 1e-6);
+  w_int = 0 vs equal-share differ; no registered contrast degenerate.
+- **G2a (rule 3)** — liveness: every channel's share > 0 in every non-zero
+  arm; slow-state decorrelation time consistent with pinned φ_slow
+  (measured ACF at lag 1 within CI of φ_slow per cell).
+- **G3a (power + rule 11 + rule 13)** — 2-world pilot; per-cell MDEs for
+  V-1..V-3; every CI clause satisfiability-checked with DIRECTIONS stated;
+  resampling spec: B = 2000, seed = master_seed, verdict-stability check at
+  ≥10× B for any clause landing within 2× its Monte-Carlo half-width of a
+  boundary (rule 13's first application).
+- **G4a** — Part-0 point predictions COMPUTED BEFORE ARMS from the appendix
+  A/B algebra: per (φ_slow, n_occ) cell, the predicted two-split gap
+  ρ_interleaved − ρ_contiguous and the predicted trait attenuation
+  r(card → b) = σ_b/√(σ_b² + Var(s̄) + Var(s̄_int) + σ_e²/n_eff), with
+  Var(s̄) from the exact AR sum (appendix B's formula, m = n_occ).
+- **G5a** — hygiene; round-trip parsing; rule-12 header for ALL new objects
+  (defined in-script, line numbers cited at commit).
+
+### Leans (designed-identity validations; 12 cells; per-cell CI vs Part-0 prediction; pooled paired bootstrap B=2000)
+
+- **V-1 [prior .80]** — the two-split probe reads τ_s: per-cell measured
+  ρ_int − ρ_contig within CI of the Part-0 prediction in ≥10/12 cells, and
+  the (φ_slow, n_occ) ordering matches the predicted ordering exactly.
+- **V-2 [prior .80]** — attenuation algebra: measured r(card → b) within CI
+  of prediction in ≥10/12 cells.
+- **V-3 [prior .75]** — the interaction channel is typed correctly: with
+  iid occasions its contribution to the CONTIGUOUS-split reproducible
+  component is 0 within an equivalence margin derived from n_occ (one-sided
+  where applicable, defect-#15 lesson), while its same-occasion signature
+  has CI excluding 0 in every w_int > 0 cell — occasion-bound person
+  content, the object the family lacked.
+
+### Pivots (pre-committed)
+
+- **P1a** — V-1 fails in ≥3 cells → the probe algebra (appendix A) is wrong
+  as coded or as derived → STOP the K2 line pending theory repair; the
+  failure cells' full geometry published.
+- **P2a** — V-3 fails → the interaction construction is not occasion-bound
+  as typed → redesign the channel (instrument defect, no theory
+  consequence).
+- **P3a** — G1a/G2a fail → STOP, defect, no arms.
+
+### Deliverables
+
+The six: script; `results/m4_k2a_expressive_world/` (manifest.json,
+gates.json, per-cell CSVs, decision.json — gitignored);
+`reports/SUICA_M4_K2A_EXPRESSIVE_WORLD_REPORT.md` (Part 0 with the point
+predictions first, timestamped before arms); outcome appended here; ledger
+row; ONE commit (`feat(m4-k): K2a — ...`), never amended, not pushed by the
+agent. Budget: card-space only — target < 20 min wall; stop-and-report at 2×
+any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
