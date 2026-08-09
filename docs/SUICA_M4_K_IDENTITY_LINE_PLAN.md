@@ -1906,6 +1906,154 @@ and **pin the link** — the branch cannot be adjudicated by an absolute-swing
 partition whose verdict moves with an unregistered functional form. The
 descriptive over-response (`S/(λP) = 2.19`) is the quantity K2c should target.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Scored on the pre-declared PRIMARY (identity link, RN-6): **L-A HOLD exactly
+(positive control perfect — 6/6 + 6/6 containment under both resamples, both
+orderings EXACT, and the two orderings DIFFER, so the card instruments
+resolve the φ effect), L-B MISS, L-C MISS on the point clause by 1.5–1.7 se
+(its CI clause held), PARTIAL fires on both clauses, L-D HOLD (the gauge
+reads the mixture better than the trait in 6/6 arms; 2.7× at A4). P4b is the
+registered outcome: no re-typing of T4 either way; K2c decomposes.** The
+squared-link second reading (which would have given L-C HOLD → P2b) is
+disclosed and NOT resolved — re-choosing among links after seeing the
+verdicts is the exact failure the discipline exists to prevent.
+
+**The substantive discovery this leg leaves behind:** the field's response
+to state share fits NEITHER registered mechanism cleanly — the gauge
+**over-responds**: field recovery falls −57.59% across the design while the
+card algebra says −32.50%; against an arm-independent efficiency λ =
+0.1741750, S/(λ·P) = **2.1881165**. The reader loses the trait FASTER than
+the card does — qualitatively what the interference account (appendices
+F/G) predicts, and now a THIRD named candidate form for T4:
+**T4-reader-amplified**. K2c adjudicates between "the field is a monotone
+transform of card attenuation" (link curvature only — T4-simple-with-link)
+and "the field responds to state COMPOSITION beyond attenuation"
+(genuinely reader-borne pathology), on a design that needs NO link at all.
+
+**Planner registration defect #20, recorded not repaired:** the K2b
+registration compared quantities on two different scales (card attenuation
+vs field agreement) without pinning the link function, and the branch
+verdict is link-sensitive. The executor's RN-6 (identity PRIMARY, declared
+before arms) preserved adjudicability; the defect is the registration's.
+**Standing rule 14 (added 2026-08-09, paid for by #20):** when a lean
+compares quantities across scales or instruments, the registration pins the
+LINK function and its justification as part of the lean; absent that, the
+lean must be re-designed to be within-instrument (link-free). K2c applies
+the second clause.
+
+---
+
+## M4-K2c — Matched-attenuation pairs: is the reader a transform of card algebra, or does it read state composition? (link-free)
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. P4b's registered consequence, designed under
+rule 14's link-free clause.
+
+### Question
+
+K2b showed the field over-responds to state share relative to card algebra
+under the identity link, and the verdict flips under a squared link. The
+link-free question underneath: **is field recovery a FUNCTION of card
+attenuation alone** (then the reader is a fixed monotone transform of card
+algebra — T4-simple-with-link, the over-response being link curvature), **or
+does it depend on the state's COMPOSITION at fixed attenuation** (then the
+reader carries its own state pathology — T4-reader-mediated/amplified in
+substance)? Matched-attenuation pairs decide: same predicted card
+attenuation, different (share, φ_slow) composition. Any field difference
+within a matched pair is composition-sensitivity, measured field-vs-field —
+no cross-scale link anywhere in the gates.
+
+### Arms (master_seed 20260817; 32 worlds per arm)
+
+Three matched pairs plus the K2b anchor, all w_int = 0, K1-pinned panel
+dims, the K2a/K2b machinery unchanged:
+
+- **Pair 1 (target attenuation ≈ 0.78):** P1a = (share s1a, φ .90) vs
+  P1b = (share s1b, φ .98);
+- **Pair 2 (target ≈ 0.68):** P2a = (s2a, .90) vs P2b = (s2b, .98);
+- **Pair 3 (target ≈ 0.56):** P3a = (s3a, .90) vs P3b = (s3b, .98);
+- **A1-anchor** = K2b's A1 (.02, .90) re-run at this seed lineage
+  (continuity cell, no gate beyond G0c′ anchor use).
+
+The shares s·· are COMPUTED IN PART 0 from the validated attenuation
+algebra (K2a V-2, error ≤0.30%) so that within-pair predicted attenuations
+are EQUAL to machine precision; realized (measured) attenuation equality is
+then a designed identity to verify, not assume (G2c′).
+
+### Part 0 gates
+
+- **G0c′ (anchors)** — re-derive bit-exactly from
+  `results/m4_k2b_t4_branch/decision.json`: A1/A4 field recoveries
+  (0.1778886…, 0.0754395…), S/P = 0.3811151367233824, λ = 0.1741750,
+  S/(λP) = 2.1881165; K2a anchor cell as in K2b's G0b.
+- **G1c′ (matching, the designed identity)** — Part-0: within-pair
+  predicted attenuation difference ≤ 1e-12. Post-arms (adjudicated with the
+  arms but gating them): within-pair MEASURED card attenuation difference
+  pooled CI inside ±0.005 (justified: 5× K2a's max attenuation error
+  0.00065; if matching fails, the pair is VOID — composition claims need
+  the match).
+- **G2c′ (power, rule 2)** — 2-world pilot; MDE(80%, α=.05, paired, n=32)
+  for within-pair field difference must be ≤ 0.020 (justified: the K2b
+  over-response scale — differences at or above this are the ones that
+  would carry the composition story; smaller real differences are declared
+  sub-resolution, claims tiered). Escalate 32→64 once; still short → run
+  and tier.
+- **G3c′ (rule 11 + rule 13)** — satisfiability with directions; B=2000,
+  seed=master; ≥10×B stability for boundary-near clauses.
+- **G4c′ (rule 3)** — lever liveness: across-pair (between targets) card
+  and field movements present per prediction; within-pair composition
+  contrast verified non-degenerate (panels differ, rule 10).
+- **G5c′ (hygiene)** — round-trip; chunked stages < 600 s; rule-12 header;
+  no background jobs/monitors.
+
+### Adjudication space (PARTITIONED, link-free)
+
+Let D_k = field(P_ka) − field(P_kb) within pair k, pooled paired bootstrap.
+
+- **L-1 (function-of-attenuation) [prior .40]** — 3/3 pairs: |D_k| pooled
+  CI inside ±m_k where m_k = max(0.020, MDE_k) (equivalence form, rule 4).
+  Registered consequence: T4 re-types **T4-simple-with-link** — the reader
+  is a fixed monotone transform of card algebra; the link exponent q is
+  then estimated on all K2b+K2c arms and reported with CI (descriptive, no
+  gate).
+- **L-2 (composition-sensitive) [prior .45]** — ≥2/3 pairs: D_k CI
+  excludes 0 AND all significant D_k share one SIGN (direction reported;
+  sign consistency is part of the lean). Registered consequence: T4
+  re-types **T4-reader-mediated (composition-reading form)**; the follow-up
+  candidate is the constructive repair test (does de-framing raise b-only
+  recovery — the P2b follow-up inherited).
+- **PARTIAL-C (named)** — exactly 1/3 significant, or significant D_k with
+  MIXED signs: composition-sensitivity exists but is not uniform; K2d
+  designs the localization.
+- **L-3 [prior .70, descriptive-to-lean]** — pooled q (fit of
+  log(field/λ) on log(attenuation) across K2b's 6 + K2c's 7 arms): q > 1
+  with CI excluding 1 (the over-response is real across the pooled curve,
+  whatever the branch).
+
+### Pivots (pre-committed)
+
+- **P1c′** — G1c′ matching fails in ≥2 pairs → the attenuation algebra
+  does not transfer to gauge dims at matched-pair precision → instrument
+  question returns to K2a′; no theory adjudication.
+- **P2c′** — L-1 holds → T4-simple-with-link registered in IDT; the
+  interference account's slope claim (appendix G) is REVISED to "link
+  curvature, not extra pathology" — a real theory correction, stated as
+  such.
+- **P3c′** — L-2 holds → T4-reader-mediated (composition form) registered
+  in IDT; constructive repair test becomes the next registration.
+- **P4c′** — PARTIAL-C → K2d localization.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_k2c_matched_pairs.py`;
+`results/m4_k2c_matched_pairs/`; `reports/SUICA_M4_K2C_MATCHED_PAIRS_REPORT.md`
+(Part 0 with computed shares and predictions first); outcome appended here;
+ledger row; ONE commit (`feat(m4-k): K2c — ...`), never amended, not pushed
+by the agent. Budget: 7 arms × 32 worlds (compute scale: K2b's whole leg ran
+59 s at 8 worlds × 7 arms) — target < 15 min wall; stop-and-report at 2× any
+Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

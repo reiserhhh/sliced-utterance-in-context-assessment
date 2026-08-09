@@ -666,3 +666,40 @@ compute, card-space only):
 Status change: T6′ and the attenuation algebra move from [PROVED in card
 space] to **[MEASURED]**. K2b (the T4 branch) is registered and dispatched
 on this instrument.
+
+## Dated appendix I (2026-08-09, after M4-K2b): the T4 branch returns PARTIAL — and a third form is named
+
+**I.1 — The verdict.** On the validated instrument, with the positive
+control EXACT (6/6 + 6/6 containment; both card orderings exactly as
+predicted, and different from each other — the card resolves the φ effect),
+the deployed gauge's b-only trait recovery does NEITHER registered thing:
+it does not track card algebra proportionally (L-B MISS: Spearman 0.943
+with one non-significant inversion, p = .0083 > .005; S/P = 0.381 outside
+[0.5, 2]) and it is not floored (L-C MISS on the point clause by 1.5–1.7
+se). **PARTIAL fires — both mechanisms live.** T4 stays [OPEN].
+
+**I.2 — The discovery: over-response.** Field recovery falls **−57.6%**
+across the design while card algebra prescribes **−32.5%**; against an
+arm-independent efficiency λ = 0.1742, S/(λP) = **2.19**. The reader loses
+the trait FASTER than the card does — qualitatively the interference
+account's prediction (appendices F/G) appearing on the state axis. Named as
+the third candidate form: **T4-reader-amplified**. Also L-D HOLD: the gauge
+recovers the MIXTURE better than the trait in 6/6 arms (2.7× at the highest
+state share) — the frame-preference again.
+
+**I.3 — The method lesson (rule 14).** The registration compared card
+attenuation to field agreement without pinning the LINK between their
+scales, and the branch verdict is link-sensitive (identity link → PARTIAL;
+squared link → MEDIATED). Scored on the pre-declared primary; defect #20;
+**rule 14**: cross-scale leans pin their link, or are redesigned
+within-instrument. K2c is the within-instrument design: matched-attenuation
+pairs — same predicted card attenuation, different state composition; any
+within-pair field difference is composition-sensitivity, measured
+field-vs-field, no link anywhere.
+
+**I.4 — What K2c decides.** L-1: field is a function of attenuation alone →
+**T4-simple-with-link** (over-response = link curvature; appendix G's slope
+claim would be REVISED accordingly). L-2: composition-sensitivity at fixed
+attenuation → **T4-reader-mediated (composition form)**, and the
+constructive repair test (does de-framing raise trait recovery?) follows.
+Registered before run with a partitioned space and equivalence margins.
