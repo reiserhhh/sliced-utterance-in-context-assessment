@@ -840,6 +840,142 @@ wanted, must retain design-carrying content — an ESTIMATED or PARTIAL common
 subtraction, or a manipulation at the level of `occasion_labels` — never an
 exact channel removal, at any κ.
 
+### Planner adjudication (2026-08-09, appended after the stop)
+
+**P4c fired correctly, and the stop is the leg's success.** Rule 10's Part-0
+gate — created yesterday's-equivalent from defect #11 — converted a wrong
+registration into a 74-second stop with ZERO adjudicated worlds: the first
+time a standing rule caught the planner before compute was spent. All
+Part-0 products (MDEs, liveness ratios, satisfiability table, the A5/A6
+non-degeneracy value, the F4/F5 κ facts) are sound and are inherited by the
+re-registration below.
+
+**Planner registration defect #13, recorded not repaired:** K1c's G2c
+rationale ("√(1−κ) > 0 keeps the author AR state in the panel, so
+common-removal must not collapse shared/free") is a non-sequitur — the
+retained state is design-INVARIANT, so it cannot carry the contrast. Same
+family as #11; the difference is that this time the rule-10 gate caught it,
+which is the system working as designed.
+
+**Standing rule 12 (added 2026-08-09, paid for by defect #10 plus K1c's two
+rule-9 ambiguities — one naming family):** registered manipulations and
+channels are specified by generator SOURCE OBJECT (file:function/variable,
+e.g. `common_part` per f2:184-195), never by knob names or natural-language
+channel descriptions alone; the gloss is secondary. Executor deviations
+endorsed: computing G3c/G4c after G2c's failure produced exactly the Part-0
+inheritance that makes K1c′ dispatchable without a new pilot.
+
+**Theory consequence recorded as IDT appendix E (the world-family lemma):**
+in F2's family, author content is design-invariant BY CONSTRUCTION at every
+κ; the composition contrast is carried by `common_part` alone; Ŝ_frame ≡ 1
+is a world fact, not a gauge measurement; and the family contains NO
+person×occasion interaction channel — the jurisdiction-alignment question
+for person-specific state is INEXPRESSIBLE there, so K2 gains a fifth design
+requirement (introduce `w_int`). The only live ownership question inside the
+family is Ŝ_auth — registered now as K1c′.
+
+---
+
+## M4-K1c′ — Author-reading share at the live knob: the non-degenerate remainder of K1c
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Inherits K1c's Part-0 products as persisted in
+`results/m4_k1c_ownership_live_knob/` (G0c, G1bc, G3c, G4c, G5c PASS) and
+the arms already implemented in
+`scripts/run_suica_m4_k1c_ownership_live_knob.py`.
+
+### Question
+
+With the common channel present (27.4% of response RMS) and the author
+channels objectively live at κ=0.5 (AR intact/zeroed ratio
+1.0772786802493795–1.0860125411681176; author-mean ratio
+2.8194500501220903–2.865341972610127), does the composition contrast REQUIRE
+author content — or does author deletion leave it intact or larger, as K1b
+measured at κ=1.0?
+
+### Arms (κ=0.5, 128 fresh worlds, master_seed 20260813)
+
+- **A0** shared intact; **A2** free intact;
+- **A5** shared author-deleted; **A6** free author-deleted;
+- **A4** shared estimated per-occasion subtraction (|P|=32);
+- **A1** shared exact common-removal — RETAINED not as a frame-share arm
+  (Ŝ_frame ≡ 1 is a world fact) but as the ORACLE DE-FRAMING REFERENCE: by
+  the proved identity its gauge value is the no-composition baseline, so
+  R_or = A0−A1 anchors the repair ratio.
+
+Quantities per world: Δ0 = A0−A2; Δ0′ = A5−A6; Ŝ_auth = (Δ0−Δ0′)/Δ0;
+R_or = A0−A1; R_est = A0−A4.
+
+Secondary (8 worlds): T6″ v2 at κ=0.5 — readers A vs A′ exactly as K1c wired
+and never ran; contrast rank-1(est8) − rank-1(oracle).
+
+### Part 0 gates
+
+- **G0′ (inheritance anchor)** — re-derive bit-exactly from
+  `results/m4_k1c_ownership_live_knob/decision.json`: both G3c MDEs
+  (0.0015876092906212693, 0.0021362771506247724), the G4c ratios quoted
+  above, and the A5-vs-A6 panel gap 0.3310376783451957.
+- **G1′ (replication, now evaluable)** — Δ0 pooled CI (128 worlds) OVERLAPS
+  F2's κ=0.5 CI [0.004418364530893362, 0.013253942863311687]; FAIL → leg
+  VOID on non-replication, STOP.
+- **G2′ (rule 10)** — non-degeneracy of the REGISTERED contrasts at fresh
+  seeds: A5 vs A6 panels differ (RMS > 1e-6) on both pilot worlds; A0 vs A1
+  inputs differ. The A1-degeneracy identity is a proved fact and is cited,
+  not re-tested.
+- **G3′ (power)** — inherited MDE 0.0021362771506247724 for (Δ0−Δ0′) at
+  n=128; confirm fresh-seed pilot sd (2 worlds) within 2× of K1c's pilot sd,
+  else recompute MDE and re-check the bar 0.004418076848551262.
+- **G4′ (rule 3)** — author-MEAN channel liveness (the channel A5/A6
+  delete) ratio > 1 at fresh pilot worlds; AR ratio and common-channel share
+  reported.
+- **G5′ (hygiene + rules 11 and 12)** — manifest, seeds, wall-times,
+  foreground; rule-11 satisfiability line at fresh pilot sd; rule-12
+  compliance header in the script naming every manipulated object by source
+  object (`common_part` per f2:184-195 blend split; author `mean_part`
+  f2:178; author AR `x` f2:151-177).
+
+### Leans (planner's committed priors) and aggregation (rule 1)
+
+128 worlds; per-world signs: clean ≥104/128, qualified ≥85/128, else fail;
+pooled paired bootstrap 2000 draws, 95% CI; leans separate; no omnibus.
+
+- **L-1 [prior .35 — basis disclosed: K1b's κ=1.0 sign and K1c's
+  reserved-seed pilot sign are both negative; the pilot adjudicates nothing,
+  priors are beliefs]** — an author-reading share exists: (Δ0−Δ0′) pooled CI
+  excludes 0 with Ŝ_auth > 0.
+- **L-2 [prior .70]** — author-deletion specificity on the free side:
+  |A6−A2| pooled CI inside ±0.004418076848551262.
+- **L-3 [prior .80; ADJUDICATED ONLY IF R_or CI excludes 0, else
+  INAPPLICABLE]** — deployable de-framing at the live knob: R_est CI
+  excludes 0 and pooled R_est/R_or ≥ 0.5.
+- **L-4 [prior .80]** — T6″ v2 (sign form): under A′, est8 − oracle ≤ 0 with
+  pooled CI upper bound < +0.005; oracle stability between A and A′ < 0.01.
+
+### Pivots (pre-committed)
+
+- **P1′** — G1′ fails → VOID on non-replication (own follow-up).
+- **P2′** — L-1 MISS with (Δ0−Δ0′) CI upper < 0.25 × Δ0 point estimate →
+  author share bounded below 25% at the live knob → REGISTERED CONSEQUENCE:
+  the retrospective widens WITH the family lemma: "in this world family the
+  composition effect carries no material author-reading share at any tested
+  knob, and the jurisdiction-alignment channel for person-specific state
+  does not exist in the family by construction; the D3 'recruit authors'
+  prior survives only as frame-readout economics" — and the F4/F5 review
+  (on K1c's G4c-info facts) becomes the next registration.
+- **P3′** — L-4 fails → T6″ v2 dead; forged-component localization is next.
+- **P4′** — G2′ fails on A5/A6 at fresh seeds → STOP, defect, no arms.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_k1c_prime_author_share.py` (may import from
+K1c's script); `results/m4_k1c_prime_author_share/` (manifest.json,
+gates.json, per-cell CSVs, decision.json — gitignored);
+`reports/SUICA_M4_K1C_PRIME_AUTHOR_SHARE_REPORT.md` (Part 0 first); outcome
+appended here; ledger row; ONE commit (`feat(m4-k): K1c' — ...`), never
+amended, not pushed by the agent. Budget: 6 arms × 128 worlds ≈ 768
+deployed-gauge runs + the 8-world secondary; target < 30 min wall;
+stop-and-report at 2× any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

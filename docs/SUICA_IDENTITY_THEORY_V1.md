@@ -504,3 +504,48 @@ ID); queues beside `colstd_alpha_0.10`.
 attribution is OPEN → K1c. Retrospective dated notes with this scope were
 appended today to the M4-F panel synthesis and the displacement-resolution
 document under P2b's registered consequence.
+
+## Dated appendix E (2026-08-09, after M4-K1c's Part-0 stop): the world-family lemma — composition in F2's family is common-channel-carried at EVERY κ, and the person×occasion channel does not exist there
+
+M4-K1c never ran its arms: its rule-10 gate proved the planner's registered
+frame-share decomposition degenerate at EVERY κ, not only at κ=1.0, and
+stopped the leg in 74 seconds with zero adjudicated worlds (P4c).
+
+**E.1 — The lemma (source-proved, empirically exact).** In F2's
+`generate_world_composed`: the design (`occasion_mode`) has exactly one
+consumer, `occasion_labels → shock_x` — the `common_part`. The `mean_part`,
+`ar_part` and `noise_part` are drawn before the design enters and are
+design-invariant; `state_part` is linear in the blend, so
+**response − common_part is design-invariant for every κ ∈ (0,1]**
+(empirically: shared-vs-free gaps of the other three channels exactly 0.0;
+post-removal panels equal at 3.3e-16; through the deployed gauge |Δ1| ≤
+7.81e-17 across all pilot worlds). Consequences: (i) Ŝ_frame ≡ 1 at every κ
+is a fact about the WORLD, not a gauge measurement — K1b's κ=1.0 attribution
+was correct but too narrow; (ii) exact common-removal is a design-collapsing
+operation in this family at any κ (standing rules 10 and 12 exist because
+two planner registrations in a row missed this).
+
+**E.2 — What this does to IDT's A1.** F2's family instantiates s(i,o) only
+in its degenerate corner: s(i,o) = common(o) + AR_i(t). There is **no
+person×occasion interaction channel**. The jurisdiction-alignment question —
+"does shared-occasion design align PERSON-SPECIFIC state content?" — is
+therefore UNTESTABLE in this family: not falsified, not supported —
+inexpressible. T3(e)'s two free-design penalties collapse into one there.
+(This is also why the panel line's laws should be re-read as laws of a
+family without if-then signatures: the world cannot represent the very
+object Shoda-style behavioral signatures are about.)
+
+**E.3 — Consequences downstream.** (a) K2 gains a fifth design requirement:
+introduce a person×occasion interaction channel (`w_int`) so state share,
+alignment, and the two-split probe act on a world that can express them.
+(b) The only live ownership question inside the existing family is Ŝ_auth
+(author-deletion), which is NOT degenerate (A5-vs-A6 panel gap
+0.3310376783451957 — exactly the design gap) — registered as M4-K1c′.
+(c) K1c's report-only κ facts: F4's adjudicated claims are κ=1.0-only by its
+own record; F5 carries a HELD κ-stability lean. The F4/F5 re-reading remains
+queued as its own registration; this appendix does not annotate them.
+
+**E.4 — Method note.** Rule 10's gate converted a wrong registration into a
+74-second stop — the first time a standing rule caught the planner before
+compute was spent. Rule 12 (source-object naming for channels and
+manipulations) was added after two same-family naming defects.
