@@ -921,3 +921,52 @@ the persisted CSVs.
 Wall: ~40 min end to end; Stage 1 + Stage 2 compute `~124 s`. Every stage
 came in under its Part-0 estimate — the "heavy cell" (192,256) took
 `28.2 s` against a `270 s` estimate — so no stop-and-report fired.
+
+### Planner adjudication (2026-08-10, appended after the run) — PER-ENTRY, and the phase closes
+
+Ordering integrity: PERFECT (measured.json stamped 86.7 s before the
+first bundle read, zero pre-stamp accesses, enforcement wrapped in all
+11 processes). Hash MATCH. Scored per entry:
+
+- **S-1 PREDICTED 3/3 — the η-floor law is now a PREDICTIVE law**: it
+  predicted per-boundary rates at foreign dims (m=96, k_τ=4, G=5) it
+  had never seen. Fourth independent confirmation, first out-of-family.
+- **S-2 PREDICTED** — exact algebra, confirmed with strict ordering.
+- **S-3 MISSED → the (d/n)^¼ conjecture is DEAD** (sealed OPEN width
+  +0.299 at (192,256); measured EMPTY at −0.285). The window lemma
+  stands. Honest caveats on the record: empty by ONE grid rung
+  (oracle-S 0.781 vs the 0.80 bar, ≈2.85 SEM), the interp second
+  reading would call it 27%-of-sealed OPEN — grid reading was pinned
+  pre-run and governs. New fact worth its own line: the Bayes-shoulder
+  edge MOVED −7.25% across dims — appendix R.2's "projection-invariant
+  ceiling" is Δ-invariance at fixed dims, NOT dimension-invariance; a
+  clarifying sentence is added in appendix U so no one misreads it.
+- **S-4 MISSED, 5.09 band-widths — the T4 composite's LEVEL form is
+  falsified as a predictive formula.** The diagnosis is exact: inputs
+  re-derive bit-exactly, the world itself interpolates beautifully
+  (the new arm sits at the midpoint of its neighbors A3/A4), and the
+  same sealed formula under-predicts K2b's OWN training arms by
+  −0.060..−0.126 — because κ was fitted on within-pair DIFFERENCES and
+  λ·r^q on a pooled power law, and the GLUE never was a level law. No
+  fragility-annex constant rescues the sign. **T4's closure claims all
+  stand (reader-borne; quadratic over-response; variance tax on
+  differences at R² 0.99; fragile species surcharge) — the composite
+  LEVEL formula is scoped out by dated note (IDT appendix U), and the
+  named follow-up is registered as M4-K2f (the level law).**
+- **S-5 PREDICTED — the taxometer read a novel cell to 0.0042.**
+
+Also on the record: **RN-DO-8**, a REAL latent defect in published
+machinery found by Part-0 realizability (l1/l2 `type_geometry` fills
+`np.empty` labels in G blocks with no n%G guard — uninitialized memory
+as type labels when G∤n; never bit L1/L2/L3, all at 512%4==0; the
+harness refuses n%G≠0, and that refusal is now the convention). Rule
+24's first live catch (one wrong decimal fixed pre-commit); the D2
+annex moved no band, as bound.
+
+**The defense phase is COMPLETE (D1–D5 + D-open):** sealed-and-tested
+(3/5 predicted; both misses converted — a dead conjecture and a scoped
+law); adversarially verified (0 refuted); portable (lockbox +
+manifest); governed (R-G1..R-G8); and the rule machine at
+post-hoc-zero. Synthesis: `docs/SUICA_DEFENSE_PHASE_SYNTHESIS.md`.
+Defense working as science: the phase FALSIFIED one glued formula and
+one conjecture that exploration had left standing.

@@ -3479,3 +3479,65 @@ generator-true pattern similarity where raw deviation distance fails —
 sign-predictable failures in the near-norm and unequal-norm regimes; angular
 crowding (not distance crowding) drives misidentification; readability ρ_i
 predicts per-person identification (the menagerie coordinate).
+
+---
+
+## M4-K2f — The level law (registered on D-open's S-4 miss)
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. D-open falsified the T4 composite as an
+ABSOLUTE LEVEL formula (5.09 band-widths; under-predicts its own
+training arms −0.060..−0.126) while every input re-derived bit-exactly
+and the world interpolated cleanly. Question: **is there a level law at
+all — and does it predict?**
+
+### Stage 1 — artifact-space refit (no new worlds)
+
+Data: the persisted b-only field-recovery LEVELS with their (r_pred,
+V_person) covariates across all persisted arms — K2b's 6, K2c's 7,
+K2d's 6, K2e's 6, D-open's M-4 arm (the executor compiles the exact
+list with paths; every row re-derived round-trip; rule 24 on the
+compilation). THREE candidate forms, pre-declared, no others:
+
+- F1: field = λ'·r^q' − κ'·V_person (joint level refit of all three);
+- F2: field = λ'·r^q' − κ'·V_person·r^p (tax scales with attenuation);
+- F3: field = (λ' − κ'·V_person)·r^q' (multiplicative gate).
+
+Selection by leave-one-out RMSE (fit machinery pinned in Part 0;
+B=2000 bootstrap for CIs; rules 13/22/23 in force). **L-1 [prior .55]:**
+the best form's LOO-RMSE ≤ 0.010 AND beats the sealed form's LOO-RMSE
+by a factor ≥ 2. (Sealed-form LOO computed on the same rows as the
+baseline.)
+
+### Stage 2 — predict-then-run (the D-open pattern, inside one leg)
+
+BEFORE running: the winning form's prediction for a FRESH arm (share
+.45, φ .90, K2b instrument, 32 worlds, master_seed 20260826) is
+written to the report and hashed. THEN the arm runs. **L-2 [prior
+.60, conditional on L-1]:** measured recovery inside the winner's band
+(±2× its LOO-RMSE). Ordering enforced in code as in D-open (any read
+of the measured arm before the prediction hash is persisted → STOP).
+
+### Routing (rule 16; cells {L-1 miss}, {L-1 hold, L-2 hold}, {L-1 hold, L-2 miss})
+
+- L-1 MISS → **T4 is scoped PERMANENTLY to response form** (dated
+  closure in IDT; no level formula is claimed; the question closes as
+  answered-in-the-negative).
+- L-1 HOLD + L-2 HOLD → **the level law is restored in the winning
+  form** (dated note; the new form inherits the fragility-annex
+  quoting rules and a D1-style seal is the named follow-up).
+- L-1 HOLD + L-2 MISS → **overfit verdict**: the refit describes, does
+  not predict; T4 scoped to response form; the winning form recorded
+  as descriptive-only.
+
+### Gates and deliverables
+
+G0f anchors (D-open's S-4 numbers bit-exact; the 26-row compilation
+audited); G1f ordering enforcement; G2f rule-17 realizability (the
+fresh arm's pilot finite/non-saturated); G3f rules 11/13/18/22/23
+satisfiability with directions, sides, stages; G4f hygiene + rule-16 +
+rule 24. The six deliverables as always;
+`scripts/run_suica_m4_k2f_level_law.py`;
+`reports/SUICA_M4_K2F_LEVEL_LAW_REPORT.md`; ONE commit
+(`feat(m4-k): K2f — ...`), never amended, not pushed. Budget: Stage 1
+is arithmetic; Stage 2 one K2b arm; target < 25 min wall.

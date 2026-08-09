@@ -1232,3 +1232,43 @@ of its own headroom; de-framed λ = 0.0008 is a boundary value on an
 unidentified power law. None of these re-scores a lean; all of them
 constrain how the numbers may be QUOTED and how the sealed predictions
 must be judged at opening.
+
+## Dated appendix U (2026-08-10, after D-open): the seal opened — two laws promoted to PREDICTIVE, one conjecture dead, one formula scoped
+
+D-open measured the five sealed configurations FIRST (ordering enforced
+in code: 86.7 s gap, zero pre-stamp bundle reads), unsealed second
+(hash MATCH), scored with no re-fitting: **3 PREDICTED / 2 MISSED**.
+
+**U.1 — Promotions.** The **η-floor law** predicted per-boundary rates
+at dims it had never seen (m=96, k_τ=4, G=5; 3/3 inside its sealed
+bands) — it is henceforth cited as a PREDICTIVE law, the program's
+strongest single object. The **taxometer** read a novel cell (η=0.6,
+new energy) with error 0.0042 against its ±0.125 certificate. The tax
+ratio's exact algebra held to 8.9e-16 with strict ordering.
+
+**U.2 — The (d/n)^¼ window-width conjecture is DEAD.** At (192,256)
+the sealed OPEN interval (width +0.299) measured EMPTY (−0.285). The
+window LEMMA stands (R.2). Caveats on the record: empty by one grid
+rung (~2.85 SEM); the interp second reading disagrees and was
+pre-empted by the pinned grid reading. New clarification, to prevent
+misreading of R.2: the Bayes-shoulder/oracle-S edge is Δ-invariant AT
+FIXED DIMS (that is what Q.1 proves); D-open measured it MOVING −7.25%
+ACROSS dims. Dimension-dependence of the shoulder is real and was
+never excluded by the lemma.
+
+**U.3 — The T4 composite's LEVEL form is scoped out.** The sealed
+formula field ≈ λ·r^q − κ·V_person missed its new arm by 5.09
+band-widths — and the diagnosis exonerates the world (the measured
+value interpolates its neighbors exactly) and convicts the GLUE: κ was
+fitted on within-pair differences, λ·r^q on a pooled curve (R² 0.868),
+and their sum was never a level law — it under-predicts even its own
+training arms by −0.060..−0.126. **T4's closure claims stand unchanged
+(reader-borne; quadratic over-response; the variance tax on
+DIFFERENCES at R² 0.9935; the fragile species surcharge). What is
+withdrawn, by this dated note, is the composite's use as an ABSOLUTE
+LEVEL formula.** The level question is registered as M4-K2f.
+
+**U.4 — Machinery note (RN-DO-8).** A latent defect in l1/l2's
+`type_geometry` (uninitialized labels when G∤n) was found by Part-0
+realizability checking; it never bit any published number (all L-legs
+at 512 % 4 == 0); the n % G == 0 refusal is now a convention.
