@@ -1770,6 +1770,142 @@ commit (`feat(m4-k): K2b — ...`), never amended, not pushed by the agent.
 Budget: 6 arms × 8 worlds gauge runs + pilot + companion cell; target
 < 40 min wall; stop-and-report at 2× any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered. Script `scripts/run_suica_m4_k2b_t4_branch.py`; report
+`reports/SUICA_M4_K2B_T4_BRANCH_REPORT.md` (Part 0, with the point-prediction
+table and all six gates, written to disk before the `arms` stage — enforced in
+code by `require_part0()`); artifacts `results/m4_k2b_t4_branch/`.
+6 primary arms + 1 descriptive companion × 8 worlds on the K1-pinned panel
+(985 authors, F2 m-multiset `{8:272, 12:200, 16:513}`, 4 contexts, **565
+retained**, 4 resolved), `master_seed 20260816`, reserved Part-0 pilot worlds
+9601–9602, 56 adjudicated deployed-gauge world runs + 14 pilot runs + 2 pure-F2
+sanity runs; card channel 4520 pooled authors/arm. **Total compute 59.20 s**
+(part0 21.474 s, arms 14.285 s + 19.111 s, finalize 2.540 s, post-hoc
+diagnostic 1.790 s).
+
+**Verdict:
+`PARTIAL__BOTH_MECHANISMS_LIVE__POSITIVE_CONTROL_EXACT__LD_HOLD`.
+L-A HOLD, L-B MISS, L-C MISS, PARTIAL FIRES, L-D HOLD. **P4b fires**; P1b, P2b,
+P3b do not.**
+
+- **All six Part-0 gates pass.** G0b: gauge accepts the expressive world's
+  panels (565 retained, constant across arms/worlds); the K2a anchor cell
+  `phi0.9_occ8_intzero` re-derives from K2a's own seeds **bit-exactly (residual
+  0.0** over 2048 rows × 35 columns); the pure-F2 sanity world reads
+  **0.017013597299456222**, inside K1d's ×1 intact per-world range
+  **[0.0006462726940075391, 0.0254557937918022]** (this leg's own floored layout
+  reads 0.021853063018134767, also inside). G1b: `P = r(A1) − r(A4) =
+  0.26881418197391516`; 2-world pilot paired sd 0.031262397763045804 → MDE(80%,
+  α=.05, paired, n=8) **0.03604444203738883**, **P/MDE = 7.4578538820 ≥ 3** —
+  **no escalation, 8 worlds**; realized-sd recheck at finalize gives MDE
+  0.027291585561437 and P/MDE 9.8497092215. G2b: arms differ (min panel RMS
+  0.01736197411054363); the lever moves the card in the PREDICTED order on the
+  pilot (Spearman **1.0** on both GAP and attenuation); realized shares within
+  **0.00063647 absolute** of design, state-share deviation ≤ **0.00052061**.
+  G3b: every clause satisfiability-checked with directions (including the one
+  that mattered — the minimum attainable exact permutation p at n=6 is
+  1/720 = 0.00138889 ≤ .005). G4b: b-only and mixed truth panels verified
+  **bit-exact (0.0)** against the literal `w_slow=w_int=w_e=0` and `w_e=0`
+  generations, five-channel reconstruction 0.0, estimated field route-invariant
+  0.0. G5b: chunked foreground stages, no background jobs, no monitors.
+- **L-A [.85] HOLD, and exactly.** Card GAP CI contains the Part-0 prediction in
+  **6/6** arms and card attenuation in **6/6** (threshold 5), under BOTH the
+  registered authors-within-world bootstrap and rider (ii)'s world-block
+  resample. **Both orderings match EXACTLY** — GAP `A4>A3>A6>A2>A5>A1`,
+  attenuation `A1>A2>A3>A5>A4>A6` — two *different* orderings, neither the
+  share order: the card resolves the φ effect. Attenuation error ≤
+  **0.00064703 absolute / 0.0975% relative**. The lever moved the card GAP
+  **15.2×** (0.0067716 → 0.1028370). **P1b does not fire; the theory reading is
+  licensed.**
+- **L-B [.25] MISS on both clauses.** Spearman(predicted attenuation, measured
+  field recovery) = **0.9428571429**, exact permutation p (720 orderings) =
+  **0.0083333333** > .005; the single inversion is `A3`/`A5`, whose measured
+  difference is **+0.0061256, CI [−0.0021104, +0.0154459]** — not significant
+  (the card channel got that pair right; the field cannot resolve it).
+  **S = 0.1024492, S/P = 0.3811151, CI [0.3276799, 0.4410191]** — outside
+  [0.5, 2] and not reaching it.
+- **L-C [.65] MISS, on one clause, by 1.5–1.7 se.** `S < P/3` is **FALSE**:
+  0.10244915371617286 vs 0.08960472732463838, exceeding the bar by
+  **0.01284443** = 1.53 se (paired-t) / 1.65 se (world-block bootstrap). The CI
+  clause HOLDS (upper 0.1185522 < P/2 = 0.1344071) and L-A holds. **The gauge
+  moved slightly MORE than a floored reader may move.**
+- **PARTIAL FIRES on both of its clauses:** `S/P = 0.3811151 ∈ [1/3, 1/2]` and
+  `Spearman = 0.9428571 ∈ (0,1)` with `p = 0.00833 < .05`. Both mechanisms are
+  live: the card lever moved the deployed gauge, in almost exactly the predicted
+  order, at **38% of the predicted absolute swing**.
+- **L-D [.60] HOLD.** Mixed-truth recovery > b-only recovery in **6/6** arms,
+  per-arm CI excluding 0 in **5/6** (threshold 5). The miss is `A1`
+  (+0.0031529, CI [−0.0008678, +0.0066365]) — the design's own prediction at
+  share .02. The difference grows monotonically with the state share
+  (A1 +0.0031529, A2 +0.0174173, A3 +0.0728456, A4 +0.1269062; A5 +0.0298799,
+  A6 +0.0550154). At `A4` the gauge recovers the MIXTURE at 0.2023457 and the
+  TRAIT at 0.0754395 — **2.7× more of the state-inclusive object than of the
+  person.** This is the F5 plateau's shape, measured for the first time against
+  a trait-only truth object.
+- **Rule 13: 0 clauses triggered, 0 BOUNDARY** — every gated interval clause
+  sits further than 2 Monte-Carlo endpoint sd's from its boundary at B=2000.
+  (L-C's *failing* clause is a point comparison, outside rule 13's reach; its
+  margin is reported in se units above.)
+
+**THE FINDING THE PLANNER MOST NEEDS — the branch verdict is LINK-SENSITIVE,
+and the registration did not pin the link.** RN-6 resolved it before any arm
+(identity link PRIMARY, squared link a declared second reading, both reported).
+On the same measurements: identity link → `S/P = 0.3811151` → L-C clause (a)
+FALSE → **PARTIAL, P4b**. Squared link (`P = 0.3724535`, `S/P = 0.2750656`) →
+**both L-C clauses TRUE with L-A holding → L-C HOLD → P2b**. The Spearman
+clause is link-invariant, so PARTIAL's ordering clause is satisfied under both;
+the partition suppresses it under the squared link only because L-C is checked
+first. **Scored on the PRIMARY as declared; the disagreement is reported, not
+resolved by the executor.**
+
+**A descriptive shape that fits no registered branch (report §1.3).** In
+absolute terms the swing is small (S/P = 0.381); in RELATIVE terms it is large —
+field recovery falls **57.59%** from A1 to A4 (0.1778886 → 0.0754395) while the
+card attenuation falls **32.50%** (0.8271785 → 0.5583643). With an
+arm-independent reader efficiency `λ = 0.1741750`, **`S/(λ·P) = 2.1881165`**:
+after removing a pure multiplicative efficiency the gauge **over-responds** to
+the state share by more than 2×. Neither "tracks the card algebra" nor
+"floored" — a third shape, and the reason an absolute-swing partition cannot
+classify this result. Companion cell (descriptive): adding the person×occasion
+channel at equal share drops b-only recovery from A3's 0.1096226 to
+**0.0725774** while leaving mixed-truth recovery unchanged (0.1824682 →
+0.1822902) — occasion-bound person content behaves, at the reader, like more
+state.
+
+**Two registration ambiguities caught and resolved BEFORE any arm (rule 9, all
+readings reported).** (i) **The truth object**: "mean_part-only responses" and
+"generating with `w_slow = w_int = w_e = 0`" are different objects, and the
+strict reading is **DEGENERATE** — a constant-per-event panel's permutation
+null equals the path itself, so the deployed transition branch is identically
+zero (`max|K| = 4.440892098500626e-16`), the truth field collapses to round-off
+(norm 6.68e-04 vs the operative 1.52e-01) and its "recovery" is meaningless
+(−0.0245). The registration's own G4b construction (which retains the
+author-invariant frame channel, so the field's PERSON content is still `b`
+alone) was used. (ii) **The link** — see above; this one changes the branch.
+A third resolution carries no ambiguity: RN-5's `(context, m)` norm cell, forced
+by T3 (exact frame cancellation needs a shared occasion set, and the occasion
+set here is determined by the author's own `m`); measured centred-frame residual
+**9.992007221626409e-16**.
+
+**Post-hoc diagnostic, run after the adjudication and flagged as such
+(`post_hoc_diagnostic.json`; `decision.json`/`gates.json` untouched).** The card
+GAP sits a near-constant **+0.00195…+0.00243** above prediction in all six arms
+(contained 6/6, but at ~0.85 of the half-width each time). Diagnosed: with only
+the trait and the frame present, both split-half ρ's are **1.0 to the last bit**
+and the GAP is **exactly 0.0** in every m-cell — the card construction and T3's
+cancellation are exact. The offset is carried entirely by the noise channel, and
+the pooled GAP estimator is **unbiased** on centred iid noise (400-replicate MC
+at this panel's cell sizes: means −0.00030923/+0.00037341/−0.00013342 against
+se's 0.00047843/0.00057943/0.00036251, per-world sd matching the analytic
+`1/√(N·D)`). It is therefore **one shared realization** — RN-4 pairs every arm
+on the same world seeds — and the registered bootstrap covers it.
+
+**K2c's brief, from this leg:** decompose (the registered PARTIAL consequence),
+and **pin the link** — the branch cannot be adjudicated by an absolute-swing
+partition whose verdict moves with an unregistered functional form. The
+descriptive over-response (`S/(λP) = 2.19`) is the quantity K2c should target.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
