@@ -2186,6 +2186,163 @@ make its adjudication space an actual partition**; (iv) the mixture channel carr
 the same effect 4.3× larger and with the opposite sign, which is where a constructive
 repair test would have the most signal to work with.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Scored under RN-4 as executed: **BOTH_FIRE, a named non-registered outcome;
+T4 is NOT re-typed; no pivot fires.** What the leg nonetheless establishes,
+with matching exact to 1e-16 and measured matches 23×–143× inside the gate:
+
+1. **The strict function-of-attenuation form is falsified.** At matched
+   card attenuation the field differs — unanimous sign across all three
+   pairs, 2/3 significant at n=32, monotone in state content (2.08% /
+   9.65% / 15.23% of level). Composition-sensitivity is REAL: the arm with
+   more share (less persistent state) reads the person worse.
+2. **But sub-material at the registered margin** over attenuation
+   0.56–0.78 (all |D| CIs inside ±0.020) — and the agent's honesty line is
+   adopted verbatim into the record: it was the materiality margin, not
+   the physics, that kept L-1 alive (P3 by 0.533 se).
+3. **The link is measured: q = 1.9337620539521978 [1.7337, 2.1933],
+   R² = 0.958 over 13 arms.** The over-response is approximately QUADRATIC
+   — which retroactively explains K2b's link-sensitivity: the "squared
+   second reading" was close to the true link all along.
+4. **The trade:** at matched attenuation the mixture channel moves
+   OPPOSITE and 4.3× larger (all CIs excluding 0) — what the reader gains
+   on the mixture it loses on the trait.
+
+Emerging named form (hypothesis, NOT adjudicated): **field ≈ λ·r_card^q −
+c(state composition)**, q ≈ 2, c > 0 growing with state content — carrier
+unknown because iso-attenuation pairs in (share, φ) necessarily move both
+(the leg's own stated limitation).
+
+**Planner registration defect #21, recorded not repaired:** the K2c space
+was declared partitioned and is not — L-1 (equivalence-within-margin) and
+L-2 (significance+sign) are logically independent axes, and
+significant-but-sub-material satisfies both. Second partition failure
+(after #17's gap; this one an overlap). **Standing rule 15 (added
+2026-08-09, paid for by #17+#21):** the registered adjudication space is a
+PARTITION of the outcome space, verified by ENUMERATION at registration
+time — a truth table over all clause combinations with every combination
+assigned to exactly one named outcome; overlaps and gaps are registration
+defects caught before dispatch. Also on record: K2b's hard-coded
+t_{.80,31} constant was +1.0e-04 off (A-1; no impact — K2b ran at n=8);
+K2c verified against scipy.
+
+---
+
+## M4-K2d — The frontier and the carrier: does the composition term cross materiality, and which state species carries it?
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Rule 15's first application — the enumeration
+table below IS the adjudication space.
+
+### Question
+
+K2c bounded the composition term sub-material over attenuation 0.56–0.78
+and growing. Two questions close the T4 branch: (i) **frontier** — does
+the term cross materiality at attenuation ≈ 0.45, as the trend predicts?
+(ii) **carrier** — at fixed attenuation and fixed φ, is the term driven by
+persistent author-state specifically, or by ANY non-trait person content
+(species-general)? The species contrast trades slow-AR content against the
+K2a-validated interaction channel (occasion-bound, zero-persistence person
+content) at matched predicted attenuation — the pair that (share, φ)
+iso-curves could not express.
+
+### Arms (master_seed 20260818; 32 worlds/arm; escalation 32→64 per G2d′)
+
+- **FR-45a** (share s4a, φ .90, w_int 0) vs **FR-45b** (s4b, φ .98,
+  w_int 0): the K2c-series pair at target attenuation ≈ 0.45.
+- **SP-68-slow** (slow-only: share s68, φ .90, w_int 0) vs **SP-68-int**
+  (mixed species: smaller slow share s68′ + w_int chosen so predicted
+  attenuation matches SP-68-slow's, φ .90): species pair at ≈ 0.68.
+- **SP-56-slow** vs **SP-56-int**: species pair at ≈ 0.56.
+
+All shares solved in Part 0 from the K2a-validated algebra (within-pair
+predicted attenuation difference ≤ 1e-12), K1-pinned dims, K2b/K2c
+machinery unchanged.
+
+### Part 0 gates
+
+- **G0d′ (anchors)** — bit-exact from K2c's decision.json: the three D_k
+  with CIs, q = 1.9337620539521978 with CI, λ; and K2b's A1/A4 fields.
+- **G1d′ (matching)** — as K2c: predicted ≤ 1e-12; measured within-pair
+  card-attenuation difference pooled CI inside ±0.005; a failed pair is
+  VOID for its claims.
+- **G2d′ (power)** — 2-world pilot per pair; MDE(80%, α=.05, paired,
+  n=32) ≤ 0.010 for the species pairs and ≤ 0.020 for FR-45; escalate
+  32→64 once per failing pair; still short → run and tier.
+- **G3d′ (rules 11+13)** — satisfiability with directions; B=2000,
+  seed=master; ≥10×B stability at boundaries.
+- **G4d′ (rules 3+10)** — liveness: interaction channel share > 0 in
+  SP-int arms (realized shares reported); within-pair panels differ;
+  across-pair movements per prediction.
+- **G5d′ (hygiene)** — round-trip; chunked < 600 s; rule-12 header
+  (w_int objects by K2a's script lines); rule-14 self-check line (all
+  gates within-instrument; the only cross-scale object is the descriptive
+  q update, no branch weight).
+
+### Adjudication space (rule 15 — the enumeration IS the space)
+
+Per pair, with D = field(a) − field(b) (FR: a = φ.90 arm; SP: a = slow
+arm), M1 = 0.020, M2 = 0.010 (dual margins, both pre-justified: M1 =
+K2c continuity; M2 = the K2c-observed effect scale 0.012–0.014, so that
+"sub-material" can no longer hide effects of exactly the size already
+seen). Cell assignment, mutually exclusive and exhaustive by construction:
+
+| CI vs 0 | further test | cell |
+|---|---|---|
+| excludes 0 | |D| point ≥ M1 AND CI lower(|D|) ≥ M2 | **MAT-SIG(sign)** |
+| excludes 0 | otherwise | **SUB-SIG(sign)** |
+| includes 0 | CI ⊆ ±M2 | **NULL** |
+| includes 0 | CI ⊆ ±M1 but ⊄ ±M2 | **WEAK-NULL** |
+| includes 0 | CI ⊄ ±M1 | **INDET** |
+
+Every pair lands in exactly one cell. Leans are predicates over cells:
+
+- **L-F (frontier) [prior .55]** — FR-45 ∈ MAT-SIG(−).
+- **L-S (species)** — over the two SP pairs: **SPECIES-GENERAL** [prior
+  .35] := both ∈ {NULL, WEAK-NULL}; **SPECIES-SPECIFIC** [prior .45] :=
+  ≥1 ∈ {MAT-SIG, SUB-SIG} with sign agreement across any significant
+  pairs (sign itself is a finding, either direction); **SPECIES-MIXED**
+  [prior .20] := significant pairs with opposed signs, or one significant
+  and one INDET. (Exhaustive over the cells the SP pairs can occupy;
+  INDET+INDET → SPECIES-UNDERPOWERED, named.)
+- **L-M (mixture, secondary) [prior .70]** — FR-45's Δmixed has the
+  K2c-direction sign with CI excluding 0. SP pairs' Δmixed: descriptive
+  only.
+- **q-update (descriptive, no gate):** pooled q re-fit over all 19 arms.
+
+### Pivots (pre-committed)
+
+- **P1d″** — G1d′ matching fails on a pair → that pair VOID; if ≥2 pairs
+  void → leg reports and stops (instrument question).
+- **P2d″** — L-F HOLDS → combined with K2c, the composition term is
+  MATERIAL on the frontier: **T4 re-types to the composite form
+  T4-reader-amplified-composition** (field ≈ λ·r^q − c(state), c crossing
+  materiality by attenuation ≈ 0.45); the T4 branch CLOSES as
+  reader-borne-in-substance; the constructive repair test (de-framing vs
+  b-only recovery, the mixture channel as the loud signal) becomes the
+  next registration.
+- **P3d″** — FR-45 ∈ {NULL, WEAK-NULL} → the term stays sub-material
+  across the whole tested range: **T4 re-types T4-simple-with-link
+  (q ≈ 2) + sub-material composition correction** — closure with opposite
+  ownership; the repair question then targets the LINK, not the term.
+- **P4d″** — FR-45 ∈ {SUB-SIG, INDET} → frontier unresolved; K2e extends
+  the frontier or the worlds (once), with the enumeration carried over.
+- **L-S consequences (any branch):** SPECIES-GENERAL → c() depends on
+  total non-trait person content, carrier = "any state"; SPECIES-SPECIFIC
+  → carrier named by the sign (slow-persistent vs occasion-bound); routed
+  into the closure text of whichever P fires.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_k2d_frontier_carrier.py`;
+`results/m4_k2d_frontier_carrier/`;
+`reports/SUICA_M4_K2D_FRONTIER_CARRIER_REPORT.md` (Part 0 with solved
+shares + enumeration table first); outcome appended here; ledger row; ONE
+commit (`feat(m4-k): K2d — ...`), never amended, not pushed by the agent.
+Budget: 6 arms × 32 worlds (K2c scale ≈ 155 s); target < 15 min wall;
+stop-and-report at 2× any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

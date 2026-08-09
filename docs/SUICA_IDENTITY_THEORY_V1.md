@@ -703,3 +703,44 @@ claim would be REVISED accordingly). L-2: composition-sensitivity at fixed
 attenuation → **T4-reader-mediated (composition form)**, and the
 constructive repair test (does de-framing raise trait recovery?) follows.
 Registered before run with a partitioned space and equivalence margins.
+
+## Dated appendix J (2026-08-09, after M4-K2c): the strict function form is dead, the link is quadratic, and the composition term is real but small — so far
+
+**J.1 — Composition-sensitivity is real; the strict function form is
+falsified.** With within-pair predicted attenuation matched to 1e-16 and
+measured matches 23×–143× inside the gate, the field still differs:
+unanimous sign across three pairs, 2/3 significant at n=32, monotone in
+state content (|D| = 2.08% / 9.65% / 15.23% of level; the more-share /
+less-persistent arm reads the person worse). The field is NOT a function of
+card attenuation alone.
+
+**J.2 — But sub-material at the registered margin** (all |D| CIs inside
+±0.020) over attenuation 0.56–0.78 — with the record keeping the honest
+clause: the MARGIN, not the physics, kept the function form's equivalence
+alive (closest case by 0.533 se). The registered space turned out not to be
+a partition (significant-but-sub-material satisfied both leans; scored as a
+named non-registered outcome under a pre-declared rule; T4 not re-typed).
+Defect #21; standing rule 15 (enumeration-verified partitions) created.
+
+**J.3 — The link is measured: q = 1.9338 [1.7337, 2.1933], R² 0.958 over
+13 arms.** The K2b over-response is approximately QUADRATIC — the reader
+loses the trait like the square of the card's attenuation. This
+retroactively explains K2b's link-sensitivity: the squared reading was
+close to the truth. Emerging named form (hypothesis, not adjudicated):
+**field ≈ λ·r_card^q − c(state composition)**, q ≈ 2, c > 0 growing with
+state content, carrier unresolved (iso-attenuation pairs in (share, φ)
+move both together).
+
+**J.4 — The trade.** At matched attenuation, the mixture channel moves
+OPPOSITE and 4.3× larger (all CIs excluding 0): what the reader gains on
+the mixture it loses on the trait — T9's frame-preference, now visible as
+a within-pair exchange rate.
+
+**J.5 — K2d (registered).** Frontier: does c() cross materiality at
+attenuation ≈ 0.45? Carrier: species pairs trading slow-AR against the
+K2a-validated interaction channel at matched attenuation and fixed φ —
+species-general vs species-specific, with the sign itself a finding. Dual
+margins (0.020 continuity; 0.010 = the observed effect scale, so
+sub-material can no longer hide effects of the size already seen);
+rule-15 enumeration as the adjudication space. Either closure re-types T4;
+the constructive repair question follows the ownership.
