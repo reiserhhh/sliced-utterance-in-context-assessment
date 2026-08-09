@@ -2343,6 +2343,159 @@ commit (`feat(m4-k): K2d — ...`), never amended, not pushed by the agent.
 Budget: 6 arms × 32 worlds (K2c scale ≈ 155 s); target < 15 min wall;
 stop-and-report at 2× any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered. Script `scripts/run_suica_m4_k2d_frontier_carrier.py` (K2c's and
+K2b's apparatus imported and called UNMODIFIED; the single new object is a disclosed
+dispatcher on `k2b.arm_weights` letting an arm carry a CHOSEN interaction share, verified
+bit-exact against the original on its own domain); report
+`reports/SUICA_M4_K2D_FRONTIER_CARRIER_REPORT.md` (Part 0 — solved shares, the rule-15
+enumeration, all six gates — written to disk at **09:49:45Z BEFORE** the `arms` stage,
+enforced in code by `require_part0()`); artifacts `results/m4_k2d_frontier_carrier/`.
+6 arms × **32 worlds** (per-pair power ladder selected 32 for all three pairs, **no
+escalation**), `master_seed 20260818`, K1-pinned panel (985 authors, **565 retained**, 4
+resolved), card channel 18 080 pooled authors/arm, **192 adjudicated deployed-gauge world
+runs** + 12 reserved-pilot runs (worlds 9801–9802). **Total compute 136.046 s** (part0
+10.239, arms 58.011 + 55.755, finalize 12.041) — the arms stage ran 113.766 s against a
+Part-0 estimate of 153.490 s, far inside the 2× stop threshold (306.980 s).
+
+**Verdict: `FRONTIER_SUBSIG_NEG__L_F_MISS__SPECIES_SPECIFIC__MATCH_EXACT__LM_HOLD`.
+L-F MISSES (FR-45 = SUB-SIG(−)); P4d″ FIRES and is the only pivot that does; L-S =
+SPECIES-SPECIFIC (the registration's uniquely assigned outcome) with a POSITIVE sign in
+both pairs; L-M HOLDS; 0 pairs VOID; rule 13 clean. T4 is NOT re-typed — the frontier is
+unresolved on the registered axis.**
+
+- **All six Part-0 gates pass, plus the rule-15 enumeration.** **G0d′**: every anchor
+  re-derived from persisted artifacts **bit-exactly, residual 0.0** — K2c's three D_k
+  (−0.0033349254353831808 / −0.012167516605861444 / −0.01355928388620139) **and all six CI
+  endpoints**, K2c's pooled q **1.9337620539521978** and its CI [1.7337263621727161,
+  2.1932591297891246], λ **0.17417497661611914**, K2b's A1 **0.177888649457317** and A4
+  **0.07543949574114414**; and K2d's generalized `pooled_q` reproduces K2c's two-group fit
+  bit-identically. **G1d′ Part-0**: the SOLVED shares — **FR-45 (target .45):
+  s4a = 0.6634207990183637 @ φ.90, s4b = 0.6061873016248464 @ φ.98; SP-68 (.68):
+  s68 = 0.29267462506992153 (slow-only) vs s68′ = 0.14633731253496077 + w_int share
+  0.2806659454238726; SP-56 (.56): 0.4973617623232523 vs 0.24868088116162615 + w_int
+  0.37685012551875713** — give within-pair predicted attenuation differences **0.0 /
+  1.110223e-16 / 0.0**, 3/3. **G2d′**: 2-world pilot paired sd 0.00764050 / 0.00984801 /
+  0.00260028 → MDE @32 **0.00390731 / 0.00503621 / 0.00132977** against targets .020/.010/
+  .010, **no pair escalated**. **G4d′**: the interaction channel's realized variance share
+  is **0.08561182681052686** (SP68int) and **0.11479125952660524** (SP56int) and **exactly
+  0.0** in the four w_int=0 arms; panels differ (RMS 0.0398 / 0.0546 / 0.0639); across the
+  three levels pilot card attenuation (0.44972 → 0.55892 → 0.67874) and pilot field
+  recovery (0.04923 → 0.05294 → 0.09343) both move per prediction; frame-channel centred
+  residual 1.4432899320127035e-15. **G3d′/G5d′**: every clause satisfiability-checked with
+  directions; foreground chunked stages, 0 background jobs, 0 monitors.
+- **G1d′ post-arms: 0 VOID, and the SPECIES pair matches as exactly as the persistence
+  pair.** Measured within-pair card-attenuation differences **−0.00023077797833293** (CI
+  [−0.000839896, +0.000359775]), **−0.00011800743836321015** ([−0.000496488, +0.000238211]),
+  **−0.00010300118927064617** ([−0.000602312, +0.000371261]) — **6.0× / 10.1× / 8.3×
+  tighter than ±0.005**. Attenuation contains its prediction 6/6 (max rel err 0.278%).
+  P1d″ does not fire; the composition reading is licensed on all three pairs.
+- **D per pair (paired world-block bootstrap, B=2000, n=32) and the assigned CELL:**
+  **FR-45 D = −0.009879385607257792** CI [−0.015395490382080454, −0.004577741752997643] →
+  **SUB-SIG(−)**; **SP-68 D = +0.030350909608369947** CI [+0.02348894741478388,
+  +0.03692045553170193] → **MAT-SIG(+)**; **SP-56 D = +0.027060778175001646** CI
+  [+0.020297134101083764, +0.03382765210646028] → **MAT-SIG(+)**. Per-world sign counts
+  24/32 negative, 29/32 positive, 26/32 positive.
+- **RULE 15's first application worked — and caught its own registration one level up.**
+  The **per-pair cell table IS a partition**, verified by enumeration over a 6-clause truth
+  table (sign added as c6, since the registration folds it into the cell NAME): 25 155
+  triples searched, 30/64 combinations realizable, **0 overlaps**, all seven signed cells
+  realized. But the **lean-level predicates built on that table are not**: L-S has **8
+  OVERLAP and 4 GAP of 49** ordered cell pairs (every (SIG, INDET) fires both
+  SPECIES-SPECIFIC and SPECIES-MIXED; every (NULL/WEAK-NULL, INDET) fires nothing), and the
+  pivot routing leaves **MAT-SIG(+) unrouted** — a material frontier effect with the sign
+  reversed had no registered consequence. Found in Part 0 **before any hypothesis number**,
+  resolved by RN-7's pre-declared named non-registered readings on K2c's RN-4 precedent, and
+  **it did not bind**: all twelve pathological combinations require an INDET pair and no
+  pair was INDET.
+- **THE FRONTIER: the term does not cross materiality, and the leg says why.** The
+  direction is right (**negative in 4/4 (share, φ) pairs now**) and the CI excludes 0 by
+  27.7 MC-sd, but |D| = 0.00988 is **half of M1** and lower(|D|) = 0.00458 is **below M2**.
+  The reason is that the term tracks the recovery LEVEL, which collapses faster than the
+  term grows: |D| as % of level runs **2.079% → 9.654% → 15.230% → 15.937%** at r =
+  .78/.68/.56/**.45** while the level runs 0.16038 → 0.12604 → 0.08903 → **0.06199** — so
+  the absolute term **peaked near r ≈ 0.56 and fell 27%** from 0.013559 to 0.009879. K2c's
+  adjudication expected a fourth target "would very likely breach the margin"; measured, it
+  cannot. **P4d″'s registered remedy is predicted by this leg's own data to fail in both
+  variants**: extending the frontier lowers the level faster than the term, and extending
+  the worlds tightens a CI that already lies wholly inside ±M1 (the miss is not
+  underpower).
+- **THE CARRIER: species-specific, and it is the OCCASION-BOUND species that is
+  expensive.** `field(slow) − field(int) > 0` in both pairs: swapping half the persistent
+  state for its **card-equivalent** amount of zero-persistence person×occasion content
+  costs the reader **28.85%** (SP-68) and **39.38%** (SP-56) of its remaining trait
+  recovery. These effects are **2.5× and 2.0×** the persistence-axis effects at the same
+  attenuation (0.0304 vs K2c P2's 0.0122; 0.0271 vs P3's 0.0136). **The material
+  composition term exists; the frontier probe was looking down the weak axis.** The card
+  sees the contrast in the opposite ledger: within-pair GAP ratios 1.789 / 1.749 for the
+  species pairs vs 3.882 for FR-45 (continuing K2c's 4.04/4.08/3.98).
+- **L-M [.70] HOLDS and is 9.2× louder than the trait channel.** FR-45 Δmixed =
+  **+0.09057085992114061** CI [+0.08492199727666237, +0.09605704140944434] — K2c's
+  direction, CI excluding 0, and 9.17× the b-only |D| (K2c's ratio ≈ 4.3×). SP pairs'
+  Δmixed (descriptive): **+0.0034648537544723487** CI [−0.006000959, +0.012538706]
+  (includes 0) and **+0.011889777605738044** CI [+0.003576083, +0.020335026]. A clean
+  dissociation — the mixture "trade" is a property of the **persistence** axis, not of
+  composition in general.
+- **q-update (descriptive, no gate): q = 1.8528700746510731 CI [1.7147417060355998,
+  1.999586491101811]** over **19 arms**, one-sided 5th pct 1.73739381617801, λ-invariance
+  residual 2.220446049250313e-16, shift vs K2c's 13-arm value **−0.08089197930112468**.
+  The quadratic reading survives, but **R² fell 0.958 → 0.868**: two pairs sitting at
+  identical x with field values 25–30% apart are not scatter — the pooled power law is
+  being asked to absorb the very term this line is trying to name.
+- **A POST-HOC descriptive companion that unifies all six K2c+K2d pairs (offered as an
+  estimand, NOT a claim; computed after decision.json and disclosed, decision.json
+  untouched).** Score each pair by the difference in **total non-trait person variance
+  share** (slow + interaction) instead of anything the card weights: OLS through the origin
+  gives **D ≈ −0.7220359963712748 × Δ(person variance)**, **R² 0.9935185860651237**, max
+  |residual| 0.00252, per-pair κ ∈ [−0.837, −0.509], mean −0.6856. One coefficient covers
+  **both design directions including the sign reversal** and r ∈ [0.45, 0.78]. Reading:
+  `field ≈ λ·r^q − κ·V_person` — **the reader counts non-trait person content by RAW
+  VARIANCE while the card counts it by its own averaging weights**, and every K2c/K2d
+  result is the gap between those two accountings. It also explains the frontier's failure
+  with no new mechanism (Δvar shrinks along the (share, φ) axis: +0.0184 at .56 → +0.0172
+  at .45). **This means K2d cannot separate "species-specific reader" from "raw-variance
+  reader"** — the discriminating design is the mirror of this leg's (match raw person
+  variance, vary species), and it is cheap on the same machinery.
+- **Rule 13: 0 clauses triggered, 0 BOUNDARY.** Closest approaches (post-hoc descriptive):
+  27.75 MC-sd (FR-45), 21.75 (SP-68), 14.23 (SP-56).
+- **Rule 14 verified on this leg's own gates:** G0d′ re-derives K2b/K2c numbers against
+  themselves; G1d′ is card-vs-card; G2d′/G4d′ and every cell, L-F, L-S and L-M are
+  field-vs-field within-pair. The only cross-scale object is the q-update, which the
+  registration declares descriptive with no gate and which pins its own link.
+- **Anomalies (with timing).** **A-1 (Part 0, before any hypothesis number):** the
+  lean-level space is not a partition (above); resolved by RN-7; did not bind. **A-2
+  (finalize, after the numbers existed):** the two-split **GAP** prediction is contained
+  4/6 — the two misses are exactly the two large-`w_int` arms (SP68int +4.96%, SP56int
+  +3.34%; the four w_int=0 arms sit at +0.61%…+1.69% and all contain). K2a validated the
+  algebra at `w_int ∈ {0, equal-share}`; these arms carry interaction shares 0.084/0.113.
+  **Impact: none** — GAP is not gated here and the gated attenuation contains its prediction
+  6/6 at ≤0.278%. Recorded as an instrument note for K2a's algebra at large `w_int`. **A-3
+  (Part 0, provenance):** corpus tags read `m4k2b-K2D-<arm>-w<k>` because
+  `k2b.run_field_world` is unmodified; hash labels only, disjoint from K2b/K2c. **A-4 (Part
+  0, continuity, not a defect):** the two SP slow arms solve to shares **bit-identical** to
+  K2c's P2a/P3a. **A-5 (finalize, after the numbers existed):** the realized paired sd
+  exceeded the 2-world pilot's by **2.05×–7.83×**, leaving the SP pairs **3.8%/4.1% short**
+  of their registered MDE at the executed n (realized MDE 0.010376 / 0.010408 vs target
+  0.010). Disclosed, **not repaired** — re-escalating after seeing hypothesis numbers is the
+  post-hoc design change the discipline forbids — and inconsequential, since both effects
+  are ≥2.6× their own realized MDE. The structural lesson stands: a 2-world pilot estimates
+  a paired sd on **1 degree of freedom**. No crashes, no re-runs, no background jobs, no
+  monitors, no stage over its Part-0 estimate.
+
+**K2d's brief to the planner:** (i) the frontier is unresolved on the registered axis and
+**cannot be rescued by P4d″'s own remedy** — the term is ≈16% of a collapsing level, so
+lower attenuation shrinks it in absolute terms, and more worlds cannot move a CI already
+inside ±M1; (ii) the **material** composition term exists on the **species** axis, at 2–2.5×
+the persistence-axis size, MAT-SIG at both margins with unanimous sign — if the planner
+wants T4 re-typed on a material term the evidence is here, but it is not the evidence L-F
+asked for and this executor did not re-route a registered lean to collect it; (iii) the
+sharpest available estimand is **`field ≈ λ·r^q − κ·V_person`, κ ≈ 0.72 (R² 0.9935 over six
+pairs, both directions)**, and the design that discriminates it from species-specificity is
+the mirror of this leg's matching; (iv) **rule 15 should be applied one level up** — the
+registration enumerated the space of CELLS and left the space of VERDICTS unpartitioned,
+which is defect-#21's shape recurring at a higher altitude.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
