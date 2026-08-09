@@ -3255,6 +3255,135 @@ amended, not pushed by the agent. Budget: 12 cells × 32 worlds (K2b-scale
 compute ×2); target < 20 min wall; stop-and-report at 2× any Part-0 stage
 estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered: `master_seed 20260821`, 12 cells (A1..A6 ×
+{G-intact, G-deframed}) × 32 worlds, 985 authors/world, 565 retained, 384
+deployed-gauge runs on the estimated panel plus 768 truth-panel maps plus 384
+card recomputations. Report:
+`reports/SUICA_M4_KR1_DEFRAMING_REPAIR_REPORT.md` (Part 0 written to disk
+before any main arm). Total compute ≈ 302 s (Part 0 82.000 s; four arm chunks
+54.908/55.023/54.931/54.826 s; finalize 0.070 s) against a 20-minute target;
+no stage exceeded its Part-0 estimate.
+
+**Verdict: `L-R3__DEFRAMING_HARMS_TRAIT_READING__nup0_ndown6__P-R3`.**
+
+**Gates.** G0r PASS — every anchor bit-exact at residual 0.0: K2b's six
+per-arm b-only recoveries (0.177888649457317 / 0.1506896317900927 /
+0.10962256916514518 / 0.07543949574114414 / 0.11574817692039557 /
+0.06918364030560309), K2b's λ 0.17417497661611914, K2d's 19-arm q
+1.8528700746510731, K2e's six-pair κ̂ −0.7220359963712748, K1c′'s R_est/R_or
+0.7347498869811525, plus this leg's six card predictions against K2b's
+persisted `part0_predictions.csv` (residual 0.0 on four columns);
+`k2e.rederive_anchors` called unmodified, with `k2d.install_species_weights`
+disclosed and its bit-exactness on the "zero" arm proved. **G2r PASS and
+explicit: the CARD channel is BIT-IDENTICAL across gauge variants in all 192
+arm-worlds** (SHA-256 of the float64 numeric block equal everywhere,
+max column-sum difference 0.0, max gap difference 0.0), with the card frame
+deliberately recomputed after each variant's gauge run so an in-place mutation
+would surface. G1r PASS — 4-world pilot, per-arm MDE at n=32 = 0.00668 /
+0.00951 / 0.00787 / 0.00610 / 0.00448 / 0.00722, all ≤ 0.010; no escalation,
+no tiering. G3r PASS — nine clauses satisfiable with directions; the rule-16
+enumeration is a strict partition (28 realizable cells, 0 raw-predicate
+overlaps, 0 gaps; L-R1 2 cells, L-R2 3, L-R3 15, L-R4 8). G4r PASS —
+de-framing moves the input panels in every arm (RMS 0.0550–0.0727, i.e.
+31%–41% of the intact panel RMS), and **K1b's A0/A1/A4 reproduce BIT-EXACTLY
+at world 0 through `k1b._arm_world` unmodified** (0.008037373438839491 /
+−0.006087038691756484 / −0.0038127992738790474; world-0 ratio 0.8389851983325359,
+between K1c′'s pooled 0.7347 and K1b's pooled 0.9439), proving the transcribed
+object IS K1b's A4. G5r PASS.
+
+**Result.** d_a = recovery_deframed − recovery_intact, paired world-block
+bootstrap B=2000 seed=master:
+
+| arm | intact | de-framed | d_a [95% CI] | cell |
+|---|---|---|---|---|
+| A1 | 0.1802539896876199 | −0.002323535074059783 | −0.1825775247616797 [−0.19234838093937226, −0.1719028269878068] | DOWN |
+| A2 | 0.15817065330134786 | −0.0021303896682008227 | −0.1603010429695487 [−0.17003739193186954, −0.14986656070119625] | DOWN |
+| A3 | 0.11450455159268326 | 0.001331198693243309 | −0.11317335289943996 [−0.12180877697065692, −0.10406864323069726] | DOWN |
+| A4 | 0.07788655650456981 | 0.0008341570693264815 | −0.07705239943524334 [−0.08351381987096262, −0.07073386188274594] | DOWN |
+| A5 | 0.11817481684598696 | 0.002018622329167797 | −0.11615619451681918 [−0.12478259690529406, −0.10782550577056155] | DOWN |
+| A6 | 0.0815095100586942 | 0.003440825026036933 | −0.07806868503265725 [−0.0864873927537404, −0.0697211441408005] | DOWN |
+
+**(n_up, n_down) = (0, 6) → L-R3 [prior .10] → P-R3.** Every de-framed
+recovery CI contains 0 (two point estimates negative); the sign is unanimous
+in 192/192 arm-worlds; effects are 6.3×–12.3× their realized MDEs and
+7.7×–18.3× the registered margin m_rec = 0.010. Rule 13: 8 interval clauses,
+**0 triggered, 0 BOUNDARY**, closest approach 273.5 MC-sd.
+
+**Parameter story (descriptive, no gate).** λ_intact = 0.18213556261185018
+[0.1680078327427061, 0.19469045033998522] (K2b's persisted 0.17417 inside it,
+at a fresh seed and 4× the worlds); λ_deframed = 0.000790595010593783
+[−0.009569575395921523, 0.011703480813718777]; **Δλ = −0.1813449676012564
+[−0.1930474869292865, −0.16906308385859692]**, DOWN. **q_intact =
+1.8132149668419377 [1.6568262349122915, 2.0051274012464915], r² = 0.959 — an
+out-of-sample confirmation of appendix L's q = 1.83 [1.71, 1.98] from this
+leg's six arms alone.** **Δq is NOT ESTIMABLE**: a log-log slope needs a
+positive pooled recovery in every arm, and under G-deframed A1 and A2 are
+negative (−0.002323535074059783, −0.0021303896682008227) with 1627/2000
+bootstrap draws non-finite; the finite-draw spread
+[−9.002768641394967, −1.16465858646393] is a selected subset, reported as
+disclosure and explicitly NOT a CI. **Δκ is NOT ESTIMABLE and no pair was
+invented**: K2b's six arms are not attenuation-matched (15 pairwise |Δr_pred|
+from 0.030834538189281502 to 0.3078266657748955, none 0, against the ≤1e-16
+matching K2c/K2d/K2e built), and the manipulation moves neither r nor
+V_person, so no contrast carries ΔV_person leverage.
+
+**Mixed recovery (descriptive):** 6/6 DOWN as well, but **graded by state
+share** where b-only is flat — relative collapse −0.998 (A1), −0.930 (A2),
+−0.903 (A5), −0.779 (A6), −0.689 (A3), −0.443 (A4), against a b-only relative
+collapse of −0.958 … −1.013 in every arm.
+
+**Rule-9 second readings (all three, on the pilot, all 6 arms):** donor
+channel list (`expressive`), donor pool scheme (`per_occasion`) and
+truth-panel de-framing (`deframe_truth`) each give the **same sign in 6/6
+arms**; maximum disagreement between any two readings 0.039393, smaller than
+the smallest primary effect 0.070782. The verdict turns on no open convention.
+
+**Executor's brief.** (i) De-framing does not merely fail to improve the
+reader as a trait instrument — it abolishes it on this world family's b-only
+target: λ falls to zero and T4's exponent has no positive scale left. (ii)
+The mechanism P-R3 names is already visible and is recorded as a finding, not
+a claim: in the F2/K2b family the b-only truth panel's ONLY within-author
+occasion variation IS the frame (K2b's own G4b: a strict trait-only panel's
+field has max context norm 0.00066759 against the b-only panel's minimum
+0.15214368, recovery −0.02449568), so the b-only field is a frame field
+modulated by the trait, and removing the frame from the estimate leaves
+nothing for that target to agree with. The charter's sharpest form is
+therefore: **is there any target in this family that de-framing leaves
+readable?** — with the mixed channel's state-share grading as its
+starting point. (iii) T9's counter-operation is re-typed by measurement:
+frame removal is hygiene on what a statistic MEANS, not enhancement of the
+reader as an instrument, and the certified-unadopted repair's record should
+carry that deployment caution. Nothing is adopted; L-R1 did not fire, so no
+F16 adoption memo was drafted.
+
+**Findings that bound future registrations (recorded, not defects):** F-1 —
+the b-only target in this family is frame-carried, so any leg that manipulates
+the frame on the estimate side and scores against b-only is partly scoring
+frame-vs-frame agreement; F-2 — T4's q is a log-log slope and does not exist
+where the reader's level is zero, so any registration asking for Δq across an
+intervention that can null the level should pre-declare a level gate.
+
+**Anomalies (all disclosed with timing in the report):** A-1 the first Part-0
+invocation died in the anchor stage on a missing `k2d.install_species_weights`
+(before any pilot world existed; resolved and the dispatcher's bit-exactness
+recorded); A-2 `finalize` ran twice, the second run replacing a NaN Δq with an
+explicit non-estimability statement and adding a POST-HOC table — no
+estimator, margin, predicate, precedence or route changed and every §2.1–§2.5
+number is bit-identical between the runs; A-3 the 4-world pilot
+under-estimated the realized sd of d_a by 1.5×–2.8×, so five of six realized
+MDEs (0.00936–0.01479) exceed the registered 0.010 target the pilot projected
+would be met — immaterial here (effects 6.3×–12.3× their realized MDEs,
+192/192 sign agreement) but a live case for a df-based inflation factor on
+pilot-sd MDEs even at 4 worlds; A-4 the pilot's unanimous negative sign was
+disclosed in Part 0 before any main world index existed, with no design change;
+A-5 the truth field is not bit-identical across variants because
+`calibrate_d0_soft` is fitted on what the operator observes (max abs entry
+difference 0.0075376076, min matrix cosine 0.6823271963) — RN-2b, a property
+of the deployed gauge, disclosed before the arms. **0 registration defects
+found.**
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
