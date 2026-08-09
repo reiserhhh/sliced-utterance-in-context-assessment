@@ -557,3 +557,145 @@ own correction: R3's meter is correct, and what is uncalibrated is its behaviour
 on an ESTIMATED partition — a different object. (5) L3 budget note: if the audit
 must be cross-fitted AND well-conditioned, n_occ must rise (16 restores L1's
 contrast on each half) or the split must be over PERSONS rather than occasions.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+Scored as executed: **W-1 MISS, W-2 MISS, W-3 HOLD, W-4 MISS → P2M.**
+Adjudicated with the grade the evidence licenses:
+
+- **W-3 is the leg's positive yield: the η-continuum floor curve is
+  MEASURED** (7/10 containment at the bar; exact η-ordering at both
+  energies; the two resolution-void cells are a quantum fact, defect
+  #35). Derivation 2 of the L2 charter is now empirical.
+- **W-1 missed on a window my own conditions made EMPTY** — defect #31,
+  PROVED before arms by the rule-18 joint check (disjoint by 1.571×):
+  {oracle-S > 0.8} is IDENTICAL to {Bayes ceiling > 0.8} because
+  oracle-S sits on Q.1's projection-invariant ceiling, which is set by
+  the slow-state channel (2.3× the identity's boundary-normal variance)
+  and is Δ-free. The MECHANISM was measured and is real: localization
+  gap +0.2571091862002618 [+0.2409, +0.2769] at T0 (4.28×), declining
+  monotonically to ~0 at T4, oracle-S ON the ceiling in T0–T2.
+  **P2M's registered reading ("the localization claim dies") is
+  corrected in appendix R to the localization-window lemma:** the gain
+  is a continuous measured mechanism; the QUALITATIVE window
+  [Δ*_ambient, Δ*_Bayes] has dimension-governed width (executor's
+  (d/n)^¼ scaling recorded as a conjecture) and is empty at these dims.
+  No further projection claims beyond the measured gap.
+- **W-4's miss REFUTES appendix Q.5** — the honest entry: calibrating
+  B̂ made tracking WORSE (2/10 vs L1's 5/10 uncalibrated); the same
+  calibrated meter on TRUE groups tracks 10/10; cross-fitting cost the
+  two-split contrast a 2.1538× conditioning loss. The audit's residual
+  error is PARTITION-borne, not constant-borne. The completeness meter
+  is henceforth certified ON TRUE/GIVEN PARTITIONS ONLY; its
+  estimated-partition form needs the propagation instrument (L3).
+  The same-data optimistic bias itself was confirmed clean (pooled
+  −0.005767 [−0.006439, −0.005165], 10/10).
+- **W-2**: defect #33 (rule-19 class, again mine) — the bar sat on ARI
+  equality where the BBP law owns the OVERLAP; the overlap companion
+  approaches prediction with Δ (shortfall 30.1% → 0.5%). The
+  estimated-S-equals-oracle-S ARI claim is withdrawn at these dims.
+
+**Planner registration defects recorded (#31–#35):** #31 W-1's joint
+emptiness; #32 the floor-everywhere clause vs the bracket's low end
+(same family); #33 W-2's wrong-quantity bar; #34 W-4's bar cannot
+separate constant-wrong from partition-wrong (confound in the lean's
+design); #35 W-3's η=0 cells unresolvable at the run's quantum.
+**Standing rule 20 (added 2026-08-10, paid for by #31+#32): when the
+rule-18 joint check finds ANY lean's condition-set empty, the leg STOPS
+before arms as a registration defect (rule-10's analogue at the
+adjudication layer), unless the registration pre-declared empty-set as
+an adjudicable outcome.** (L2's registration did not; the executor
+proceeded correctly under its text; the rule closes the gap.)
+
+Theory consequences: IDT appendix R (the window lemma; Q.5's refutation;
+the floor curve's promotion to MEASURED). L3 registered below.
+
+---
+
+## M4-L3 — The taxometer, and the partition-propagated completeness meter
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Rule 20 is in force (first application):
+any empty joint condition-set stops the leg pre-arms.
+
+### Questions
+
+(A) **The taxometer:** in an unknown-geometry world, can η be READ
+label-free? η̂ built from the bulk-excess route (per-card noise variance
+from the validated split-half machinery; bulk excess over noise
+identifies (1−η)σ_b²) combined with the within-provisional-group
+spectrum route; second reading: the alignment angle between
+within-group top-space and between-group axes. (B) **The
+partition-propagated meter:** model the estimated-partition audit error
+as a function of partition quality and produce a corrected meter —
+audit deviation regressed on (1−ARI) across cells with the oracle
+anchor at ARI = 1 — then validate the corrected meter's tracking.
+
+### Arms (master_seed 20260824; 8 worlds × 512 authors/cell; card-space)
+
+The L2 C-grid reused at fresh seeds: η ∈ {0, .25, .5, .75, 1} × two
+identity energies (ρ.35/ρ.55 equivalents), L1's Δ. Per cell: η̂ (both
+routes), provisional grouping (both L1 instruments), the calibrated
+meter on estimated AND true partitions, cross-fitted and same-data.
+
+### Part 0 gates
+
+- **G0N** — anchors bit-exact from L2 (floor-curve cells, audit tables,
+  pooled bias −0.005767022729929317, conditioning ratio 2.1537750000000058,
+  B̂_cal band); construction residuals; realized-knob tolerances.
+- **G1N (rules 10+3+17)** — non-degeneracy; liveness; realizability of
+  the η̂ routes (pilot: bulk-excess estimable with CI half-width < 0.3
+  at every grid point — else the pre-declared fallback drops the
+  affected route, disclosed).
+- **G2N (rules 18+20)** — JOINT satisfiability over every lean's
+  condition-set; ANY empty set → STOP pre-arms (rule 20).
+- **G3N (rule 19 fidelity table)** — per lean: the theorem/derivation
+  quantity, the predicted curve, the bar, the why. η̂'s quantity is η
+  itself (bar = half the grid spacing, 0.125); the propagation model's
+  quantity is the audit deviation vs (1−ARI) slope with the oracle
+  anchor; pilot MDEs; rule-13 spec (B=2000, seed=master, ≥10×B at
+  boundaries).
+- **G4N (hygiene + rule 16)** — full-object enumeration; round-trip;
+  chunked < 600 s; rule-12 header; rule-14 self-check (η̂-vs-η,
+  share-vs-share, deviation-vs-ARI — no cross-scale gate).
+
+### Leans
+
+- **X-1 (taxometer orders) [prior .70; shadows: η itself]** — η̂
+  (PRIMARY route) strictly monotone in designed η at both energies
+  (Spearman = 1 over each 5-point grid) with pole calibration: η̂ CI
+  contains 0 at η=0 and 1 at η=1 (all four pole cells).
+- **X-2 (taxometer calibrated) [prior .55; shadows: η]** — |η̂ − η| ≤
+  0.125 in ≥8/10 cells (grid half-spacing bar).
+- **X-3 (propagation model) [prior .60; shadows: the deviation-(1−ARI)
+  relation]** — pooled fit R² ≥ 0.7 with the oracle anchor inside the
+  fit's CI at ARI=1, AND the corrected meter tracks designed shares in
+  ≥8/10 cells on ESTIMATED partitions (L2's calibrated meter managed
+  2/10).
+- **X-4 (bias-sign consistency) [prior .80]** — the same-data optimistic
+  bias persists under the corrected meter (pooled CI excluding 0,
+  optimistic side).
+
+### Routing (rule 16; precedence top-down)
+
+1. Rule-20 stop (any empty set) → **P1N: registration defect, no arms.**
+2. X-1 MISS → **P2N: the taxometer is dead at these dims** — the
+  line's label-free geometry reading falls back to the floor/audit
+  pair; L-line synthesis proceeds without a taxometer.
+3. X-1 HOLD, X-3 MISS → **P3N: meter stays certified on true/given
+  partitions only** — the estimated-partition audit is retired as an
+  instrument (not patched again); synthesis proceeds with that scope.
+4. X-1 HOLD, X-3 HOLD (X-2/X-4 any) → **P4N: the line's instrument set
+  is complete** — the planner writes the M4-L synthesis and IDT
+  appendix S (the answer to the owner's reverse question, final form),
+  with any X-2/X-4 miss named and scoped.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_l3_taxometer_meter.py`;
+`results/m4_l3_taxometer_meter/`;
+`reports/SUICA_M4_L3_TAXOMETER_METER_REPORT.md` (Part 0 with the
+fidelity table first); outcome appended here; ledger row; ONE commit
+(`feat(m4-l): L3 — ...`), never amended, not pushed by the agent.
+Budget: card-space; target < 25 min wall; stop-and-report at 2× any
+Part-0 stage estimate.

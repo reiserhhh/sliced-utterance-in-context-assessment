@@ -1093,3 +1093,45 @@ is larger). R3 stands; the calibrated cross-fitted meter is L2's W-4.
 **Q.6 — Method.** Defects #27–#30 recorded; standing rules 18 (JOINT
 satisfiability across knob-sharing clauses) and 19 (every lean bar
 shadows the theorem's OWN quantity, stated in a fidelity table) created.
+
+## Dated appendix R (2026-08-10, after M4-L2): the floor curve is measured; the localization window lemma; Q.5 refuted
+
+**R.1 — The η-continuum floor law is MEASURED.** σ_u²(η) = η·σ_b²/k_τ +
+(1−η)·σ_b²/m: containment 7/10 at the bar with EXACT η-ordering at both
+identity energies (the two void cells are below the run's resolution
+quantum — a fact about the grid, not the law). The projection-invariant
+floor is now the L-line's central certified object.
+
+**R.2 — The localization window lemma (replacing P2M's registered
+reading).** L2's W-1 missed on a window the registration itself made
+empty (defect #31, proved pre-arms by the rule-18 joint check): at these
+dims, {oracle-S > .8} ≡ {Bayes ceiling > .8}, because the ceiling is set
+by the SLOW-STATE channel (2.3× the identity's boundary-normal variance)
+and is Δ-free — so no Δ has ambient failing while projection cleanly
+succeeds. The MECHANISM is real and measured: the localization gap is
++0.2571 [+0.2409, +0.2769] at the hardest rung (4.28×), declining
+monotonically to ~0 where ambient succeeds, with oracle-S ON the ceiling
+throughout the hard rungs. **Lemma (stated; width law conjectured at
+(d/n)^¼):** the qualitative window [Δ*_ambient, Δ*_Bayes] in which
+"ambient fails but projected succeeds" exists only when the ambient
+break point lies below the state-set Bayes shoulder; its width is
+dimension- and noise-governed and CAN BE EMPTY, as here. R2-ISO's final
+status: the floor ratio (proved + measured, 8.15×) plus a continuous,
+measured, Δ-declining localization gap — and no guaranteed qualitative
+regime. Projection claims end here.
+
+**R.3 — Q.5 is REFUTED, on the record.** Calibrating B̂ made tracking
+WORSE (2/10 vs the uncalibrated 5/10); the same calibrated meter on TRUE
+groups tracks 10/10; cross-fitting cost the two-split contrast a 2.154×
+conditioning loss. The audit's residual error is PARTITION-borne. The
+completeness meter is certified ON TRUE/GIVEN PARTITIONS ONLY; the
+estimated-partition form requires the propagation instrument (M4-L3's
+X-3), and if that fails it is retired, not patched again. The same-data
+optimistic bias itself is confirmed (pooled −0.005767 [−0.006439,
+−0.005165], 10/10 — L2-charter Derivation 4's sign, clean).
+
+**R.4 — Method.** Defects #31–#35; standing rule 20 (an empty joint
+condition-set STOPS the leg pre-arms — rule 10's analogue at the
+adjudication layer). W-2's estimated-S ARI claim withdrawn at these dims
+(the BBP overlap approaches prediction, 30.1% → 0.5% shortfall with Δ;
+the bar was on the wrong quantity — defect #33, rule-19 class).
