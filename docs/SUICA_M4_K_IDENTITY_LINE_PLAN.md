@@ -1626,6 +1626,150 @@ trail is untouched.
 T4-reader-mediated branch, with a validated card-level positive control and a
 world that can express person×occasion content.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+V-1 HOLD (11/12 + EXACT ordering including the non-monotone structure and
+the arm-dependent rank swap — the probe reads τ_s), V-2 HOLD (12/12,
+attenuation algebra exact to ≤0.30% relative — appendix B's formula is now
+MEASURED), V-3 HOLD (6/6 + 6/6 — the interaction channel is occasion-bound
+person content as typed). Rule 13's first application worked as designed:
+6 boundary-near clauses triggered, all STABLE at 10×B, zero BOUNDARY. No
+pivot fires. **The instrument is CERTIFIED for K2b**, with two riders that
+K2b's registration binds: (i) **read the GAP** (ρ_int − ρ_contig), never
+either split half alone — the registered authors-within-world bootstrap
+conditions on realized occasion shocks and under-covers half-level
+predictions (8/12) while GAP-level containment is immune; (ii) per-half
+predictions, if ever wanted, need world-block resampling (the agent's
+post-hoc check, correctly flagged as such).
+
+**Planner registration defects recorded (#18, #19):** #18 — G2a's ACF
+clause pinned neither CI level nor multiplicity (executor resolved to
+family-wise 95% over 6 before arms, both readings reported); #19 — "shares
+within 1% of design" was ambiguous (absolute vs relative) and relatively
+UNSATISFIABLE for the common channel at n_occ draws (a rule-11-family
+miss; resolved to absolute before arms). **Convention added:** any
+bit-identity claim stated in Part 0 is VERIFIED in Part 0, not asserted
+(K2a anomaly vi: the mean_part-mirror identity was asserted at Part 0 and
+measured only post-arms — it passed at residual exactly 0.0, but the
+ordering was wrong).
+
+---
+
+## M4-K2b — The T4 branch: card algebra or reader floor? (dissociation on the validated instrument)
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. This is the K2 charter executed on the K2a
+instrument, with all five refinement requirements and both K2a riders.
+
+### Question
+
+T4-simple: the card/biography gap is CARD algebra — trait recovery is
+governed by the state share and persistence via the (now-measured)
+attenuation formula, and the deployed gauge tracks it. T4-reader-mediated:
+the deployed gauge imposes its own floor (frame reading — K1/K1b/K1c′/K1d's
+arc), which card algebra does not move. K2b dissociates them: manipulate
+the state share and persistence on the expressive world, run BOTH channels
+per arm — the validated card-level GAP probe (positive control) and the
+deployed gauge's trait recovery — and see which moves.
+
+### Arms
+
+Six state configurations at fixed n_occ and fixed budget, master_seed
+20260816, 8 worlds each (escalation ladder in G1b):
+
+A1 (share .02, φ .9) · A2 (.10, .9) · A3 (.30, .9) · A4 (.50, .9) ·
+A5 (.30, .98) · A6 (.50, .98)
+
+where share = w_slow² fraction of non-noise signal variance; w_int = 0 in
+the primary arms (one descriptive companion cell at (.30, .9, w_int
+equal-share), no gate). Panels emitted in the deployed gauge's input format
+at K1-pinned dims (985 authors, F2 m-multiset, 4 contexts).
+
+### Channels per arm
+
+- **Card channel (positive control, reader-free):** the two-split GAP
+  ρ_interleaved − ρ_contiguous and card attenuation r(card → b), computed
+  exactly as K2a validated them, with Part-0 point predictions from the
+  same algebra. Per K2a rider (i), only GAP-level and attenuation
+  quantities carry gates — no split-half-alone gate.
+- **Field channel (the deployed gauge):** long-window trait recovery :=
+  field agreement between the gauge's estimated field and the b-only truth
+  field (truth = mean_part-only responses through the same frozen map —
+  G4b verifies the construction bit-exactly by generating with
+  w_slow = w_int = w_e = 0). The F5-style MIXED-truth recovery is computed
+  alongside, descriptively (continuity with G-info-F5's composition table).
+
+### Part 0 gates
+
+- **G0b (format + consistency anchor)** — the gauge accepts the expressive
+  world's panels; retained-author count reported; one K2a cell re-derived
+  bit-exactly with K2a's seeds (instrument continuity); a pure-F2 sanity
+  world (unmodified generator, κ=1.0, shared, K1 dims) run once — its
+  agreement must fall inside K1d's ×1 intact per-world range (consistency,
+  not bit-anchor; rule-12 provenance that the gauge path is THE code).
+- **G1b (power, rule 2 + the charter's ≥3×MDE requirement)** — Part-0
+  point predictions of T4-simple's field recovery per arm from the
+  validated algebra; 2-world gauge pilot for sd; REQUIRE: predicted
+  extreme-arm swing (A1 vs A4) ≥ 3× MDE(80%, α=.05, paired, n=8).
+  Escalate worlds 8→16→32 once each if not; still short at 32 →
+  ABORT-report.
+- **G2b (rule 10 + rule 3)** — arms differ in panels; the manipulation
+  moves the card channel per prediction on the pilot (liveness of the
+  designed lever); state share realized within tolerance per arm.
+- **G3b (rule 11 + rule 13)** — every clause satisfiability-checked with
+  directions; resampling spec B=2000, seed=master; stability at ≥10×B for
+  boundary-near clauses; one-sided clauses one-sided.
+- **G4b (truth construction)** — b-only truth field verified bit-exactly
+  against the w_slow=w_int=w_e=0 generation; rule-12 names all objects.
+- **G5b (hygiene)** — round-trip parsing; stages CHUNKED under the shell's
+  600 s cap (K1d anomaly-i lesson); no background jobs, no monitors.
+
+### Adjudication space (PARTITIONED — defect #17's lesson)
+
+With L-A the positive control and S := measured extreme-arm field-recovery
+swing vs P := T4-simple's predicted swing:
+
+- **L-A [prior .85]** — positive control: card GAP and attenuation track
+  Part-0 predictions across arms (per-arm CI containment ≥5/6 on each,
+  ordering exact). FAIL → INSTRUMENT-FAIL branch: STOP, back to
+  instrument work; no theory adjudication.
+- **L-B (T4-simple) [prior .25]** — field recovery tracks the card
+  algebra: Spearman(predicted attenuation, measured field recovery) = 1
+  across 6 arms (exact permutation p ≤ .005) AND S/P ∈ [0.5, 2] with
+  pooled CI inside [0.33, 3].
+- **L-C (T4-reader-mediated) [prior .65]** — the floor: S < P/3 with
+  pooled CI upper bound < P/2, while L-A HOLDS (the lever moved the card,
+  not the gauge).
+- **PARTIAL (named branch, no prior — reported if neither L-B nor L-C)** —
+  S/P ∈ [1/3, 1/2] or ordering partially tracks (Spearman ∈ (0,1) with
+  p < .05): both mechanisms live; K2c designs the decomposition.
+- **L-D [prior .60, descriptive-to-lean]** — the gauge reads the mixture
+  better than the trait: mixed-truth recovery > b-only recovery in 6/6
+  arms (per-arm CI excluding 0 in ≥5/6).
+
+### Pivots (pre-committed)
+
+- **P1b** — L-A fails → INSTRUMENT-FAIL (no theory reading; K2a′ next).
+- **P2b** — L-C holds with L-A → **T4-reader-mediated becomes the
+  registered form in IDT** (T4 branch resolved on a live, powered,
+  positive-controlled channel); the F5 plateau re-attributes to the
+  reader; registered follow-up candidate: does the certified de-framing
+  preprocessor raise b-only recovery? (constructive repair question).
+- **P3b** — L-B holds → T4-simple lives; K2c is the quantitative gap law
+  (h/τ_s sweep on this instrument).
+- **P4b** — PARTIAL → K2c is the decomposition design; no re-typing of T4
+  either way.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_k2b_t4_branch.py`;
+`results/m4_k2b_t4_branch/` (manifest.json, gates.json, per-arm CSVs,
+decision.json — gitignored); `reports/SUICA_M4_K2B_T4_BRANCH_REPORT.md`
+(Part 0 with predictions first); outcome appended here; ledger row; ONE
+commit (`feat(m4-k): K2b — ...`), never amended, not pushed by the agent.
+Budget: 6 arms × 8 worlds gauge runs + pilot + companion cell; target
+< 40 min wall; stop-and-report at 2× any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

@@ -636,3 +636,33 @@ slow state + person×occasion channel; two-split probe validated against
 designed identities — registered, dispatched), then K2b (the T4 branch:
 simple vs reader-mediated, on the validated instrument), then K3 (similarity
 geometry, T7/T8), then the line synthesis.
+
+## Dated appendix H (2026-08-09, after M4-K2a): the instrument holds — T6′ and the attenuation algebra are now measured objects
+
+M4-K2a validated the expressive world and both card-level instruments
+against Part-0 point predictions computed before any arm (10.9 s of
+compute, card-space only):
+
+- **T6′ (two-split probe) is real and quantitative:** measured
+  ρ_interleaved − ρ_contiguous contained the algebraic prediction in 11/12
+  cells and matched the predicted ORDERING exactly — including its
+  non-monotonicity in φ_slow and an arm-dependent rank swap. The probe
+  reads τ_s.
+- **Appendix B's attenuation formula is exact in practice:** 12/12 cells,
+  max relative error 0.30%, against r = σ_b/√(σ_b² + Var(s̄_slow) +
+  Var(s̄_int) + σ_e²/n_eff) with the exact AR sum.
+- **The person×occasion channel is typed correctly:** its contribution to
+  contiguous-split reproducibility is 0 within margins (6/6, TOST, even at
+  the strictest submargin) while its same-occasion signature is present and
+  matches the predicted magnitude (6/6) — the family can now express the
+  content appendix E showed it lacked.
+- **Rule 13's first application:** six boundary-near clauses triggered the
+  ≥10×B stability check; all STABLE; zero BOUNDARY.
+- **Estimator lesson (binding rider on K2b):** read the GAP, not either
+  split half — the authors-within-world bootstrap conditions on realized
+  occasion shocks and under-covers half-level predictions (8/12), while GAP
+  and attenuation quantities are immune.
+
+Status change: T6′ and the attenuation algebra move from [PROVED in card
+space] to **[MEASURED]**. K2b (the T4 branch) is registered and dispatched
+on this instrument.
