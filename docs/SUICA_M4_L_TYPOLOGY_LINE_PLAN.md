@@ -699,3 +699,140 @@ fidelity table first); outcome appended here; ledger row; ONE commit
 (`feat(m4-l): L3 — ...`), never amended, not pushed by the agent.
 Budget: card-space; target < 25 min wall; stop-and-report at 2× any
 Part-0 stage estimate.
+
+### OUTCOME (appended 2026-08-09, after run; append-only)
+
+**`TAXOMETER_DEAD__X1MX2HX3MX4H__P2N` — X-1 MISS · X-2 HOLD · X-3 MISS · X-4 HOLD
+→ P2N.** Report: `reports/SUICA_M4_L3_TAXOMETER_METER_REPORT.md`. Script:
+`scripts/run_suica_m4_l3_taxometer_meter.py`. 10 cells × 8 worlds × 512 authors;
+230.416 s adjudicated compute (part0 207.345 written to disk BEFORE arms and
+enforced in code by `require_part0()`, arms 22.385, finalize 0.686) against a
+<25 min budget.
+
+**Standing rule 20's first application: NO STOP.** The rule-18 joint check
+reduced every lean's clauses to sets of design points over the (Δ, σ_b²) plane
+(3 Δ-factors × 3 energy-factors, 8 prediction replicates each — the same n the
+arms use) and intersected them within each lean BEFORE any arm ran. Condition-set
+sizes: **X-1 6/9, X-2 9/9, X-3 2/9, X-4 9/9** — none empty, so the leg proceeded.
+Two facts were put on the record pre-arms: **X-3's registered point (`d1_e1`) is
+OUTSIDE its own condition-set** (clause X-3c reaches 8/10 only at Δ×1.4), a
+pre-registered forecast that X-3 was the lean at risk; and X-1's η=0 pole clause
+fails at every high-energy point. Both forecasts were borne out.
+
+**X-1 MISSES on two of four pole cells, and P2M's pattern repeats a third time.**
+η̂ (PRIMARY: bulk-excess with the panel-exact state-innovation whitener,
+provisional grouping by L1's Lloyd instrument) is **strictly monotone with
+Spearman = 1 at BOTH energies under every declared reading** (spectral grouping,
+true partition, oracle whitener, alignment angle). Both η=1 poles calibrate
+(CIs [0.896515, 1.117619] and [0.940217, 1.053524] contain 1). Both η=0 poles
+fail: η̂ = **0.092384** [0.031550, 0.155382] and **0.049464** [0.008869,
+0.091537], CIs excluding 0 from above by 0.0316 and 0.0089. Rule 13 did not
+trigger on either. **Defect #36** recorded (rule-19 class, third of the #30/#33
+family): X-1's pole clause demands a tolerance of 0 on the same quantity for
+which X-2 declares 0.125 to be the grid's own resolution — a nil-significance
+test standing in for an equivalence claim, at a design whose η=0 CI half-width
+is 0.041–0.062 against an identified O(0.05) finite-sample pole bias.
+
+**X-2 HOLDS 10/10 against a .55 prior — the leg's clean positive.** |η̂ − η| ≤
+0.125 in every cell (max 0.092384, median 0.024), and 10/10 also under the
+true-partition and oracle-whitener readings. **The label-free taxometer is
+calibrated everywhere at the resolution the registered grid defines.**
+
+**Derivation 3 needs an amendment, and the leg measures its price.** Taken
+LITERALLY (flat card-space bulk) the bulk-excess estimator reads η̂ =
+−0.576…−0.256 (ρ.35eq) and −0.077…0.383 (ρ.55eq): `M Mᵀ = A_SCALE² L
+diag(G_PROFILE²) Lᵀ` spreads every isotropic latent channel over a 2.3884×
+range, so the card bulk is not flat. Whitening by the state-channel shape is
+what makes derivation 3 true in card space. The three shape estimates cost:
+pure oracle → all four poles calibrate; panel-exact state innovations (the
+matrix analogue of L2's accepted MN-6) → η=0 bias +0.049/+0.092, condition ratio
+2.698127; strictly data-only (`B̂_mat`) → unusable, η̂ = 0.594/0.787 at η=0,
+condition ratio 15.598213 because 1/(c_int − c_cont) = 10.32 amplifies a
+d/n = 0.125 covariance error.
+
+**ROUTING IS NOT INVARIANT under one declared second reading.** Under the
+PURE-ORACLE whitener all four poles calibrate ([−0.028313, 0.112146],
+[−0.014991, 0.077757], [0.890498, 1.125840], [0.937830, 1.056065]) → X-1 HOLD →
+**P3N, not P2N**. The η=0 pole miss is therefore roughly half
+whitener-estimation-borne and half intrinsic to `Â_mat`'s own sampling error.
+Under every other declared reading (spectral grouping, true partition, alignment
+angle, √ and misassignment-rate propagation forms) the route stays P2N.
+
+**X-3: the propagation model is a good DESCRIPTION and an inadequate
+CORRECTION.** Sub-clauses (a) and (b) HOLD: pooled fit R² =
+**0.891596154639982** [0.826187803453253, 0.9273340435266129], slope
+−0.04718966206694972 [−0.05492139609682376, −0.03718986553430942], intercept
++0.0012162320427350467 [−0.017136477786541676, 0.02306420791159516], and the
+oracle anchor **+0.004428032310894993** [−0.014988701299138155,
+0.028277087946167102] lies INSIDE the intercept CI. Sub-clause (c) MISSES 3/10 —
+**and the mechanism is the opposite of L2's**: the UNCORRECTED cross-fitted
+meter tracks 10/10 here, and the corrected one tracks 3/10, because the
+correction removes the world-common `B̂_cal` offset and thereby shrinks the CI
+by 6–39× (half-widths 0.020 → 0.0005–0.0028). At that precision the fit's own
+residual (≤ 0.004800 in share units, 3.6% of the ρ.35eq target) is resolvable in
+seven cells. **Defect #37**: clause (c) has no precision budget — it gets HARDER
+the better the correction works, and conflates "the correction is right" with
+"the residual is below the resolution the correction itself creates". The
+predicted concavity is confirmed: √(1−ARI) gives R² = 0.9780973208413469 and
+(1 − Hungarian accuracy) gives 0.8576211182723725.
+
+**X-4 HOLDS decisively; derivation 4's sign is now measured a third time and
+survives correction.** Pooled same-data optimistic bias UNDER THE CORRECTED
+METER = **−0.007639458871208268** [−0.008786900570630973, −0.006390021005151330],
+negative in 10/10 cells, 6.37× its own half-width and 1.70× the pilot MDE; the
+RAW value is −0.007588169891501556 [−0.009114406065434490, −0.006043047568769170]
+— the correction moves it by 0.00005, exactly as Part 0 predicted.
+
+**All five Part-0 gates passed.** Every L2 anchor re-derived BIT-EXACTLY: pooled
+same-data bias −0.005767022729929317 (residual exactly 0.0, recomputed from all
+ten persisted L2 C-cell files); conditioning ratio 2.1537750000000058 re-derived
+from k2a's own AR algebra (0.0969198750000001 / 0.04499999999999993); the
+`B̂_cal` band 0.2519–0.2521 at the quoted 4-decimal precision (realized
+0.2519088212714649 – 0.2521478508144498); and two full L2 C-cells
+(`C_rho55eq_eta0`, `C_rho55eq_eta1`, eight columns × eight worlds each,
+carrying the floor-curve and audit-table anchors) re-measured row-by-row through
+L2's OWN path on L2's OWN worlds. Reconstruction residual
+2.220446049250313e-16; realized latent Δ exact to 1.7763568394002505e-15. The
+rule-17 fallback did NOT fire (max pilot η̂ CI half-width 0.1405 < 0.3). Rule 13:
+1 clause triggered, 0 BOUNDARY, STABLE at B = 20 000.
+
+**Free confirmation: R.1's η-floor law reproduces on fresh worlds under a fresh
+master seed** — measured vs predicted per-boundary rate 0.004069/0.004188,
+0.014567/0.013953, 0.027832/0.027122 (ρ.35eq) and 0.009684/0.009785,
+0.041911/0.040059, 0.073405/0.072239, 0.101481/0.100688 (ρ.55eq), η-ordering
+exact at both energies.
+
+**Anomalies disclosed with timing.** (1) A 3.2 s pre-Part-0 feasibility probe on
+the PREDICTION STREAM ONLY (no world of any index generated, no artifact
+written, no hypothesis channel touched) established that the strictly data-only
+whitener is unusable and fixed the PRIMARY route before any pilot or main world
+existed. (2) **Defect #38 (executor-side)**: the registration says "regressed on
+(1−ARI) across cells" without stating the observation grain; the first draft used
+(cell, world), where per-panel `B̂_cal` noise attenuates R² from 0.892 to
+0.040428064883860304 — corrected pre-arms to the registration's own cell grain,
+both grains reported. (3) G0N's realized-energy tolerance was moved off L2's flat
+3% realized-luck bar onto the design-derived 4σ band 4√(2[(1−η)²/m + η²/k_τ]/n)
+(0.0361 at η=0 rising to 0.1443 at η=1, since the aligned component has only
+k_τ=3 effective dimensions); realized max 0.05969940197215595, band violations 0.
+(4) The FIRST Part-0 execution reported a rule-20 STOP on X-4; the cause was two
+executor mis-implementations of the registered clauses — X-4's clause had used
+the marginal sd of `sd_dev` for a PAIRED difference whose own sd is ~15× smaller,
+and X-3's intercept clause a cell-level sd instead of the refitted intercept's
+spread. Both were corrected before any arm ran (PN-9 now evaluates every clause
+with the finalize stage's own paired structure) and the defective first verdict
+is disclosed rather than silently overwritten.
+
+**The brief to the planner, one line each.** (1) P2N is executed as registered,
+but "the taxometer is dead at these dims" is NOT what was measured: ordering
+exact under every reading, calibration inside the registered tolerance 10/10,
+both η=1 poles contained — only the η=0 pole, where the estimator's bias exceeds
+its own precision (defect #36). (2) Derivation 3 owes an amendment: the card
+bulk is `G_PROFILE`-shaped, and the state-channel-shape whitening is not a
+refinement but a precondition. (3) The propagation model earns R² 0.892 with its
+ARI=1 value on R.3's certified anchor, and still fails as a corrector because it
+sharpens the meter faster than it fixes it (defect #37). (4) Derivation 4's sign
+is now three-times measured and correction-proof. (5) Scoping fact: `B̂_cal`
+moved from 0.2519–0.2521 (L2's worlds) to 0.247053–0.247370 (L3's), flipping the
+true-partition deviation from −0.0075 to +0.0044 — the meter's per-world offset
+is the same size as the partition-borne error the line has chased since W-4, so
+further meter work needs more world blocks, not more estimator repair.
