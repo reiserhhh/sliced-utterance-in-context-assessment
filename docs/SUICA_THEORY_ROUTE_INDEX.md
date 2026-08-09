@@ -874,3 +874,13 @@ falsified in sparse galleries, readability is the driver). Standing rules
 (94.4%/73.5%, regime-dependent) beside `colstd_alpha_0.10`; K-R1 (in
 flight) tests whether de-framing improves trait reading. EXPLORATORY,
 synthetic, instrument-world laws only.
+
+**Dated addendum (2026-08-09, arc complete):** K-R1 resolved AGAINST the
+repair intuition — de-framing zeroes trait reading (the scaffold corollary,
+IDT appendix N: the trait has no frame-free expression in this family;
+counter-operations are diagnostics, never preprocessing); instrument-role
+typing follows (card readers for traits, the gauge for occasion-bound
+objects). C-NFI is now THEOREM T10 (anchor impossibility, global form —
+IDT appendix O). Twelve legs, arc closed; the defense phase charter opens
+(`SUICA_DEFENSE_PHASE_CHARTER.md`) per the owner's standing phase
+instruction.

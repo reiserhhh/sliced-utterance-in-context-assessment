@@ -868,3 +868,66 @@ parsing, Part-0 verification of bit-identity claims, and chunked-stage
 conventions adopted. Companion synthesis:
 `docs/SUICA_M4_K_IDENTITY_LINE_SYNTHESIS.md`. Scope unchanged:
 EXPLORATORY, synthetic, instrument-world laws — no claims about persons.
+
+## Dated appendix N (2026-08-09, after M4-K-R1): the scaffold corollary — de-framing is diagnostic, never preprocessing
+
+K-R1 asked whether the certified de-framing repair improves the reader as
+a trait instrument. **It does the opposite, maximally:** b-only recovery
+collapses to zero in all six state arms (d_a from −0.077 to −0.183, 0/32
+worlds positive anywhere, 6.3–12.3× realized MDE; λ falls 0.1821 →
+0.0008). The planner's prior on this branch was .10 — recorded, not
+excused.
+
+**N.1 — The scaffold corollary (T9 refined).** In this family the trait
+has no frame-free expression in the field: the b-only truth's only
+within-author occasion variation IS the frame (strict trait-only fields
+are degenerate, context norms ~7e-4). The reader reads the person THROUGH
+the person×frame interaction. Therefore frame REMOVAL destroys forged and
+legitimate reading together — bleach the paper and the watermark goes with
+the forgery. T9's counter-operations are re-licensed: **frame refreshment
+and frame CONTRAST are diagnostic operations; frame removal as
+preprocessing is prohibited wherever person content lacks frame-free
+expression.** (The certified de-framing repair keeps its composition-
+deflation certificate and gains this caution.)
+
+**N.2 — Instrument-role typing (T5's table, closing line).** As a TRAIT
+instrument at these regimes the plain card reader dominates the deployed
+relation-field gauge by ~4.5× (card attenuation 0.827 vs field recovery
+0.178 at the lowest state share). The gauge is an occasion-bound-object
+instrument — the F-line's wall, now with its mechanism. Reader licensing:
+trait questions → card-family readers with frame-refreshed discriminators
+(T6″); occasion-bound-object questions → the relational gauge; never the
+converse.
+
+## Dated appendix O (2026-08-09): T10 — the anchor impossibility theorem (C-NFI proved, global form)
+
+T5's conjecture C-NFI is now a theorem in its global form.
+
+**T10 (anchor impossibility).** Let a reader assign to a single probe's
+card c ∈ R^m an identity reading Φ(c) (any measurable functional), and
+require Φ invariant under (i) arbitrary common translations of card space
+(the closure of issuer freedom — realized adversarially by biased issuers,
+K1's biased32 channel), and (ii) positive scalar coordinate changes. Then
+Φ is constant: translation-invariance alone forces Φ(c) = Φ(c − c) = Φ(0)
+for every c. A constant reading carries no identity information.
+Consequently every informative reader either (a) consumes an issuer
+estimate — paying issuer-sampling error, measured at +0.0970 (6.3×MDE)
+with the 1/|P| law at slope −1.0865 (K1) — or (b) reads multi-person
+structure, i.e., the centered configuration, which is invariant to common
+translations but depends by construction on WHO is co-present — paying
+gallery composition — or (c) anchors in fixed coordinates, paying basis
+dependence (the M4-H territory, 45.79% materiality). **There is no
+anchor-free reading; the three prices are exhaustive at the level of what
+a reading may consume.**
+
+Local form (stated, not proved): under sampling issuers (error
+O(σ/√|P|)) rather than adversarial ones, the impossibility becomes an
+information bound — identity information through the absolute channel is
+capped by issuer precision; K1's L2/L3 measurements are this bound's
+empirical shadow. The local constant is not derived here.
+
+Status: T5 upgrades from PRICED (C-NFI conjecture) to **PRICED + T10
+PROVED (global)**. The certificate metaphor closes exactly: there is no
+ID without an issuer, no line-up without a gallery, no reading without
+coordinates — only the choice of which price to pay, and the prices are
+now measured.

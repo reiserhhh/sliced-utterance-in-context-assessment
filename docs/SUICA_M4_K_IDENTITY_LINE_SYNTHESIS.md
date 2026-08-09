@@ -98,3 +98,32 @@ unrealizable registrations.
    persons, or diagnoses. Transport needs the shared-occasion designs the
    D3 spec describes and existing corpora lack. Stated as a limitation,
    not a queued test.
+
+---
+
+## Dated addendum (2026-08-09, after M4-K-R1 and the T10 derivation): the arc closes at twelve legs
+
+Item 1 above resolved AGAINST both registered intuitions: de-framing is
+neither hygiene nor enhancement for trait reading — it is **destructive**
+(b-only recovery collapses to zero in all six arms; λ 0.182 → 0.001; the
+planner's .45 prior on "helps" corrected by the world). The mechanism is
+the line's closing lesson, the **scaffold corollary** (IDT appendix N):
+in this family the trait has no frame-free expression — the reader reads
+the person THROUGH the person×frame interaction, so frame removal
+destroys forgery and legitimate reading together. T9's counter-operations
+are re-licensed as diagnostics only. Instrument-role typing follows: the
+plain card reader beats the relation-field gauge ~4.5× as a trait
+instrument; the gauge is an occasion-bound-object instrument, as the
+F-line's wall always said — now with the mechanism attached.
+
+Item 3 resolved: **T10, the anchor impossibility theorem** (IDT appendix
+O) — proved in global form by a three-line translation-invariance
+argument; the three anchor prices are exhaustive, and all three are
+measured. The certificate metaphor closes exactly.
+
+K-R1 was the line's first zero-defect registration. The M4-K arc is
+COMPLETE: twelve legs, ten standing rules and four conventions paid for,
+three retrospective re-typings executed, one theory built, measured, and
+closed. Per the program owner's standing phase instruction, the
+theory-completion condition is met and the DEFENSE phase charter opens
+(`docs/SUICA_DEFENSE_PHASE_CHARTER.md`).

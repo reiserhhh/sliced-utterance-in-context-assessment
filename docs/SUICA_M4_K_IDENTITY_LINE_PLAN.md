@@ -3384,6 +3384,46 @@ difference 0.0075376076, min matrix cosine 0.6823271963) — RN-2b, a property
 of the deployed gauge, disclosed before the arms. **0 registration defects
 found.**
 
+### Planner adjudication (2026-08-09, appended after the run) — THE ARC CLOSES
+
+**L-R3 fires: de-framing HARMS trait reading — maximally.** All six arms
+DOWN (0/32 worlds positive anywhere; effects 6.3–12.3× realized MDE); the
+de-framed gauge's b-only recovery is indistinguishable from zero in EVERY
+arm (λ collapses 0.1821 → 0.0008). My prior gave this branch .10 and the
+"helps" branch .45 — the world corrected the planner, on the record.
+P-R3 executed: a deployment caution is appended to the certified
+de-framing repair's record (it removes the composition inflation AND
+zeroes trait reading in this family); no F16 adoption memo exists.
+
+**The mechanism is the finding (recorded by the executor as a finding,
+adopted here as the line's closing lesson — the SCAFFOLD COROLLARY):** in
+this family the trait has NO frame-free expression in the field — the
+b-only truth panel's only within-author occasion variation IS the frame
+(strict trait-only fields are degenerate at context norms ~7e-4). The
+reader reads the person THROUGH the person×frame interaction; bleach the
+paper and the watermark goes with the forgery. De-framing is therefore
+DIAGNOSTIC (contrast, refreshment — T9's counter-operations), never a
+preprocessing step, wherever person content lacks frame-free expression.
+Corollary for instrument-role typing: as a TRAIT instrument at these
+regimes, the plain card reader dominates the deployed relation-field
+gauge by ~4.5× (card attenuation 0.827 vs field recovery 0.178 at A1) —
+the gauge is an occasion-bound-object instrument, exactly as the F-line's
+wall said, now with the mechanism attached.
+
+First leg of the line with ZERO planner registration defects — rules 1–17
+are converging. Convention upgraded (from anomaly A-3, second live case):
+pilot-sd MDE gates apply a df-based inflation factor even at 4 worlds.
+
+Theory consequences: IDT appendix N (scaffold corollary + instrument-role
+typing) and appendix O (**T10 — the anchor impossibility theorem: C-NFI
+proved in global form**, planner derivation, closing T5's conjecture);
+synthesis addendum; route-index addendum. The M4-K arc is COMPLETE at
+twelve legs. Per the program owner's standing instruction (defense
+deferred UNTIL theory completion), the theory-completion condition is now
+met; the next phase's charter is
+`docs/SUICA_DEFENSE_PHASE_CHARTER.md`, with its first leg to be
+registered as its own future registration.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
