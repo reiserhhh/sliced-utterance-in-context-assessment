@@ -2054,6 +2054,138 @@ by the agent. Budget: 7 arms × 32 worlds (compute scale: K2b's whole leg ran
 59 s at 8 worlds × 7 arms) — target < 15 min wall; stop-and-report at 2× any
 Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+Executed as registered. Script `scripts/run_suica_m4_k2c_matched_pairs.py` (the K2b
+apparatus imported and called UNMODIFIED); report
+`reports/SUICA_M4_K2C_MATCHED_PAIRS_REPORT.md` (Part 0 — computed shares, all seven
+arms' predictions, all six gates — written to disk at 09:14:02Z BEFORE the `arms`
+stage, enforced in code by `require_part0()`); artifacts
+`results/m4_k2c_matched_pairs/`. 7 arms × **32 worlds** (power ladder selected 32,
+**no escalation**), `master_seed 20260817`, K1-pinned panel (985 authors, **565
+retained**, 4 resolved), card channel 18 080 pooled authors/arm, **224 adjudicated
+deployed-gauge world runs** + 14 reserved-pilot runs (worlds 9701–9702).
+**Total compute 154.739 s** (part0 11.620, arms 64.638 + 65.168, finalize 13.313) —
+inside the Part-0 estimate (178.088 s), far inside the 2× stop threshold (356.176 s).
+
+**Verdict: `BOTH_FIRE__SIGNIFICANT_BUT_SUB_MATERIAL__MATCH_EXACT__L3_HOLD`.
+L-1 FIRES and L-2 FIRES SIMULTANEOUSLY, L-3 HOLDS, PARTIAL-C does not fire,
+0 pairs VOID. NO PIVOT FIRES — P1c′, P2c′, P3c′, P4c′ all false. T4 is NOT
+re-typed.**
+
+- **All six Part-0 gates pass.** **G0c′**: all six K2b anchors re-derived from
+  persisted artifacts **bit-exactly, residual 0.0** — A1 field 0.177888649457317,
+  A4 field 0.07543949574114414, S 0.10244915371617286, S/P 0.3811151367233824,
+  λ 0.17417497661611914, S/(λP) 2.1881164799198363; K2a anchor cell
+  `phi0.9_occ8_intzero` re-derived from K2a's own seeds bit-exactly (2048 rows × 35
+  columns, residual 0.0). **G1c′ (Part-0 half)**: the COMPUTED shares —
+  **P1 (target .78): s_1a = 0.10921276830855525, s_1b = 0.0873786568216755;
+  P2 (.68): 0.29267462506992153 / 0.24421800730418725; P3 (.56):
+  0.4973617623232523 / 0.4359007987784457** — give within-pair predicted
+  attenuation differences **1.110223e-16 / 0.0 / 0.0**, all ≤ 1e-12, 3/3.
+  **G2c′**: 2-world pilot paired sd 0.00719109 / 0.02243239 / 0.03661105 →
+  MDE(80%, .05, paired, n=32) **0.00367748 / 0.01147180 / 0.01872269**, all ≤ 0.020,
+  **no escalation**. **G4c′**: across the four designed levels the pilot card
+  attenuation (0.82560 → 0.77771 → 0.67693 → 0.55635) and the pilot field recovery
+  (0.17916 → 0.15770 → 0.12756 → 0.08829) are both strictly decreasing; within-pair
+  panels differ (RMS 0.01577 / 0.02597 / 0.03408) and the composition contrast is
+  non-degenerate; frame-channel centred residual 1.2212453270876722e-15.
+  **G3c′/G5c′**: every clause satisfiability-checked with directions; foreground
+  chunked stages, 0 background jobs, 0 monitors.
+- **G1c′ post-arms: the designed identity SURVIVED CONTACT, 0 VOID.** Measured
+  within-pair card attenuation differences **−3.500143943835354e-05** (CI
+  [−0.000199412, +0.000137024]), **−0.00012046646286067997** (CI [−0.000445341,
+  +0.000219353]), **−0.00021915556724860785** (CI [−0.000700178, +0.000279593]) —
+  **23×–143× tighter than the ±0.005 margin**. **P1c′ does not fire; the composition
+  reading is licensed.** Instrument continuity (no gate): card attenuation contains
+  its Part-0 prediction 7/7 and the card GAP 7/7, max relative attenuation error
+  0.171%.
+- **D_k = field(P_ka) − field(P_kb), paired world-block bootstrap B=2000:**
+  **P1 −0.0033349254353831808** CI [−0.007617710100740499, +0.0011074921964934288];
+  **P2 −0.012167516605861444** CI [−0.017430001829670642, −0.006619210190334735];
+  **P3 −0.01355928388620139** CI [−0.018647677326514903, −0.008674340005325598].
+  **L-1 [.40] fires** (3/3 inside ±m_k, m_k = 0.020 under BOTH RN-3 readings).
+  **L-2 [.45] fires** (2/3 significant — P2, P3 — and **all significant D_k share one
+  sign, NEGATIVE**; P1 is negative too, just unresolved). **PARTIAL-C does not fire.**
+- **RN-4 (fixed in Part 0, before any hypothesis number): the registered
+  adjudication space is NOT A PARTITION — L-1 and L-2 are not mutually exclusive, and
+  BOTH FIRED.** A difference can be statistically resolved and still lie inside the
+  materiality margin, which is exactly what happened. Scored as the named
+  NON-REGISTERED outcome **BOTH_FIRE**, reported as such; **T4 is not re-typed either
+  way**; both readings reported at full precision.
+- **THE SUBSTANCE, which the partition failed to capture.** At card attenuation
+  matched to 1e-16, the field difference is **real, unanimous in sign (3/3 negative),
+  and monotone in state content**: |D_k| is **2.079% / 9.654% / 15.230%** of the pair's
+  own recovery level. The direction: **the arm with MORE state share (and less
+  persistence) loses MORE of the person.** So the field is **not** a function of card
+  attenuation alone — *T4-simple-with-link is falsified as a strict claim*, surviving
+  only as an approximation with a ≤0.02 error budget over attenuation 0.56–0.78, and
+  the error is growing. **It was the materiality margin, not the physics, that kept
+  L-1 alive: P3's equivalence clause holds by 0.001352 = 0.533 se of D_k** (8.92 MC
+  endpoint sd, so rule 13 correctly does not flag it — but the sampling headroom is
+  half a standard error, and a fourth, higher-state target would very likely breach
+  the margin). The composition contrast is loud in the CARD — measured GAP_a/GAP_b =
+  **4.04 / 4.08 / 3.98** at matched attenuation — and the reader converts that 4×
+  card difference into a 2–15% trait difference.
+- **The descriptive (mixed-truth) channel says the same thing 4.3× louder, and with
+  the OPPOSITE sign.** At matched attenuation the higher-share arm recovers **more of
+  the state-inclusive mixture**: Δmixed = **+0.00690393** CI [+0.00309391,
+  +0.01096980], **+0.02470275** CI [+0.01918629, +0.03053346], **+0.05849219** CI
+  [+0.05194404, +0.06514736]; Δ(mixed − b-only) = +0.01023885 / +0.03687027 /
+  +0.07205148, every CI excluding 0. K2b's L-D reappears as a within-pair, link-free,
+  attenuation-matched statement: **what the reader gains on the mixture it loses on
+  the trait.**
+- **L-3 [.70, descriptive-to-lean, NO branch weight] HOLD.** Pooled OLS of
+  log(field/λ) on log(attenuation) over **13 arms** (K2b's 6 + K2c's 7):
+  **q = 1.9337620539521978, CI [1.7337263621727161, 2.1932591297891246]**, one-sided
+  5th pct 1.7596140020708688, **R² = 0.9581580947902524**; q > 1 and CI excludes 1.
+  RN-5 second reading (x = measured attenuation): q = 1.9360338584090482, CI
+  [1.7342166898270828, 2.196563507630189] — same verdict. RN-6: the slope is
+  **exactly** λ-invariant (q at λ_K2b minus q at λ=1 = 0.0). K2b's two-arm
+  over-response S/(λP) = 2.1881 is now a **smooth pooled exponent across two legs**,
+  not an artifact of two extreme arms.
+- **Rule 13: 0 clauses triggered, 0 BOUNDARY.** Closest approaches (post-hoc
+  descriptive, decision.json untouched): 8.34 MC-sd (P1's zero-exclusion), 8.92 MC-sd
+  (P3's equivalence), 15.73 MC-sd (P2's equivalence); all others ≥ 40 MC-sd.
+- **Rule 14 verified on this leg's OWN gates, as instructed: no gate and no branch
+  lean compares quantities across scales.** G0c′ re-derives K2b numbers against
+  themselves; G1c′ is card-vs-card; G2c′/G4c′/L-1/L-2/PARTIAL-C are field-vs-field.
+  L-3 is the single cross-scale object, and the registration declares it
+  descriptive-to-lean with no branch weight — and it pins its own link (a log-log
+  power law whose exponent IS the estimand), so rule 14's first clause is satisfied
+  for it and its second clause for everything that adjudicates T4.
+- **Continuity (no gate):** `A1anc` (.02, .90) at the fresh lineage reads
+  0.1785831487097378 CI [0.17058563431737153, 0.18747529579718702] against K2b's A1
+  at 0.177888649457317 — difference +0.0006944992524207938, well inside the CI.
+- **What K2c does NOT decide (limitation, not a hedge):** a matched-attenuation pair
+  necessarily moves share and persistence TOGETHER along the iso-attenuation curve.
+  K2c establishes THAT the field reads composition at fixed attenuation and IN WHICH
+  DIRECTION, but cannot say whether the carrier is the state SHARE or the state
+  PERSISTENCE. Breaking that collinearity needs a third state parameter (or an n_occ
+  lever) — the natural K2d localization.
+- **Anomalies (with timing).** **A-1 (Part 0, before any hypothesis number):** K2b's
+  hardcoded t-quantile table carries t_{.80,31} = 0.8534705711311653, which is
+  +1.0027543422130858e-04 above the correct 0.853370295696944; **impact on K2b: none**
+  (K2b selected n=8 and never evaluated its n=32 entry). K2c uses scipy-verified
+  values (max abs deviation vs `scipy.stats.t.ppf` **0.0**, scipy 1.17.1). **A-2
+  (structural, resolved in Part 0 as RN-4):** the registered space is not a partition;
+  it bit. **A-3 (provenance, RN-2):** because `k2b.run_field_world` is called
+  unmodified, the deployed corpus tags literally read `m4k2b-K2C-<arm>-w<k>`; they are
+  hash labels only and every K2c tag is disjoint from every K2b tag. No crashes, no
+  re-runs, no background jobs, no monitors, no stage over its Part-0 estimate.
+
+**K2c's brief to the planner:** (i) do not re-type T4 on this leg — the registered
+space could not classify the result; (ii) the link-free question is nonetheless
+answered in substance — composition-sensitivity at fixed attenuation is real,
+unanimous in sign, and monotone in state content, so the strict "fixed monotone
+transform of card attenuation" reading is dead; (iii) if the planner wants a decision
+rather than a tie, the next registration must either extend the target range downward
+(a fourth pair at attenuation ≈ 0.45, where the margin will be breached) or lower the
+materiality margin with a justification that is not K2b's swing scale — **and it must
+make its adjudication space an actual partition**; (iv) the mixture channel carries
+the same effect 4.3× larger and with the opposite sign, which is where a constructive
+repair test would have the most signal to work with.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
