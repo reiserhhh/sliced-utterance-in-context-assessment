@@ -1135,3 +1135,62 @@ condition-set STOPS the leg pre-arms — rule 10's analogue at the
 adjudication layer). W-2's estimated-S ARI claim withdrawn at these dims
 (the BBP overlap approaches prediction, 30.1% → 0.5% shortfall with Δ;
 the bar was on the wrong quantity — defect #33, rule-19 class).
+
+## Dated appendix S (2026-08-10, after M4-L3 — the M4-L line closes): the reverse question, answered
+
+The owner asked: *does assuming error = 0 assert "no identity" — and
+conversely, would REMOVING identity make correct personality grouping
+possible? Can this be proven?* After three legs (L1–L3) on top of the
+P/Q/R theory, the answer in six measured or proved pieces:
+
+1. **In the error-free world, grouping works** — measured: ARI 0.9948
+   at zero identity share, both geometries. The hypothesis's premise
+   world behaves as it claims.
+2. **True identity removal restores grouping completely** — measured:
+   ARI → 0.9948 in both geometries. But true removal requires knowing
+   b, which requires the groups: the circularity is R1's theorem, and
+   its resolution is EM (the proposal, formalized, IS the E-step).
+3. **No label-free surrogate can buy what matters above threshold** —
+   the floor-invariance lemma (Q.1, proved; measured flat at
+   13.5%/15.0% restoration). What projection CAN buy is localization —
+   real, measured at 4.28× on the hardest rung — but its qualitative
+   window is dimension-governed and CAN BE EMPTY (the window lemma,
+   R.2; empty at these dims).
+4. **The true governing quantity is the geometry**: the
+   projection-invariant floor curve σ_u²(η) = η·σ_b²/k_τ +
+   (1−η)·σ_b²/m — measured three times independently (L1 poles, L2
+   curve, L3 fresh-seed reproduction; η-ordering exact every time),
+   with the between-geometry tax ratio m/k_τ (z-ratio 4; ARI-drop
+   ratio 8.15× at matched energy).
+5. **Whether the conjecture applies to a given world is READABLE,
+   label-free**: the taxometer η̂ is certified at ±0.125 (10/10 cells,
+   median error 0.024, ordering exact under every reading), with a
+   known +O(0.05) pole bias and the whitening-shape precondition. The
+   types-vs-dimensions question is, in this family, an instrument
+   reading, not a debate.
+6. **"Error = 0" is now an audit, with a certified meter**: the
+   completeness meter (surviving-identity share) is calibrated on true
+   partitions, carries the partition-propagation correction
+   (deviation ~ (1−ARI), R² 0.89, slope −0.047), and has a measured
+   noise floor of ~0.005 absolute — the per-world constant fluctuates
+   at the same scale as anything smaller. Typology's zero-error claim
+   is testable to that precision, and in identity-bearing worlds it
+   fails by exactly the identity share (the impossibility half of R3).
+
+**The one-paragraph answer to the owner:** removing identity DOES make
+correct grouping possible — under three conditions now proved or
+measured: the removal must be TRUE removal (which requires the groups,
+so the two are solved jointly as EM fixed points); the geometry must
+permit it (the aligned fraction η sets a floor that no label-free
+operation touches); and the geometry itself can be read in advance with
+the certified taxometer. And "assuming error = 0" is exactly the
+assertion b ≡ 0 — no longer a modeling convenience but a testable claim
+with a calibrated meter, precise to ±0.005, beyond which the world's
+own per-batch fluctuation takes over. The old hypothesis was not wrong;
+it was an audit criterion waiting for its instrument.
+
+**Method.** Defects #36–#38; standing rule 21 (precision budgets on
+containment bars). Line synthesis:
+`docs/SUICA_M4_L_TYPOLOGY_LINE_SYNTHESIS.md`. Scope as always:
+EXPLORATORY, synthetic, instrument-world claims; nothing here licenses
+claims about persons.

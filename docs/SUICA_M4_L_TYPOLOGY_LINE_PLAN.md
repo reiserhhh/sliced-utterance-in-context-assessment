@@ -836,3 +836,51 @@ moved from 0.2519–0.2521 (L2's worlds) to 0.247053–0.247370 (L3's), flipping
 true-partition deviation from −0.0075 to +0.0044 — the meter's per-world offset
 is the same size as the partition-borne error the line has chased since W-4, so
 further meter work needs more world blocks, not more estimator repair.
+
+### Planner adjudication (2026-08-10, appended after the run) — THE LINE CLOSES
+
+Scored as executed: **X-1 MISS (pole clause only), X-2 HOLD 10/10, X-3
+MISS (tracking clause only), X-4 HOLD → P2N on the primary reading**
+(the oracle-whitener second reading gives P3N; primary controls, both
+disclosed). Adjudicated with the grade the evidence licenses:
+
+- **The taxometer is ALIVE as a measuring device.** |η̂ − η| ≤ 0.125 in
+  10/10 cells (max 0.0924, median 0.0241); ordering Spearman = 1.0 at
+  both energies under EVERY reading; both η=1 poles calibrate. What
+  died is my pole clause — tolerance ZERO on a quantity X-2 declares
+  resolvable to 0.125, a nil-significance test standing in for an
+  equivalence claim (defect #36, third of the #30/#33 family). η̂ is
+  certified as a calibrated geometry reader with a known +O(0.05) pole
+  bias and the whitening-shape PRECONDITION (Derivation 3 amended: the
+  bulk is G_PROFILE-shaped; flat-bulk reads −0.576 at η=0; the
+  data-only whitener is unusable at condition ratio 15.6 — the
+  panel-exact innovation form is the route).
+- **The propagation law HOLDS** (deviation ~ (1−ARI): R² = 0.892
+  [0.826, 0.927], slope −0.0472, oracle anchor inside) and the
+  corrected meter is ACCURATE — residuals ≤ 0.0048 (3.6% of target) —
+  but fails my tracking bar BECAUSE the correction sharpened CIs
+  6–39×, exposing sub-budget residuals (defect #37: no precision
+  budget). **Standing rule 21 (added 2026-08-10, paid for by #37):
+  CI-containment bars on instrument validations carry a registered
+  absolute-error budget; an instrument may not fail validation because
+  its precision exposes a residual smaller than the budget.**
+- **The meter chase ends by measurement, not fatigue:** B̂_cal moved
+  0.252 → 0.247 between L2's and L3's world batches, flipping the
+  true-partition deviation sign — the per-world constant fluctuates at
+  the same ~0.005 scale as the partition-borne error and the corrected
+  meter's residual. **The completeness meter's noise floor is ~0.005
+  absolute; it is certified at that precision, on any partition, with
+  the propagation correction.** Nothing below that scale is chased.
+- **Free confirmation:** the η-floor law reproduced on fresh worlds
+  under a fresh master seed (third independent confirmation; ordering
+  exact at both energies).
+
+Defects #36–#38 recorded (#38: regression grain unstated — executor
+pinned it pre-arms). Routing P2N's registered fallback ("synthesis
+without a taxometer") is OVERRIDDEN by the graded adjudication above in
+one respect only: the synthesis proceeds WITH the taxometer, scoped to
+its certified precision and preconditions. **The M4-L line closes at
+three legs.** Consequences executed today: IDT appendix S (the final
+answer to the reverse question); `docs/SUICA_M4_L_TYPOLOGY_LINE_SYNTHESIS.md`;
+the defense phase (pre-authorized by the owner's standing instruction,
+shelved during this line) resumes at D1.

@@ -884,3 +884,13 @@ objects). C-NFI is now THEOREM T10 (anchor impossibility, global form —
 IDT appendix O). Twelve legs, arc closed; the defense phase charter opens
 (`SUICA_DEFENSE_PHASE_CHARTER.md`) per the owner's standing phase
 instruction.
+
+**Dated addendum (2026-08-10, M4-L closed):** the reverse reading (IDT-R,
+owner's directive) ran L1–L3 and closed: the η-floor law measured three
+times (projection-invariant; tax ratio m/k_τ); the floor-invariance and
+localization-window lemmas; the taxometer η̂ certified ±0.125; the
+completeness meter certified at its measured ~0.005 noise floor with the
+partition-propagation correction; "error = 0" converted into a calibrated
+audit (IDT appendices P–S; SUICA_M4_L_TYPOLOGY_LINE_SYNTHESIS.md). Rules
+18–21 added (defects #27–#38). The pre-authorized defense phase resumes
+at D1 (prospective seal #2).
