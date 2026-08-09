@@ -271,3 +271,167 @@ the B̂ error in the CI) — either moves tracking from 5/8 to 8/8 on these
 numbers. The taxometric decision instrument L2 was to open is NOT damaged:
 its discriminating signal (the ALIGNED floor and the 8.1× tax) is exactly
 the part that measured cleanly.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+Scored as executed: **V-1 HOLD, V-2 HOLD, V-3 MISS (on sub-clause (c)
+alone), V-4 MISS (5/8, one diagnosed constant), → P2L.** The
+theory-repair note P2L demands is IDT appendix Q, written today. What
+the leg actually established is stronger than the verdict string:
+
+- The 10-cell predicted ordering reproduced **cell for cell**, both
+  instruments. The geometry's ordinal content is exact.
+- The floor machinery is REAL and quantitative (ρ.35: measured
+  0.027750651041666664 vs predicted 0.027118834519294123, contained;
+  ρ.55 missed by ~7% relative — narrow).
+- **The tax ratio at matched identity energy is 8.145911689523754×**
+  (ALIGNED vs ISO ARI drop across the sweep) — the dichotomy's signal,
+  and its z-ratio is exactly √(m/k_τ) = 4 by the executor's Δ-free
+  boundary algebra. The m/k_τ factor is real; it lives in the FLOOR
+  RATIO between geometries, not where my registration put it.
+- **V-3(c) failed because the registered bar tested a proposition R2
+  does not make** (defect #30): oracle projection restored only 13.5%
+  [−2.6%, 27.7%] of the ISO deficit at ρ.55 and stayed flat (15.0%) at
+  ρ.75 — because ARI above the localization threshold is owned by the
+  boundary-normal Bayes error, and the boundary normal lies INSIDE S:
+  projection onto S provably cannot change identity variance along it.
+  R2's m/k_τ energy gain governs centroid LOCALIZATION, not
+  above-threshold assignment error. Appendix Q restates it.
+- **V-4's miss is one calibration constant**: B̂ = 0.245861 identical to
+  six decimals in every ambient cell vs true 0.25; (0.25 − B̂)·c_cont =
+  +0.002754 reproduces the offset; ALIGNED cells fail tracking because
+  their CIs are 1.5–2.4× TIGHTER, not because their bias is larger. The
+  meter works; it needs the constant. L2 implements the calibrated form.
+
+**Planner registration defects recorded (#27–#30):** #27 (PROVED by the
+executor) — G2L's mid-band clause and V-1's bar are JOINTLY unsatisfiable
+on the ISO arm because ρ_id ties σ_b to Δ; individually each clause was
+satisfiable. **Standing rule 18 (added 2026-08-10, paid for by #27):
+rule-11 satisfiability is checked JOINTLY across all clauses sharing
+generative knobs, not per-clause.** #28 — V-3(d) was a designed identity
+(removal ≡ ρ_id=0 card at 3.1e-16), a construction certificate scored as
+a lean (rule-3 family, vacuous-pass). #29 — a clause with no registered
+comparand (executor pinned it pre-arms under rule 9). #30 — a lean bar on
+a different quantity than the theorem's own (energy threshold vs achieved
+ARI). **Standing rule 19 (added 2026-08-10, paid for by #30): every lean
+bar is derived from the theorem's OWN quantity and scale, with the
+registration stating which theorem-quantity the bar shadows; a bar on a
+different quantity is a registration defect regardless of outcome.**
+
+Consequences executed today: IDT appendix Q (the floor-invariance lemma,
+the relocated dichotomy, the sharpened form of the owner's conjecture:
+the removal-vs-projection gap IS the boundary-normal identity variance,
+unremovable without labels); L2 registered below with rule-18/19
+compliance and the calibrated audit.
+
+---
+
+## M4-L2 — The threshold, the continuum, and the label-free instruments (registered on the repaired theory)
+
+**REGISTERED 2026-08-10, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Built on appendix Q's restated R2 and the
+L2-charter derivations above; every lean states which theorem-quantity
+its bar shadows (rule 19), and satisfiability is checked jointly across
+knob-sharing clauses (rule 18).
+
+### Questions
+
+(A) **Threshold (R2 restated):** does the m/k_τ projection gain exist
+where R2 actually puts it — the centroid-LOCALIZATION threshold?
+Requires decoupling Δ from σ_b (L1's ρ_id parameterization tied them —
+defect #27's root). (B) **Continuum:** does the projection-invariant
+floor follow σ_u²(η) = η·σ_b²/k_τ + (1−η)·σ_b²/m across the η grid?
+(C) **Label-free instruments:** estimated-S projection vs oracle-S in
+the threshold regime; the spectral taxometer η̂; the CALIBRATED
+cross-fitted completeness audit (per-world B̂), including the same-data
+optimistic bias as a named quantity.
+
+### Machinery and arms (master_seed 20260823; 8 worlds × 512 authors/cell)
+
+L1's typed world with (Δ, σ_b) as INDEPENDENT knobs (rule-18 lesson) and
+the η-mixture identity b = √(1−η)·b_iso + √η·b_aligned.
+
+- **T-arms (threshold, question A):** ISO geometry, σ_b fixed at L1's
+  ρ.55-equivalent energy; Δ swept over a 5-point ladder computed in
+  Part 0 to bracket the AMBIENT localization break (pilot: ambient ARI
+  crosses 0.5) while keeping the ORACLE-S floor negligible (< 0.005,
+  Part-0 verified — so any ambient failure is localization, not Bayes).
+  Instruments per cell: ambient Lloyd, oracle-S projection + Lloyd,
+  estimated-S (top-k_τ spiked PCA) + Lloyd.
+- **C-arms (continuum, question B):** η ∈ {0, 0.25, 0.5, 0.75, 1} at
+  L1's Δ and two identity energies (L1's ρ.35/ρ.55 equivalents);
+  measured per-boundary error rates vs the Part-0 floor curve.
+- **Audit arms:** the C-arms double for the calibrated audit — per-world
+  B̂ calibration; PRIMARY = cross-fitted (cluster on one occasion-half,
+  audit on the other), SECOND = same-data (bias measurement).
+
+### Part 0 gates
+
+- **G0M** — construction residuals ≤ 1e-12; L1 anchors bit-exact
+  (ISO/ALIGNED ρ.55 ARIs, floors, tax ratio 8.145911689523754, audit
+  offset +0.002754); realized (Δ, σ_b, η) tolerances.
+- **G1M (rules 10+3)** — non-degeneracy and liveness per arm; the
+  T-arm ladder brackets the break in the pilot (ambient ARI spans
+  (<0.3, >0.8) across the ladder) — else the pre-declared ladder shift
+  fires once, disclosed (rule 17).
+- **G2M (rule 18)** — JOINT satisfiability over all clauses sharing
+  (Δ, σ_b, η), enumerated in the report; directions stated; 4-world
+  pilot MDEs; rule-13 spec (B=2000, seed=master, ≥10×B at boundaries).
+- **G3M (Part-0 predictions, rule 19 fidelity table)** — one row per
+  lean: the theorem quantity, its predicted value/curve, the bar, and
+  the derivation. Threshold window edges from the energy criterion; the
+  floor curve σ_u²(η); the BBP-form detectability constant for
+  estimated-S at these dims; the audit targets = designed shares with
+  the B̂-corrected estimator.
+- **G4M (hygiene + rule 16)** — full-object enumeration (cells → leans
+  → routing); round-trip; chunked; rule-12 header; rule-14 self-check.
+
+### Leans (paired world-block bootstrap B=2000; leans separate)
+
+- **W-1 (localization gain exists) [prior .65; shadows: R2-restated's
+  threshold claim]** — in ≥2 T-cells inside the bracketed window:
+  ambient ARI < 0.3 while oracle-S ARI > 0.8 (per-cell CIs on the
+  stated sides); and NO T-cell shows the reverse ordering.
+- **W-2 (label-free reaches oracle) [prior .60; shadows: spiked-PCA
+  consistency above the BBP-form threshold]** — estimated-S ARI within
+  CI of oracle-S ARI in every T-cell on the detectable side of the
+  Part-0 constant; the non-detectable side (if the ladder enters it)
+  reported, not gated.
+- **W-3 (the floor curve) [prior .75; shadows: the projection-invariant
+  floor σ_u²(η)]** — C-arms: measured per-boundary error within CI of
+  the floor curve in ≥7/10 cells, AND the η-ordering exact at both
+  energies.
+- **W-4 (calibrated audit) [prior .75; shadows: R3's completeness meter
+  after the B̂ fix]** — cross-fitted calibrated audit tracks designed
+  shares in ≥8/10 C-cells (CI containment); same-data audit shows the
+  predicted-sign optimistic bias (pooled CI excluding 0 on the
+  optimistic side) — the bias is a MEASURED named quantity, not a gate
+  on its size.
+
+### Routing (rule 16; precedence top-down)
+
+1. G1M bracket fails after its one ladder shift → **P1M: STOP**
+   (unrealizable threshold window at these dims; report).
+2. W-1 MISS → **P2M:** R2-restated fails at its OWN quantity —
+   the localization claim dies too; appendix Q gains a second dated
+   correction; the ISO half of the dichotomy is then ONLY the floor
+   ratio (still real: 8.15× tax). No further projection claims.
+3. W-1 HOLD, ≥2 of {W-2, W-3, W-4} MISS → **P3M:** threshold confirmed
+   but instruments unreliable — instrument-repair leg before any
+   taxometric use.
+4. W-1 HOLD, ≤1 of the rest MISS → **P4M: QUALIFIED-or-CLEAN** — the
+   restated R2 is MEASURED; the taxometer η̂ and calibrated audit are
+   certified to the extent held; L3 (the taxometric decision on
+   unknown-geometry worlds, and the realizable removal ladder against
+   the floor bound) becomes the next registration. Any single miss is
+   named and chartered.
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_l2_threshold_continuum.py`;
+`results/m4_l2_threshold_continuum/`;
+`reports/SUICA_M4_L2_THRESHOLD_CONTINUUM_REPORT.md` (Part 0 with the
+rule-19 fidelity table first); outcome appended here; ledger row; ONE
+commit (`feat(m4-l): L2 — ...`), never amended, not pushed by the agent.
+Budget: card-space; target < 25 min wall; stop-and-report at 2× any
+Part-0 stage estimate.

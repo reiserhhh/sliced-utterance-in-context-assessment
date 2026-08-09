@@ -1041,3 +1041,55 @@ McSherry, Vempala & Wang); EM/Lloyd fixed-point structure. No specific
 claims asserted from memory.
 
 Scope unchanged: EXPLORATORY, synthetic, instrument-world claims only.
+
+## Dated appendix Q (2026-08-10, after M4-L1 — the theory-repair note P2L demands): the floor is projection-invariant; the dichotomy relocates; the conjecture reaches its final sharpened form
+
+M4-L1 held the ordinal geometry perfectly (the 10-cell predicted ordering
+reproduced cell for cell; the ρ.35 floor contained; the tax ratio 8.15×)
+and failed two shadows. Both failures are now understood, and one is a
+theorem.
+
+**Q.1 — Floor-invariance lemma. [PROVED]** For any boundary normal
+u ∈ S, projection onto S leaves the identity component along u unchanged:
+⟨P_S b, u⟩ = ⟨b, u⟩. Hence **no projection can reduce Bayes assignment
+error — in ANY geometry.** Measured shadow: oracle-S projection restored
+13.5% [−2.6, 27.7] of the ISO deficit at ρ.55 and 15.0% at ρ.75 — flat,
+exactly as the lemma demands; the small restoration is centroid-noise
+reduction, not floor change.
+
+**Q.2 — The dichotomy relocates.** ISO and ALIGNED differ by the
+boundary-normal variance ratio σ²_{u,ALIGNED}/σ²_{u,ISO} = m/k_τ
+(z-ratio √(m/k_τ) = 4 at 48/3 — matching L1's Δ-free boundary algebra;
+measured ARI-drop ratio 8.145911689523754 at matched identity energy).
+**P.3's m/k_τ factor is real; it lives in the FLOOR RATIO between
+geometries, not in what projection can buy.**
+
+**Q.3 — R2's ISO half, restated.** Projection's genuine purchase is
+centroid LOCALIZATION: below the consistency threshold — where ambient
+clustering cannot find the structure at all — the (k_τ/m)-fold energy
+reduction lets spiked-PCA + clustering still find it. Above threshold it
+buys ~nothing (Q.1). P.3's energy algebra was correct arithmetic attached
+to the wrong observable (defect #30 → standing rule 19). The restated
+claim is testable only in the ambient-failure regime: M4-L2's W-1.
+
+**Q.4 — The owner's conjecture, final sharpened form.** TRUE identity
+removal works trivially (measured: ARI → 0.9948 in both geometries) but
+requires knowing b — the R1 circularity. The only label-free surrogate,
+projection, provably cannot touch the boundary-normal component (Q.1).
+Therefore: **the practical content of "remove identity, then group" is
+exactly the removal-vs-projection gap, and that gap IS the
+boundary-normal identity variance — unremovable without labels.** Above
+the localization threshold, grouping error is floor-bound by the
+geometry (η) alone; below it, projection buys localization. What remains
+label-free buyable: localization, and the noise/state suppressions
+(averaging, frame refreshment) that were never the hard part.
+
+**Q.5 — The audit needed one constant, not a new theory.** L1's V-4 miss
+is a single diagnosed calibration constant (B̂ = 0.245861 vs 0.25;
+(0.25−B̂)·c_cont = +0.002754 reproduces the offset; ALIGNED cells failed
+tracking because their CIs are 1.5–2.4× tighter, not because their bias
+is larger). R3 stands; the calibrated cross-fitted meter is L2's W-4.
+
+**Q.6 — Method.** Defects #27–#30 recorded; standing rules 18 (JOINT
+satisfiability across knob-sharing clauses) and 19 (every lean bar
+shadows the theorem's OWN quantity, stated in a fidelity table) created.
