@@ -198,3 +198,76 @@ characteristic (monotone, calibrated at the poles L1 certified); (iv)
 cross-fitted audit tracks oracle audit while same-data audit shows the
 predicted optimistic bias. Rule-16 enumeration and the full gate set as
 always; margins from L1's realized variances.
+
+### OUTCOME (appended 2026-08-09, after run; append-only)
+
+**`SHADOWS_FAIL__V1HV2HV3MV4M__P2L` — V-1 HOLD · V-2 HOLD · V-3 MISS · V-4 MISS
+→ P2L.** Report: `reports/SUICA_M4_L1_TYPED_WORLD_REPORT.md`. Script:
+`scripts/run_suica_m4_l1_typed_world.py`. Δ = 5.928950380606693 (RN-10
+bisection to predicted ρ_id=0 oracle ARI 0.99; the ladder did NOT fire —
+no cell saturated). All six Part-0 gates passed; K2a anchor cell
+`phi0.9_occ8_intzero` re-derived BIT-EXACTLY (residual 0.0, 2048 rows ×
+35 columns); reconstruction residual 2.22e-16; ISO and ALIGNED at
+ρ_id=0 bit-identical (0.0); oracle removal reproduces the ρ_id=0 card to
+3.12e-16. 14 cells × 8 worlds × 512 authors; 51.62 s adjudicated compute.
+
+**The measured ARI ordering reproduces the Part-0 prediction cell for
+cell**, both instruments. The identity tax (R4) is real and geometry-
+dependent: ISO loses 0.0994690680231981 of ARI across ρ_id 0→.75,
+ALIGNED loses 0.8102662 — **8.1×** at matched total identity energy. The
+dichotomy (R2) is measured at full strength: pooled ALIGNED−ISO at
+ρ_id ∈ {.35,.55} = **−0.4128850283258326** [−0.4305262035508016,
+−0.3953012811449916]. The ALIGNED floor Φ(−Δ/(2σ_{b,u})) predicts the
+noise-free per-boundary rate to 2.3% (ρ=.35: 0.027750651041666664 vs
+0.027118834519294123, contained) and 6.7% (ρ=.55: 0.107421875 vs
+0.10068281660598428, not contained) — 1/2 cells, clause HOLDs.
+
+**The two misses.**
+
+- **V-3 fails on the oracle-PROJECTION clause alone** — ISO restoration
+  fraction **0.13468401332369143** [−0.0258742, 0.2774669] against the
+  registered ½ bar (ALIGNED 0.003369541289360893 ≤ ¼ ✓; removal ✓ but a
+  designed identity). This miss was **PRE-REGISTERED in Part 0 §0.6 with
+  its derivation and a predicted value of 0.15265055004035916**. A
+  post-hoc unregistered diagnostic at ρ_id=.75 — where R2's ambient
+  energy condition Δ² ≳ σ_b² is violated (σ_b²/Δ² = 1.125) — gives a
+  restoration fraction of **0.1495074669143142**, i.e. FLAT, not rising.
+  **Reading:** R2's m/k_τ factor is an ENERGY statement about the
+  k-means objective; ARI at these separations is owned by the
+  boundary-normal Bayes error, which projection provably cannot change
+  because the boundary normal lies inside S. The ISO half of R2 needs
+  its estimand re-stated as a consistency THRESHOLD, not achieved ARI.
+- **V-4 fails on tracking, 5/8 < 6** — a calibration OFFSET, not a
+  structural failure. The meter's numerator error is a near-constant
+  +0.0011…+0.0023, traced entirely to the realized two-split state
+  coefficient **B̂ = 0.245861** (design 0.25, −1.66%), which propagates
+  as +0.002754 into Â. The designed null at ρ_id=0 HOLDS as an
+  equivalence (Ŝ_id = 0.010918432922059714 [0.0006823, 0.0198269] inside
+  the pilot margin 0.029389351349840543) though its CI excludes 0. The
+  declared second reading (contiguous-only, design B) also tracks 5/8
+  with the offset reversed in sign, so the MISS is robust to the reading.
+  Rule 13 triggered on both razor-thin calls; both STABLE at B = 20 000.
+
+**Routing robustness:** P2L under the registered readings and under both
+declared second readings (V-2 on the instrument prediction → 3 misses →
+still P2L; V-4 on the contiguous meter → still 5/8).
+
+**Registration defects recorded (#27–#30):** #27 G2L's (0.05,0.95) band
+clause and V-1's 0.95 bar are **jointly unsatisfiable on the ISO arm**,
+PROVED — the identity-only boundary z is Δ-free (ISO 5.65685/√(ρ/(1−ρ)),
+ALIGNED 1.41421/√(ρ/(1−ρ))), so the ISO arm's identity-only floor never
+exceeds 5.45e-4 on the registered grid; handled by RN-10's pre-declared
+guard, band clause 2/4 (both ALIGNED), both ISO failures **from above**
+and unsaturated. #28 V-3(d) is a designed identity, not a test. #29 the
+floor clause had no registered comparand (RN-7 pinned the noise-free
+TRUE-card rate before arms). #30 V-3(c)'s bar tests a proposition R2 does
+not make.
+
+**Consequence for L2 (theory-repair note owed first, per P2L).** Decouple
+Δ from σ_b so the consistency threshold can be crossed; re-state R2's ISO
+half as a threshold claim and test it there; give the completeness audit
+its one calibration constant (per-world B̂, or bias-corrected target with
+the B̂ error in the CI) — either moves tracking from 5/8 to 8/8 on these
+numbers. The taxometric decision instrument L2 was to open is NOT damaged:
+its discriminating signal (the ALIGNED floor and the 8.1× tax) is exactly
+the part that measured cleanly.
