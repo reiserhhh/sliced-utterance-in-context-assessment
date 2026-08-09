@@ -147,3 +147,27 @@ ownership is under M4-K1c (registered before run, same date). F4/F5's
 any further retrospective claim touches those rows. Registrations and
 numbers: `docs/SUICA_M4_K_IDENTITY_LINE_PLAN.md`;
 `docs/SUICA_IDENTITY_THEORY_V1.md` appendices C–D.
+
+## Dated retrospective note II (2026-08-09, after M4-K1c′ — P2′'s registered consequence)
+
+The κ=0.5 ownership question left open above is now measured, on live
+channels (author AR intact/zeroed ratio ~1.08, author-mean ratio ~2.86), with
+the composition effect replicating INSIDE F2's own CI at fresh seeds
+(Δ0 = 0.007449 [0.006338, 0.008586]): **author-reading share
+−0.944 [−1.234, −0.705]** — the same number to three decimals as κ=1.0's
+−0.949. Author deletion ENLARGES the composition contrast at both knobs
+(Δ0′/Δ0 = 1.944 at κ=0.5, positive in 127/128 worlds). Combined with the
+world-family lemma (IDT appendix E: the design enters this generator family
+ONLY through the occasion-common channel, and the family contains no
+person×occasion interaction channel), the conclusion is family-wide: **the
+composition effect carries no material author-reading share at any tested
+knob, and cannot in this family; author content is interference to the
+gauge's frame reading** (deleting it raises shared agreement, +0.0043,
+92/128, and lowers free agreement, −0.0027, 90/128). §3's prior is re-typed
+accordingly: "shared occasions raise the gauge's agreement through
+common-frame content; author content interferes with that reading." The
+remaining design content of "recruit authors, not words" is exactly one
+question — whether F4's scaling exponent survives author deletion —
+registered as M4-K1d before run. F4/F5 rows stay unannotated until K1d
+adjudicates (F4's claims are κ=1.0-only by its own record; F5's truth
+objects are being re-derived from source in K1d's Part 0).

@@ -95,3 +95,11 @@ raises the gauge's agreement; at κ=1.0 the raised agreement is shared-frame
 content, not author reading". The κ=0.5 ownership is under M4-K1c. Details:
 `docs/SUICA_M4_K_IDENTITY_LINE_PLAN.md` (K1b outcome + adjudication),
 `docs/SUICA_IDENTITY_THEORY_V1.md` appendix D.
+
+**Addendum (same date, after M4-K1c′):** the κ=0.5 ownership is now measured
+on live channels: author-reading share **−0.944 [−1.234, −0.705]** — the
+κ=1.0 result was not a knob artefact. With the world-family lemma (IDT
+appendix E), the re-typing is family-wide: composition's gain is
+common-frame content at every tested knob; author content is interference.
+The F4 scaling exponent's survival under author deletion (M4-K1d) is the
+last open piece of the "recruit authors" prior.

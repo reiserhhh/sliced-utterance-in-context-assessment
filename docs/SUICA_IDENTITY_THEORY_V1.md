@@ -549,3 +549,45 @@ queued as its own registration; this appendix does not annotate them.
 74-second stop — the first time a standing rule caught the planner before
 compute was spent. Rule 12 (source-object naming for channels and
 manipulations) was added after two same-family naming defects.
+
+## Dated appendix F (2026-08-09, after M4-K1c′): the negative author share is κ-invariant; author content is interference; the repair is knob-dependent
+
+**F.1 — The share.** At the live knob (κ=0.5; author channels CERTIFIED live:
+AR intact/zeroed ratio ~1.08, author-mean ratio ~2.86), with the composition
+effect itself replicating INSIDE F2's own CI (Δ0 = 0.007448566560020627
+[0.006338, 0.008586] vs F2's [0.004418, 0.013254]):
+**Ŝ_auth = −0.9443843417103447 [−1.2340432099315712, −0.7045965411263232]**
+— the same number to three decimals as K1b's −0.949 at κ=1.0. Deleting every
+trace of author identity nearly doubles the composition contrast
+(Δ0′/Δ0 = 1.944; Δ0′ positive in 127/128 worlds). The negative share is not
+a κ=1.0 artefact.
+
+**F.2 — Author content is interference, decomposed.** The exact identity
+(Δ0 − Δ0′) = −[(A5−A0) + (A2−A6)] (verified at 3.5e-18) splits the effect:
+deleting authors RAISES shared-design agreement (A5−A0 = +0.004338666343079094,
+92/128) and LOWERS free-design agreement (A6−A2 = −0.0026956432843916727,
+90/128). In both designs author content interferes with the gauge's frame
+reading rather than feeding it. Note also the panel-level fact: at this knob
+(A5−A6) ≡ (A0−A2) AS PANELS — the deletion subtracts a design-invariant
+object — so the entire Ŝ_auth story is GAUGE-level, exactly where T9 says
+forgery lives.
+
+**F.3 — T9 status: measured at both knobs.** Individual forgery at κ=0.5:
++0.0547 (8/8) under a shared frame → **−0.0867 (0/8)** under frame
+refreshment (a larger inversion than κ=1.0's −0.0623), oracle stable at
+0.0019. T6″ v2 (sign form) HOLDS at both knobs.
+
+**F.4 — The de-framing repair is knob-dependent.** R_est/R_or =
+**0.7347 [0.6376, 0.8207] at κ=0.5** vs **0.9439 [0.9023, 0.9879] at κ=1.0**
+— non-overlapping. Deployment caveat recorded on the certified-unadopted
+repair: its removal fraction is regime-dependent and must be re-measured in
+any target regime before an adoption decision.
+
+**F.5 — What remains of "composition", and the next question.** The
+phenomenon is real (replicates inside F2's CI), frame-owned at every tested
+knob, with author content as interference. The surviving design content of
+"recruit authors, not words" is now a single question: does M4-F4's scaling
+exponent (γ = 1.096) survive author deletion? If yes, the author axis is a
+REPLICATE axis (frame-readout economics — more noise-bodies averaging the
+same frame); if no, scaling and composition ownership dissociate. Registered
+as M4-K1d before run.

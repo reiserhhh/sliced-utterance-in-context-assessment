@@ -1104,6 +1104,160 @@ in the stronger form. No result fell outside a registered branch. No
 background jobs, no monitors, no smoke runs; longest stage `arms_b` 516.877 s
 against a 900 s estimate, so the 2× stop-and-report rule never engaged.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Leans scored as executed: **L-1 MISS on the wrong side, clean** — the
+author-reading share at the live knob is −0.9443843417103447
+[−1.2340432099315712, −0.7045965411263232], the same number to three decimals
+as K1b's −0.949 at κ=1.0, measured with the author channels CERTIFIED live
+(G4′) and the composition effect itself replicating INSIDE F2's own CI (G1′).
+L-2 HOLD (qualified; equivalence over a disclosed non-null effect), L-3 HOLD
+(R_est/R_or = 0.7347 [0.6376, 0.8207]), L-4 HOLD (T6″ v2 at the live knob:
+forgery +0.0547, 8/8 → inversion −0.0867, 0/8; oracle stable 0.0019).
+
+**P2′ fires on a stronger antecedent than its own text** — the share is
+bounded below ZERO (CI upper −0.7046), not merely below 25%. Its registered
+consequence executes today: the retrospective widens with the family lemma
+(dated note II appended to `docs/SUICA_M4_F_PANEL_DESIGN_SYNTHESIS.md` and
+`docs/SUICA_DISPLACEMENT_PROBLEM_RESOLVED.md`), and **the F4 re-reading is
+the next registration (M4-K1d, below)**. Theory consequences: IDT appendix F
+(κ-invariant negative share; author-as-interference decomposition
+A5−A0 = +0.0043 / A6−A2 = −0.0027 with the identity verified at 3.5e-18; the
+de-framing repair's NEW κ-dependence 0.7347 vs 0.9439, non-overlapping —
+a deployment caveat on the certified-unadopted repair; T9 now measured at
+both knobs).
+
+**Planner registration defects recorded (program account #14, #15):**
+- **#14** — G0′'s anchor location misstated (`decision.json` for two families
+  that live in `gates.json`). Rule-8 hygiene family; gate satisfied in the
+  stronger form (raw-row re-derivation).
+- **#15** — G3′'s "within 2×" sd clause was TWO-SIDED, so it fails when the
+  fresh variance is SMALLER — an equivalence band that punishes improvement.
+  The registered fallback absorbed it. One-sided (≤ 2×) was the intent; rule
+  11 checks satisfiability, not clause DIRECTION — direction is the
+  registrant's job and this one was wrong.
+
+**Convention added to this line's execution conventions (dated 2026-08-09,
+from K1c′ anomaly 1):** all artifact re-derivations that pass through CSV
+parse with `float_precision="round_trip"` — pandas 3.0.2's default parser
+does not round-trip float64, which is fatal to bit-exact anchor gates. (Side
+finding on record: K1c's published pilot R_est is 1 ULP off its own CSV under
+round-trip parsing; its in-memory gate values are unaffected.)
+
+---
+
+## M4-K1d — Does the author-axis law survive author deletion? (the F4 re-reading)
+
+**REGISTERED 2026-08-09, BEFORE RUN** (P2′'s registered consequence).
+Planner: this document's author. Executor: dispatched agent.
+
+### Question
+
+K1b/K1c′ proved the composition effect carries no author-reading share at
+either knob — author content is INTERFERENCE to the gauge's frame reading.
+M4-F4's headline is a different object: the author-SCALING law (agreement
+grows with author count, γ = 1.096 [0.984, 1.218], ×32 holdout predicted
+0.4012 / observed 0.3861, shared design, κ=1.0 — its adjudicated claims are
+κ=1.0-only by its own record, per K1c G4c-info). Under frame ownership the
+sharpest re-reading question is: **is the author axis a law about AUTHORS at
+all, or a law about averaging more noise-bodies over the same frame?** If
+agreement growth with "authors" persists when every trace of author identity
+is deleted, the axis is frame-readout economics — a REPLICATE axis — and the
+D3 prior "recruit authors, not words" re-types to "recruit replicates".
+
+### Facts cited (rule 8)
+
+F4: γ = 1.096 [0.984, 1.218], holdout predicted 0.4012 / observed 0.3861,
+shared κ=1.0, master_seed 20260802 (from the F-line synthesis row and K1c
+G4c-info's artifact re-derivation; Part 0 re-verifies against
+`results/m4_f4_author_axis/` at full precision with round-trip parsing).
+K1b: author deletion at κ=1.0 raises shared agreement +0.023006 (31/32).
+At κ=1.0 the author AR state has coefficient exactly 0 (M4-F7), so author
+deletion removes `mean_part` (f2:178) only — rule-12 source-object naming.
+
+### Machinery
+
+`scripts/run_suica_m4_k1d_replicate_axis.py`, importing F4's cell
+construction and K1b/K1c′'s deletion surgery. Fresh master_seed 20260814.
+8 worlds (F4's own grain). Author grid pinned to F4's own cells in Part 0
+(expected {×1, ×2, ×4, ×8, ×16}; ×32 reserved as holdout ONLY if the intact
+arm's fit demands it — economy note, its inclusion rule is: include iff
+Part-0 pilot shows the ×16 cell's wall-time × 2 arms keeps the leg under
+budget). Two arms per cell: **intact** and **author-deleted** (`mean_part`
+removed; at this knob that is the entire author channel).
+
+### Quantities
+
+Per arm: agreement-vs-authors curve; fitted exponent γ via F4's own fitting
+procedure (Part 0 extracts it with file:line provenance — no new fitter).
+Δγ = γ_deleted − γ_intact (bootstrap over worlds, 2000 draws). Per-cell level
+contrast: agreement_deleted − agreement_intact.
+
+### Part 0 gates
+
+- **G0d** — pin F4's cells, dims, fitting procedure from
+  `results/m4_f4_author_axis/` + its script, at full precision, round-trip
+  parsing; re-verify the cited γ, CI, holdout numbers bit-exactly.
+- **G1d (replication)** — the INTACT arm's fitted γ CI (fresh seeds) must
+  overlap F4's [0.984, 1.218]; FAIL → leg VOID on non-replication, STOP.
+- **G2d (rule 10)** — non-degeneracy: deleted-arm panels differ from intact
+  per cell (RMS > 1e-6); the deletion is `mean_part` only at this knob,
+  stated from source (f2:178; M4-F7's coefficient-0 result for the AR term).
+- **G3d (power + rule 11)** — pilot (2 worlds, smallest and largest grid
+  cells, both arms): bootstrap precision of γ per arm; verify the L-1
+  equivalence band ±0.25 is satisfiable (band justified as ~2× F4's own CI
+  half-width 0.117); verify every CI clause satisfiable at pilot sd;
+  one-sided clauses stated as one-sided (defect #15's lesson).
+- **G4d (rule 3)** — deletion channel live: `mean_part` share of response
+  RMS at κ=1.0 > 0 per pilot world; report the share.
+- **G5d** — hygiene; `float_precision="round_trip"` everywhere; rule-12
+  header (`mean_part` f2:178; grid cells by F4's own constructors).
+- **G-info-F5 (report-only)** — from F5's script and artifacts: derive what
+  `truth_recovery_exact` and `truth_recovery_long` correlate AGAINST (the
+  generator truth objects), and state from source whether those objects are
+  common-channel content, author content, or mixed. No adjudication; feeds
+  the eventual F5 re-typing and the line synthesis.
+
+### Leans (planner's committed priors) and aggregation (rule 1)
+
+8 worlds; grid-cell contrasts pooled by paired bootstrap (2000); leans
+separate; no omnibus.
+
+- **L-1 [prior .70]** — the exponent survives deletion: |Δγ| bootstrap CI
+  inside ±0.25 AND γ_deleted's CI overlaps F4's [0.984, 1.218].
+  **Registered consequence of HOLD:** F4's row re-types "author axis →
+  replicate axis (frame-readout economics)" by dated note; the D3 prior
+  re-types "recruit replicates, not words". (Not a pivot — the consequence
+  of the lean holding, pre-stated.)
+- **L-2 [prior .75]** — author-as-interference at every scale: the deleted
+  arm's level exceeds the intact arm's at every grid point (per-point pooled
+  CI > 0 at ≥ 4/5 points; sign counts reported per point).
+- **L-3 [prior .55]** — the law's PREDICTION improves or holds under
+  deletion: the deleted arm's own power-law fit quality (F4's fit
+  diagnostic, extracted in G0d) is no worse than the intact arm's (ratio CI
+  including or above 1).
+
+### Pivots (pre-committed)
+
+- **P1d** — G1d fails → VOID on non-replication (F4's law does not
+  reproduce at fresh seeds — its own headline event, next registration).
+- **P2d** — L-1 MISS with γ_deleted CI DISJOINT from F4's band → the
+  scaling law is author-borne even though the composition effect is not —
+  ownership and scaling dissociate; the reconciliation becomes the next
+  registration and NO retrospective re-typing of F4 occurs.
+- **P3d** — G2d/G4d fail (deletion inert at this knob) → STOP, defect.
+
+### Deliverables
+
+The six: script; `results/m4_k1d_replicate_axis/` (manifest.json,
+gates.json, per-cell CSVs, decision.json — gitignored);
+`reports/SUICA_M4_K1D_REPLICATE_AXIS_REPORT.md` (Part 0 first); outcome
+appended here; ledger row; ONE commit (`feat(m4-k): K1d — ...`), never
+amended, not pushed by the agent. Budget: grid × 2 arms × 8 worlds with ×16
+cells heavy — target < 45 min wall; stop-and-report at 2× any Part-0 stage
+estimate; the ×32 holdout inclusion rule is G0d's economy note, decided in
+Part 0, not mid-run.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
