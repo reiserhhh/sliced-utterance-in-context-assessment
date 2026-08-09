@@ -976,6 +976,134 @@ amended, not pushed by the agent. Budget: 6 arms × 128 worlds ≈ 768
 deployed-gauge runs + the 8-world secondary; target < 30 min wall;
 stop-and-report at 2× any Part-0 stage estimate.
 
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+**Verdict:
+`NO_AUTHOR_READING_SHARE_AT_THE_LIVE_KNOB__AUTHOR_DELETION_ENLARGES_THE_COMPOSITION_EFFECT__FREE_SIDE_SPECIFIC__DEFRAMING_REPAIR_DEPLOYABLE_0p73__T6dd_V2_HOLDS__P2PRIME_FIRES`.
+**L-1 MISS, L-2 HOLD, L-3 HOLD, L-4 HOLD; P2′ FIRES; P1′/P3′/P4′ do not.**
+All five Part-0 gates PASS plus G1′. Report
+`reports/SUICA_M4_K1C_PRIME_AUTHOR_SHARE_REPORT.md`; artifacts
+`results/m4_k1c_prime_author_share/`; script
+`scripts/run_suica_m4_k1c_prime_author_share.py`; **793.9 s total (≈13.2 min),
+all foreground, 768 adjudicated deployed-gauge runs on 128 fresh worlds
+(master_seed 20260813) plus 24 on reserved Part-0 seeds**.
+
+**The headline: at the LIVE knob the composition effect does not merely
+survive author deletion — deleting the author-mean channel nearly DOUBLES it.**
+Δ0 = **0.007448566560020627** [0.006337565267918393, 0.008585684601869065]
+(106+/22−, clean); Δ0′ = **0.014482876187491394** [0.013223715021599436,
+0.01581035481469913] (**127+/1−**, clean); Δ0−Δ0′ =
+**−0.007034309627470767** [−0.008163458312738956, −0.005873004730301863]
+(20+/**108−**, clean); **Ŝ_auth = −0.9443843417103447 [−1.2340432099315712,
+−0.7045965411263232]**, i.e. Δ0′/Δ0 = 1.9443843417103448. That is, to three
+decimals, K1b's κ=1.0 value (−0.9487481378268351 [−1.1584, −0.7532]) — but
+measured where G4′ certifies the author channels LIVE (author-mean liveness
+ratio 2.8552376916466695–2.864645232241155; AR-state ratio
+1.0817049201258067–1.0822239823705524, both > 1 at 2/2 fresh pilot worlds,
+both inside K1c's inherited 8-world bands). **Author liveness in the WORLD
+buys the composition effect no author content in the GAUGE.** Decomposition
+identity verified to 3.469446951953614e-18: the gap is exactly
+−[(A5−A0) + (A2−A6)] — deleting the author channel RAISES shared agreement
+(+0.004338666343079094, 92/128, qualified) AND LOWERS free agreement
+(−0.0026956432843916727, 90/128, qualified).
+
+**The measurement is gauge-level by construction, which is what makes it
+worth making.** A5 = shared − `mean_part` (f2:178) and A6 = free − `mean_part`
+subtract the same design-invariant object, so (A5−A6) ≡ (A0−A2) *as panels* —
+verified bit-identical at both fresh pilot worlds (RMS 0.06929976550687832 /
+0.06923291177968123). Δ0 − Δ0′ is therefore purely the deployed nonlinear
+map's use of author content, and it is large, negative and clean.
+
+Part 0, written to the report before any main arm (stage `part0`, 15.273 s,
+`timestamp_utc = 2026-08-09T06:06:17.808770+00:00`; 12 gauge runs, all on
+reserved worlds 9401–9402). **G0′ PASS** — all seven inheritance anchors
+re-derived from K1c's RAW rows or re-run from the generator and bit-exact
+against both the persisted summary and the registration text: MDEs
+**0.0015876092906212693** / **0.0021362771506247724**, K1c pilot sd
+0.008560686670660837, AR band 1.0772786802493795–1.0860125411681176,
+author-mean band 2.8194500501220903–2.865341972610127, common share
+0.27447485652733755, and the A5-vs-A6 panel gap **0.3310376783451957**
+re-run from the generator at K1c's own persisted world seed
+6845424899141898945. **G2′ PASS** — A5-vs-A6 panel RMS 0.0692 against a 1e-6
+bar (five orders of margin); A0-vs-A1 inputs differ at both worlds; the A1
+degeneracy identity CITED, not re-tested. **G3′ PASS with a disclosed clause
+miss** — the fresh 2-world sd 0.003757879890017854 is 0.43896944656283826× of
+K1c's, so the two-sided "within 2×" reading MISSES (the fresh sd is
+*smaller*); the registration's own fallback was executed and the fresh-sd MDE
+0.0009377603985145934 is inside the 0.004418076848551262 bar, as is the
+inherited MDE; by written rule the LARGER (inherited) MDE
+**0.0021362771506247724** controls, since an n=2 sd may never buy more claimed
+resolution than the inherited n=8 pilot. **G4′ PASS.** **G5′ PASS** with
+rule-12's source-object header (occasion-common `common_part` per the f2:195
+blend split fed by f2:180/184-193/120-126; author `mean_part` f2:178; author
+AR `x` f2:151-177; design `occasion_mode` f2:180) and rule 11 run over
+**fourteen** clauses: thirteen satisfiable, ONE flagged — "L-3: R_est CI
+excludes 0" was unsatisfiable at the fresh n=2 pilot point (|−0.00040| < hw
+0.00057). Register-note R-0.4 declined to treat an n=2 point as decisive,
+recorded K1c's n=8 second reference (0.004051794736468588, hw 0.000809), and
+the 128-world result then satisfied the clause comfortably. **G1′ PASS** —
+Δ0's CI lies wholly INSIDE F2's κ=0.5 CI [0.004418364530893362,
+0.013253942863311687]; bootstrap and paired-t readings agree.
+
+**L-2 HOLD, stated precisely (rule 4):** |A6−A2| = −0.0026956432843916727
+[−0.003871657497627448, −0.0015998336172598471] lies inside the registered
+±0.004418076848551262 margin, so the equivalence holds — but the CI excludes
+zero and the sign band is *qualified* (90/128), so author deletion measurably
+lowers free-design agreement; only its IMMATERIALITY is licensed.
+
+**L-3 HOLD, with a new κ-dependence:** R_or = 0.0061852799720190175
+[0.005177265953630964, 0.007144206387567167] (109+/19−, clean) excludes 0, so
+the lean is applicable; R_est = 0.004544633760387759 [0.003502130735750378,
+0.005619815780497545] (94+/34−, qualified); ratio **0.7347498869811525**
+[0.6376184714475329, 0.820668361509718] ≥ 0.5. The estimated per-occasion
+subtraction recovers **73.47 %** of oracle de-framing at κ=0.5 against K1b's
+**94.39 %** [90.23, 98.79] at κ=1.0 — **non-overlapping intervals**. Still
+certified, still UNADOPTED under F16 discipline, now with a knob-dependent
+efficacy figure. (A1's gauge value is the no-composition baseline by the
+family lemma; Ŝ_frame was never computed and is not a quantity of this leg.)
+
+**L-4 HOLD — T6″ v2 confirmed at the live knob, with a LARGER inversion than
+at κ=1.0.** Under reader A (gallery and probe norms from the same 512-author
+half) est8 BEATS oracle by **+0.05469543147208122** [0.04809644670050761,
+0.06142131979695432], **8/8 worlds** — the forgery. Under reader A′
+(frame-refreshed, disjoint halves) the same norm inverts to
+**−0.0866751269035533** [−0.09517766497461928, −0.07778870558375636],
+**0/8** — versus K1b's −0.06230964467005076 at κ=1.0. Oracle rank-1 moves only
+**0.0019035532994924331** (bar 0.01); CI upper −0.0778 < +0.005. P3′ does not
+fire; T9's forgery principle and its licensed counter-operation both replicate.
+
+**P2′ FIRES, on a STRONGER antecedent than its own wording.** (Δ0−Δ0′) CI
+upper **−0.005873004730301863** < 0.25 × Δ0 = **0.0018621416400051568**, with
+L-1 MISS. The pivot text says "author share bounded below 25 % at the live
+knob"; measured, the share is bounded below **ZERO**, CI upper −0.70. The
+registered consequence (retrospective widening WITH the family lemma; the D3
+"recruit authors" prior surviving only as frame-readout economics; the F4/F5
+review on K1c's G4c-info facts becoming the next registration) is the
+planner's to execute — the executor only reports that the antecedent is
+satisfied, and satisfied more strongly than the text anticipates.
+
+Anomalies, all disclosed with timing: (i) `part0` was invoked TWICE
+(06:03:10–06:03:26 and 06:06:01–06:06:17 UTC) — the first returned G0′ FAIL
+because pandas 3.0.2's DEFAULT csv float parser does not round-trip float64
+(`1.0772786802493795` reads back as `...97`), so the anchors matched only to
+~2e-15 relative; the written rule
+`float_precision="round_trip"` was adopted for the whole leg and two other
+Part-0-only changes made (conservative controlling MDE; the L-3 second
+reference). **Both invocations touched only reserved pilot worlds 9401–9402;
+no main or `abs` world, and no hypothesis-relevant number, existed at either
+point**; the report's Part 0 was written after the second and before `arms_a`
+(06:08:41). Side finding: K1c's published pilot R_est 0.004051794736468587 is
+1 ULP off its own CSV under round-trip parsing (0.004051794736468588); K1c's
+gate values, computed in memory, are unaffected. (ii) G3′'s two-sided 2×
+clause missed (A-2 above), in Part 0, before any main arm. (iii) The rule-11
+flag was a false alarm, as R-0.4 predicted it might be. (iv) L-2's equivalence
+holds over a non-null effect (disclosed, not over-read). (v) Registration-text
+inaccuracy: G0′'s anchors are said to live in K1c's `decision.json`; two of
+three families live in `gates.json` — recorded, not repaired, gate satisfied
+in the stronger form. No result fell outside a registered branch. No
+background jobs, no monitors, no smoke runs; longest stage `arms_b` 516.877 s
+against a 900 s estimate, so the 2× stop-and-report rule never engaged.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
