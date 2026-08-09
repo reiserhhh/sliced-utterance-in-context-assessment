@@ -2950,6 +2950,171 @@ predictions first); outcome appended here; ledger row; ONE commit
 Budget: card-space; target < 20 min wall; stop-and-report at 2× any
 Part-0 stage estimate.
 
+
+### OUTCOME (appended 2026-08-09, after execution — the registration above is unedited)
+
+**`L1_HOLD__L2_HOLD__L3_BOUNDARY__L4_MISS__L5_HOLD__P3` — exactly one MISS, so
+P3 QUALIFIED fires: T7/T8 move to [MEASURED except T8(e)], and the crowding
+claim gets its own follow-up charter.** Report:
+`reports/SUICA_M4_K3_SIMILARITY_GEOMETRY_REPORT.md`. 24 (config, world) blocks,
+12 288 authors, 3 139 584 true-card pairs, ≈21 s of card-space compute.
+
+- **G0k: reconstruction residual 2.220446049250313e-16; the K2a anchor is
+  BIT-EXACT.** `cell_phi0.9_occ8_intzero.csv` re-derived through K2a's own
+  `world_seed_for`/`suff_stats_for_world` at K2a's own master_seed 20260815:
+  2048 rows × 35 columns, identical column list, **max |residual| 0.0, 35/35
+  columns bit-exact**, and all eight published pooled statistics re-derived at
+  residual 0.0 (`gap` 0.09302852291619967, `rho_interleaved` 0.9228727932446795,
+  `rho_contiguous` 0.8298442703284798, `r_card_b_raw` 0.7356436826896012,
+  `r_card_b_cen` 0.7370474868136508, `rho_same_occ` 0.9341881819136586,
+  `gap_cos` 0.09436146465759876, `gap_pearson` 0.09302852291619967).
+- **TWO REGISTRATION DEFECTS, BOTH CAUGHT BY THE 4-WORLD PILOT BEFORE ANY MAIN
+  WORLD EXISTED, BOTH RESOLVED BY PRE-DECLARED DECISION RULES.** **#25:** the
+  UNEQUAL stratum is *unrealizable in this world family at every rung of its own
+  ladder* — r-ratio > 3 → **0** pairs, > 2.5 → **0**, > 2 → **19** of 1 569 792
+  pilot pairs; largest ratio anywhere **2.1368466268097563** (main arms
+  1.9874524383338983). F2's family draws every trait latent from the same
+  N(0, I₄₈), so distinctiveness is near-homogeneous by construction. Resolved by
+  the pre-declared fallback **UNEQUAL-Q** (one author top-r-quintile, one
+  bottom), 41 616 pairs per config per 4 worlds. **#26:** the registered rank-1
+  identification task is **at ceiling** — 0 misses in 512 authors × 8 splits × 4
+  pilot worlds in both no-interaction configs — so "per-author rank-1 hit rate"
+  was a constant and L-2(a)/L-4/L-5 were arithmetically unscorable as posed
+  (rule-11 family, same as #12). Resolved by the pre-declared difficulty ladder
+  PA → PB → **PC** (one-occasion probe vs one gallery occasion at maximal lag;
+  miss rates 0.0271 / 0.4653 / 0.3963).
+- **L-1 HOLD, and the TRUE-CARD IDENTITY IS EXACT: violation count 0 of
+  3 139 584 pairs in all 24 worlds**, with the two sides computed independently
+  (difference vector vs norms — not by algebraic expansion) and minimum absolute
+  slack **3.100077310413951e-07**. The bound BINDS: **50.48%** of pairs are
+  genuinely anti-direction. Estimated-card identity mismatches: 0. **Noise law
+  6/6 strata within the Part-0 MC CI** (threshold 5/6), largest error
+  **0.00043**: c1 0.16607806265192865/0.15737874097007226/0.14941233803462906
+  vs predicted 0.16595709306058798/0.1574079807361541/0.1495568168787983; c2
+  0.1354716094115489/0.12734778121775026/0.11977984176126591 vs
+  0.13590044947942942/0.12735810113519092/0.11969842907923404. **The predicted
+  monotone decrease in pair norm is reproduced exactly in both configs** —
+  T8(c) is now a calibrated quantity, not a slogan.
+- **L-2 HOLD on all six sub-clauses — T7 measured to three decimals.** (a)
+  caricature never hurts and helps hugely: Δ hit rate **+0.26521650326797386**
+  (α=1.5, one-sided 95% lower +0.25071486928104575) and **+0.29901960784313725**
+  (α=2, lower +0.28380310457516340) against a −0.01 floor; baseline 0.699 → 0.965
+  and 0.998. (b) rotation degrades the own-direction match as cos φ ×
+  attenuation: measured **0.6539858793019451** [0.6494936942373705,
+  0.6584810040058980] vs MC **0.6559687656384398** (30°) and
+  **0.3752800977082475** [0.3696953138252358, 0.3806349344020846] vs
+  **0.3783652365182307** (60°) — both contained, errors 0.00198 and 0.00309; the
+  **ratio to baseline reproduces cos 30° and cos 60° to 0.00078 and 0.00349**.
+  (c) at EXACT equal displacement, rotation hurts far more than scaling:
+  Δ = **−0.2505106209150327** [−0.2617442810457516, −0.2383578431372549] at 30°
+  vs α=1.5176380902050415, and **−0.6095792483660131** [−0.6222452001633987,
+  −0.5959967320261438] at 60° vs α=2 (exact partner). Direction reads; magnitude
+  gauges.
+- **L-3 BOUNDARY — (a) and (b) hold decisively, (c) is UNDERPOWERED by a WORLD
+  FACT.** (a) the disattenuated distinctive cosine beats −raw distance in
+  **12/12** strata, Δ Spearman **0.106 – 0.190**; (b) MATERIAL in both
+  sign-predicted regimes in all three configs, **6/6**: NEAR-NORM
+  0.10804962196072668 / 0.14694735351967717 / 0.10621346942267929 and UNEQUAL-Q
+  0.12912067009754852 / 0.15688220793461183 / 0.12635554246793543, every CI
+  excluding 0. (c) the directional decomposition is **−0.01694017094962738
+  [−0.03352520660784818, +0.00954685330033195]** (c1, BOUNDARY),
+  **−0.04621816130011088 [−0.07111762978594310, −0.02459518791877905]** (c2,
+  HOLD), **−0.020796856607491712 [−0.04449647314605348, +0.00468106207217058]**
+  (c3, BOUNDARY) — flagged unsatisfiable by rule 11 at Part 0 and scored
+  BOUNDARY by the pre-stated RN-12 (standing rule 2). The reason: **the
+  magnitude channel barely exists** — mean magnitude share of squared
+  estimated-card distance is only **0.0200 / 0.0270 / 0.0201** even inside
+  UNEQUAL-Q. **Raw distance in this family is 97–99% direction.**
+- **A LOUD SECONDARY FINDING ON T8(d): the margin is the ANGLE, not the
+  DISATTENUATION.** The SB, no-SB and plain raw-cosine readings agree to
+  ≤ 0.0009 in every stratum. At ρ̄ ≈ 0.898 / 0.954 / 0.796 the ρ-correction has
+  nothing to do; the third coordinate cannot earn its keep until a config with
+  genuinely heterogeneous readability exists.
+- **L-4 MISS — T8(e) IS FALSIFIED AS STATED, AND THE REPLACEMENT IS LEGIBLE.**
+  ΔAUC = **−0.13660955666602007 [−0.15360262438180616, −0.12045724498671546]**,
+  CI excluding 0 **on the wrong side** at 2.92× its own realised MDE (a resolved
+  refutation; RN-12 does not apply). **Angular crowding of the true gallery is at
+  CHANCE: AUC 0.5004568269748008.** Distance crowding reads 0.6370663836408208 —
+  but the descriptive control shows why: **pure distinctiveness −r_i scores
+  0.6642618045442069, HIGHER than distance crowding.** Distance crowding carries
+  no crowding information beyond the probe's own norm. Same sign in every
+  config (−0.1525/−0.1483/−0.1090), every protocol (PA −0.0586, PB −0.2154, PC
+  −0.1366) and every reading (estimated-card −0.2186, top-5 −0.1567). **What
+  drives misidentification here is the probe's own readability, not the
+  gallery's geometry of either kind.**
+- **L-5 HOLD, and it is the strongest per-person predictor in the leg.**
+  Spearman(ρ_i, per-author rank-1 hit rate) = **0.5398496888120623
+  [0.5224112257093820, 0.5552609497288873]** — point ≥ 0.30 and CI lower 0.522
+  ≫ 0.15. Per config 0.36873772221036416 / 0.5591395467057239 /
+  0.6916717975200989; canonical-split readings 0.423 (interleaved) / 0.544
+  (contiguous). The menagerie coordinate is real.
+- **Rule 13: 23 clauses, 0 TRIGGERED, 0 rule-13 BOUNDARY** (B=2000, seed=master,
+  ≥10×B=20 000 spec in place). Closest approaches 3.451 MC-sd (L-3b
+  c1:NEAR-NORM margin, the leg's tightest), 6.274, 11.674, 13.841, 13.870. The
+  two BOUNDARY scorings in the leg come from **RN-12 (underpower)**, not rule 13.
+- **G4k, rule 16, clean at both layers.** Layer A (sub-clause → lean over
+  {HOLD, MISS, BOUNDARY, UNREALIZABLE}): **4364 rows, 4364 expected, 4364
+  unique, all assigned — 0 gaps, 0 overlaps.** Layer B ((true-card identity,
+  five lean states) → route): **486 rows, 486 expected, 486 unique, all
+  assigned**, counts P1 243 / P2 131 / P3 80 / P4 32, **all four routes
+  reachable**. A result fitting no registered branch was structurally
+  impossible.
+- **G3k: the validated noise model is live at K3's own configs**, max |relative
+  error| **0.008190068766055221** (≤ 0.02) across ‖ĉ‖², r̄, sd(cos θ̂),
+  own-direction cosine, card_var_norm and attenuation — verified BEFORE the L-1
+  and L-2b Monte-Carlo predictions were consumed. Card attenuation measured
+  0.732308520075803 / 0.8308968091742818 / 0.7094404590791521 against appendix
+  B's 0.7380749128572432 / 0.8334405524193496 / 0.7141601956067911.
+- **G1k rule 10:** every non-designated author's true card **bit-identical
+  across all six T7 arms** (max |Δ| 0.0); minimum designated-author card RMS
+  change 0.08540117597664273; group-norm drift ≤ 0.007818732296240796.
+  Registered-definition stratum overlaps 0/0/0.
+- **Anomalies (with timing).** **A-1 (pre-Part-0, no K3 world built):** `part0`
+  invoked three times; invocation 1 died on a `KeyError` for a K2a `cells.csv`
+  column name while assembling the anchor table; all three touched only
+  RESERVED pilot worlds 9601–9604 and K2a's anchor cell, and Part 0 was written
+  after invocation 3 and before the first arm. **A-2 (Part 0, before any
+  hypothesis number):** two completeness gaps in this executor's own Part-0
+  objects closed (missing MDE rows for the L-3b UNEQUAL and L-3c clauses,
+  because pilot pass 1 ran under the empty registered stratum; NaN-unsafe
+  `max_mde`) — no registered criterion changed. **A-3 (Part 0, after the pilot's
+  L-4 sign was visible, before any main arm):** the pilot ΔAUC came out negative
+  at 3.05× its own MDE; **no design change was made**, two explicitly
+  non-gating descriptive readings were added (RN-4b) and the sign was disclosed
+  in Part 0 §0.6 before the arms; the arms reproduced it. **A-4 (Part 0, rule-11
+  flag):** L-3c flagged unsatisfiable at n=8 in all three configs; RN-12 written
+  into Part 0 before the arms and applied uniformly — **it did not rescue L-4**.
+  **A-5 (Part 0, construction):** α ∈ {1.5, 2} is not the exact
+  same-displacement partner set (α_eq(30°) = 1.5176380902050415, so 1.5
+  under-displaces by 3.4% in the direction FAVOURING lean (c)); arm `scaleEQ30`
+  added so (c) is exact, both readings reported and agreeing. **A-6 (finalize):**
+  `decision.json`'s `rule13.n_boundary = 2` counts RN-12 boundaries, of which
+  rule 13 contributed zero; disambiguated in the report. No crashes after A-1,
+  no arm re-runs, no background jobs, no monitors, no stage over its Part-0
+  estimate.
+
+**K3's brief to the planner:** (i) **T7 is measured quantitatively, not just
+directionally** — cos φ × attenuation predicted to 0.002–0.003 out of sample, and
+at equal card displacement direction costs 0.61 of rank-1 where magnitude *gains*
+0.20; (ii) **T8(b) is an exact identity on a bound that binds, and T8(c) is a
+calibrated noise law** predicted stratum-by-stratum to ≤0.00043 by K2a's algebra;
+(iii) **T8(d) holds 12/12 with a material margin — but the margin is the angle,
+not the disattenuation**, and the ρ-coordinate is untestable until readability is
+made heterogeneous; (iv) **T8(e) is falsified as stated and its replacement is
+named**: angular crowding is at chance, distance crowding is a disguised
+distinctiveness measure (−r_i beats it: 0.664 vs 0.637), and misidentification is
+driven by the probe's own readability — which L-5 independently confirms at
+Spearman 0.540. The repair charter should ask whether angular crowding recovers
+predictive power when the competitor field is made adversarial by construction (a
+planted near-direction twin), which this family never produces; (v) **two new
+instrument boundaries** — near-homogeneous distinctiveness (defect #25: the
+magnitude channel is 1–3% of squared distance even in the most unequal pairs, so
+every T8(a) magnitude-mismatch claim is currently untestable here) and a
+split-half identification task at ceiling (defect #26) — should be written into
+the next registration rather than rediscovered; (vi) **the 4-world pilot caught
+both defects AND the L-4 sign before a single main world was built** — it is now
+paying for more than MDEs.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
