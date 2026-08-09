@@ -1272,3 +1272,40 @@ LEVEL formula.** The level question is registered as M4-K2f.
 `type_geometry` (uninitialized labels when G∤n) was found by Part-0
 realizability checking; it never bit any published number (all L-legs
 at 512 % 4 == 0); the n % G == 0 refusal is now a convention.
+
+## Dated appendix V (2026-08-10, after M4-K2f): the level law, restored and scoped — the tax was never the error
+
+K2f compiled all 26 persisted level observations (bit-exact
+provenance), fit three pre-declared candidate forms, selected by
+leave-one-out, then PREDICTED a fresh arm before running it (ordering
+enforced in code) — and the prediction landed at 25.3% of its band's
+half-width. **LEVEL_LAW_RESTORED**, in the form this corpus can
+license:
+
+    field ≈ λ′ − κ′·V_person      (λ′ ≈ 0.180 [0.163, 0.201];
+                                    κ′ ≈ 0.750 [0.520, 0.861])
+
+**V.1 — The tax is the level law's whole content here.** κ′ lands at
+0.72–0.75 in ALL three candidate forms — statistically the same number
+as the difference-fitted 0.722 and the 9-pair refit 0.715. Three
+independent fitting routes, one constant. What D-open killed was the
+GLUE (λ·r^q as a level term); what survives every test is the tax.
+
+**V.2 — The exponent is not extractable at level from this corpus.**
+q′ CIs straddle zero in every form because r and V_person are collinear
+at −0.964 BY DESIGN (the matched-pair legs made them so). The quadratic
+over-response (q ≈ 1.83–1.93) remains a RESPONSE-structure fact,
+measured where it lives (K2b's swings). The r-at-level question needs a
+decollinearized corpus — named, not queued.
+
+**V.3 — Grade.** Interpolation-grade: the fresh arm sat between
+training shares; extrapolation is unsealed. The named follow-up (not
+queued) is a D1-style seal of the new form at an extrapolated share.
+
+**V.4 — Method.** Rule 24's largest single catch to date: 14 wrong
+hand-typed cells in the leg's own report table, found by mechanical
+re-read before commit — report tables carrying artifact numbers are
+henceforth GENERATED, never typed. The leg's 19-second budget overrun
+was MEASURED and disclosed (the honest mirror of D5's E-1). Zero
+planner registration defects — the third consecutive clean
+registration.

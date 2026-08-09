@@ -3649,3 +3649,34 @@ interpolation and q′ becomes identifiable.
 **Timing.** Compute: Part 0 0.3 s, Stage 1 54.234 s, predict <1 s, arm 38.611 s
 (66 worlds), finalize <1 s — every stage inside its Part-0 estimate
 (120/300/5/120/60 s); no stage approached the 2× stop-and-report threshold.
+
+### Planner adjudication (2026-08-10, appended after the run)
+
+**LEVEL_LAW_RESTORED accepted, in its honestly scoped form.** L-1 HOLD
+(LOO 0.006156, 18.3× the sealed form's residual RMSE), L-2 HOLD
+(predicted 0.09036 ± 0.01231, measured 0.09348 — inside at 25.3% of the
+half-width, ordering enforced at +14.6 s with zero pre-stamp
+generations). The restored law, at this corpus's resolution:
+
+    field ≈ λ′ − κ′·V_person      (λ′ ≈ 0.18, κ′ ≈ 0.72–0.75)
+
+— an INTERCEPT MINUS THE TAX. The three findings that matter: (i)
+**κ's third independent appearance at ~0.72** — the variance tax was
+never the error; (ii) the exponent is UNIDENTIFIABLE at level on this
+corpus (q′ CIs straddle 0 in every form) because r and V are collinear
+at −0.964 BY DESIGN of the matched-pair legs — the quadratic
+over-response remains a RESPONSE-structure fact (K2b), not a
+level-extractable one here; (iii) L-2 was an interpolation test (share
+.45 between training .40/.50, stated in Part 0 before the fit) — the
+law is restored INTERPOLATIVE-GRADE. Named, not queued: a
+decollinearized corpus for the r-at-level question; a D1-style seal
+for the new form at an extrapolated share.
+
+Method notes: A-6's 19-second overrun was MEASURED and disclosed (the
+honest mirror of D5's E-1). **Rule 24 caught 14 wrong hand-typed cells
+in the leg's own table pre-commit — convention upgraded: report tables
+carrying artifact numbers are GENERATED from artifacts, never typed.**
+RN-K2F-5 (private importlib loaders create duplicate module instances;
+bit twice) recorded as a machinery convention: one loader chain per
+leg. Defect count unchanged — this leg, like K-R1 and D-open,
+completed with zero planner registration defects.
