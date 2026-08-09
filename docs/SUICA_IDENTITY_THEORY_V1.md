@@ -446,3 +446,61 @@ split-half re-identification reader cannot simultaneously satisfy T3(c)'s
 common-norm hypothesis and remove the occasion effect; the two constructions
 are inequivalent instruments. Every constructed reader must declare which it
 is (plan-doc standing rule 9). Input to K3.
+
+## Dated appendix D (2026-08-09, after M4-K1b): the composition effect at κ=1.0 is frame-owned by construction; T9 (the forgery principle); T6″ v2
+
+**D.1 — Frame ownership proved, not estimated.** K1b's registered surgery
+turned out to be an identity at κ=1.0: removing the occasion-common structure
+makes the shared and free designs the SAME panel — nothing else distinguishes
+them — so Ŝ ≡ 1 exactly (CI width ~1e-16). The rule-9 second reading supplied
+the live dissociation: deleting every trace of author identity DOUBLES the
+composition contrast (Δ1′ = +0.04709060297774369 [0.042167, 0.052023],
+32/32); the author-reading share of F2's κ=1.0 effect is
+**−0.9487481378268351 [−1.1584, −0.7532]**; author deletion RAISES shared
+agreement (+0.023006, 31/32); the free design reads zero with or without
+authors. **At κ=1.0, composition's gain is entirely shared-frame content, and
+author content is a net drag.** (Consistent with M4-F7's coefficient-0
+finding, whose attribution consequence had never been propagated to F2's
+headline.) The κ=0.5 knob — where the author channel is live — is K1c's
+question, and no claim is made about it here.
+
+**D.2 — T9, the forgery principle (two levels, one genus).** [MEASURED at
+κ=1.0; live-knob form under test in K1c.] Frame content forges
+identity-like statistics at both levels the theory cares about:
+
+- *individual*: issuer error × person-specific sampling manufactures a
+  person-stable, occasion-half-reproducible component that IMPROVES
+  re-identification (appendix C.4; replicated at fresh seeds in K1b:
+  +0.058756 [0.052284, 0.065355], 8/8) — a forged card;
+- *collective*: shared occasions inject common content that the deployed
+  gauge reads as agreement (the whole κ=1.0 composition effect) — a forged
+  consensus.
+
+Reproducibility and agreement statistics are frame-forgeable. The licensed
+counter-operations are **frame refreshment** (individual level: the forgery
+is destroyed and inverts into an honest issuer penalty, −0.062310
+[−0.071069, −0.054188], 0/8) and **frame removal/contrast** (collective
+level: K1b's surgery). A statistic that has passed neither operation may not
+be read as identity content.
+
+**D.3 — T6″ v2 (sign form).** The v1 operationalization (zero-equivalence
+band after refreshment) was a planner rule-4 violation: under refreshment the
+expected value is NOT zero but the honest issuer-noise penalty. Correct form:
+**under frame refreshment, no reader may PROFIT from frame error** —
+est-frame minus oracle must be ≤ 0 within tolerance; a positive advantage
+under refreshed frames is the forgery signature. The measured inversion
+(−0.0623) with oracle stability 0.00254 vindicates the direction and the
+do-no-harm clause. Confirmatory lean at the live knob rides K1c (L-e″).
+
+**D.4 — The de-framing repair (certified, unadopted).** Per-occasion
+ESTIMATED mean subtraction pre-map removes **94.389% [90.233, 98.791]** of
+what oracle common-structure removal removes (K1b L-e HOLD, 32/32 on both
+removals). Realizable outside synthetic worlds; UNADOPTED under F16
+discipline (changing the frozen gauge is a new operator with its own study
+ID); queues beside `colstd_alpha_0.10`.
+
+**D.5 — §4 F2 row, second annotation.** The κ=1.0 attribution is CLOSED
+(frame-owned, proved by construction and by live author-deletion). The κ=0.5
+attribution is OPEN → K1c. Retrospective dated notes with this scope were
+appended today to the M4-F panel synthesis and the displacement-resolution
+document under P2b's registered consequence.

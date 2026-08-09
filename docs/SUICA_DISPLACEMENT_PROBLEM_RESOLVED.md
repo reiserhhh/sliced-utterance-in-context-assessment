@@ -80,3 +80,18 @@ Everything here is synthetic, calibrated to the real-text regime, at
 EXPLORATORY tier. It licenses design priors, refusals, and a repair candidate
 for a frozen operator. It licenses no claim about any corpus, construct,
 person, or diagnosis.
+
+---
+
+## Dated retrospective note (2026-08-09, from M4-K1b)
+
+The first table row's clause "composition works at fixed budget (nil →
++.0234)" cites the κ=1.0 arm, whose attribution M4-K1b has since settled:
+that gain is **entirely frame-owned** (removing the occasion-common structure
+erases the shared/free contrast by an arithmetic identity of the generator;
+deleting all author identity doubles the contrast, author-reading share
+−0.949 [−1.158, −0.753]). The clause survives re-typed as "composition
+raises the gauge's agreement; at κ=1.0 the raised agreement is shared-frame
+content, not author reading". The κ=0.5 ownership is under M4-K1c. Details:
+`docs/SUICA_M4_K_IDENTITY_LINE_PLAN.md` (K1b outcome + adjudication),
+`docs/SUICA_IDENTITY_THEORY_V1.md` appendix D.

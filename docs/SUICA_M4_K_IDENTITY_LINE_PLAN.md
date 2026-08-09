@@ -529,6 +529,186 @@ the arms: the disclosed second reading (rule-9 mandated) and G4b's n=8
 supplementary reading (target n fixed by the anchor's arithmetic, not by running
 until the gate passed).
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Leans scored as executed: L-a HOLD and L-b MISS **by construction** (Ŝ ≡ 1
+as an arithmetic identity of the generator at κ=1.0), L-c HOLD (specificity,
+2.5× inside the margin), L-d MISS **by overshoot on the correct side** (the
+forgery did not survive refreshment — it inverted into an honest issuer
+penalty), L-e HOLD (the deployable de-framing repair removes 94.389% [90.233,
+98.791] of what oracle removal removes).
+
+**P2b fires, substantively.** The degeneracy is not a technicality: at κ=1.0,
+removing the occasion-common structure makes the shared and free designs THE
+SAME PANEL — there is nothing else that distinguishes them — so 100% frame
+ownership of Δ0 is proved by construction, the strongest form available. The
+rule-9 second reading is the live confirmation on the only arm able to
+dissociate the shares: deleting every trace of author identity DOUBLES the
+composition contrast (Δ1′ = +0.04709060297774369 [0.042167, 0.052023],
+32/32); author-reading share = −0.9487481378268351 [−1.1584, −0.7532];
+author deletion RAISES shared agreement (+0.023006, 31/32). **At κ=1.0 the
+composition effect contains no author reading; author content is a net drag
+on the gauge's number.** This is M4-F7's coefficient-0 finding propagated at
+last to F2's attribution — the F-line knew the κ=1.0 author channel was
+structurally absent and never carried that fact into the composition
+headline. The retrospective mechanism opens TODAY, scoped to what is proved:
+dated notes appended to `docs/SUICA_M4_F_PANEL_DESIGN_SYNTHESIS.md` and
+`docs/SUICA_DISPLACEMENT_PROBLEM_RESOLVED.md` (κ=1.0 attribution only);
+IDT carries appendix D. F4/F5's κ-dependence is NOT annotated yet — their
+manifests are re-derived at artifact precision in K1c's Part 0 first.
+
+**P3b adjudicated as fitting no registered branch** (the agent's flag was
+correct): the mechanical trigger fired on a FALSE antecedent — the forged
+advantage did not survive refreshment (reader A +0.058756 [0.052284,
+0.065355] 8/8, replicating K1's +0.050127; reader A′ −0.062310 [−0.071069,
+−0.054188] 0/8; oracle stability 0.002538 < 0.01). T6″'s direction and
+do-no-harm clause are VINDICATED; what failed is my zero-equivalence
+operationalization — a rule-4 violation by the planner (a zero band imposed
+on a quantity that is nonzero by construction under refreshment: the honest
+issuer-noise penalty). T6″ v2 (sign form — no reader may PROFIT from frame
+error under refreshment) is formulated in IDT appendix D and carries a
+confirmatory lean in K1c.
+
+**Planner registration defects recorded (program account #10–#12), none
+repaired away:**
+- **#10** — K1's registration asserted "the generator exposes an explicit
+  occasion-mean channel (`w_mu = 0.15`)". FALSE: `w_mu` weights the AUTHOR
+  mean channel (f2:178). The numeric facts were artifact-verified; the
+  code-semantics claim was cited from a knob NAME without reading the source.
+  Recorded as a rule-8 violation instance (claims about code are factual
+  claims).
+- **#11** — the registered decomposition was degenerate by construction at
+  the registered knob. **Standing rule 10 (added 2026-08-09, paid for by
+  this):** a registered manipulation must be derived from generator source to
+  preserve the design's defining contrast, and the leg's Part 0 must prove
+  non-degeneracy before arms.
+- **#12** — G4b demanded a CI-excludes-zero clause at n=3 that the anchor's
+  own sd makes unsatisfiable. **Standing rule 11 (added 2026-08-09, paid for
+  by this):** every registered gate is checked for arithmetic satisfiability
+  under the cited anchor statistics at registration time.
+
+The de-framing repair (L-e) — per-occasion ESTIMATED mean subtraction pre-map
+— removes 94.4% of the frame amplification and is realizable outside
+synthetic worlds. It is **UNADOPTED**, deliberately: changing the frozen
+gauge is an F16 new-operator event with its own study ID and seal. It queues
+beside `colstd_alpha_0.10` as the second certified-but-unadopted repair.
+
+---
+
+## M4-K1c — Ownership at the live-author knob (κ=0.5), and T6″ v2
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. This leg exists because K1b's answer at κ=1.0 is
+total but structurally special (no author channel exists there); the open
+scientific question is the knob where authors are LIVE.
+
+### Question
+
+At κ=0.5 the author AR channel has coefficient √(1−κ) = √0.5 > 0 (the F-line
+ran F4/F5-adjacent work and F9 at this knob for exactly that reason). Does
+the composition effect at κ=0.5 (+0.008836153697102524, CI
+[0.004418364530893362, 0.013253942863311687] — artifact precision,
+re-verified in K1's registration) carry ANY author-reading share, or is it
+frame-owned at every tested knob?
+
+### Machinery
+
+Extend K1b's script. New script:
+`scripts/run_suica_m4_k1c_ownership_live_knob.py`. **128 fresh worlds**,
+master_seed 20260812, F2 knobs, κ=0.5 designs, deployed gauge unchanged.
+
+### Arms (all κ=0.5)
+
+- **A0** shared intact; **A2** free intact;
+- **A1** shared, occasion-common structure removed (K1b's verified exact
+  surgery); **A3** free, removed (specificity);
+- **A4** shared, ESTIMATED per-occasion subtraction (|P|=32 disjoint authors);
+- **A5** shared, author channel deleted (K1b's second-reading surgery, now
+  REGISTERED); **A6** free, author-deleted.
+
+Quantities per world: Δ0 = A0−A2; Δ1 = A1−A3; Δ0′ = A5−A6;
+R_or = A0−A1; R_est = A0−A4;
+Ŝ_frame = (Δ0−Δ1)/Δ0; Ŝ_auth = (Δ0−Δ0′)/Δ0.
+
+Secondary (8 worlds, K1b's secondary machinery at κ=0.5): readers A vs A′
+(frame-refreshed, disjoint 512-author norm sub-pools); contrast
+rank-1(est8) − rank-1(oracle).
+
+### Part 0 gates (written into the report before arms)
+
+- **G0c** — dims pinned to K1's; verify at first fresh world.
+- **G1c (replication)** — Δ0 pooled CI (128 worlds) OVERLAPS
+  [0.004418364530893362, 0.013253942863311687]; FAIL → leg VOID on
+  non-replication, STOP.
+- **G1bc (anchors)** — re-derive bit-exactly from
+  `results/m4_k1b_composition_ownership/decision.json`: Δ0
+  +0.02416454033421539; Δ1′ +0.04709060297774369; L-e ratio
+  0.943890194474869.
+- **G2c (rule 10)** — non-degeneracy PROOF from source at κ=0.5 (blended
+  coefficient √0.5 > 0 on the author AR state, with f2 line citations), then
+  empirically: A1 and A3 panels differ per world; per-world Δ1 not
+  identically 0 at 1e-12. Degenerate → STOP, registration defect, no arms.
+- **G3c (power)** — 8-world pilot; MDE(80%, α=.05, paired t, n=128) must be
+  ≤ 0.004418076848551262 (a 50% share of the κ=0.5 effect) for BOTH
+  (Δ0−Δ1) and (Δ0−Δ0′); escalate 128→256 once on a failed forecast; still
+  short → run with claims tiered to attained resolution. Aspirational
+  resolution 0.002209038424275631 (25% share).
+- **G4c (liveness, rule 3)** — (i) author channel live at κ=0.5:
+  between-author variance ratio (author state intact vs zeroed) > 1 at every
+  pilot world (the inverse of M4-F7's inertness diagnostic); (ii) removal
+  channel live: A0 vs A1 inputs differ; (iii) informational: sign of the
+  author-deletion response of shared agreement at this knob.
+- **G4c-info (feeds the retrospective; report-only)** — re-derive from F4's
+  and F5's persisted manifests/artifacts, at artifact precision, which κ each
+  ran at; no adjudication this leg.
+- **G5c (hygiene + rule 11)** — manifest, per-stage seeds, wall-times,
+  foreground chunks; AND a gate-satisfiability line: every CI clause in this
+  registration checked satisfiable at pilot sd before arms, reported.
+
+### Leans (planner's committed priors) and aggregation (rule 1)
+
+128 worlds; per-world signs: clean ≥104/128, qualified ≥85/128, else fail;
+pooled paired bootstrap 2000 draws, 95% CI; leans separate; no omnibus.
+
+- **L-a″ [prior .55]** — frame share is the majority at the live knob:
+  (Δ0−Δ1) CI excludes 0 AND Ŝ_frame ≥ 0.5.
+- **L-b″ [prior .50 — the discriminating measurement]** — an author-reading
+  share exists: (Δ0−Δ0′) CI excludes 0 with Ŝ_auth > 0. (K1b's κ=1.0 sign
+  was negative; at the live knob this is genuinely open.)
+- **L-c″ [prior .70]** — free-side specificity: |A3−A2| and |A6−A2| pooled
+  CIs inside ±0.004418076848551262 (margin = 50% of this knob's effect,
+  K1b's margin logic rescaled).
+- **L-d″ [prior .60; ADJUDICATED ONLY IF (Δ0−Δ1) CI excludes 0, else
+  INAPPLICABLE]** — deployable repair at the live knob: R_est CI excludes 0
+  and pooled R_est/R_or ≥ 0.5.
+- **L-e″ [prior .80]** — T6″ v2 (sign form): under reader A′,
+  est8 − oracle ≤ 0 with pooled CI upper bound < +0.005, and oracle
+  stability between A and A′ < 0.01. An honest penalty is the EXPECTED null;
+  profit from frame error is the forgery signature.
+
+### Pivots (pre-committed)
+
+- **P1c** — G1c fails → VOID on non-replication (own follow-up).
+- **P2c** — L-b″ MISS with (Δ0−Δ0′) CI upper < 0.25 × Δ0 point estimate →
+  author share bounded below 25% at the live knob → REGISTERED CONSEQUENCE:
+  the retrospective widens to "no tested knob shows a material
+  author-reading share in the composition effect; the D3 'recruit authors'
+  prior survives only as frame-readout economics", and the F4/F5 review
+  (from G4c-info's κ facts) becomes the next registration.
+- **P3c** — L-e″ fails → T6″ v2 dead as well; the discriminator is flagged
+  unsafe; localization of the forged component becomes the next leg.
+- **P4c** — G2c degenerate → STOP (planner defect, no arms).
+
+### Deliverables
+
+The six: script; `results/m4_k1c_ownership_live_knob/` (manifest.json,
+gates.json, per-cell CSVs, decision.json — gitignored);
+`reports/SUICA_M4_K1C_OWNERSHIP_LIVE_KNOB_REPORT.md` (Part 0 first); outcome
+appended here; ledger row; ONE commit (`feat(m4-k): K1c — ...`), never
+amended, not pushed by the agent. Budget: ~7 arms × 128 worlds ≈ 900
+deployed-gauge runs; target < 30 min wall; stop-and-report at 2× any Part-0
+stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)

@@ -122,3 +122,28 @@ suspended by later evidence and said so in writing; one recommendation
    validated on existing corpora, because existing corpora lack the
    shared-occasion composition the laws are about. Stated as a limitation, not
    a queued test.
+
+---
+
+## Dated retrospective note (2026-08-09, from M4-K1b — P2b's registered consequence)
+
+Section 2's F2 row and §3's "Composition — observing authors on shared
+occasions — works, and works at fixed budget" now carry a PROVED attribution
+caveat at κ=1.0. M4-K1b showed, by construction and by live author-deletion
+(32 fresh worlds, replication gate passed against F2's own CI), that the
+κ=1.0 composition gain (+0.0234) is **entirely frame-owned**: removing the
+occasion-common structure erases the shared/free contrast identically
+(share ≡ 1 as an arithmetic identity of the generator), while deleting every
+trace of author identity DOUBLES the contrast (author-reading share
+−0.949 [−1.158, −0.753]) and RAISES shared agreement (+0.0230, 31/32).
+At κ=1.0 the gauge's composition gain reads shared-frame content, not
+authors — M4-F7's coefficient-0 finding, whose attribution consequence was
+never propagated to F2's headline. The design prior survives re-typed:
+**"shared occasions raise the gauge's agreement; at κ=1.0 the raised
+agreement is frame content."** The κ=0.5 arm (+0.008836 [0.004418,
+0.013254]) is the only arm where an author-reading share is possible; its
+ownership is under M4-K1c (registered before run, same date). F4/F5's
+κ-dependence is being re-derived from their manifests in K1c's Part 0 before
+any further retrospective claim touches those rows. Registrations and
+numbers: `docs/SUICA_M4_K_IDENTITY_LINE_PLAN.md`;
+`docs/SUICA_IDENTITY_THEORY_V1.md` appendices C–D.
