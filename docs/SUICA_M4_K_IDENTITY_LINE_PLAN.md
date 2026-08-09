@@ -207,6 +207,67 @@ appended to `docs/CLAIMS_LEDGER.md` in the existing format; one commit.
 Budget guardrail: target < 45 min wall; if any stage exceeds 2× its Part-0
 estimate, stop and report rather than background.
 
+### OUTCOME (appended 2026-08-09, after adjudication — the registration above is unedited)
+
+**Verdict:
+`CARD_SPACE_CANCELLATION_EXACT__DEPLOYED_GAUGE_AMPLIFIES_THE_COMMON_SHIFT__T3f_DEAD__K1b_REPLACES_K2`.
+L1 HOLD, L2 HOLD (clean), L3 HOLD, L4 HOLD, L5 MISS. **P3 FIRES**; P1/P2/P4 do
+not.** Report `reports/SUICA_M4_K1_ISSUER_THEOREMS_REPORT.md`; artifacts
+`results/m4_k1_issuer/`; script `scripts/run_suica_m4_k1_issuer_theorems.py`;
+87.5 s total compute, all foreground.
+
+Part 0, written before any arm. **G0** authors/world 985, allocated events
+12,784, m-multiset {8:272, 12:200, 16:513}, 4 contexts, 565 retained by the
+deployed gauge. **G1** bit-exact: the κ=1.0 paired mean re-derives to
++0.026163263306726227, CI [0.01953599084902978, 0.032790535764422674],
+t = 9.335105401324688, and m = 0.006540815826681557 is verified `==` 0.25× it.
+**G2 BRANCH B** — the gauge does NOT consume only within-occasion between-author
+contrasts post-map (absolute path mean into M at `v8:229`/`v8:241`; absolute
+quantiles `v8:239-240`; quadratic `lag_product` `v8:246`; `tanh` currents
+`v8:258`; fixed D0 standardizer `e1:191`/`v8:488-493`; author-specific replicate
+subsets `f1:195`), so L5's leakage has a first-order term. The R-abs
+representation is the 64-dim frozen event vector (`v8:171-188`, consumed as
+`values` at `v8:225`, feeding both branches). **G3** MDE 0.015394733882434413 ≤
+expected issuer effect 0.10126903553299493 → PASS, no author escalation, no
+ABORT. **G4** live: |P| ordering est8 3.11e-3 > est32 8.24e-4 > est128 1.58e-4,
+361 pilot flips at est8/free, biased32 rms exceeds est32's (narrowly on the
+pilot, +24–26 % in the occasion-constant component over the eight worlds), and
+all three shift sizes displace the post-map panel (1×: M 11.79 %, K 68.25 %).
+
+Results. **L1** — 0 rank-1 flips out of 31,520 probe-arm-world cells, 0 ties
+excluded, 8/8 worlds, under the reader satisfying T3(c)'s own "common
+probe/gallery norm" hypothesis; card-difference matrices agree to 4.09e-16
+(that reader) and 4.14e-16 (the deployable per-half reader), both against a
+1e-9 bar, with norms actually subtracted. **L2** — free design, pooled
+oracle − est8 = +0.09695431472081219, CI [0.08819796954314721,
+0.10596763959390862], 8/8 signs (clean), Spearman = 1.0 in 6/8, effect 6.3× the
+MDE. **L3** — slope −1.0865327686128703, CI [−1.0989900747656913,
+−1.0735206421063670] ⊂ [−1.35, −0.65]. **L4** — interaction
++0.022461928934010153, CI [0.011795685279187819, 0.03248730964467005], 7/8
+signs (exactly at the bar); the shared-side deficit is +0.074492 for the
+deployable reader and exactly 0.0 for the T3(c)-hypothesis reader. **L5** —
+shared design, Δagreement +0.015881141 at 0.5× (CI [0.003952935, 0.027809348],
+3/8 within 2m) and +0.092543049 at 1× (CI [0.057780533, 0.127305564], 0/8
+within 2m); 2× stress +0.549686516. The 1× leak is **3.54× F2's whole
+composition effect**. Free-design shifts are inert by comparison (|Δ| ≤ 0.0045,
+8/8 within 2m at every size).
+
+Two disclosed by-products the registration did not ask for. (i) A split-half
+re-identification reader **cannot** simultaneously satisfy T3(c)'s "common
+probe/gallery norm" hypothesis and remove the occasion effect; the two readers
+are inequivalent and both are reported for every cell. (ii) Under the
+T3(c)-hypothesis reader, issuer sampling error becomes a person-specific,
+occasion-half-**reproducible** component that *improves* re-identification
+(pooled −0.050127, CI [−0.056726, −0.043782], 0/8, monotone the wrong way) —
+a forged identity that passes T6's own reproducibility discriminator. Both are
+inputs to K3 and to any future T5/T6 revision.
+
+Registered consequence of P3, now binding: **K1b replaces K2 as the next
+registration** — decompose F2's composition effect into issuer-error vs
+jurisdiction-misalignment shares, knowing the statistic responds +0.0925 to a
+shift no card can see. IDT §4's F2 retrodiction row is to be **annotated, not
+rewritten**, and T3(f) recorded as decided against on the deployed gauge.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
