@@ -744,3 +744,43 @@ margins (0.020 continuity; 0.010 = the observed effect scale, so
 sub-material can no longer hide effects of the size already seen);
 rule-15 enumeration as the adjudication space. Either closure re-types T4;
 the constructive repair question follows the ownership.
+
+## Dated appendix K (2026-08-09, after M4-K2d): the composition term peaks; the species term is material; one coefficient explains everything so far
+
+**K.1 — The (share, φ) composition axis is bounded by its own peak.** At
+attenuation 0.45 the term is SUB-SIG(−) (−0.0099 [−0.0154, −0.0046]): the
+relative effect kept growing (2.08 → 9.65 → 15.23 → 15.94% of level) but
+the level collapsed faster — the ABSOLUTE term peaked near r ≈ 0.56 and
+fell 27% by the frontier. This axis never crosses materiality anywhere on
+the tested curve, and not because of margin generosity.
+
+**K.2 — The material term is the SPECIES.** At matched attenuation AND
+matched φ, replacing persistent author-state with occasion-bound
+interaction content costs 2.0–2.5× more trait recovery: SP-68
++0.0304 [+0.0235, +0.0369], SP-56 +0.0271 [+0.0203, +0.0338] — both
+MAT-SIG(+) under both margins; the first MATERIAL composition finding of
+the series. Gloss (flagged as gloss): occasion-KEYED person content looks
+like frame to a frame-preferring reader — it is read into the mixture and
+subtracted from the person; T9's grammar, now with a price tag.
+
+**K.3 — The unifying candidate.** One coefficient fits all six K2c+K2d
+pairs, including the sign reversal: **D ≈ −0.722 × Δ(total non-trait
+person variance)**, R² 0.9935, max residual 0.0025. Candidate law:
+**field ≈ λ·r_card^q − κ·V_person** — the reader taxes RAW person
+variance, species-blind; K2d's species result would then be ΔV in
+disguise. K2d cannot separate them (species and ΔV confounded); K2e's
+double-matched pairs (attenuation AND V_person matched, species free) are
+the link-free discriminator, with the −0.722 slope promoted to a
+registered quantitative prediction on a fresh pair. Under H-VAR the T4
+closure would read: **T4-reader-amplified-variance** — the reader loses
+the trait like r^q and pays a further tax proportional to total person
+state, whatever its species.
+
+**K.4 — Method.** Rule 15 held at the cell level and caught its own
+registration one level up (lean predicates and pivot routing
+unpartitioned — defect #22 → rule 16: the enumeration covers the FULL
+adjudication object). Pilot convention tightened (≥4 worlds or df
+inflation — K2d's 2-world pilots underestimated realized sd by up to
+7.8×, disclosed, inconsequential there). Instrument boundary recorded:
+K2a's two-split GAP predictions are validated only to equal-share w_int;
+attenuation predictions held at 0.278% max error even beyond it.

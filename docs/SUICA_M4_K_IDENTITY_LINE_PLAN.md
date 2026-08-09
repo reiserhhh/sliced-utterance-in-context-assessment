@@ -2496,6 +2496,175 @@ the mirror of this leg's matching; (iv) **rule 15 should be applied one level up
 registration enumerated the space of CELLS and left the space of VERDICTS unpartitioned,
 which is defect-#21's shape recurring at a higher altitude.
 
+### Planner adjudication (2026-08-09, appended after the run)
+
+Scored as executed: **L-F MISS** (FR-45 = SUB-SIG(−), not MAT-SIG(−)) —
+and the miss is INFORMATIVE: the (share, φ) composition term's absolute
+size peaked near attenuation ≈ 0.56 (|D| 15.94% of a level that collapsed
+to 0.062) and fell 27% at the frontier. **The composition axis the K2
+series has been walking is bounded sub-material EVERYWHERE on the tested
+curve — not by margin generosity but by the term's own peak.** P4d″'s
+literal remedy (extend/escalate) is predicted futile by the leg's own
+numbers; adopted. **L-S = SPECIES-SPECIFIC with POSITIVE sign at both
+levels** — the first MATERIAL composition finding of the series: at
+matched attenuation and matched φ, occasion-bound person content
+(interaction channel) costs 2.0–2.5× what persistent content costs
+(SP-68 +0.0304 [+0.0235, +0.0369]; SP-56 +0.0271 [+0.0203, +0.0338] —
+both MAT-SIG under both margins). **L-M HOLD** (FR-45 Δmixed +0.0906,
+9.2× the trait |D|). Interpretive gloss, flagged as gloss: occasion-KEYED
+person content looks like frame to a frame-preferring reader — it gets
+read as mixture and subtracted from the person (T9's grammar).
+
+**The unifying candidate (post-hoc in K2d, promoted to K2e's REGISTERED
+quantitative prediction):** one coefficient fits all six K2c+K2d pairs,
+including the sign reversal — D ≈ −0.7220359963712748 × Δ(total non-trait
+person variance), R² 0.9935, max |resid| 0.0025. Candidate law:
+**field ≈ λ·r^q − κ·V_person** ("the reader taxes raw person-variance").
+K2d cannot separate this from a species-specific reader — its species and
+ΔV axes are confounded; the discriminating design is DOUBLE matching
+(below). q-update over 19 arms: 1.8529 [1.7147, 1.9996].
+
+**Planner registration defect #22, recorded not repaired:** rule 15 was
+applied to the CELL level and not to the lean predicates and pivot
+routing — 8 overlaps + 4 gaps at the lean level, one unrouted cell class
+at the pivot level; caught by the executor's own extended enumeration in
+Part 0, did not bind. **Standing rule 16 (added 2026-08-09, paid for by
+#22):** the rule-15 enumeration extends over the FULL adjudication object
+— cells, lean predicates, and pivot routing — as one truth table, with
+every realizable combination routed to exactly one outcome. **Convention
+added (from anomaly A-5):** pilot-sd MDE gates use ≥4 pilot worlds or
+apply a registered df-based inflation factor (K2d's 2-world pilots
+under-estimated realized sd by 2.05×–7.83×; inconsequential there,
+disclosed). **Instrument boundary noted (from A-2):** K2a's two-split GAP
+predictions are validated only up to equal-share w_int; at K2d's larger
+w_int shares (0.28–0.38) they miss — GAP-based clauses are NOT to be
+gated outside the validated range until revalidated (attenuation
+predictions held 6/6 even there, max rel err 0.278%).
+
+---
+
+## M4-K2e — Double matching: does the reader tax raw person-variance, or the occasion-bound species? (link-free discriminator)
+
+**REGISTERED 2026-08-09, BEFORE RUN.** Planner: this document's author.
+Executor: dispatched agent. Rule 16's first full application — the routing
+table below is the whole adjudication object.
+
+### Question
+
+Two readers explain K2d: **H-VAR** — the penalty is κ·V_person, raw total
+non-trait person variance, species-blind; **H-SPECIES** — occasion-bound
+content is intrinsically more expensive. K2d's pairs confound ΔV_person
+with Δspecies. The discriminator: **double-matched pairs** — matched
+predicted attenuation AND matched total V_person, species mix free. Under
+H-VAR, D ≡ 0 (both invariants the law depends on are equal). Under
+H-SPECIES, D > 0 persists. Link-free (field vs field).
+
+Solvability (planner's rule-10 duty, verified in Part 0 to ≤1e-12): with
+arm A slow-only (v_A, φ=.90) and arm B (v_B slow at φ=.98 + w_B
+interaction), the two constraints v_B + w_B = v_A and
+v_B·κ(.98) + w_B·κ_int = v_A·κ(.90) solve with positive shares because
+κ_int < κ(.90) < κ(.98):
+v_B = v_A·(κ(.90) − κ_int)/(κ(.98) − κ_int), w_B = v_A − v_B. The φ shift
+is part of the recombination and is benign under BOTH hypotheses given the
+two matches; if D ≠ 0, something beyond (r, V_person) matters and H-VAR is
+dead regardless of which ingredient carries it.
+
+### Arms (master_seed 20260819; 32 worlds/arm)
+
+- **DM-68a** (slow-only, share solved for attenuation ≈ 0.68, φ .90) vs
+  **DM-68b** (double-matched recombination, φ .98 + w_int);
+- **DM-56a** vs **DM-56b** — same at ≈ 0.56;
+- **VS-62a** vs **VS-62b** — a FRESH K2c-type pair (slow-only both sides,
+  attenuation-matched at ≈ 0.62, ΔV_person maximized within
+  φ ∈ {.90, .98}) — the registered quantitative test of the estimand:
+  predicted D_VS = −0.7220359963712748 × ΔV_person(realized), computed in
+  Part 0.
+
+### Part 0 gates
+
+- **G0e (anchors)** — bit-exact from K2d's decision.json: the three K2d
+  D/CIs and cells, κ̂ = −0.7220359963712748 with its R², q-update
+  1.8528700746510731 [1.7147, 1.9996]; K2c's three D/CIs.
+- **G1e (double matching)** — per DM pair, Part 0: |Δ predicted
+  attenuation| ≤ 1e-12 AND |Δ predicted V_person share| ≤ 1e-12.
+  Post-arms: measured within-pair card-attenuation difference CI inside
+  ±0.005 AND realized V_person share difference inside ±0.005. A pair
+  failing either is VOID.
+- **G2e (power; new pilot convention)** — 4-world pilot per pair (or
+  2-world with the registered chi-square 90% df-inflation — the agent
+  states which and applies it); MDE(80%, α=.05, paired, n=32) ≤ 0.010 per
+  pair; escalate 32→64 once per failing pair; still short → run and tier.
+- **G3e (rules 11+13)** — satisfiability with directions; B=2000,
+  seed=master; ≥10×B stability at boundaries.
+- **G4e (rules 3+10)** — w_int realized share > 0 in DM-b arms; panels
+  differ within pair; across-pair movements per prediction. NO GAP-based
+  gate anywhere (instrument boundary — w_int here exceeds K2a's validated
+  range).
+- **G5e (hygiene)** — round-trip; chunked < 600 s; rule-12 header;
+  rule-14 self-check (all gates within-instrument; the only cross-scale
+  object is the descriptive q-update).
+
+### Adjudication object (rule 16 — one table, cells → leans → routing)
+
+Cells per pair: K2d's enumeration table verbatim (MAT-SIG(±) / SUB-SIG(±)
+/ NULL / WEAK-NULL / INDET; M1 = 0.020, M2 = 0.010). D-sign convention:
+D = field(a) − field(b); under H-SPECIES the b (int-carrying) arm is
+worse, so the species signature is POSITIVE D in DM pairs.
+
+Lean predicates (disjoint and exhaustive over DM-cell pairs by
+construction; INDET handled explicitly):
+
+- **L-VAR [prior .60]** := both DM ∈ {NULL, WEAK-NULL}.
+- **L-SPEC [prior .30]** := ≥1 DM ∈ {MAT-SIG(+), SUB-SIG(+)} and no DM in
+  a negative-sign cell.
+- **L-NEG [prior .05]** := ≥1 DM in {MAT-SIG(−), SUB-SIG(−)} — fits
+  neither hypothesis; named.
+- **L-UND [prior .05]** := any other combination (i.e., at least one
+  INDET and no significant cell) — underpowered, named.
+
+(Enumeration check, stated here as rule 16 requires: the four predicates
+partition all 7×7 DM-cell combinations — significant-positive presence
+without negatives → L-SPEC; any negative significant → L-NEG; neither
+significant, both bounded → L-VAR; remainder = some INDET without
+significants → L-UND. No overlaps: L-SPEC excludes negative cells, L-NEG
+captures them regardless of positives; ties broken in that order,
+L-NEG > L-SPEC by the written precedence. Precedence is part of the
+registration.)
+
+- **L-VS [prior .70]** — the estimand's quantitative test: measured D_VS
+  CI contains the Part-0 predicted −0.7220·ΔV_person value, AND
+  |D_VS − pred| ≤ 0.010.
+
+### Routing (every (L-·, L-VS) combination assigned)
+
+- **(L-VAR, L-VS hold) → P-VAR:** the estimand is CONFIRMED as the
+  registered form — **T4 CLOSES as T4-reader-amplified-variance:
+  field ≈ λ·r^q − κ·V_person** (q ≈ 1.85 [1.71, 2.00], κ ≈ 0.722) —
+  reader-borne in substance, species-blind, taxing raw person variance.
+  Next registration: the constructive repair test (de-framing vs κ and λ).
+- **(L-VAR, L-VS miss) → P-VAR-WEAK:** DM nulls without the quantitative
+  law — H-VAR survives qualitatively, the coefficient form does not;
+  re-estimate before closure (one more leg).
+- **(L-SPEC, any) → P-SPEC:** species-specific reader — occasion-bound
+  content is intrinsically expensive beyond (r, V); T4 closes in the
+  composition form; the repair design becomes interaction-specific.
+- **(L-NEG, any) → P-NEG:** fits neither; the estimand and the species
+  account are both wrong as stated; modeling leg next; no closure.
+- **(L-UND, any) → P-UND:** escalation already spent → report resolution
+  attained; the DM question carries to a 64-world K2e′ only if the user
+  asks (economy note).
+
+### Deliverables
+
+The six: `scripts/run_suica_m4_k2e_double_matching.py`;
+`results/m4_k2e_double_matching/`;
+`reports/SUICA_M4_K2E_DOUBLE_MATCHING_REPORT.md` (Part 0 with solved
+shares, both matching residuals, the routing table, and the VS prediction
+first); outcome appended here; ledger row; ONE commit
+(`feat(m4-k): K2e — ...`), never amended, not pushed by the agent.
+Budget: 6 arms × 32 worlds (K2d scale ≈ 136 s); target < 15 min wall;
+stop-and-report at 2× any Part-0 stage estimate.
+
 ---
 
 ## M4-K2 — charter (register only after K1 adjudication, unless P3 fires)
