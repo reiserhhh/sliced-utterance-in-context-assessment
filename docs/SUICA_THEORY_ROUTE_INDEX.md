@@ -894,3 +894,14 @@ partition-propagation correction; "error = 0" converted into a calibrated
 audit (IDT appendices P–S; SUICA_M4_L_TYPOLOGY_LINE_SYNTHESIS.md). Rules
 18–21 added (defects #27–#38). The pre-authorized defense phase resumes
 at D1 (prospective seal #2).
+
+**Dated addendum (2026-08-10, V8 × IDT integration):** the identity era is
+folded into the V8 stack of record — integration map
+`SUICA_V8_IDT_INTEGRATION.md`; paper-form Part II supplement in
+`V8_THEORY_PAPER.md`; the identity-era instruments and pitfalls as
+`V8_MANUAL.md` §11; foundation-gap annotations (F10 mechanism, F08
+reinforcement, PROPOSED F12/F13) in `SUICA_FOUNDATION_GAP_LEDGER.md`;
+State-of-main updates in all three READMEs. Law grades of record:
+PREDICTIVE (η-floor, taxometer, tax-ratio algebra), RESPONSE (variance
+tax, quadratic link band), LEVEL-interpolative (λ′ − κ′·V_person), DEAD
+((d/n)^¼ window conjecture, T4 level composite v1, T8(e) crowding).

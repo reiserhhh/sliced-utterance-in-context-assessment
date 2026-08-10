@@ -55,6 +55,20 @@ measure choice as a channel).*
 
 ## State of main after the sealed release (2026-08-03)
 
+> **Update (2026-08-10) — the identity era.** Main now also carries the
+> Identity Theory (IDT, T1–T10 with appendices A–V:
+> `docs/SUICA_IDENTITY_THEORY_V1.md`), its two empirical lines (M4-K,
+> twelve legs; M4-L, three legs), a completed defense phase
+> (prospective seal → adversarial verification with zero refutations →
+> portable artifact lockbox → real-text governance R-G1..R-G8 → rule
+> replay → the seal OPENED measure-first at 3/5 predicted), and the
+> repaired level law. Two laws are now PREDICTIVE grade (the η-floor
+> law hit 3/3 at unseen dimensions; the taxometer read a novel cell to
+> 0.0042); the F2/F4/F5 attributions were corrected by dated notes; the
+> map of it all is `docs/SUICA_V8_IDT_INTEGRATION.md`. Standing rules
+> 1–24; defect registry #1–#42. Everything EXPLORATORY, synthetic,
+> instrument-world — no person claims, ever.
+
 Main has moved past v0.2.1 in three tracked layers (the sealed release above
 is unchanged and remains the verification anchor):
 

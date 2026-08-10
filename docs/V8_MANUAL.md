@@ -207,3 +207,47 @@ tree equals the originally locked sources).
   floor; v0.3.0 numeric lockbox.
 - History and lessons (Japanese) → `docs/V8_DEVELOPMENT_REPORT_JA.md`.
 - Paper draft → `docs/V8_THEORY_PAPER.md`.
+
+## 11. The identity-era instruments (dated supplement, 2026-08-10)
+
+Four instruments joined the toolbox; each has a certificate and a
+misuse mode. Controlling documents: `docs/SUICA_IDENTITY_THEORY_V1.md`,
+`docs/SUICA_V8_IDT_INTEGRATION.md`.
+
+- **Frame-refreshed discriminator (T6″ v2).** Use for ANY
+  reproducibility-as-identity reading. Rule of thumb: if the frame
+  (norms, issuer sample) is shared across your replicates, your
+  "stable individual signal" may be a forgery — refresh the frame and
+  keep only what survives; a reader that PROFITS from frame error is
+  reading a forgery.
+- **Two-split probe (T6′).** ρ_interleaved − ρ_contiguous estimates the
+  state share at card level, reader-free. Read the GAP, never one half
+  alone.
+- **Taxometer (η̂).** Reads whether a typed world is
+  dimension-like (identity off the type axes) or type-discretized
+  (identity on them), ±0.125 with a known +O(0.05) bias at the η=0
+  pole; requires state-shape whitening. Decide whether
+  identity-removal-then-cluster can work BEFORE trying it.
+- **Completeness meter.** A typology's surviving-identity share — the
+  "error = 0" audit. Certified on true/given partitions with the
+  partition-propagation correction; noise floor ~0.005; always
+  cross-fit.
+
+### Pitfalls added by the identity era (each one happened)
+
+1. Shared-frame reproducibility read as identity (it was issuer error —
+   the forged card improved re-identification).
+2. De-framing used as preprocessing (it zeroed trait recovery — the
+   frame is the trait's scaffold in this family; diagnostics only).
+3. A difference-law and a pooled curve glued into a level formula (it
+   missed a sealed band by 5× and under-predicted its own training
+   arms).
+4. Bars on the wrong quantity (three separate defects: energy vs ARI,
+   ARI vs overlap, zero-band vs honest penalty) — rule 19: the bar
+   shadows the theorem's OWN quantity.
+5. Hand-typed numbers in reports (14 wrong cells caught by mechanical
+   re-read) — generate tables from artifacts; rule 24 extends artifact
+   verification to prose.
+
+For any future real-text work, `docs/SUICA_REALTEXT_GOVERNANCE.md`
+(R-G1..R-G8) is binding.

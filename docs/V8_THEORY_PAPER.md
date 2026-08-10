@@ -356,3 +356,63 @@ a claim could one day be earned, audited, and — if wrong — refused.
 - Practice: `docs/V8_MANUAL.md`; sealed worked example:
   `docs/WORKED_EXAMPLE_MANUAL.md`
 - Development history (Japanese): `docs/V8_DEVELOPMENT_REPORT_JA.md`
+
+---
+
+## Part II supplement (dated 2026-08-10; DRAFT status unchanged): the identity program and the defense results
+
+This dated supplement summarizes, in paper form, what the identity era
+added after Part I's sections were drafted. The integration map is
+`docs/SUICA_V8_IDT_INTEGRATION.md`; the theory of record is
+`docs/SUICA_IDENTITY_THEORY_V1.md` (T1–T10, appendices A–V). No
+reference-pass citations are introduced here either; the positioning
+anchors of IDT appendix P.6 await the same verified pass as §8.
+
+**II.1 The frame calculus.** The owner's conjecture — that the
+individual "error" within a shared group and topic IS identity, with
+indeterminate magnitude, functioning as an identification card — was
+formalized as a frame F = (P, O, h, U) with a deviation field and a
+reproducible component. The magnitude indeterminacy became a theorem
+(three gauge channels with distinct signatures); the certificate
+metaphor became exact (issuer, jurisdiction, expiry — and, by T10, the
+proof that no informative reading is anchor-free: the reference-relative
+spine of §3 is a necessity, not a preference).
+
+**II.2 The reader as mechanism.** The deployed relation-field gauge
+amplifies common-frame content into apparent agreement (3.54× the F2
+composition effect at a 1× shift), reads the trait like the square of
+the card's attenuation, and taxes raw person-state variance (κ ≈ 0.72
+by three independent fitting routes). Consequently the panel-line wall
+of §6 — occasion-bound, state-inclusive, never a trait — now has a
+mechanism, and three of its headline attributions were corrected by
+dated retrospective notes (composition = frame content; the author axis
+= a replicate axis; truth recovery = mixture recovery).
+
+**II.3 Identity, typology, and the audit.** The discriminator that
+defines identity had to be hardened twice against measured forgeries
+(split-scheme dependence; issuer-error forgeries that pass plain
+reproducibility) — the licensed form is frame-refreshed reproducibility.
+The reverse reading (remove identity to recover types) was resolved as a
+conditional theorem set: true removal works but is circular (EM);
+label-free projection provably cannot buy the boundary-normal component;
+the governing object is a projection-invariant floor curve in the
+aligned fraction η — and that curve, sealed, later PREDICTED at foreign
+dimensions. "Error = 0" became an audit criterion with a calibrated
+meter rather than an assumption.
+
+**II.4 Defense as science.** The phase sealed five quantitative
+predictions before their configurations existed, verified the headline
+table adversarially from raw artifacts (zero refutations), made
+verification portable (content-addressed lockbox), bound a real-text
+governance rule (no person claims; no cross-corpus linkage; forgery-safe
+statistics only), and then opened the seal measure-first: three
+predictions hit (two laws promoted to predictive), one conjecture died,
+and one glued formula was falsified and re-fitted into an honestly
+scoped level law whose only stable content is the tax term. The method
+ledger closed at standing rules 1–24 with a defect registry of 42
+entries and a replay showing zero would now survive to post-hoc.
+
+**II.5 Limitation, restated.** Everything in Part II is synthetic and
+instrument-relative at EXPLORATORY tier. The one sentence that must
+survive any future summary: these are laws about a reader–world pair,
+licensed for design, refusal, and audit — never about persons.

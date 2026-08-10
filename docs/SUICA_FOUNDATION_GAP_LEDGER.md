@@ -61,3 +61,33 @@ the originally locked sources, so no re-bake occurred and the F16 refusal
 rule was not violated in committed history. F16 remains
 `EMPIRICALLY_BOUNDED_OPEN` as a program: per-study source-reconstruction
 obligations are unchanged.
+
+## Dated addendum (2026-08-10): identity-era annotations
+
+The IDT arc (K/L lines, defense phase; see
+`docs/SUICA_V8_IDT_INTEGRATION.md`) touches this ledger as follows —
+statuses unchanged; annotations only:
+
+- **F10 (state/trait):** the per-construct empirical side gains a
+  measured MECHANISM: within one jurisdiction b and s̄ are not
+  separately identified (IDT T4 typing); the deployed reader loses
+  trait content quadratically and taxes person-state variance; the
+  licensed state meter is the two-split probe. The refusal sharpens:
+  same-session split-half stability is not merely insufficient for a
+  trait claim — same-FRAME reproducibility is demonstrably FORGEABLE
+  (T9, measured), so identity-flavored readings require frame
+  refreshment (T6″).
+- **F08 (residual semantics):** reinforced — S4's repetition
+  specificity (H6) and the discriminator's rule (only
+  frame-refreshed-stable components may be named) are two more measured
+  instances of "residual defaults to unresolved mixture".
+- **F03/F09 (coordinates/generalization):** T1's gauge trichotomy and
+  T10's anchor impossibility give the "no universal coordinate / no
+  frame-free transport" refusals theorem form.
+- **PROPOSED rows (owner's call under the closure standard; NOT added
+  here):** F12 frame-forgeability (identity-like statistics are
+  forgeable by frame error; counter-operations refreshment/contrast);
+  F13 anchor-dependence (every informative reading consumes issuer,
+  gallery, or coordinates — T10). Proposed because both have proofs and
+  measured instances; they await the closure-standard formalization
+  (object, assumptions, evidence class, refusal path).
