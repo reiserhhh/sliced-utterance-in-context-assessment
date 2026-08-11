@@ -298,3 +298,127 @@ artifacts); (4) outcome appended to THIS section (append-only); (5) one
 never amended, never pushed. Suite (`python -m pytest -q -p
 no:cacheprovider`) green before commit. Budget: ~640 worlds ≈ 0.6 s
 each plus fits — target < 25 min wall, every stage < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`STOP_DESIGN_INFEASIBLE` — rule-16 cell 1 (a Part-0 gate fails after its
+declared ladder; no fit is run).** Report:
+`reports/SUICA_M4_M1_R_AT_LEVEL_REPORT.md`; harness
+`scripts/run_suica_m4_m1_r_at_level.py`; artifacts `results/m4_m1_r_at_level/`.
+**0 worlds were generated.** The leg stopped inside Part 0,
+before the pilot, on this registration's own pre-declared fallback ladder.
+
+**G0m PASSES completely — there is no citation defect.** Every anchor and every
+K2f, D-open and theory-document number this registration quotes re-derives
+bit-exactly: `predicted_attenuation(0.40, 0.90)`, `(0.45, 0.90)`,
+`person_share_design(0.45, 0.0)` and `(0.40, 0.0)`; K2f F2's λ′, q′, κ′, p, its
+LOO-RMSE at both persisted paths (`fits.json:L-1.best_loo_rmse` and
+`loo.json:loo.F2.loo_rmse`) and both ci95s; D-open's M-4 level
+0.09350089316336324 re-derived as the round-trip mean of its raw per-world
+CSV; and `-0.9643543785903034` reproduced from `compiled_rows.csv` under Pearson,
+which is what pins RN-M1-4's reading of "corr". The registration's facts are
+accurate and its **mechanism is real**: φ does move `r` at exactly fixed `V`.
+
+**G1m fails at gate (d), and the fallback ladder does not save it.** On the
+registered base ladder `[0.6, 0.7, 0.8, 0.9, 0.98]`, gate (c) reached the
+1.2 within-share `r` ratio in only **1** of 4 share
+levels against a requirement of 2, and gate (d) measured
+`corr(r, V) = -0.9407871367652862`. The pre-declared one-step extension to
+`[0.45, 0.6, 0.75, 0.9, 0.98]` fired automatically inside Part 0 and did exactly its job on
+(c) — **2**/4 levels, realized ratios
+`[1.0525449708005403, 1.13540425278654, 1.2242247054603972, 1.3546050387988702]` — while (d) moved only to `-0.9107365249638539`,
+**3.03578841654618× the 0.3 bar**. The failure is not an artifact
+of the correlation convention: Spearman gives `-0.9306800811953776` and
+`corr(r^q, V)` at the sealed response exponent gives `-0.9213071767159029`.
+Gates (a), (b) and (e) pass (20 distinct design
+points, `V` from 0.03000000000000001 to 0.18000000000000005, ratio 6.0).
+
+**The bar is not merely missed — it is unreachable.** RN-M1-8's `diagnose` stage
+(pure design arithmetic on the pinned deterministic maps; no world, no field, no
+fit) searched the whole knob space. Over **every** 5-point distinct φ ladder in
+(0.001, 0.999) at the registered shares, the infimum of `|corr(r, V)|` is
+**`0.748768093111513` = 2.4958936437050436× the bar**, attained at the degenerate
+ladder `[0.001, 0.011081, 0.021162, 0.988919, 0.999]` — the most extreme φ leverage this family can produce.
+Freeing the shares as well, inside gate (a)'s envelope and subject to gate (b)'s
+`V max/min ≥ 2.0`, the best of 4000 seeded draws
+(474 rejected by (b)) is `0.5208187741410987` =
+1.736062580470329× the bar. And the G2m liveness fallback ladder
+`[0.9, 0.92, 0.94, 0.96, 0.98]`, had it ever been
+reached, would have made (d) **worse** at
+`-0.99515544292931` — every escape route
+this registration wrote leads away from its own gate.
+
+**Why, mechanically.** `V` is an EXACT linear function of share in this family
+(`V/share = 0.3` at every share tested), and `r` is monotone
+decreasing in share, so share drives `r` and `V` in lockstep. φ is the only knob
+orthogonal to `V`, and its TOTAL leverage across the full open interval is
+`0.05159009087311539` in `r` at share 0.1 rising to
+`0.21722718146551878` at share 0.6 — against a
+between-share `r` span of `0.2909602839380743` at fixed φ. Gate (b) REQUIRES a
+share range wide enough that `V` varies by 2×, which is precisely what makes the
+between-share `r` spread dominate; gate (d) requires the within-share φ-driven
+spread to dominate instead. **In this world family both cannot hold at once.**
+A second consequence, worth its own line: gate (c)'s 1.2 ratio is
+reachable in only **2 of the 4 registered share
+levels for any φ ladder whatsoever** (at shares `[0.1, 0.25]` the
+full open φ interval tops out at ratios
+1.06718684974016 and
+1.1762868144261993), so "at least
+2 share levels" was unknowingly demanding *all* the levels
+that can ever comply.
+
+**The defect (the planner owns it).** Rule-11 satisfiability, and rule-18 JOINT satisfiability across clauses sharing generative knobs: gate (b) and gate (d) share `share`, and the registration checked neither jointly nor arithmetically against the bar it wrote. The registration's own cited facts already contained the warning -- it quotes r(0.30, 0.90) = 0.6758917867864564 vs r(0.30, 0.98) = 0.645057248597175, a 4.78% move, and never asked what correlation a knob that small can buy against a share axis that moves r by 0.2910 at fixed phi.
+
+**What was NOT run.** G2m's 16-world pilot, G3m(b)'s power projection (it needs
+pilot σ_w), the 640 main worlds, and the fit — cell 1 reads
+"no fit is run" and the ordering puts the pilot after the Part-0 gates. L-1,
+L-2, L-3 and L-4 are all recorded **NOT EVALUATED**, with the reason in the
+report's lean table. The four pre-declared forms, the start grid, the optimizer
+pins, the bootstrap spec and every rule-22 side were nevertheless fixed in Part 0
+before the stop and are persisted in `part0.json`, so a re-registration inherits
+them unchanged rather than re-deriving them.
+
+**Where the leverage would have to come from (a question for the planner, not an
+executor's choice — nothing here is adopted).** As long as the only two knobs are
+share and φ, `V` *is* share and the design has one effective axis plus a weak
+second. Decollinearizing `r` from `V` at level needs either a knob that moves `r`
+without moving share, or a `V` that is not a function of share alone.
+`person_share_design(share, int_share)` sums the slow AND interaction shares, so
+the `int_share` carrier — which M1 pinned to zero by inheriting K2F-FRESH
+verbatim — moves `V` at fixed share. That is a second axis in exactly the place
+the current design has none.
+
+**Anomalies, with timing. No hypothesis-relevant number ever existed in this
+leg** (0 worlds, no fit), so every anomaly below is
+pre-hypothesis by construction. **A-1 (before any number of any kind):** the
+dispatched environment did not exist — the only pandas on this machine belongs to
+CPython 3.9.6, and the published machinery imports `datetime.UTC` (3.11+), so
+`k2b`/`k2c`/`k2d`/`k2e` and the K2f harness all fail to import there; a CPython
+3.12.12 venv was built outside the repo from `requirements-lock-main.txt`
+verbatim (numpy `2.4.4`, pandas `3.0.2`, scipy `1.17.1` —
+the lock's own pins) and the full suite was run green on it BEFORE any leg code
+was written. **A-2 (before Part 0):** macOS ships no `timeout(1)`, so each stage
+ran as its own foreground command under an explicit harness timeout. **A-3 (Part
+0):** the rule-17 ladder fired — recorded because the firing is itself an event.
+**A-4:** Part 0 ran more than once, every run before any world, deterministic and
+identical each time; the ordering log was reset once so it carries the clean
+final pass end to end. **A-5:** a first exploratory diagnostic called
+`predicted_attenuation` inside an optimizer loop, overran its foreground timeout
+and was killed; it was rewritten to precompute `r` on a fixed
+100-point φ grid (2.072169780731201 s) and **no number from the
+killed run appears anywhere in this leg**. **A-6 — rule 24 caught three of this
+leg's own errors before commit:** the φ-leverage move at share 0.30 hand-typed as
+"4.6%" where the anchors give `4.780124284524867`%; a leverage table whose headers
+read "r at phi min/max" while the cells carry `r.min()`/`r.max()`, which are the
+OPPOSITE φ endpoints since `r` decreases in φ; and a `V max/min ≥ 6.0` that
+quoted the design's realized ratio where the gate's bar is
+2.0. All three are now generated from artifacts.
+**A-7:** no stage approached its 2× threshold — Part 0 `0.0369420051574707` s
+against a 60 s estimate, `diagnose` `2.072169780731201` s against a 120 s
+executor estimate.
+
+**Line consequence.** M2 was registered as blocked only on
+`NON_IDENTIFIED_UNDERPOWERED`; cell 1 is a different stop — nothing about the
+level law was measured, so nothing about it was learned, and M2's charter is
+untouched but unfed. M3 (the one-κ question) is independent of this leg and is
+not blocked by it.
