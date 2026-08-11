@@ -1718,3 +1718,140 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-m): M2 — the scoped extrapolation seal — <SLUG>`,
 never amended, never pushed; suite green first. 960 worlds + 8 pilot;
 target < 30 min wall, every stage < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`LEVEL_LAW_PREDICTIVE_SCOPED` — rule-16 cell 4; modifier(s) `['STRESS_ABOVE']`.**
+**3/3 sealed predictions inside their bands**; voided
+for width: none. Report:
+`reports/SUICA_M4_M2_SCOPED_SEAL_REPORT.md`; harness
+`scripts/run_suica_m4_m2_scoped_seal.py`; artifacts `results/m4_m2_scoped_seal/`.
+960 fresh worlds plus 8 pilot.
+
+**The ordering is the leg's spine and it is ENFORCED, not asserted.**
+predictions.json (salt embedded inside the sealed bytes, D3) hashed
+`d03e180919e2e2b1f08c7bde77c835d48b8c59177220085f1de1d39765f46ef2` at `2026-08-11T06:09:46.594113+00:00` with **0 fresh-world
+generations in existence** — the pilot included, per RN-K2F-4. The permit for
+the first world was issued `176.076157` s later by re-reading that
+hash off disk and re-hashing the file to a match; guards wrap
+build_k2b_world / run_field_world / emit_panel on **3** reachable
+k2b instances (9 entry points).
+
+**G0m2 PASSES on all five clauses**, including the one that matters most for a
+seal: the E-rq refit from M1c's persisted cell means reproduces M1e's persisted
+winner **bit-exactly**, so the predictor is the object the previous leg selected
+and not a re-estimate of it. The planner's design table and the cells REJECTED
+at registration (share .70 at phi >= 0.85, whose realized r exits the window)
+both reproduce bit-exactly. 23 exact M1e citations plus the
+rounded quotes, M1c's 20 cell means, sigma_w and the r-window all verify.
+
+**The sealed predictions and what they met** (bands =
+[boot 2.5% - 2*SE_meas, boot 97.5% + 2*SE_meas]; SE_meas = `0.00194057805706599`
+level, `0.0027443918071463533` contrast, from sigma_w `0.026889438327132725`):
+
+- **P2 (level, phi interior-new .45)** — predicted `0.09373871103378001`, band
+  `[0.08823967502779759, 0.09925314694437559]`, measured **`0.09243571683982166`** CI `[0.08911835139816911, 0.09586975298752529]`, signed error
+  `-0.0013029941939583511`, at -0.23801652307153248 of centre-to-edge. **INSIDE**, the cleanest
+  of the three.
+- **P3 (contrast, THE FLAGSHIP — phi EXTERIOR at .995, high-r where the
+  readability penalty lives)** — predicted `0.010341381827303441`, band
+  `[0.001953199000512147, 0.01853930794939698]`, measured **`0.007195006853810276`** CI `[0.0020157045910120137, 0.012381011229066962]`, error
+  `-0.003146374973493165`, at -0.3679279607468678. **INSIDE.** The shape was fitted on
+  phi <= 0.98 and asked to reach past it; it reached.
+- **P1 (contrast, share EXTERIOR at .70) — INSIDE, and the weakest of the
+  three.** Predicted `0.003242277707985443`, band `[-0.0035678414719505433, 0.010029212745051013]`, measured
+  **`0.009126239258272953`** CI `[0.005255150305427958, 0.013425943230790644]`: inside, but at **0.8671810125388784** of the
+  way to the upper edge, signed error `0.00588396155028751` = 2.1439947222425624
+  contrast-SE_meas, and a measured value 2.814761744743775x the predicted
+  point. A hit that would not have survived a much tighter band, stated because
+  a seal that reports only its comfortable hits is not a seal.
+
+**All three bands came in under their rule-27 budgets** (P1 `0.013597054217001556` <=
+`0.04`; P2 `0.011013471916578005` <= `0.05`; P3
+`0.016586108948884834` <= `0.04`), so nothing was VOID_FOR_WIDTH and the
+promotion cell stayed reachable — defect #47's repair working as intended, the
+budget now attached to what the consumer quotes. The bootstrap is the method's
+point: M1e's winner carries a (lambda, q) RIDGE, so each of 2000 draws re-fits
+E-rq on that draw's cell means and the SAME draw's (alpha, lambda, q) is pushed
+through every prediction, so the bands inherit the parameter covariance
+(RN-M2-3).
+
+**P4, the pre-signed stress reading (no gate): `STRESS_ABOVE`, confirmed
+(True).** The REJECTED tax-additive model extrapolates to
+`0.03823746224897045` at C2 with a +-2*SE_meas envelope `[0.03435630613483847, 0.04211861836310243]`; measured
+`0.04354391388413511` CI `[0.04031779189040825, 0.046724068686637095]` — ABOVE, at 1.3672347823997413 of the half-width,
+error `0.005306451635164661`. The planner's reasoning (free share margins sit
+convex-below-chord, so a linear-tax extrapolation must over-fall past the trained
+shares) is vindicated at share .70, well outside the envelope. **This is a
+second, independent line of evidence that the V-margin is not linear**, and it
+goes to M3 beside M1e's kappa representation-indexing.
+
+**The replication reading (no gate): QUIET, no SEED_INSTABILITY.** C4 duplicates
+an M1c configuration on a FRESH salt: `0.12239759528671845` against M1c's persisted
+`0.12162744485545209`, delta `0.0007701504312663671` against a bar of `0.005647466456046939`
+(literal 2*sqrt(2)*SEM_C4, the gating reading) or `0.005346994263573509`
+(exact two-sample) — quiet under both, which agree (True). The
+instrument reproduces across independent seed streams at 192 worlds; the M-line's
+cell means are a property of the design, not of the draw.
+
+**G2m2, and the one judgement that changed this leg's outcome — stated first,
+not buried.** The pilot first ran with the check written as "strictly inside
+(0, 1)", the form K2f's G2f, M1b's G2m' and M1c's smoke all used. Under that form
+C1 FAILS — one of its four pilot worlds reads
+`-0.0007988006295671071` — and the leg ends at **UNRESOLVED_SEAL** with the
+predictions unmeasured. The registration's word is **"non-saturated"**, not
+"positive". Source check: `recovery_b_only` is a weighted mean of
+`_matrix_cosine` (scripts/run_suica_m4_e1_convention_gap.py:250-264), so the
+statistic's range is [-1, 1] and **zero is its NULL, not its floor** —
+saturation means abs(value) -> 1. The "(0,1)" form is an UNREGISTERED import,
+harmless in three prior legs only because their fields sat far above zero; C1 is
+share .70 at V = 0.21, the most person-variance-dominated cell the line has ever
+run, and its b-only field is near zero BY DESIGN, so a positivity gate there
+tests the HYPOTHESIS rather than the regime — precisely the error M1b's own
+registration corrected ("an outcome-side flat field is cell-2 EVIDENCE, not
+channel death"). RN-M2-8 pins the registered wording as the gate and reports the
+inherited form beside it. **The pilot data are IDENTICAL under both readings —
+same eight worlds, same seeds — so only the gate reading differs**, the
+first-reading artifact is preserved as `g2m2_pilot_FIRST_READING.json`, and a
+planner who prefers the inherited form can read UNRESOLVED_SEAL off the report
+without recomputing anything. **Found AFTER the pilot ran; disclosed as such.**
+
+**Anomalies, with timing.** The hypothesis-relevant boundary is THE STAMP;
+everything before it is verification and arithmetic on published numbers, and
+every fresh world came after it. **A-1/A-2 (before Part 0):** the inherited
+CPython 3.12.12 lock environment; no `timeout(1)` on macOS. **A-3 (BEFORE
+Part 0 ran):** four of the harness's own embedded constants — the M1e
+monotonicity contrasts, first transcribed from the M1e report's rounded prose —
+were wrong in their trailing digits; corrected by reading the artifacts directly
+and a rounded-quote cross-check added. Had this not been caught, G0m2 would have
+raised a FALSE citation defect and stopped the leg: rule 24's discipline applied
+to the harness's constants rather than the report's tables. **A-4 (AFTER the
+pilot):** the G2m2 reading above. **A-5 (after `measure`):** `finalize` crashed
+once on a stale key left by A-4's repair; `decision.json` was already written,
+the fix touched only the table writer, no number changed. **A-6:** P1 is a hit
+near the edge (0.8671810125388784). **A-7:** no stage near its 2x threshold — Part 0
+`2.3444879055023193` s against 300 s, the three world chunks inside their 420 s
+estimates.
+
+**Registration-defect candidate: ONE, and it is consequential.** G2m2 says
+"finite/non-saturated/nonzero-variance" without pinning what saturation means
+for this statistic, while three prior legs establish a conflicting "(0,1)"
+convention IN CODE. The two readings route to DIFFERENT OUTCOMES here —
+`LEVEL_LAW_PREDICTIVE_SCOPED` versus UNRESOLVED_SEAL — so this is not the usual "nothing turned
+on it" flag: everything turned on it. The executor pinned the registered wording
+against the statistic's source-verified range and reported both; a successor
+should pin the saturation test explicitly, and the program should decide once
+whether the inherited "(0,1)" form is a convention or a bug in three prior gates.
+
+**What this establishes, and what it does not.** ESTABLISHED, prospectively: the
+scoped level law — free share margins plus a steep negative r-power, r interior
+to `[0.4541409476972356, 0.8189581462487876]` — predicted three configurations nobody had run, at a share
+above the trained envelope and a phi above the trained ladder, and hit all three,
+with the predictions hashed before the first world existed and the ordering
+enforced in code. **The M-line's object is PREDICTIVE in its scope, and the
+scope IS the claim.** NOT established: (i) nothing extends to configurations
+whose realized r leaves the window — the excluded share-.70 / phi >= 0.85 cells
+are the boundary, computed and named at registration; (ii) the exponent remains
+a ridge coordinate, not a constant (appendix Y stands — what transferred is the
+PREDICTION, not q); (iii) P1's hit sits at 0.8671810125388784 of the way to its edge
+on a band the ridge made wide, and it is the one a successor should tighten.
