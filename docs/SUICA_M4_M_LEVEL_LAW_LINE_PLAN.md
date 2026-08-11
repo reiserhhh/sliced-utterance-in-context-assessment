@@ -831,3 +831,138 @@ L-1's 0.60 bar. Exactly the following changes.
   (EXPLORATORY); exactly ONE commit
   `feat(m4-m): M1c — r-at-level at the measured budget — <SLUG>`,
   never amended, never pushed; suite green before commit.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`LEVEL_RESPONSE_DISSOCIATION` — rule-16 cell 4 (L-1 HOLD, L-2 below),
+modifier `KAPPA_FOURTH_APPEARANCE`.** Report:
+`reports/SUICA_M4_M1C_R_AT_LEVEL_REPORT.md`; harness
+`scripts/run_suica_m4_m1c_r_at_level.py`; artifacts `results/m4_m1c_r_at_level/`.
+**3840 worlds** (20 cells x 192),
+the budget M1b's own diagnostic measured and the planner funded.
+
+**The exponent is identified at level, and it is not the response exponent.**
+Winner **F1e** (`field = lambda*r^q - kappa*V - epsilon, epsilon in [0, 0.05]`): q = **`-0.15040108849226472`**, 95% CI
+`[-0.18322395953281184, -0.11871900002844447]`, width `0.06450495950436737` against L-1's `0.6` bar —
+**L-1 HOLDS with 9.3x room**. The interval lies **entirely below** the response
+band `[1.71, 1.98]` and **entirely below zero**: L-2 = **below**, the
+registered lean (BELOW, prior .55) called it, and cell 4's
+`LEVEL_RESPONSE_DISSOCIATION` is the outcome. lambda = `0.2249206339499495` CI
+`[0.2226976852269149, 0.2267740781729326]` **excludes zero**, which is what keeps this out of cell 2.
+kappa = `0.7601952008701406` CI `[0.7356727662590873, 0.7846243216827854]` sits inside K2f's
+`[0.5202855978239498, 0.8612166024267973]` — L-3 **overlap**, **kappa's FOURTH independent
+appearance**, and the tightest interval yet recorded for it.
+
+**The sign is the finding, and it is visible in the raw cell means before any
+fit.** At EXACTLY fixed V = `0.18000000000000005` (share 0.6), moving phi
+across the ladder drops predicted attenuation r from `0.6573448847694047` to
+`0.4541409476972356` while the measured b-only field recovery RISES from
+`0.05410832013119198` to `0.063796931786496` — a gain of
+4.03363828257993 pooled SEM. Less predicted card attenuation, MORE field
+recovery, person-variance held exactly constant. The exponent does not merely
+differ between grades; it is opposite in sign.
+
+**All four forms agree on the picture** (q negative and small, kappa ~0.76,
+lambda ~0.18-0.22): LOO-RMSE {'F1': 0.003198131708377386, 'F1e': 0.0031856515917748638, 'F2': 0.0034019365713125944, 'F3': 0.003877604046883495}; in-sample RMSE {'F1': 0.0026264051166751978, 'F1e': 0.002621078709438027, 'F2': 0.002591249722764473, 'F3': 0.0033903747201612703}.
+Per-cell SEM ranged `0.0015046764572937737`-`0.0020066026535869932`; cell mean field
+`0.05410832013119198`-`0.16512469544098618`.
+
+**Gates.** G0m'' PASS on all nine clauses — **39 numbered citation
+checks bit-exact**, including (vii) the planner's design table, (viii) the
+M1-STOP numbers against `results/m4_m1_r_at_level/`, and (ix) EVERY M1b number
+this adjudication cites against `results/m4_m1b_r_at_level/` (sigma_w, the four
+gate widths, the ladder pair, the cell sd, both pilot contrasts with their SE
+multiples). G1m'' PASS. **G2m'' PASS with no new pilot** — M1b's persisted pilot
+is the pinned regime/liveness/noise source, verified bit-exactly. **G3m''
+CONFIRMED BEFORE ANY WORLD**: from M1b's persisted sigma_w = `0.026889438327132725`,
+at n = 192 and B_proj = 2000, projected q widths
+{'1.0': 0.24923889216646022, '1.8528700746510731': 0.46602037304504784} against the `0.5` bar; boundary rule fired
+**False**, escalation fired **False**. M1b's
+B_proj=500 ladder had said [0.45033528452170346, 0.2531601642892628] at the same configuration — the
+honest re-run at 4x the draws agrees inside its own MC error. SMOKE PASS: world
+0 of all 20 cells finite and non-saturated, booleans only, worlds retained.
+G4m'' PASS. RN-M1C-1's inheritance proof passed against **both** predecessor
+harnesses.
+
+**Two independent signals say the registered form family does not span this
+truth. Both are readings; neither moves the slug.** (i) **The winner's epsilon
+is pinned at its declared upper bound**: `0.049999999999999996` against the bound
+`0.05`, with a bootstrap interval `[0.049999999999909624, 0.049999999999999996]` whose LOWER
+endpoint is `9.037909309839165e-14` from the bound — essentially every draw sat
+on the constraint, so F1e contributes no effective free fourth parameter and is
+F1 with a fixed offset and a re-scaled lambda. (ii) **Appendix W's
+quadratic-in-r discriminator FIRES while L-4 stays quiet** — per-share
+Spearman(residual, phi) = [0.0, 0.8999999999999998, 0.6, -0.6], reading A 2/4 and reading B
+0/4 against a 3/4 bar (both False/False),
+against an r^2 coefficient of `-0.19911194958208703` with CI `[-0.2879978718649799, -0.10706476050455438]`
+excluding zero on the within-share fixed-effects reading (pooled
+`-0.04921007645583713` `[-0.10592459329331352, 0.007421060164540356]` does not fire). W.1's own rule:
+that configuration is **FORM_GAP evidence**, and the prescribed follow-up is a
+registered form extension, NOT a phi-channel claim.
+
+**An honest correction to appendix W.** W.1 predicted the span gap would appear
+as a U-shape — "residuals positive at both r-extremes, negative mid-range" — a
+POSITIVE r^2 coefficient. The measured coefficient is NEGATIVE: residuals low at
+both r-extremes, high in the middle, an inverted U. The discriminator fires in
+KIND exactly as W.1 specified and its prescription stands; the missing shape is
+on the OPPOSITE side of the family's span from the "positive floor plus positive
+power" W.1 hypothesised. The epsilon-at-bound finding points the same way
+independently: the fit wants a MORE negative constant than the box allows, not a
+positive floor.
+
+**Tie rule and rule 13.** The tie rule FIRED: F1e beats
+F1 by `1.2480116602522386e-05` = 0.39176024882147187% of the winner's LOO,
+inside the 5% band, so every verdict had to agree across both forms — and every
+verdict does, so nothing reports SPLIT. This matters more than usual here,
+because F1 is UNBOUNDED and reaches the same three verdicts from
+q = `-0.1888182542137735` CI `[-0.22686946646111852, -0.14900957557344477]`, kappa = `0.7596295789070726`, lambda =
+`0.17505204234174737`: the negative-q, kappa~0.76 picture is not an artifact of a
+clipped parameter. Rule 13 fired (True) on the near-tie and
+the B=20000 re-run left every verdict unchanged (all stable:
+True).
+
+**What is settled that was not.** K2f could not separate an intercept from
+lambda*r^q and reported q' straddling zero at `[-0.3792124136721057, 0.5313115708778163]` (width
+`0.910523984549922`). M1c's interval is `[-0.18322395953281184, -0.11871900002844447]`, width `0.06450495950436737`,
+and excludes zero. The r-term at level is present, small and NEGATIVE.
+
+**What must not be claimed.** q = `-0.15040108849226472` is the best exponent within a
+family the residuals demonstrate is too small — not the exponent of the world.
+The claim is scoped to the tested grid (shares [0.1, 0.25, 0.4, 0.6], phi
+[0.05, 0.3, 0.6, 0.85, 0.98], this instrument, this carrier), and phi at {0.05, 0.30,
+0.60, 0.85} remains a regime extension beyond the exercised {0.90, 0.98}.
+
+**Anomalies, with timing.** The hypothesis-relevant boundary is the `fit` stage;
+Part 0, the smoke booleans and the world CSVs all precede any level being read
+or aggregated, and every RN note was pinned in Part 0 before the first world.
+**A-1/A-2 (before Part 0):** the M4-M1 environment reused verbatim (CPython
+3.12.12 venv from `requirements-lock-main.txt`, numpy `2.4.4`,
+pandas `3.0.2`, scipy `1.17.1`), and no `timeout(1)` on macOS so
+each stage ran as its own foreground command. **A-3 (Part 0, before any
+world):** the binding projected width landed just BELOW the `[0.47, 0.53]`
+re-decide band, so the 10000-draw rule did not fire — disclosed because a
+slightly noisier draw would have triggered it, and the call was made by the
+registered rule rather than by preference. **A-4 (at the fit):** the form tie.
+**A-5 (at the fit):** epsilon pinned at its bound. **A-6 (at finalize):**
+appendix W's discriminator firing with the opposite sign to W.1's prediction.
+**A-7:** no stage approached its 2x threshold — Part 0 `155.4262659549713` s
+against 240 s, every world chunk inside its 480 s estimate.
+
+**Registration-defect candidates: ONE, non-blocking.** The registration selects
+by LOO across four forms, one of which has a BOUNDED parameter, and it does not
+say what happens when a bounded form wins WITH ITS BOUND ACTIVE — whether the
+boundary parameter's CI is interpretable, whether the form should be demoted to
+its effective dimension, or whether the boundary is itself a reportable finding
+(it is treated as one here). Nothing turned on it, because the tie rule
+independently forced agreement with the unbounded F1. Flagged so a
+successor can settle it in advance rather than in the report.
+
+**For M2.** The winner's LOO-RMSE is `0.0031856515917748638`, so a +-2xLOO band is
++-`0.0063713031835497275`. Two cautions before registering the seal: sealing
+F1e seals a form whose fourth parameter is a boundary artifact, and
+sealing ANY of the four seals a family the residuals say is incomplete. Sealing
+F1 — unbounded, 0.39176024882147187% behind, same verdicts — may be
+the more honest object. That is a registration decision; the executor takes no
+position beyond reporting that the two are statistically indistinguishable here.
+M3 (the one-kappa question) is now materially better supplied: kappa's fourth
+appearance arrives with the tightest interval in the record.
