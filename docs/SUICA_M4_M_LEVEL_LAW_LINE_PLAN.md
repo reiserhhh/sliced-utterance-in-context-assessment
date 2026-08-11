@@ -1133,3 +1133,139 @@ outcome appended HERE; one ledger row (EXPLORATORY); exactly ONE
 commit `feat(m4-m): M1d — the completion and the coordinate —
 <SLUG>`, never amended, never pushed; suite green first.
 Artifact-space only: target < 10 min wall, every stage < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`COMPLETED_BUT_INCOMPLETE` — rule-16 cell 6** (an extension wins AND the r²
+residual fires). L-1d **HOLD**, L-2d **F0**, L-3d **overlap**,
+L-4d **fires**; modifier none. Report:
+`reports/SUICA_M4_M1D_FORM_COMPLETION_REPORT.md`; harness
+`scripts/run_suica_m4_m1d_form_completion.py`; artifacts
+`results/m4_m1d_form_completion/`. **No new worlds**: M1c's persisted
+3840-world corpus, its 20 cell means re-derived
+round-trip and matched bit-exactly.
+
+**G0d PASSES.** All 20 cell means AND SEMs re-derived from the rawest per-world
+artifacts match M1c's persisted values bit-for-bit; 30 enumerated
+adjudication citations, the Spearman vector, both L-4 readings, the share-.60
+rise (full precision rounding to the adjudication's 2-dp quote) and the theory
+band all verify. The four incumbents were PROVEN frozen in their M1c roles —
+Part 0 imports the M1c harness and demands bit-exact agreement on every
+parameter and SSE.
+
+**L-1d HOLDS — the intercept is real.** `F0` (`field = c + lambda*r^q - kappa*V`) wins
+leave-one-cell-out at **`0.0030682764618814033`** against the best incumbent
+`F1e`'s `0.0031856515917748638` — a factor of
+1.03825441786347. Full LOO ranking: {'F0': 0.0030682764618814033, 'F1': 0.003198131708377386, 'F1e': 0.0031856515917748638, 'F2': 0.0034019365713125944, 'F3': 0.003877604046883495, 'Fphi': 0.0032498223469787663}. In-sample RMSE:
+{'F0': 0.0025054232543959215, 'F1': 0.0026264051166751978, 'F1e': 0.002621078709438027, 'F2': 0.002591249722764473, 'F3': 0.0033903747201612703, 'Fphi': 0.002538699623241356}. Appendix W.1 named the gap; one free intercept closes most of
+it.
+
+**L-2d answers `F0` — the coordinate is r, not φ.** `Fφ` does not merely lose to
+`F0` (`0.0032498223469787663` vs `0.0030682764618814033`), it loses to the best incumbent as
+well. Appendix X.4's occasion-structure hypothesis — the gauge as a consumer of
+state dynamics rather than card readability — gets **no support** from this
+corpus. **But the call is close and must not be over-quoted:** the two separate
+by `0.000181545885097363` = 5.916868553169516% of the smaller LOO against a
+5.0% CO_WINNERS bar — 0.92 percentage
+points outside it. Under 5% this leg would have sealed both coordinates. `Fφ` is
+outperformed, not refuted.
+
+**L-3d overlap — κ's FIFTH appearance.** `0.7766770259880144`, CI `[0.7482226203832176, 0.8064115044591174]`,
+overlapping M1c's `[0.7356727662590873, 0.7846243216827854]`; no TAX_SHIFT. At width
+`0.05818888407589973` it is the ONLY sharply identified parameter in the winning
+form — which is the next paragraph's subject.
+
+**THE FINDING THE REGISTRATION DID NOT ASK FOR: the winning form cannot report
+an exponent.** `F0`'s intercept buys its LOO win by trading against the power
+term, and the three are jointly non-identified: `c` CI `[0.20818746052333, 1.6803368132111625]` (width
+`1.4721493526878324`), `λ` CI `[-1.5059828481846496, -0.04256154549067277]` (width `1.4634213026939769`),
+`q` CI `[0.021913588793404413, 2.6445200496694605]` — **width `2.622606460876056`**. And the point
+estimates arrive from the opposite corner to M1c's: `λ = -0.055190882521519`
+(NEGATIVE) with `q = 1.372031438858951` (POSITIVE) describes the SAME falling-in-r
+field that M1c described as `q = -0.15040108849226472` with positive λ. **M1c's negative
+exponent was the family's only way to bend the field downward in r without an
+intercept.** Given the intercept, it re-parameterises. The monotone direction is
+robust across every form tried; the exponent is not a structural constant of
+this world, it is a coordinate on a ridge. **M1c's `q = -0.15040108849226472`
+`[-0.18322395953281184, -0.11871900002844447]` should be re-scoped in the record accordingly** — the
+`LEVEL_RESPONSE_DISSOCIATION` verdict survives, because it rests on the SIGN of
+the r-dependence and on the V-shadow contrast, not on the exponent's value.
+
+**L-4d FIRES — M2 is deferred, M1e is named.** Within-share r² residual
+`-0.12563681892698172`, CI `[-0.1772060912696028, -0.07219090437007022]`, excluding zero and stable at B = 20000
+(`[-0.17935555262608965, -0.07097803090981235]`, stable True). The intercept shrank it
+36.90141692114467% from M1c's `-0.19911194958208703` — real progress, not closure.
+Two concrete inputs for M1e: the leftover curvature is **within-share only**
+(pooled r² quiet at `0.001054754288525179` `[-0.010339263255536255, 0.014815973510193174]`), and it survived
+the intercept at reduced amplitude, so the missing term is a within-stratum
+shape in r rather than a between-share effect. The φ² companion
+(`-0.012377098889152529` `[-0.021250484030500706, -0.0035455613757951142]`, executor-added, routes nothing) also fires and
+carries NO coordinate information: within a stratum r and φ are monotone
+re-parametrisations, so curvature in one implies curvature in the other — the
+coordinate question is settled across shares, which is what the F0/Fφ LOO
+comparison does.
+
+**Reading 1, the V-shadow — pre-signed positive, and decisively so.** Fitting
+`field = λ·r^q` on M1c's own 20 cells with NO tax and NO intercept returns
+**q_shadow = `2.24488769944643`**, CI `[2.1768337883424214, 2.318980336007031]` — positive, confirmed
+(True), and *above* the response band [1.71, 1.98] on the high
+side. The winner's own exponent on the same cells is `1.372031438858951`. Omit the
+variance tax and the same data produce a large positive exponent: the
+re-attribution recorded in appendix X, demonstrated in-corpus in one number. The
+shadow fits badly on its own terms (RMSE `0.02157946817434354` against the
+winner's `0.0025054232543959215`) — a demonstration, not a rival.
+
+**Reading 2, the legacy retrodiction — and it beats K2f's own refit.** The
+winner, with NO refit, predicts K2f's 26 legacy compiled rows at RMSE
+`0.0059526106645589934` against the sealed T4 composite's `0.11259090547752257`
+— a factor of **18.914542176909535**. It also comes in BELOW K2f's own refit LOO
+of `0.0061559195350209` (True), which is the
+stronger statement: parameters estimated on a decollinearized factorial transfer
+to a different corpus on a different design, unadjusted, and beat what that
+corpus achieved by fitting itself. Per-form: {'F0': 0.0059526106645589934, 'F1': 0.0056954308382002605, 'F1e': 0.005699989746733798, 'F2': 0.005604357102432524, 'F3': 0.006428578997454841, 'Fphi': 0.006280786394748213}. Scoped as
+registered — same-instrument extrapolation across corpora, descriptive.
+
+**Rule 26 fired on its first opportunity, exactly as enacted.** `F1e`
+reaches the bootstrap set as runner-up with its ε bound ACTIVE, so its unbounded
+relaxation F1 was co-adjudicated AUTOMATICALLY rather than by the tie rule's
+luck — the failure mode M1c's non-blocking candidate flagged. F0 and Fφ carry no
+declared bounds; the numerical-limit test (RN-M1D-5: |param| >= 1e3 or
+termination at max_nfev) was checked on every bootstrapped form and did not fire
+(largest |parameter| `1.372031438858951`). **Tie rule** also fired
+(`0.00011737512989346043` = 3.8254417863469983% between F0 and F1e); every
+verdict agrees across the pair — L-3d overlap under both, and L-4d fires under
+both (M1c measured F1e's own within-share r² at `-0.19911194958208703`
+`[-0.2879978718649799, -0.10706476050455438]` under the same estimator) — so nothing reports SPLIT and the
+routing is unchanged whichever member is read. **Rule 13** triggered on both
+proximities; the B = 20000 re-run left L-3d and L-4d unchanged.
+
+**Anomalies, with timing.** No worlds were drawn, so the hypothesis-relevant
+boundary is the `fit` stage and Part 0 is pure verification of published
+numbers; every RN note was pinned there. **A-1/A-2 (before Part 0):** the
+inherited CPython 3.12.12 environment from `requirements-lock-main.txt`
+(numpy `2.4.4`, pandas `3.0.2`, scipy `1.17.1`), and no
+`timeout(1)` on macOS so each stage ran as its own foreground command. **A-3 (at
+the fit):** the winner's joint non-identification — the headline caveat above,
+found when its bootstrap CIs were first read; it changes no verdict because
+L-4d defers M2 on independent grounds. **A-4 (at the fit):** the CO_WINNERS call
+landing 0.92 points outside its bar. **A-5 (at the fit):**
+rule 26 firing on its first opportunity — recorded because a rule enacted one leg
+earlier changed this leg's bootstrap set automatically. **A-6:** no stage near
+its 2× threshold (Part 0 `1.1947739124298096` s against 120 s).
+
+**Registration-defect candidate: ONE, non-blocking, and it is the same shape as
+the ones that bought rules 25 and 26.** Cells 4 and 5 route a winning extension
+straight to "M2 seals F0 / seals Fφ" **with no identification requirement on the
+sealed parameters**. Had the r² probe come back quiet, this leg would have
+routed to `COMPLETED_IN_R` and handed M2 a form whose exponent interval is
+`[0.021913588793404413, 2.6445200496694605]` — a seal on a ridge. Nothing turned on it because L-4d fired
+independently. But the routing selects on predictive accuracy (LOO) while the
+downstream consumer (a prospective seal) needs identified parameters, and those
+are different properties — a gate that does not check what its consumer
+requires. A successor should either add an identification clause to the sealing
+cells or state explicitly that a seal may issue on a non-identified
+parameterisation.
+
+**Line state.** M2 deferred pending M1e. M3 is the best-supplied question in the
+line: κ now has five independent appearances and is the only sharply identified
+parameter in the winning form.
