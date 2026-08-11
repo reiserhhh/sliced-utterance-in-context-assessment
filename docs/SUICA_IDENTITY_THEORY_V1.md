@@ -1309,3 +1309,58 @@ henceforth GENERATED, never typed. The leg's 19-second budget overrun
 was MEASURED and disclosed (the honest mirror of D5's E-1). Zero
 planner registration defects — the third consecutive clean
 registration.
+
+## Appendix W — dated append (2026-08-11): the registered family's span gap, and pre-outcome readings of M1's cells (planner derivation)
+
+Status: derived AFTER M4-M1's registration was committed (140e927) and
+the executor dispatched, BEFORE any M1 world output exists or has been
+read. Nothing here alters M1's leans, gates or routing — it sharpens
+the MECHANISM reading each pre-registered cell will carry. Committed
+mid-run precisely so the dating is verifiable.
+
+**W.1 — The span gap.** All four registered forms place their additive
+constant at ≤ 0 relative to the power term (F1 none; F1e −ε with
+ε ≥ 0, T4's own species floor; F2/F3 none). The structure "positive
+floor plus positive power", c + λ·r^q with c > 0, λ > 0, is OUTSIDE
+the family's span. If the truth has that shape, the family's best
+reachable account is a single flattened power — expect winner F1 (or
+F2) with fractional q̂ ∈ (0, 1) and a U-shaped residual-in-r signature
+within share strata (the single power carries less curvature than the
+floor-lifted curve; residuals positive at both r-extremes, negative
+mid-range). Discriminator, stated before the data: that U-shape maps
+to a NON-monotone residual-in-φ pattern within shares, so the L-4
+Spearman probe stays quiet while a quadratic-in-r residual coefficient
+fires. An L-4 monotone fire is φ-leak evidence; a quadratic fire with
+quiet Spearman is FORM-GAP evidence, and the follow-up is a registered
+form extension (M1b or M2's alternative), not a φ-channel claim.
+
+**W.2 — What each cell means mechanically.**
+- Cell 2 (R_TERM_ABSENT_AT_LEVEL): the reader's level output in this
+  regime is floor-dominated; the square-law lives strictly in
+  perturbations (K2b's swings). The level constant λ′ then reads as
+  FRAME-owned content (K1's amplification finding supplies the owner),
+  predicting the floor should move under issuer-error manipulation — a
+  T9-flavored probe, named only, not queued.
+- Cell 4 (LEVEL_RESPONSE_DISSOCIATION) with q̂ ∈ (0, 1): ambiguous
+  between a genuine shallow power and W.1's span-gap signature; the
+  quadratic-residual discriminator adjudicates the reading (not the
+  cell).
+- Cell 5 (SINGLE_EXPONENT_RESTORED): K2f's flat picture was purely the
+  collinearity artifact. The sealed S-4 miss then needs re-explaining:
+  if level truly follows r^1.85, the 26/26 under-prediction indicts
+  the AMPLITUDE, not the exponent — the sealed λ was a response-fit
+  constant that does not transfer to level. Sub-case name:
+  AMPLITUDE_RESCALING (exponent transfers, amplitude refits).
+- Cell 3 (NON_IDENTIFIED_UNDERPOWERED) should be nearly unreachable
+  unless λ is genuinely small — see W.3 — which is why reaching it
+  would itself be informative about λ.
+
+**W.3 — Decisiveness arithmetic (design-level, superseded by G3m-b's
+simulation once the pilot σ_w exists).** Per-cell SEM projects to
+~0.005 at 32 worlds (K2F-FRESH: CI half-width 0.0097 → SEM ≈ 0.0050).
+Over M1's estimated realized r-range [~0.46, ~0.84] (G1m's arithmetic
+table controls), the r-term spread at λ ≈ 0.18 is ≈ 0.088 at q = 1.85
+(~17 SEM), ≈ 0.068 at q = 1 (~14 SEM), ≈ 0.043 at q = 0.5 (~9 SEM),
+≈ 0.020 at q = 0.2 (~4 SEM). Any real r-dependence down to q ~ 0.2 is
+multiple noise floors wide; flatness, if found, will be flatness of
+the world, not of the design.
