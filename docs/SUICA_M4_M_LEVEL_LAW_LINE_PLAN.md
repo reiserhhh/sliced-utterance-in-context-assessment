@@ -1410,3 +1410,128 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-m): M1e — the shape — <SLUG>`, never amended,
 never pushed; suite green first. Artifact-space: target < 10 min,
 stages < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`IDENTIFIED_INSUFFICIENTLY` — rule-16 cell 6** (routing would seal but the rule-27
+budgets are unmet), modifier **`TAX_SHIFT`**. L-1e **MISS (r-mediated wins)**, L-2e
+**MISS**, L-3e **quiet**. Sealable: **False**. Report:
+`reports/SUICA_M4_M1E_SHAPE_REPORT.md`; harness
+`scripts/run_suica_m4_m1e_shape.py`; artifacts `results/m4_m1e_shape/`. No new
+worlds; M1c's 20 cell means re-derived bit-exactly.
+
+**G0e PASSES**: all 20 cell means and SEMs bit-exact from the rawest per-world
+artifacts, 32 M1d adjudication citations bit-exact, the theory
+band unchanged, and **F0 re-fitted here reproduces M1d's fit bit-exactly** — the
+frozen incumbent really is the same object.
+
+**The Part-0 model-free table decided the leg before any model was fitted.**
+Within-share extreme contrasts field(φ=0.98) − field(φ=0.05) with pooled SEs:
+[0.0012820301142057455, 0.010391443071199338, 0.01143698383536769, 0.009688611655304012] against SEs [0.002662818947918231, 0.0025394961062406947, 0.0024676318457931964, 0.002401953516046843], i.e. [0.4814559830318264, 4.091931090448552, 4.634801522303819, 4.03363828257993] in SE units.
+All 4 are positive; 3/4 exceed 2 SE. The
+exception is share 0.10 at **0.4814559830318264 SE** — flat — and share 0.10 is
+exactly where the r-span is smallest (0.04714885082631204 against
+[0.04714885082631204, 0.10864636443860598, 0.15863752656482977, 0.20320393707216905]). **A strictly additive field predicts the same contrast at
+every share; this one does not, and it fails precisely where r stops moving.**
+
+**L-1e MISSES — the field does not separate.** LOO across the five:
+{'E-add': 0.002706675155983591, 'E-rlin': 0.0026942709003566117, 'E-rq': 0.0024079360107794926, 'E-tax-add': 0.003579020306723271, 'F0': 0.0030682764618814033}. Best additive E-add at `0.002706675155983591`
+loses to best r-mediated E-rq at `0.0024079360107794926`; F0 at
+`0.0030682764618814033`. The winner is **E-rq** (`field = alpha_s + lambda*r^q`) at
+`0.0024079360107794926`, ahead of E-rlin by 11.89129978102812% — outside the
+tie band, and both are r-mediated, so no REPRESENTATION_TIE. The .45 additive
+prior does not pay; the .35 r-mediated complement does. Note `E-add`
+(`0.002706675155983591`) and `E-rlin` (`0.0026942709003566117`) are nearly level — the
+additive representation is not bad, it is beaten, and beaten decisively only by
+the model carrying BOTH free share margins and an r-power.
+
+**L-3e QUIET — the shape probe goes silent for the first time in three legs.**
+Under the winner the within-share r² residual is `-0.007427848773582237`, CI
+`[-0.03672898793443594, 0.018353437794254]` — containing zero. M1c fired at −0.19911194958208703, M1d at
+−0.12563681892698172, M1e is quiet. Free share margins plus an r-power absorb
+the leftover curvature. **The M1-series' shape question closes.**
+
+**And nothing is sealable, because rule 27 says so.** The winner's exponent is
+`q = 3.863625377453229`, CI `[2.0529339475688055, 5.921369905297595]`, **width `3.86843595772879` against the
+registered `1.0` budget — over by a factor of
+3.86843595772879**. Routing is cell 6, IDENTIFIED_INSUFFICIENTLY, the
+scoped-M2 route. This is rule 27 doing exactly the job defect #45 bought it for:
+under the pre-rule-27 routing this leg would have read "r-mediated wins, probe
+quiet → R_MEDIATED_SETTLED, M2 seals it" and handed M2 an exponent spanning
+`[2.0529339475688055, 5.921369905297595]`. The object is not uniformly vague — the share margins run
+[0.015203974958038241, 0.015209021910085607, 0.01511553251962218, 0.012928411315645191] wide and λ = `-0.057625974791364554` `[-0.0843564122153383, -0.042724477794351616]` is NEGATIVE and
+well identified at width `0.04163193442098668` — it has ONE bad coordinate and the
+budget catches precisely that one. For contrast, the REJECTED `E-tax-add` meets
+every budget it has: identifiability and correctness are independent properties,
+and this leg exhibits both directions in one table.
+
+**L-2e MISSES on both clauses, and this is the finding to carry.** (i) Forcing
+the share margin through the linear tax costs 32.229399557283564% of LOO —
+`E-tax-add` at `0.003579020306723271` against a bar of `0.002842008913782771` — making it
+**the worst of the five models**. The four share margins are not on a straight
+line in V; they carry curvature that −κ·V cannot represent. (ii) Its κ is
+`0.6761549415814`, CI `[0.6619291032569563, 0.6901486195533926]`, **disjoint BELOW** M1d's
+`[0.7482226203832176, 0.8064115044591174]`. There is no sixth appearance (False); there is a
+shift, and the **`TAX_SHIFT` modifier fires to M3**.
+
+**The qualification M3 must read with it.** The κ that shifted belongs to the
+model this same leg ranks LAST, and the WINNING model contains no κ at all — its
+share direction is four free margins and the tax is implicit in them. So the
+finding is not "κ is 0.6761549415814". It is: **κ's point value depends on the
+representation it is embedded in, and the dependence
+([0.715, 0.722, 0.75, 0.76, 0.777] previously, `0.6761549415814` here) exceeds the width of
+any of its own intervals.** M3 was chartered to ask whether κ is ONE instrument
+constant; this leg supplies a sharp prior answer and a design instruction —
+**vary the surrounding form deliberately rather than accumulate more appearances
+within one family.**
+
+**Method notes.** Three of the five models are linear in their parameters and
+were ALSO solved in closed form by lstsq; the largest optimizer-vs-lstsq
+disagreement across all three is `3.311532159600006e-10` (RN-M1E-3), so no routing
+decision rests on optimizer behaviour. `E-add` and `E-tax-add` return IDENTICAL
+g_φ margins (True) — expected on a balanced design, where the
+sum-to-zero φ margins are orthogonal to both the share margins and V, so the two
+models differ ONLY in how they represent the share direction and their LOO gap
+measures exactly that. `E-add`'s margin is [-0.00482194717663085, -0.002949742497307577, 0.0008027742599145105, 0.0035910954216355657, 0.003377819992388351] across φ
+[0.05, 0.3, 0.6, 0.85, 0.98], span `0.008413042598266415`. Rule 13 did not trigger
+(False); rule 26's bound trigger cannot fire (no model declares
+bounds) and the numerical-limit surveillance was clean (False).
+
+**Anomalies, with timing.** No worlds drawn; Part 0 is verification plus the
+model-free table, and every RN note was pinned there before any model was
+fitted. **A-1/A-2 (before Part 0):** the inherited CPython 3.12.12 lock
+environment (numpy `2.4.4`, pandas `3.0.2`, scipy `1.17.1`);
+no `timeout(1)` on macOS. **A-3 (Part 0, before any fit):** the registration's
+parameter counts are inconsistent — "8 identifiable" for E-add is post-pinning,
+"7 params" for E-tax-add is its RAW count and its identifiable count under the
+same pinning is 6; resolved by RN-M1E-1 before any fit and reported both ways.
+**A-4 (at the fit):** κ shifts on a REJECTED representation — reported as
+registered, qualified above, neither suppressed nor amplified. **A-5 (at the
+fit):** the winner misses its only budget by 3.86843595772879x — the
+routing-determining number. **A-6:** no stage near its 2x threshold (Part 0
+`4.5435521602630615` s against 120 s).
+
+**Registration-defect candidates: four, all non-blocking.** (1) **The rule-16
+table OVERLAPS** — (F0 stands AND probe fires) matches cells 4 and 5, and
+(winner AND probe fires AND budgets unmet) matches cells 5 and 6; precedence was
+pinned in Part 0 as RN-M1E-5 and did not bite here (probe quiet, budgets unmet →
+only cell 6 matched), and the overlap is immaterial to consequence since cells
+4/5/6 share the scoped-M2 route — but it is a rule-15/16 partition failure.
+(2) **Rule 27's budget list is incomplete** — the share margins α_s and E-rq's λ
+are consumed by any seal and carry no declared budget; they are well identified
+here, so nothing turned on it, which is the same "nothing turned on it" that
+preceded defect #45. (3) **The `TAX_SHIFT` modifier is not conditioned on its
+host model being competitive** — it fires on E-tax-add's κ regardless of that
+model ranking last, and the evidentiary weight of a shift measured on a rejected
+representation differs materially from one measured on a winner; the
+registration does not say which it means. (4) The parameter-count wording above.
+
+**For M2, and for the line.** M2 must take the scoped route: the κ-channel and
+model-free cell predictions, not a shape. Worth the planner's attention —
+**this is the SECOND CONSECUTIVE leg whose winner carries a non-identified
+exponent while its slope is identified.** Appendix Y's reading now has three
+independent parameterisations behind it (M1c's λ>0/q<0, M1d's λ<0/q>0, M1e's
+λ<0/q≈3.863625377453229), and a successor should consider registering the SLOPE itself —
+∂field/∂r at fixed V, or the within-share contrast, which is already the
+model-free Part-0 object of this leg — as the sealable quantity, rather than any
+exponent in any parameterisation.
