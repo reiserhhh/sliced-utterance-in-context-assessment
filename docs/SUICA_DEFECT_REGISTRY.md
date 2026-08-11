@@ -173,3 +173,13 @@ rule without a defect number, rule-13-style:
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 26 | M1c's bounded-winner fragility (no numbered defect) | When a bounded form wins selection with any bound ACTIVE at its optimum, every verdict is co-adjudicated on its unbounded relaxation (or nearest registered unbounded form); disagreement reports SPLIT; bound-activity is itself a reported finding and the active-bound CI is flagged one-sided-by-construction. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1c planner adjudication (2026-08-11)` |
+
+## Dated additions (2026-08-11, third note — M1d; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #45 | M-line / M4-M1d | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1d outcome + planner adjudication` | Routing cells 4/5 handed a winning extension to "M2 seals it" with no identification requirement on the sealed parameters; had the residual been quiet, a ridge (q width 2.62) would have been sealed. Non-blocking only because L-4d deferred M2 independently. | 27 | consumption-identification |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 27 | #45 | A route that hands a fitted object to a downstream consumer (seal, adoption, cross-leg comparison) carries an explicit identification budget on every parameter the consumer will quote; selection wins (LOO or otherwise) never alone qualify an object for consumption. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1d planner adjudication (2026-08-11)` |

@@ -1427,3 +1427,57 @@ one-sided-by-construction; the verdicts survived only because the
 5%-tie rule forced agreement with the unbounded form. Rule 26 (M-line
 plan doc) makes that co-adjudication mandatory wherever a bound is
 active, and types bound-activity as a finding.
+
+## Appendix Y — dated append (2026-08-11, post-M1d): the exponent dissolves into a slope; the shape question replaces the coordinate question
+
+**Y.1 — Correction to X.1's exponent line (the dissociation verdict
+stands).** With the constant freed (M1d's F0), the triple (c, λ, q)
+rides a ridge — q [0.021913588793404413, 2.6445200496694605], λ
+entirely negative, c wide — and (λ<0, q>0, c>0) describes the same
+falling-in-r field M1c's intercept-free form described as (λ>0,
+q<0). **"q = −0.150" is withdrawn as a structural parameter value**:
+it was the intercept-free family's only way to express a falling
+curve. What is parameterisation-free and stands: **∂field/∂r < 0 at
+fixed V** (model-free 4.03-SEM contrast; every fitted
+parameterisation agrees in slope sign), and with it the
+LEVEL–RESPONSE DISSOCIATION (a sign statement, not an exponent
+statement). The r-window [0.454, 0.819] cannot pin power-law
+curvature once a constant is honest — a measured limit, not a
+failure.
+
+**Y.2 — The re-attribution now has its one-number proof.** Fitting
+field = λ·r^q with the tax OMITTED on M1c's own decollinearized cells
+gives q_shadow = 2.24488769944643 [2.1768337883424214,
+2.318980336007031] — the exponent snaps from negative-slope to
+above-the-response-band positive the moment V is dropped. X.2's
+claim ("the quadratic over-response was mostly the variance tax
+wearing r's clothes") is thereby demonstrated inside a single corpus.
+
+**Y.3 — The structure is cross-corpus.** With NO refit, every M1d
+form retrodicts K2f's 26 legacy rows at RMSE 0.0056–0.0064 — 18.9×
+better than the sealed composite, and at K2f's own refit-LOO level.
+The constant-minus-tax-with-weak-negative-slope structure is a
+property of the instrument family, not of one corpus.
+
+**Y.4 — The coordinate question, refined.** The naive state-dynamics
+representation (c + a·φ^m − κ·V) LOST to the r-mediated intercept
+form even cross-share — X.4's simple mechanism form is not
+supported. But the within-share concavity persists under every
+registered form (r² −0.126 [−0.177, −0.072] after the intercept), so
+the true refinement is the SHAPE question: does field(share, φ)
+separate additively into a tax margin plus a φ margin (which kills
+r-mediation, since r is strongly non-additive in share × φ), or does
+r carry the cross-structure? M1e decides on the persisted corpus.
+
+**Y.5 — The tax, five routes.** κ = 0.715 / 0.722 / 0.750 / 0.760 /
+0.777 (difference-fit, 9-pair refit, K2f level, M1c, M1d) —
+chainwise-overlapping CIs with a mild upward drift in level-space
+routes, recorded unadjudicated as the one-κ question's opening
+observation (M3).
+
+**Y.6 — Method.** Rule 26 fired automatically on its first
+opportunity (F1e's active ε bound → F1 co-adjudication). Rule 27
+(identification budgets on any consumed object) was bought by defect
+#45: M1d's own routing would have sealed a ridge had the residual
+come back quiet. Selection is not identification; consumption
+requires both.

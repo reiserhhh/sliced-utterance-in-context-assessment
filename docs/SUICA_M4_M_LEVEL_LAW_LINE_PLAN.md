@@ -1269,3 +1269,144 @@ parameterisation.
 **Line state.** M2 deferred pending M1e. M3 is the best-supplied question in the
 line: κ now has five independent appearances and is the only sharply identified
 parameter in the winning form.
+
+### Planner adjudication of M1d (2026-08-11, appended after the run) — THE EXPONENT DISSOLVES INTO A SLOPE; THE SHAPE QUESTION REPLACES THE COORDINATE QUESTION
+
+**COMPLETED_BUT_INCOMPLETE accepted.** L-1d HOLD (F0 beats all four
+incumbents; LOO 0.0030682764618814033), L-2d = F0 (Fφ loses even to
+the incumbents — the naive state-dynamics representation is NOT the
+better cross-share account), L-3d overlap (κ fifth appearance,
+0.7766770259880144 [0.7482226203832176, 0.8064115044591174] — "the
+only sharply identified parameter", the executor's words, correct),
+L-4d FIRES (within-share r² = −0.12563681892698172
+[−0.1772060912696028, −0.07219090437007022], stable at B = 20000) →
+**M2 stays deferred; M1e is chartered below.**
+
+**The scientific correction this leg forces (theory appendix Y).**
+F0's (c, λ, q) are JOINTLY NON-IDENTIFIED — q [0.021913588793404413,
+2.6445200496694605], λ entirely negative, c wide — and λ<0 with q>0
+describes the SAME falling-in-r field that M1c's F1 described as λ>0,
+q<0. **M1c's "negative exponent" was a parameterisation artifact of
+the missing constant.** What survives, parameterisation-free: the
+SIGN OF THE SLOPE — ∂field/∂r < 0 at fixed V (the model-free 4.03-SEM
+contrast; both parameterisations agree). The DISSOCIATION verdict
+stands (it was slope-sign vs the response attribution); the exponent
+VALUE is withdrawn as a structural claim by dated note. The
+level-law's identified content on this corpus is: a level constant, a
+weak negative r-slope, and the tax.
+
+**What strengthened.** (i) The V-shadow demonstration confirmed its
+pre-signed flip: q_shadow = 2.24488769944643 [2.1768337883424214,
+2.318980336007031] — omit the tax and the exponent snaps positive,
+ABOVE the response band; appendix X.2's re-attribution now has its
+one-number in-corpus proof. (ii) Legacy transfer: with NO refit, F0
+retrodicts K2f's 26 rows at 0.0059526106645589934 — 18.91× better
+than the sealed form and below K2f's own refit LOO; every M1d form
+lands 0.0056–0.0064 — the constant-minus-tax-with-weak-negative-slope
+structure is CROSS-CORPUS. (iii) Rule 26 fired on its first
+opportunity, automatically. (iv) The five κ routes now read 0.715 /
+0.722 / 0.750 / 0.760 / 0.777 — chainwise-overlapping with a mild
+upward drift in level-space routes; recorded UNADJUDICATED as M3's
+opening observation.
+
+**Defect #45 (mine; rule 27 enacted).** M1d's cells 4/5 routed a
+winning extension straight to "M2 seals it" with NO identification
+requirement on the sealed parameters — had r² come back quiet, M2
+would have been handed a ridge (q width 2.62). Same genus as the
+defects behind rules 25/26: selection by LOO, consumption requiring
+identification. **Rule 27:** a route that hands a fitted object to a
+downstream consumer (a seal, an adoption, a cross-leg comparison)
+carries an explicit identification budget on every parameter the
+consumer will quote; selection wins (LOO or otherwise) alone never
+qualify an object for consumption.
+
+---
+
+## M4-M1e — the shape: additive or r-mediated (artifact-space)
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. NO NEW WORLDS: M1c's persisted
+corpus, the 20 cell means re-derived bit-exactly. Optimizer pins,
+LOO-cell selection, bootstrap B = 2000/20000, tie rule 5%, rules
+26/27 in force.
+
+### Question
+
+Does the level field SEPARATE — field(share, φ) = share-margin +
+φ-margin — or does the r-channel carry the cross-structure? These are
+distinguishable HERE because r(share, φ) is strongly non-additive:
+the within-share r-spans run 0.04714885082631204 →
+0.20320393707216905 (4.31× by share), so any r-mediated field with a
+material r-coefficient must show share×φ interaction, while a truly
+additive field kills r-mediation. If additivity wins with the share
+margin linear in V, the level law's arguments are (V, φ) as SEPARATE
+channels — the tax channel and a state-dynamics channel — and card
+readability was never an argument, only a correlate.
+
+### Part 0 (before any fit)
+
+- **G0e.** (i) Re-derive the 20 cell means bit-exactly. (ii) Verify
+  every M1d number quoted in the adjudication above at full precision
+  against `results/m4_m1d_form_completion/` (F0 params and all three
+  CIs, LOO table, tie margins 0.00011737512989346043 and the 5.92%
+  Fφ separation, κ CI, r² CIs at both B, q_shadow triple, legacy
+  retrodiction values). (iii) Quote-check [1.71, 1.98] unchanged.
+  Mismatch → STOP.
+- **Model-free monotonicity table (Part-0 object, before fits):** the
+  four within-share extreme contrasts field(φ=.98) − field(φ=.05)
+  with pooled SEs — the parameterisation-free record of the slope
+  sign per share.
+
+### Models (five; pinned)
+
+- **E-add:** field = α_s + g_φ (free margins, sum-to-zero pinning
+  stated; 8 identifiable params);
+- **E-tax-add:** field = c − κ·V + g_φ (share margin forced through
+  the tax; 7 params);
+- **E-rlin:** field = α_s + s·r (5);
+- **E-rq:** field = α_s + λ·r^q (6; starts: λ ∈ {−0.5, −0.055, 0.05,
+  0.5}, q ∈ {0.5, 1.0, 1.372031438858951, 2.0, 3.0});
+- **F0 (frozen incumbent):** M1d's winner as the baseline to beat.
+
+### Leans (sides declared, rule 22)
+
+- **L-1e [.45]:** an additive form (E-add or E-tax-add) wins LOO
+  outright over all r-mediated forms AND F0. Complement: r-mediated
+  wins [.35]; F0 stands [.20].
+- **L-2e [.60]:** the share margin is the tax — E-tax-add within 5%
+  LOO of E-add AND its κ CI overlaps M1d's [0.7482226203832176,
+  0.8064115044591174] (the sixth appearance).
+- **L-3e (reading → routing):** the winner's within-share r²-probe —
+  quiet ⟹ SHAPE settled; fires ⟹ shape remains open.
+
+### Rule-27 identification budgets (for any object routed to M2)
+
+κ width ≤ 0.15; c width ≤ 0.05; each g_φ point width ≤ 0.01; s width
+≤ 50% of |point|; E-rq's (λ, q) jointly: q width ≤ 1.0. An object
+missing its budget is NOT sealable regardless of routing.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0e mismatch | **STOP** (citation defect) |
+| 2 | additive wins AND winner's probe quiet AND budgets met | **ADDITIVE_SHAPE_SETTLED** — r-mediation dead at level on this family; the arguments are (V, φ); M2 seals the winner at exterior-share × interior-φ cells (a pinned-form φ-extrapolation may ride as a SECONDARY sealed prediction) |
+| 3 | r-mediated wins AND probe quiet AND budgets met | **R_MEDIATED_SETTLED** — M2 seals it |
+| 4 | F0 stands (nothing beats it) | **NO_BETTER_SHAPE** — the M1-series closes at its measured limit: identified = level band + negative slope + tax; shape = named open; M2 re-charters on the SCOPED object (κ-channel + model-free cell predictions), not on a shape |
+| 5 | any winner AND probe fires | **SHAPE_OPEN_NAMED** — same scoped-M2 route as cell 4 |
+| 6 | routing would seal but budgets unmet | **IDENTIFIED_INSUFFICIENTLY** — scoped-M2 route |
+| — | L-2e κ disjoint | modifier **TAX_SHIFT** → M3 |
+
+Tie (<5% LOO) between an additive and an r-mediated form:
+**REPRESENTATION_TIE** — both reported, verdicts co-adjudicated,
+disagreement SPLIT; routing takes the SCOPED route (a tie on
+representation is not a settled shape).
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_m1e_shape.py`; `results/m4_m1e_shape/`
+(gitignored); `reports/SUICA_M4_M1E_SHAPE_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-m): M1e — the shape — <SLUG>`, never amended,
+never pushed; suite green first. Artifact-space: target < 10 min,
+stages < 600 s.
