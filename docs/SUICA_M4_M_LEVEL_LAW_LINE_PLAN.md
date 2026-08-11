@@ -422,3 +422,176 @@ executor estimate.
 level law was measured, so nothing about it was learned, and M2's charter is
 untouched but unfed. M3 (the one-κ question) is independent of this leg and is
 not blocked by it.
+
+### Planner adjudication (2026-08-11, appended after the run) — THE STOP IS ACCEPTED; THE DEFECTS ARE MINE
+
+**STOP_DESIGN_INFEASIBLE accepted as delivered.** The executor's conduct
+was exemplary: G0m bit-exact on every quoted number (no citation
+defect), ZERO worlds spent, the gate failure PROVEN unsatisfiable
+rather than merely observed (infimum |corr(r, V)| over every 5-point φ
+ladder at the registered shares = 0.748768093111513 = 2.496× the bar;
+with shares freed under gate (b), best found 0.5208187741410987 — an
+upper bound on that infimum, itself already 1.74× the bar), and rule 24
+catching three of its own report cells pre-commit.
+
+**Defect #43 (rule 11 violated in its letter).** G1m(d) was
+deterministic arithmetic from pinned source objects — computable by the
+planner at registration time with no pilot and no world. It was not
+computed. The planner extrapolated φ's r-leverage from the two
+published points (φ ∈ {0.90, 0.98}) into an unexercised region where
+the attenuation map SATURATES: total φ leverage over the open interval
+is 0.0516–0.2172 in r against a between-share span of 0.2910.
+
+**Defect #44 (rule 18 violated).** Gates (b), (c), (d) share the
+`share` knob and pull in opposite directions — (b) demands a wide share
+range (V max/min ≥ 2), which is exactly what makes r track V; (d)
+demands the within-share spread dominate. The joint check was not run;
+the executor's diagnostic proves (b)+(d) jointly empty at ANY
+admissible shares. Inside the same defect: gate (c)'s "≥ 2 of 4 share
+levels" unknowingly named the only two levels that can EVER comply
+(shares 0.10/0.25 top out at ratios 1.067/1.176 for any φ ladder).
+
+**The deeper reading, and the rule it buys.** The failed bar sat on a
+PROXY. Marginal corr(r, V) across cells is not what identification
+needs: in a factorial, q is identified from within-share φ sweeps at
+EXACTLY fixed V, and κ from between-share contrasts — the marginal
+correlation can stay high while the conditional design information is
+ample. The registration made the proxy a hard gate and left the
+estimand-relevant object (the G3m-b projection) downstream of it, so
+the leg died on a number the estimand does not consume. K2f's
+follow-up phrase ("arms chosen to BREAK the r/V collinearity") seeded
+the framing: "break the collinearity" was operationalized as "drive a
+marginal correlation below a bar," where the operative content of
+K2f's complaint was "restore identification" — K2f's collinearity
+harmed it because that corpus ALSO had no within-stratum sweeps; the
+factorial restores the sweeps, which is what suffices. **Rule 25
+(enacted):** every design-feasibility gate is stated in the quantity
+the leg's estimand requires (identification width, power, a registered
+projection); marginal or proxy statistics of the design are REPORTED,
+never gating. **Convention (planner-side):** when every input to a
+registered gate is deterministic arithmetic from pinned source
+objects, the planner RUNS the gate before committing the registration
+and embeds the computed table in the registration text.
+
+**Carried forward.** M1's Part-0 pins (four forms, optimizer, start
+grid) inherit into M1b unchanged; the executor's leverage table is
+M1b's design basis; leans and priors inherit UNCHANGED — zero worlds
+ran, so no hypothesis-relevant information exists to update on.
+Registry: #43, #44 and rule 25 appended by dated note. Appendix W is
+untouched by this stop (it concerns the fit family, which never ran).
+
+---
+
+## M4-M1b — r-at-level, feasibility restated in the estimand's quantity
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Re-registration of M1 after its
+cell-1 STOP. Planner: this document's author; executor: dispatched
+agent (implementation and execution only; this text is binding).
+Question, machinery, source objects, seeds policy, forms F1/F1e/F2/F3,
+optimizer pins, start grid, LOO-cell selection, within-cell
+world-block bootstrap (B = 2000; 20000 at rule-13 boundaries), tie
+rule at 5%, leans L-1 [.55] / L-2 [below/overlap/above = .55/.35/.10,
+conditional on L-1] / L-3 [.70] / L-4 (reading), and the rule-16 truth
+table cells 2–6 with modifiers are INHERITED VERBATIM from M4-M1
+above. Exactly the following changes.
+
+### Design (pinned; planner arithmetic RUN at registration — rule 11 discharged, rule 25 compliant)
+
+Grid: share ∈ {0.10, 0.25, 0.40, 0.60} × φ ∈ {0.05, 0.30, 0.60, 0.85,
+0.98} = 20 cells × 32 worlds/cell. master_seed 20260811; salts
+`m4m1b-world` / `m4m1b-pilot` (fresh streams; disjoint from M1's by
+salt). φ at {0.05, 0.30, 0.60, 0.85} is a regime EXTENSION beyond the
+exercised {0.90, 0.98} — guarded by G2m′, and the law claim stays
+scoped to the tested grid.
+
+Planner-computed design table (via the pinned maps, executor
+reproduces bit-exactly in Part 0 — G0m′(vii)):
+
+| share | V_person | r(φ=.05) | r(φ=.30) | r(φ=.60) | r(φ=.85) | r(φ=.98) | span |
+|---|---|---|---|---|---|---|---|
+| 0.10 | 0.03000000000000001 | 0.8189581462487876 | 0.8155586799827954 | 0.8075174172340943 | 0.7908869485651705 | 0.7718092954224756 | 0.04714885082631204 |
+| 0.25 | 0.07500000000000002 | 0.785015540293945 | 0.7761302864207245 | 0.7558507450373838 | 0.7168731389294273 | 0.6763691758553391 | 0.10864636443860598 |
+| 0.40 | 0.12000000000000004 | 0.7411873080384952 | 0.726425348215848 | 0.6941115392115328 | 0.6367206581308248 | 0.5825497814736654 | 0.15863752656482977 |
+| 0.60 | 0.18000000000000005 | 0.6573448847694047 | 0.6346912945232521 | 0.5883719155687073 | 0.5151304058057474 | 0.4541409476972356 | 0.20320393707216905 |
+
+Descriptives (REPORTED, never gating — rule 25): marginal corr(r, V) =
+−0.8495063312353189; corr(r^1.8528700746510731, V) =
+−0.8649603255864755; against K2f's −0.9643543785903034. The
+identification content lives in the within-share sweeps (V exactly
+fixed by design), not in the marginal correlation — that sentence is
+the rule-25 exemplar.
+
+Pre-declared ALT ladder (fires ONLY on G2m′'s regime guard): φ ∈
+{0.30, 0.55, 0.75, 0.90, 0.98}; planner table: spans
+0.04374938456031985 / 0.09976111056538539 / 0.1438755667421826 /
+0.1805503468260165 by share; corr(r, V) = −0.8915685583022667;
+corr(r^q, V) = −0.9029258027968385; also passes G1m′ below.
+
+### Gates
+
+- **G0m′ (anchors, bit-exact).** (i)–(vi) as M1's G0m verbatim (all
+  passed in M1; re-verify); (vii) reproduce BOTH planner design tables
+  above bit-exactly from `predicted_attenuation` /
+  `person_share_design`; (viii) verify the M1-STOP numbers cited in
+  the adjudication above against `results/m4_m1_r_at_level/`
+  (stop_diagnostic.json and the report tables): infimum
+  0.748768093111513, freed-shares bound 0.5208187741410987, per-share
+  full-interval spans 0.05159009087311539 / 0.11784317303319514 /
+  0.17083747134975158 / 0.21722718146551878. Any mismatch → STOP
+  (citation defect, not silently repaired).
+- **G1m′ (arithmetic; planner-verified at registration, executor
+  re-runs).** (a) shares inside [0.02, 0.6634207990183637] — PASS. (b)
+  V max/min ≥ 2 — realized 6.0, PASS. (c′) within-share r-span ≥ 0.12
+  at BOTH shares {0.40, 0.60} — realized 0.15863752656482977 /
+  0.20320393707216905 (ALT: 0.1438755667421826 / 0.1805503468260165),
+  PASS. (e) 20/20 distinct design points — PASS. There is NO
+  marginal-correlation gate (rule 25).
+- **G2m′ (pilot; AFTER G0m′/G1m′, before any main world).** Corners
+  {0.10, 0.60} × {0.05, 0.98} × 4 worlds on `m4m1b-pilot`. (i) REGIME
+  guard: finite, non-saturated, nonzero within-corner variance;
+  failure at a φ-extension corner → ALT ladder once (re-run G1m′ and
+  G3m′(b)), then STOP_DESIGN_INFEASIBLE. (ii) φ→r channel liveness:
+  PRIMARY object = a per-world realized card-attenuation statistic if
+  the k2b machinery persists one (executor pins the source object
+  file:line in Part 0 — rule 12; requirement: contrast between φ .05
+  and .98 at share .60 exceeds 2× its pooled SE). If no such statistic
+  exists, liveness is certified by the pinned map's arithmetic (Δr =
+  0.20320393707216905 at share .60) PLUS the projection — an
+  OUTCOME-side field contrast is NOT a liveness gate here, because a
+  flat field is cell-2 EVIDENCE, not channel death; M1's registration
+  conflated these and M1b does not (rule 25 applied twice).
+- **G3m′.** (a) sides per rule 22 as in M1. (b) **the feasibility
+  gate — the only one:** σ_w = pooled per-world sd across the 16 pilot
+  worlds, inflated by sqrt(12 / χ²_{0.10, df=12}); parametric
+  replication B_proj = 500, seed = master, at truths
+  (λ = 0.18021628978547316, κ = 0.750086268225045, ε = 0) × q_truth ∈
+  {1.0, 1.8528700746510731}, cell noise N(0, σ_w²/32), fitting F1
+  with the full start grid; width proxy = quantile(q̂, .975) −
+  quantile(q̂, .025); PASS iff proxy ≤ 0.50 under BOTH truths.
+  Escalation (pre-declared, once): on fail, recompute at 64
+  worlds/cell (noise /√2); pass → the main grid runs at 64 worlds/cell
+  (budget ×2, declared); fail again → STOP as **NON_PROJECTABLE**,
+  with the int_share second axis (V moves at fixed share;
+  species-disclosed, K2d dispatcher required) NAMED for a future
+  registration, not adopted here. No projection at q_truth = 0
+  (pre-declared adjudicable branch, as in M1). (c) Stage estimates:
+  part0 60 s, pilot 40 s, worlds 4 × 150 s (5 cells per chunk; ×2 at
+  escalation), fit 300 s, finalize 60 s; the 2× stop-and-report
+  convention applies.
+- **G4m′.** As M1's G4m: the inherited truth table reproduced verbatim
+  in the report with cell 1 now reading "any G0m′/G1m′/G2m′/G3m′
+  clause fails after its declared ladder → STOP (planner defect)";
+  rule 24 — every table carrying artifact numbers generated from
+  artifacts.
+
+### Deliverables and budget
+
+The six deliverables: `scripts/run_suica_m4_m1b_r_at_level.py`;
+`results/m4_m1b_r_at_level/` (gitignored);
+`reports/SUICA_M4_M1B_R_AT_LEVEL_REPORT.md` (generated tables);
+outcome appended HERE (append-only); one `docs/CLAIMS_LEDGER.md` row
+(EXPLORATORY); exactly ONE commit
+`feat(m4-m): M1b — r-at-level, estimand-gated — <SLUG>`, never
+amended, never pushed. Suite green before commit. Budget: 640 worlds
+(1280 at escalation) ≈ 0.6 s each plus fits — target < 30 min wall,
+every stage < 600 s.

@@ -142,3 +142,22 @@ defense phase plan (#39-#41), the M4-F and M4-G line syntheses,
 `docs/SUICA_IDENTITY_THEORY_V1.md` appendices, `docs/CLAIMS_LEDGER.md`, and the
 leg reports under `reports/`. No `results/` tree was opened.
 
+
+## Dated additions (2026-08-11 — M-line era; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #43 | M-line / M4-M1 | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1 outcome + planner adjudication` | G1m(d) was deterministic arithmetic from pinned source objects, computable at registration time; the planner did not compute it and extrapolated φ leverage from two published points into a saturating region — the gate was unsatisfiable by construction (infimum 2.496× the bar, proven by the executor's diagnostic). | none (rule-11 violation; bought the planner-arithmetic convention) | satisfiability |
+| #44 | M-line / M4-M1 | same | Gates (b)/(c)/(d) shared the `share` knob and pulled in opposite directions; the rule-18 joint check was not run — (b)+(d) jointly empty at ANY admissible shares (best 0.5208 ≥ the 0.30 bar); (c) unknowingly demanded the only two share levels that can ever comply. | 25 | joint-satisfiability |
+
+### Rules addendum (append-only; the table above at "1-21" is unchanged)
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 25 | #43 + #44 | Every design-feasibility gate is stated in the quantity the leg's estimand requires (identification width, power, a registered projection); marginal or proxy statistics of the design are REPORTED, never gating. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1 planner adjudication (2026-08-11)` |
+
+Convention added (unnumbered, planner-side): when every input to a
+registered gate is deterministic arithmetic from pinned source objects,
+the planner RUNS the gate before committing the registration and embeds
+the computed table in the registration text (M1 adjudication,
+2026-08-11).
