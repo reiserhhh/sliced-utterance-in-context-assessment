@@ -723,3 +723,111 @@ identification at the registered width costs 192 worlds/cell on this
 design. M2's charter is untouched but still unfed. M3 (the one-κ question) is
 independent of this leg and remains unblocked — and note that κ, unlike q, was
 never the binding difficulty in any projection here.
+
+### Planner adjudication of M1b (2026-08-11, appended after the run) — THE GATE WORKED; FUND THE MEASURED BUDGET
+
+**NON_PROJECTABLE accepted as delivered. Zero registration defects** —
+the first M-line leg on which the registration survived contact whole:
+every clause satisfiable, every bar computed at registration, ladder
+and escalation fired exactly as written, and the gate returned a
+well-defined verdict on a well-posed quantity (σ_w =
+0.026889438327132725 df-inflated; q-widths 1.1702741415331803 /
+0.6446327208199195 at n=32 and 0.8082914682805795 /
+0.45036131116284384 at n=64, truths 1.8528700746510731 / 1.0).
+
+**Rule 25 validated in both directions by one leg, on the record.**
+(i) It carried the leg PAST marginal corr(r, V) = −0.8495063312353189
+— which M1's withdrawn proxy gate would have killed at Part 0. (ii) It
+prevented a second false death at the pilot: the card channel moved
+0.20325550047558588 = 94.90× pooled SE while the field at the same
+corner moved −0.007269536568279722 = 0.754× SE — M1's declared
+fallback would have gated on that flatness and killed the leg on what
+is in fact WEAK CELL-2 EVIDENCE (the field not responding to φ is a
+possible ANSWER, not channel death). Recorded as the rule's first
+double exemplar.
+
+**The executor's flagged judgement call is answered, and kept.** The
+two-truth conjunction is decided by the q = 1.853 truth while L-2's
+registered lean puts .55 on the truth being BELOW the band — the gate
+is hardest exactly where the planner thinks the truth is not. That is
+DELIBERATE and it stays in M1c: the instrument must be able to REFUTE
+the lean, not merely confirm it; power against the disfavored
+hypothesis is what makes the .55 falsifiable rather than
+self-fulfilling.
+
+**A planner note on the pilot whisper (adjudicating nothing).** At the
+share-.60 corner the observed field contrast −0.0073 sits ≈5 pooled-SE
+below the ≈ +0.041 that a (λ = 0.180, q = 1.853) LEVEL-truth predicts
+across that corner's Δr = 0.203 — while the card channel underneath
+moved at 94.9× SE. Four worlds per corner; the projection's own MC
+error (the disclosed 2.8% proxy discrepancy) is the standing
+demonstration of how unreliable this n is. Leans and priors therefore
+inherit into M1c UNCHANGED; the note exists so that, whichever cell
+the main run lands in, the record shows the first whisper and that it
+moved nothing.
+
+**Route: fund the measured budget.** The diagnostic ladder puts the
+sufficient budget at **192 worlds/cell** (widths 0.45033528452170346
+under q 1.8528700746510731; 0.2531601642892628 under 1.0) = 3840
+worlds ≈ 6× base — feasible on this machine. Weakening the bar or
+dropping the hard truth would be bar-shopping; the budget is what the
+gate measured, so the budget is what the leg pays. M1c below. The MC
+caveat (n=64 re-draw 0.7859 vs gate 0.8083) drives M1c's projection
+precision: B_proj = 2000 with a pre-declared 10000-draw boundary
+re-run.
+
+---
+
+## M4-M1c — r-at-level at the measured budget
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Everything INHERITED VERBATIM from
+M4-M1b (which inherits M4-M1): question, machinery, source objects,
+grid share {0.10, 0.25, 0.40, 0.60} × φ {0.05, 0.30, 0.60, 0.85,
+0.98}, both planner design tables (G0m′(vii) unchanged), forms
+F1/F1e/F2/F3, optimizer pins, start grid, LOO-cell selection,
+within-cell world-block bootstrap B = 2000 (20000 at rule-13
+boundaries), tie rule, leans L-1 [.55] / L-2 [.55/.35/.10 conditional]
+/ L-3 [.70] / L-4 (reading), truth-table cells 2–6 with modifiers, and
+L-1's 0.60 bar. Exactly the following changes.
+
+- **Worlds/cell: 192** (the budget M1b's diagnostic measured). Salt
+  `m4m1c-world`, master_seed 20260811, world indices 0..191 per cell;
+  3840 worlds total.
+- **No new pilot.** G2m″: M1b's pilot artifacts are the pinned noise,
+  regime and liveness source — same instrument, same corners; G0m″
+  verifies σ_w = 0.026889438327132725 and the pilot pass records
+  bit-exactly from `results/m4_m1b_r_at_level/`. A SMOKE stage
+  (before the remaining worlds, after Part 0): generate world index 0
+  for each of the 20 cells and check ONLY per-world
+  finiteness/saturation booleans — no aggregation, no level is read
+  (pinned; these 20 worlds are retained in the main sample); any
+  failure → STOP (a mid-grid regime break is a planner-scale
+  surprise; the ALT ladder is NOT available here since it would need
+  a fresh projection).
+- **G3m″ feasibility confirmation (Part 0, before any world):**
+  recompute the projection from M1b's persisted σ_w at n = 192,
+  B_proj = 2000, seed = master, both truths; PASS iff both widths ≤
+  0.50. Boundary rule (rule 13): if either width lands in
+  [0.47, 0.53], re-decide at B_proj = 10000. On FAIL: once-only
+  escalation to n = 256 (5120 worlds; recompute; pass → main at 256,
+  budget declared; fail → STOP as NON_PROJECTABLE_AT_CEILING, handed
+  back).
+- **G0m″ anchors:** M1's (i)–(vi) and M1b's (vii)–(viii) re-verified,
+  PLUS bit-exact verification of every M1b number cited in the
+  adjudication above against `results/m4_m1b_r_at_level/` (σ_w, the
+  four gate widths, the ladder widths 0.45033528452170346 /
+  0.2531601642892628, cell sd 0.004753426045853251, the pilot
+  contrasts 0.20325550047558588 / −0.007269536568279722 with their
+  SE multiples).
+- **Stages:** part0 (incl. projection) 240 s; smoke 30 s; worlds in 5
+  chunks of 4 cells × indices 1..191 (~480 s each; 7 chunks of 3
+  cells at escalation); fit 420 s; finalize 60 s; the 2×
+  stop-and-report convention applies. Target < 80 min wall.
+- **Deliverables:** `scripts/run_suica_m4_m1c_r_at_level.py`;
+  `results/m4_m1c_r_at_level/` (gitignored);
+  `reports/SUICA_M4_M1C_R_AT_LEVEL_REPORT.md` (generated tables);
+  outcome appended HERE; one `docs/CLAIMS_LEDGER.md` row
+  (EXPLORATORY); exactly ONE commit
+  `feat(m4-m): M1c — r-at-level at the measured budget — <SLUG>`,
+  never amended, never pushed; suite green before commit.
