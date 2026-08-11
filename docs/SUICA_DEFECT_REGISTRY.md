@@ -183,3 +183,15 @@ rule without a defect number, rule-13-style:
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 27 | #45 | A route that hands a fitted object to a downstream consumer (seal, adoption, cross-leg comparison) carries an explicit identification budget on every parameter the consumer will quote; selection wins (LOO or otherwise) never alone qualify an object for consumption. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1d planner adjudication (2026-08-11)` |
+
+## Dated additions (2026-08-11, fourth note — M1e; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #46 | M-line / M4-M1e | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1e outcome + planner adjudication` | The routing table's cells overlapped (4/5 and 5/6 both reachable) — the rule-15/16 enumeration was not a partition; immaterial only because the overlapping cells shared one route; executor precedence-pin RN-M1E-5 was the in-leg repair. | none (rules 15/16 violated; #43 convention extended: planner mechanically verifies disjoint-and-covering) | partition |
+| #47 | M-line / M4-M1e | same | Rule 27's first budget list omitted α_s and λ — parameters any seal would quote; the budget attaches to whatever the consumer quotes, parameters or predictions. | none (rule 27 misapplied at first use; repaired in M2 by budgeting the predictions) | consumption-identification |
+| #48 | M-line / M4-M1e | same | The TAX_SHIFT modifier was not conditioned on its host representation being competitive — it fired on the leg's worst model's κ, and unconditioned it would have polluted M3's charter. | 28 | representation-licensing |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 28 | #48 | Cross-leg parameter comparisons (leans or modifiers) are licensed only on representations competitive in the comparing leg (the winner or its tie band); on any other representation the comparison is typed REPRESENTATION-CONDITIONED and adjudicates nothing. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1e planner adjudication (2026-08-11)` |

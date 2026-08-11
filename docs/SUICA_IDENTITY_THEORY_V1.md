@@ -1481,3 +1481,39 @@ opportunity (F1e's active ε bound → F1 co-adjudication). Rule 27
 #45: M1d's own routing would have sealed a ridge had the residual
 come back quiet. Selection is not identification; consumption
 requires both.
+
+## Appendix Z — dated append (2026-08-11, post-M1e): the readability penalty; κ becomes representation-indexed
+
+**Z.1 — The level law's measured shape (corpus-scoped).** The field
+does not separate additively in (share, φ): the winning form is
+field = α(share) − |λ|·r^q with λ = −0.057625974791364554
+[−0.0843564122153383, −0.042724477794351616] (identified) and q steep
+(point 3.86, CI [2.05, 5.92] — NOT identified; rule 27 blocked its
+consumption). Propagating (λ, q) through each share's φ-extremes
+reproduces the model-free contrast table including its non-monotone
+hump (planner arithmetic, M1e adjudication) — the shape is real even
+where the exponent is loose. Because the power is steep, the level
+price concentrates where cards are MOST readable (high r): named the
+**readability penalty** — at fixed person share, worlds whose cards
+read best pay the largest level deduction under the deployed gauge.
+Mechanism open; the additive state-dynamics alternative lost
+head-to-head, twice.
+
+**Z.2 — κ is representation-indexed.** Within any single
+representation the tax coefficient is sharply identified; across
+representations it moves: 0.6761549415814 [0.662, 0.690] under
+tax-forced-additive margins (a REJECTED model, +32% LOO — comparison
+typed representation-conditioned under rule 28) against 0.72–0.78 in
+the subtractive-V families, with the free share-margins sitting
+CONVEX below their linear-in-V chord by ~2–3 cell-SEMs. The one-κ
+question (M3) is refined accordingly: in which representation class
+is the tax an invariant, and is the V-margin linear at all. The
+five-route table of appendix Y.5 carries this as its standing caveat.
+
+**Z.3 — Method.** Rule 27's first firing blocked the seal of a
+3.87×-over-budget exponent while the rejected model met every budget
+— selection and identification are different licenses, now
+demonstrated rather than asserted. Rules 15/16 were violated by an
+overlapping routing table (#46, planner's); rule 28 was enacted
+(#48). The seal (M2) proceeds on PREDICTIONS in the trained
+r-window, where the parameter ridge does not live.

@@ -1535,3 +1535,186 @@ independent parameterisations behind it (M1c's λ>0/q<0, M1d's λ<0/q>0, M1e's
 ∂field/∂r at fixed V, or the within-share contrast, which is already the
 model-free Part-0 object of this leg — as the sealable quantity, rather than any
 exponent in any parameterisation.
+
+### Planner adjudication of M1e (2026-08-11, appended after the run) — THE SHAPE IS REAL, THE SEAL WAS RIGHTLY BLOCKED, AND κ BECOMES REPRESENTATION-INDEXED
+
+**IDENTIFIED_INSUFFICIENTLY accepted; the TAX_SHIFT modifier is
+RETYPED under new rule 28 (below) as REPRESENTATION-CONDITIONED.**
+L-1e MISS — the field does NOT separate additively (E-rq wins at
+0.0024079360107794926, 11.89% clear of E-rlin; best additive
+0.002706675155983591): my .45 additive lean lost, on the record.
+L-3e QUIET for the first time in three legs (r² −0.007427848773582237
+[−0.03672898793443594, 0.018353437794254]): the within-share shape is
+carried by a steep negative r-power. Rule 27 then did exactly what it
+was enacted for: the winner's exponent (3.863625377453229
+[2.0529339475688055, 5.921369905297595], width 3.87× budget) is not a
+quotable object, so no seal — while the rejected tax-additive model
+met every budget, the cleanest demonstration yet that **selection and
+identification are different licenses.**
+
+**The shape is quantitatively real (planner verification arithmetic,
+run at adjudication).** Propagating the winner's (λ, q) =
+(−0.057625974791364554, 3.863625377453229) through λ·Δ(r^q) over each
+share's φ-extremes reproduces the Part-0 model-free monotonicity
+table: predicted +0.00545 / +0.00991 / +0.01097 / +0.00866 against
+measured +0.00128 / +0.01039 / +0.01144 / +0.00969 (SEs ≈ 0.0025) —
+three of four inside 0.5 SE, INCLUDING the non-monotone hump (peak at
+share .40, downturn at .60, which a linear-in-r channel cannot
+produce); the share-.10 cell sits −1.57 SE (flat where the r-span is
+smallest). The r-channel lives at HIGH r: steep power ⟹ the level
+price concentrates where cards are most readable. Named (not
+claimed): the READABILITY PENALTY.
+
+**κ is representation-indexed (the leg's deepest finding).** Within
+each representation κ is sharply identified; across them it spans
+0.6761549415814 [0.6619291032569563, 0.6901486195533926]
+(tax-forced-additive, the leg's WORST model, +32.23% LOO) to 0.777
+(M1d F0). The executor's candidate (3) is upheld: an unconditioned
+cross-leg κ comparison on a rejected representation would have
+polluted M3's charter. **Rule 28 (enacted, paid by #48):** cross-leg
+parameter comparisons (leans or modifiers) are licensed only on
+representations competitive in the comparing leg (the winner or
+within its tie band); on any other representation the comparison is
+typed REPRESENTATION-CONDITIONED and adjudicates nothing. M3's
+question is hereby REFINED: not "is κ one number" but "in WHICH
+representation class is the tax an invariant — and is the V-margin
+even linear" (the free share-margins α = [0.185608, 0.145649,
+0.109349, 0.066676] at V = [0.03, 0.075, 0.12, 0.18] sit CONVEX
+below their chord by ~2–3 cell-SEMs; named for M3).
+
+**Defects (mine).** **#46 (rules 15/16 violated):** M1e's routing
+table overlapped (cells 4/5 and 5/6 both reachable by one outcome) —
+the enumeration was not a partition; immaterial only because the
+overlapping cells shared the scoped-M2 route; the executor's
+precedence pin (RN-M1E-5) was the correct in-leg repair. Enforcement
+extension of the #43 convention: the planner VERIFIES
+disjoint-and-covering mechanically before committing a routing table.
+**#47 (rule 27 misapplied at first use):** the budget list omitted
+α_s and λ — parameters any seal consumes; the budget attaches to
+WHATEVER the consumer quotes, parameters or predictions. **#48 → rule
+28** (above). Candidate (4) (parameter-count wording) noted,
+unnumbered — RN-M1E-1 pinned it correctly.
+
+**Route.** Cell 6's scoped-M2: the ridge lives in PARAMETER space,
+not prediction space over the trained r-window [0.4541409476972356,
+0.8189581462487876] — so the sealable objects are PREDICTIONS at
+configurations whose realized r stays interior: α-free within-share
+contrasts at exterior share, full levels at interior-new φ, and the
+rejected model's extrapolation as a pre-signed stress reading. M2
+registered below, at last.
+
+---
+
+## M4-M2 — the scoped extrapolation seal (predict, hash, then run)
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. The K2f Stage-2 pattern governs:
+predictions written AND HASHED before any fresh world exists
+(ordering enforced in code, G1f-style permit gate; the rule-17 pilot
+runs AFTER the stamp, RN-K2F-4 precedent); salt embedded INSIDE the
+sealed bytes (D3 convention). Instrument, seeds policy, σ_w =
+0.026889438327132725, and all M-line conventions inherited. Salts
+`m4m2-world` / `m4m2-pilot`, master_seed 20260811, 192 worlds/cell.
+
+### Design (planner arithmetic run at registration — #43 convention; executor reproduces bit-exactly)
+
+Trained r-window [0.4541409476972356, 0.8189581462487876]. New cells
+(5, all fresh; 960 worlds):
+
+| cell | share | φ | r (planner-computed) | V | role |
+|---|---|---|---|---|---|
+| C1 | 0.70 | 0.05 | 0.5967380569813433 | 0.21000000000000005 | P1 contrast side; share EXTERIOR (envelope top 0.6634207990183637) |
+| C2 | 0.70 | 0.60 | 0.5197539933932338 | 0.21000000000000005 | P1 contrast side; P4 stress level |
+| C3 | 0.40 | 0.45 | 0.7131718346406168 | 0.12000000000000004 | P2 level; φ interior-new |
+| C4 | 0.25 | 0.05 | 0.785015540293945 | 0.07500000000000002 | P3 contrast side; config duplicates an M1c cell on a FRESH salt → the seed-replication reading |
+| C5 | 0.25 | 0.995 | 0.6701862156520305 | 0.07500000000000002 | P3 contrast side; φ EXTERIOR (above .98) |
+
+Every realized r is interior to the window (that is the scope).
+Share-.70 cells at φ ≥ 0.85 were REJECTED at registration because
+their r exits the window (0.44410111322601925 / 0.384884059649622 —
+computed, excluded, disclosed).
+
+### The sealed predictions (computed in Part 0, then hashed, then worlds)
+
+The predictor: E-rq refit bit-identically from M1c's persisted 20
+cell means (deterministic; G0 verifies the point parameters equal
+M1e's persisted values bit-exactly), with the winner's within-cell
+world-block bootstrap (B = 2000, pinned seed) recomputed and each
+draw propagated through the formulas. Band for each prediction =
+[boot 2.5% − 2·SE_meas, boot 97.5% + 2·SE_meas], SE_meas = σ_w/√192
+for levels and √2·σ_w/√192 for contrasts; two-sided containment
+(rule 22).
+
+- **P1 (contrast, α-free):** field(C2) − field(C1) = λ·(r_C2^q −
+  r_C1^q). Planner sanity value ≈ +0.0032. **L-3m2 [.50]** inside.
+- **P2 (level):** α(0.40) + λ·r_C3^q. Planner sanity ≈ +0.0937.
+  **L-2m2 [.60]** inside.
+- **P3 (contrast, the flagship — high-r region where the channel
+  lives, φ-exterior):** field(C5) − field(C4) = λ·(r_C5^q − r_C4^q).
+  Planner sanity ≈ +0.0103 (≈ 3.8 contrast-SE). **L-1m2 [.60]**
+  inside.
+- **P4 (stress reading, NO gate, pre-signed):** the REJECTED
+  tax-additive model's level at C2: c − κ·V(0.70) + g_φ(0.60),
+  planner sanity ≈ +0.0382. Pre-signed lean [.55]: measured ABOVE
+  (the free margins are convex-below-chord, so the linear-tax
+  extrapolation over-falls). Reported either way; feeds M3.
+- **Replication reading (NO gate):** |mean(C4) − M1c's persisted
+  (0.25, 0.05) cell mean| vs 2·√2·SEM → quiet [.85] or
+  SEED_INSTABILITY flagged.
+
+### Rule-27 budgets (on the CONSUMED objects — the predictions; #47's repair)
+
+Band total widths, computed in Part 0 BEFORE the stamp: P1 ≤ 0.04;
+P2 ≤ 0.05; P3 ≤ 0.04. A prediction whose band exceeds its budget is
+**VOID_FOR_WIDTH** before measurement (a seal too wide to miss seals
+nothing); voids are disclosed and excluded from the promotion count.
+
+### Gates
+
+- **G0m2 (bit-exact).** (i) The design table above reproduced from
+  the pinned maps; (ii) every M1e number quoted in the adjudication
+  above verified at full precision against `results/m4_m1e_shape/`
+  (winner params + CIs, LOO table, monotonicity table, α vector, g_φ
+  vector, tax-add κ CI); (iii) M1c cell means re-derived bit-exact;
+  (iv) σ_w and the r-window endpoints against their persisted
+  sources; (v) the E-rq refit's point parameters equal M1e's
+  persisted values bit-exactly. Mismatch → STOP.
+- **G1m2 (ordering, enforced not asserted).** K2f's G1f pattern: the
+  permit to generate ANY fresh world (pilot included) is issued only
+  by re-reading predictions.sha256 from disk and re-hashing
+  predictions.json; zero pre-stamp generations; ordering log
+  persisted.
+- **G2m2 (pilot, AFTER the stamp).** 4 worlds each at C1 (share
+  exterior) and C5 (φ exterior), salt `m4m2-pilot`:
+  finite/non-saturated/nonzero-variance only. Failure → the leg
+  stops with the predictions on the record unresolved (RN-K2F-4's
+  accepted cost, stated).
+- **G3m2.** Sides declared (all containments two-sided); stage
+  estimates: part0 300 s (refit + bootstrap + stamp), pilot 30 s,
+  worlds 3 chunks (2/2/1 cells) × ~420 s, measure 120 s, finalize
+  60 s; 2× stop-and-report.
+- **G4m2.** Routing table below reproduced verbatim; planner has
+  verified it is disjoint and covering (#46's enforcement); rule 24
+  generated tables.
+
+### Routing (rule 16 — disjoint and covering, planner-verified)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0m2 mismatch | **STOP** (citation defect; nothing sealed) |
+| 2 | any band budget exceeded in Part 0 | that prediction **VOID_FOR_WIDTH**; continue with the rest; if fewer than 3 predictions remain valid, the promotion cell is unreachable (best available = cell 5 grades) |
+| 3 | pilot regime failure | **UNRESOLVED_SEAL** — predictions stand on the record unmeasured; leg ends |
+| 4 | 3 valid predictions AND 3/3 inside | **LEVEL_LAW_PREDICTIVE_SCOPED** — the scoped level law (free share-margins + steep negative r-power, r interior) is graded PREDICTIVE in its scope: sealed-then-hit at share-exterior and φ-exterior configurations; the scope IS the claim |
+| 5 | exactly 2 of the valid predictions inside | **BOUNDARY_NAMED** — the missing prediction names the boundary of validity; theory note required |
+| 6 | ≤ 1 of the valid predictions inside | **NO_TRANSFER** — the shape does not leave its corpus; the line closes at the measured limit |
+| — | P4 above/below/inside its own reported ±2·SE_meas of the tax-linear value | modifier **STRESS_{ABOVE,BELOW,MET}** (pre-signed ABOVE) — feeds M3 |
+| — | replication reading exceeds 2·√2·SEM | modifier **SEED_INSTABILITY** |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_m2_scoped_seal.py`; `results/m4_m2_scoped_seal/`
+(gitignored); `reports/SUICA_M4_M2_SCOPED_SEAL_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-m): M2 — the scoped extrapolation seal — <SLUG>`,
+never amended, never pushed; suite green first. 960 worlds + 8 pilot;
+target < 30 min wall, every stage < 600 s.
