@@ -161,3 +161,15 @@ registered gate is deterministic arithmetic from pinned source objects,
 the planner RUNS the gate before committing the registration and embeds
 the computed table in the registration text (M1 adjudication,
 2026-08-11).
+
+## Dated additions (2026-08-11, second note — M1b/M1c; append-only)
+
+M1b and M1c completed with ZERO new numbered defects (registrations
+survived contact whole; M1b validated rule 25 in both directions).
+M1c's one non-blocking candidate — a bounded form winning with its
+bound ACTIVE, verdicts saved only by the tie rule's luck — bought a
+rule without a defect number, rule-13-style:
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 26 | M1c's bounded-winner fragility (no numbered defect) | When a bounded form wins selection with any bound ACTIVE at its optimum, every verdict is co-adjudicated on its unbounded relaxation (or nearest registered unbounded form); disagreement reports SPLIT; bound-activity is itself a reported finding and the active-bound CI is flagged one-sided-by-construction. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1c planner adjudication (2026-08-11)` |

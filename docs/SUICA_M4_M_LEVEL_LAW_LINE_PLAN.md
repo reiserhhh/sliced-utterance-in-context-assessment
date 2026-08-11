@@ -966,3 +966,170 @@ the more honest object. That is a registration decision; the executor takes no
 position beyond reporting that the two are statistically indistinguishable here.
 M3 (the one-kappa question) is now materially better supplied: kappa's fourth
 appearance arrives with the tightest interval in the record.
+
+### Planner adjudication of M1c (2026-08-11, appended after the run) — THE EXPONENT IS MEASURED, ITS SIGN IS NEGATIVE, AND THE FAMILY IS CONVICTED
+
+**LEVEL_RESPONSE_DISSOCIATION + KAPPA_FOURTH_APPEARANCE accepted.**
+L-1 HOLD at width 0.06450495950436737 against a 0.60 bar — the
+decollinearized factorial identified at the first attempt what two
+corpora could not. L-2 BELOW — and not merely below the band:
+**below zero** (winner F1e q = −0.15040108849226472
+[−0.18322395953281184, −0.11871900002844447]; unbounded F1 agrees,
+q = −0.1888182542137735 [−0.22686946646111852, −0.14900957557344477]).
+The registered lean (.55 below) pays out, and the both-truth gate that
+was hardest under the disfavored truth is what makes this payout
+worth something. L-3 overlap: κ = 0.7601952008701406
+[0.7356727662590873, 0.7846243216827854] — the tax's FOURTH
+independent appearance (0.722 difference-fitted; ≈0.715 9-pair refit;
+0.750 K2f level; 0.760 here). The substantive core, stated plainly:
+**at exactly fixed V = 0.18, r falls 0.657 → 0.454 and the measured
+field RISES 0.0541 → 0.0638 (4.03 pooled SEM) — the level law's
+r-dependence has the OPPOSITE SIGN to the response-grade exponent.**
+
+**The family is convicted by two independent readings.** (i) F1e's ε
+sits ON its declared bound (CI collapsed to within 9.04e-14 of 0.05)
+— the family wants more constant than the T4 species floor allows.
+(ii) Appendix W's discriminator FIRED IN KIND WITH INVERTED SIGN:
+within-share r² residual coefficient −0.19911194958208703
+[−0.2879978718649799, −0.10706476050455438] with the Spearman probe
+quiet (2/4, 0/4) — FORM_GAP, not φ-leak; but W.1 predicted a positive
+U for the (c>0, q>0) corner and the world sits in the (c pressed,
+q<0) corner. Appendix W's sign prediction was WRONG and the record
+says so (theory appendix X.5); the prescription it attached (a
+registered form extension, not a φ-channel claim) survives and is
+executed as M1d below.
+
+**Rule 26 (enacted, rule-13-style — paid for by M1c's non-blocking
+candidate, on which nothing turned only because the tie rule forced
+F1 agreement by luck):** when a bounded form wins selection with any
+bound ACTIVE at its optimum, every verdict is co-adjudicated on its
+unbounded relaxation (or nearest registered unbounded form);
+disagreement reports SPLIT; bound-activity is itself a reported
+finding, and the active-bound CI is flagged one-sided-by-construction.
+
+**Theory consequence (dated, appendix X):** the response-grade band
+q = 1.83 [1.71, 1.98] was measured on K2b's share-driven sweeps, where
+r and V move in lockstep — no V-clean positive-exponent measurement
+exists anywhere in the record. M1c's V-clean measurement is negative.
+The re-attribution — **the "quadratic over-response" was mostly the
+variance tax wearing r's clothes** — is recorded in appendix X with
+its yield clause, and M1d carries the in-corpus demonstration
+(the V-omitted shadow fit, pre-signed positive).
+
+**The executor's M2 flag is answered by sequencing.** Cell 4's route
+("M2 seals the measured law") STANDS; what M1d determines is WHICH
+measured law is the sealable object — sealing F1e would seal a
+boundary artifact and sealing an incomplete family would seal glue
+(the D-open lesson). M1d is artifact-space (no new worlds), then M2
+seals its winner at exterior configurations. Projection honesty note
+carried: the binding width 0.46602037304504784 sat just below the
+re-decide band and the registered rule decided — disclosed, correct.
+
+---
+
+## M4-M1d — the completion and the coordinate (artifact-space; the leg appendix W's discriminator prescribed)
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. NO NEW WORLDS: the data are M1c's
+persisted 3840-world corpus (`results/m4_m1c_r_at_level/`), the 20
+cell means re-derived round-trip from the rawest per-world artifacts.
+Optimizer pins, start-grid conventions, LOO-cell selection,
+within-cell world-block bootstrap (B = 2000; 20000 at rule-13
+boundaries), tie rule at 5%, and rule 26 are inherited/in force.
+
+### Question
+
+Two, sharp: (1) **Completion** — does one free intercept complete the
+family (the exact gap appendix W.1 named)? (2) **Coordinate** — is
+the level law's second argument r (card space) or φ (state dynamics)?
+Within a share stratum r and φ are re-parametrizations; ACROSS shares
+they differ exactly where r(share, ·) moves — the factorial can tell
+them apart. The mechanism hypothesis being tested (named in appendix
+X.4, not claimed): the deployed gauge is an occasion-structure
+consumer, not a card consumer — slower state (higher φ) means more
+coherent occasion blocks and a more readable person×frame
+interaction, RAISING the field even as the card attenuates (K-R1's
+scaffold finding and K2b's G4b supply the frame-carried substrate).
+
+### Forms (six; the four incumbents frozen in their M1c roles, plus)
+
+- **F0: field = c + λ·r^q − κ·V** — free intercept, ALL parameters
+  unbounded (the W.1 gap made a form);
+- **Fφ: field = c + a·φ^m − κ·V** — the coordinate alternative,
+  unbounded; φ = the design φ of each cell.
+
+Start grids (pinned): F0 — c ∈ {0, 0.05, 0.1}; λ ∈ {0.05,
+0.17417497661611914, 0.5}; q ∈ {−1, −0.5, −0.15, 0, 0.5,
+1.8528700746510731}; κ ∈ {0, 0.7220359963712748, 2.0} (162 starts).
+Fφ — c ∈ {0, 0.05, 0.1}; a ∈ {0.01, 0.05, 0.15}; m ∈ {0.5, 1, 2, 4};
+κ as F0 (108 starts). Nesting stated: F0 nests F1 at c = 0; Fφ nests
+no incumbent. Selection: leave-one-CELL-out RMSE across all SIX
+forms; bootstrap CIs for the winner(s); rule 26 co-adjudication
+wherever a bound is active (none is declared for F0/Fφ).
+
+### Leans (sides declared)
+
+- **L-1d [.70]:** an extension (F0 or Fφ) beats ALL FOUR incumbents
+  on LOO. One-sided.
+- **L-2d [conditional on L-1d; .50/.50]:** Fφ vs F0 as LOO winner —
+  the coordinate question; either answer re-types theory (X.4).
+- **L-3d [.75]:** the winner's κ CI overlaps M1c's
+  [0.7356727662590873, 0.7846243216827854] — the fifth appearance.
+  Two-sided overlap.
+- **L-4d (reading → routing):** the winner's within-share r²-residual
+  CI contains 0 ⟹ the family is COMPLETE (routes M2); fires ⟹ M2 is
+  DEFERRED (sealing an incomplete family is sealing glue).
+
+### Readings (adjudicate nothing; both pre-signed)
+
+- **The V-shadow demonstration:** fit field = λ·r^q with NO V term
+  and NO intercept on M1c's own 20 cells. Pre-signed: q_shadow > 0 —
+  omitting the tax flips the exponent's sign in-corpus, the
+  re-attribution of the response-grade band made visible in one
+  number. Report q_shadow with CI.
+- **Legacy retrodiction:** the winner's plain RMSE on K2f's 26
+  compiled rows (re-derived round-trip) vs the sealed form's
+  0.11259090547752257 and K2f's refit LOO 0.0061559195350209.
+  Scoped: same-instrument extrapolation across corpora, descriptive.
+
+### Gates
+
+- **G0d (bit-exact).** (i) Re-derive M1c's 20 cell means from the
+  rawest persisted per-world artifacts; match the persisted means
+  bit-exactly. (ii) Verify every M1c number quoted in the
+  adjudication above against `results/m4_m1c_r_at_level/` at full
+  precision (both q CIs, κ CI, λ CI, ε boundary gap, LOO values, tie
+  margin 1.2480116602522386e-05, r² CIs, Spearman vector, field/SEM
+  ranges, the share-.60 rise 0.05410832013119198 →
+  0.063796931786496 and its 4.03-SEM multiple, projection widths).
+  (iii) The theory-doc band [1.71, 1.98] quote unchanged. Any
+  mismatch → STOP (citation defect).
+- **G1d.** Six-form table with nesting statement written before any
+  fit; rule-22 sides; rule-24 generated tables. No feasibility gate:
+  no new worlds — the estimand is form comparison on existing data
+  and LOO is its guard (rule 25 note recorded).
+- **G3d.** Stage estimates: part0 120 s, fit 240 s, finalize 60 s;
+  2× stop-and-report.
+
+### Routing (rule 16 — every combination to exactly one outcome)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0d mismatch | **STOP** (citation defect; no fit) |
+| 2 | incumbents stand AND winner r² quiet | **FAMILY_STANDS** — M2 seals the M1c pair (F1e+F1 co-sealed per rule 26) |
+| 3 | incumbents stand AND r² fires | **INCOMPLETE_UNREPAIRED** — M2 deferred; M1e (shape study) named |
+| 4 | F0 wins AND r² quiet | **COMPLETED_IN_R** — T4 keeps the r-coordinate with an intercept; M2 seals F0 |
+| 5 | Fφ wins AND r² quiet | **COORDINATE_RETYPED_TO_PHI** — the level law's second argument is state dynamics, not card readability; M2 seals Fφ |
+| 6 | an extension wins AND r² fires | **COMPLETED_BUT_INCOMPLETE** — M2 deferred; M1e named |
+| — | F0/Fφ tie (<5% LOO) | **CO_WINNERS** — both sealed in M2 (multiple predictions inside one hashed file, K2f precedent); verdicts co-adjudicated, disagreements SPLIT |
+| — | L-3d disjoint | modifier **TAX_SHIFT** → M3's charter |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_m1d_form_completion.py`;
+`results/m4_m1d_form_completion/` (gitignored);
+`reports/SUICA_M4_M1D_FORM_COMPLETION_REPORT.md` (generated tables);
+outcome appended HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-m): M1d — the completion and the coordinate —
+<SLUG>`, never amended, never pushed; suite green first.
+Artifact-space only: target < 10 min wall, every stage < 600 s.

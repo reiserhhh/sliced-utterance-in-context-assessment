@@ -1364,3 +1364,66 @@ table controls), the r-term spread at λ ≈ 0.18 is ≈ 0.088 at q = 1.85
 ≈ 0.020 at q = 0.2 (~4 SEM). Any real r-dependence down to q ~ 0.2 is
 multiple noise floors wide; flatness, if found, will be flatness of
 the world, not of the design.
+
+## Appendix X — dated append (2026-08-11): the level exponent is negative; the response-grade band is re-attributed; the coordinate question is opened (M4-M1c)
+
+**X.1 — The measurement.** On the first decollinearized corpus (M1c:
+share × φ factorial, 20 cells × 192 worlds, within-share sweeps at
+EXACTLY fixed V), the level law's exponent is identified at the first
+attempt: winner form q = −0.15040108849226472 [−0.18322395953281184,
+−0.11871900002844447] (width 0.065 against a 0.60 bar); the unbounded
+companion agrees (−0.189 [−0.227, −0.149]). At fixed V = 0.18, r
+falls 0.657 → 0.454 while the measured field RISES 0.0541 → 0.0638 =
+4.03 pooled SEM. **The level law's r-dependence is negative — small,
+real, and opposite in sign to the response-grade exponent.**
+
+**X.2 — The re-attribution (dated correction to appendix V.2's
+split).** V.2 kept "the quadratic over-response (q ≈ 1.83–1.93)" as a
+response-structure fact "measured where it lives (K2b's swings)."
+The M-line's audit trail now shows: K2b's sweeps are SHARE-driven, so
+r and V move in lockstep there — **no V-clean positive-exponent
+measurement exists anywhere in the record**, and the first V-clean
+measurement (M1c) is negative. The band q = 1.83 [1.71, 1.98] remains
+a true description of the pooled share-driven curve; its ATTRIBUTION
+to a readability exponent does not survive. Plainly: **the "quadratic
+over-response" was mostly the variance tax wearing r's clothes.**
+Yield clause: if a V-clean positive-exponent measurement is found or
+produced on this instrument family, this note yields to it. (M1d
+carries the in-corpus demonstration: the V-omitted shadow fit,
+pre-signed positive.)
+
+**X.3 — The tax's fourth appearance.** κ = 0.7601952008701406
+[0.7356727662590873, 0.7846243216827854], against 0.7220359963712748
+(difference-fitted, sealed), ≈0.715 (9-pair refit), 0.750086268225045
+(K2f level refit). Four routes — difference-space, matched pairs,
+collinear level, decollinearized level — one constant. The tax, not
+the exponent, is the reader's invariant; M3's one-κ question now has
+four points and a fifth is pre-registered in M1d (L-3d).
+
+**X.4 — The coordinate question (named, M1d charters).** The sign
+makes a mechanism hypothesis testable: the deployed gauge may be an
+OCCASION-STRUCTURE consumer, not a card consumer — slower state
+(higher φ) yields more coherent occasion blocks and a more readable
+person×frame interaction (K-R1's scaffold; K2b's G4b), raising the
+field even as the card attenuates. If so, the level law's second
+argument is φ (state dynamics), not r (card readability), and T4's
+composite was written in the wrong coordinate. The factorial can
+discriminate (within share they are re-parametrizations; across
+shares they part), and M1d fits both representations head-to-head.
+
+**X.5 — Appendix W post-mortem (rule 24 applied to the planner's own
+prediction).** W.1's discriminator FIRED IN KIND — within-share
+quadratic residual with the Spearman probe quiet, form-gap not
+φ-leak — but with INVERTED SIGN: W.1 predicted a positive-U for the
+(c>0, q>0) corner; the world sits at (c pressed to its bound, q<0)
+and the measured r² coefficient is −0.199 [−0.288, −0.107]. The
+prediction was wrong in sign; the prescription (a registered form
+extension) was right and is executed as M1d. Recorded plainly so the
+record shows the planner's derivation corrected by measurement.
+
+**X.6 — Instrument lesson → rule 26.** The winning form's ε sat ON
+its declared bound (within 9.04e-14), making its CI
+one-sided-by-construction; the verdicts survived only because the
+5%-tie rule forced agreement with the unbounded form. Rule 26 (M-line
+plan doc) makes that co-adjudication mandatory wherever a bound is
+active, and types bound-activity as a finding.
