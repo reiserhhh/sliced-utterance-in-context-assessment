@@ -595,3 +595,131 @@ outcome appended HERE (append-only); one `docs/CLAIMS_LEDGER.md` row
 amended, never pushed. Suite green before commit. Budget: 640 worlds
 (1280 at escalation) ≈ 0.6 s each plus fits — target < 30 min wall,
 every stage < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`NON_PROJECTABLE` — rule-16 cell 1, via G3m′(b) failing after its once-only
+escalation.** Report: `reports/SUICA_M4_M1B_R_AT_LEVEL_REPORT.md`; harness
+`scripts/run_suica_m4_m1b_r_at_level.py`; artifacts `results/m4_m1b_r_at_level/`.
+**16 pilot worlds ran; 0 main worlds were
+generated and no fit was run.**
+
+**Rule 25 is validated in BOTH directions by this one leg, and that is the
+headline.** It carried M1b PAST a marginal `corr(r, V)` of `-0.8495063312353189`
+(`corr(r^q, V) = -0.8649603255864755`) — nearly 3× M1's withdrawn 0.30 bar, now
+correctly REPORTED and gating nothing. It then STOPPED the leg on the quantity
+the estimand actually consumes. Two different failures; only the second is
+information.
+
+**G0m′ PASSES on all eight clauses.** (i)–(vi) re-verified from M1. **(vii): both
+of the planner's embedded design tables reproduce BIT-EXACTLY** — every `r`,
+every `V`, all four spans on the main ladder, all four ALT spans, and all four
+descriptives (`-0.8495063312353189`, `-0.8649603255864755`,
+`-0.8915685583022667`,
+`-0.9029258027968385`). The planner ran its own arithmetic before committing, as
+the convention defect #43 bought requires, and it is correct to the last bit.
+**(viii): the M1-STOP numbers cited in the adjudication verify against this
+executor's own `results/m4_m1_r_at_level/`** — infimum `0.748768093111513`,
+freed-shares bound `0.5208187741410987`, and all four full-interval spans.
+**G1m′ PASSES**: (a), (b) (V ratio 6.0), (c′) — the absolute-span
+repair — at `[0.15863752656482977, 0.20320393707216905]` against a `0.12` bar, and (e) 20/20
+distinct points. Machinery inheritance was not asserted but PROVEN: the copied
+harness was compared against the imported M1 module and all four forms fit a
+fixed probe bit-identically, with identical start grids, optimizer dict and
+inherited bars (RN-M1B-1).
+
+**G2m′ PASSES, and its liveness clause is the registration's second
+vindication.** All four corners finite, non-saturated, nonzero variance. The
+φ→r channel is alive beyond argument: the realized card attenuation moves
+`0.20325550047558588` between φ .05 and .98 at share .60 =
+**94.8954999654606× its pooled SE**, landing `5.156340341683219e-05` from the
+pinned map's predicted `Δr = 0.20320393707216905`. **The FIELD at that same
+corner moves `-0.007269536568279722` = 0.7542598230697173× its pooled SE —
+flat within noise.** M1's registration would have gated on exactly that number
+as its declared fallback and the leg would have died a SECOND false death, on
+evidence that the field does not respond to φ, which is the very thing the leg
+exists to measure. M1b's text forbids it in advance ("a flat field is cell-2
+EVIDENCE, not channel death"), written before the number existed. Read honestly
+that flatness is weak evidence toward cell 2 (`R_TERM_ABSENT_AT_LEVEL`) — four
+worlds against four at one share — and it adjudicates NOTHING here.
+
+**G3m′(b) FAILS — the stop.** σ_w = `0.019489117988137468` pooled over the 16 pilot
+worlds (df 12), df-inflated by `1.3797155080850578` to **`0.026889438327132725`**.
+Projected 95% width of q̂ at 32 worlds/cell: `0.6446327208199195` at q_truth 1.0 and
+`1.1702741415331803` at q_truth 1.8528700746510731, against the `0.5`
+bar — both fail. The pre-declared once-only escalation FIRED. At 64
+worlds/cell: `0.45036131116284384` (CLEARS) and `0.8082914682805795` (does not). The
+registration requires BOTH. **Gate FAIL → NON_PROJECTABLE.** The failure is
+PRECISION, not pathology: median q̂ tracks its truth at every configuration
+({'1.0': 1.0021891019795262, '1.8528700746510731': 1.8442504925087377} at n=32) and zero replicates failed to converge.
+
+**What n WOULD suffice — measured, not extrapolated.** Defect #43 was an
+extrapolation where arithmetic was available; the handoff does not repeat it.
+On a declared geometric ladder `[64, 128, 192, 256, 384, 512]`, running the binding truth until
+it clears and confirming the other truth there: **192 worlds/cell** is
+the smallest passing rung (widths `[0.7859406063487944, 0.5516920936367253, 0.45033528452170346]` at `[64, 128, 192]`),
+with the non-binding truth confirming at `0.2531601642892628`. That is
+**3840 worlds, 6.0× the registered base budget** — at
+~0.6 s/world a wall-clock change, not a feasibility change. Precision caveat,
+disclosed: the ladder re-drew the n=64 binding cell on a fresh stream and got
+`0.7859406063487944` where the gate got `0.8082914682805795` (abs diff
+`0.02235086193178515`), so the width proxy itself carries ~2.8%
+Monte-Carlo error at B_proj = 500 and 192 should not be read as exact.
+
+**This is NOT a registration defect and should not be recorded as one.** Every
+clause was satisfiable, every bar was computed at registration, the ladder and
+the escalation both fired exactly as written, and the gate returned a
+well-defined verdict on a well-posed quantity. `NON_PROJECTABLE` is a
+pre-declared outcome of a SOUND registration. **One judgement call is flagged
+for the planner, not as a defect but as a choice worth revisiting:** the
+two-truth conjunction is decided entirely by q_truth = 1.8528700746510731,
+while the registered L-2 lean puts .55 on q being BELOW the response band. At
+q_truth = 1.0 the escalated design already clears at
+`0.45036131116284384`. Larger q means smaller r^q on r < 1, so the exponent's signal
+shrinks and its interval widens — the gate is hardest exactly where the leg
+thinks the truth is not. Whether that conjunction is intended conservatism or
+over-strict is the planner's to settle; the executor scored it as written and
+takes no position.
+
+**Three routes, none adopted here.** (1) Buy the precision: 192
+worlds/cell. (2) Re-state the gate if the two-truth conjunction is stricter than
+intended — it would pass at 64 today under a lean-weighted or q-anchored
+variant. (3) The int_share second axis, which this registration NAMES and
+forbids adopting: it was therefore NOT probed, because exercising it requires
+installing K2d's `int:` dispatcher on every reachable k2b instance (RN-K2F-5), a
+machinery mutation this leg has no licence to make for a knob it may not adopt —
+and under the planner-side convention #43 bought, that arithmetic is the
+PLANNER's to run before registering a successor. It is deterministic and needs
+no world.
+
+**Anomalies, with timing.** The hypothesis-relevant boundary here is the PILOT:
+before it no outcome-side number existed; after it the field contrast and σ_w
+did; no lean was ever scored. **A-1/A-2 (before Part 0):** the M4-M1 environment
+is reused verbatim — a CPython 3.12.12 venv outside the repo from
+`requirements-lock-main.txt` (numpy `2.4.4`, pandas `3.0.2`, scipy
+`1.17.1`), because this machine's only pandas belongs to CPython 3.9.6
+which cannot import the published machinery; and macOS ships no `timeout(1)`, so
+each stage ran as its own foreground command under an explicit harness timeout.
+**A-3 (AT the pilot — the first hypothesis-relevant number):** the outcome-side
+flatness above; it changed no gate because the registration had already removed
+the field from the liveness clause BEFORE the number existed. **A-4 (after
+σ_w):** the gate failed and the escalation fired, once, exactly as pre-declared.
+**A-5:** RN-M1B-8 (the n-ladder) was added after σ_w existed — disclosed; it
+consumes only σ_w and the pinned maps, no lean-relevant quantity, and adopts
+nothing. **A-6:** the Monte-Carlo discrepancy at the one overlapping
+configuration, disclosed above rather than smoothed. **A-6b — rule 24 caught a
+claim in this leg's own prose pre-commit:** the liveness paragraph first said the
+realized card contrast "agrees bit-exactly" with the pinned map's Δr; it does
+not and could not (a measurement over 8 worlds against deterministic algebra),
+they differ by `5.156340341683219e-05`, and the sentence is now generated from
+both values. **A-7:** no stage approached its 2× threshold — Part 0
+`1.9119329452514648` s vs 60, pilot `9.718364953994751` s vs 40, power
+`82.15909004211426` s vs 120, diagnose `79.69169306755066` s vs 300.
+
+**Line consequence.** M2 was registered as blocked on
+`NON_IDENTIFIED_UNDERPOWERED`; this is a different stop and reaches it earlier —
+the level law's exponent is not merely unidentified on the data, it is priced:
+identification at the registered width costs 192 worlds/cell on this
+design. M2's charter is untouched but still unfed. M3 (the one-κ question) is
+independent of this leg and remains unblocked — and note that κ, unlike q, was
+never the binding difficulty in any projection here.
