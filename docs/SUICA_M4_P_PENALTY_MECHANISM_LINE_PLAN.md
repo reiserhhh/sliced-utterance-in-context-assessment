@@ -727,3 +727,119 @@ commit `feat(m4-p): P3 — the natural gradient under frame
 refreshment — <SLUG>`, never amended, never pushed; suite green
 first. 1920 worlds (×2 at escalation) + 16 pilot; target < 45 min,
 every stage < 600 s.
+
+### M4-P3 outcome (appended after execution; registration above unedited)
+
+**INFEASIBLE_SPLIT — routing cell 1.** STOP / INFEASIBLE_SPLIT. Stopped at
+G1p3(a) -- provably unsatisfiable through the existing constructor interface. **0 worlds drawn, no seal.** Ladder:
+none: the registration legislates STOP as INFEASIBLE_SPLIT and calls it an instrument finding, not a failure. Harness `scripts/run_suica_m4_p3_refresh_gradient.py`;
+report `reports/SUICA_M4_P3_REFRESH_GRADIENT_REPORT.md`; artifacts
+`results/m4_p3_refresh_gradient/` (gitignored).
+
+**The impossibility is PROVEN over the constructor's entire input space, not
+inferred from reading the code.** `build_k2b_world` has exactly
+2 parameters — `build_k2b_world(world_seed: 'int', phi_slow: 'float') -> 'dict[str, np.ndarray]'` — with no varargs (False) and
+no defaults (False), verified by `inspect` at run time. Its input
+space is therefore the pair (world_seed, phi_slow) and nothing else, so
+enumerating the effect of each argument is exhaustive. 8 trials:
+
+| axis | point | trait (A) | a_load (A) | slow (F) | slow_latent (F) | common (F) | int (F) | author identical | SPLIT? |
+|---|---|---|---|---|---|---|---|---|---|
+| vary world_seed (fixed phi) | {'phi_slow': 0.05, 'world_seed': 1002} | False | False | False | False | False | False | False | no |
+| vary world_seed (fixed phi) | {'phi_slow': 0.05, 'world_seed': 20260814} | False | False | False | False | False | False | False | no |
+| vary world_seed (fixed phi) | {'phi_slow': 0.05, 'world_seed': 7} | False | False | False | False | False | False | False | no |
+| vary phi_slow (fixed world_seed) | {'phi_slow': 0.3, 'world_seed': 1001} | True | True | False | False | True | True | True | no |
+| vary phi_slow (fixed world_seed) | {'phi_slow': 0.6, 'world_seed': 1001} | True | True | False | False | True | True | True | no |
+| vary phi_slow (fixed world_seed) | {'phi_slow': 0.85, 'world_seed': 1001} | True | True | False | False | True | True | True | no |
+| vary phi_slow (fixed world_seed) | {'phi_slow': 0.98, 'world_seed': 1001} | True | True | False | False | True | True | True | no |
+| vary both | {'phi_slow': 0.98, 'world_seed': 1002} | False | False | False | False | False | False | False | no |
+
+Two facts do the work. **Changing `world_seed` changes every channel, the
+author channel included** — `trait` is built from `z` and `loadings`, both drawn
+from `default_rng(world_seed)` BEFORE any frame object, so G1p3(a) (author
+objects bit-identical per pair) fails at every seed pair. **Changing `phi_slow`
+holds the author channel bit-identical but does not refresh the frame** — only
+slow, slow_latent move; **common, int are bit-identical across φ**,
+and `common`, the frame channel proper and the object this leg is about, is
+among them. The registration's third frame item, occasion assignments, lives in
+`k2b.layout()`, which takes no arguments and is memoised in a module-private
+global — not seed-driven at all.
+
+**A predicate subtlety, caught and pinned BEFORE any verdict existed
+(RN-P3-6), disclosed because a looser reading would have flipped the outcome.**
+Scoring "any frame object differs" makes the φ axis look like a split (at fixed
+seed, φ leaves the author channel identical and moves `slow`). That reading is
+wrong on two independent grounds, both read off the registration: **A and B must
+sit at the SAME φ** — φ is the ladder variable being decomposed, so it cannot
+also be the refresher — and **`common` is bit-identical across φ**, with only
+the recombination of the SAME innovation draws changing, which is not a fresh
+draw. The tight predicate (at fixed φ, a seed pair holding every author object
+identical while `common` differs) is the one that routes. Both are computed and
+persisted; the loose one is satisfied only by
+['vary phi_slow (fixed world_seed)', 'vary phi_slow (fixed world_seed)', 'vary phi_slow (fixed world_seed)', 'vary phi_slow (fixed world_seed)'].
+
+**Routes that would work, all excluded by the registration's own words.**
+(a) Editing `build_k2b_world` to accept split seeds — k2b is READ-ONLY.
+(b) Channel surgery on the returned dicts — not "seeding", and independently
+incoherent: the constructor does not return `loadings`, so splicing A's trait
+onto B's frame would silently mix two orthonormal bases with no way for a caller
+to detect it from the public return value. (c) Mutating k2b's memoised private
+`_LAYOUT` to re-key the frame shocks — module-private state mutation, not
+seeding, and it cannot refresh the slow state. Each is recorded as a route the
+planner could authorise; none was taken.
+
+**What would make P3 feasible.** build_k2b_world would need to accept the frame stream's seed separately from the author stream's -- e.g. an optional frame_seed defaulting to world_seed, which would leave every existing call bit-identical — small and backward-compatible,
+since `trait` and `a_load` are drawn before any frame object, but it is an edit
+to k2b that this leg is forbidden to make. **The alternative needing no edit
+deserves the planner's attention:** reader-level refreshment (K1b / K1c-prime's reader A vs A', disjoint norm sub-pools) is the programme's OWN published form of the T6-double-prime operation and is fully supported by existing machinery -- a different estimand, named for the planner, not chosen here (RN-P3-5)
+
+**A lineage finding inside G0p3(iv) (RN-P3-5, reported not routed).** All
+5/5 T6″ anchors were located and quoted by code.
+**Every published frame-refreshment in this programme — K1b's and K1c′'s reader
+A vs A′ — refreshes the READER's norm/issuer sample via disjoint author
+sub-pools; none refreshes the GENERATOR's frame channel.** The operation P3
+registers is generator-level refreshment, which has no precedent in the repo
+and, as proven above, no interface. The T6″ pattern the registration cites is
+real and published; it simply lives at a different layer than the one P3 needs.
+
+**What Part 0 established anyway — all reusable verbatim on re-dispatch.**
+G0p3 PASS on all four clauses.
+
+| cell | φ | r_pred | M1c field mean | SEM | n |
+|---|---|---|---|---|---|
+| s0.25_p0.05 | 0.05 | 0.785015540293945 | 0.12162744485545209 | 0.0017778785791358425 | 192 |
+| s0.25_p0.30 | 0.3 | 0.7761302864207245 | 0.12295515685269942 | 0.001799144985921348 | 192 |
+| s0.25_p0.60 | 0.6 | 0.7558507450373838 | 0.12714790436588774 | 0.0017053615065044834 | 192 |
+| s0.25_p0.85 | 0.85 | 0.7168731389294273 | 0.13204663807737851 | 0.0018782693723257374 | 192 |
+| s0.25_p0.98 | 0.98 | 0.6763691758553391 | 0.13201888792665142 | 0.0018133362157806163 | 192 |
+
+The realized natural range across the ladder is **-0.010391443071199338** —
+note the sign: the field mean RISES with φ while r_pred falls, M1c's
+side-signing convention, and what P3's `range_nat` would have anchored against.
+All five ladder r values recompute bit-exactly from the pinned map against
+M1c's persisted `r_pred` column. P2's headline verified: verdict
+GENUINE_SCAFFOLD, f = 0.9584700070215529 / 0.971270002747466, so the
+registration's g = 0.04 projection truth is P2's 1 − f = 0.04152999297844706 /
+0.028729997252534.
+
+**Rule events.** Rule 13: not reached — no verdict boundary exists without a
+measurement. Rule 26: no bounded winner. Rule 29: not reached; the predicate was
+pinned in Part 0 and stands ready. Rule 30: exercised throughout — every cited
+constant read from its persisted source, every quoted sentence extracted by
+code.
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+number existed: A-1 the dispatched interpreter is absent (a pinned CPython
+3.12.12 venv built from the lockfile); A-2 `timeout(1)` is absent on
+macOS (foreground stages under explicit sub-600 s timeouts). No
+hypothesis-relevant number was ever computed — the leg stopped before its first
+measured world.
+
+**Registration-defect candidates: none.** The registration anticipated this
+outcome precisely, named it, legislated the response, and called it an
+instrument finding rather than a failure. It also pinned the channel decision
+rule finely enough that the determination could be made mechanically. The one
+judgement the executor had to make — what exactly counts as a split — is a
+consequence of the design being under-determined only in a corner the
+registration had no reason to foresee, and it is pinned as RN-P3-6 with both
+readings reported.
