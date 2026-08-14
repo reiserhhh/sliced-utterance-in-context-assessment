@@ -517,3 +517,116 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-r): R2 — the gauge meets the identity channel —
 <SLUG>`, never amended, never pushed; suite green first. 768 worlds
 (+escalation ×2) + pilot; every stage < 600 s.
+
+### Outcome of M4-R2 (executed 2026-08-14, append-only)
+
+**`INTERFERENCE_MISPRICED` (rule-16 cell 6).** Modifier:
+INTERFERENCE_REAL_BUT_SMALLER_THAN_PRICED. **Interference is real, and the tax curve
+overprices it by 11.64546777328575x.**
+
+- **A registration defect had to be pinned before any number (RN-R2-1).** The
+  registration derives V_eff from "the share accounting of
+  `person_share_design`'s own semantics". That function's IMPLEMENTATION
+  (k2e:240) is literally `slow + int`, which EXCLUDES the `mu` channel where
+  style lives — so style RAISES the denominator, LOWERS V_eff, and makes the
+  sealed prediction POSITIVE (0.006457447033500374). That
+  contradicts the registration's own mechanism sentence in the same paragraph
+  ("style adds author-persistent variance, RAISING the effective person share")
+  and its sanity value (-0.06). All three readings
+  were computed and persisted BEFORE the stamp. The routing reading is **C =
+  (slow + int + style)/total** on four grounds: it is the function's SEMANTICS
+  (the author-persistent share that is NOT the target trait; #56), it reduces to
+  V_design exactly at w = 0, it lands inside M3's fitted domain [0.03, 0.21], and
+  it is the only reading consistent with the registration's stated mechanism.
+  Reading A inverts the sign; reading B (-0.13444453250196647)
+  fails the w = 0 reduction and extrapolates outside the fitted domain. The
+  sanity value corroborates C but does NOT gate (rule 30; RN-Q2-6 precedent).
+- **The sealed prediction.** V_design 0.07500000000000002 → V_eff
+  0.16849932384036667; α 0.1448569748507095 → 0.07287295056531737;
+  prediction **-0.07198402428539213**. Band per #61: SE_pred 0.0006102321051948493,
+  SE_meas 0.0014077434928863272, **SE_approx 0.00613560574702563** (r-channel shift
+  0.0061129257838192326, V_eff spread
+  6.0788117635513934e-05, mu non-additivity
+  0.0005235466065273388); half-width
+  0.012649076305708377; band [-0.08463310059110052, -0.05933494797968376]. The r-channel shift dominates and
+  is real: this instrument reads 0.13255563513927227 at w = 0 where M3's curve
+  says 0.1448569748507095, a gain of 0.9150794104038479.
+- **Ordering.** Hashed `bb15b6104d302ebeb50b91c256404c10029c2da115fdda3c23167c6172bd6065`, stamped 2026-08-14T09:05:07.805460+00:00 with
+  **0 fresh-arm worlds in existence**
+  (64 probe + 12
+  battery worlds necessarily precede it — they are the band's inputs). Arms
+  re-read the stamp and re-hashed to a match 300.316706 s
+  later. Pilot after the stamp.
+- **V-R2a OUTSIDE.** Measured ΔR_T = **-0.00618129092680336** [-0.008110727559547634, -0.004257287226729858],
+  SEM 0.0009787401813587634, position **5.202176962826352** of the half-width.
+  Not a null: the 2·SEM scale is only 0.0019574803627175267 and the CI excludes
+  zero. R_T_nat falls 0.12425035254824575 →
+  0.11806906162144237. Interference is REAL and NEGATIVE; the
+  law's price is wrong by more than an order of magnitude.
+- **THE DISCLOSURE THAT MATTERS MOST.** Reading A — the literal implementation,
+  which I did NOT pin — **would have been inside**, at position
+  -0.9991826798135466, i.e. inside by
+  0.0008173201864534185 of the half-width. Had it
+  been pinned, the leg would have routed to a different cell. Two things stop
+  that from rescuing it on the merits: its prediction has the OPPOSITE SIGN to a
+  measurement whose CI excludes zero, and it clears the bar only by grazing —
+  the half-width is 2.046348643915037x the entire measured
+  effect, so the band is too coarse to discriminate a small negative
+  interference from a small positive one. Both candidate prices are wrong; the
+  band cannot adjudicate between them. This is reportable only because the pin
+  and all three readings were persisted before the measurement existed.
+- **V-R2c INDETERMINATE** (registered form): R_S_ref(w=1) =
+  -0.00023760593803822915 [-0.003567179813180193, 0.0030463008905367156] against ε = 0.003493124558101321. **The classification
+  is bootstrap-noise-limited**: the lower edge misses −ε by
+  -7.405525507887204e-05, which is -0.7385675960969138 of that
+  percentile's Monte-Carlo SE (0.00010026875734899506);
+  at B = 20000 the interval is [-0.003471613813457244, 0.0030552232664270047] and the
+  classification would be **NULL**. Q2's rule-13
+  trigger tests a boundary's TAIL FRACTION and is silent when the instability
+  lives in the PERCENTILE VALUE, so it did not fire (0
+  events). The registered B = 2000 reading is what is reported and routes; the
+  high-B reading is a disclosed diagnostic, NOT a re-resolution. Nothing turns on
+  it — cell 6 fires on V-R2a alone.
+- **The w = 0 anchor's registered expectation is WRONG, structurally.** The
+  registration expected R_S_nat(w=0) ≈ 0. It is 0.08866022322041145, close to
+  R_T_nat's own 0.12425035254824575. Cause: the pipeline's truth
+  panels are `emit_panel(..., active=("mu","common"))` and therefore CARRY THE
+  FRAME, so the anchor measures frame agreement, not style reading. Anchor, not
+  verdict — nothing routes — but the number must not be read as framed.
+- **Consequently the registered V-R2c form conflates two things**, and the
+  frame-controlled contrast is sharper (RN-R2-8, DIAGNOSTIC): the paired
+  increment R_S_ref(w=1) − R_S_ref(w=0) = **-0.002400251449476367** [-0.004531674544523817, -0.00036827981268627977]
+  (excludes zero: True) against a within-frame increment
+  R_S_nat(w=1) − R_S_nat(w=0) = **0.030522666132592052**
+  [0.02844019394597627, 0.032630214283184106] — ratio
+  -0.07863832861289213. A full-strength identity channel buys the
+  gauge 0.030522666132592052 of readable identity within
+  frame and NOTHING across frames — slightly negative, in fact. That is the
+  sharpest form yet of the P-line's limitation: **the identity is there, it is
+  readable, and a frame refresh erases the gauge's access to it entirely.**
+- **Descriptive (#59, gates nothing).** Exchangeability at w = 1: R_S_nat
+  0.11918288935300352 vs R_T_nat 0.11806906162144237, ratio 1.0094336968234094,
+  difference 0.0011138277315611274 [-0.0015157844324500396, 0.003842021426323359] — the construction's symmetry, as
+  registered.
+- **Gates.** G0r2 PASS (R1/R1b slugs, instrument hashes, M3 A-quad CONSUMABLE at
+  source, OLS refit reproduces the persisted θ, α at V_design persisted).
+  G1r2 PASS (C2-style battery on 4 fresh probes; truth panels
+  provably differ). G2r2 PASS. G3r2 PASS: power 1.0
+  at the curve truth, false-fire 0.0 at ΔR_T = 0, V-R2c false-fire
+  0.0445 and power
+  1.0;
+  escalation fired: False.
+- **Disclosed ordering fact (A-4).** SE_meas must come from pre-measurement
+  objects, so probe pairs were scored at BOTH doses before the stamp; a probe
+  ΔR_T (-0.01589391381974946) therefore existed
+  beforehand. It was never consumed: the prediction contains no R term at all,
+  SE_meas takes only the difference's standard deviation, and the gain takes only
+  the w = 0 level (#57, variances only).
+- Rule 13: 0 events. Report:
+  `reports/SUICA_M4_R2_GAUGE_MEETS_IDENTITY_REPORT.md`.
+- **Three registration-defect candidates**, all non-blocking and all pinned or
+  disclosed before they could route: (1) RN-R2-1, the V_eff share-accounting
+  ambiguity, which flips the sealed prediction's SIGN and is load-bearing for the
+  cell; (2) the w = 0 anchor's "expected ≈ 0", contradicted by the pipeline's own
+  frame-carrying truth panels; (3) rule 13's trigger, which catches tail-fraction
+  instability but not percentile-value instability — a convention candidate.
