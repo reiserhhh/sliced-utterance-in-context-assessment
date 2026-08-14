@@ -401,3 +401,119 @@ closes prospectively at a dose that had never been measured.
 - Rule 13: 0 events. Report: `reports/SUICA_M4_R1B_REBAND_REPORT.md`.
 - **No registration-defect candidates.** The registration specified the leg
   correctly, including the prescription for SE_approx.
+
+### Planner adjudication of R1b (2026-08-14, appended after the run) — CERTIFIED, WITH THE CORRECTION PROVEN LOAD-BEARING
+
+**IDENTITY_CHANNEL_CERTIFIED accepted — zero registration defects.**
+Δ(0.75) = 0.24614231318551627 landed inside the #61-corrected band
+[0.24311926154851188, 0.25211519252180953] at position −0.328, with
+the stamp preceding every fresh world (0 at stamp; permit by
+re-hash +18.3 s). Two facts elevate this beyond a pass: (i) **the
+correction is load-bearing** — under R1's band form the same fresh
+dose FAILS at −1.397; SE_approx (0.002186) dominates SE_pred (4.8×)
+and SE_meas (8.1×) — the omitted term was the only one that
+mattered; (ii) the executor's A-3 (its own template expectation
+about the mean-of-ratios form was WRONG — the pre-pinned
+ratio-of-means was closer, verdict robust to the choice, margin
+comfort not) is the rule-30 culture auditing even its own prose
+post-verdict, disclosed with timing. **C-R1c closes; with C-R1a/b
+standing, the identity-channel instrument is CERTIFIED. The
+founding question is posable. R2 is registrable.**
+
+---
+
+## M4-R2 — the gauge meets the identity channel
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Three questions, one of them
+SEALED — the program's laws predicting the consequence of the new
+channel:
+
+1. **Interference (SEALED):** does planted identity CROWD OUT the
+   reading of biography? The tax curve says yes, quantitatively:
+   style adds author-persistent variance, raising the EFFECTIVE
+   person share, and the N-line curve prices that.
+2. **Within-frame style reading (DESCRIPTIVE ONLY):** at w = 1.0
+   (equal weights), trait and style enter the response
+   EXCHANGEABLY, so R_S ≈ R_T is a symmetry, not a finding (#59
+   discharged by declaring it descriptive).
+3. **Cross-frame style reading (VERDICT):** style is author-stream
+   — it is PRESENT in both worlds of a pair. Can the gauge read it
+   across frames? The P-line predicts NO even though the identity
+   exists — the sharpest form of the gauge's limitation.
+
+### Design
+
+v2 builder (certified; hashes verified), share 0.25, φ 0.60,
+w_style ∈ {0, 1.0} × 192 A/B pairs each (384 pairs, 768 worlds).
+Salts `m4r2-author` / `m4r2-frameA` / `m4r2-frameB` / `m4r2-pilot`,
+master_seed 20260814. Truth panels: the pipeline's own construction
+fed with trait_pure and with style (executor pins the truth-panel
+machinery file:line, rule 12; the truth semantics are the
+pipeline's, unchanged). Quantities per pair: R_T_nat (A-gauge vs
+A's trait_pure truth), R_S_nat (vs A's style truth), R_S_ref (vs
+B's style truth), at both w.
+
+### The sealed prediction (Part 0 → hash → worlds; #61-compliant band)
+
+ΔR_T = R_T_nat(w=1) − R_T_nat(w=0), predicted from the N-line curve
+at the EFFECTIVE person share: the executor derives V_eff on probe
+worlds from realized channel variances (the share accounting of
+`person_share_design`'s own semantics, pinned file:line), computes
+the curve prediction α(V_eff) − α(V_design) from M3's persisted
+(c, κ0, κ2), and carries the r-channel's shift and every
+derivation approximation inside SE_approx (the #61 convention:
+band = 2·√(SE_pred² + SE_meas² + SE_approx²); planner sanity value
+≈ −0.06, expressly approximate, executor recomputes). Prediction +
+band hashed BEFORE any fresh world (K2f ordering; pilot after
+stamp).
+
+### Verdicts (rule 22; NULL-first; #57 bands)
+
+- **V-R2a (sealed):** measured ΔR_T inside the band — two-sided.
+  Leans [.45 inside / .25 negative-but-outside / .20 NULL (no
+  interference — the law does not transport to the new channel) /
+  .10 other].
+- **V-R2c:** R_S_ref(w=1) vs 0, NULL-first (ε from pilot,
+  variances only). Lean NULL [.60] — the gauge cannot read identity
+  across frames even when it exists.
+- Descriptive: R_S_nat vs R_T_nat at w = 1 (the exchangeability
+  reading, no gate); R_S_nat(w=0) as the null anchor (style drawn
+  but weightless — expected ≈ 0, anchor not verdict).
+
+### Gates
+
+G0r2: R1/R1b certified values + instrument hashes + M3 curve params
+at source; the truth-panel machinery pinned. G1r2: C2-style battery
+on 4 fresh probes; per-pair frame difference; style-truth panels
+differ from trait-truth panels provably (norm delta; #59). G2r2:
+pilot 4 pairs × both w, rule-29 predicate on all three scorings.
+G3r2: projection — power ≥ 0.8 for V-R2a at the curve truth and
+false-fire ≤ 0.1 at ΔR_T = 0; V-R2c false-fire ≤ 0.1 at 0 with
+power ≥ 0.8 at R_S_ref = R_S_nat(w=1)'s pilot value; 192 pairs,
+once-only escalation to 384 ON THIS GATE. G4r2: routing
+disjoint/covering/entailed/antecedent-nondegenerate; rule 24;
+stages part0 240 s (derivation + stamp), pilot 60 s, worlds 4
+chunks, score 180 s, finalize 60 s; target < 45 min.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/G1 failure | **STOP / INSTRUMENT_DEFECT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | V-R2a inside AND V-R2c NULL | **IDENTITY_CROWDS_BIOGRAPHY_AND_STAYS_UNREADABLE** — the tax curve transports to the new channel; the gauge pays the identity tax yet cannot read the identity; the founding answer's gauge half is complete |
+| 4 | V-R2a inside AND V-R2c POSITIVE | **IDENTITY_PARTIALLY_READABLE** — the gauge reads planted identity across frames; P-line's limitation is trait-specific; major theory note |
+| 5 | V-R2a NULL AND V-R2c NULL | **LAW_DOES_NOT_TRANSPORT** — the curve is design-V-specific (a channel-accounting finding); the gauge still cannot read identity |
+| 6 | V-R2a negative-but-outside (either side) | **INTERFERENCE_MISPRICED** — interference real, the law's price wrong; the band decomposition names the gap |
+| 7 | any other combination incl. UNDERPOWERED | **MIXED_OR_UNDERPOWERED** — every verdict reported; nothing upgraded |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_r2_gauge_meets_identity.py`;
+`results/m4_r2_gauge_meets_identity/` (gitignored);
+`reports/SUICA_M4_R2_GAUGE_MEETS_IDENTITY_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-r): R2 — the gauge meets the identity channel —
+<SLUG>`, never amended, never pushed; suite green first. 768 worlds
+(+escalation ×2) + pilot; every stage < 600 s.
