@@ -572,3 +572,109 @@ outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
 commit `feat(m4-n): N4 — the target-2 forensic — <SLUG>`, never
 amended, never pushed; suite green first. Artifact-space; target
 < 15 min, stages < 600 s.
+
+### M4-N4 outcome (appended after execution; registration above unedited)
+
+**ATTRIBUTED_DISCREPANCY — routing cell 4.** Artifact-space; **no fresh worlds,
+no seal**. Harness `scripts/run_suica_m4_n4_target2_forensic.py`; report
+`reports/SUICA_M4_N4_TARGET2_FORENSIC_REPORT.md`; artifacts
+`results/m4_n4_target2_forensic/` (gitignored).
+
+**The registered decomposition is delivered — and the same executed arithmetic
+shows the gap is not a discrepancy.** By magnitude H-c MICRO-DISCREPANCY dominates, so
+the literal routing gives cell 4. But the pipeline's own standard
+error is 0.025240434154130843, the gap is **-1.3664 SE**, and χ² =
+7.536898714784121 on 7 pairs — almost exactly its expectation. M3's
+applied point-tolerance of 0.03 is only 1.1886 SE wide. The
+target was typed at a precision the estimator cannot deliver.
+
+**G0n4 PASS, both headline aggregates BIT-EXACT.** Published target pinned at
+`results/m4_m3_tax_curve/part0.json -> G0m3 -> '(iv) retrodiction targets' -> targets -> '2'`, source `results/m4_k2e_double_matching/decision.json:kappa_refit_9pairs.kappa (negated)`, pipeline "OLS through the origin of D on dvar over 9 pairs; kappa = -slope". Published
+0.7145934082034173 and M3's law-through-pipeline prediction 0.7490807810533479
+both reproduce bit-exactly from the persisted pair artifacts; gap
+-0.03448737284993053 equals M3's recorded delta bit-exactly. RN-N4-1 was required to get
+there: K2e's exact form is `float((x9 @ y9) / (x9 @ x9))` on arrays in its own
+pair order, and a naive Python sum of the same nine terms differs in the last
+1–2 ULP — pinned BEFORE any component was read, which is the only reason this
+leg did not open with a spurious citation mismatch.
+
+**The aggregation rule, found exactly.** An origin-forced OLS slope is
+algebraically a **dvar²-weighted mean** of the per-pair slopes D_i/dvar_i, which
+gives the exact identity gap = Σ w_i·gap_i (residual -2.0816681711721685e-16). Two
+consequences: (1) **the "9-pair refit" is arithmetically a 7-pair
+refit** — DM-68, DM-56 sit at dvar = 0 by construction and contribute exactly
+nothing (K2e says so itself and declines to define their per-pair κ); (2) **two
+pairs carry 72.34% of the weight** (SP-68, SP-56), because weight goes
+as dvar².
+
+| pair | V-bar | species carrier | weight | published contribution | law-predicted contribution | gap |
+|---|---|---|---|---|---|---|
+| P1 | 0.029488713769534616 | K2c | 1.00% | 0.5091307756958124 | 0.9140807651902058 | -0.4049499894943933 |
+| P2 | 0.08053389485611634 | K2c | 4.93% | 0.8370041194844873 | 0.8343033863802213 | 0.0027007331042659954 |
+| P3 | 0.13998938416525472 | K2c | 7.93% | 0.7353873149263996 | 0.7413817238063771 | -0.005994408879977486 |
+| FR-45 | 0.19044121509648154 | K2d | 6.87% | 0.5753848158378652 | 0.6625316787643035 | -0.08714686292643836 |
+| SP-68 | 0.10795168245431326 | int: | 37.87% | 0.7531506613205291 | 0.7914527356274506 | -0.03830207430692145 |
+| SP-56 | 0.16843391535054536 | int: | 34.47% | 0.7037772155801393 | 0.696926398325362 | 0.006850817254777319 |
+| DM-68 | 0.0878023875209765 | K2e | 0.00% | — | 0.8229436207694657 | — |
+| DM-56 | 0.1492085286969757 | K2e | 0.00% | — | 0.7269733277549733 | — |
+| VS-62 | 0.11065418297711288 | K2e | 6.93% | 0.6146698746495273 | 0.7872290576356755 | -0.17255918298614825 |
+
+**Decomposition (exact additive; sums to the gap to 6.938893903907228e-18).**
+H-a WEIGHTING = 0.0654270511836174 (39.57% by magnitude); H-b SPECIES =
+-0.0044930367217348765 (2.72%); H-c MICRO-DISCREPANCY = -0.09542138731181306
+(57.71%). Under uniform weights the gap would be
+-0.09991442403354793 — nearly 3× the published miss — so **the weighting works
+in the direction of making the closure look BETTER, not worse**: the two
+heavily-weighted pairs sit close to the law while the pairs that miss badly
+carry almost no weight. The registration's literal leave-species-out
+quantification agrees and sharpens: dropping SP-68, SP-56 moves the gap to
+-0.08078402979601129, a shift of -0.04629665694608076 — **the species pairs MASK the
+miss rather than cause it.**
+
+**Why the residual is not a discrepancy.** The per-pair κ of a pair with small
+|dvar| is a ratio D/dvar whose noise scales as σ/|dvar| (σ =
+0.001652958116203901 from K2e's own origin-forced residuals). The pairs carrying the
+large gaps are exactly the small-|dvar| pairs. No single |z| exceeds
+1.7999880265777972 (at VS-62). **And the dvar²-weighting is therefore not
+an artifact but the correct estimator:** if D carries homoskedastic noise then
+Var(D_i/dvar_i) = σ²/dvar_i², so weights ∝ dvar_i² are exactly inverse-variance
+weights. H-a is large precisely because the pipeline is doing the statistically
+right thing and the uniform comparator is doing the wrong one.
+
+**The N1b direction check fails — reported as the leg's central caution.** H-c's
+registered motivation was N1b's LO residual (0.03994777373059455, measured response tax ABOVE the level curve).
+N4's lowest-V̄ pair is P1 with gap -0.4049499894943933 —
+measured level tax BELOW the law. The directions are **opposite** (agree: False), so
+cell 4's stated consequence "the LO whisper hardens" is **not
+supported by the arithmetic that routes there**.
+
+**Both verdict readings reported (RN-N4-4, pinned before any component).** The
+registration defines H-c as the residual, so the three components are exhaustive
+and the ≥80% bar cannot fail; and the components take opposite signs, so signed
+shares exceed 100% (-189.71% / 13.03% /
+276.68%). "Dominant" is therefore decided on MAGNITUDE share. The
+literal reading routes (ATTRIBUTED_DISCREPANCY); the mechanistic reading — a residual
+explains nothing, so only H-a and H-b can attribute — leaves
+277% of the gap unexplained and gives UNATTRIBUTED.
+
+**Does the closure upgrade? No** (False): cell 2 is the only cell
+carrying the upgrade and this leg routed to cell 4. But the honest
+reason is not the routing — it is that there is nothing to explain. Re-typing
+target 2's tolerance against the estimator's own SE is the planner's call.
+
+**Executor self-report.** Three anomalies, all resolved BEFORE any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent
+(pinned CPython 3.12.12 venv from the lockfile); A-2 `timeout(1)` absent
+on macOS (foreground stages under explicit sub-600 s timeouts); A-3 the
+summation-order ULP issue above, pinned as RN-N4-1 before any component.
+
+**Registration-defect candidates (3).** (1) The ≥80% bar cannot fail, since H-c
+is defined as the residual — the bar carries no information and only dominance
+discriminates. (2) **No noise floor was declared**: the estimator's SE
+(0.025240434154130843) was computable from persisted artifacts at registration time
+and is LARGER than the 0.03 tolerance the target was typed against; a
+forensic registration on a regression output should establish that its quantity
+is distinguishable from zero before decomposing it. This is the #43/#44/#51
+genus again — a gate-consumed quantity computable at registration and not
+computed. (3) Cell 4's stated consequence is contradicted by the arithmetic that
+reaches it.
