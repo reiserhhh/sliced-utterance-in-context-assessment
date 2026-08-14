@@ -109,3 +109,16 @@ LEVEL_RESPONSE_DISSOCIATION · `54afc77` M1c adjudication + appendix X
 LEVEL_LAW_PREDICTIVE_SCOPED · `d552bd5` M2 adjudication + appendix AA
 + M3 registration · `1b0d330` M3 TAX_IS_A_CURVE · (this commit) line
 close.
+
+## Dated note (2026-08-14, from the N4 forensic — controls the closure's reading)
+
+M3's retrodiction closure reads, finally: **5 hits, 1 WITHIN-NOISE,
+0 discrepant.** N4 (`10142c5`) showed the one "miss" (target 2, the
+9-pair refit) sits at −1.37 SE of that estimator's own sampling
+noise (SE 0.0252, χ² at expectation) while the 0.03 point-tolerance
+M3 typed was only 1.19 SE wide — a tolerance-calibration artifact,
+not a discrepancy (rule 32's origin case). Incidentals: the
+"9-pair" refit is arithmetically 7 pairs (two sit at dvar = 0);
+its dvar² weighting is correct inverse-variance; the `int:` species
+pairs mask rather than cause. CLOSURE_EXPLAINED stands,
+strengthened.

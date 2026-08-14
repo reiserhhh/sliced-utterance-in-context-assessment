@@ -1715,3 +1715,42 @@ representation identifications (secants), a quadratic level law
 sealed response transport (N1b). What remains against it: one
 closure miss under forensic (N4), one noise-compatible residual,
 and every question outside V ∈ [0.03, 0.21].
+
+## Appendix EE — dated append (2026-08-14, post-N4): the closure is clean; the whisper dissolves; the twins are priced; the N-line closes
+
+**EE.1 — The closure, final reading.** Run at the noise floors of
+the targets' own estimators (rule 32, bought here), the six-target
+retrodiction stands at **5 hits, 1 within-noise, 0 discrepant**: the
+tax curve is unrefuted by every κ̂ the program ever published. The
+"9-pair refit" target was arithmetically a 7-pair inverse-variance
+regression whose output noise (SE 0.0252) exceeded the tolerance it
+was tested against — the miss was the tolerance's, not the law's.
+
+**EE.2 — The micro-discrepancy dissolves.** N1b's low-V̄ residual
+(+1.31 SE) and N4's lowest-V̄ pair (opposite sign, |z| < 1.8)
+bracket zero. No low-V anomaly survives; the curve stands clean on
+its support.
+
+**EE.3 — The twins, priced by executed arithmetic.** A-quad and
+A-sat differ by |Δα| ≤ 0.000118 across the ENTIRE fitted window
+(z = 0.09 at n = 768) and reach only 0.00184 at V = 0.285 — share
+0.95, two steps beyond the envelope, ≈ 3841 worlds/cell for 3 SE.
+On this generator the extrapolant question is empirically closed at
+feasible budgets: the curve's FORM beyond V = 0.21 is undetermined
+and stated so wherever the curve is quoted.
+
+**EE.4 — The frame-floor question is unposable here.** c′ is a pure
+in-support reparametrization; the vertex sits at twice the
+generator's V-cap; a person-content-free truth panel makes the
+recovery cosine undefined. N2 dissolved — the question awaits a
+different instrument, not a better experiment on this one.
+
+**EE.5 — The tax, at rest.** Five secants, a quadratic level law, a
+clean six-target closure, a sealed response transport, one live
+mechanism candidate, and a scope statement. The program's next
+mechanism question is the READABILITY PENALTY (appendix Z.1): why
+does the level price concentrate where cards read best? Two named
+mechanisms with opposite signs under frame injection — scaffold
+(K-R1: the frame carries the reading) vs contamination (K1: the
+gauge amplifies common-frame content) — make it a sign probe: the
+M4-P line.

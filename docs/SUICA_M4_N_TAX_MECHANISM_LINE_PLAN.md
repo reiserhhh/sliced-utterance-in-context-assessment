@@ -678,3 +678,102 @@ is distinguishable from zero before decomposing it. This is the #43/#44/#51
 genus again — a gate-consumed quantity computable at registration and not
 computed. (3) Cell 4's stated consequence is contradicted by the arithmetic that
 reaches it.
+
+### Planner adjudication of N4 (2026-08-14, appended after the run) — THE MISS WAS A TOLERANCE ARTIFACT; THE WHISPER DISSOLVES; THE LINE CLOSES
+
+**The routed outcome (ATTRIBUTED_DISCREPANCY, cell 4) stands as the
+leg's formal record; its consequence clause is VOIDED by the same
+leg's arithmetic; the substantive finding is re-typed
+TOLERANCE_ARTIFACT.** The executor's executed decomposition shows:
+the published−law gap (−0.03448737284993053, reproduced bit-exactly)
+is **−1.37 SE of the target's own estimator** (SE =
+0.025240434154130843, computable from persisted artifacts at
+registration time), with χ² = 7.537 on 7 pairs — exactly its
+expectation, largest |z| = 1.80. **M3's 0.03 point-tolerance was
+1.19 SE wide — narrower than the target's own sampling noise.**
+Dated note, controlling the reading of M3's closure (cross-referenced
+in the M-line synthesis): the retrodiction closure's final form is
+**5 HITS, 1 WITHIN-NOISE, 0 DISCREPANT — the law is unrefuted by all
+six targets.** This is NOT an upgrade to 6/6 (the typed tolerance was
+missed as typed); it is the honest re-typing of what that tolerance
+could adjudicate.
+
+**The whisper dissolves.** Cell 4's registered consequence ("the LO
+whisper hardens") is contradicted in sign: the lowest-V̄ pair's gap
+runs BELOW the law (P1: −0.405 at 1% weight, |z| < 1.8) where N1b's
+LO residual ran ABOVE (+1.31 SE). Two noise-compatible residuals of
+opposite sign bracket zero — the micro-discrepancy story is doubly
+noise-typed and closes.
+
+**Incidental findings, recorded:** the "9-pair refit" is
+arithmetically a 7-pair refit (the two double-matched pairs sit at
+dvar = 0 by construction and contribute nothing); its dvar²
+weighting is the CORRECT inverse-variance estimator (Var(D/dvar) =
+σ²/dvar²), so H-a's large signed share reflects the uniform
+comparator being wrong, not the pipeline; the two `int:` species
+pairs (72.34% of weight) MASK the gap rather than cause it.
+
+**Defects (mine).** **#52 (rule 31 enacted):** the ≥80% attribution
+bar could not fail — H-c was defined as the residual, making the
+components exhaustive by construction; only dominance discriminated.
+**Rule 31: every registered verdict bar is checked at registration
+for TWO-SIDED reachability — both PASS and FAIL attainable under the
+registered construction; a residual-defined component never counts
+toward an attribution or explanation bar.** **#53 (rule 32
+enacted):** no noise floor was declared though the estimator's SE was
+computable from persisted artifacts at registration — fourth of the
+#43/#44/#51 genus, and the origin case is M3's own tolerance typing.
+**Rule 32: a forensic or comparison registration on an estimator's
+output declares that estimator's own sampling noise as its floor
+(computed at registration from persisted artifacts); gaps are
+reported in SE units alongside raw units; a gap within the declared
+k·SE routes to WITHIN-NOISE, never to attribution or discrepancy.**
+**#54 (convention):** cell 4's consequence clause was not entailed by
+its condition (H-c dominance ≠ same-direction discrepancy) —
+routing-consequence ENTAILMENT is added to the #46 mechanical check:
+the planner verifies each cell's consequence follows from its
+condition under the registered arithmetic; a consequence contradicted
+by data reaching its cell is voided at adjudication, as here. The
+executor's dual-reading pin (RN-N4-4, literal vs mechanistic) is
+upheld as exactly right.
+
+### N2 — DISSOLVED by planner derivation (2026-08-14)
+
+What would c′ anchor to? On the support V ∈ [0.03, 0.21] (and
+anywhere under this generator's V = 0.3·share ≤ 0.3 cap), α(V)
+determines the quadratic exactly, and (c′, A0, V*) is a PURE
+REPARAMETRIZATION of (c, κ0, κ2) — c′ adds no testable in-support
+content. Independent content would require either reaching the
+vertex (V* = 0.6143589975880801, unreachable by a factor of two) or
+a degenerate-truth protocol (a person-content-free world's b-only
+recovery is a cosine against a zero panel — undefined, K2b G4b's
+strict-trait degeneracy mirrored). N2 therefore DISSOLVES —
+registered as a dissolution, not a failure: the frame-floor question
+is not wrong, it is unposable on this instrument family. It revives
+only with a generator extension (owner-scale decision) or a new
+protocol for degenerate truths.
+
+### N3 — held NAMED, with executed separation arithmetic (2026-08-14, rule 30)
+
+Executed against the persisted A-quad/A-sat parameters (planner run,
+scratchpad harness on the pinned maps): |α_quad − α_sat| =
+0.000067 at V = 0.03; 0.000118 at V = 0.21 (the fitted window's edge
+— z = 0.09 at n = 768); 0.000563 at V = 0.24; 0.001323 at V = 0.27;
+0.001841 at V = 0.285 (share 0.95, z = 1.34 at n = 768, 1.90 at
+1536). A 3-SE level separation needs ≈ 3841 worlds/cell AT share
+0.95 — an unexercised regime two steps beyond the envelope. The
+twin forms are empirically indistinguishable at feasible budgets on
+this generator; N3 stays NAMED with this table as its feasibility
+record, registrable only with a share-0.95 regime argument.
+
+### THE LINE CLOSES (2026-08-14)
+
+Four legs (N1 STOP, N1b CURVE_TRANSPORTS_TO_RESPONSE, N4
+TOLERANCE_ARTIFACT-typed; N2 dissolved, N3 named-with-arithmetic).
+The tax curve ends the line PREDICTIVE (response-transport) within
+V ∈ [0.03, 0.21], closure-clean against all six legacy targets, its
+mechanism candidate (square-agreement) alive with one sealed hit and
+nothing further it can be asked at feasible budgets on this
+generator. Rules 30–32 enacted; defects #50–#54. Synthesis:
+`docs/SUICA_M4_N_TAX_MECHANISM_LINE_SYNTHESIS.md`. Successor
+question: the READABILITY PENALTY's mechanism — the M4-P line.

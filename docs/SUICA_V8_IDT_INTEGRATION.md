@@ -181,3 +181,22 @@ synthesis: `docs/SUICA_M4_M_LEVEL_LAW_LINE_SYNTHESIS.md`.
   registry #1–#49; M3 closed with zero registration defects.
 - Nothing here touches frozen operators, F16 items, PROPOSED
   F12/F13, or any real-text question.
+
+## Dated addendum (2026-08-14) — the M4-N tax-mechanism line
+
+The N-line (4 legs, `76060e7`..close; synthesis
+`docs/SUICA_M4_N_TAX_MECHANISM_LINE_SYNTHESIS.md`) updates §3:
+
+- **The tax curve is promoted to PREDICTIVE (response-transport),
+  V ∈ [0.03, 0.21]:** fitted at level, sealed-then-hit 3/3 in
+  response space (κ̂_HI to 8.3e-5; the decline's CI excludes zero).
+  The constant tax is DEAD in both spaces by sealed measurement.
+- **The six-target closure reads 5 hits / 1 within-noise / 0
+  discrepant** (rule 32's origin case: the one "miss" sat at 1.37 SE
+  of its own estimator against a 1.19-SE-wide tolerance).
+- **Mechanism state:** square-agreement (appendix CC.1′) is a
+  candidate with one sealed transport hit; its remaining questions
+  are unposable on this generator (N2 dissolved; N3 priced at
+  executed arithmetic — twins to z < 0.1 across the fitted window).
+- Standing rules now 1–32; defect registry #1–#54. Successor:
+  the M4-P penalty-mechanism line.

@@ -226,3 +226,20 @@ M-line and behaved as written.
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 30 | #50 | Every published derived constant carries EXECUTED provenance — computed by code from persisted inputs at full precision, or quoted expressly as approximate with its precision stated; digits beyond the planner's actual executed arithmetic are a defect regardless of numerical proximity. | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N1 planner adjudication (2026-08-11)` |
+
+## Dated additions (2026-08-14, eighth note — N1b/N4; append-only)
+
+N1b closed with zero registration-defect candidates (and the
+executor's own pre-stamp self-catch, RN-N1B-10, recorded as #50's
+mirror). N4's three candidates are all planner defects:
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #52 | N-line / M4-N4 | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N4 outcome + planner adjudication` | The ≥80% attribution bar could not fail: H-c was defined as the residual, making the decomposition exhaustive by construction — a bar with one reachable side adjudicates nothing. | 31 | bar-reachability |
+| #53 | N-line / M4-N4 | same | No noise floor declared though the target-estimator's SE (0.0252) was computable from persisted artifacts at registration and EXCEEDED the meaning of the 0.03 tolerance the target was typed against (1.19 SE) — fourth of the #43/#44/#51 genus; origin case for rule 32; M3's closure re-typed 5 hits / 1 within-noise / 0 discrepant by dated note. | 32 | noise-floor |
+| #54 | N-line / M4-N4 | same | Cell 4's consequence clause ("the LO whisper hardens") was not entailed by its condition and was contradicted in sign by the data that reached the cell — consequence voided at adjudication; routing-consequence ENTAILMENT added to the #46 mechanical check. | none (convention) | consequence-entailment |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 31 | #52 | Every registered verdict bar is checked at registration for two-sided reachability — both PASS and FAIL attainable under the registered construction; a residual-defined component never counts toward an attribution or explanation bar. | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N4 planner adjudication (2026-08-14)` |
+| 32 | #53 | A forensic or comparison registration on an estimator's output declares that estimator's own sampling noise as its floor (computed at registration from persisted artifacts); gaps are reported in SE units alongside raw units; a gap within the declared k·SE routes to WITHIN-NOISE, never to attribution or discrepancy. | same |
