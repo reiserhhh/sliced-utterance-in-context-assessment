@@ -284,3 +284,10 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #61 | R-line / M4-R1 | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R1 outcome + planner adjudication` | The C-R1c containment band had zero width at the deterministic w=0 point (a band around a constant cannot contain) and omitted the measurement SE and the derivation's approximation error at w>0 (−4.17 SE gap at w=1.0); the channel itself passed every other certificate. | none (convention: containment bands on derived predictions carry 2·sqrt(SE_pred²+SE_meas²+SE_approx²); deterministic points are tested by equivalence, never containment) | prediction-band |
+
+## Dated additions (2026-08-14, fifteenth note — R2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #62 | R-line / M4-R2 | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R2 outcome + planner adjudication` | The V_eff derivation delegated to "person_share_design's own semantics" without pinning CHANNEL COVERAGE — the function is literally slow+int (excludes the mu channel where style lives) and the literal reading INVERTS the sealed prediction's sign; executor computed and persisted all three readings pre-stamp and pinned on four grounds. | none (convention: when a new channel exists, every share/variance accounting names the channels it counts, at registration) | channel-accounting |
+| #63 | R-line / M4-R2 | same | The "R_S_nat(w=0) ≈ 0" anchor was structurally wrong (measured 0.0887): the pipeline's truth panels CARRY THE FRAME, so the registered cross-frame form conflated "cannot read style across frames" with "the frame does not transport" (INDETERMINATE) while the frame-controlled contrast answered cleanly (+0.0305 within / −0.0024 across). | none (convention: cross-frame readability claims are registered as frame-controlled increments, never raw cross-frame levels; rule-13 enforcement extended to percentile-value instability) | frame-controlled-form |

@@ -630,3 +630,149 @@ overprices it by 11.64546777328575x.**
   cell; (2) the w = 0 anchor's "expected ≈ 0", contradicted by the pipeline's own
   frame-carrying truth panels; (3) rule 13's trigger, which catches tail-fraction
   instability but not percentile-value instability — a convention candidate.
+
+### Planner adjudication of R2 (2026-08-14, appended after the run) — INTERFERENCE REAL, THE PRICE WRONG BY 11.65×; THE GAUGE'S HALF OF THE FOUNDING ANSWER ARRIVES BY DIAGNOSTIC
+
+**INTERFERENCE_MISPRICED accepted.** Planted identity DOES crowd
+out biography (ΔR_T = −0.00618129092680336 [−0.008110727559547634,
+−0.004257287226729858], CI excluding zero) — and the N-line curve's
+sealed price (−0.07198402428539213 at the pinned V_eff reading) is
+11.65× too large (position +5.202). The executor's conduct was
+again the leg's backbone: the sign-flipping V_eff ambiguity was
+caught, all three readings computed and persisted BEFORE the stamp,
+and the pin argued on four grounds; the grazing-inside alternative
+(reading A, position −0.9992) was disclosed with the honest verdict
+that it does not rescue on merits (opposite sign to a
+CI-excludes-zero measurement; half-width 2.05× the whole effect).
+**Both prices are wrong; the cell stands on the pinned reading.**
+
+**The finding that carries the founding question (RN-R2-8, the
+frame-controlled contrast):** identity buys **+0.030522666132592052**
+within frame and **−0.002400251449476367** across frames (ratio
+−0.079, CI excluding zero). **The identity is there; it is fully
+readable within its frame; one frame refresh erases the gauge's
+access entirely.** Combined with R1 (cards carry it across frames by
+certification), the gauge half of the founding answer is measured:
+the deployed gauge is taxed by identity it cannot transport-read.
+Registered follow-through: the frame-controlled contrast FORM
+becomes the registered form for all future cross-frame refusal
+claims (defect #63's convention).
+
+**The mechanism hypothesis the mispricing forces (R2b's charter):**
+the measured tax rate on mu-channel person variance is
+0.00618/0.0935 ≈ 0.066 — an order of magnitude below the curve's
+κ ≈ 0.77. The N-line curve was fitted on DESIGN-V variation, which
+lives in the slow/int channels; style lives in the mu channel.
+**Hypothesis: the tax is CHANNEL-SPECIFIC — κ(V) is the
+state-channel tax; author-constant (mu-channel) person variance is
+taxed an order lighter.** Coherent with the whole arc (the gauge
+reads frame-agreement; slow-state variance disrupts frame
+coherence; author-constant shifts barely do).
+
+**Defects (mine).** **#62:** the V_eff derivation delegated to
+"`person_share_design`'s own semantics" without pinning CHANNEL
+COVERAGE — the function is literally slow+int, and the literal
+reading inverts the sealed sign. Convention: **when a new channel
+exists, every share/variance accounting names the channels it
+counts, at registration.** **#63:** the "R_S_nat(w=0) ≈ 0" anchor
+was structurally wrong (measured 0.0887) because the pipeline's
+truth panels CARRY THE FRAME — and the registered V-R2c form
+therefore conflated "cannot read style across frames" with "the
+frame does not transport" (it landed INDETERMINATE while RN-R2-8's
+frame-controlled form answered cleanly). Convention: **cross-frame
+readability claims are registered as frame-controlled increments
+(within-frame gain vs cross-frame gain), never as raw cross-frame
+levels.** Rule-13 enforcement note (executor's candidate 3):
+percentile-VALUE instability near a band edge is checked alongside
+tail-fraction instability at 10×B; recorded for future
+registrations.
+
+---
+
+## M4-R2b — the channel-specific tax (two taxes, measured apart)
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Question: **is the tax curve
+the SLOW-channel tax?** Measure the two channel taxes separately:
+κ_slow (design-share variation at matched r) and κ_mu (planted
+style variation at fixed design), and test the N-line curve against
+its OWN channel while the mu-channel tax gets its first registered
+interval.
+
+### Design (matched-r for the slow contrast; the v2 knob for the mu contrast)
+
+Four base cells × w_style ∈ {0, 1.0} = 8 arms × 192 worlds = 1536
+worlds (NO pairs — all quantities within-frame levels):
+
+- **slow contrast, matched r (the N1 roots reused):** (share 0.10,
+  φ = 0.8991793501377106) vs (share 0.25, φ = 0.05) — r matched to
+  1e-9 (N1's persisted root; G0 re-verifies), ΔV_slow = 0.045
+  exactly, V̄ = 0.0525;
+- **mu contrast:** w_style 0 → 1.0 within each base cell; ΔV_mu
+  from realized probe variances via the #62 convention (channel
+  coverage NAMED: mu-channel variance counted, slow+int untouched).
+
+Quantities: R_T (gauge vs trait_pure truth) per arm. Estimands:
+**κ̂_slow = −[R_T(0.10 cell) − R_T(0.25 cell)]/ΔV_slow** at each w
+(matched r cancels the r-channel; the M-line trick);
+**κ̂_mu = −ΔR_T/ΔV_mu** at each share. Salts `m4r2b-world` /
+`m4r2b-pilot`, master_seed 20260814.
+
+### Sealed predictions (Part 0 → hash → worlds; #61 bands)
+
+- **S1: κ_slow(w=0)** — the N-line curve's secant at V̄ = 0.0525
+  (executor recomputes from M3's persisted params; N1b measured
+  0.918 at this V̄ — cited as context, not the prediction); band
+  per #61 with SE_approx carrying the matched-r residual and
+  truth-panel differences.
+- **S2: κ_mu(share 0.25)** — predicted from R2's measurement
+  (0.066, expressly approximate; the band is WIDE by construction:
+  R2's own CI propagated ⊕ SE_meas ⊕ SE_approx) — a first-interval
+  claim, not a sharp test.
+- **S3: the discrimination** — D_channel = κ̂_slow(w=0) −
+  κ̂_mu(0.25) > 0 AND outside ±2·SE_D (the channel-specificity
+  verdict; the constant-tax-across-channels alternative predicts
+  0).
+
+### Verdicts and leans
+
+**V-b1 [.65]:** S1 inside (the curve holds on its own channel).
+**V-b2 [.55]:** S3 positive and clear (channel specificity).
+**V-b3 (reported):** S2 containment (wide band, descriptive-grade
+by construction, stated so). κ̂_mu(0.10) and κ̂_slow(w=1) as
+consistency readings.
+
+### Gates
+
+G0r2b: N1 roots + M3 params + R2's ΔR_T/V_eff numbers at source;
+instrument hashes. G1r2b: probe battery; ΔV_mu realized and named
+per #62; matched-r residual verified ≤ 1e-9 arithmetic. G2r2b:
+pilot 4 worlds × 4 extreme arms, rule-29 predicate. G3r2b:
+projection — P(S3 clear | R2-based truth) ≥ 0.8, false-fire ≤ 0.1
+under the uniform-tax truth; 192/arm, once-only escalation to 384
+ON THIS GATE. G4r2b: routing disjoint/covering/entailed/
+antecedent-nondegenerate (#59: κ̂_mu is not forced — R2 measured it
+at one share; the second share and the slow-side w-dependence are
+free); rule 24; stages part0 240 s, pilot 60 s, worlds 4 chunks,
+score 180 s, finalize 60 s; target < 45 min.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/G1 failure | **STOP / INSTRUMENT_DEFECT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | S1 inside AND S3 clear | **TAX_IS_CHANNEL_SPECIFIC** — κ(V) re-types as the STATE-channel tax; the N/M-line laws gain a channel-scope clause by dated note; R2's mispricing is explained |
+| 4 | S1 inside AND S3 not clear | **UNIFORM_TAX_RETAINED** — R2's small ΔR_T needs another owner; named |
+| 5 | S1 outside | **CURVE_BREAKS_ON_OWN_CHANNEL** — the mispricing is deeper than channel accounting; the curve's scope contracts; theory note |
+| 6 | any UNDERPOWERED (no higher cell) | **UNDERPOWERED** |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_r2b_channel_tax.py`;
+`results/m4_r2b_channel_tax/` (gitignored);
+`reports/SUICA_M4_R2B_CHANNEL_TAX_REPORT.md` (generated tables);
+outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-r): R2b — the channel-specific tax — <SLUG>`,
+never amended, never pushed; suite green first. 1536 worlds
+(+escalation ×2) + pilot; every stage < 600 s.
