@@ -278,3 +278,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #60 | Q-line / M4-Q1b | `docs/SUICA_M4_Q_TRANSPORT_LINE_PLAN.md — Q1b outcome + planner adjudication` | The disattenuation identity's REFERENCE OBJECT was not the shared component: the card contains the centred trait (k2b:423-427) while the registered Δ scored against the uncentred trait (k2b:443/446) — the positive Δ was a trait-channel artifact and the routed cell's consequence was voided; against the shared component Δ ≈ 0 at both φ. Computable at registration from k2b source; the executor pre-pinned both readings (RN-Q1B-6). | none (convention: a disattenuation-style identity is registered against the SHARED component of the contrast, named explicitly) | reference-object |
+
+## Dated additions (2026-08-14, fourteenth note — R1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #61 | R-line / M4-R1 | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R1 outcome + planner adjudication` | The C-R1c containment band had zero width at the deterministic w=0 point (a band around a constant cannot contain) and omitted the measurement SE and the derivation's approximation error at w>0 (−4.17 SE gap at w=1.0); the channel itself passed every other certificate. | none (convention: containment bands on derived predictions carry 2·sqrt(SE_pred²+SE_meas²+SE_approx²); deterministic points are tested by equivalence, never containment) | prediction-band |

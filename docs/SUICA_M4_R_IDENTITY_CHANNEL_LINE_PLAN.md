@@ -252,3 +252,83 @@ matching the composition arithmetic to within 1%. What is NOT certified is the
 quantitative containment claim, because the band that was supposed to test it
 could not. A successor leg re-banding clause (iv) — with no change to the
 instrument — would close it.
+
+### Planner adjudication of R1 (2026-08-14, appended after the run) — THE CHANNEL WORKS; THE BAND WAS THE DEFECT
+
+**INSTRUMENT_DEFECT(C-R1c) accepted — and localized: clauses
+(i)/(ii)/(iii) PASS, C-R1a/C-R1b PASS, the projection PASSES; what
+failed is the planner's Part-0 band, on clause (iv) alone.** The
+channel is planted (Δ monotone P = 1.0, matching the composition
+arithmetic to −0.008% at w = 0.5 and −0.93% at w = 1.0), inert at
+zero (bit-identical objects, panels, cards, fields — every prior
+P3b result stands), author-stream, trait-independent
+(cos = +0.0024, within 2 SE of 0), with the shared component named
+per #60. The executor's construction is more minimal than the
+registration asked: **no site mirroring at all** — w_mu·trait +
+w_style·style = w_mu·(trait + m·style), so publishing trait_eff
+lets k2b's own unedited `emit_panel` (k2b:371, w_mu =
+0.33541019662496846) carry style at exactly the trait's site, with
+trait_pure kept separate for scoring.
+
+**Defect #61 (mine).** The containment band (a) had ZERO WIDTH at
+the deterministic w = 0 point — a band around a constant cannot be
+a containment test (rule 31's one-reachable-side pathology, at the
+band level); and (b) omitted two error sources at w > 0 — the
+measurement's SE and, decisively, the DERIVATION'S approximation
+error (realized non-orthogonality + Jensen), which grows with the
+planted share exactly as the −4.17-SE gap at w = 1.0 shows.
+**Convention (rules 31/32 family, applied to predictions): a
+containment band on a derived prediction carries width
+2·√(SE_pred² + SE_meas² + SE_approx²), with SE_approx estimated
+from the realized deviation of the derivation's assumptions;
+deterministic points are tested by equivalence bands (ε), never by
+containment.** The executor's refusal to retune after seeing the
+measurement was correct and is the reason the defect is clean.
+
+---
+
+## M4-R1b — clause (iv), re-banded and tested prospectively
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. The instrument is UNCHANGED
+(same script's builder, same hashes); only clause (iv) is re-posed.
+Because R1's measured Δ values are on the record, a re-banded test
+on the SAME doses adjudicates nothing prospectively — so the
+primary test is a FRESH dose.
+
+### Design
+
+- **Primary (prospective containment):** w_style = **0.75** (never
+  measured) × 128 A/B pairs (256 worlds; share 0.25, φ 0.60; salts
+  `m4r1b-author` / `m4r1b-frameA` / `m4r1b-frameB` / `m4r1b-pilot`,
+  master_seed 20260814). Part 0 derives the algebraic prediction at
+  0.75 AND the corrected band per the #61 convention — SE_approx
+  from the realized per-author spread of bᵢ/(aᵢ+bᵢ+dᵢ) on the
+  PROBE worlds (pre-measurement objects), persisted and hashed
+  BEFORE the fresh arms (K2f ordering; the pilot after the stamp).
+- **Secondary (re-scoring, adjudicating nothing):** R1's persisted
+  w ∈ {0.5, 1.0} measurements against the corrected band — reported
+  as consistency readings with the post-hoc label.
+- **w = 0 clause:** re-typed as the EQUIVALENCE test it always was
+  — R1's clause (i) result stands as its verdict (no new worlds).
+
+### Verdicts and routing (rule 16)
+
+**V-R1b:** measured Δ(0.75) inside the corrected band — two-sided
+containment. Lean [.70]. Cells: **STOP** (G0/hash mismatch) /
+**NON_PROJECTABLE** (projection at the corrected band's width:
+false-fire ≤ 0.1 under Δ = algebraic − 3·band, power ≥ 0.8 at the
+algebraic truth; escalation to 256 pairs once, ON THIS GATE) /
+**IDENTITY_CHANNEL_CERTIFIED** (V-R1b inside — C-R1c closes; with
+C-R1a/b standing, the instrument is certified and R2 becomes
+registrable) / **BAND_STILL_WRONG** (outside — the derivation error
+model is inadequate; handback with the realized decomposition).
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_r1b_reband.py`; `results/m4_r1b_reband/`
+(gitignored); `reports/SUICA_M4_R1B_REBAND_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-r): R1b — clause (iv) re-banded — <SLUG>`,
+never amended, never pushed; suite green first. 256 worlds
+(+escalation ×2) + pilot; target < 20 min, every stage < 600 s.
