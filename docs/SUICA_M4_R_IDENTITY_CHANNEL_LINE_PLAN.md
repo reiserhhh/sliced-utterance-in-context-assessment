@@ -131,3 +131,124 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-r): R1 — the identity-channel instrument —
 <SLUG>`, never amended, never pushed; suite green first. 768 worlds
 (+probes, +escalation ×2) ; every stage < 600 s.
+
+### M4-R1 outcome (appended after execution; registration above unedited)
+
+**INSTRUMENT_DEFECT(C-R1c) — routing cell 4.** INSTRUMENT_DEFECT(name) -- the failing certificate is the finding. Harness
+`scripts/run_suica_m4_r1_identity_channel.py`; report
+`reports/SUICA_M4_R1_IDENTITY_CHANNEL_REPORT.md`; artifacts
+`results/m4_r1_identity_channel/` (gitignored). 768 worlds
+(128 A/B pairs per dose) plus the probe sets.
+
+**THE CHANNEL WORKS; MY BAND WAS TOO TIGHT.** C-R1a, C-R1b and G2r1 all PASS.
+C-R1c fails on its **fourth clause only**, and the failure is in the Part-0
+band, not in the planted channel.
+
+**The extension needs no k2b edit.** The trait enters the response path at
+exactly one site — **`scripts/run_suica_m4_k2b_t4_branch.py:371`**: `v += w["mu"] * world["trait"][i][None, :]`. The registration asks
+for the mirror `+ w_style·style_a` there and specifies w_style in multiples of
+w_mu (**0.33541019662496846**, bit-exact against the persisted value: True).
+Writing w_style = m·w_mu, `w_mu·trait + w_style·style = w_mu·(trait + m·style)`
+EXACTLY, so publishing `trait_eff = trait + m·style` as the world's `trait`
+makes k2b's own UNEDITED `emit_panel` carry style at precisely the trait's site,
+in the observed panel and in every truth panel using `"mu"`. `trait_pure` and
+`style` are published separately for C-R1c and C-R1b. k2b, `suica_core/` and the
+P3b builder stay READ-ONLY; P3b's hashes match P3c's persisted (True).
+`style_z` is the LAST author-stream draw, so the prefix property preserves every
+earlier draw.
+
+**C-R1a PASS** — backward bit-identity at w_style = 0 across 16
+probes at φ ∈ {0.05, 0.60}: objects True, panels True,
+cards True, fields True (4 checks). The
+extension is inert at zero, so every prior result on the P3b builder stands.
+
+**C-R1b PASS** — style is author-stream (True: bit-identical
+across frame seeds), independent of trait (cos(style_c, trait_c) =
+0.002430979842622228, SE 0.0014745152709377159, within 2 SE of zero: True), and
+the card recomposes exactly from its named parts (True). **The shared
+component is NAMED as #60 requires: w_mu * trait_c + w_style * style_c (centred trait PLUS centred style).** r̂ is scored against
+the CENTRED TRAIT ONLY, deliberately, so the planted style appears as excess
+rather than being absorbed — the direct lesson of Q1b's defect.
+
+**C-R1c — three clauses pass, the fourth fails.**
+
+| w_style | n | measured Δ | 95% CI | predicted | persisted band | inside | measured − predicted |
+|---|---|---|---|---|---|---|---|
+| 0.0 | 128 | 0.00027221510546395313 | [-0.00015154691455664595, 0.0006871194716920599] | 0.0 | [0.0, 0.0] | False | 0.00027221510546395313 |
+| 0.5 | 128 | 0.1273886225517469 | [0.12695536488518774, 0.12783525151445932] | 0.12739898980740494 | [0.12677339619614159, 0.1280245834186683] | True | -1.0367255658033647e-05 |
+| 1.0 | 128 | 0.36609324420972367 | [0.3654769305968154, 0.3667285934456878] | 0.3695134875442334 | [0.3680053945830404, 0.37102158050542644] | False | -0.0034202433345097427 |
+
+- **(i) PASS** — Δ = 0.00027221510546395313 [-0.00015154691455664595, 0.0006871194716920599] at w = 0, inside ±0.00075116719103521;
+  the Q1b-corrected null re-confirmed on v2.
+- **(ii) PASS** — POSITIVE at both doses.
+- **(iii) PASS** — MONOTONE: P(Δ₁.₀ > Δ₀.₅) = 1.0 and
+  P(Δ₀.₅ > Δ₀.₀) = 1.0 at B = 2000.
+- **(iv) FAIL** — containment in the Part-0 band: False / True /
+  False.
+
+**The band's defect, diagnosed POST HOC (routing nothing).** The band was
+persisted before the arms as required and it ROUTES — retuning after seeing the
+measurement is exactly the move this programme forbids, so the verdict stands.
+But it has two flaws, both mine:
+
+| w_style | persisted band width | degenerate? | SE_pred | SE_meas | gap / combined SE | inside a CORRECTED band |
+|---|---|---|---|---|---|---|
+| 0.0 | 0.0 | True | 0.0 | 0.00021684323861539953 | 1.2553543619903362 | True |
+| 0.5 | 0.0012511872225267062 | False | 0.0003127968056316807 | 0.0002233080066693018 | -0.02697499342954882 | True |
+| 1.0 | 0.003016185922386061 | False | 0.000754046480596509 | 0.00032032174018175404 | -4.174779893852667 | False |
+
+(a) **At w = 0 the band is degenerate**: the prediction is exactly 0 at every
+probe world, so its SE is exactly 0 and the band has **zero width** — no
+measured value except a literal 0.0 could pass. Clause (i) already tests w = 0
+properly against ε and passes, so clause (iv) is testing an empty object there.
+(b) **At w > 0 the band carries only the prediction's probe spread**, ignoring
+the measurement's SE and — decisively — the DERIVATION's approximation error:
+the algebra assumes per-author orthogonality of t, s and n (realized
+cos = 0.002430979842622228, not 0) and equates a ratio of means with a mean of ratios
+(Jensen). Both grow with b, which is the observed pattern exactly: the gap is
+-8.137627836536472e-05 of the prediction at w = 0.5 and -0.009256071699142823 at w = 1.0, the
+latter -4.174779893852667 combined SE — outside even a measurement-aware band.
+
+**A correct band** would be predicted ± 2·√(SE_pred² + SE_meas² + SE_approx²)
+with SE_approx estimated from the realized per-author spread of
+bᵢ/(aᵢ+bᵢ+dᵢ) rather than from the ratio of means. That is the handback.
+
+**The algebraic band itself (executed provenance, persisted BEFORE the arms).**
+With a = E‖w_mu·trait_c‖², b = E‖w_style·style_c‖², d = E‖frame remainder‖²,
+Δ = b/(a+b+d) in expectation — exactly 0 at w = 0 and increasing thereafter.
+a, b, d were MEASURED on probe worlds; predictions 0.0 / 0.12739898980740494 /
+0.3695134875442334.
+
+**G3r1 PASS**: false-fire 0.043 at w = 0 (bar 0.1), power 1.0 at
+the algebraic w = 1.0 truth (bar 0.8); escalation did not fire (False).
+
+**Rule events.** Rule 13: 0 events, B = 2000. Rule 25: passed.
+Rule 26: no bounded winner. Rule 27: no budgeted consumption. Rule 29: the
+predicate ran at every arm. Rule 30: the band derived from MEASURED probe norms
+and persisted before the arms; w_mu and the P3b hashes verified at source. #57:
+no pilot correlation consumed — Δ is a per-pair scalar. #59: Δ at w > 0 is not
+forced; the w = 0 null is the unextended builder's verified behaviour. #60: the
+shared component is named.
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile); A-2 `timeout(1)` is
+absent on macOS. **The band's defect is a third, and it is mine** — but unlike
+A-1/A-2 it could not be caught before the measurement existed, which is why it
+is reported as a diagnosed failure rather than a corrected one.
+
+**Registration-defect candidates: none.** The registration specified clause (iv)
+correctly; what failed is the executor's construction of the band it names. Worth
+recording as a convention candidate for the planner: **a prediction band tested
+for containment must carry the derivation's approximation error, not only the
+prediction's sampling spread — and a band whose predicted value is a
+deterministic constant has zero width and cannot be a containment test at all.**
+That is the rule-32 estimator-noise-floor family applied to a PREDICTION rather
+than a measurement.
+
+**What this leaves.** The channel is planted, inert at zero, author-stream,
+trait-independent, card-visible, and recoverable with a monotone dose response
+matching the composition arithmetic to within 1%. What is NOT certified is the
+quantitative containment claim, because the band that was supposed to test it
+could not. A successor leg re-banding clause (iv) — with no change to the
+instrument — would close it.
