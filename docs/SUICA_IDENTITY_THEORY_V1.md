@@ -1960,3 +1960,28 @@ meter) can be certified against a LIVE identity channel — the
 founding question, finally posed on a world that can say yes or
 no. Registered as its own line after the Q-line closes; the tax's
 frame-ownership (Q2) is the Q-line's last leg.
+
+## Appendix LL — dated append (2026-08-14, post-Q2): the instrument statement completes; the arc stands ready for the identity channel
+
+**LL.1 — All four faces.** The gauge's b-only statistic is
+frame-agreement in LEVEL (R_refresh ≈ 0, P3c), in φ-GRADIENT
+(~88% frame-owned, P3c), in V-RESPONSE (D_ref NULL while D_nat =
+0.1196 falls exactly as the M-line law predicts, z = 0.52 — Q2),
+and in INJECTION RESPONSE (f = 0.958/0.971, P2). The N-line's tax
+curve κ(V) is re-typed by this note as the FRAME CHANNEL's
+V-response — every seal, closure and grade it earned stands,
+attached to the correctly named object. The M-line law anchored
+Q2's measurement: the program's laws now calibrate its new legs.
+
+**LL.2 — The standing of the arc.** Five lines closed in one
+program arc (M: the level law, PREDICTIVE-SCOPED; N: the tax curve,
+PREDICTIVE response-transport, closure-clean; P: the gauge is a
+frame-agreement instrument; Q: the card is pure trait, the layers
+read different targets, the tax is frame-borne). Rules 25–33;
+defects #43–#60, every one bought a rule or a convention. The
+founding conjecture — the residual as an ID card — has consumed
+this generator's capacity: cards here carry only biography;
+identity-beyond-biography has no channel to live in. **The M4-R
+line builds that channel** (a planted per-author non-trait style
+vector, zero-default certified), so the question that started this
+program can finally be asked of a world able to answer either way.

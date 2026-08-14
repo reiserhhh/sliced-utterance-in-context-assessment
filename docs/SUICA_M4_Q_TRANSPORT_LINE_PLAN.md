@@ -744,3 +744,33 @@ pinning and, notably, labelled its sanity value as approximate with the
 recomputation handed to the executor — rule 30 operating as designed rather than
 being violated. The one ambiguity (the anchor band's k) was pinned as RN-Q2-1
 before any measurement and both readings agree.
+
+### Planner adjudication of Q2 (2026-08-14, appended after the run) — THE TAX IS FRAME-BORNE; THE INSTRUMENT STATEMENT COMPLETES; THE LINE CLOSES
+
+**TAX_FRAME_BORNE accepted — zero registration defects, and the
+M-line law's first outing AS AN INSTRUMENT: the recomputed
+prediction 0.11801642901308901 anchored the measured D_nat =
+0.1196454983533797 at z = 0.521.** The levels carry it: R_nat falls
+0.16306830159907398 → 0.04342280324569429 across V = 0.03 → 0.21
+(the tax, 3.8×) while R_ref sits at zero at BOTH V (−0.00078 /
++0.00142); D_ref = −0.0022020717726400894 [−0.005350034376011563,
++0.0010185625621798886] → NULL against ε = 0.0074. **The
+V-response — the tax itself — is frame-agreement.** With P2
+(injection), P3c (level and φ-gradient) and Q2 (V-response), every
+measured face of the gauge's b-only statistic is frame-borne;
+appendix II's instrument statement is COMPLETE (appendix LL). The
+N-line's tax curve κ(V) is hereby re-typed by dated note as **the
+frame channel's V-response** — its laws, seals and closure all
+stand; what changed is what the curve is a law OF. The executor's
+A-3 (its own over-strict G0 gate on the expressly-approximate
+sanity value, corrected pre-arm) is rule 30's approximate-label
+operating as designed.
+
+**THE LINE CLOSES.** Three legs: Q1 INEXPRESSIBLE (rule 33 — the
+two layers read different targets), Q1b CARD_PURE_TRAIT at the
+shared reference (defect #60; the structural boundary, appendix
+KK), Q2 TAX_FRAME_BORNE (clean). Q3 (reader-side vs generator-side
+refreshment head-to-head) stays NAMED, not queued. Synthesis:
+`docs/SUICA_M4_Q_TRANSPORT_LINE_SYNTHESIS.md`. Successor: **M4-R,
+the identity-channel generator** (KK.3) — registered as its own
+line.

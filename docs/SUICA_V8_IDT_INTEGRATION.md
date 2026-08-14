@@ -223,3 +223,25 @@ mechanism layer the M/N laws lacked:
   second moments, sub-case carry-forward).
 - Successor: the M4-Q transport line (cards under refreshment —
   the instrument-role taxonomy's mechanism half).
+
+## Dated addendum (2026-08-14, third) — the M4-Q transport line
+
+The Q-line (3 legs, `0f3d773`..close; synthesis
+`docs/SUICA_M4_Q_TRANSPORT_LINE_SYNTHESIS.md`) completes the
+instrument story:
+
+- **Rule 33**: instrument comparisons are licensed only between
+  readers of the SAME registered target — appendix N's 4.5× was a
+  different-targets comparison (card truth frame-free; gauge truth
+  frame-carrying) and is re-scoped.
+- **The card is pure trait** (disattenuation identity to ±0.0004
+  against the shared component); this generator's cards have no
+  non-trait author channel — the identity-beyond-biography question
+  is structurally unposable on the k2b family (appendix KK).
+- **The tax is frame-borne** (D_ref NULL while the M-line law
+  predicted D_nat at z = 0.52): with P2/P3c, every measured face of
+  the gauge's statistic is frame-agreement — the N-line curve is
+  the frame channel's V-response (appendix LL).
+- Standing rules 1–33; defects #1–#60. Successor: the M4-R
+  identity-channel generator line (the founding question, made
+  posable).
