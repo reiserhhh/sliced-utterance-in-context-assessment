@@ -843,3 +843,100 @@ judgement the executor had to make — what exactly counts as a split — is a
 consequence of the design being under-determined only in a corner the
 registration had no reason to foresee, and it is pinned as RN-P3-6 with both
 readings reported.
+
+### Planner adjudication of P3 (2026-08-14, appended after the run) — AN INSTRUMENT THEOREM, NOT A FAILURE
+
+**INFEASIBLE_SPLIT accepted — zero worlds, zero defects, and the
+registration's anticipated-STOP design did its job.** The proof is
+EXHAUSTIVE over the published interface (`build_k2b_world` takes
+exactly two parameters, verified by inspection): varying
+`world_seed` moves the author channel (trait derives from z and
+loadings, drawn before any frame object); varying `phi_slow` leaves
+`common` — the frame channel proper — bit-identical (only the
+recombination of the same innovations changes). **Instrument
+theorem: generator-side frame refreshment is impossible on the
+published k2b interface by seeding alone.** RN-P3-6 (the φ-axis
+pseudo-split — "same draws recombined" is not "fresh draws") is
+recorded as the canonical predicate lesson of the rule-29 family;
+RN-P3-5 (every published refreshment in the programme acts on the
+READER's norm sample; none on the generator's frame channel) is
+elevated to a named theory-instrument gap (appendix HH): T9's
+counter-operation existed at only one of its two layers.
+
+**Route.** The executor named two remedies; the k2b edit is barred
+(published machinery stays published), and reader-level refreshment
+measures a DIFFERENT decomposition (norm-sample dependence, not
+truth-side frame co-movement) — recorded, not chosen. The licensed
+path is the K1/K2a clause itself: **minimal extraction with
+file:line provenance** — a split-seed builder extracted from
+k2b:321-349 with two RNG streams, certified before use. P3b merges
+the instrument and the measurement into one leg, below. All of P3's
+Part-0 anchors were verified and are reusable verbatim (the M1c
+share-.25 row, the natural range −0.01039144307119933, the ladder r
+values, P2's f pair).
+
+---
+
+## M4-P3b — the refresh gradient on a certified split-seed instrument
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. P3's question, estimand,
+quantities, verdicts, leans, budgets and routing are INHERITED
+VERBATIM (g_ratio = range_ref/range_nat; V-P3a anchor / V-P3b
+NULL-first classification with the 0.30 rule-27 budget / V-P3c
+NO_TRANSPORTABLE_READING sub-case; leans MOSTLY_FRAME .55 /
+INTERMEDIATE .20 / NO_TRANSPORTABLE_READING .15 / other .10;
+projection at truths {0.04, 0.5} with the once-only escalation ON
+THE BUDGET GATE; R_deframe secondary reading; the routing table
+with INFEASIBLE_SPLIT replaced by INSTRUMENT_DEFECT). Exactly the
+following is new.
+
+### The instrument (rules 9/12 — minimal extraction with provenance)
+
+`build_split_world(author_seed, frame_seed, phi_slow)`, implemented
+INSIDE `scripts/run_suica_m4_p3b_refresh_gradient.py` by extraction
+from `run_suica_m4_k2b_t4_branch.py:321-349` with a per-line
+provenance table in the report (k2b and `suica_core/` untouched,
+diff-verified). **Channel taxonomy (pinned):** author stream =
+{loadings, z→trait, a_load} — the per-author-persistent objects
+PLUS the shared basis (loadings must be common to an A/B pair or
+cross-scoring silently mixes two orthonormal bases — the trap P3
+named); frame stream = {slow state, noise, common via
+f2().shock_vector(frame_seed,…), shocks via
+k2a().shock_int_matrix(frame_seed,…)}. Draw ORDER within each
+stream preserves k2b's sequence (documented in the provenance
+table). Layout (`k2b.layout()`, argument-free) is shared by
+construction.
+
+### Certification battery (ALL before any measurement world)
+
+- **C2a (split proof):** 8 probe pairs (same author_seed, different
+  frame_seed): author-stream objects BIT-IDENTICAL; every
+  frame-stream object differs (norm deltas > 0, reported per
+  object).
+- **C2b (determinism):** same (author_seed, frame_seed, φ) rebuilt →
+  entire world bit-identical.
+- **C2c (basis shared):** loadings bit-identical across each pair.
+- **C3 (sanity pilot):** 4 pairs × φ ∈ {0.05, 0.98}, rule-29
+  predicate on BOTH scorings; the V-P3b equivalence band and V-P3c
+  floor computed here (df-inflated) and written into the report
+  before the main arms.
+- **C1′ (the anchor as certificate):** V-P3a — R_nat's five levels
+  on the NEW instrument replicate M1c's share-.25 row within
+  2·√2·SEM each (distributional; the two-stream plumbing changes
+  seeds, not the law). Failure → **INSTRUMENT_DEFECT** (a stop
+  about the extraction, never a finding about the world).
+
+### Design deltas
+
+share 0.25 × φ ∈ {0.05, 0.30, 0.60, 0.85, 0.98} × 192 A/B pairs
+(A: author=s_i, frame=s_i′; B: author=s_i, frame=s_i″; all three
+streams hash-derived, persisted per pair). Salts `m4p3b-author` /
+`m4p3b-frameA` / `m4p3b-frameB` / `m4p3b-pilot`, master_seed
+20260814. R_nat = A-gauge vs A-truth; R_refresh = A-gauge vs
+B-truth. Stages: part0 (extraction + provenance + C2 battery)
+180 s, pilot 60 s, worlds 5 chunks (~260 s each; ×2 at escalation),
+score+fit 180 s, finalize 60 s; every stage < 600 s; target
+< 50 min. Six deliverables; ONE commit
+`feat(m4-p): P3b — the refresh gradient, certified instrument —
+<SLUG>`, never amended, never pushed; suite green first.

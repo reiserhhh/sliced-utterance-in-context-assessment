@@ -1829,3 +1829,33 @@ re-types the mechanism section; SUBSTANTIALLY_GENUINE strengthens
 the scaffold-gradient; NO_TRANSPORTABLE_READING is K-R1's picture
 at natural regimes. All three are live; the lean (.55 mostly-frame)
 carries P2's f across an honest inferential gap, stated as such.
+
+## Appendix HH — dated append (2026-08-14, post-P3): the refreshment layers — an instrument theorem and a filled gap
+
+**HH.1 — The theorem.** Generator-side frame refreshment is
+IMPOSSIBLE on the published k2b interface: its input space is
+exactly (world_seed, phi_slow); the seed moves author and frame
+channels together, and φ recombines the SAME frame innovations
+rather than drawing fresh ones (proof by exhaustion over the
+interface, M4-P3, zero worlds spent). "Same draws recombined ≠
+fresh draws" is the predicate lesson (RN-P3-6).
+
+**HH.2 — The taxonomy T9 was missing.** Frame REFRESHMENT (T9's
+licensed counter-operation) has two layers that the theory had not
+separated because only one existed: **reader-side** refreshment
+(fresh norm sample — T6″'s layer; tests norm-sample dependence and
+forgery) and **generator-side** refreshment (same persons, fresh
+world-frame; tests whether a reading TRANSPORTS across frames —
+the decomposition P2 forced). Every published instrument to date is
+reader-side (RN-P3-5). The two layers answer different questions
+and neither substitutes for the other; the licensed-operations
+table of T9 is hereby annotated.
+
+**HH.3 — The gap is filled by extraction, not edit.** P3b builds
+the generator-side layer as a certified split-seed extraction
+(author stream = persistent objects + shared basis; frame stream =
+state, noise, common, shocks; k2b untouched), with the M1c anchor
+row as its certificate. If its measurement lands MOSTLY_FRAME, the
+M-line's sealed r-channel is dominated by frame-agreement and the
+mechanism section re-types — the law itself, being a law of
+predictions, stands either way.
