@@ -645,3 +645,102 @@ outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
 commit `feat(m4-q): Q2 — is the tax frame-borne — <SLUG>`, never
 amended, never pushed; suite green first. 1536 worlds (+escalation
 ×2) + pilot; every stage < 600 s.
+
+### M4-Q2 outcome (appended after execution; registration above unedited)
+
+**TAX_FRAME_BORNE — routing cell 4; modifiers: none.**
+TAX_FRAME_BORNE -- the V-response is frame-agreement; the N-line curve is re-typed as the frame channel's V-response; appendix II completes. Harness `scripts/run_suica_m4_q2_tax_transport.py`; report
+`reports/SUICA_M4_Q2_TAX_TRANSPORT_REPORT.md`; artifacts
+`results/m4_q2_tax_transport/` (gitignored). 1536 worlds
+(384 A/B pairs per share).
+
+**D_ref = -0.0022020717726400894 [-0.005350034376011563, 0.0010185625621798886] → NULL** (ε = 0.007413654845687905), against a
+natural tax swing **D_nat = 0.1196454983533797 [0.11590855681080722, 0.1232498969832857]**.
+
+**The levels first (RN-Q2-5, pinned in Part 0).** A NULL D_ref is largely
+CONFIRMATORY given P3c's near-zero R_ref, so the levels are stated before the
+difference:
+
+| share | V | n | R_nat mean | R_nat SEM | R_ref mean | R_ref SEM |
+|---|---|---|---|---|---|---|
+| 0.1 | 0.03 | 384 | 0.16306830159907398 | 0.0014179003281448192 | -0.0007786103879736543 | 0.0011820408887000167 |
+| 0.7 | 0.21 | 384 | 0.04342280324569429 | 0.0011174156760681603 | 0.001423461384666435 | 0.0010773169597756112 |
+
+**R_nat falls from 0.16306830159907398 at V = 0.03 to 0.04342280324569429 at V = 0.21
+— the tax, plainly visible and large. R_ref sits at -0.0007786103879736543 and
+0.001423461384666435 — flat at zero at BOTH V.** The frame-refreshed reading has no
+level to lose, which is exactly why its difference is null. The honest reading
+is the conjunction: the V-response exists only in the frame-carrying statistic.
+
+**V-Q2a, the anchor — PASS.** The M-line prediction was recomputed in Part 0
+from M1c's (0.10, 0.60) cell (mean 0.16156034289722412, SEM
+0.0019744651453781504, n 192) and M2's C2 (mean
+0.04354391388413511, SEM 0.001616665195874819, n 192):
+**predicted D_nat = 0.11801642901308901** (SEM 0.002551885374750623). Measured
+0.1196454983533797; difference 0.0016290693402906953, **z = 0.5211540361150766**,
+inside the pinned band 0.008841347453659845 (True) and inside the
+plain 2-SE band 0.006251776739309291 (True). The instrument
+reproduces the M-line law, so D_ref can be interpreted rather than doubted.
+
+**RN-Q2-6 (an anticipated, non-gating divergence, recorded before any
+measurement).** The registration quotes the prediction as "≈ +0.117 … planner
+sanity value, executor recomputes". The recomputation gives 0.11801642901308901 —
+0.0010164290130890014 above it, rounding to 0.118 rather than 0.117
+(matches to 3 dp: False). Rule 30 licenses an expressly-approximate
+quote, so this is **not** a defect and does not gate; the recomputed value
+controls and both are recorded. For scale the divergence is about a seventh of
+the anchor band. My first Part-0 draft made the 3-dp match a PASS condition and
+failed G0 on it — my own over-strict gate, corrected before any arm ran, with no
+number affected.
+
+**RN-Q2-1 (the anchor band, pinned before any measurement).** The registration
+says "distributional band" without fixing k, and the two source cells come from
+DIFFERENT legs on different salts (M1c and M2), so the comparison is
+distributional by necessity. PINNED: band = 2·√2·√(SEM_pred² + SEM_meas²),
+matching the V-P3a/C1′ convention; the plain 2-SE reading is reported beside it.
+They agree here.
+
+**V-Q2b.** D_ref = -0.0022020717726400894 [-0.005350034376011563, 0.0010185625621798886] against ε = 0.007413654845687905 →
+**NULL**; the sign-first reading agrees (True). The CI lies entirely
+inside the equivalence band and straddles zero.
+
+**The ratio, UNBUDGETED.** D_ref/D_nat = -0.0184049697058902 [-0.044787633515569504, 0.008345157757188915], width
+0.05313279127275842 — descriptive only, gating and routing nothing (the P3b lesson
+kept visible), and the only place the 1.25 independence margin touches anything.
+
+**Gates.** G0q2 PASS (instrument hashes match P3c's persisted, True;
+the anchor cells at full precision; P3c's and Q1b's verdicts). C2 PASS on
+4 fresh probe pairs. G2q2 PASS. G3q2 PASS: false-fire 0.043 at
+D_ref = 0 (bar 0.1) and power 0.9485 at the partial-transport truth
+0.013614431430092793 (bar 0.8, derived as the recomputed anchor times P3c's
+transportable share point 0.115360476028154); escalation did not fire
+(False).
+
+**#57 and #60 both honoured explicitly.** No pilot correlation is consumed:
+D_nat and D_ref each difference two INDEPENDENT shares, so their SEs need no
+covariance term, and the 1.25 margin is applied only to the ratio's band and
+stated there; the within-pair R_nat/R_ref correlation is handled by joint index
+resampling, never by estimating a correlation. The #60 shared-component check is
+STATED, not merely satisfied (RN-Q2-4): both scorings use each world's OWN truth
+panel from k2b's `emit_panel`, and the contrast is between two SHARES rather
+than two reference objects — so nothing is scored against an object it does not
+contain, which was Q1b's failure mode.
+
+**Rule events.** Rule 13: 0 boundary events, B = 2000. Rule 25:
+the gate passed at the registered size. Rule 26: no bounded winner. Rule 27: the
+ratio carries its UNBUDGETED label. Rule 29: the predicate ran on BOTH scorings
+at every arm. Rule 30: every cited constant read from its persisted source and
+the anchor prediction RECOMPUTED rather than quoted.
+
+**Executor self-report.** Three anomalies, all resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile); A-2 `timeout(1)` is
+absent on macOS (foreground stages under explicit sub-600 s timeouts); A-3 my
+own over-strict G0 gate on the approximate sanity value, described above and
+corrected before any arm.
+
+**Registration-defect candidates: none.** The registration pinned what needed
+pinning and, notably, labelled its sanity value as approximate with the
+recomputation handed to the executor — rule 30 operating as designed rather than
+being violated. The one ambiguity (the anchor band's k) was pinned as RN-Q2-1
+before any measurement and both readings agree.
