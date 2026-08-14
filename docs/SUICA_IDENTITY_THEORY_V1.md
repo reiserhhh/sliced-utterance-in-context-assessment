@@ -1656,3 +1656,23 @@ mechanism earns its next test (the frame-floor question: is c′ the
 frame-carried baseline? — named, not queued), and the sealed
 difference-fit 0.722 acquires its final reading: a secant of the
 curve at its design's V̄.
+
+## Appendix CC.1′ — dated correction (2026-08-11, post-N1): the square-form identities, at executed provenance
+
+N1's G0 caught appendix CC.1's constants failing bit-exact
+recomputation from M3's persisted fit — the planner had published
+hand-derived digits at 16-digit precision (defect #50; rule 30 now
+requires executed provenance for every published derived constant).
+Corrected, computed by the N1 harness from the persisted θ:
+
+    V* = κ0/κ2      = 0.6143589975880801
+    A0 = κ0²/(2κ2)  = 0.2949439312708197
+    c′ = c − A0     = −0.08246994861803153
+
+CC.1's argument is unchanged (the errors were 8.2e-6 / 5.1e-5 /
+5.1e-5 — far below any inference drawn from them); CC.2's transport
+predictions are functions of (κ0, κ2) directly and reproduce
+bit-exactly (0.8781169374706213 / 0.6671284384567739 /
+0.21098849901384734). N2's frame-floor question inherits the
+corrected c′. The episode itself is the appendix's best footnote:
+a program whose gates catch its planner inventing digits is working.

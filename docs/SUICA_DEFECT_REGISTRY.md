@@ -215,3 +215,14 @@ sources): ZERO (0,1)-breaches beyond M2's known case — the latent
 convention never bit a published number; #49's retroactive question
 is closed. Rules 25, 26, 27, 13 all fired at least once during the
 M-line and behaved as written.
+
+## Dated additions (2026-08-11, seventh note — N1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #50 | N-line / M4-N1 | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N1 outcome + planner adjudication` | Appendix CC.1's V*/A0/c′ (and the registration's A-lin chord) were published at 16-digit precision without executed arithmetic — all three identities jointly consistent with a (κ0, κ2) pair absent from every persisted artifact; caught by G0 with corrected values supplied; zero worlds spent. | 30 | fabricated-precision |
+| #51 | N-line / M4-N1 | same | S3's sealed-band width at the registered n (0.391 vs budget 0.35) was computable at registration and never computed; the only escalation ladder was attached to the gate that PASSES (the projection), leaving no path to the success cell — rules 11/18 violated, third of the #43/#44 genus. | none (rules 11/18; #43 convention extended: planner-run covers every gate-consumed quantity incl. persisted-pipeline recomputes; ladders checked against every gate sharing the knob) | joint-satisfiability |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 30 | #50 | Every published derived constant carries EXECUTED provenance — computed by code from persisted inputs at full precision, or quoted expressly as approximate with its precision stated; digits beyond the planner's actual executed arithmetic are a defect regardless of numerical proximity. | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N1 planner adjudication (2026-08-11)` |

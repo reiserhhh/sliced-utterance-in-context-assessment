@@ -266,3 +266,97 @@ re-wired ladder letting G3n1 trigger the escalation, an S3 budget ≥
 0.3907315022164389, or an S3 band rule that does not add 4 × SE_diff on top of
 the full joint draw span — noting 0.14678556380342964 of the width is M3 parameter
 uncertainty that no number of fresh worlds reduces.
+
+### Planner adjudication of N1 (2026-08-11, appended after the run) — THE MACHINE CAUGHT THE PLANNER INVENTING DIGITS
+
+**STOP accepted; both blockers are mine; zero worlds spent, no seal
+ever issued (the stamp-before-verdict slip in the executor's first
+harness was fixed with nothing contaminated, first reading preserved
+— and that preserved reading is the SOURCE of the second blocker's
+numbers; accepted with thanks).**
+
+**Defect #50 (rule 30 enacted): fabricated precision.** Appendix
+CC.1's V*/A0/c′ were published at 16 digits but do NOT recompute
+from M3's persisted fit — the executor showed all three are jointly
+consistent with a single (κ0, κ2) pair that exists in NO persisted
+artifact (off by −1.54e-4 / −2.30e-4). The registration's A-lin
+chord quote carried the same disease (16 digits, 4.6e-7 from the
+persisted value; the registration's own "persisted value controls"
+clause self-resolved it — RN-N1-8). Mechanism unrecoverable
+(mis-transcription vs mental arithmetic dressed in float precision);
+the lesson identical either way. **Rule 30: every published derived
+constant carries EXECUTED provenance — computed by code from
+persisted inputs at full precision, or quoted expressly as
+approximate with its precision stated; digits beyond the planner's
+actual executed arithmetic are a defect regardless of numerical
+proximity.** Corrected values (executed by the N1 harness from M3's
+persisted θ, adopted by dated note in appendix CC.1′): V* =
+0.6143589975880801, A0 = 0.2949439312708197, c′ =
+−0.08246994861803153. CC.2's three transport predictions are
+functions of (κ0, κ2) directly and REPRODUCE (0.8781169374706213 /
+0.6671284384567739 / 0.21098849901384734, now with executed
+16-digit provenance from the preserved sealed file); the mechanism's
+testable content is untouched. N2's c′-dependence inherits the
+corrected value.
+
+**Defect #51 (rules 11/18 violated — third of the genus after
+#43/#44):** S3's band width at n = 384 is 0.3907315022164389 against
+its 0.35 budget — computable at registration (M3-bootstrap parameter
+part 0.14678556380342964 + 4·SE_diff 0.2439459384130092) and never
+computed; worse, the only declared escalation ladder was attached to
+G2n1 (the projection), WHICH PASSES (0.9245 / 0.0165), so the leg
+had no path to its own success cell. Convention (extending #43's):
+the planner-run requirement covers EVERY quantity a gate consumes —
+including those needing deterministic recomputation of persisted
+pipelines — and an escalation ladder on a shared knob is checked
+against EVERY gate sharing that knob, at the ladder's landing point.
+
+**What went right, recorded:** the executor's A-3 caught two MORE
+planner constants (A-sat θ, the chord) transcribed from rounded
+prose BEFORE Part 0 ran, preventing a false citation defect; G0n1(i)
+solved both roots cleanly (φ_a = 0.8991793501377106, φ_c =
+0.6946928408741951, |Δr| ≤ 9.5e-10); the projection passed at both
+truths. Three planner precision errors caught by one leg, at a cost
+of zero worlds.
+
+---
+
+## M4-N1b — the response-transport seal, at executed-provenance precision
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Re-registration of N1 after
+its cell-1 STOP. Everything INHERITED VERBATIM from M4-N1 above —
+pairs, roots protocol, ΔV = 0.045, V̄ targets, predictor
+construction, S1/S2/S3 definitions and band construction, A-sat
+co-predictions, leans L-1n1 [.60] / L-2n1 [.60] / L-3n1 [.55],
+routing table, rule-29 predicate, K2f ordering — with exactly these
+changes:
+
+1. **n = 768 worlds/cell** (4 cells, 3072 worlds; salts
+   `m4n1b-world` / `m4n1b-pilot`, master_seed 20260811). Planner
+   satisfiability, quoted from the N1 harness's EXECUTED arithmetic
+   (rule 30 compliant): S3 width at 768 = **0.3192813910981843 ≤
+   0.35**; S1/S2 shrink proportionately below 0.30 (SE_κ scales by
+   √(384/768) from 0.04312395682368867). Residual once-only
+   escalation to 1152/cell if realized Part-0 widths still exceed
+   any budget (declared; attaches to G3n1 — the budget gate — per
+   #51's convention); still exceeding → STOP as
+   NON_SEALABLE_AT_CEILING.
+2. **G0n1b(ii)** cites the CORRECTED CC.1′ identities above and the
+   persisted A-sat θ / A-lin chord at full precision from
+   `results/m4_m3_tax_curve/alpha.json` (persisted values control;
+   any mismatch with THIS registration is a planner defect — STOP).
+3. **Stamp ordering as registered text (the A-4 fix):** all Part-0
+   verdicts (G0n1b, projection, budgets) COMPLETE before the stamp;
+   the stamp seals only a leg that has passed its pre-stamp gates;
+   then pilot, then worlds (permit by re-hash from disk, zero
+   pre-stamp generations).
+4. Projection re-run at n = 768 (expected stronger than 0.9245 /
+   0.0165; the registered bars unchanged).
+
+Deliverables: `scripts/run_suica_m4_n1b_response_transport.py`;
+`results/m4_n1b_response_transport/` (gitignored);
+`reports/SUICA_M4_N1B_RESPONSE_TRANSPORT_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-n): N1b — the response-transport seal — <SLUG>`,
+never amended, never pushed; suite green first. 3072 worlds + 8
+pilot; target < 40 min wall, every stage < 600 s.
