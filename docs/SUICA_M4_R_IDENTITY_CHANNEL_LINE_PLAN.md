@@ -332,3 +332,72 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-r): R1b — clause (iv) re-banded — <SLUG>`,
 never amended, never pushed; suite green first. 256 worlds
 (+escalation ×2) + pilot; target < 20 min, every stage < 600 s.
+
+### Outcome of M4-R1b (executed 2026-08-14, append-only)
+
+**`IDENTITY_CHANNEL_CERTIFIED` (rule-16 cell 3).** Clause (iv)
+closes prospectively at a dose that had never been measured.
+
+- **The corrected band, all three terms from PROBE worlds** (the pilot runs
+  after the stamp, so no term may come from it). Prediction at w = 0.75 =
+  `0.2476172270351607` (ratio-of-means, R1's form, unchanged — RN-R1B-3);
+  SE_pred = `0.00045459114785961074`, SE_meas = `0.0002683462385382117`, SE_approx =
+  `0.002186151999363512`; combined `0.002248982743324414`; half-width
+  `0.004497965486648828`; band `[0.24311926154851188, 0.25211519252180953]`. **SE_approx dominates** — it is
+  4.809050967351109x SE_pred and 8.146758498544077x
+  SE_meas, i.e. the term R1's band omitted was the only one that mattered.
+- **Ordering.** `prediction.json` hashed `dd5912a4c219c651df501488ed3bdcd5455bdb968865579c93f13570fcb57c95` and stamped
+  2026-08-14T08:43:42.897504+00:00 with **0 fresh-arm
+  worlds in existence**; the arm re-read the stamp from disk and re-hashed to a
+  match 18.305773 s later. 32
+  probe worlds necessarily precede the stamp — they are the band's inputs — and
+  are counted separately (RN-R1B-4).
+- **G3r1b PASS.** At the corrected width: power
+  1.0 at the algebraic
+  truth (bar 0.8) and false-fire
+  0.0
+  at prediction − 3·band (bar 0.1). Escalation fired: False.
+- **V-R1b PASS.** Measured Δ(0.75) = `0.24614231318551627` [0.24556658406745574, 0.24677281301031784],
+  signed error `-0.0014749138496444325`, **position -0.3279068845731195** of
+  the half-width. INSIDE.
+- **The correction is load-bearing, not a convenient widening.** The residual is
+  -0.6746620775105513 of SE_approx but
+  -4.8949869838067945 of the measurement's own SEM — the
+  measurement is far more precise than the prediction is accurate, which is the
+  whole content of #61. **Under R1's band form** (2·√(SE_pred² + SE_meas²),
+  half-width `0.0010557704588591693`) **this leg would have
+  landed at -1.3970023855736367 and FAILED
+  (False)** — the identical failure would have
+  recurred at a fresh dose.
+- **Secondary (post-hoc, adjudicating nothing).** R1's gaps re-scored against
+  this half-width: w = 0.5 gap `-1.0367255658033647e-05` (inside:
+  True), w = 1.0 gap
+  `-0.0034202433345097427` (inside:
+  True). Reported as consistency
+  readings only; the routing uses w = 0.75 alone (RN-R1B-1). The w = 0 clause is
+  re-typed as equivalence and R1's clause (i) stands as its verdict.
+- **Executor anomaly A-3, AFTER the verdict existed.** The report template —
+  written before the run — asserted the measurement would sit closer to the
+  per-author mean-of-ratios, that being "what the measurement actually
+  estimates" (Part 0's own words). It does not: the measurement is
+  `-0.0038555197801447283` from the arm's
+  mean-of-ratios versus `-0.0014749138496444325` from the stamped
+  ratio-of-means, so **the pre-pinned form was the closer one and I did not know
+  that when I pinned it**. Had the mean-of-ratios been stamped the position would
+  have been -0.8571697118594949 — still inside
+  (True), but near the edge. The containment verdict is
+  robust to the form choice; the comfort of the margin is not. The residual is
+  therefore NOT the Jensen form gap — it runs the other way and is larger, and
+  SE_approx covers it because that spread sets the right *scale* for the
+  derivation's error, not because it names its mechanism. The false sentence was
+  replaced by §5.1's generated decomposition. No number changed;
+  `prediction.json` is untouched and still re-hashes to the stamp.
+- **Consequence.** With C-R1a, C-R1b and clauses (i)–(iii) standing from R1, the
+  identity channel is **certified**: planted, inert at zero, author-stream,
+  trait-independent, card-visible, monotone in dose, and quantitatively
+  recoverable inside a band fixed before the measurement existed. M4-R2 becomes
+  registrable. Nothing here bears on the k2b family's own worlds — the channel
+  is planted, not discovered, and appendix KK's boundary is unmoved.
+- Rule 13: 0 events. Report: `reports/SUICA_M4_R1B_REBAND_REPORT.md`.
+- **No registration-defect candidates.** The registration specified the leg
+  correctly, including the prescription for SE_approx.
