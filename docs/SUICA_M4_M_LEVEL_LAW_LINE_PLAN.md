@@ -2216,3 +2216,57 @@ alpha(0.70) triangle does not close, and its failure direction says the channel
 does slightly more work at exterior share than theta* assigns. (iv) Everything
 remains scoped to this world family, this instrument, and r interior to the
 trained window.
+
+### Planner adjudication of M3 (2026-08-11, appended after the run) — THE TAX IS A CURVE; FIVE ROUTES WERE ONE LAW; THE LINE CLOSES
+
+**TAX_IS_A_CURVE + CLOSURE_EXPLAINED accepted; the curve is
+CONSUMABLE (all rule-27 budgets met); zero registration defects — the
+line's first fully clean leg.** A-quad wins (LOO 0.001405398973367856,
+2.56× better than A-lin) with κ2 = 1.562877770472943
+[1.0324533419318935, 2.119753814549891] excluding zero, stable at
+B = 20000 — and BOTH fresh intervals contain the planner's pre-run
+appendix-AA values (κ0 ≈ 0.983 in [0.8935297536704152,
+1.0313114338425122]; κ2 ≈ 1.815 in the interval above). The local
+tax declines 0.913 → 0.632 across V ∈ [0.03, 0.21]. **The constant-κ
+era closes by dated note (theory appendix BB): κ was never one
+number; each published value was its estimator's average over its
+V-support, plus channel loading.**
+
+**The closure: 5/6 through each estimator's OWN pipeline**, including
+the pre-signed mechanism hit — target 6 (the channel-omitting
+tax-additive) retrodicted LOW at 0.6795535 vs published
+0.6761549415814, lowest of all six, exactly as appendix AA signed
+before the leg ran. The one MISS is honest and narrow: target 2 (the
+K2e 9-pair refit, the only point-only-tolerance target) at
+0.7490808 vs 0.7145934082034173 — 0.0045 over the 0.03 tolerance.
+Named, not queued: whether the 9-pair pipeline's weighting departs
+from the compilation's (a target-2 forensic is a small artifact-space
+question for any future leg).
+
+**Honest residuals typed.** (i) The A-quad/A-sat tie (3.2%, inside
+the 5% band; rule 13 at B = 20000 left verdicts unchanged): both are
+CURVED, so TAX_IS_A_CURVE is tie-robust; the FORM between them is
+UNSETTLED and matters only beyond V = 0.21 — A-quad's κ(V) crosses
+zero at V ≈ 0.614 (out-of-scope arithmetic, NOT a prediction), A-sat
+stays positive; the curve is scoped to V ∈ [0.03, 0.21]. (ii) The
+α(0.70) triangle does not close (M2's two cell-derived readings
+0.0423 / 0.0481 bracket M3's fresh 0.044933 [0.043002, 0.046821]
+without containing it) — the transferred channel's within-share slope
+at exterior share carries a small bias, consistent with q's
+looseness; named. (iii) L-3m3's joint-refit overlap is nearly vacuous
+(λ CI [−30.6, −0.039]) — the transfer evidence remains M2's seal,
+not this check. (iv) #49 retro-check CLEAN (46 worlds, 23 sources, 0
+breaches beyond M2's known case): the latent (0,1) convention never
+bit a prior leg; defect #49's retroactive question closes.
+
+**THE LINE IS CLOSED.** Seven legs (M1, M1b, M1c, M1d, M1e, M2, M3),
+seven registrations before run, seven single commits, zero amends,
+zero agent pushes, suite green at every commit. Laws, corrections,
+rules (25–29) and defects (#43–#49) are compiled in
+`docs/SUICA_M4_M_LEVEL_LAW_LINE_SYNTHESIS.md`; theory consequences in
+appendices W–BB; the graded-laws table of record updates in the V8
+integration document's dated addendum. The successor question — WHY
+is the tax quadratic — is chartered as the M4-N line (its own plan
+document), opened by the planner's square-agreement derivation
+(appendix CC) whose response-transport prediction is N1's sealed
+test.

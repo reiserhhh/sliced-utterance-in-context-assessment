@@ -905,3 +905,16 @@ State-of-main updates in all three READMEs. Law grades of record:
 PREDICTIVE (η-floor, taxometer, tax-ratio algebra), RESPONSE (variance
 tax, quadratic link band), LEVEL-interpolative (λ′ − κ′·V_person), DEAD
 ((d/n)^¼ window conjecture, T4 level composite v1, T8(e) crowding).
+
+## Dated addendum (2026-08-11) — the M4-M line
+
+The level-law completion line: plan
+`docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md` (7 registrations, outcomes,
+adjudications); synthesis `docs/SUICA_M4_M_LEVEL_LAW_LINE_SYNTHESIS.md`;
+theory appendices W–CC in `docs/SUICA_IDENTITY_THEORY_V1.md`; graded
+laws updated by the dated addendum in `docs/SUICA_V8_IDT_INTEGRATION.md`.
+Headlines: the scoped level law is PREDICTIVE-SCOPED (M2, 3/3 sealed);
+the tax is a declining quadratic curve, closure-validated 5/6 (M3);
+the response-band exponent is re-attributed (V-shadow +2.245); rules
+25–29; defects #43–#49. Successor: the M4-N mechanism line
+(`docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md`).

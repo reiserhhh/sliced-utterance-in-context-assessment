@@ -205,3 +205,13 @@ rule without a defect number, rule-13-style:
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 29 | #49 | Every regime/sanity gate pins its predicate in the measured statistic's OWN domain (bounds, null, saturation points), named per statistic; any divergence between registered text and an inherited code-form is disclosed and adjudicated before an outcome-relevant consequence. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M2 planner adjudication (2026-08-11)` |
+
+## Dated additions (2026-08-11, sixth note — M3; append-only)
+
+M3 closed with **zero registration-defect candidates** — the M-line's
+first fully clean leg (planner and executor). The #49 retroactive
+check ran mechanically (46 pilot/smoke worlds across 23 persisted
+sources): ZERO (0,1)-breaches beyond M2's known case — the latent
+convention never bit a published number; #49's retroactive question
+is closed. Rules 25, 26, 27, 13 all fired at least once during the
+M-line and behaved as written.

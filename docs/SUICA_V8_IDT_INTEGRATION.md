@@ -148,3 +148,36 @@ extrapolation-grade seal for the level law; dense/heterogeneous-gallery
 crowding; the Bayes shoulder's dimension-dependence; real-text
 transport (still a limitation, not a queued test — no shared-occasion
 typed corpus exists); native corpus (paused by the owner, 2026-07-12).
+
+---
+
+## Dated addendum (2026-08-11) — the M4-M level-law completion line
+
+The M-line (7 legs, `140e927`..`1b0d330` + close) updates §2 and §3;
+synthesis: `docs/SUICA_M4_M_LEVEL_LAW_LINE_SYNTHESIS.md`.
+
+- **§3 graded laws — additions.** New grade **PREDICTIVE-SCOPED**:
+  the scoped level law (free share-margins + steep negative
+  r-channel; predictions with realized r interior to
+  [0.454, 0.819]) — sealed-then-hit 3/3 at share-exterior,
+  φ-exterior, interior-new-φ (M2; zero pre-stamp generations).
+  LEVEL-grade, interpolative, closure-validated: the tax curve
+  α(V) = c − κ0V + (κ2/2)V² on V ∈ [0.03, 0.21] (κ0 0.960 [0.894,
+  1.031], κ2 1.563 [1.032, 2.120]); local tax declines 0.913 →
+  0.632; retrodicts 5/6 published κ̂ through each estimator's own
+  pipeline. DEAD, by measurement: the constant tax; "q = −0.150" as
+  a structural exponent; additive separability of the level field;
+  the naive φ-power representation; M1's marginal-correlation
+  feasibility gate.
+- **§2 corrections — one row added.** Appendix V.2's "the quadratic
+  over-response remains a RESPONSE-structure fact" → re-attributed:
+  the response-grade band was the variance tax through collinear
+  share-sweeps; no V-clean positive-exponent measurement exists;
+  the V-omitted shadow fit on the decollinearized corpus gives q =
+  +2.245 [2.177, 2.319] (appendices X.2, Y.2; yield clause stands).
+- **§7 governance state — counters.** Standing rules now 1–29
+  (25 estimand-gates; 26 bound-winners; 27 consumption budgets;
+  28 representation licensing; 29 domain predicates); defect
+  registry #1–#49; M3 closed with zero registration defects.
+- Nothing here touches frozen operators, F16 items, PROPOSED
+  F12/F13, or any real-text question.

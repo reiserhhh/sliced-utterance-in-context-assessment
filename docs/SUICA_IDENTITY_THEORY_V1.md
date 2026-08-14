@@ -1578,3 +1578,81 @@ rows). What remains open, named: the within-share concavity's owner
 (form family incomplete), q's value (unquotable by rule 27), the
 tax curve's verdict (M3), and every real-text question (governance
 R-G1..R-G8 untouched).
+
+## Appendix BB — dated append (2026-08-11, post-M3): the tax is a curve; the constant-κ era closes; the M-line closes
+
+**BB.1 — The curve.** On the decollinearized instrument family, the
+level share-margin is quadratic in person-variance: α(V) = c − κ0·V +
+(κ2/2)·V², c = 0.21247398265278816 [0.209, 0.216], κ0 =
+0.9601680204204508 [0.894, 1.031], κ2 = 1.562877770472943 [1.032,
+2.120] (B = 20000 stable; all rule-27 budgets met; projection powers
+0.9935 / 0.0575). The LOCAL tax κ(V) = κ0 − κ2·V declines 0.913 →
+0.632 over V ∈ [0.03, 0.21]. Both pre-run planner values (appendix
+AA.3: 0.983, 1.815) landed inside the fresh intervals. Scope: the
+A-quad/A-sat tie (3.2%) leaves the FORM unsettled beyond V = 0.21;
+A-quad's zero at V ≈ 0.614 is out-of-scope arithmetic, not a
+prediction.
+
+**BB.2 — Five routes were one law.** The published κ̂ values were
+never in conflict: run through each estimator's OWN pipeline, the
+single law (curve + fixed channel) retrodicts 0.722 → 0.746, 0.750 →
+0.768, 0.760 → 0.763, 0.777 → 0.781, and — in the pre-signed LOW
+direction, via the channel-covariance loading — 0.676 → 0.680; the
+one miss is the 9-pair refit (0.715 → 0.749, 0.0045 over its 0.03
+point-tolerance, the only target without a persisted CI). "One κ"
+was an artifact of averaging; the SPREAD was the information.
+
+**BB.3 — T4 at level, final scoped statement.** field(share, φ) =
+c − κ0·V + (κ2/2)·V² + λ·r^q, with λ = −0.0576 [−0.084, −0.043]
+identified, q unquotable (rule 27), predictions PREDICTIVE-SCOPED
+(M2's 3/3 seal, r interior), the curve interpolative in V and
+closure-validated. The card ≠ biography theorem now has its level
+form with every term's epistemic grade attached — which is what
+"closed" means in this program.
+
+**BB.4 — The first marginal-price statement in IDT.** κ(V) declining
+means the reader's MARGINAL tax per unit person-variance falls as
+person-variance rises — diminishing marginal taxation. The five
+sharply-identified within-representation κ's were secants of one
+curve. Why QUADRATIC is not settled here: appendix CC derives the
+square-agreement mechanism whose reparametrization it is, and the
+M4-N line seals that mechanism's response-transport prediction
+before believing it.
+
+**BB.5 — Line-close bookkeeping.** Seven legs, seven
+registrations-before-run, zero amends, zero agent pushes; rules
+25–29 enacted, defects #43–#49 recorded (M3: zero); synthesis at
+`docs/SUICA_M4_M_LEVEL_LAW_LINE_SYNTHESIS.md`; graded-laws table
+updated by dated addendum in `docs/SUICA_V8_IDT_INTEGRATION.md`.
+
+## Appendix CC — dated append (2026-08-11): the square-agreement mechanism (planner derivation, BEFORE the M4-N line runs)
+
+**CC.1 — The observation.** A-quad is EXACTLY the reparametrization
+of a shifted square: α(V) = c′ + A0·(1 − V/V*)², with V* = κ0/κ2,
+A0 = κ0²/(2κ2), c′ = c − A0. At M3's central values: V* =
+0.6143507762088093, A0 = 0.29489267237567145, c′ =
+−0.08241868972288329. Mechanism candidate: the gauge's b-only
+agreement degrades as the SQUARE of person-variance contamination —
+one more square law from a reader already convicted of quadratic
+loss (K1's attenuation square; K2b's over-response), which is what
+makes this derivation plausible rather than numerological.
+
+**CC.2 — What is testable and what is not.** On-support (V ≤ 0.21,
+and this generator caps V = 0.3·share ≤ 0.3), the square form is
+observationally identical to A-quad — the vertex V* ≈ 0.614 is
+UNREACHABLE arithmetic. The mechanism's real content is TRANSPORT:
+because differences at matched r cancel the channel and the margins
+exactly, a matched-attenuation pair straddling base-variance V̄ must
+measure κ_resp(V̄) = κ0 − κ2·V̄ — EXACTLY, under A-quad, with no
+approximation. Fresh response-grade experiments at new V̄ therefore
+test the curve OUTSIDE the level-fit's estimation space: κ_resp
+(0.0525) = 0.8781, κ_resp(0.1875) = 0.6671, and the DECLINE between
+them 0.2110 — three sealable numbers. That is M4-N1.
+
+**CC.3 — Pre-registered honesty.** If N1 misses, the curve is
+level-only (a fitting fact, not a mechanism) and CC.1 dies as
+physics while BB.1 stands as measurement. If N1 hits, the square
+mechanism earns its next test (the frame-floor question: is c′ the
+frame-carried baseline? — named, not queued), and the sealed
+difference-fit 0.722 acquires its final reading: a secant of the
+curve at its design's V̄.
