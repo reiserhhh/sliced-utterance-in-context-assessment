@@ -1924,3 +1924,39 @@ against the disattenuation identity r̂_A·r̂_B (T8's lineage). Excess
 = identity-beyond-biography, measured in card space — the program's
 original metaphor (the card as an ID) put to its first direct
 card-space test (M4-Q1b; leans honestly split .40/.40).
+
+## Appendix KK — dated append (2026-08-14, post-Q1b): the card is pure trait; the founding question meets its instrument boundary
+
+**KK.1 — The corrected reading.** Against the component A and B
+actually share (the CENTRED trait — the card is w_mu·trait_c +
+frame terms), the cross-frame card cosine satisfies the
+disattenuation identity to within ±0.0004 at both φ: **the card is
+trait plus frame-independent noise. CARD_PURE_TRAIT.** The routed
+cell's "identity beyond trait" was a reference-object artifact
+(defect #60): the registered Δ scored the card against the
+UNCENTRED trait, an object the card does not contain. The
+convention now requires disattenuation identities to name and use
+the shared component.
+
+**KK.2 — The structural boundary.** On this generator the card's
+author content is trait-only BY CONSTRUCTION — no non-trait author
+channel enters the card. Therefore "does the card carry identity
+beyond biography?" is UNPOSABLE here: the world has no identity
+channel for any instrument to find. Combined with the P-line: the
+gauge reads frames; the card reads the trait, exactly to
+disattenuation; and the residual-as-ID question — this program's
+founding conjecture — has consumed the k2b family's capacity to
+answer it.
+
+**KK.3 — What would make it posable (the M4-R charter, named).** A
+generator variant whose authors carry a persistent NON-TRAIT
+channel entering the card-visible response path (a planted style/
+identity vector with its own weight, zero-default so the extension
+certifies backward bit-identity). Then Q1b's centred estimand can
+be non-trivially positive, the planted identity share is
+quantitatively recoverable, and the full IDT instrument suite
+(frame-refreshed discrimination, the taxometer, the completeness
+meter) can be certified against a LIVE identity channel — the
+founding question, finally posed on a world that can say yes or
+no. Registered as its own line after the Q-line closes; the tax's
+frame-ownership (Q2) is the Q-line's last leg.

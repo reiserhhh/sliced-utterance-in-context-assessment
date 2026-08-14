@@ -513,3 +513,135 @@ registration must name that component explicitly.** Non-blocking in the sense
 that the computation is valid and the routing well-defined — but material, since
 the routed cell's consequence is contradicted; the executor routed as registered
 and flagged rather than substituting an estimand.
+
+### Planner adjudication of Q1b (2026-08-14, appended after the run) — THE ROUTED CELL IS VOIDED BY ITS OWN ARITHMETIC; THE CARD IS PURE TRAIT; THE FOUNDING QUESTION HITS ITS INSTRUMENT BOUNDARY
+
+**The routed record (cell 4) stands as routed; its consequence
+clause is VOIDED (the #54 pattern, third occurrence); the
+substantive finding is CARD_PURE_TRAIT.** The registered Δ scored
+the card against the UNCENTRED trait while the card contains
+w_mu·trait_c — the CENTRED trait (card composition k2b:423-427;
+scoring k2b:443/446). Against the shared component, the per-author
+exact identity gives Δ ≈ 0 at both φ (−0.0001657 [−0.0003651,
++0.0000367] and +0.0000785 [−0.0002248, +0.0003876]). The
+registration's entailment claim ("no other shared channel exists")
+was FALSE — no other channel was needed; the excess was a
+reference-object artifact inside the trait channel itself. The
+executor pre-pinned both readings before any measurement arm,
+routed as registered, and flagged the defect: exemplary conduct,
+third consecutive leg.
+
+**Defect #60 (mine — the #43 genus at the level of a REFERENCE
+OBJECT).** Both facts sat in k2b's source at registration.
+**Convention (adopted from the executor's suggestion verbatim): a
+disattenuation-style identity is registered against the SHARED
+COMPONENT of the contrast, and the registration names that
+component explicitly.**
+
+**The deeper structural fact (appendix KK).** The card's author
+content is STRUCTURALLY trait-only on this generator — the card
+composition contains no non-trait author channel (a_load never
+enters the card). So "identity beyond biography at card level" is
+not answerable HERE: not false, UNPOSABLE. What Q1b did measure,
+cleanly: the disattenuation identity holds against the shared
+component (±0.0004 at both φ) — card errors are frame-independent
+across worlds — and the A/B frame components are realized-orthogonal.
+**The founding question of this program (is the residual an ID?)
+has consumed this generator's capacity: the generator has no
+identity channel for any instrument to find. The successor charter
+is named — M4-R, the identity-channel generator (plant a per-author
+non-trait style channel into the card-visible response path,
+certify plantability/detectability/recoverability, then re-pose
+Q1b's centred estimand where it can be non-trivially true).**
+Registered only after the Q-line closes.
+
+**Q-line state.** Q1 (rule 33, targets differ), Q1b (pure trait at
+the shared reference; the structural boundary). Remaining charter
+item Q2 is REDESIGNED below under the P3b/P3c lessons (differences,
+endpoints, no ratios): the last piece of "the gauge reads frames" —
+is THE TAX ITSELF frame-borne? Q3 (layer comparison) stays named.
+
+---
+
+## M4-Q2 — is the tax frame-borne? (the V-response under refreshment)
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. The N-line's tax curve is a law
+of R_nat — a frame-carrying statistic (P-line). If the gauge's
+V-RESPONSE also fails to transport across frames, the tax itself is
+a frame-agreement phenomenon: the curve κ(V) describes how
+person-variance modulates FRAME-reading, not person-reading. The
+last structural piece of appendix II's instrument statement.
+
+### Design (differences, endpoints in V; the P3b/P3c lessons in force)
+
+share ∈ {0.10, 0.70} (V = 0.03 / 0.21, the fitted window's
+endpoints) × φ = 0.60 × 384 A/B pairs per share (768 pairs, 1536
+worlds). Salts `m4q2-author` / `m4q2-frameA` / `m4q2-frameB` /
+`m4q2-pilot`, master_seed 20260814. Instrument: P3b's certified
+builder (hashes verified; C2 on 4 fresh probes). Quantities per
+pair: R_nat and R_ref exactly as P3c (A-gauge vs A-truth / B-truth).
+Estimands (joint world-pair bootstrap; shares independent):
+
+- **D_nat = R_nat(V=0.03) − R_nat(V=0.21)** — the natural tax swing
+  (anchor: the M-line law predicts it; the executor computes the
+  prediction in Part 0 from persisted M1c (0.10, 0.60) and M2 C2
+  (0.70, 0.60) cell means, distributional band);
+- **D_ref = R_ref(V=0.03) − R_ref(V=0.21)** — the transported tax
+  swing;
+- descriptive: D_ref/D_nat, UNBUDGETED.
+
+Non-degeneracy (the #59/#60 conventions, discharged at
+registration): R_ref at the two shares are measurements of
+different worlds with no shared-object identity forcing equality;
+the shared-component analysis is the SAME as P3c's (nothing is
+scored against an object it does not contain; both scorings use
+each world's own truth panels).
+
+### Verdicts (rule 22; NULL-first; bands variances-only, #57)
+
+- **V-Q2a:** D_nat vs 0 — POSITIVE expected (anchor-like; failure →
+  INSTRUMENT_DEFECT since the M-line law predicts ≈ +0.117 from
+  persisted cells, planner sanity value, executor recomputes).
+- **V-Q2b:** D_ref vs 0 — NULL (CI inside ±ε, pilot-derived) /
+  POSITIVE / NEGATIVE / UNDERPOWERED.
+
+### Leans (sides declared)
+
+**L-1q2 [TAX_FRAME_BORNE (D_ref NULL) .55 / TAX_PARTIALLY_
+TRANSPORTS (POSITIVE) .25 / other .20].**
+
+### Gates
+
+G0q2: P3c/Q1b cited numbers verified; M1c (0.10, 0.60) and M2 C2
+cell means at full precision; instrument hashes. G1q2: C2 battery;
+per-pair frame difference. G2q2: pilot 4 pairs × both shares,
+rule-29 predicate, ε from variances with the 1.25 margin. G3q2:
+projection at truths {D_ref = 0; D_ref = 0.117·(P3c transportable
+share point 0.115)} — i.e. the partial-transport truth ≈ 0.0134 —
+≥ 0.8 / ≤ 0.1 at 384; once-only escalation to 768 ON THIS GATE.
+G4q2: routing disjoint/covering/entailed/antecedent-nondegenerate;
+rule 24; stages part0 150 s, pilot 60 s, worlds 4 chunks, score+fit
+180 s, finalize 60 s; target < 40 min.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/G1 failure | **STOP / INSTRUMENT_DEFECT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | V-Q2a not POSITIVE | **INSTRUMENT_DEFECT** (the anchor is the M-line law) |
+| 4 | V-Q2b NULL | **TAX_FRAME_BORNE** — the V-response is frame-agreement; the N-line curve is re-typed as the frame channel's V-response; appendix II completes |
+| 5 | V-Q2b POSITIVE | **TAX_PARTIALLY_TRANSPORTS** — a person-borne tax component exists; quantified descriptively |
+| 6 | V-Q2b NEGATIVE | **TAX_INVERSION_NAMED** — theory note |
+| 7 | any UNDERPOWERED (no higher cell) | **UNDERPOWERED** |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_q2_tax_transport.py`;
+`results/m4_q2_tax_transport/` (gitignored);
+`reports/SUICA_M4_Q2_TAX_TRANSPORT_REPORT.md` (generated tables);
+outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-q): Q2 — is the tax frame-borne — <SLUG>`, never
+amended, never pushed; suite green first. 1536 worlds (+escalation
+×2) + pilot; every stage < 600 s.

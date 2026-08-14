@@ -272,3 +272,9 @@ mirror). N4's three candidates are all planner defects:
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 33 | #59 (and the appendix-N re-reading it forced) | An instrument comparison ("X× better") is licensed only between readers of the SAME registered target object; readers of different targets are typed as different INSTRUMENTS and are never ranked. | `docs/SUICA_M4_Q_TRANSPORT_LINE_PLAN.md — Q1 planner adjudication (2026-08-14)` |
+
+## Dated additions (2026-08-14, thirteenth note — Q1b; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #60 | Q-line / M4-Q1b | `docs/SUICA_M4_Q_TRANSPORT_LINE_PLAN.md — Q1b outcome + planner adjudication` | The disattenuation identity's REFERENCE OBJECT was not the shared component: the card contains the centred trait (k2b:423-427) while the registered Δ scored against the uncentred trait (k2b:443/446) — the positive Δ was a trait-channel artifact and the routed cell's consequence was voided; against the shared component Δ ≈ 0 at both φ. Computable at registration from k2b source; the executor pre-pinned both readings (RN-Q1B-6). | none (convention: a disattenuation-style identity is registered against the SHARED component of the contrast, named explicitly) | reference-object |
