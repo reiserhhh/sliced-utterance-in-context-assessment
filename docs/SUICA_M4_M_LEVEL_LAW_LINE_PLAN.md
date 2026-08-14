@@ -2079,3 +2079,140 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-m): M3 — the tax curve — <SLUG>`, never amended,
 never pushed; suite green first. 3072 worlds (6144 at escalation) +
 8 pilot; target < 75 min wall, every stage < 600 s.
+
+### Outcome (appended 2026-08-11 by the executing agent; append-only)
+
+**`TAX_IS_A_CURVE` — rule-16 cell 3; modifier(s) `['CLOSURE_EXPLAINED']`.**
+Curve consumption: **CONSUMABLE**. 3072 fresh worlds
+(192/cell x 16 cells). Report:
+`reports/SUICA_M4_M3_TAX_CURVE_REPORT.md`; harness
+`scripts/run_suica_m4_m3_tax_curve.py`; artifacts `results/m4_m3_tax_curve/`.
+
+**THE TAX IS A CURVE, AND THE CURVE WAS PREDICTED BEFORE IT WAS MEASURED.**
+Both of L-1m3's clauses fire together (True): A-quad wins
+leave-one-share-out at `0.001405398973367856` against A-lin's `0.003599294048156043`
+(2.5610478706490034x worse), and its curvature term
+**kappa2 = `1.562877770472943`, 95% CI `[1.0324533419318935, 2.119753814549891]`, EXCLUDES ZERO** — stable at
+B = 20000 (`[1.0132571446499121, 2.1165781162197774]`). The winning curve is
+**alpha(V) = c - kappa0*V + (kappa2/2)*V^2** with c = `0.21247398265278816`,
+kappa0 = `0.9601680204204508`. The planner's pre-run arithmetic from M1e's four
+alpha points predicted (kappa0, kappa2) ~ (0.983, 1.815); the fresh eight-point
+measurement returns `0.9601680204204508` CI `{'c': [0.2089174011834685, 0.21623033411776654], 'kappa0': [0.8935297536704152, 1.0313114338425122], 'kappa2': [1.0324533419318935, 2.119753814549891]}`'s kappa0 and
+`1.562877770472943` CI `[1.0324533419318935, 2.119753814549891]` — **both intervals contain the pre-run
+prediction.** The seven local slopes run [0.8470350335482366, 0.8186459292853376, 0.9062733099585221, 0.803704394783968, 0.7522331399898755, 0.6305583963376168, 0.7111114837980396], declining from
+`0.8470350335482366` to `0.7111114837980396` (minimum `0.6305583963376168`), with
+NON_MONOTONE = False (0 adjacent increases
+surviving their joint 95% CIs). **The reader's marginal price for
+person-variance is highest where person-variance is scarcest.**
+
+**AND ONE LAW RETRODICTS FIVE OF THE SIX PUBLISHED kappa-hats.**
+5/6 -> **CLOSURE_EXPLAINED**, computed by generating NOISELESS
+law-fields at each legacy estimator's OWN persisted design points and running
+EACH ESTIMATOR'S OWN PIPELINE on them (rule 14's pinned link; no estimator was
+re-implemented in a common form):
+
+| # | target | published | predicted by the law | hit |
+|---|---|---|---|---|
+| 1 | sealed 6-pair difference-fit | 0.7220359963712748 | 0.746239389222837 | True |
+| 2 | K2e 9-pair refit | 0.7145934082034173 | 0.7490807810533479 | False |
+| 3 | K2f F2 | 0.750086268225045 | 0.7679919131618126 | True |
+| 4 | M1c F1e | 0.7601952008701406 | 0.7626119165106452 | True |
+| 5 | M1d F0 | 0.7766770259880144 | 0.7813000334879925 | True |
+| 6 | M1e E-tax-add | 0.6761549415814 | 0.6795535093252197 | True |
+
+**Target 6's pre-signed direction HELD (True):** the representation
+that OMITS the r-channel is retrodicted at `0.6795535093252197`, the LOWEST of all
+six, exactly as appendix AA predicted from the channel-covariance loading.
+**The spread among the six published "constants" is not six taxes; it is one
+curve seen through six estimators with different amounts of channel leakage.**
+The single miss is target 2 at `0.7490807810533479` against `0.7145934082034173` — delta
+`0.03448737284993053` against a `0.03` point-only tolerance, missing by
+`0.004487372849930532`, while the same law hits its 6-pair sibling and every
+CI-typed target. The closure is 5/6 and is not rounded up.
+
+**G0m3 PASSES on all five clauses**, including two that matter especially: the
+six targets verified at their persisted sources at full precision (targets 1 and
+2 typed point-only, tolerance 0.03, disclosed — neither persists a CI), and the
+pair reconstruction VERIFIED bit-exactly before any retrodiction ran (every
+persisted dvar reproduced as V_a - V_b and every persisted D as
+level_a - level_b, with the sign convention -- published kappa = MINUS the
+through-origin slope -- verified rather than assumed).
+
+**G0m3(v), the #49 retro-check: REOPEN = False.** Mechanical scan of
+46 persisted pilot/smoke worlds across 23 sources in
+the M-line and K2f found **0 breaches of (0, 1) outside
+M2's own already-adjudicated case**. The latent strictly-inside-(0,1) convention
+was never consequential before M2 walked into the one cell extreme enough to
+expose it. Rule 29's retroactive question is closed.
+
+**G3m3(b), the projection gate, passed BEFORE any world:**
+P(kappa2 CI excludes 0) = **0.9935** under the A-quad truth (bar >= 0.8)
+and **0.0575** under the A-lin truth (bar <= 0.1); escalation fired
+False. Both truths were computed from M1e's own four alpha points and
+reproduce the planner's sanity values (A-quad [0.21429311564963677, 0.9833070071661382, 1.813410134121013] against
+(0.983, 1.815); A-lin [0.2071001875517445, 0.7928829081721366] against a chord of 0.7929). This is
+rule 25 at its sharpest: the gate demanded not only power to DETECT curvature
+but a bounded false-positive rate AGAINST the linear truth, and both bars were
+met before a single world existed.
+
+**Rule 27: all budgets met**, so the curve is CONSUMABLE and may enter the theory
+table. Rule 13 fired on the A-quad/A-sat LOO proximity (the tie is between the
+two CURVED forms, which cannot touch L-1m3's clause) and the B = 20000 re-run
+left every verdict unchanged (True). Rule 26: no declared
+bounds, numerical-limit surveillance clean (False). G1m3, the
+first gate written under rule 29, held at all 16 cells with its predicate pinned
+in the statistic's own domain (finite, abs(x) < 0.995, nonzero variance, NO
+positivity clause).
+
+**L-3m3 passes, and passes WEAKLY — stated, not claimed.** The joint refit's
+lambda CI `[-30.615714683654733, -0.039429381031983984]` overlaps M1e's `[-0.0843564122153383, -0.042724477794351616]`, so the
+verdict is overlap and no TRANSFER_BREAK fires — but the interval runs
+to `-30.615714683654733` at its lower end. Freeing (lambda, q) alongside eight
+alpha margins on 16 cell means re-creates exactly the ridge appendix Y named,
+which is WHY the primary estimation holds the channel fixed at the M2-sealed
+point. A successor wanting a real transfer test needs a design that identifies
+the channel independently.
+
+**The alpha(0.70) triangle does NOT close, and it fails informatively.** M2's two
+cell-derived readings BRACKET M3's fresh estimate: C1 gives `0.04225793772553886`
+(below), C2 gives `0.04814189927582637` (above), M3 measures `0.044932685277189494` CI
+`[0.0430021644650165, 0.046821180917192055]`, and neither M2 reading is inside (False /
+False); spread `0.00588396155028751`. This is the same discrepancy M2's
+P1 flagged at 0.8671810125388784 of its band: at share 0.70 the channel does
+slightly more work than the fixed theta* assigns it. A reading, adjudicating
+nothing, and the clearest surviving pointer for a successor.
+
+**Anomalies, with timing.** The boundary is the first world; Part 0 is arithmetic
+on published numbers and every RN note was pinned there. **A-1/A-2 (before Part
+0):** the inherited CPython 3.12.12 lock environment; no `timeout(1)` on
+macOS. **A-3 (after the noiseless closure, before anything was written):** the MC
+second reading re-ran each estimator's FULL start grid on all 200
+replicates, overran its stage and was killed with nothing persisted; rewritten to
+refit MC replicates from the noiseless optimum (the program's standing bootstrap
+convention), and the MC means agree with the killed run's partial output to ~9
+decimal places, so the change is a speed-up and not a different estimator —
+**the noiseless run, which is what scores, was never affected.** **A-4 (after
+`alpha`, before `finalize` consumed it):** a rule-13 stage was missing from the
+first harness; the registration says "B = 2000; 20000 at rule-13 boundaries" and
+the A-quad/A-sat LOO separation falls inside the 5% tie band. The omission was
+the executor's; the B = 20000 re-run was performed and every verdict is
+unchanged. **A-5:** L-3m3's overlap is nearly vacuous (above). **A-6:** the
+alpha(0.70) triangle does not close (above). **A-7:** no stage near its 2x
+threshold — Part 0 `0.05594515800476074` s against 300 s, the four world chunks
+inside their 460 s estimates.
+
+**Registration-defect candidates: NONE.** Every clause was satisfiable, the
+projection gate did its job before any world was drawn, the routing table was
+disjoint and covering as the #46 convention now requires, the rule-27 budgets
+attached to the consumed object as #47 requires, and rule 29's domain-pinned
+predicate worked without incident at all 16 cells. The two anomalies that
+mattered were both the executor's and both were repaired before any
+outcome-relevant number was written. This is the first M-line leg to close with
+no defect candidate of any kind.
+
+**What is NOT established.** (i) The closure is 5/6, not 6/6 — target 2 misses by
+`0.004487372849930532`. (ii) The transfer check passes only weakly. (iii) The
+alpha(0.70) triangle does not close, and its failure direction says the channel
+does slightly more work at exterior share than theta* assigns. (iv) Everything
+remains scoped to this world family, this instrument, and r interior to the
+trained window.
