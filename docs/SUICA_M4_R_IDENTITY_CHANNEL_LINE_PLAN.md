@@ -776,3 +776,106 @@ outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
 commit `feat(m4-r): R2b — the channel-specific tax — <SLUG>`,
 never amended, never pushed; suite green first. 1536 worlds
 (+escalation ×2) + pilot; every stage < 600 s.
+
+### Outcome of M4-R2b (executed 2026-08-14, append-only)
+
+**`TAX_IS_CHANNEL_SPECIFIC` (rule-16 cell 3).** Modifiers:
+MU_TAX_FIRST_INTERVAL_CONSISTENT_WITH_R2, SLOW_OVER_MU_RATIO_11.9X. **All three sealed tests land: the curve holds on
+its own channel, the mu-channel tax gets its first interval, and the two taxes
+separate by 11.931517127829927x.**
+
+- **Two registration defects pinned BEFORE any number.** **RN-R2B-1:** the design
+  sentence says "four base cells ... 8 arms x 192 worlds = 1536" but names only
+  TWO base cells, and two cells x two doses is four arms. The 2x2 factorial
+  {share 0.10, 0.25} x {phi_A, 0.05} is the unique reading satisfying all four
+  numbers while keeping the named matched-r pair as its diagonal; every registered
+  estimand runs on the diagonal exactly as specified and the off-diagonal cells
+  route nothing (they also made S2's phi-transport SE_approx estimable from
+  pre-measurement objects, which the 2-cell reading could not). **RN-R2B-2:** the
+  registration writes kappa_slow = -[R_T(0.10 cell) - R_T(0.25 cell)]/dV_slow, but
+  the 0.10 cell is the LOW-V cell where alpha is higher, so that bracket is
+  positive and the formula returns a NEGATIVE tax rate -- while S1's prediction
+  (the secant) is positive, N1b's cited context value (0.918) is positive, and
+  kappa_mu by the registration's own formula is positive. **Under the literal
+  operand order S3 could not have fired even under perfect channel specificity.**
+  The pinned estimator is the standard secant orientation; under the literal
+  orientation the same measurement reads -0.8916930095784603.
+- **Matched-r verified.** N1's roots recomputed bit-exactly
+  (True): r_A 0.7850155393518391, r_B
+  0.785015540293945, **residual 9.421059488090577e-10** against
+  the 1e-9 bar. dV_slow 0.04500000000000001, Vbar 0.05250000000000002 -- both matching
+  the registration exactly.
+- **Channel coverage NAMED (#62).** V_C = (slow + int + mu_style)/total over the
+  split set {mu_trait, mu_style, slow, int, common, noise}; COUNTED slow, int,
+  mu_style; NOT COUNTED mu_trait, common, noise. Realized dV_mu: cell A
+  0.11559817906203051, B 0.0936937639492188, C 0.11559260516359365, D
+  0.09370518236340336; R2's on the same convention 0.09349932384036665 -- the
+  0.25-share cells agree with R2 to 2e-4, so the two legs' mu taxes are on one
+  scale.
+- **Sealed.** S1 = the M3 secant at Vbar 0.0525 = **0.8781169374706214**
+  (N1b's 0.918 cited as context, not prediction); band per #61 SE_pred
+  0.018153303376024638 / SE_meas 0.02837886038389424 / **SE_approx
+  0.11143041830656614** (r-channel gain 0.11090563637241162,
+  gain spread 0.010801756561146904, matched-r
+  residual 2.0935687751312393e-08), half
+  0.23282302518545592, band [0.6452939122851654, 1.1109399626560772]; gains A
+  0.8860016524682809 / B 0.861399561106142. S2 = R2's kappa_mu =
+  **0.06611054147682188**, SE_pred 0.010467885126418528 / SE_meas
+  0.013220535408554501 / SE_approx 0.009559166315632583 (phi-transport
+  0.0095581776062717), half 0.03876786484492857, band
+  [0.027342676631893312, 0.10487840632175045]. S3 projected SE_D 0.035681134281302054, expected D
+  0.8120063959937995. Hashed `4d7ad4473c153df6f99e203c16f7e498264863190f67643231cbc990b4c60900`, stamped
+  2026-08-14T09:31:33.321809+00:00 with **0 fresh worlds in
+  existence** (128 probe worlds precede by
+  necessity); arms re-hashed to a match 566.58326 s later.
+- **S1 INSIDE.** kappa_slow(w=0) = **0.8916930095784603** [0.8502517263399952, 0.9350975324766414],
+  position **0.058310693699752815**. The N-line curve holds on its own
+  channel; it was never broken, only asked about the wrong channel in R2.
+- **S2 INSIDE.** kappa_mu(0.25) = **0.07473425215127182** [0.05386916320637429, 0.09553678214715175],
+  position 0.22244481889690776 -- a first-interval claim by construction
+  (its band carries R2's own CI), descriptive-grade, routing nothing (V-b3).
+- **S3 CLEAR.** D_channel = **0.8169587574271885** [0.770561523979914, 0.8692603102466345], 2*SE_D
+  0.05035147618915502, positive and outside. **Ratio kappa_slow/kappa_mu =
+  11.931517127829927.** Author-constant person variance is taxed an order
+  lighter than state variance.
+- **Consistency and diagnostics.** kappa_slow(w=1) = 0.8055984527437156
+  [0.7635291763629583, 0.8475386564029389] (the slow tax with a full-strength identity
+  channel also present -- slightly lower, not destroyed). kappa_mu(0.10) =
+  0.09408788724699418 [0.07563755345934248, 0.11248055877183495]. Off-diagonal: cell C
+  0.10273007691270834, cell D 0.06010885242157973.
+- **The closure with R2 -- stated as ENTAILED, not as confirmation.** R2's
+  mispricing factor was 11.64546777328575x; this leg's channel ratio
+  is 11.931517127829927x, a difference of 0.28604935454417735. Once S1
+  places the measured slow tax on the curve and S2 places the measured mu tax on
+  R2's estimate, the ratio MUST reproduce R2's factor. The content is that both
+  landed: **R2's mispricing was never a broken law -- it was the channel ratio,
+  read through a curve that only ever priced one of the two channels.**
+- **A self-check against me, and one un-entailed cross-leg check.** The
+  phi-transport component I put in S2's SE_approx was 0.0095581776062717
+  from probes; the realized off-diagonal difference is 0.014625399729692089,
+  so **my SE_approx term was undersized by 1.5301452151397015x**.
+  S2 lands inside anyway (position 0.22244481889690776), but a leg with
+  less margin would have paid for it. Separately, and NOT entailed by S1/S2:
+  interpolating R2b's two phi points to R2's phi = 0.60 -- a value this leg never
+  runs -- predicts 0.06526161265523818 against R2's measured
+  0.06611054147682188, an error of -0.0008489288215837026.
+- **Gates.** G0r2b PASS, G1r2b PASS, G2r2b PASS, G3r2b PASS (power
+  1.0
+  at the R2-based truth, false-fire
+  0.023 under uniform
+  tax; escalation False).
+- **Disclosed ordering fact.** The bands need probe spreads, so all eight arms were
+  scored on 128 probe worlds before the seal; probe
+  values of kappa_slow (0.8572082694309165),
+  kappa_mu (0.078437268499968) and D_channel
+  (0.7787710009309485) therefore existed
+  beforehand. Not consumed: S1 comes from M3's curve, S2 from R2's measurement,
+  and only spreads and the w=0 gain enter the bands (#57).
+- Rule 13: 0 events; percentile-value stability also
+  checked per the planner's enforcement note (nearest edge
+  512.4077329493464 MC-SE for S3,
+  133.27083239085414 for S1 -- neither
+  noise-limited). Report: `reports/SUICA_M4_R2B_CHANNEL_TAX_REPORT.md`.
+- **Two registration-defect candidates** (RN-R2B-1 and RN-R2B-2 above), both
+  non-blocking, both pinned before any hypothesis-relevant number, both with all
+  readings reported.
