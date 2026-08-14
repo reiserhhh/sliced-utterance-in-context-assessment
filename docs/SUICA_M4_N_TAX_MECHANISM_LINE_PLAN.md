@@ -360,3 +360,107 @@ tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
 ONE commit `feat(m4-n): N1b — the response-transport seal — <SLUG>`,
 never amended, never pushed; suite green first. 3072 worlds + 8
 pilot; target < 40 min wall, every stage < 600 s.
+
+### M4-N1b outcome (appended after execution; registration above unedited)
+
+**CURVE_TRANSPORTS_TO_RESPONSE — routing cell 4; modifiers: none.**
+3/3 sealed predictions inside, S3's one-sided sign
+clause included. **The square-agreement mechanism survives its first test.**
+3072 fresh worlds (768/cell x 4), sealed
+under `0b6a2713125ebee5…` with **0 fresh-world generations
+before the stamp**. Harness
+`scripts/run_suica_m4_n1b_response_transport.py`; report
+`reports/SUICA_M4_N1B_RESPONSE_TRANSPORT_REPORT.md`; artifacts
+`results/m4_n1b_response_transport/` (gitignored).
+
+| prediction | sealed | measured | 95% CI | signed error | position | verdict |
+|---|---|---|---|---|---|---|
+| S1 κ_resp(0.0525) | `0.8781169374706213` | `0.9180647112012158` | [0.863626452725556, 0.9749094012658702] | 0.03994777373059455 | 0.37560947810709566 | **INSIDE** |
+| S2 κ_resp(0.1875) | `0.6671284384567739` | `0.6670454850877494` | [0.618883540603541, 0.7141613816756263] | -8.295336902452988e-05 | 0.01835512745765127 | **INSIDE** |
+| S3 decline | `0.21098849901384734` | `0.2510192261134664` | [0.17991654115972247, 0.32623248423763684] | 0.04003072709961905 | 0.2395707618248563 | **INSIDE**, Δ>0 True |
+
+**The residual is not spread — it sits entirely at the LO pair.** S2's error is
+-8.295336902452988e-05 (a near-bullseye at V̄ = 0.1875) while S1's is 0.03994777373059455
+and S3's is 0.04003072709961905; S3 = S1 − S2 inherits S1's miss almost exactly.
+The HI pair reproduces the curve to the fifth decimal and the whole discrepancy
+lives at V̄ = 0.0525, where the measured local tax runs ABOVE the curve. Both
+stay well inside their bands, so this refines rather than qualifies the verdict.
+Directional fact for the line: at low base variance the response-grade tax is if
+anything steeper than the level fit predicts.
+
+**Measurement.** κ̂_LO = 0.9180647112012158 [0.863626452725556, 0.9749094012658702], κ̂_HI = 0.6670454850877494
+[0.618883540603541, 0.7141613816756263], Δκ̂ = **0.2510192261134664** [0.17991654115972247, 0.32623248423763684] (excludes 0:
+True). D_LO = -0.04131291200405471, D_HI = -0.03001704682894872, ΔV = 0.045 exact.
+Per-cell means 0.038380408228895824…0.16331335624785112 with SEMs
+0.0007643823921706975…0.0009518683047234402, two orders below the differences they carry.
+
+**Gates.** G0n1b PASS — every M3 citation bit-exact AND appendix CC.1-prime's
+corrected identities recompute exactly from the persisted fit (V\* =
+`0.6143589975880801`, A0 = `0.2949439312708197`, c′ = `-0.08246994861803153`), which is
+what rule 30 now demands. G0n1b(i) re-derived N1's roots bit-identically: φ_a =
+`0.8991793501377106` (22 bisections, abs residual 9.421059488090577e-10), φ_c =
+`0.6946928408741951` (25, 4.051829982643085e-10); bias bound
+1.1132276787474298e-10. **G3n1b PASS — S3's realized width 0.3192813910981843 vs
+budget 0.35 matches the registration's own executed prediction
+0.3192813910981843 TO THE LAST BIT**, which is precisely what defect #51's
+convention was enacted to guarantee; S1 0.20434458393558652 and S2
+0.19610983153803385 against 0.3. Escalation to 1152/cell did not fire
+(False). G2n1b PASS at the decided n: P = 0.9975 under
+CURVE (up from 0.9245 at n = 384) and 0.0165 under CONSTANT;
+SE_κ = 0.03049324230162615, SE_diff = 0.04312395682368868. G1n1b PASS at the pilot
+and all four cells under the rule-29 domain-pinned predicate. G4n1b PASS:
+stamp 2026-08-14T03:18:23.652217+00:00, permit 37.565809 s later by re-hash from
+disk, hash match, 0 generations before the stamp,
+3 guarded k2b instances / 9 wrapped entry points.
+
+**The A-4 fix executed as registered text.** RN-N1B-11 pins the dependency the
+registration leaves implicit — the escalation moves n and n moves BOTH the bands
+and the projection — so the executed order was G0n1b → bands + G3n1b budgets
+(which decide n) → G2n1b at the DECIDED n → stamp, and the stamp only because
+every pre-stamp gate passed.
+
+**No FORM_SPLIT, and it is a finding rather than a tautology.** RN-N1B-10 pins
+what the modifier compares: the registration supplies A-sat only as a POINT, and
+a point has no verdict, so A-sat's band is built by the IDENTICAL rule from the
+IDENTICAL bootstrap resamples (each draw refits A-sat from its persisted
+optimum, M3's own convention; the refit reproduces the persisted θ). All three
+verdicts agree. Two secondary readings are reported and route nothing: A-sat's
+point lies inside A-quad's band at all three (the forms are NOT separated by
+this experiment, consistent with their M3 LOO tie), and the proximity reading
+splits (A-sat nearer at S1, A-quad at S2/S3) — exactly the kind of thing that
+must not be allowed to route.
+
+**Rule events.** Rule 13: largest |position| is S1's at
+0.37560947810709566, a margin of 0.6243905218929043 of the half-width before any
+verdict would flip — no instability, no B = 20000 re-run. Rule 26: no bounded
+winner. Rule 29: in force as G1n1b, held everywhere. Rule 30: exercised both
+ways — the corrected constants reproduce bit-exactly, and this leg's own
+published constants are generated, not transcribed.
+
+**Executor self-report.** Five anomalies. A-1 the dispatched interpreter is
+absent (pinned CPython 3.12.12 venv from the lockfile); A-2 `timeout(1)`
+absent on macOS (foreground stages under explicit sub-600 s timeouts); A-3 at
+768 worlds/cell a whole cell costs ~481 s against a 600 s
+ceiling, so each cell ran in two 384-world sub-chunks — no number changes, since
+every seed is a pure function of (cell, share, phi, world index, salt) and the
+assembled cell is verified to hold exactly indices 0…n−1 (decided BEFORE any
+world); **A-4 an inherited bug in MY OWN N1 code — `a_sat_verdict_agrees` was
+hard-coded `True`, which would have made FORM_SPLIT structurally unable to fire.
+It never executed in N1 (that leg stopped at G0) but it would have executed
+here. Found while porting and replaced with the real comparison, pinned as
+RN-N1B-10 BEFORE the stamp; without the fix this leg's "no FORM_SPLIT" would
+have been a tautology rather than a finding**; A-5 two stale report-side key
+lookups raised loudly at `finalize` after the verdict was already written and
+were fixed without any number changing. A-1 through A-4 were all resolved
+BEFORE any hypothesis-relevant number existed.
+
+**What this licenses.** CC.2's pre-registered honesty clause said a miss would
+kill CC.1 as physics; it did not miss. The tax curve is not an artefact of the
+level pipeline — it transports to a response-grade experiment at two fresh
+base-variance points outside the level fit's estimation space, and the decline
+is real and signed. N2 (frame-floor, on the corrected c′ = -0.08246994861803153)
+becomes registrable; M3's sealed 0.722 difference-fit acquires its secant
+reading. **What it does NOT license:** the experiment does not separate A-quad
+from A-sat, CC.1's vertex V\* = 0.6143589975880801 remains unreachable
+arithmetic on-support, the LO-pair residual is unexplained, and the grade is
+EXPLORATORY on a synthetic label-free instrument.
