@@ -879,3 +879,67 @@ separate by 11.931517127829927x.**
 - **Two registration-defect candidates** (RN-R2B-1 and RN-R2B-2 above), both
   non-blocking, both pinned before any hypothesis-relevant number, both with all
   readings reported.
+
+### Planner adjudication of R2b (2026-08-14, appended after the run) — THE TAX IS CHANNEL-SPECIFIC; THE FOUNDING ANSWER ASSEMBLES; THE MEASUREMENT PHASE CLOSES
+
+**TAX_IS_CHANNEL_SPECIFIC accepted — three sealed tests, three
+hits.** S1: the N-line curve HOLDS on its own channel (κ_slow(w=0)
+= 0.8916930095784603 [0.8503, 0.9351] vs the sealed secant
+0.8781169374706214, position +0.058 — the curve family's fourth
+sealed hit). S2: the mu-channel tax gets its first interval
+(κ_mu(0.25) = 0.07473425215127182 [0.0539, 0.0955], consistent with
+R2). S3: the channels separate decisively (D_channel =
+0.8169587574271885, 16× its 2·SE bar; ratio **11.93×**), and the
+report states the entailment honestly: R2's 11.65× mispricing HAD
+to equal this ratio once S1 and S2 landed — the content is that
+both landed. The un-entailed cross-check is the gift: interpolating
+R2b's φ points to R2's φ = 0.60 predicts 0.06526 vs R2's measured
+0.06611 (−0.00085). **Dated scope note, controlling the M/N-line
+laws: V in the level law, the tax curve and the response-transport
+seals is the DESIGN (slow+int) person share — the STATE-channel
+tax. Author-constant (mu-channel) person variance is taxed ~12×
+lighter. Every seal, closure and grade stands, now attached to the
+channel it always measured.**
+
+**Defect #64 (mine — the #43 genus at the SIGN level).** The
+registered κ_slow operand order yields a NEGATIVE tax against a
+positive sealed prediction — S3 could not have fired under perfect
+channel specificity. The executor pinned the standard secant
+orientation BEFORE any number (RN-R2B-2) and reported the literal
+reading. **Convention: every registered estimand states its sign
+convention with a worked numeric example at registration.**
+RN-R2B-1 (the "four base cells" wording naming only two; the 2×2
+factorial was the unique reconciling reading) noted, unnumbered.
+The executor's self-check (its φ-transport SE term undersized
+1.53×, disclosed though S2 passed) is recorded — the audit culture
+now runs both directions unprompted.
+
+**THE FOUNDING ANSWER, ASSEMBLED (appendix MM).** On this
+instrument family, the program's founding conjecture — the residual
+as an ID card — now has a complete measured answer:
+
+1. Identity (non-trait author content), where it exists, lives in
+   CARDS and transports across frames (R1 certification; Q1b's
+   disattenuation identity).
+2. The deployed gauge is TAXED by identity but cannot READ it
+   across frames (R2: crowding real, CI excludes zero; the
+   frame-controlled contrast +0.0305 within / −0.0024 across).
+3. The tax the M/N lines measured is the STATE-channel tax;
+   identity-type content is ~12× cheaper to carry (R2b).
+4. Cards read biography exactly to disattenuation (Q1b); the gauge
+   reads frames (P-line); the two are different instruments for
+   different targets (rule 33).
+5. On the original generator the question was unposable (KK); the
+   certified v2 channel made it posable, and the answer is YES —
+   in exactly the card-borne, frame-crossing, gauge-invisible form
+   the ID-card metaphor proposed.
+
+**The measurement phase of the R-line CLOSES.** R3 (the identity
+instruments — taxometer η̂, T6″, the completeness meter — pointed
+at style/trait mixtures) is HELD FOR A PLANNER DERIVATION, not
+queued: the typology line's η-identity and the v2 channel's
+style-identity are two different formal objects, and pointing the
+instruments across that gap without reconciling the definitions
+first is precisely the #59 class of error. The derivation is the
+next planner move when the loop resumes. Synthesis:
+`docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_SYNTHESIS.md`.

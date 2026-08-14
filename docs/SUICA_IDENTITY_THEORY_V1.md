@@ -1985,3 +1985,36 @@ identity-beyond-biography has no channel to live in. **The M4-R
 line builds that channel** (a planted per-author non-trait style
 vector, zero-default certified), so the question that started this
 program can finally be asked of a world able to answer either way.
+
+## Appendix MM — dated append (2026-08-14, post-R2b): the channel-specific tax; the founding answer
+
+**MM.1 — The two taxes.** Measured apart at matched r (the N1
+roots) and via the certified style knob: κ_slow(V̄ = 0.0525) =
+0.8917 [0.850, 0.935] — the N-line curve's fourth sealed hit, on
+its own channel — against κ_mu = 0.0747 [0.054, 0.096]; separation
+D = 0.817, ratio 11.93×. **Dated scope clause for every M/N-line
+law: V is the DESIGN (slow+int) person share — the tax curve is
+the STATE-channel tax.** R2's 11.65× mispricing was the channel
+ratio; the law was never broken, only broader-scoped than its
+fitting corpus could say (the #62 lesson made physical).
+
+**MM.2 — The founding answer.** The conjecture that began this
+program — the residual is not error but an ID card — resolves on
+this family as measured fact: identity (non-trait author content)
+lives in CARDS and crosses frames (R1/Q1b); the relational gauge
+pays a small carrying tax for it and CANNOT read it across frames
+(R2's frame-controlled contrast: +0.0305 within, −0.0024 across);
+state variance — not identity — is what the heavy tax prices
+(R2b); and card-space biography reading obeys the disattenuation
+identity exactly (Q1b). The ID-card metaphor's content, in
+instrument language: **the card is the identity document; the
+field gauge is a context meter that can verify presence but never
+identity across contexts.**
+
+**MM.3 — Scope and the held question.** All of this is
+instrument-world fact on the k2b/v2 family — nothing licenses
+person claims. R3 (the typology instruments vs the style channel)
+is HELD pending the reconciliation derivation of two distinct
+identity formalisms (typology-η vs style-channel) — the #59 class
+of error, avoided by not registering it yet. The loop rests here
+with the founding question answered where it could be posed.

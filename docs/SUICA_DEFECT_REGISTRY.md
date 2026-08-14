@@ -291,3 +291,9 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|---|---|
 | #62 | R-line / M4-R2 | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R2 outcome + planner adjudication` | The V_eff derivation delegated to "person_share_design's own semantics" without pinning CHANNEL COVERAGE — the function is literally slow+int (excludes the mu channel where style lives) and the literal reading INVERTS the sealed prediction's sign; executor computed and persisted all three readings pre-stamp and pinned on four grounds. | none (convention: when a new channel exists, every share/variance accounting names the channels it counts, at registration) | channel-accounting |
 | #63 | R-line / M4-R2 | same | The "R_S_nat(w=0) ≈ 0" anchor was structurally wrong (measured 0.0887): the pipeline's truth panels CARRY THE FRAME, so the registered cross-frame form conflated "cannot read style across frames" with "the frame does not transport" (INDETERMINATE) while the frame-controlled contrast answered cleanly (+0.0305 within / −0.0024 across). | none (convention: cross-frame readability claims are registered as frame-controlled increments, never raw cross-frame levels; rule-13 enforcement extended to percentile-value instability) | frame-controlled-form |
+
+## Dated additions (2026-08-14, sixteenth note — R2b; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #64 | R-line / M4-R2b | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R2b outcome + planner adjudication` | The registered κ_slow operand order yields a NEGATIVE tax against a positive sealed prediction — S3 structurally unfirable under perfect channel specificity; executor pinned the standard secant orientation pre-measurement (RN-R2B-2) with the literal reading reported. | none (convention: every registered estimand states its sign convention with a worked numeric example) | sign-convention |

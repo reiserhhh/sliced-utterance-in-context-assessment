@@ -918,3 +918,19 @@ the tax is a declining quadratic curve, closure-validated 5/6 (M3);
 the response-band exponent is re-attributed (V-shadow +2.245); rules
 25–29; defects #43–#49. Successor: the M4-N mechanism line
 (`docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md`).
+
+## Dated addendum (2026-08-14) — the N/P/Q/R lines
+
+Four lines closed since the M-line: **N** (tax mechanism —
+transport seal 3/3, closure clean, synthesis
+`SUICA_M4_N_TAX_MECHANISM_LINE_SYNTHESIS.md`), **P** (penalty
+mechanism — the gauge is a frame-agreement instrument; split-seed
+instrument delivered; synthesis
+`SUICA_M4_P_PENALTY_MECHANISM_LINE_SYNTHESIS.md`), **Q** (transport
+— rule 33; card pure trait; tax frame-borne; synthesis
+`SUICA_M4_Q_TRANSPORT_LINE_SYNTHESIS.md`), **R** (identity channel
+— certified; the founding answer; synthesis
+`SUICA_M4_R_IDENTITY_CHANNEL_LINE_SYNTHESIS.md`). Theory appendices
+W–MM in `SUICA_IDENTITY_THEORY_V1.md`; graded laws and corrections
+in the four dated addenda of `SUICA_V8_IDT_INTEGRATION.md`; rules
+1–33 and defects #1–#64 in `SUICA_DEFECT_REGISTRY.md` dated notes.

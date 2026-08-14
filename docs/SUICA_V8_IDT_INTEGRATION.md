@@ -245,3 +245,24 @@ instrument story:
 - Standing rules 1–33; defects #1–#60. Successor: the M4-R
   identity-channel generator line (the founding question, made
   posable).
+
+## Dated addendum (2026-08-14, fourth) — the M4-R identity-channel line; the founding answer
+
+The R-line (5 legs, `f8bc446`..close; synthesis
+`docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_SYNTHESIS.md`):
+
+- **The identity channel exists as a certified instrument**
+  (build_split_world_v2: planted non-trait author content,
+  zero-default bit-identity, prospective containment at a fresh
+  dose with the #61 band correction proven load-bearing).
+- **The founding answer** (appendix MM): identity lives in cards
+  and crosses frames; the gauge pays a small carrying tax and
+  cannot read identity across frames; the heavy tax (the N-line
+  curve, fourth sealed hit) is the STATE-channel tax — every M/N
+  law gains its channel-scope clause by dated note.
+- **The card is the identity document; the field gauge is a
+  context meter.**
+- Standing rules 1–33; defects #1–#64 (#61 load-bearing; #62–#64
+  conventions). R3 held for the identity-formalism reconciliation
+  derivation. The loop rests with the founding question answered
+  where it could be posed.
