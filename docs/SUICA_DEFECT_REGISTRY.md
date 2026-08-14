@@ -262,3 +262,13 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|---|---|
 | #57 | P-line / M4-P3c | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P3c outcome + planner adjudication` | The registration consumed a 4-pair pilot's CORRELATION in the projection and bands (realized ρ missed by 0.756; pilot sd understated ~2× despite df-inflation); executor RN-P3C-9 recomputed both bands pre-verdict, verdicts unchanged. | none (convention: pilot-estimated correlations are never consumed; projections/bands use independence with a stated margin or worst-case sign; df-inflation licenses variances only) | pilot-second-moments |
 | #58 | P-line / M4-P3c | same | The pivot to difference estimands dropped P3's still-measurable levels sub-case (NO_TRANSPORTABLE_READING), which the data then satisfied (R_refresh inside the floor at every φ) — the most informative reading exists only descriptively. | none (convention: an estimand pivot carries forward every sub-case still measurable under the new estimands) | sub-case-carryforward |
+
+## Dated additions (2026-08-14, twelfth note — Q1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #59 | Q-line / M4-Q1 | `docs/SUICA_M4_Q_TRANSPORT_LINE_PLAN.md — Q1 outcome + planner adjudication` | The estimand was degenerate BY DEFINITION: the card statistic's truth side is `world["trait"]` (author-stream), which A/B share bit-identically, forcing C_ref ≡ C_nat with zero worlds needed — both facts were persisted at registration time (k2b:410 + P3b's taxonomy). The #43 genus escalated to the level of an estimand's definition; routing cell 4 would have published an identity as a measurement. | 33 (plus convention: non-degeneracy proofs cover the estimand's defining contrast; antecedents satisfiable by construction are defects; the #46/#54 mechanical check extends to antecedent-nondegeneracy) | estimand-degeneracy |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 33 | #59 (and the appendix-N re-reading it forced) | An instrument comparison ("X× better") is licensed only between readers of the SAME registered target object; readers of different targets are typed as different INSTRUMENTS and are never ranked. | `docs/SUICA_M4_Q_TRANSPORT_LINE_PLAN.md — Q1 planner adjudication (2026-08-14)` |

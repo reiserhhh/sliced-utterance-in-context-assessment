@@ -1892,3 +1892,35 @@ correlations never consumed; pivots carry sub-cases). The split-seed
 instrument (P3b) is a standing asset: generator-side refreshment
 now exists, certified, with a live anchor — T9's second layer is
 real. P3d (a 3.2× top-up for one label) is priced and parked.
+
+## Appendix JJ — dated append (2026-08-14, post-Q1): the two layers read different targets; instrument comparisons get a license rule
+
+**JJ.1 — The discovery inside the degeneracy.** Q1 stopped on an
+identity: the card statistic's truth is `world["trait"]` — a pure
+author-stream object that frame refreshment cannot touch — while
+the gauge's b-truth (mu + common) CARRIES the frame. The two
+instrument layers differ, precisely and by construction, in whether
+their TARGET is frame-free. On the same certified pairs, the card
+statistic is bit-identical across frames while the gauge collapses
+(third replication: R_refresh ≈ 0, gap 0.129).
+
+**JJ.2 — Rule 33 and the re-scope of appendix N.** An instrument
+comparison is licensed only between readers of the SAME registered
+target; readers of different targets are different instruments, not
+ranked. Appendix N's "cards ≈ 4.5× the gauge at trait reading"
+(realized 4.6500/4.6472 against the two persisted 0.827 objects,
+now disambiguated) is re-scoped by this note: it compares a
+frame-free-target reader against a frame-carrying-target reader —
+each may be the right instrument FOR ITS TARGET, and the P-line's
+verdict ("the gauge is a frame-agreement instrument") says the
+gauge's target is the frame-carrying one in substance as well as
+definition.
+
+**JJ.3 — The question that survives, and it is the identity
+question.** With targets separated, the live card-layer question is
+whether the card carries author-stream content BEYOND the trait:
+cos(card_A, card_B) across certified same-author fresh-frame pairs
+against the disattenuation identity r̂_A·r̂_B (T8's lineage). Excess
+= identity-beyond-biography, measured in card space — the program's
+original metaphor (the card as an ID) put to its first direct
+card-space test (M4-Q1b; leans honestly split .40/.40).

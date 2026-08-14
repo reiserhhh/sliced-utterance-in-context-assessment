@@ -267,3 +267,149 @@ check verifies disjointness and covering; it does not verify that a cell's
 antecedent can only be reached by measurement. The convention worth adding is
 that a routing cell whose antecedent is satisfiable by construction must be
 guarded by a non-degeneracy clause — the card-layer analogue of rule 10.
+
+### Planner adjudication of Q1 (2026-08-14, appended after the run) — THE DEGENERACY IS THE DISCOVERY; INSTRUMENT COMPARISONS GET A LICENSE RULE
+
+**INEXPRESSIBLE accepted — and the stop is the leg's finding.** The
+card statistic's truth side is `world["trait"]` (k2b:410), a pure
+AUTHOR-stream object; A and B share the author stream bit-identically
+(exactly what C2a certifies), so C_ref ≡ C_nat with max |L_C| = 0.0
+EXACTLY — an identity, not a measurement. The executor proved the
+cross-world path byte-for-byte against k2b before showing it
+degenerate (the zero-point identity), disambiguated appendix N's
+0.827 into its two persisted objects (predicted 0.8271784593117322,
+measured 0.8266850143926395; realized ratios 4.6500/4.6472 against
+the prose "~4.5×"), and delivered a free THIRD replication of the
+gauge collapse on the same pairs (R_refresh ≈ 0, mean gap
+0.12886194210693314).
+
+**The conceptual result (appendix JJ):** the card layer and the
+gauge layer differ precisely in whether their TRUTH OBJECT carries
+the frame — the card's target is frame-free by construction, the
+gauge's target (mu + common) is frame-carrying. **Appendix N's 4.5×
+therefore compares readers of DIFFERENT TARGETS, not two readers of
+one.** Rule 33 (enacted): **an instrument comparison ("X× better")
+is licensed only between readers of the SAME registered target
+object; readers of different targets are typed as different
+INSTRUMENTS and are never ranked.** Appendix N's typing survives
+with its comparison re-scoped by dated note.
+
+**Defect #59 (mine — the #43 genus at the level of an estimand's
+DEFINITION).** The degeneracy was computable at registration from
+two facts already persisted (truth = trait, k2b:410; trait ∈ author
+stream, P3b's certified taxonomy). Convention extended (rule-10
+family + #46/#54 mechanical check): **non-degeneracy proofs cover
+the estimand's defining contrast — the object swapped or varied must
+provably DIFFER under the swap — verified at registration where the
+facts are persisted, and in Part 0 otherwise; a routing cell whose
+antecedent is satisfiable by construction is a defect.** RN-Q1-2
+(the registration's phrase "truth-side card panel" named a
+nonexistent object) noted, mine.
+
+**The properly-posed question (Q1b, below).** The executor's
+named-not-run estimate-side swap is HALF right: C_B vs C_A is
+degenerate by exchangeability (A and B are iid given the author
+stream). The non-degenerate, theory-central quantity is the
+CROSS-FRAME CARD COSINE cos(card_A, card_B) against the
+disattenuation identity r̂_A·r̂_B — because A and B share ONLY the
+author stream (certified), any excess of cos(A,B) over the
+trait-predicted product is AUTHOR-STREAM CONTENT BEYOND THE TRAIT
+carried by the cards. That is the identity question itself, at card
+level: **does the card carry the person's ID beyond their
+biography?**
+
+---
+
+## M4-Q1b — the cross-frame card cosine (identity beyond the trait)
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Device: P3b's certified
+instrument (import by file, hashes verified; C2 battery on 4 fresh
+probes). Design: share 0.25 × φ ∈ {0.05, 0.98} × 384 A/B pairs
+(768 pairs, 1536 worlds); salts `m4q1b-author` / `m4q1b-frameA` /
+`m4q1b-frameB` / `m4q1b-pilot`, master_seed 20260814.
+
+### Quantities (per world-pair, author-indexed card vectors from Q1's verified cross-world path)
+
+- **cos_AB(w)** — mean over authors of cos(card_A(a), card_B(a));
+- **r̂_A(w), r̂_B(w)** — the measured card-vs-trait statistic
+  (Q1's reading B, `pooled_card_stats` lineage, source re-pinned);
+- **Δ(w) = cos_AB(w) − r̂_A(w)·r̂_B(w)** — the paired excess over
+  the disattenuation identity (fully paired; frame noise cancels to
+  first order).
+
+### Non-degeneracy (the #59 convention, discharged at registration)
+
+The defining contrast: A and B's frame streams differ (C2a);
+cos_AB depends on realized error magnitudes and is not forced by
+any shared-object identity (the truth object is not swapped
+anywhere; both r̂'s and cos_AB are measurements of DIFFERENT vector
+pairs). The identity-forcing failure mode of Q1 is absent by
+construction; the executor re-verifies in Part 0 that card_A ≠
+card_B per pair (norm delta > 0) before any statistic is read.
+
+### Verdicts (rule 22; NULL-first per #55; bands variances-only per #57)
+
+**V-Q1b: mean Δ vs 0**, per φ and pooled — NULL (CI inside ±ε_Δ,
+pilot-derived, df-inflated) / POSITIVE / NEGATIVE / UNDERPOWERED.
+Consequence entailment (verified): A and B share ONLY the author
+stream (C2a), so Δ POSITIVE is entailed to be author-stream content
+beyond the trait — no other shared channel exists. Descriptive
+(no gates): cos_AB and r̂·r̂ levels per φ; the identity-share
+(Δ/cos_AB) quoted UNBUDGETED with CI.
+
+### Leans (sides declared)
+
+**L-1q1b [PURE_TRAIT (Δ NULL) .40 / IDENTITY_BEYOND_TRAIT
+(Δ POSITIVE) .40 / ANTI_CORRELATED (Δ NEGATIVE) .05 / underpowered
+.15].** The theory pull is real on both sides: T8's disattenuation
+identity says NULL if cards are trait-plus-independent-noise; the
+a_load carrier (author-stream, non-trait) says POSITIVE if cards
+capture author structure beyond b — which would be the ID-card
+metaphor measured at card level.
+
+### Gates
+
+- **G0q1b.** (i) Q1's two 0.827 objects and the zero-point identity
+  record verified against `results/m4_q1_card_transport/`; (ii)
+  instrument hashes vs P3b; (iii) the disattenuation-identity
+  lineage located (T8 / the K3-era disattenuated distinctive cosine;
+  quote verbatim, rule 24). Mismatch → STOP.
+- **G1q1b (rule 10).** C2 battery PASS; per-pair card_A ≠ card_B
+  proven before statistics; the Δ estimand's zero-point control: on
+  a control pair with the SAME frame seed, cos_AB = cos(card_A,
+  card_A) = 1 and Δ = 1 − r̂_A² > 0 by construction — computed and
+  disclosed as the operator sanity check (NOT a verdict input).
+- **G2q1b (pilot).** 4 pairs × both φ; rule-29 predicate (cosines
+  in [−1, 1], null 0, saturation ≥ 0.995); ε_Δ from pilot variances
+  only, independence margin 1.25.
+- **G3q1b (rule 25).** Projection at truths {Δ = 0;
+  Δ = 0.05 (a material identity share)}: ≥ 0.8 power / ≤ 0.1
+  false-fire at 384 pairs/φ; once-only escalation to 768 ON THIS
+  GATE; else NON_PROJECTABLE.
+- **G4q1b.** Routing verified disjoint-and-covering,
+  consequence-entailed, antecedent-nondegenerate (#59); rule 24;
+  stages: part0 150 s, pilot 60 s, worlds 4 chunks (~230 s),
+  score+fit 180 s, finalize 60 s; target < 40 min.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/G1 failure | **STOP / INSTRUMENT_DEFECT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | Δ NULL (both φ) | **CARD_PURE_TRAIT** — cards are trait plus frame-independent noise; the disattenuation identity holds at card level; the taxonomy completes: cards read the trait, the gauge reads the frame |
+| 4 | Δ POSITIVE (both φ) | **CARD_CARRIES_IDENTITY_BEYOND_TRAIT** — the card transports author-stream content the trait does not span; the ID-card layer of IDT gets its first direct card-space measurement |
+| 5 | Δ NEGATIVE (both φ) | **ANTI_CORRELATED_NAMED** — new phenomenon; theory note |
+| 6 | φ's disagree in classification | **PHI_SPLIT** — named; the φ-dependence itself becomes the finding |
+| 7 | any UNDERPOWERED (no higher cell) | **UNDERPOWERED** (levels reported) |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_q1b_card_cosine.py`;
+`results/m4_q1b_card_cosine/` (gitignored);
+`reports/SUICA_M4_Q1B_CARD_COSINE_REPORT.md` (generated tables);
+outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-q): Q1b — the cross-frame card cosine — <SLUG>`,
+never amended, never pushed; suite green first. 1536 worlds
+(+escalation ×2) + pilot; every stage < 600 s.
