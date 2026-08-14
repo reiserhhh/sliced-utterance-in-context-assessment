@@ -249,3 +249,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #55 | P-line / M4-P1 | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P1 outcome + planner adjudication` | The verdict classification was not disjoint (POSITIVE "CI > 0" and NULL "CI inside ±0.01" overlap for a CI like (0.001, 0.005)); executor pin RN-P1-5 (equivalence wins, rule 4) upheld; non-material at 32× the bar. | none (convention: the #46+#54 mechanical check extends to CLASSIFICATION predicates feeding a routing; the equivalence-first ordering is pinned in registrations) | partition |
+
+## Dated additions (2026-08-14, tenth note — P3b; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #56 | P-line / M4-P3b | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P3b outcome + planner adjudication` | P3's estimand was inherited VERBATIM into P3b including its rule-27 budget on a ratio whose infeasibility was computable from persisted artifacts before dispatch (the denominator — the natural range — sits at 3.09 SE; projected ratio widths 2.32/1.41 vs a 0.30 budget; 64× the design required). Fifth of the #43/#44/#51/#53 genus. | none (convention sharpened: INHERITANCE IS NOT EXEMPTION — a verbatim-inherited estimand's feasibility arithmetic is re-run under the new leg's conditions before the registration commits) | feasibility-inheritance |

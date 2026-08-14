@@ -1086,3 +1086,123 @@ quantity computable at registration and not computed — with the specific twist
 that inheriting an estimand verbatim also inherits its feasibility arithmetic,
 which changes when the instrument changes. Non-blocking: the leg's registered
 routing handled it correctly and the instrument survives.
+
+### Planner adjudication of P3b (2026-08-14, appended after the run) — THE INSTRUMENT IS DELIVERED; THE RATIO WAS THE WRONG ESTIMAND; INHERITANCE IS NOT EXEMPTION
+
+**NON_PROJECTABLE accepted — rule 25 fired exactly as designed, and
+the leg still delivered its standing asset: the certified split-seed
+instrument.** Four edits over an 18-entry provenance map; C2a/C2b/C2c
+all pass; and a STRONGER property than required: at equal seeds the
+author half reproduces k2b BIT-EXACTLY (a_load, common, int, trait
+identical; divergence localised to the frame stream's restart, which
+is inherent to splitting). Exposing `loadings` closes the
+undetectable-basis-mixing hole P3 named. The instrument is a
+program asset independent of this leg's estimand.
+
+**Defect #56 (mine — the #43/#44/#51/#53 genus, fifth appearance,
+with a new twist).** Inheriting P3's estimand VERBATIM inherited a
+rule-27 budget on a RATIO whose infeasibility was computable from
+persisted artifacts before dispatch: the denominator is M1c's
+natural range 0.010391443071199338, whose SE at 192 pairs
+(0.0033609633054239685) puts it at 3.09 SE — a ratio with a 3-SE
+denominator is wide no matter how precise the numerator (projected
+widths 2.32/2.43 at 192; 1.41/1.50 at 384; 64× the design to meet
+0.30). **Convention sharpened: INHERITANCE IS NOT EXEMPTION — a
+verbatim-inherited estimand's feasibility arithmetic is re-run under
+the new leg's conditions before the registration commits.** The
+executor's named alternative is ADOPTED: DIFFERENCE estimands avoid
+the noisy denominator entirely.
+
+**Method note.** The executor's A-3 (its own draft claim about
+all-objects-differing replaced by a GENERATED per-object comparison
+before any gate consumed it, yielding the stronger bit-exact
+finding) is the rule-30 culture operating executor-side.
+
+---
+
+## M4-P3c — the transportable gradient, by differences
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Instrument: P3b's certified
+`build_split_world` (imported from
+`scripts/run_suica_m4_p3b_refresh_gradient.py` by file with
+provenance; the C2 battery re-run on 4 fresh probe pairs; C2c
+included). Question unchanged (GG.3); ESTIMANDS changed to
+differences:
+
+- **range_nat** = R_nat(φ=.98) − R_nat(φ=.05) (M1c side-signing;
+  co-measured in this leg);
+- **range_ref** = R_refresh(φ=.98) − R_refresh(φ=.05) (the
+  TRANSPORTABLE gradient);
+- **D_grad** = range_nat − range_ref (the FRAME-OWNED component);
+  all three with JOINT world-pair bootstrap (R_nat and R_refresh
+  share the A-worlds — the correlation is part of the estimator,
+  B = 2000; 20000 at rule-13 boundaries).
+
+### Feasibility (planner arithmetic, rule 30 — executed inputs cited, scaling stated, exact gate in Part 0)
+
+P3b persisted SE(range_ref) ≈ 0.0047580 and SE(range_nat) ≈
+0.0033609633054239685 at 192 pairs/φ; both scale as 1/√n. At **768
+pairs/φ** (the registered size): SE(range_ref) ≈ 0.0024,
+SE(D_grad) ≤ √(SE_nat² + SE_ref²) ≈ 0.0029 (upper bound — the
+shared-A correlation only helps), so a MOSTLY_FRAME truth (D_grad ≈
+0.0104) sits at ≥ 3.5 SE and a TRANSPORTS truth (range_ref ≈
+0.0104) at ≥ 4.3 SE. These are approximate planner values from
+persisted inputs; **G3p3c's projection recomputes exactly (B_proj =
+2000, both truths {FULLY_FRAME, TRANSPORTS}), PASS iff both
+discriminations ≥ 0.8 power at 2·SE with the null-truth false-fire
+≤ 0.1; once-only escalation to 1152 pairs/φ ON THIS GATE; else
+NON_PROJECTABLE.**
+
+### Design
+
+share 0.25; φ ENDPOINTS {0.05, 0.98} × **768 A/B pairs** each +
+φ = 0.60 × 192 pairs (a shape-sanity READING, no gate); total 1728
+pairs = 3456 worlds. Salts `m4p3c-author` / `m4p3c-frameA` /
+`m4p3c-frameB` / `m4p3c-pilot`, master_seed 20260814. R_deframe
+secondary reading at stride 1 (P3b's measured cost 1.0 s/pair
+absorbed in the budget). C1′ anchor now RUNS: R_nat's two endpoint
+levels (and the 0.60 reading) vs M1c's share-.25 row,
+distributional 2·√2·SEM — failure routes INSTRUMENT_DEFECT.
+
+### Verdicts (rule 22; NULL-first per #55; equivalence bands from Part-0 realized noise, df-inflated)
+
+- **V-A (frame-owned component):** D_grad vs 0 — POSITIVE (CI > 0)
+  / NULL (CI inside ±ε_D) / NEGATIVE / UNDERPOWERED.
+- **V-B (transportable component):** range_ref vs 0 — NULL-first
+  (CI inside ±ε_r) / POSITIVE / NEGATIVE / UNDERPOWERED.
+- Descriptive (no gate, no budget): the fraction
+  range_ref/range_nat quoted ONLY as a point with its honest CI,
+  labeled UNBUDGETED (the P3b lesson made visible in the report).
+
+### Leans (sides declared)
+
+**L-1p3c [FULLY_FRAME .50 / MIXED .25 / TRANSPORTS .10 / INVERSION
+.05 / underpowered .10]** — P2's f carried across the stated
+inferential gap.
+
+### Routing (rule 16 — disjoint, covering, consequences entailed)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/C2 battery/citation failure | **STOP / INSTRUMENT_DEFECT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | C1′ anchor fails | **INSTRUMENT_DEFECT** (never a world finding) |
+| 4 | V-A POSITIVE and V-B NULL | **GRADIENT_FULLY_FRAME** — the natural φ-gradient is frame-owned; the M-line law stands as a law of the statistic; the mechanism section re-types (the r-channel reads frame-agreement) |
+| 5 | V-A POSITIVE and V-B POSITIVE | **GRADIENT_MIXED** — both components real; the split is quoted descriptively |
+| 6 | V-A NULL and V-B POSITIVE | **GRADIENT_TRANSPORTS** — the reading crosses frames; the scaffold-gradient strengthens |
+| 7 | V-B NEGATIVE | **INVERSION_NAMED** — refreshment reverses the gradient; new phenomenon, theory note |
+| 8 | any UNDERPOWERED among V-A/V-B (and no higher cell fires) | **UNDERPOWERED** (levels and bands reported) |
+| 9 | V-A NEGATIVE (and V-B not NEGATIVE) | **FRAME_COMPONENT_NEGATIVE** — refreshed gradient exceeds natural; named, theory note |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_p3c_transportable_gradient.py`;
+`results/m4_p3c_transportable_gradient/` (gitignored);
+`reports/SUICA_M4_P3C_TRANSPORTABLE_GRADIENT_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-p): P3c — the transportable gradient, by
+differences — <SLUG>`, never amended, never pushed; suite green
+first. 3456 worlds (+escalation ×1.5) + pilot; stages: part0 180 s,
+pilot 60 s, worlds 6 chunks (~350 s each), score+fit 240 s,
+finalize 60 s; target < 60 min, every stage < 600 s.
