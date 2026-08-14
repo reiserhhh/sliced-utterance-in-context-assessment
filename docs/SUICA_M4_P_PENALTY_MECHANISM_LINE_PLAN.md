@@ -283,3 +283,156 @@ on the classification feeding it. Pinned before any number as RN-P1-5
 (equivalence wins, per rule 4), with the sign-first ordering also computed; the
 two agree at both cells here (True / True), so nothing
 turned on it this time. Non-blocking.
+
+### Planner adjudication of P1 (2026-08-14, appended after the run) — SCAFFOLD OWNS THE PENALTY; THE QUANTIFICATION QUESTION IS NAMED
+
+**SIGN_SCAFFOLD accepted.** Both base cells POSITIVE at 32–35× the
+minimum-interesting bar (b̂ = +0.3217400470171695 /
++0.34654236945734695, CIs nowhere near zero or the margin), s = 0
+proven BIT-IDENTICAL to the unperturbed construction, calibration
+exact to 1.9e-16, the injection point pinned to the last common
+per-occasion object before the frozen map (k2b:377) with k2b and
+`suica_core/` diff-verified untouched. My .45/.40 split resolves
+decisively: **frame-scaffolding owns the readability penalty;
+the contamination mechanism is refuted at this scale.** Two
+precisions so the record is not misread: (i) K1's amplification
+finding is NOT refuted — it concerns the gauge's issuer-leakage
+quantity; P1 concerns b-only recovery; the gauge can amplify common
+content AND read the person better through it — indeed that
+conjunction IS the scaffold picture. (ii) Per the executor's caveat
+(K-R1's F-1: the b-only truth panel is itself frame-carried), the
+sign names the OWNER; it does not quantify how much of the boost is
+genuine person-reading versus frame-vs-frame agreement — that
+decomposition is P2, registered below.
+
+**Theory consequence (appendix FF):** the level law's r-channel is
+re-read as THE SCAFFOLD GRADIENT — at fixed share, r is a bijection
+of φ, and the causal content of λ·r^q is frame-block coherence, not
+card readability per se. M1e's cross-share victory of the
+r-REPRESENTATION stands untouched (best predictive coordinate ≠
+causal owner); the penalty is re-typed from "a price of
+readability" to "the loss of scaffold that co-varies with
+readability at fixed share."
+
+**Machinery findings, recorded:** (i) k2b's corpus string embeds
+`arm_id` and the frozen map's output depends on it — same world
+under two labels differs by ~0.0122 (per-world noise via the label
+path, not a per-arm offset; the executor made the arm tag
+s-independent, and G1p1(c) caught its own first pilot control on
+exactly this — the gate working on the harness). Standing
+machinery note: k2b-family REPLICATION anchors are distributional
+across salts/labels, bit-level only at matched corpus strings —
+prior legs' cross-arm contrasts are unaffected (different configs =
+different worlds regardless). (ii) K1's calibration is a
+(context, occasion)-centred author-mean deviation RMS — the
+literal transplant (rules 9/12) with both readings persisted
+(RN-P1-7, ~2% apart) was correct. (iii) The dose response is
+CONVEX (quadratic > linear at both cells; s = 1.0 lifts recovery
+to ~0.44–0.48, a regime far above anything the family has produced)
+— P2 must not assume linearity and must disclose the
+common-to-author variance ratio per arm.
+
+**Defect #55 (mine, non-material here):** the verdict
+classification was not disjoint — POSITIVE (CI > 0) and NULL (CI
+inside ±0.01) overlap; the executor's RN-P1-5 pin (equivalence
+wins, rule 4) was correct and both orderings agreed. The #46+#54
+mechanical check is extended to CLASSIFICATION predicates feeding a
+routing, not only the routing cells.
+
+---
+
+## M4-P2 — the dose–decomposition (genuine reading vs frame-vs-frame agreement)
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. No seal (decomposition, not
+prediction). Question: **how much of the scaffold boost survives
+when the truth side is held frame-fixed — and what is the dose
+law's shape?**
+
+### The decomposition (registered algebra)
+
+For each world at dose s, build TWO variants at the same index:
+the dosed world (δ at scale s) and the zero-dose world (δ = 0) —
+bit-identical except the common channel (G1p1(c)'s proven
+inertness is the constructive guarantee). Score the DOSED world's
+gauge output twice: **R_nat(s)** against its own truth panel
+(P1's quantity) and **R_cf(s)** against the ZERO-DOSE world's
+truth panel (the counterfactual, frame-fixed truth). Then per
+cell: genuine improvement G(s) = R_cf(s) − R_cf(0); frame-vs-frame
+share F(s) = [R_nat(s) − R_nat(0)] − G(s); at s = 1.0 the
+FRAME-SHARE fraction f = F(1)/[R_nat(1) − R_nat(0)] (well-defined
+here: P1 measured the denominator at ~0.32 ≫ noise).
+
+### Design
+
+s ∈ {0, 0.25, 0.5, 0.75, 1.0} × base cells {(0.25, 0.05),
+(0.25, 0.60)} × 192 worlds = 10 arms, 1920 fresh worlds (each world
+built in dosed and zero-dose variants; the zero-dose builds of the
+s = 0 arm ARE the arm). Salts `m4p2-world` / `m4p2-pilot`,
+master_seed 20260814. Arm tags s-independent in the corpus string
+(the P1 machinery note, now a pinned requirement). Field
+statistics: per-world R_nat and R_cf as defined.
+
+### Gates
+
+- **G0p2 (bit-exact).** P1's six arm means, both slopes and CIs,
+  the calibration record, and the injection-point pin verified
+  against `results/m4_p1_frame_injection/`; the two base-cell r
+  values from the pinned maps. Mismatch → STOP.
+- **G1p2 (rule 10).** (a) The zero-dose variant of a dosed world is
+  BIT-IDENTICAL to the plain construction (P1(c) re-proven on this
+  leg's salt); (b) at s > 0, T-cf differs from T-nat provably
+  (norm delta > 0 reported); (c) R_cf(0) ≡ R_nat(0) bit-exactly
+  (the decomposition's zero-point identity).
+- **G2p2 (pilot).** 4 worlds × s ∈ {0, 1.0} × both cells, both
+  scorings, rule-29 predicate; REGIME disclosure: the
+  common-to-author response-level variance ratio per arm
+  (reported at every dose; ratio > 10 at any arm → modifier
+  **REGIME_NOTE**, adjudicating nothing but scoping the claim).
+- **G3p2 (rule 25).** Verdict quantity: the OLS slope of per-world
+  R_cf on s (per cell). σ from pilot zero-dose worlds
+  (df-inflated); MDE(2·SE) ≤ 0.01 at 192/arm (P1 realized 0.00905
+  on the same design); once-only escalation to 384/arm; else
+  NON_PROJECTABLE.
+- **G4p2.** Routing verified disjoint-and-covering, consequences
+  entailed, CLASSIFICATION disjointness verified (#55's extension:
+  equivalence-wins ordering pinned IN the registration — NULL is
+  tested first, then sign); rule-27 consumption budget: f's 95% CI
+  width ≤ 0.30 (else f is reported DESCRIPTIVE-ONLY and cell
+  labels carry UNQUANTIFIED); rule 24; stages: part0 90 s, pilot
+  60 s, worlds 10 chunks (~150 s each; ×2 at escalation), fit
+  120 s, finalize 60 s.
+
+### Verdicts and leans (rule 22; equivalence per rule 4, NULL first)
+
+Per cell, on the R_cf slope: NULL (CI inside ±0.01) / POSITIVE
+(CI > 0) / NEGATIVE (CI < 0) / UNDERPOWERED. Leans: **L-1p2
+[genuine-survives(+) .55 / all-frame(NULL) .30 / other .15]**;
+**L-2p2 [f > 0.5 at s = 1.0: .55]** (reported with CI under its
+budget). Dose-form fits (linear/quadratic on R_nat and R_cf) are
+DESCRIPTIVE (no verdict — nothing downstream consumes the form
+yet; N-line lesson).
+
+### Routing (rule 16 — disjoint, covering, consequences entailed)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0p2/G1p2 failure | **STOP** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | both cells POSITIVE on R_cf | **GENUINE_SCAFFOLD** — frame content genuinely improves person-reading against a frame-fixed truth; f quantifies the split |
+| 4 | both cells NULL on R_cf | **PURE_FRAME_AGREEMENT** — the P1 boost is entirely frame-vs-frame; the gauge does not read the person better, it reads the frame; the penalty's mechanism re-types accordingly (major theory note) |
+| 5 | both cells NEGATIVE on R_cf | **SCAFFOLD_TRADEOFF** — frame content actively costs person-reading while inflating apparent recovery; theory note |
+| 6 | cells disagree or any UNDERPOWERED | **SPLIT_OR_UNDERPOWERED** — named; P3 inherits the diagnosis |
+| — | any arm's variance ratio > 10 | modifier **REGIME_NOTE** |
+| — | f's budget unmet | modifier **UNQUANTIFIED** |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_p2_dose_decomposition.py`;
+`results/m4_p2_dose_decomposition/` (gitignored);
+`reports/SUICA_M4_P2_DOSE_DECOMPOSITION_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-p): P2 — the dose–decomposition — <SLUG>`,
+never amended, never pushed; suite green first. 1920 worlds (×2
+variants where dosed) + 32 pilot; target < 45 min wall, every
+stage < 600 s.

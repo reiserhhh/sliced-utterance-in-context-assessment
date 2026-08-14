@@ -243,3 +243,9 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|
 | 31 | #52 | Every registered verdict bar is checked at registration for two-sided reachability — both PASS and FAIL attainable under the registered construction; a residual-defined component never counts toward an attribution or explanation bar. | `docs/SUICA_M4_N_TAX_MECHANISM_LINE_PLAN.md — N4 planner adjudication (2026-08-14)` |
 | 32 | #53 | A forensic or comparison registration on an estimator's output declares that estimator's own sampling noise as its floor (computed at registration from persisted artifacts); gaps are reported in SE units alongside raw units; a gap within the declared k·SE routes to WITHIN-NOISE, never to attribution or discrepancy. | same |
+
+## Dated additions (2026-08-14, ninth note — P1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #55 | P-line / M4-P1 | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P1 outcome + planner adjudication` | The verdict classification was not disjoint (POSITIVE "CI > 0" and NULL "CI inside ±0.01" overlap for a CI like (0.001, 0.005)); executor pin RN-P1-5 (equivalence wins, rule 4) upheld; non-material at 32× the bar. | none (convention: the #46+#54 mechanical check extends to CLASSIFICATION predicates feeding a routing; the equivalence-first ordering is pinned in registrations) | partition |

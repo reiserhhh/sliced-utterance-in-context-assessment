@@ -1754,3 +1754,46 @@ mechanisms with opposite signs under frame injection — scaffold
 (K-R1: the frame carries the reading) vs contamination (K1: the
 gauge amplifies common-frame content) — make it a sign probe: the
 M4-P line.
+
+## Appendix FF — dated append (2026-08-14, post-P1): scaffold owns the penalty; the r-channel is re-read as the scaffold gradient
+
+**FF.1 — The sign.** Injecting calibrated common-frame content at
+fixed (share, φ) RAISES b-only recovery at 32–35× the
+minimum-interesting bar (slopes +0.322 / +0.347 at both base cells;
+s = 0 bit-identical control; calibration exact to 1.9e-16). Between
+the two named mechanisms, **frame-scaffolding owns the readability
+penalty; contamination is refuted at this scale.** K-R1's corollary
+now has both directions: removing the frame abolishes the reading
+(K-R1), adding frame strengthens it (P1).
+
+**FF.2 — K1 is not refuted.** The gauge amplifies common-frame
+content in its FIELD (K1's issuer-leakage, +0.0925 at 1×) AND reads
+the person better through that content (P1) — the conjunction is
+the scaffold picture, not a tension. Different quantities, one
+reader.
+
+**FF.3 — The scaffold gradient.** At fixed share, r is a bijection
+of φ; P1 places the causal content of the level law's λ·r^q term in
+frame-block coherence, not in card readability per se. The penalty
+re-types from "a price of readability" to "the loss of scaffold
+that co-varies with readability at fixed share." M1e's cross-share
+finding stands: r remains the best predictive COORDINATE; the
+OWNER is the frame. Coordinate and cause come apart, measurably.
+
+**FF.4 — What the sign cannot say (P2's question).** The b-only
+truth panel is itself frame-carried (K-R1's F-1), so part of the
+boost is frame-vs-frame agreement by construction. P2's
+counterfactual-truth decomposition (score the dosed world against
+the frame-fixed truth) splits genuine person-reading improvement
+from frame-frame agreement; cell 4 there (PURE_FRAME_AGREEMENT)
+would re-type the mechanism again — pre-registered before anyone
+knows.
+
+**FF.5 — Instrument notes.** The dose response is convex (s = 1.0
+lifts recovery to ~0.44–0.48 — a regime the family has never
+produced; P2 discloses the common-to-author variance ratio per
+arm). k2b's corpus string embeds the arm label and the frozen map's
+output depends on it (~0.0122 per-world label noise): replication
+anchors across salts are distributional, bit-level only at matched
+corpus strings; P1's gate caught its own first control on exactly
+this.
