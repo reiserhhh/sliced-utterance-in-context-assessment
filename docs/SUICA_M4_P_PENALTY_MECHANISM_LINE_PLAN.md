@@ -159,3 +159,127 @@ exactly ONE commit `feat(m4-p): P1 — the frame-injection sign probe
 — <SLUG>`, never amended, never pushed; suite green first. 1152
 worlds (2304 at escalation) + 16 pilot; target < 30 min wall, every
 stage < 600 s.
+
+### M4-P1 outcome (appended after execution; registration above unedited)
+
+**SIGN_SCAFFOLD — routing cell 3.** Both base cells POSITIVE and in
+agreement (B1=POSITIVE, B2=POSITIVE; cross-cell agreement True).
+**1152 fresh worlds** (192/arm × 6 arms). No seal — the
+leans were registered honestly split, so no sealable point prediction existed.
+Harness `scripts/run_suica_m4_p1_frame_injection.py`; report
+`reports/SUICA_M4_P1_FRAME_INJECTION_REPORT.md`; artifacts
+`results/m4_p1_frame_injection/` (gitignored).
+
+**The sign is positive and it is not close.** b̂ = **0.3217400470171695**
+[0.3125381894506993, 0.3316075999536289] at B1 (φ 0.05) and **0.34654236945734695** [0.3383230195793485, 0.3553320781635022] at B2
+(φ 0.60) — 32× and 35× the declared minimum-interesting slope of
+0.01, with both CIs far outside the ±0.01 equivalence margin.
+**H-SCAFFOLD wins; H-CONTAMINATION is refuted at this scale in this family.**
+More common-frame content makes b-only recovery RISE, steeply.
+
+| cell | φ | s | n | mean | SEM | mean realized δ RMS |
+|---|---|---|---|---|---|---|
+| B1 | 0.05 | 0.0 | 192 | 0.11873302020953876 | 0.0017776895611196061 | 0.0 |
+| B1 | 0.05 | 0.5 | 192 | 0.1794583899390327 | 0.0021742290750443875 | 0.03720787207513443 |
+| B1 | 0.05 | 1.0 | 192 | 0.44047306722670826 | 0.0046458635448118155 | 0.07443049350172602 |
+| B2 | 0.6 | 0.0 | 192 | 0.12904388025689947 | 0.001732157030280773 | 0.0 |
+| B2 | 0.6 | 0.5 | 192 | 0.18906423691764004 | 0.0021547765918366528 | 0.03864141541522801 |
+| B2 | 0.6 | 1.0 | 192 | 0.47558624971424646 | 0.004089574666712558 | 0.077341447932803 |
+
+**The dose response is convex, not linear** (descriptive, no gate). Arm means
+run 0.11873302020953876 → 0.1794583899390327 → 0.44047306722670826 at B1 and 0.12904388025689947 →
+0.18906423691764004 → 0.47558624971424646 at B2: the half-dose moves recovery barely, the
+full dose moves it enormously. Quadratic coefficients 0.40057861511636317 and
+0.4530033122717317, both positive and both larger than the linear slope itself.
+P2's dose-curve design should not assume linearity — the interesting structure
+is between s = 0.5 and s = 1.0.
+
+**The injection point, identified as the registration requires.** The object is
+`world['common']` (4, 16, 64), built at `scripts/run_suica_m4_k2b_t4_branch.py:337`, returned at
+`scripts/run_suica_m4_k2b_t4_branch.py:349`, and **last read before the frozen map at `scripts/run_suica_m4_k2b_t4_branch.py:377`**
+— the `emit_panel` line that folds the common channel into every author's
+response. That call is at `scripts/run_suica_m4_k2b_t4_branch.py:615`, one line before the map's entry at
+`scripts/run_suica_m4_k2b_t4_branch.py:616`. Nothing between them is both common and per-occasion. δ(o) is
+added to `common[c, o, :]` for EVERY context, so every author on occasion o
+receives the identical response-level shift w["common"]·δ(o). `suica_core/` and
+k2b were not edited: the harness perturbs the returned array between k2b's own
+`build_k2b_world` and k2b's own `run_field_world`.
+
+**G0p1 PASS.** Both base-cell r values bit-exact from the pinned maps
+(0.785015540293945 / 0.7558507450373838); M2's C4 mean bit-exact at source; all 7
+citation anchors located and quoted verbatim **by code** — each anchor
+substring is found in its controlling document and the containing paragraph
+lifted, so rule 24 covers the quotations as well as the tables.
+
+**G1p1 PASS on all three clauses.** (a) The injection moves the pre-map object:
+‖Δcommon‖_F ∈ [14.227782891799846, 14.883213260576998], every array bit-changed.
+(b) Calibration lands to **1.8675090942348197e-16** relative error against a
+0.05 band — the scale is solved in closed form and the realized RMS
+recomputed from the scaled δ before persisting, so this tests an executed
+number. (c) **s = 0 is BIT-IDENTICAL** to the unperturbed construction on
+8 worlds (max |difference| 0.0): the injection
+path is proven inert at zero.
+
+**G3p1 PASS.** σ from the pilot's s = 0 worlds pooled within cell (df
+6), df-inflated ×1.6498974741130894 on M1b's χ²(0.10) convention:
+0.02686397191341203 → 0.04432279940458349. RN-P1-4 makes SE(b̂) exact for this design
+(σ/√(n/2)), giving SE 0.004523676771373484 and **MDE(2·SE) = 0.009047353542746968 ≤
+0.01**. Escalation to 384/arm did not fire (False).
+
+**The unperturbed arm replicates M2's anchor.** P1's B1 s = 0 mean
+0.11873302020953876 against M2's C4 0.12239759528671845 on the same base cell:
+difference -0.0036645750771796964, z = -1.3707691436547715, within two pooled SEM
+(True). Different salt, so a distributional replication, not a
+bit-identity claim.
+
+**Two findings about the shared machinery, both caught before any arm ran.**
+
+1. **The corpus label is part of the frozen map's input (RN-P1-8).** k2b builds
+   `corpus = f"m4k2b-{arm_id}-w{world_index}"` (k2b:613) and the map's output
+   depends on it: the SAME world read under two different arm labels returns
+   recovery_b_only 0.13207502282291814 vs 0.11984192209116917 — **0.0122 apart,
+   larger than this leg's 0.01 bar**. Because `world_index` is also in the
+   string this is exchangeable per-world noise rather than a per-arm offset, and
+   it is already inside the σ the projection uses; but the arm tag was made
+   s-INDEPENDENT (`P1-{cell}`) so the three s-arms share the identical corpus at
+   matched world index and any corpus effect cancels exactly in b̂. World seeds
+   still differ per arm, so the registered 1152 fresh worlds stand. **G1p1(c)
+   failed on the first pilot for exactly this reason — the control had been
+   given a different label — which is the gate doing its job on the harness.**
+   Recorded for successors: any leg whose arm label varies with the manipulated
+   factor should confirm the label is not confounded with the contrast.
+2. **K1's own implementation defines the calibration, and it is not the obvious
+   one (RN-P1-2).** The registration transplants K1's recipe, so K1's code
+   controls (rules 9/12). `_author_deviation_rms`
+   (`scripts/run_suica_m4_k1_issuer_theorems.py:337-361`) centres each response
+   on its **(context, occasion)** cell mean, averages each author's deviations
+   **over that author's occasions** to one vector per author, and takes the RMS
+   over (author × dim). That is a much smaller quantity than a raw per-response
+   deviation RMS and therefore sets a much smaller dose at the same s. It was
+   transplanted literally; the two alternative readings are computed and
+   persisted per world but never used to calibrate. One deliberate departure is
+   disclosed as RN-P1-7: K1 SETS δ's per-component σ to s·rms, while this
+   registration says the REALIZED RMS must EQUAL the target, so δ is rescaled
+   exactly — the two agree to ~2% at 1024 draws and both clear G1p1(b), but the
+   P1 text is the binding one.
+
+**Rule events.** Rule 13: 0 boundary events — no B = 20000 re-run
+(both CIs sit far from 0 and from the equivalence margin). Rule 26: no bounded
+winner. Rule 29: in force as G2p1, held at every pilot arm and every full arm.
+Rule 30: every constant verified against its persisted source before Part 0 and
+every quoted sentence extracted by code. The slope identity b̂ = mean(s=1) −
+mean(s=0) was verified against a full OLS witness on all 3n points at both
+cells (True / True).
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv was built from the lockfile); A-2 `timeout(1)`
+is absent on macOS (foreground stages under explicit sub-600 s timeouts).
+
+**Registration-defect candidate (1).** The verdict classification is **not
+disjoint**: POSITIVE (CI > 0) and NULL (CI inside ±0.01) overlap — a CI
+like (0.001, 0.005) satisfies both. Rule 16 is met on the routing table but not
+on the classification feeding it. Pinned before any number as RN-P1-5
+(equivalence wins, per rule 4), with the sign-first ordering also computed; the
+two agree at both cells here (True / True), so nothing
+turned on it this time. Non-blocking.
