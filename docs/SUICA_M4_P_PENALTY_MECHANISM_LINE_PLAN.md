@@ -940,3 +940,149 @@ score+fit 180 s, finalize 60 s; every stage < 600 s; target
 < 50 min. Six deliverables; ONE commit
 `feat(m4-p): P3b — the refresh gradient, certified instrument —
 <SLUG>`, never amended, never pushed; suite green first.
+
+### M4-P3b outcome (appended after execution; registration above unedited)
+
+**NON_PROJECTABLE — routing cell 2; modifiers: none.**
+NON_PROJECTABLE. Stopped at G3 (rule 25), after the registered once-only escalation. **0 measurement worlds.**
+Harness `scripts/run_suica_m4_p3b_refresh_gradient.py`; report
+`reports/SUICA_M4_P3B_REFRESH_GRADIENT_REPORT.md`; artifacts
+`results/m4_p3b_refresh_gradient/` (gitignored).
+
+**Two things happened, and they should be recorded separately.** First, **the
+instrument P3 said was needed now exists and is certified** — that is the leg's
+durable asset. Second, the registered estimand turns out to be unmeasurable on
+it at any feasible size, for a structural reason the projection makes exact.
+
+**The instrument.** `build_split_world(author_seed, frame_seed, phi_slow)`,
+extracted from `run_suica_m4_k2b_t4_branch.py:321-349` in
+**18 mapped entries with exactly 4 edits** (rng → rng_a /
+rng_f; world_seed → author_seed at the a_load site; world_seed → frame_seed at
+the common and shocks sites; the return dict gains `loadings`). Constants and
+helpers are IMPORTED from k2b, never copied. k2b and `suica_core/` untouched,
+diff-verified.
+
+| k2b lines | stream | note |
+|---|---|---|
+| 321 | SPLIT | the one edit that makes the instrument: one stream becomes two |
+| 322 | author | the shared basis; author-stream so an A/B pair shares it (RN-P3B-4) |
+| 323 | author | the b-draw |
+| 324 | author | unused in k2b and here; holds k2b's stream order (RN-P3B-3) |
+| 325-326 | frame | the state's initial condition |
+| 327 | derived | phi enters here exactly as in k2b |
+| 328-329 | frame | the AR recursion |
+| 330 | frame | pinned to the frame stream by the registration's taxonomy |
+| 331 | author | author draw through the shared basis |
+| 332 | frame | frame state through the SHARED basis |
+| 333-336 | frame | keyed call site #2: the frame channel proper |
+| 337 | frame | frame content through the SHARED basis |
+| 338-340 | author | keyed call site #3: the per-author interaction carrier |
+| 341 | author | per-author-persistent |
+| 342 | frame | keyed call site #4: per-occasion interaction shocks |
+| 343 | mixed | author carrier x frame shocks -- the interaction, correctly mixed |
+| 344 | mixed | through the SHARED basis |
+| 345-353 | return | the one ADDITION: k2b withholds loadings, which is what made P3's channel surgery undetectable; exposing it here is what makes C2c possible |
+
+**The one addition earns its place:** k2b does not return `loadings`, and that
+omission is precisely what made P3's channel-surgery route undetectable — a
+caller splicing two worlds could not see it had mixed two orthonormal bases.
+Exposing `loadings` is what makes C2c checkable at all.
+
+**The k2b comparison is a POSITIVE verification, not a caveat.** At equal seeds
+the author half reproduces k2b **bit-exactly** (True): identical
+on a_load, common, int, trait — `loadings` and `z` are the first draws of the author stream
+just as they are k2b's first draws, so `trait` matches, and `a_load`, `common`
+and `int` are keyed on a seed rather than on stream position. The ONLY
+divergence is noise, slow, slow_latent (True), the three objects the frame
+stream draws in sequence, which differ because that stream restarts at the
+seed's first draw. **The divergence is localised to the stream restart itself.**
+
+**Certification (all before any measurement world).** C2a = True across
+8 probe pairs: every author object bit-identical, every frame object
+differing.
+
+| object | stream | norm delta range across the probe pairs |
+|---|---|---|
+| common | frame | [15.521348769823044, 16.262406409804694] |
+| slow | frame | [250.9186220787883, 251.6310585032786] |
+| slow_latent | frame | [1229.0471669041528, 1232.475921191497] |
+| noise | frame | [250.76248392701416, 251.26126326265268] |
+| int | frame | [248.05669190330656, 251.93853774424574] |
+
+C2b = True (same triple rebuilt bit-identically); C2c = True
+(loadings bit-identical on every pair — no basis mixing); C3 = True
+(rule-29 predicate on BOTH scorings at both pilot φ).
+
+**Bands, computed df-inflated and written before any arm** (df 6,
+inflation 1.6498974741130894): σ_R_nat = 0.032930580570026624, σ_R_refresh =
+0.04663904004781301; V-P3b equivalence band **0.9161532348267848**, V-P3c floor
+0.006731765581587645. The band is already the warning: it spans nearly the whole
+interesting range of g_ratio, so at the registered size almost any ratio would
+have been indistinguishable from zero.
+
+**Why the projection fails — structural, and exact.** The estimand is a ratio
+whose DENOMINATOR is the natural gradient itself. M1c's realized natural range
+is 0.010391443071199338 and SE(range_nat) at 192 pairs is 0.0033609633054239685, so **the
+denominator sits at 3.091804975802469 SE.** Dividing by a quantity known to
+three standard errors gives a wide ratio however precisely the numerator is
+measured:
+
+| pairs/φ | truth g | projected g_ratio 95% CI | width | within 0.3 |
+|---|---|---|---|---|
+| 192 (registered) | 0.04 | [-1.0205225392166732, 1.3027058206019817] | 2.323228359818655 | False |
+| 192 (registered) | 0.5 | [-0.4999284805257762, 1.9306216588125371] | 2.4305501393383135 | False |
+| 384 (escalated) | 0.04 | [-0.6267371454071723, 0.7850089391170982] | 1.4117460845242706 | False |
+| 384 (escalated) | 0.5 | [-0.15255945826573986, 1.3445368651754255] | 1.4970963234411654 | False |
+
+The once-only escalation fired on the budget gate and did not rescue it
+(True). **12288 pairs/φ — 64.0× the registered design —
+would be required** at both truths. Per rule 25 and the routing, no measurement
+world is spent against a failed feasibility gate.
+
+**A named alternative, so the handback is actionable.** The DIFFERENCE
+(range_ref itself, or range_nat − range_ref) does not divide by a small noisy
+denominator: at 192 pairs/φ SE(range_ref) = 0.0047600770920988265,
+so a range_ref equal to the natural range would sit at
+2.1830409193262694
+SE, and at 384 at
+3.0872860753266402
+SE. **NAMED FOR THE PLANNER, NOT CHOSEN** — the executor does not substitute
+estimands.
+
+**Not reached.** C1′ (the M1c anchor as certificate) and the five measurement
+arms: the rule-25 gate fires before them. C1′ is therefore the right first test
+on any re-dispatch, and the instrument is ready for it. R_deframe's stride was
+measured and pinned at 1 in Part 0 (0.5978600978851318 s/pair
+plain, 0.9944519996643066 s/pair with de-framing, using K-R1's transcription of
+K1b's estimated repair), so the secondary reading would have run on every
+measurement world.
+
+**Rule events.** Rule 13: not reached. Rule 25: fired as designed — this is the
+gate that stopped the leg. Rule 26: no bounded winner. Rule 27: the g_ratio
+budget is what rule 25 projected against, unmet at both sizes. Rule 29: ran on
+BOTH scorings at both pilot φ. Rule 30: every cited constant read from its
+persisted source; the provenance table is generated from the extraction's own
+line map.
+
+**Executor self-report.** Three anomalies, all resolved before any
+hypothesis-relevant number existed. A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile). A-2 `timeout(1)` is
+absent on macOS (foreground stages under explicit sub-600 s timeouts). **A-3 a
+wrong claim in my own draft, caught before any gate consumed it:** the first
+version of this harness asserted the split builder would differ from k2b on
+EVERY object at equal seeds. It does not — the author half matches bit-exactly.
+The assertion was replaced with a generated per-object comparison, and the
+finding is strictly stronger than the claim it replaced. No number changed.
+
+**Registration-defect candidate (1), and it is the substantive one.** The
+registration inherited P3's estimand VERBATIM — including its rule-27 budget of
+0.30 on a RATIO whose denominator is M1c's natural range. That range
+(0.010391443071199338) and the per-world noise that determines SE(range_nat) were
+both already persisted and citable at registration time, so the projection's
+failure was **computable before the leg was dispatched**: the denominator's
+3.091804975802469-SE size fixes the ratio's width almost independently of the
+numerator. This is the #43/#44/#51/#53 genus once more — a gate-consumed
+quantity computable at registration and not computed — with the specific twist
+that inheriting an estimand verbatim also inherits its feasibility arithmetic,
+which changes when the instrument changes. Non-blocking: the leg's registered
+routing handled it correctly and the instrument survives.
