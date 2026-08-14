@@ -1206,3 +1206,126 @@ differences — <SLUG>`, never amended, never pushed; suite green
 first. 3456 worlds (+escalation ×1.5) + pilot; stages: part0 180 s,
 pilot 60 s, worlds 6 chunks (~350 s each), score+fit 240 s,
 finalize 60 s; target < 60 min, every stage < 600 s.
+
+### M4-P3c outcome (appended after execution; registration above unedited)
+
+**UNDERPOWERED — routing cell 8; modifiers: none.**
+UNDERPOWERED (levels and bands reported). Harness
+`scripts/run_suica_m4_p3c_transportable_gradient.py`; report
+`reports/SUICA_M4_P3C_TRANSPORTABLE_GRADIENT_REPORT.md`; artifacts
+`results/m4_p3c_transportable_gradient/` (gitignored). 3456 worlds
+(768 A/B pairs per endpoint + 192 at the shape reading).
+
+**V-A: D_grad = 0.00852887414363202 [0.005277986571389943, 0.011952276850539912] → POSITIVE.
+V-B: range_ref = 0.0011121987595310255 [-0.001020386706397168, 0.003228730521677211] → UNDERPOWERED.**
+Against range_nat = 0.009641072903163045 [0.00715774671522028, 0.01223467530439654].
+
+**The frame-owned component is real and large; the transportable component
+cannot be certified either way.** D_grad is 0.00852887414363202 — most of range_nat —
+with a CI comfortably clear of zero. range_ref is 0.0011121987595310255, straddling
+zero, and its CI is only *slightly* too wide to sit inside the
+±0.001993500543087015 equivalence band, so it classifies UNDERPOWERED rather than
+NULL. Cell 8 takes any UNDERPOWERED verdict, so the leg lands one notch short of
+GRADIENT_FULLY_FRAME — which would have required V-B certifiable as NULL.
+
+**The levels say more than the verdict does.** R_refresh is essentially zero at
+every φ against an R_nat of 0.121–0.131:
+
+| φ | role | n | R_nat mean | R_nat SEM | R_refresh mean | R_refresh SEM | R_deframe mean | within-pair corr |
+|---|---|---|---|---|---|---|---|---|
+| 0.05 | endpoint | 768 | 0.12141191457796047 | 0.0009692408241353337 | -0.0009178005907745429 | 0.0007756226258312586 | -0.0006611068355035473 | 0.007142710928294203 |
+| 0.6 | shape reading | 192 | 0.127054822864402 | 0.0019654438197426417 | -0.0014144445255356564 | 0.0015808013006755244 | 0.0006918693173260006 | -0.0027490284889659074 |
+| 0.98 | endpoint | 768 | 0.1310529874811235 | 0.0009013957608274527 | 0.00019439816875648275 | 0.0008406974743652825 | -0.0005750845212524437 | 0.0036923299323797887 |
+
+The gauge scored against a DIFFERENT frame's truth agrees with it barely at all.
+That is the substance; UNDERPOWERED reflects only that certifying
+"indistinguishable from zero" is a stronger demand than observing "near zero".
+
+**The instrument.** P3b's certified `build_split_world` IMPORTED by file from
+`scripts/run_suica_m4_p3b_refresh_gradient.py:279` (function sha256 `a7618a321752fc50…`, file sha256
+`b06c36bc3ff5a757…`) — one certified builder in the programme, nothing to drift.
+Its C2 battery was re-run on 4 FRESH probe pairs and passed
+(True): author objects bit-identical, every frame object differing
+(`common` by a norm delta in [15.456355013034589, 15.926464179341583]),
+determinism, shared basis. k2b and `suica_core/` untouched.
+
+**The side-signing REVERSES from P3b, deliberately (RN-P3C-2).** P3b reported
+range_nat = R(.05) − R(.98) = −0.0104; this registration defines
+range = value(.98) − value(.05), so range_nat is **+0.010391443071199338** and
+matches the registration's own truths. Stated because a silent sign flip
+between sibling legs is exactly what survives review and then poisons a
+comparison.
+
+**C1′ anchor: PASS 3/3** (largest |pooled z| =
+0.4769833641131134):
+
+| φ | P3c R_nat | M1c mean | difference | tolerance | inside | pooled z |
+|---|---|---|---|---|---|---|
+| 0.05 | 0.12141191457796047 | 0.12162744485545209 | -0.00021553027749161846 | 0.005028599997733033 | True | -0.10643918235484917 |
+| 0.6 | 0.127054822864402 | 0.12714790436588774 | -9.308150148573668e-05 | 0.004823490742495307 | True | -0.035770884964947285 |
+| 0.98 | 0.1310529874811235 | 0.13201888792665142 | -0.0009659004455279119 | 0.005128889338998506 | True | -0.4769833641131134 |
+
+The extracted two-stream instrument reproduces M1c's measured levels, so any
+downstream miss would have been a finding rather than a plumbing artefact.
+range_nat also co-measures M1c's range to -0.0007503701680362934.
+
+**The joint bootstrap is what made this leg feasible where P3b's ratio was
+not.** R_nat and R_refresh come from the SAME A-world (one gauge pass, two truth
+panels), so the bootstrap resamples pair indices once per replicate and
+recomputes both ranges from them. Realized bootstrap correlation between
+range_nat and range_ref: 0.017673408969719043; realized SE(D_grad) 0.0017252853220331757
+against 0.0017405070975400247 under independence.
+
+**Projection (G3p3c) PASSED at the registered 768 pairs/φ, no escalation
+(False):**
+
+| truth | detected | power at 2 SE | null quantity | false fire | PASS |
+|---|---|---|---|---|---|
+| FULLY_FRAME | D_grad | 1.0 | range_ref | 0.05 | True |
+| TRANSPORTS | range_ref | 1.0 | D_grad | 0.0445 | True |
+
+**The pilot's luck, audited (RN-P3C-9, added before any verdict was read).** The
+pilot is 4 pairs per endpoint, and an n = 4 correlation carries a standard error
+of roughly 0.5. It shows: the pilot's ρ = 0.761471882823515
+against a realized 0.0054175204303369955 — a miss of 0.756054362393178 — and a
+pilot sd_R_refresh of 0.019532236530097353 against a
+realized 0.022396388278681817. The projection used the
+optimistic ρ and so understated SE(D_grad); it did not matter, because D_grad
+sits far from its band either way. **Both verdicts are unchanged under bands
+recomputed from the realized arms (True):** ε_D 0.0030995661223025234 →
+0.0034505706440663515, ε_r 0.001993500543087015 → 0.002287673666505379, V-A POSITIVE and
+V-B UNDERPOWERED under both. The Part-0 bands route, as registered; the realized
+ones are reported so the luck is visible and auditable.
+
+**The fraction, quoted and labelled.** range_ref/range_nat = 0.115360476028154
+[-0.10768346212929444, 0.3468040491435675], width 0.4544875112728619 — **UNBUDGETED**, gating nothing and
+routing nothing. It is shown because a reader will compute it anyway, and
+showing its width is the P3b lesson made visible.
+
+**Rule events.** Rule 13: 0 boundary events, B = 2000. Rule 25:
+the gate passed at the registered size; its correlation input was badly
+estimated by the 4-pair pilot, which is a power calculation and not a verdict.
+Rule 26: no bounded winner. Rule 27: the only budgeted quantities are the
+verdict CIs against their Part-0 bands; the fraction carries its UNBUDGETED
+label. Rule 29: the domain-pinned predicate ran on BOTH scorings at every arm.
+Rule 30: every cited constant read from its persisted source; the instrument
+carries file, line and two sha256s.
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile); A-2 `timeout(1)` is
+absent on macOS (foreground stages under explicit sub-600 s timeouts).
+
+**Registration-defect candidate (1).** The registration specifies a 4-pair
+pilot and then feeds the pilot's realized noise — **including a correlation** —
+into both the equivalence bands and the projection. A correlation estimated
+from n = 4 has a standard error near 0.5, and here it missed by
+0.756054362393178; the same pilot's sd_R_refresh understated the realized value
+by roughly a factor of two even after the registered χ²(0.10) inflation, which
+is why V-B lands UNDERPOWERED rather than NULL by a small margin. The df
+inflation guards a variance, not a correlation, and nothing in the registration
+guards the correlation at all. Non-blocking here — the verdicts are robust to
+the band source and the leg reports both — but the convention worth adding is
+that a pilot-estimated CORRELATION entering a projection needs either its own
+inflation or a minimum n. This is the estimator-noise-floor family (rule 32)
+applied to a second moment rather than a first.
