@@ -464,3 +464,111 @@ reading. **What it does NOT license:** the experiment does not separate A-quad
 from A-sat, CC.1's vertex V\* = 0.6143589975880801 remains unreachable
 arithmetic on-support, the LO-pair residual is unexplained, and the grade is
 EXPLORATORY on a synthetic label-free instrument.
+
+### Planner adjudication of N1b (2026-08-14, appended after the run) — THE CURVE TRANSPORTS; THE CONSTANT TAX IS DEAD IN BOTH SPACES
+
+**CURVE_TRANSPORTS_TO_RESPONSE accepted — 3/3 sealed predictions
+inside on 3072 fresh worlds, zero pre-stamp generations, no
+modifiers.** The high-V̄ pair is a bullseye: κ̂_HI =
+0.6670454850877494 against the sealed 0.6671284384567739 — error
+−8.295336902452988e-05, position +0.018 of half-width. The decline
+replicated in response space with its CI excluding zero (Δκ̂ =
+0.2510192261134664 [0.17991654115972247, 0.32623248423763684]) —
+**the constant-tax alternative is now dead by sealed measurement in
+BOTH spaces** (level: M3's 2.56× LOO; response: this). Per CC.3's
+promise, the sealed difference-fit 0.722 acquires its final reading:
+a SECANT of the curve near V̄ ≈ 0.15 (stated approximate, two
+digits, planner division — rule 30). **Grade: the tax curve is
+promoted to PREDICTIVE (response-transport) within V ∈ [0.03,
+0.21]** — sealed-then-hit at fresh configurations in a different
+measurement space than its fit.
+
+**The structured residual, typed honestly.** The miss pattern is not
+spread: S2 near-exact, S1 and S3 high by the same ≈ +0.040 (S3 =
+S1 − S2 forces this). The entire discrepancy sits at the LOW-V̄
+pair: +0.03994777373059455 = +1.31 SE_κ — NOISE-COMPATIBLE,
+adjudicating nothing. Its DIRECTION (response tax steeper than the
+level curve at low V) is recorded as the pre-registered lean for
+any future form-separation or micro-discrepancy leg, and as N4's
+hypothesis H-c below.
+
+**Method notes.** (i) The executor found and fixed, BEFORE the
+stamp, an inherited bug in its own N1 code that hard-coded the
+A-sat agreement check to True — FORM_SPLIT could never have fired;
+RN-N1B-10 made it real, and this leg's "no FORM_SPLIT" is a
+measurement, not a tautology. The mirror of #50: the audit
+machinery corrects both sides of the division of labor. No defect
+number (pre-consequence, self-caught, disclosed). (ii) The A-sat
+co-predictions sit inside A-quad's bands at all three sealed
+quantities — the two curved forms are empirical twins on this
+experiment, consistent with their M3 tie; the extrapolant question
+(N3) stays named, with its separation arithmetic to be EXECUTED at
+line synthesis (rule 30). (iii) Rule 30's delegation pattern
+(persisted-artifact references instead of quoted digits) worked as
+designed: zero constants left to diverge.
+
+---
+
+## M4-N4 — the target-2 forensic (artifact-space)
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. NO new worlds, no seal. The M3
+closure's one miss: the 9-pair refit published
+0.7145934082034173 where the law retrodicts 0.7490808 through the
+same pipeline — 0.0345 against a 0.03 point-tolerance. Question:
+**where does the 0.0345 live?**
+
+### Protocol
+
+1. **G0n4 (bit-exact).** (i) Verify the published target at the
+   persisted source M3's G0m3(iv) pinned (and restate that source
+   path in the report); (ii) verify M3's predicted 0.7490808 and its
+   pipeline-run record from `results/m4_m3_tax_curve/`; (iii)
+   re-derive the 9 pairs' identities, design covariates and per-pair
+   published κ̂ contributions from their original persisted
+   artifacts, round-trip. Mismatch → STOP.
+2. **The decomposition (executed arithmetic only, rule 30).**
+   Per-pair: published contribution vs law-predicted contribution
+   (noiseless winner-law fields through the pipeline), with the
+   aggregation step reproduced exactly. Attribute the total gap
+   across three pre-declared, non-exclusive components:
+   - **H-a WEIGHTING:** the pipeline's aggregation (per-pair
+     weighting/averaging) interacts with curve secants at unequal
+     V̄ — quantified by recomputing with the law's per-pair secants
+     under the pipeline's own weights vs uniform;
+   - **H-b SPECIES:** pairs carrying the `int:` interaction species
+     (K2d-dispatcher rows) contribute disproportionately —
+     quantified by leave-species-out re-aggregation;
+   - **H-c MICRO-DISCREPANCY:** a genuine level-vs-response
+     difference concentrated at low-V̄ pairs (N1b's LO direction) —
+     quantified as the residual after H-a and H-b, split by pair V̄.
+3. **Verdict.** ATTRIBUTED iff ≥ 80% of the 0.0345 gap is carried by
+   named components with executed arithmetic; the dominant component
+   names the outcome. Else UNATTRIBUTED (honest).
+
+### Leans (sides declared)
+
+**L-1n4 [.60]:** ATTRIBUTED. **L-2n4 [conditional; .45/.30/.25]:**
+dominant = H-a / H-b / H-c. If H-c dominates, the N1b LO whisper
+hardens one notch (theory note required, still adjudicating no new
+law).
+
+### Routing (rule 16 — disjoint and covering)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0n4 mismatch | **STOP** (citation defect) |
+| 2 | ATTRIBUTED, dominant H-a | **ATTRIBUTED_WEIGHTING** — the closure's miss is an aggregation artifact; the closure upgrades to explained-6/6 by dated note |
+| 3 | ATTRIBUTED, dominant H-b | **ATTRIBUTED_SPECIES** — the species question re-enters (K2d lineage); named for any successor |
+| 4 | ATTRIBUTED, dominant H-c | **ATTRIBUTED_DISCREPANCY** — the LO whisper hardens; theory note; a micro-discrepancy leg becomes registrable |
+| 5 | < 80% attributed | **UNATTRIBUTED** — the miss stands as measured; no upgrade |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_n4_target2_forensic.py`;
+`results/m4_n4_target2_forensic/` (gitignored);
+`reports/SUICA_M4_N4_TARGET2_FORENSIC_REPORT.md` (generated tables);
+outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-n): N4 — the target-2 forensic — <SLUG>`, never
+amended, never pushed; suite green first. Artifact-space; target
+< 15 min, stages < 600 s.

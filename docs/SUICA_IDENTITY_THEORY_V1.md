@@ -1676,3 +1676,42 @@ bit-exactly (0.8781169374706213 / 0.6671284384567739 /
 0.21098849901384734). N2's frame-floor question inherits the
 corrected c′. The episode itself is the appendix's best footnote:
 a program whose gates catch its planner inventing digits is working.
+
+## Appendix DD — dated append (2026-08-14, post-N1b): the tax curve transports; the constant tax is dead in both spaces
+
+**DD.1 — The transport.** The curve fitted at LEVEL (M3) predicted
+RESPONSE-grade measurements it never consumed: two fresh
+matched-attenuation pairs read κ̂ = 0.9180647112012158 /
+0.6670454850877494 against sealed 0.8781169374706213 /
+0.6671284384567739 — the high-V̄ pair exact to 8.3e-5 — and the
+decline Δκ̂ = 0.2510192261134664 with CI excluding zero, inside its
+sealed band. 3/3, hash before any world, zero pre-stamp
+generations. **The tax curve is PREDICTIVE (response-transport)
+within V ∈ [0.03, 0.21].** The sealed 0.722 difference-fit's final
+reading: a secant of this curve near V̄ ≈ 0.15 (approximate, two
+digits). The constant tax is dead by sealed measurement at level
+(M3) and response (N1b).
+
+**DD.2 — The mechanism's status.** Square-agreement (CC.1′) is a
+CANDIDATE with one sealed transport hit. It dies next by: a
+transport miss at fresh V̄; the low-V residual direction hardening
+into a measured micro-discrepancy (N4's H-c); or a frame-floor
+anchor for c′ that mismatches (N2 — registrable only after a
+planner derivation establishes what c′ SHOULD equal in-support; if
+no in-support anchor exists, N2 dissolves and says so).
+
+**DD.3 — What this experiment cannot tell.** A-quad and A-sat are
+empirical twins here (A-sat's co-predictions sat inside A-quad's
+bands at all three quantities, agreeing with their M3 tie); the
+extrapolant question is open and its feasible-separation arithmetic
+will be EXECUTED at N-line synthesis (rule 30) rather than asserted.
+The single structured residual — the low-V̄ pair reading +1.31 SE_κ
+steeper than the curve — is noise-compatible and recorded as a
+direction, not a finding.
+
+**DD.4 — Scorekeeping.** The tax now holds: five within-
+representation identifications (secants), a quadratic level law
+(M3, consumable), a 5/6 closure through alien pipelines (M3), and a
+sealed response transport (N1b). What remains against it: one
+closure miss under forensic (N4), one noise-compatible residual,
+and every question outside V ∈ [0.03, 0.21].
