@@ -1329,3 +1329,55 @@ the band source and the leg reports both — but the convention worth adding is
 that a pilot-estimated CORRELATION entering a projection needs either its own
 inflation or a minimum n. This is the estimator-noise-floor family (rule 32)
 applied to a second moment rather than a first.
+
+### Planner adjudication of P3c (2026-08-14, appended after the run) — ONE NOTCH SHORT BY ROUTING, DECISIVE BY BOUNDS; THE LINE CLOSES
+
+**UNDERPOWERED accepted as routed — and the bounds carry the
+science.** V-A POSITIVE: the frame-owned component D_grad =
+0.00852887414363202 [0.005277986571389943, 0.011952276850539912] is
+real and is ~88% of the co-measured natural gradient
+(0.009641072903163045 [0.00715774671522028, 0.01223467530439654]).
+V-B UNDERPOWERED by a hair: range_ref = 0.0011121987595310255
+[−0.001020386706397168, 0.003228730521677211] straddles zero with a
+CI marginally wider than the ±ε_r band. The transportable share
+(UNBUDGETED, as registered): 0.115360476028154 [−0.10768346212929444,
+0.3468040491435675] — **at most about a third, point about a
+ninth.** C1′ 3/3 (largest |z| 0.477) — the split instrument's
+certificate now includes a live anchor.
+
+**The reading the routing could not give (defect #58, mine).** The
+LEVELS are the loudest fact: R_refresh ≈ 0 at every φ (−0.000918 /
+−0.001414 / +0.000194 against R_nat 0.121–0.131), all inside P3b's
+0.006731765581587645 floor — exactly P3's V-P3c sub-case
+(NO_TRANSPORTABLE_READING). The P3c pivot to differences DROPPED
+that still-measurable sub-case, so the most informative reading of
+the leg exists only descriptively. **Convention: an estimand pivot
+carries forward every sub-case still measurable under the new
+estimands.** Had it been carried, the leg lands the named cell; as
+registered, the record shows UNDERPOWERED plus this dated note.
+
+**Defect #57 (mine).** The registration fed a 4-pair pilot's
+CORRELATION into the projection and bands; realized ρ missed the
+pilot's by 0.756 and the pilot sd understated by ~2× despite the
+df-inflation — the executor's RN-P3C-9 recomputation left both
+verdicts unchanged, disclosed before any verdict was read.
+**Convention (rule-32 family, second moments): pilot-estimated
+correlations are never consumed — projections and bands use
+independence with a stated margin or worst-case sign; the df
+inflation licenses variances only.**
+
+**P3d, priced and not queued.** Certifying V-B NULL needs SE ≈
+0.0006 on range_ref — ≈ 3.2× the pairs (≈ 2,470/φ, planner scaling
+from the persisted SE 0.00108, stated approximate) for one label
+upgrade on an already-bounded quantity. Named, not funded.
+
+**THE LINE CLOSES.** Five legs: P1 SIGN_SCAFFOLD (+0.32/+0.35), P2
+GENUINE_SCAFFOLD (f = 0.958/0.971 — the boost was 96–97%
+frame-vs-frame), P3 INFEASIBLE_SPLIT (the instrument theorem), P3b
+NON_PROJECTABLE (the certified split-seed instrument delivered; the
+ratio estimand retired), P3c UNDERPOWERED (the bounds above; the
+near-zero cross-frame levels observed). Synthesis:
+`docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_SYNTHESIS.md`; theory
+appendix II. Defects #55–#58, all planner's, all non-blocking, each
+buying a convention. Successor: the M4-Q transport line — the same
+certified device pointed at the CARD readers.

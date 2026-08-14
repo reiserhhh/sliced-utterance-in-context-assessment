@@ -1859,3 +1859,36 @@ row as its certificate. If its measurement lands MOSTLY_FRAME, the
 M-line's sealed r-channel is dominated by frame-agreement and the
 mechanism section re-types — the law itself, being a law of
 predictions, stands either way.
+
+## Appendix II — dated append (2026-08-14, post-P3c): the gauge is a frame-agreement instrument; the P-line closes
+
+**II.1 — The three measurements that close the mechanism.** Injected
+frame moves the b-only statistic 96–97% through frame-vs-frame
+agreement (P2). The natural φ-gradient decomposes as D_grad = 0.0085
+[0.0053, 0.0120] frame-owned against range_nat = 0.0096 [0.0072,
+0.0122] — ~88%, with the transportable remainder 0.0011 [−0.0010,
+0.0032] (share 0.115 [−0.108, 0.347], unbudgeted). And the
+cross-frame LEVELS are near zero everywhere (R_refresh within
+±0.0014 of 0 against R_nat ≈ 0.121–0.131) — the sub-case the
+routing missed and the dated note carries (#58).
+
+**II.2 — The instrument statement.** At this family's regimes, the
+deployed relation-field gauge reads FRAME-AGREEMENT: its level, its
+φ-gradient, and its response to frame injection are all
+predominantly frame-borne; genuine cross-frame person transport is
+bounded at ≤ about a third (CI) with a point near a ninth. The
+M-line and N-line laws are untouched AS LAWS OF THE STATISTIC —
+sealed predictions hit regardless of what the statistic reads. What
+re-types is the mechanism: the readability penalty (Z.1), the
+scaffold gradient (FF.3), and the level law's r-channel are
+frame-agreement phenomena. The instrument-role typing of appendix N
+(cards ≈ 4.5× the gauge at trait reading) now awaits its mechanism
+half: DO CARD READINGS TRANSPORT ACROSS FRAMES? — the M4-Q line's
+question, asked with the same certified device.
+
+**II.3 — Method residue.** Four conventions bought by #55–#58
+(NULL-first classifications; inheritance is not exemption; pilot
+correlations never consumed; pivots carry sub-cases). The split-seed
+instrument (P3b) is a standing asset: generator-side refreshment
+now exists, certified, with a live anchor — T9's second layer is
+real. P3d (a 3.2× top-up for one label) is priced and parked.

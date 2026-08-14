@@ -200,3 +200,26 @@ The N-line (4 legs, `76060e7`..close; synthesis
   executed arithmetic — twins to z < 0.1 across the fitted window).
 - Standing rules now 1–32; defect registry #1–#54. Successor:
   the M4-P penalty-mechanism line.
+
+## Dated addendum (2026-08-14, second) — the M4-P penalty-mechanism line
+
+The P-line (5 legs, `7589299`..close; synthesis
+`docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_SYNTHESIS.md`) adds the
+mechanism layer the M/N laws lacked:
+
+- **The gauge is a frame-agreement instrument** (appendix II):
+  injected frame moves the b-only statistic 96–97% through
+  frame-vs-frame agreement (f = 0.958/0.971); the natural
+  φ-gradient is ~88% frame-owned; cross-frame levels are near zero.
+  Genuine cross-frame person transport ≤ ~1/3 (CI), point ~1/9.
+  The M/N laws stand as laws of the statistic; their mechanism
+  sections re-type.
+- **T9's two refreshment layers** (appendix HH): reader-side
+  (existed, T6″) vs generator-side (impossible on the published
+  interface — instrument theorem; now EXISTS as the certified
+  split-seed extraction, a standing asset with a live anchor).
+- Standing rules 1–32; defects #1–#58 (#55–#58 bought conventions:
+  NULL-first classifications, inheritance-is-not-exemption, pilot
+  second moments, sub-case carry-forward).
+- Successor: the M4-Q transport line (cards under refreshment —
+  the instrument-role taxonomy's mechanism half).

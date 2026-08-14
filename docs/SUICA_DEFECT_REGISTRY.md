@@ -255,3 +255,10 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #56 | P-line / M4-P3b | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P3b outcome + planner adjudication` | P3's estimand was inherited VERBATIM into P3b including its rule-27 budget on a ratio whose infeasibility was computable from persisted artifacts before dispatch (the denominator — the natural range — sits at 3.09 SE; projected ratio widths 2.32/1.41 vs a 0.30 budget; 64× the design required). Fifth of the #43/#44/#51/#53 genus. | none (convention sharpened: INHERITANCE IS NOT EXEMPTION — a verbatim-inherited estimand's feasibility arithmetic is re-run under the new leg's conditions before the registration commits) | feasibility-inheritance |
+
+## Dated additions (2026-08-14, eleventh note — P3c; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #57 | P-line / M4-P3c | `docs/SUICA_M4_P_PENALTY_MECHANISM_LINE_PLAN.md — P3c outcome + planner adjudication` | The registration consumed a 4-pair pilot's CORRELATION in the projection and bands (realized ρ missed by 0.756; pilot sd understated ~2× despite df-inflation); executor RN-P3C-9 recomputed both bands pre-verdict, verdicts unchanged. | none (convention: pilot-estimated correlations are never consumed; projections/bands use independence with a stated margin or worst-case sign; df-inflation licenses variances only) | pilot-second-moments |
+| #58 | P-line / M4-P3c | same | The pivot to difference estimands dropped P3's still-measurable levels sub-case (NO_TRANSPORTABLE_READING), which the data then satisfied (R_refresh inside the floor at every φ) — the most informative reading exists only descriptively. | none (convention: an estimand pivot carries forward every sub-case still measurable under the new estimands) | sub-case-carryforward |
