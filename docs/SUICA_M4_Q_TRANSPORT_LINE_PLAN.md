@@ -413,3 +413,103 @@ outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
 commit `feat(m4-q): Q1b — the cross-frame card cosine — <SLUG>`,
 never amended, never pushed; suite green first. 1536 worlds
 (+escalation ×2) + pilot; every stage < 600 s.
+
+### M4-Q1b outcome (appended after execution; registration above unedited)
+
+**CARD_CARRIES_IDENTITY_BEYOND_TRAIT — routing cell 4; modifiers: none.**
+CARD_CARRIES_IDENTITY_BEYOND_TRAIT -- the card transports author-stream content the trait does not span. Harness `scripts/run_suica_m4_q1b_card_cosine.py`; report
+`reports/SUICA_M4_Q1B_CARD_COSINE_REPORT.md`; artifacts
+`results/m4_q1b_card_cosine/` (gitignored). 1536 worlds
+(384 A/B pairs per φ).
+
+Pooled Δ = **0.012246206730484502** [0.012053582696489028, 0.012435850463701492] → POSITIVE
+(ε_pooled 0.0003503781564720198); per φ POSITIVE at both, ε_per-φ 0.00039640763267361027.
+
+**⚠ THE SLUG'S STATED CONSEQUENCE IS CONTRADICTED BY THIS LEG'S OWN
+ARITHMETIC — read this before quoting the verdict.** Cell 4 says the card
+"transports author-stream content the trait does not span". It does not. The
+registered Δ scores each card's fidelity against the UNCENTRED trait, but the
+card contains the CENTRED trait (`full = w_mu·trait_c + …`, k2b:423). Against
+the reference the cards actually share, the per-author exact identity gives
+Δ = **-0.0001656789003926287** [-0.0003650943244942132, 3.669093307965161e-05] at φ = 0.05 and
+**7.851116734077825e-05** [-0.0002247934983222993, 0.0003875548092894414] at φ = 0.98 — both straddling
+zero (UNDERPOWERED / UNDERPOWERED), i.e. **CARD_PURE_TRAIT, the
+opposite cell**. Found on probe pairs and pinned as RN-Q1B-6 **before any
+measurement arm ran**.
+
+| φ | cos_AB | r̂·r̂ (uncentred) | r̂·r̂ (centred) | Δ registered | CI | class | Δ per-author CENTRED | CI | class |
+|---|---|---|---|---|---|---|---|---|---|
+| 0.05 | 0.632268201660647 | 0.6161926500195318 | 0.6295406400652552 | 0.016075551641115206 | [0.0158578307774135, 0.01630324747462172] | POSITIVE | -0.0001656789003926287 | [-0.0003650943244942132, 3.669093307965161e-05] | UNDERPOWERED |
+| 0.98 | 0.46555383131801814 | 0.45713696949816435 | 0.4670472420771346 | 0.008416861819853795 | [0.008103920437714027, 0.008729420310343553] | POSITIVE | 7.851116734077825e-05 | [-0.0002247934983222993, 0.0003875548092894414] | UNDERPOWERED |
+
+**Why the excess appears.** The only content A and B share is `w_mu·trait_c`
+(`slow`, `noise`, `int` are frame-stream and independent — C2a). So the identity
+that holds is cos(A,B) = cos(A, trait_c)·cos(B, trait_c), with the CENTRED
+reference. Scoring against `trait` (uncentred, k2b:443/446) understates each
+card's alignment with what it actually shares, so r̂·r̂ understates cos_AB and Δ
+comes out positive **with no content beyond the trait involved**. The
+registration's asserted entailment — "Δ POSITIVE is entailed to be author-stream
+content beyond the trait — no other shared channel exists" — is false: no other
+channel is needed.
+
+**The estimator-family ambiguity turned out immaterial; the reference-object one
+did not.** RN-Q1B-1 pinned the family question before any number: cos_AB is a
+mean of per-author cosines while `pooled_card_stats` emits both `r_card_b_raw`
+(ratio of sums, Q1's "reading B") and `r_card_b_cos` (mean of cosines). All
+three UNCENTRED readings agree in classification (True) —
+Δ 0.016075551641115206/0.008416861819853795, Δ_cos 0.01614789263012024/0.012168845775779426,
+Δ_author 0.012972844117430165/0.009741441150286911, all POSITIVE. The centred
+readings do NOT agree with the registered one (False).
+
+**Gates.** G0q1b PASS — Q1's record and both 0.827 objects, the instrument
+hashes against Q1's persisted values, and the disattenuation lineage
+3/3 located and quoted by code. C2 PASS on
+4 fresh probe pairs. **G1q1b PASS on all three clauses**: card_A ≠
+card_B for every author of every probe pair (True, smallest
+per-author norm delta 0.3250575821476801); the same-frame-seed control
+returns cos_AB = 1.0 and Δ = 0.39327233738428 against the
+constructed expectation 0.39327233738428 (operator sanity only, excluded from
+every band, projection and verdict); and **the 64-dim vectors this leg forms
+contract EXACTLY to the columns k2b's own `card_channel_frame` emits**, so the
+cosines are built from k2b's cards rather than a lookalike. G2q1b PASS. G3q1b
+PASS: false-fire 0.043 at Δ = 0 (bar 0.1) and power 1.0 at
+Δ = 0.05 (bar 0.8); escalation did not fire (False).
+
+**#57 compliance.** No pilot correlation is consumed anywhere. Δ is computed
+FULLY PAIRED per world-pair, so its per-φ SE needs no covariance at all; the
+1.25 independence margin is applied only to the pooled SE, where pooling across
+φ would otherwise require one, and is stated there (RN-Q1B-4). Bands were
+computed per reading, so each Δ is judged against its own noise.
+
+**Identity share (UNBUDGETED, descriptive).** 0.025416789784261696
+[0.025077600856962534, 0.025769072556218135] at φ = 0.05 and 0.01804087613811507 [0.017379655935083557, 0.018705196875479547]
+at φ = 0.98 — quoted under the registered reference, and therefore inheriting
+its confound. Gates nothing, routes nothing.
+
+**Rule events.** Rule 13: 0 boundary events, B = 2000. Rule 25:
+the gate passed at the registered size. Rule 26: no bounded winner. Rule 27: the
+identity share carries its UNBUDGETED label. Rule 29: the predicate ran on
+cos_AB and Δ at both pilot φ. Rule 30: every cited constant read from its
+persisted source; the card path carries file, line and sha256 and was proven
+bit-exact in Q1.
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile); A-2 `timeout(1)` is
+absent on macOS (foreground stages under explicit sub-600 s timeouts).
+
+**Registration-defect candidate (1, and it is the leg).** The registration's
+verified consequence-entailment fails because the estimand's REFERENCE OBJECT is
+not the object the contrast shares. `trait` (uncentred) is what r̂ scores
+against; `trait_c` (centred) is what the card contains and what A and B share.
+Both facts are in k2b's source (the card at :423, the truth at :443/446) and
+were computable at registration time, so this is the #43/#44/#51/#53/#56/#59
+genus again — now at the level of an estimand's **reference object**. The
+#59 convention requires the defining contrast to provably DIFFER under the swap;
+what this leg shows is that it must also be scored against the object the
+contrast actually shares. Suggested extension: **a disattenuation-style identity
+must be stated against the component the two measurements share, and the
+registration must name that component explicitly.** Non-blocking in the sense
+that the computation is valid and the routing well-defined — but material, since
+the routed cell's consequence is contradicted; the executor routed as registered
+and flagged rather than substituting an estimand.
