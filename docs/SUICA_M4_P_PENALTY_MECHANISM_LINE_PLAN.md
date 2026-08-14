@@ -436,3 +436,123 @@ ONE commit `feat(m4-p): P2 — the dose–decomposition — <SLUG>`,
 never amended, never pushed; suite green first. 1920 worlds (×2
 variants where dosed) + 32 pilot; target < 45 min wall, every
 stage < 600 s.
+
+### M4-P2 outcome (appended after execution; registration above unedited)
+
+**GENUINE_SCAFFOLD — routing cell 3; modifiers: none.** Both
+cells POSITIVE on the R_cf slope (B1=POSITIVE, B2=POSITIVE; agreement True).
+1920 fresh worlds (192/arm × 10 arms), each built
+in two variants. Harness `scripts/run_suica_m4_p2_dose_decomposition.py`;
+report `reports/SUICA_M4_P2_DOSE_DECOMPOSITION_REPORT.md`; artifacts
+`results/m4_p2_dose_decomposition/` (gitignored).
+
+**The routing says the scaffold is genuine. The magnitude says it is almost all
+frame.** f = **0.9584700070215529** [0.9386859990245562, 0.9784391977625343] at B1 and **0.971270002747466**
+[0.9535253481648153, 0.9882217251532477] at B2 — CI widths 0.03975319873797811 and 0.03469637698843242, far inside
+the 0.3 rule-27 budget, so f is QUANTIFIED and no UNQUANTIFIED
+modifier applies. **95.8% and 97.1% of P1's boost is
+frame-vs-frame agreement**; only 4.2% / 2.9% is
+genuine person-reading. L-2p2 (f > 0.5) resolves YES decisively; L-1p2
+(genuine-survives) resolves YES but narrowly.
+
+| cell | φ | s | n | R_nat mean | R_nat SEM | R_cf mean | R_cf SEM | var ratio (max) |
+|---|---|---|---|---|---|---|---|---|
+| B1 | 0.05 | 0.0 | 192 | 0.1235343574492067 | 0.0017830787914910914 | 0.1235343574492067 | 0.0017830787914910914 | 0.14084544987425832 |
+| B1 | 0.05 | 0.25 | 192 | 0.13229270870621257 | 0.0019986603033000884 | 0.11948277133284631 | 0.0019780529555968418 | 0.15183012179894473 |
+| B1 | 0.05 | 0.5 | 192 | 0.17943166001336808 | 0.002061808096229932 | 0.12571327258079104 | 0.0018291084505268455 | 0.19030082365256712 |
+| B1 | 0.05 | 0.75 | 192 | 0.27503495194865474 | 0.003065331907046549 | 0.13202722932071947 | 0.0021537585109931215 | 0.2500386168970141 |
+| B1 | 0.05 | 1.0 | 192 | 0.4351349145429551 | 0.004542105569862805 | 0.13647512639739026 | 0.002699456881334954 | 0.335303817037589 |
+| B2 | 0.6 | 0.0 | 192 | 0.127872827136617 | 0.0018585633345693322 | 0.127872827136617 | 0.0018585633345693322 | 0.14083397198919556 |
+| B2 | 0.6 | 0.25 | 192 | 0.14541045794189092 | 0.0020401799836485737 | 0.13056657450706122 | 0.001963009775790961 | 0.15296490962037035 |
+| B2 | 0.6 | 0.5 | 192 | 0.1925347409657412 | 0.0023120481778482072 | 0.1314681944399098 | 0.002038903387649453 | 0.19263856149213643 |
+| B2 | 0.6 | 0.75 | 192 | 0.29050291216454177 | 0.0029302846520945103 | 0.1381829995603561 | 0.0021377005486191924 | 0.2582398056127467 |
+| B2 | 0.6 | 1.0 | 192 | 0.4699706496085552 | 0.004041069917533832 | 0.13770129663633365 | 0.0025541772719360075 | 0.35097712055652686 |
+
+| cell | s | R_nat | R_cf | G(s) | F(s) |
+|---|---|---|---|---|---|
+| B1 | 0.0 | 0.1235343574492067 | 0.1235343574492067 | 0.0 | 0.0 |
+| B1 | 0.25 | 0.13229270870621257 | 0.11948277133284631 | -0.0040515861163603895 | 0.012809937373366262 |
+| B1 | 0.5 | 0.17943166001336808 | 0.12571327258079104 | 0.002178915131584344 | 0.053718387432577036 |
+| B1 | 0.75 | 0.27503495194865474 | 0.13202722932071947 | 0.008492871871512778 | 0.14300772262793526 |
+| B1 | 1.0 | 0.4351349145429551 | 0.13647512639739026 | 0.012940768948183565 | 0.2986597881455648 |
+| B2 | 0.0 | 0.127872827136617 | 0.127872827136617 | 0.0 | 0.0 |
+| B2 | 0.25 | 0.14541045794189092 | 0.13056657450706122 | 0.002693747370444227 | 0.014843883434829702 |
+| B2 | 0.5 | 0.1925347409657412 | 0.1314681944399098 | 0.0035953673032928235 | 0.06106654652583138 |
+| B2 | 0.75 | 0.29050291216454177 | 0.1381829995603561 | 0.010310172423739106 | 0.15231991260418568 |
+| B2 | 1.0 | 0.4699706496085552 | 0.13770129663633365 | 0.009828469499716663 | 0.33226935297222154 |
+
+**The verdict quantity.** b_cf = 0.015370398353696113 [0.009829531824123106, 0.02099405067675933] at B1 and
+0.010909345621091282 [0.00559827343632706, 0.016261954399254843] at B2, against b_nat = 0.3063773429719756
+[0.29798309345778956, 0.3145094094028631] and 0.3317152396666109 [0.32408785857830824, 0.3389402818801945]. b_nat reproduces P1
+on a fresh salt (P1: 0.3217400470171695 / 0.34654236945734695), so the object being
+decomposed is the object P1 measured. G(1) = 0.012940768948183565 [0.006585015895802276, 0.01931243058373269] and
+0.009828469499716663 [0.004013107408011507, 0.0160057999823994]; F(1) = 0.2986597881455648 [0.29076271113972507, 0.30688958479858763] and
+0.33226935297222154 [0.32362912650735165, 0.3406333136533709]; denominators 0.3116005570937484 and
+0.3420978224719382.
+
+**Honest magnitude caveat, stated plainly.** b_cf is POSITIVE by the registered
+NULL-first classification — the CI excludes zero and is not wholly inside
+±0.01 — but at B1 the CI STRADDLES the equivalence margin and at B2 it
+sits mostly inside it. The genuine scaffold is real and signed; its size is at
+the very edge of what this leg declared interesting. Both classification
+orderings agree at both cells (True / True).
+
+**The dose forms come apart, and that is the cleanest statement of the
+finding.** R_nat is strongly convex (quadratic 0.4013115009173945 / 0.4282332588027763)
+while R_cf is essentially linear-to-flat (0.01952276786062412 / -0.0006145318872409868).
+**P1's convexity was a property of F, not of G.** R_cf runs 0.1235343574492067 →
+0.13647512639739026 at B1 and 0.127872827136617 → 0.13770129663633365 at B2 while R_nat
+runs 0.1235343574492067 → 0.4351349145429551 and 0.127872827136617 →
+0.4699706496085552. Descriptive only (RN-P2-10).
+
+**G1p2 PASS on all four clauses.** (a) The zero-dose variant of every pilot
+world is bit-identical to a fresh plain `build_k2b_world` at the same seed
+(16 worlds, max |difference| 0.0). (b) At s > 0 the two
+truth panels provably differ: ‖T-nat − T-cf‖ ∈ [50.7748011282207,
+52.72388384718147]. (c) The zero-point identity R_cf(0) ≡ R_nat(0) holds
+bit-exactly on all 8 worlds — the hinge that makes G(0) = F(0) = 0.
+(d) **This harness's reassembled gauge path returns exactly what k2b's own
+`run_field_world` returns** (True, max |difference|
+0.0) — the check that licenses reassembling the path at all.
+
+**G0p2 PASS**: all twelve P1 citations bit-exact (both slopes, both CIs, four
+arm means, the verdict slug, the calibration record and the injection pin),
+both base-cell r values bit-exact, M2's C4 bit-exact. The injection pin
+re-derives to `scripts/run_suica_m4_k2b_t4_branch.py:377` and matches P1 (True); k2b and
+`suica_core/` unedited.
+
+**G3p2 PASS**: σ from the pilot's zero-dose worlds (df 6), df-inflated
+×1.6498974741130894: 0.031389273730078826 → 0.051789083441501405. Five equally-replicated
+levels give Σ(s_j − s̄)² = 0.625, SE(b̂) = 0.004727674872237933, **MDE(2·SE) =
+0.009455349744475866 ≤ 0.01**; escalation did not fire (False).
+
+**Regime disclosure (G2p2).** The largest common-to-author response-level
+variance ratio over every arm is 0.35097712055652686, far below the 10.0 bar
+— **no REGIME_NOTE**. Even at s = 1.0 the author-specific variance still
+dominates the common component, so the dosed regime is not degenerate and the
+claim is not scoped away.
+
+**Rule events.** Rule 13: 0 boundary events, no B = 20000 re-run.
+Rule 26: no bounded winner. Rule 27: f's CI widths 0.03975319873797811 /
+0.03469637698843242 against the 0.3 budget — QUANTIFIED. Rule 29: applied
+to BOTH R_nat and R_cf at every arm. Rule 30: every cited constant verified
+against its persisted source before Part 0.
+
+**Executor self-report.** Two standing anomalies, both resolved before any
+hypothesis-relevant number existed: A-1 the dispatched interpreter is absent (a
+pinned CPython 3.12.12 venv built from the lockfile); A-2 `timeout(1)` is
+absent on macOS (foreground stages under explicit sub-600 s timeouts). No
+registration-defect candidates: the registration pinned the classification
+order in its own text (#55's convention applied), declared the rule-27 budget
+on f, and specified the regime disclosure — all three of the things that needed
+pinning were pinned before the run.
+
+**What this licenses and what it does not.** LICENSED: the scaffold mechanism
+P1 named is genuine — holding the truth side frame-fixed, more common-frame
+content still improves person-reading at both φ levels, CIs excluding zero. P1's
+SIGN_SCAFFOLD stands as a SIGN. NOT LICENSED, and this qualifies P1
+substantially: the MAGNITUDE P1 reported was overwhelmingly frame-vs-frame
+agreement — about 96–97% of the boost disappears
+the moment the truth panel is held frame-fixed. Any reading of P1 that treated
++0.32 as "how much better the gauge reads people under more frame" is wrong by
+roughly a factor of twenty.
