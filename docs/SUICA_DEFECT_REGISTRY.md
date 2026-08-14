@@ -195,3 +195,13 @@ rule without a defect number, rule-13-style:
 | rule | paid for by | one line | origin |
 |---|---|---|---|
 | 28 | #48 | Cross-leg parameter comparisons (leans or modifiers) are licensed only on representations competitive in the comparing leg (the winner or its tie band); on any other representation the comparison is typed REPRESENTATION-CONDITIONED and adjudicates nothing. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M1e planner adjudication (2026-08-11)` |
+
+## Dated additions (2026-08-11, fifth note — M2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #49 | M-line / M4-M2 | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M2 outcome + planner adjudication` | G2m2's "non-saturated" predicate was left unpinned while three prior legs carried a conflicting strictly-inside-(0,1) code convention; the two readings route to DIFFERENT outcomes (PREDICTIVE_SCOPED vs UNRESOLVED_SEAL) — the entire leg turned on an unpinned word. Executor's RN-M2-8 (registered text controls; the statistic's null is 0, not its floor) upheld at adjudication. | 29 | predicate-domain |
+
+| rule | paid for by | one line | origin |
+|---|---|---|---|
+| 29 | #49 | Every regime/sanity gate pins its predicate in the measured statistic's OWN domain (bounds, null, saturation points), named per statistic; any divergence between registered text and an inherited code-form is disclosed and adjudicated before an outcome-relevant consequence. | `docs/SUICA_M4_M_LEVEL_LAW_LINE_PLAN.md — M2 planner adjudication (2026-08-11)` |

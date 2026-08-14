@@ -1855,3 +1855,227 @@ are the boundary, computed and named at registration; (ii) the exponent remains
 a ridge coordinate, not a constant (appendix Y stands — what transferred is the
 PREDICTION, not q); (iii) P1's hit sits at 0.8671810125388784 of the way to its edge
 on a band the ridge made wide, and it is the one a successor should tighten.
+
+### Planner adjudication of M2 (2026-08-11, appended after the run) — THE SEAL LANDS 3/3; THE SATURATION CALL IS UPHELD; THE TAX BECOMES A CURVE HYPOTHESIS
+
+**LEVEL_LAW_PREDICTIVE_SCOPED + STRESS_ABOVE accepted.** Three sealed
+predictions, hashed at 06:09:46Z with ZERO pre-stamp generations and
+the permit re-read from disk +176.076 s later, all three INSIDE
+(positions +0.867 / −0.238 / −0.368 of half-width), all bands under
+budget, replication quiet (Δ 0.0007701504312663671 against a
+0.005647466456046939 bar). **The scoped level law — free share-margins
+plus the steep negative r-power, r interior to [0.4541409476972356,
+0.8189581462487876] — is the M-line's first law at a sealed
+PREDICTIVE grade. The scope is the claim.** The graded-laws table of
+record updates at line synthesis, after M3.
+
+**The judgement that changed the outcome is UPHELD — RN-M2-8.** The
+registered word is "non-saturated"; the statistic is a weighted mean
+of matrix cosines on [−1, 1], so ZERO IS ITS NULL, NOT ITS FLOOR. C1
+(share 0.70, V = 0.21) is by design the most person-variance-taxed
+cell the program has ever run: at its measured mean
+0.034417674625862156 and world-sd 0.018618930632302133, the expected
+MINIMUM over 192 draws sits near mean − 2.7σ ≈ −0.016 — a single
+world at −0.0007988006295671071 is EXPECTED UNDER THE HYPOTHESIS
+ITSELF, and a strict-positivity gate there would have gated on the
+hypothesis, not the regime (planner arithmetic, confirming the
+executor's domain argument). The first reading is preserved in
+`g2m2_pilot_FIRST_READING.json`; the pilot data are identical under
+both readings.
+
+**Defect #49 (mine; rule 29 enacted).** G2m2 left the saturation
+predicate unpinned while three prior legs carried a conflicting
+strictly-inside-(0,1) convention in code — and the two readings route
+to DIFFERENT OUTCOMES (PREDICTIVE_SCOPED vs UNRESOLVED_SEAL);
+everything turned on an unpinned word. **Rule 29:** every
+regime/sanity gate pins its predicate in the measured statistic's OWN
+DOMAIN (bounds, null, saturation points), named per statistic; any
+divergence between registered text and an inherited code-form is
+disclosed and adjudicated BEFORE an outcome-relevant consequence. The
+retroactive question — did any prior pilot/smoke world in
+M1b/M1c/M2's predecessors breach (0, 1), making the latent
+convention consequential — is assigned to M3's G0 as a mechanical
+check (REOPEN flag if breached; expected quiet: those cells' means
+sit far from 0).
+
+**What the seal's margins say (feeding M3).** P1 landed at +0.867 of
+its half-width: the r-channel at exterior share ran STRONGER than the
+transferred prediction (measured 0.009126239258272953 vs predicted
+0.003242277707985443). Under the fixed channel this splits the two
+α(0.70) readings: α from C1 = 0.0423, from C2 = 0.0481 (planner
+values; executor recomputes at full precision) — the triangle closes
+in M3. STRESS_ABOVE confirmed its pre-signed direction: measured C2
+0.04354391388413511 sits above the tax-linear envelope
+[0.03435630613483847, 0.04211861836310243] — the THIRD independent
+sign that the α-margin is convex, i.e. the local tax DECLINES in V.
+
+**The κ(V) hypothesis (planner arithmetic from persisted artifacts,
+recorded BEFORE M3 runs).** Local tax slopes −Δα/ΔV from M1e's free
+margins α = [0.18560847593788873, 0.1456494891347315,
+0.10934916761257428, 0.06667603971206824] at V = [0.03, 0.075, 0.12,
+0.18]:
+
+    0.8879774845146051   (V .03 → .075)
+    0.8066738116034938   (V .075 → .12)
+    0.7112187983417673   (V .12 → .18)
+    [~0.62, ~0.81]       (V .18 → .21, via M2's two α(0.70) readings)
+
+— a monotone decline of ~0.18 over ΔV ≈ 0.11. A pre-signed mechanism
+for the representation spread rides with it: a representation that
+OMITS the r-channel (M1e's tax-additive) loads cov(−|λ|·r^q, V) > 0
+into its slope and reads LOW (its 0.6761549415814 against local
+slopes ≥ 0.71) — so if the tax is a curve and the channel is real,
+the six published κ̂ values should be RETRODICTABLE from one law.
+That closure test is M3's centerpiece.
+
+---
+
+## M4-M3 — the tax curve (is κ a constant, a curve, or an artifact of averaging?)
+
+**REGISTERED 2026-08-11, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. The line's final chartered leg,
+refined per rule 28 and appendix Z.2: not "is κ one number" but **is
+the local tax κ(V) = −dα/dV constant, and does ONE law retrodict
+every published κ̂ through each representation's own estimator?**
+All M-line conventions inherited; rules 25–29 in force; salts
+`m4m3-world` / `m4m3-pilot`, master_seed 20260811, 192 worlds/cell.
+
+### Design (planner arithmetic RUN at registration — #43 convention; all 16 r INTERIOR to the trained window)
+
+Grid: share ∈ {0.10, 0.175, 0.25, 0.325, 0.40, 0.50, 0.60, 0.70} ×
+φ ∈ {0.05, 0.60} = 16 cells × 192 worlds = 3072 worlds. V = 0.3·share
+∈ [0.03, 0.21] (ratio 7.0); executor reproduces this table bit-exactly
+(G0m3(i)):
+
+| share | V | r(φ=.05) | r(φ=.60) |
+|---|---|---|---|
+| 0.10 | 0.03000000000000001 | 0.8189581462487876 | 0.8075174172340943 |
+| 0.175 | 0.05250000000000001 | 0.8029938537206762 | 0.7827569526268938 |
+| 0.25 | 0.07500000000000002 | 0.785015540293945 | 0.7558507450373838 |
+| 0.325 | 0.0975 | 0.7645994805478157 | 0.7264504152667802 |
+| 0.40 | 0.12000000000000004 | 0.7411873080384952 | 0.6941115392115328 |
+| 0.50 | 0.15000000000000002 | 0.7039654030974909 | 0.6453873930804982 |
+| 0.60 | 0.18000000000000005 | 0.6573448847694047 | 0.5883719155687073 |
+| 0.70 | 0.21000000000000005 | 0.5967380569813433 | 0.5197539933932338 |
+
+### Estimation (pinned)
+
+PRIMARY: the channel FIXED at the M2-sealed transfer point θ* =
+(λ, q) = (−0.057625974791364554, 3.863625377453229); per share,
+α̂_s = mean over both φ-cells of (per-world field − λ·r^q), with
+world-bootstrap SEs (B = 2000, pinned seed; 20000 at rule-13
+boundaries). SECOND READING: the joint refit (α×8, λ, q) free —
+L-3m3's transfer check. Local slopes: κ̂_i = −Δα̂/ΔV at the seven
+adjacent pairs, bootstrap CIs. Curve family over the 8 (V, α̂)
+points, THREE forms, no others: **A-lin** α = c − κ·V; **A-quad**
+α = c − κ0·V + (κ2/2)·V²; **A-sat** α = c + A·exp(−V/τ). Selection
+by leave-one-SHARE-out RMSE; bootstrap through the whole pipeline
+(worlds → α̂ → curve) for parameter CIs; tie rule 5%; rule 26 (no
+declared bounds; numerical-limit surveillance stays on).
+
+### The retrodiction closure (the centerpiece; rule 14 link pinned)
+
+From the winning curve + the fixed channel, generate NOISELESS
+predicted fields at each legacy estimator's OWN persisted design
+points and run EACH ESTIMATOR'S OWN PIPELINE on them (the pinned
+link: "the estimator's own code on law-generated data"; Monte-Carlo
+noise version as a second reading). Six targets, verified at source
+in G0m3(iv):
+
+1. sealed difference-fit κ = 0.7220359963712748;
+2. the K2e 9-pair refit (≈ 0.715; executor pins its persisted source
+   and full precision);
+3. K2f F2 κ′ = 0.750086268225045 [0.5202855978239498,
+   0.8612166024267973];
+4. M1c F1e κ = 0.7601952008701406 [0.7356727662590873,
+   0.7846243216827854];
+5. M1d F0 κ = 0.7766770259880144 [0.7482226203832176,
+   0.8064115044591174];
+6. M1e E-tax-add κ = 0.6761549415814 [0.6619291032569563,
+   0.6901486195533926].
+
+HIT = predicted κ̂ inside the target's published CI; for point-only
+targets (1, 2 if no CI persists), |Δ| ≤ 0.03. Pre-signed direction
+(appendix AA): target 6 is predicted to be retrodicted LOW via the
+channel-covariance loading.
+
+### Leans (sides declared)
+
+- **L-1m3 [.65] TAX_IS_A_CURVE:** A-lin loses LOO to a curved form
+  AND A-quad's κ2 CI excludes 0 (joint clause; satisfiability via
+  the projection gate). One-sided each.
+- **L-2m3 [.50] CLOSURE:** ≥ 5/6 retrodiction hits.
+- **L-3m3 [.70] TRANSFER:** the joint-refit λ CI overlaps M1e's
+  [−0.0843564122153383, −0.042724477794351616]; q reported.
+- Readings (no gates): the α(0.70) triangle (M2's two cell-derived
+  values vs M3's fresh estimate); the seven-slope table with CIs;
+  the E-tax-add mechanism decomposition (α-slope term vs channel
+  term, arithmetic).
+
+### Gates
+
+- **G0m3 (bit-exact).** (i) the design table above from the pinned
+  maps; (ii) every M2 number quoted in the adjudication above
+  against `results/m4_m2_scoped_seal/` (predictions, measured,
+  positions, hash, stamp/permit timestamps, per-cell means, stress
+  envelope, replication numbers); (iii) α vector and θ* against
+  `results/m4_m1e_shape/fits.json`; (iv) the six retrodiction
+  targets at their persisted sources at full precision (any target
+  lacking a persisted CI is typed point-only, tolerance 0.03,
+  disclosed); (v) **the #49 retro-check:** mechanically scan every
+  persisted pilot/smoke per-world value in M1b, M1c and M2's
+  predecessors for breaches of (0, 1); any breach → modifier
+  **REOPEN** (planner adjudicates; M3's own verdicts unaffected).
+  Mismatch anywhere → STOP.
+- **G1m3.** Rule-29-compliant regime predicate, pinned per statistic:
+  saturation = |per-world recovery_b_only| ≥ 0.995; finiteness;
+  nonzero within-cell variance. No positivity clause (the M2 lesson,
+  in code).
+- **G2m3 (pilot).** Corners (0.10, 0.05) and (0.70, 0.60) × 4 worlds
+  on `m4m3-pilot`, G1m3 predicate only. No seal exists in this leg;
+  ordering is the standard Part-0-before-worlds discipline.
+- **G3m3.** (a) sides above; (b) **projection gate (rule 25):** σ_w =
+  0.026889438327132725 (pinned, G0-verified), parametric replication
+  B_proj = 2000, seed = master, at truths A-quad (c, κ0, κ2 fitted to
+  the four M1e α points: κ0 ≈ 0.983, κ2 ≈ 1.815 — executor computes
+  exactly) and A-lin (κ = the same points' chord 0.7929, computed
+  exactly); PASS iff P(κ2 CI excludes 0 | A-quad) ≥ 0.8 AND
+  P(κ2 CI excludes 0 | A-lin) ≤ 0.1 at n = 192; once-only escalation
+  to 384 worlds/cell (6144 worlds, budget ×2, declared); fail →
+  **NON_PROJECTABLE** handback. (c) stages: part0 300 s (projection +
+  target verification), pilot 30 s, worlds 4 chunks × 4 cells
+  (~460 s each; 8 chunks at escalation), alpha+curves 300 s,
+  retrodiction 300 s, finalize 60 s; 2× stop-and-report.
+- **G4m3.** Routing below verified disjoint-and-covering by the
+  planner (#46 convention); rule 24 generated tables.
+
+### Rule-27 consumption budgets
+
+For the curve to enter the theory table: κ0 width ≤ 0.25, κ2 width ≤
+1.5, c width ≤ 0.03, each α̂ width ≤ 0.012. Budgets unmet → the curve
+is reported DESCRIPTIVE-ONLY (closure still runs — its predictions
+are deterministic); the outcome cell is unchanged and the consumption
+flag is recorded.
+
+### Routing (rule 16 — disjoint and covering; L-1's two clauses partition cells 3–5)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | any G0m3 mismatch | **STOP** (citation defect) |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** (handback; no worlds) |
+| 3 | LOO prefers a curved form AND κ2 CI excludes 0 | **TAX_IS_A_CURVE** — the constant-κ era closes by dated note; the curve is the object |
+| 4 | LOO prefers A-lin AND κ2 CI contains 0 | **TAX_CONSTANT_RETAINED** — the representation spread needs a different owner (named) |
+| 5 | the two clauses disagree | **CURVATURE_UNSETTLED** — which clause failed is stated (power vs form); no curve claim |
+| — | closure hits ≥5/6 / 3–4 / ≤2 | modifier **CLOSURE_EXPLAINED / CLOSURE_PARTIAL / CLOSURE_FAILED** (runs in cells 3–5 regardless) |
+| — | adjacent slopes non-monotone beyond joint 95% CIs | modifier **NON_MONOTONE** |
+| — | L-3m3 disjoint | modifier **TRANSFER_BREAK** |
+| — | #49 retro-check breach | modifier **REOPEN** |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_m3_tax_curve.py`; `results/m4_m3_tax_curve/`
+(gitignored); `reports/SUICA_M4_M3_TAX_CURVE_REPORT.md` (generated
+tables); outcome append HERE; one ledger row (EXPLORATORY); exactly
+ONE commit `feat(m4-m): M3 — the tax curve — <SLUG>`, never amended,
+never pushed; suite green first. 3072 worlds (6144 at escalation) +
+8 pilot; target < 75 min wall, every stage < 600 s.

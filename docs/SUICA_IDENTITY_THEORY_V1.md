@@ -1517,3 +1517,64 @@ demonstrated rather than asserted. Rules 15/16 were violated by an
 overlapping routing table (#46, planner's); rule 28 was enacted
 (#48). The seal (M2) proceeds on PREDICTIONS in the trained
 r-window, where the parameter ridge does not live.
+
+## Appendix AA — dated append (2026-08-11, post-M2): the level law reaches PREDICTIVE-SCOPED; the domain principle; the tax-curve hypothesis
+
+**AA.1 — The promotion.** The scoped level law — free share-margins
+plus the steep negative r-power (the readability penalty), realized r
+interior to [0.4541409476972356, 0.8189581462487876] — survived a
+prospective hash-sealed test at three configurations OUTSIDE its
+training: a share-exterior contrast (share 0.70 > the 0.6634 envelope
+top), an interior-new-φ level (φ 0.45), and a φ-exterior contrast
+(φ 0.995). 3/3 inside pre-declared bands (positions +0.867 / −0.238 /
+−0.368 of half-width; zero pre-stamp world generations; salt embedded
+in the sealed bytes). Grade: **PREDICTIVE-SCOPED — sealed-then-hit,
+with the scope (predictions in the trained r-window, not parameters)
+as part of the claim.** The parameter ridge (appendix Y.1) is
+untouched: q remains unquotable; what predicts is the law's
+prediction-space restriction.
+
+**AA.2 — The domain principle (instrument lesson, rule 29).** M2
+turned on one word: a pilot world at −0.0008 fails a strictly-
+positive sanity check and ends the leg UNRESOLVED, or passes the
+registered "non-saturated" test and lets the seal be measured. The
+statistic's own domain decides: recovery_b_only is a weighted mean of
+matrix cosines on [−1, 1] — zero is its NULL, not its floor — and at
+the most-taxed cell ever run (V = 0.21, mean 0.0344, world-sd
+0.0186), the expected minimum over 192 draws is ≈ −0.016: negative
+worlds are predicted by the hypothesis being tested. **A sanity gate
+that does not know the statistic's null from its floor gates on the
+hypothesis.** Rule 29 makes the domain-pinned predicate mandatory;
+the retroactive scan of prior legs' (0,1)-style checks is assigned
+to M3's G0.
+
+**AA.3 — The tax-curve hypothesis (pre-M3 planner derivation, on the
+record before the leg runs).** The local tax κ(V) = −dα/dV, from
+M1e's free margins and M2's exterior cells:
+0.8879774845146051 (V .03→.075), 0.8066738116034938 (.075→.12),
+0.7112187983417673 (.12→.18), [~0.62, ~0.81] (.18→.21) — a monotone
+decline. Three independent signs now point the same way: the free
+margins sit convex below their chord (M1e); the tax-linear stress
+prediction under-shot the V = 0.21 level in its pre-signed direction
+(M2, STRESS_ABOVE); and the slope table itself. If κ is a curve,
+"one κ" was an artifact of averaging over each design's V-support —
+and the representation spread becomes PREDICTABLE: a representation
+omitting the r-channel loads cov(−|λ|·r^q, V) > 0 into its slope and
+must read LOW (pre-signed for M1e's 0.676 before M3 runs). M3's
+closure test asks one law to retrodict all six published κ̂ values
+through each estimator's own pipeline; hits and misses both teach.
+
+**AA.4 — What the M-line has settled so far, in one paragraph.** At
+level, on this instrument family: the field is a falling function of
+V (the tax — five sharply-identified within-representation
+appearances, now hypothesized a curve); plus a small steep NEGATIVE
+r-channel concentrated where cards read best (the readability
+penalty, sealed in its scoped form); the response-grade positive
+exponent was the tax's shadow through collinear designs (V-shadow
+demonstration q = +2.245); additive state-dynamics representations
+lose head-to-head; and the whole structure transfers across corpora
+without refitting (18.9× over the sealed composite on K2f's 26
+rows). What remains open, named: the within-share concavity's owner
+(form family incomplete), q's value (unquotable by rule 27), the
+tax curve's verdict (M3), and every real-text question (governance
+R-G1..R-G8 untouched).
