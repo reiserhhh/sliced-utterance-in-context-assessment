@@ -556,3 +556,174 @@ agreement — about 96–97% of the boost disappears
 the moment the truth panel is held frame-fixed. Any reading of P1 that treated
 +0.32 as "how much better the gauge reads people under more frame" is wrong by
 roughly a factor of twenty.
+
+### Planner adjudication of P2 (2026-08-14, appended after the run) — THE SCAFFOLD IS GENUINE AND SMALL; P1'S MAGNITUDE IS RE-TYPED ÷20
+
+**GENUINE_SCAFFOLD accepted; zero registration defects — the
+registration pinned in advance exactly the three things the leg
+needed (#55's classification order, the rule-27 budget on f, the
+regime disclosure).** Both cells POSITIVE on the counterfactual-truth
+slope (b_cf = +0.015370398353696113 [0.009829531824123106,
+0.02099405067675933] and +0.010909345621091282
+[0.00559827343632706, 0.016261954399254843]) — and the headline is
+the fraction: **f = 0.9584700070215529 [0.9387, 0.9784] and
+0.971270002747466 [0.9535, 0.9882]** (widths 0.040/0.035 against a
+0.30 budget — QUANTIFIED eight times over). **Dated note,
+controlling P1's reading: the sign stands; the magnitude does not —
+~96–97% of P1's +0.32 was frame-vs-frame agreement, and reading it
+as improved person-reading is wrong by roughly a factor of twenty.**
+P1's convexity is a property of F (the frame component, quad coefs
++0.40/+0.43), not of G (+0.020/−0.001). The genuine component's
+CIs escape the ±0.01 equivalence margin NARROWLY — typed honestly:
+the genuine scaffold EXISTS (CIs exclude zero, both cells) and its
+size sits at the declared interest threshold. The dosed regime is
+not degenerate (max common-to-author variance ratio 0.351 against
+the 10 bar).
+
+**The coherent picture, stated once:** reading is frame-MEDIATED
+(K-R1: remove the frame and reading dies), the mediation's marginal
+value is small at this regime (P2: add frame and genuine reading
+rises by ~0.013 per 1×), and the RECOVERY STATISTIC is dominated by
+frame-agreement co-movement of gauge and truth (P2's f) — K-R1's
+F-1 caveat is now a measured number, not a caution.
+
+**The question this forces (P3):** if injected frame content moves
+the recovery statistic ~96% through frame-agreement, how much of
+the NATURAL φ-gradient — the M-line's sealed r-channel — is
+frame-agreement too? The M-line's law is untouched as a law of the
+statistic (PREDICTIVE-SCOPED is a property of predictions); what P3
+tests is its DECOMPOSITION, using the program's own licensed
+counter-operation (T9: frame REFRESHMENT — the T6″ pattern) rather
+than injection.
+
+---
+
+## M4-P3 — the natural gradient under frame refreshment
+
+**REGISTERED 2026-08-14, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. Question: **what fraction of
+the natural φ-gradient of b-only recovery survives when the truth
+side's frame is REFRESHED — same authors, fresh frame?** No seal
+(the estimand is a ratio with an honest inferential gap from P2's
+injection-f; leans are stated, not sealed).
+
+### Device (rules 9/12 — delegation with decision rules)
+
+Paired worlds per index at share 0.25, each φ: world A (evaluation)
+and world B (refresh) built with THE SAME author/trait channel
+draws and FRESH state/frame channel draws. The gauge's field from A
+is scored against A's own b-only truth (R_nat — the M1c quantity)
+and against B's b-only truth (R_refresh — the frame-refreshed
+reading; same persons, different frame). **Seed-splitting decision
+rule:** the author/trait channel comprises every random object that
+persists per author across occasions (b-draws and any per-author
+carrier); the state/frame channel comprises every per-occasion or
+per-context object (the slow state, the common channel, occasion
+assignments); the executor identifies the generator's seed
+consumption file:line in Part 0 and splits streams so clause (a)
+below is PROVABLE. If the generator's seed structure cannot be
+split without touching k2b's code, STOP as INFEASIBLE_SPLIT (an
+instrument finding, not a failure; `suica_core/` and k2b remain
+READ-ONLY — the split must be achievable by seeding alone through
+the existing constructor interface).
+
+### Design
+
+share 0.25 × φ ∈ {0.05, 0.30, 0.60, 0.85, 0.98} (M1c's ladder) ×
+192 world-pairs = 960 pairs (1920 worlds). Salts `m4p3-worldA` /
+`m4p3-worldB` / `m4p3-pilot`, master_seed 20260814; the A/B pair at
+index i shares its author-stream seed and differs in its
+frame-stream seed BY CONSTRUCTION (persisted per pair). Arm tags
+φ-independent in the corpus string where the machinery permits;
+where the corpus string must differ across φ, that is the natural
+regime and is disclosed (the P1 label-noise note applies to
+REPLICATION anchors only). SECONDARY READING (no gate, answers the
+charter's original P3 clause): the estimated de-framing repair
+(K1b/K1c′ machinery, diagnostic-only license) applied to A's
+estimate and scored against A's truth, per φ — reported as
+R_deframe(φ) descriptively.
+
+### Quantities and verdicts (rule 22; NULL-first classification per #55)
+
+Per φ: R_nat(φ), R_refresh(φ) with world-pair bootstrap SEs
+(B = 2000; 20000 at rule-13 boundaries). The gradient objects:
+range_nat = R_nat(φ=.05) − R_nat(φ=.98) side-signed as in M1c
+(the natural gradient; G0 anchors it against M1c's share-.25 row),
+range_ref likewise on R_refresh. The estimand: **g_ratio =
+range_ref / range_nat**, bootstrap CI.
+
+- **V-P3a (anchor):** R_nat's five levels replicate M1c's share-.25
+  row within 2·√2·SEM each (distributional, fresh salt — the P1
+  label-noise note applies); a failure here is an instrument STOP,
+  not a finding.
+- **V-P3b (the decomposition):** classification of g_ratio,
+  NULL-first: NO_TRANSPORTABLE_GRADIENT (CI inside ±0.25·(SE-scaled
+  equivalence band declared in Part 0 from the realized range_nat));
+  MOSTLY_FRAME (CI < 0.25); INTERMEDIATE (CI ⊂ [0.25, 0.5] or
+  straddling 0.25/0.5 with width under budget); SUBSTANTIALLY_GENUINE
+  (CI > 0.5); UNDERPOWERED (width over budget). Rule-27 budget:
+  g_ratio CI width ≤ 0.30, else UNQUANTIFIED modifier and the leg
+  reports levels only.
+- **V-P3c (levels):** if R_refresh is itself within the rule-29
+  noise floor of ZERO at every φ (no transportable reading at all),
+  sub-case **NO_TRANSPORTABLE_READING** fires and V-P3b is recorded
+  N/A (a ratio of noise is not a ratio).
+
+### Leans (sides declared)
+
+**L-1p3 [MOSTLY_FRAME .55 / INTERMEDIATE .20 /
+NO_TRANSPORTABLE_READING .15 / other .10].** The inferential gap is
+stated: P2's f concerns INJECTED frame at 1×; the natural gradient's
+frame share need not equal it — that is exactly what is being
+measured, with the program's own licensed instrument.
+
+### Gates
+
+- **G0p3 (bit-exact).** (i) M1c's share-.25 row (five cell means +
+  SEMs) from `results/m4_m1c_r_at_level/`; (ii) P2's f values, b_cf
+  CIs and the ten-arm table from `results/m4_p2_dose_decomposition/`;
+  (iii) the two base r values and the five ladder r values from the
+  pinned maps; (iv) the T6″/frame-refreshment lineage located
+  (file:line of the published frame-refreshed scoring pattern, cited
+  not copied). Mismatch → STOP.
+- **G1p3 (rule 10, the split proven).** (a) A/B author-channel
+  objects BIT-IDENTICAL per pair; (b) A/B frame-channel objects
+  differ (norm delta > 0 per pair); (c) at a control pair with the
+  SAME frame seed, R_refresh ≡ R_nat bit-exactly (the refreshment
+  operator's zero-point identity).
+- **G2p3 (pilot).** 4 pairs × φ ∈ {0.05, 0.98} with the rule-29
+  predicate on BOTH scorings; the equivalence band for V-P3b's NULL
+  and V-P3c's floor computed here from realized noise (df-inflated)
+  and written into the report BEFORE the main arms.
+- **G3p3 (rule 25).** Projection for g_ratio's CI width at truths
+  {g = 0.04 (P2's 1−f), g = 0.5} from pilot noise: width ≤ 0.30
+  under both; once-only escalation to 384 pairs/φ (attached to THIS
+  budget gate); else NON_PROJECTABLE.
+- **G4p3.** Routing verified disjoint-and-covering,
+  consequence-entailed, classifications NULL-first; rule 24; stages:
+  part0 120 s, pilot 60 s, worlds 5 chunks (1 φ each, ~240 s;
+  ×2 at escalation), score+fit 180 s, finalize 60 s.
+
+### Routing (rule 16)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0p3/G1p3 failure or seed-split impossible via seeding alone | **STOP / INFEASIBLE_SPLIT** |
+| 2 | projection fails after escalation | **NON_PROJECTABLE** |
+| 3 | V-P3a fails | **ANCHOR_BREAK** (instrument stop; nothing adjudicated) |
+| 4 | V-P3c fires | **NO_TRANSPORTABLE_READING** — the natural gradient carries no frame-refreshed person signal at all; K-R1's picture at natural regimes; V-P3b N/A |
+| 5 | g_ratio MOSTLY_FRAME | **NATURAL_GRADIENT_MOSTLY_FRAME** — the M-line law's r-channel is dominated by frame-agreement; the law stands as a law of the statistic; the theory's mechanism section re-types |
+| 6 | g_ratio INTERMEDIATE | **MIXED_GRADIENT** — quantified split; theory carries the number |
+| 7 | g_ratio SUBSTANTIALLY_GENUINE | **GENUINE_GRADIENT** — the r-channel transports across frames; the scaffold-gradient reading strengthens |
+| 8 | UNDERPOWERED / budget unmet | **UNDERPOWERED** (+ UNQUANTIFIED modifier; levels reported) |
+
+### Deliverables and budget
+
+`scripts/run_suica_m4_p3_refresh_gradient.py`;
+`results/m4_p3_refresh_gradient/` (gitignored);
+`reports/SUICA_M4_P3_REFRESH_GRADIENT_REPORT.md` (generated tables);
+outcome append HERE; one ledger row (EXPLORATORY); exactly ONE
+commit `feat(m4-p): P3 — the natural gradient under frame
+refreshment — <SLUG>`, never amended, never pushed; suite green
+first. 1920 worlds (×2 at escalation) + 16 pilot; target < 45 min,
+every stage < 600 s.

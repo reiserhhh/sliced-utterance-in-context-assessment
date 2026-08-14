@@ -1797,3 +1797,35 @@ output depends on it (~0.0122 per-world label noise): replication
 anchors across salts are distributional, bit-level only at matched
 corpus strings; P1's gate caught its own first control on exactly
 this.
+
+## Appendix GG — dated append (2026-08-14, post-P2): the scaffold is genuine and small; F-1 becomes a number; the gradient question goes to the theory's own instrument
+
+**GG.1 — The decomposition.** Against a frame-fixed counterfactual
+truth, the injected-frame boost decomposes: genuine person-reading
+improvement G(1×) ≈ +0.013/+0.010 (CIs excluding zero at both
+cells, NARROWLY past the ±0.01 interest threshold), frame-vs-frame
+agreement F(1×) ≈ +0.299/+0.332 — **f = 0.958 [0.939, 0.978] and
+0.971 [0.954, 0.988]**. P1's convexity belongs to F. Dated
+correction to FF's reading: the scaffold's causal sign stands; its
+apparent magnitude was ~20× the genuine effect. K-R1's F-1 caveat
+("the b-only target is frame-carried") is now a measured fraction.
+
+**GG.2 — The coherent mechanism picture.** Reading is
+frame-mediated (K-R1: no frame, no reading); the mediation's
+marginal value is small at this regime (P2); the recovery statistic
+co-moves with frame on BOTH sides (gauge and truth), and that
+co-movement is ~96–97% of what injection moves. No contradiction
+anywhere: the scaffold is load-bearing and cheap at the margin.
+
+**GG.3 — What this asks of the M-line's law.** The sealed level law
+is untouched AS A LAW OF THE STATISTIC (its predictions were and
+remain sealed hits). What P2 opens is the DECOMPOSITION of its
+natural φ-gradient: injection moved the statistic mostly through
+frame-agreement — does the natural gradient decompose the same way?
+P3 answers with the theory's own licensed counter-operation (T9
+frame REFRESHMENT, the T6″ pattern): same authors, fresh frame,
+g_ratio = refreshed gradient / natural gradient. MOSTLY_FRAME
+re-types the mechanism section; SUBSTANTIALLY_GENUINE strengthens
+the scaffold-gradient; NO_TRANSPORTABLE_READING is K-R1's picture
+at natural regimes. All three are live; the lean (.55 mostly-frame)
+carries P2's f across an honest inferential gap, stated as such.
