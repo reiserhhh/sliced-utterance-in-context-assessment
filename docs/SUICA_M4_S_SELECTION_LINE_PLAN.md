@@ -200,3 +200,105 @@ Deliverables: the six as always;
 commit `feat(m4-s): SR0 — real-data reconnaissance — <SLUG>`.
 Budget: no world generation; data reads chunked (the comment table
 may be large — streamed counting, memory-bounded, stages < 600 s).
+
+### Outcome of M4-S1 (executed 2026-08-15, append-only)
+
+**`INSTRUMENT_DEFECT(C_S1a)` (rule-16 cell 5).** Modifiers:
+COUPLING_PLACED_GAMMA1_POSITIVE_GAMMA0_NULL, SIGNATURE_STABLE_AT_BOTH_GAMMA. **The generator works and the coupling is placed;
+the failing certificate is C-S1a, and the defect is in that certificate's
+specification rather than in the apparatus.**
+
+- **The structural question is settled by construction, not assumption.**
+  emit_panel (k2b:359-381) hands author i the frame `common[ctx_index[i], o]` at
+  EVERY occasion, so per-occasion choice is not expressible through it and
+  INFEASIBLE_CHOICE was live. `emit_choice` transcribes emit_panel with **exactly
+  one change** — the first index of the common term (k2b:377) becomes
+  `choice[i, o]`. Certified in Part 0: with `choice[i,o] = ctx_index[i]` the
+  panel is **bit-exact** (True), the
+  truth panel is bit-exact (True) and the field
+  agreement is identical (0.11118696412429328 vs
+  0.11118696412429328). The shared-frame object per context is preserved:
+  `common[k, o]` remains the one vector for context k at occasion o. Every v2
+  object stays bit-identical (True) because the
+  exposure draw uses its own rng stream taken after the builder returns.
+- **u / v pins (RN-S1-2).** First four principal author-coordinates per channel:
+  SVD of the author-centred channel matrix (`trait_pure` for u, `style` for v),
+  right singular vectors 1..4, authors projected, each coordinate z-scored so
+  beta means the same thing in both channels. **Sign convention (#64) pinned:**
+  each component's sign fixed so its largest-magnitude loading is positive — SVD
+  signs are otherwise arbitrary and would silently randomize pi across worlds.
+  The panel has exactly 4 contexts (AskReddit, AskWomen, politics, worldnews),
+  matching the 4-dim projection.
+- **beta\* = 1.7, fixed by arithmetic with NO worlds.** Declared
+  criteria: mean selection entropy <= 0.85·log k
+  AND median per-author chi-square(3) power >=
+  0.8 at the panel's median m =
+  12.0; smallest beta on the pinned grid meeting
+  both. Realized at beta*: entropy fraction 0.6198984954321972,
+  median power 0.8069427664188857 — **the power
+  criterion binds, not the entropy one** (entropy is far below its target at the
+  selected beta).
+- **C-S1a FAILS its level clause, PASSES its frequency clause.** Anchor level
+  0.09262907190295885 [0.07652910892609367, 0.10785388737580495] against the routing reference
+  0.11806906162144237 (R2's persisted v2 arm at the identical share .25 /
+  phi .60 / w_style 1.0) — deviation **-0.02543998971848352** against a 2·√2·SEM
+  band 0.024972074968206703 (z -2.8814248341250366). Frequencies uniform: mean
+  uniformity chi-square 3.0881948266373147 vs crit95
+  7.8147279032511765, 1.0 of worlds within.
+- **The failure is robust under every reference and both band readings.**
+  Deviation vs M1c's no-style row -0.03451883246292889;
+  vs these same worlds' OWN layout exposure
+  -0.03191225113985062 [-0.05123843785467711, -0.011515406750239305] (paired,
+  CI excluding zero). Generous band 0.024972074968206703,
+  strict band 0.017657923550317797; fails under both:
+  True.
+- **THE DEFECT IS IN THE CERTIFICATE, AND THE FIX IS ONE LINE.** C-S1a asks for
+  uniform SELECTION (pi flat) and baseline EXPOSURE (the level the panel has when
+  each author sits in one context) at the same beta = 0. Those are different
+  neutralities. The deployed gauge pools authors by their NOMINAL context to
+  estimate a per-context field, so spreading each author's occasions uniformly
+  over four contexts destroys exactly the coherence it recovers — the level drop
+  is the apparatus behaving correctly. Both readings are reported: **(A) uniform
+  exposure** (the registration's explicit words) fails the level clause; **(B)
+  beta = 0 as a no-op on the frame path** (`choice[i,o] = ctx_index[i]`) passes it
+  EXACTLY — that is precisely what Part 0's bit-exactness certificate is.
+  Handback: adopt (B) as the neutral anchor, or keep (A) and drop its level
+  clause, which the registration's own mechanism predicts must shift. The anchor
+  worlds' own layout-exposure level 0.06071682076310822
+  sits within one SEM of the reference, so the worlds are sound.
+- **C-S1b PASSES in both arms.** Realized frequencies track pi within multinomial
+  noise: fraction of authors exceeding the 95th percentile of chi-square(3) =
+  0.06460176991150442 at gamma 1 and
+  0.06718289085545723 at gamma 0, against 0.05
+  expected. Split-half stability 0.5629870740710835
+  [0.5556645865206762, 0.5703783652507874] and
+  0.5564373726309412 [0.5477653655574023, 0.5647096208307433].
+- **C-S1c PASSES — and it is the certificate the line needed.** Mantel r between
+  selection-similarity and trait-similarity across retained authors:
+  **0.23983432331725474** [0.23709290162316124, 0.24284340944183067] at gamma = 1 and
+  **-4.1883473632534314e-05** [-0.001165090846688084, 0.001053439915639846] at gamma = 0, against an
+  equivalence band eps = 0.010125436066679785 from permutation arithmetic (permutation sd
+  0.0022344399846873217). Separation
+  0.23987620679088728. **The gamma = 0 arm's selection signature is just as
+  stable as gamma = 1's (0.5564373726309412 vs
+  0.5629870740710835) and carries no trait information whatsoever.**
+  That is decomposition (b) made physical: **a perfectly stable selection
+  signature can be completely uninformative about personality.** Stability is
+  necessary and nowhere near sufficient — and this is the falsifier the real-data
+  track will need, because SR1 could otherwise read (a) as evidence for (b).
+- **Gates.** G0s1 PASS; G2s1 pilot predicates PASS; G3s1 PASS — detection power
+  1.0 at gamma = 1,
+  false-fire 0.0 at
+  gamma = 0; escalation False.
+- **Anomaly A-1 (before any number).** The pinned virtualenv was partially
+  destroyed between legs: a temp reaper deleted files under `/private/tmp` at
+  00:00, removing `pyvenv.cfg` and gutting `site-packages` — package directories
+  survived but their `__init__.py` files did not, so numpy imported as an empty
+  namespace package. Rebuilt from `requirements-lock-main.txt` and verified
+  identical to the versions the previous legs ran under (numpy 2.4.4, pandas
+  3.0.2, Python 3.12.12) BEFORE any S1 number existed.
+- **One registration-defect candidate:** C-S1a's neutral anchor conflates uniform
+  selection with baseline exposure (above). Non-blocking — it routes the leg to a
+  handback exactly as the ladder intends, and the generator itself is certified on
+  every other clause.
+- Report: `reports/SUICA_M4_S1_CHOICE_GENERATOR_REPORT.md`.
