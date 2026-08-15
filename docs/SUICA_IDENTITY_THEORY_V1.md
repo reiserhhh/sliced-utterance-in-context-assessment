@@ -2061,3 +2061,41 @@ correction is the record). The synthetic shape law r(γ) (S2) and
 the S1-γ intermediate coupling remain the line's open synthetic
 half; the 12-axis refit is priced (TF-IDF inputs absent) and
 parked.
+
+## Appendix OO — dated append (2026-08-16, post-S2): the selection line closes — the conjecture, theorized end-to-end
+
+**OO.1 — The complete story.** Conjecture (the owner's): selection
+is where the person shows through a frame-reading instrument.
+Decomposition: (a) signature-stability; (b) similarity-coupling.
+Apparatus: a certified choice-enabled generator whose γ knob spans
+trait-driven to identity-driven selection. Falsifier: the γ = 0
+world — stable, trait-silent selection — twice-measured. Real-data
+verdict: (a) strong (0.681/0.051; ceiling 0.733); (b) DETECTED
+(r = 0.0490, p = .001, z = 5.42; six geometries, two halves, three
+tertiles, all positive). Shape: r(γ) sealed 3/3 with the
+pipeline-corrected coefficient (the analytic g overshoots
+systematically — #67's lesson: bias corrects predictions, bands
+carry uncertainty). Direction (the C-4 concern): geometries agree
+everywhere measured.
+
+**OO.2 — What may now be said, and only this way.** At EXPLORATORY
+tier, corpus-level, on PANDORA: people who choose similar frames
+measurably have similar Big5 profiles — a small, robust,
+sealed-before-computed aggregate; no person-level claim licensed.
+In the synthetic family: the coupling is a KNOB, and a world with
+perfect selection-stability and zero coupling exists — so the
+real-data detection is informative precisely because it could have
+been otherwise.
+
+**OO.3 — The program's state after seven lines.** The identity era
+(M/N/P/Q/R) established what the instruments ARE: cards read
+biography exactly to disattenuation; the gauge is a frame-agreement
+meter whose heavy tax is the state channel's; identity, where it
+exists, is card-borne, frame-crossing, gauge-invisible. The
+selection line establishes the licensed person-route THROUGH the
+frame instrument: choice. Together they replace the founding
+metaphor with measured structure: **the card is the ID; the gauge
+is a context meter; and the person's trace in context-space — the
+frames they choose — is itself a signature that carries real
+personality information at corpus level.** Every claim carries its
+tier; every law its scope; every instrument its certificate.

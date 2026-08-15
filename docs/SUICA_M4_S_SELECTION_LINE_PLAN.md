@@ -836,3 +836,50 @@ headline belongs to HOW they landed, not that they did.**
   (systematic bias absorbed as band width). Non-blocking — the registered test
   routed exactly as written and the fix was stamped alongside it before any
   world.
+
+### Planner adjudication of S2 (2026-08-16, appended after the run) — THE SHAPE IS SEALED, THE COEFFICIENT CORRECTED, THE LINE CLOSES
+
+**TRANSFER_LAW_SEALED accepted, typed honestly.** The registered
+3/3 (positions −0.110 / −0.272 / −0.363) is WEAK evidence exactly
+where the band swallowed the prediction (γ = 0.5 half-width 0.219
+vs prediction 0.170 — nearly unfalsifiable, as the executor said
+first). The STRONG evidence is the co-stamped, equally probe-free
+PIPELINE prediction: **3/3 inside bands 8–40× tighter** (errors
+0.0031 / 0.0023 / 0.0049). The record therefore reads: **the
+law's FORM is right — monotone, sharply non-linear, near-flat top,
+collapsing knee, exactly g's silhouette — and the analytic
+coefficient overshoots the softmax pipeline systematically
+(0.1104/0.7071/0.9939 vs 0.0777/0.4496/0.8824); the LAW OF RECORD
+is the pipeline-corrected shape, with the analytic g as its
+idealization.** The γ = 0 falsifier reproduced on fresh worlds
+(−0.00056 vs ε 0.0101) — the line's counterexample is now
+twice-measured — and the γ = 1 anchor matched S1 at z = −0.92.
+Direction reading: signs agree at every γ; T8's cosine-dominance
+checked, not assumed. The stamp preceded EVERY world including
+probes — the cleanest ordering of the program.
+
+**Defect #67 (mine).** The registered SE_approx absorbed a KNOWN,
+SIGN-STABLE bias (the softmax distortion, an order of magnitude
+larger than its MC spread) into band WIDTH. **Convention: a #61
+band states UNCERTAINTY; when the Part-0 error budget reveals a
+systematic sign-stable deviation exceeding its MC spread, it is
+applied as a PREDICTION CORRECTION (with its own uncertainty),
+never absorbed into width — and both the idealized and corrected
+predictions are stamped** (the executor's co-stamp is the
+pattern's first instance and its proof of value).
+
+**THE LINE CLOSES.** Five legs: S1 (generator certified; the γ = 0
+treasure), SR0 (SR1_READY; (a) strong on real data), SR1
+(**SELECTION_TRAIT_COUPLING_DETECTED — the owner's conjecture's
+first real-data pairwise confirmation**), S2 (the shape sealed,
+coefficient corrected). The conjecture is now theorized
+END-TO-END: decomposition (a)/(b); a certified apparatus; a
+physical falsifier (stability without coupling); a sealed
+real-data detection (r = 0.0490, p = .001, robust across six
+geometries, both halves, three tertiles); and a sealed synthetic
+shape law. Synthesis:
+`docs/SUICA_M4_S_SELECTION_LINE_SYNTHESIS.md`; theory appendix OO.
+Named, not queued: the 12-axis refit (inputs absent, priced); the
+real-data dose analogue (no γ knob exists in reality — the
+coupling is one number per corpus); R3's identity-formalism
+reconciliation (held from the R-line).

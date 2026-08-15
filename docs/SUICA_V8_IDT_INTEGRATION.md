@@ -266,3 +266,25 @@ The R-line (5 legs, `f8bc446`..close; synthesis
   conventions). R3 held for the identity-formalism reconciliation
   derivation. The loop rests with the founding question answered
   where it could be posed.
+
+## Dated addendum (2026-08-16, fifth) — the M4-S selection line; the conjecture end-to-end
+
+The S-line (5 legs, `21149bb`..close; synthesis
+`docs/SUICA_M4_S_SELECTION_LINE_SYNTHESIS.md`) is the program's
+first dual-track (synthetic + real) line of the identity era:
+
+- **Real data (PANDORA, R-G governed, sealed config-before-joint):**
+  selection signatures are person-stable (0.681 vs 0.051; ceiling
+  0.733), and **selection-similarity ⇒ trait-similarity is
+  DETECTED** — Mantel r = 0.0490, permutation p = .001 (z = 5.42),
+  852,165 pairs, positive in all six geometries, both halves, all
+  tertiles. EXPLORATORY, corpus-level, no person claims.
+- **Synthetic:** the certified choice generator's γ = 0 arm proves
+  stability-without-coupling is physical (the falsifier,
+  twice-measured); the shape law r(γ) sealed 3/3 with the
+  pipeline-corrected coefficient.
+- The rind model's choice channel returns with mechanism +
+  falsifier + detection + shape. Standing rules 1–33; defects
+  #1–#67 (#65–#67 bought the neutrality-naming,
+  permutation-power, and bias-vs-band conventions). Zero ID leaks
+  across three scans; Essays and native corpus untouched.

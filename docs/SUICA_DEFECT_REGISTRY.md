@@ -309,3 +309,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #66 | S-line / M4-SR1 (origin in SR0's power table) | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — SR1 outcome + planner adjudication` | SR0's Mantel MDR used the 1/√(N−1) closed form; the empirical permutation null sd is 3.054× smaller (0.00906 vs 0.02768), overstating the declared MDR (0.0776 vs corrected 0.0254). The registered permutation test adjudicated correctly; the power table did not. Executor self-corrected and disclosed the favourable direction. | none (convention: permutation-test power analyses pin the null-sd method, preferring a small pre-registered permutation calibration over closed-form heuristics) | permutation-power |
+
+## Dated additions (2026-08-16, nineteenth note — S2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #67 | S-line / M4-S2 | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — S2 outcome + planner adjudication` | The registered SE_approx absorbed a KNOWN sign-stable bias (softmax distortion, 10× its MC spread) into band width, making one band wider than its own prediction (0.219 vs 0.170) and the test nearly unfalsifiable there; the executor co-stamped an equally probe-free pipeline-corrected prediction pre-world, landing 3/3 in bands 8–40× tighter. | none (convention: bands carry UNCERTAINTY; systematic sign-stable deviations exceeding their MC spread correct the PREDICTION, with both idealized and corrected predictions stamped) | bias-vs-band |
