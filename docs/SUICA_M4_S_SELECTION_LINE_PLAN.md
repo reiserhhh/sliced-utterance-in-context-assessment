@@ -410,3 +410,111 @@ Deliverables: the six as always;
 `feat(m4-s): S2 — the transfer law — <SLUG>`. Dispatch order note:
 SR0 (the real-data reconnaissance, already registered above) runs
 BEFORE S2 — the real track takes its first leg; S2 follows.
+
+### Outcome of M4-SR0 (executed 2026-08-15, append-only)
+
+**`SR1_READY`.** **The first real-data leg of the identity era, and
+no selection x label statistic was computed.** The no-peek gate is structural and
+G-SR0 verifies it by enumeration: 9 artifacts,
+0 unexpected, **0
+joint selection x label quantities found**.
+
+- **Sources all pinned; no SOURCE_GAP.** Comment table
+  5389.8 MiB with `subreddit`
+  (True), `created_utc`
+  (True) and `author`
+  (True) all present; `author_profiles.csv`
+  10295 rows with all five Big5 columns
+  (True); prepared Big5
+  1401 rows / 1401
+  unique user_id; `scripts/suica_v2_lib.py` present.
+- **On the cohort count.** The registration's "1401 rows" is EXACT
+  (True); a naive `wc -l` reports ~123k
+  because the `text` column carries embedded newlines. Counted independently from
+  `author_profiles.csv`, **1568** authors
+  have all five Big5 values, and the prepared mainline cohort of
+  1401 is a STRICT SUBSET of them
+  (True, intersection
+  1401). The registration's 1401
+  is taken as canonical; the 1568 is
+  reported as SR1 headroom, not as a discrepancy.
+- **The 12-axis constructor: `FOUND (constructor); FITTED ARTIFACT ABSENT`.** It EXISTS and is LIVE, not a
+  lost v2 artifact — `scripts/run_suica_e3_e4_choice_scale_class_react_v2.py` with `N_CLASSES = 12` (:37),
+  `build_condition_classes()` (:43), KMeans (:63), the subreddit->axis map (:65),
+  `choice_axis_scores()` (:81), axis naming (:126); the holdout refit that
+  produced the 5/5 result is `scripts/run_suica_op6a_choice_axes_holdout_v3.py`. **But the FITTED artifact
+  `results/suica_e3_e4_choice_class_v2_s128/condition_class_map.csv` is NOT on disk** (False)
+  because `results/` is gitignored. Consequence for SR1: the primary signature
+  object needs none of it, but the 12-axis projection is available only by
+  REFITTING, and SR1 must not cite the existing 5/5 holdout as though the same
+  fitted axes were in hand.
+- **The selection-signature object, defined.** Floor declared BEFORE the stream
+  from counts alone: a subreddit enters iff used by >=
+  0.01 of cohort users =
+  15 users. Streamed 17,640,062 rows,
+  3,005,360 in cohort. **Vocabulary
+  1191 of 15863 distinct
+  subreddits; coverage 0.7813909148987143** of cohort comments.
+  1306 users carry a signature (>= 20
+  comments); mean 44.50076569678407 non-zero subreddits
+  per user (sparsity 0.03736420293600678).
+- **Split-half feasible, and selection is strongly person-stable.** Halves cut at
+  each user's OWN median timestamp; 1271 users scored of
+  1282 eligible. **Self cosine
+  0.6814441717128207 (sd 0.2882601041061215) against permuted-other
+  0.05115484595892177 — discrimination 0.630289325753899.** The
+  number SR1 actually needs is the reliability of the PAIRWISE SIMILARITY object,
+  since that is what a Mantel test correlates: half-split
+  0.5788247760635731, **Spearman-Brown
+  0.7332349793835083 — the SR1 ceiling** over
+  404,550 pairs.
+- **This is decomposition (a), measured on the corpus, and it is strong.** It is
+  ALSO exactly what S1's gamma = 0 arm showed can be true while (b) is false. The
+  two results must be read together: SR0 establishes that the corpus HAS a stable
+  selection signature and says nothing whatever about whether that signature
+  carries personality.
+- **Label-side marginals (separate stage, never joined).** N =
+  1401; per-trait sd: agreeableness 30.906133487248784, openness 27.687923217119188, conscientiousness 30.1921871108564, extraversion 30.146388899654326, neuroticism 32.24694596571011.
+- **SR1 power.** N_effective 1306 (signature users, capped by the
+  canonical cohort), 852,165 pairs, 999
+  permutations planned at alpha 0.05 and power
+  0.8; permutation null sd ~ 1/sqrt(N-1) =
+  0.027681826617913324 (in the OBJECT count, not the pair
+  count). **Minimum detectable OBSERVED Mantel r =
+  0.07755299626311207**; corrected for attenuation with the
+  measured selection reliability and an ASSUMED label reliability:
+  1.0 -> 0.09056846224156084,
+  0.8 -> 0.10125861909487652,
+  0.5 -> 0.1280831476252909.
+  Label reliability is NOT measured here (outside the mandate) and is carried as a
+  declared parameter.
+- **G-SR0, and a gate defect of my own, disclosed with timing.** The gate's FIRST
+  implementation was a substring blacklist and it produced a demonstrable FALSE
+  POSITIVE — it matched "cov" inside `coverage_comments_in_vocab`, a pure
+  selection-side quantity. It was replaced, AFTER that failure and before the
+  leg was declared clean, with a STRICTLY STRONGER test of the property the
+  governance actually forbids: no leaf key may name both a selection object and a
+  label object; `selection.json` may carry no label token at all;
+  `labels.json` may carry no selection token at all; `power.json`, the declared
+  meeting point, is instead held to carrying only scalars. A second iteration
+  exempted the two compliance booleans (`label_table_opened`,
+  `selection_artifact_opened`) whose whole purpose is to assert non-access — and
+  ONLY when their value is verified `False`; a `True` would still fire. Final:
+  PASS, 0 joint quantities, 0 unexpected artifacts.
+- **R-G compliance, verified not asserted.** The report was scanned against all
+  1401 cohort author ids: **0 leaks**. The
+  `body` column was never read. No per-user rows, no text excerpts, no
+  cross-corpus linkage; Essays untouched and its confirm-half labels sealed; the
+  native corpus untouched and still paused. Sources read in place from the private
+  paths; nothing copied into this repository. `cohort_authors.csv` is the only
+  artifact carrying identifiers and lives in gitignored `results/`.
+- **Anomalies.** A-1 interpreter re-verified as standing practice after the
+  previous leg's venv loss (numpy 2.4.4 / pandas 3.0.2 / Python 3.12.12, matching
+  every prior leg) BEFORE any number. A-2 `timeout(1)` absent on macOS. A-3 the
+  missing fitted class map (above), a reconnaissance finding rather than an
+  execution fault. A-4 the gate false positive (above), resolved before the leg
+  was declared clean.
+- **Registration-defect candidates: none.** The registration's source list,
+  no-peek mandate and routing were all executable as written; the "1401 rows"
+  description is exact.
+- Report: `reports/SUICA_M4_SR0_RECON_REPORT.md` (aggregates only).
