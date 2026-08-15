@@ -749,3 +749,90 @@ on PANDORA, people who choose similar frames measurably have
 similar Big5 profiles, across every registered geometry.** Theory
 consequence in appendix NN; S2 (the sealed synthetic shape
 r(γ)) dispatches next to complete the line's synthetic half.
+
+### Outcome of M4-S2 (executed 2026-08-15, append-only)
+
+**`TRANSFER_LAW_SEALED` (rule-16 cell 4).** Modifiers:
+GAMMA0_NULL_CONFIRMED_ON_FRESH_WORLDS, DIRECTION_READING_AGREES. **Interior hits 3/3 — but the
+headline belongs to HOW they landed, not that they did.**
+
+- **G0s2.** S1's amplitude bit-exact: r(1) = 0.23983432331725474 ==
+  registration (True); β* = 1.7
+  matches (True); S1's C-S1c PASS
+  (True); S1 source hash verified. The measurement is S1's
+  CERTIFIED instrument imported by file and called directly, so r(γ) here is the
+  same object as S1's C-S1c Mantel (RN-S2-1).
+- **g(γ) recomputed at full precision** and matching the planner's sanity values:
+  g(0.25) = 0.11043152607484653 (sanity 0.1104),
+  g(0.5) = 0.7071067811865475 (0.7071),
+  g(0.75) = 0.9938837346736188 (0.9938).
+- **Sealed:** g=0.25: g(γ)=0.11043152607484653 pred=0.02648527032905259 half=0.04363026050121361 (SE_pred 0.00016200230186118092, SE_meas 0.002324586047924536, SE_approx 0.021690319564518324); g=0.5: g(γ)=0.7071067811865475 pred=0.16958847637891772 half=0.21887836869808167 (SE_pred 0.0010373208655672403, SE_meas 0.002324586047924536, SE_approx 0.10940957607134302); g=0.75: g(γ)=0.9938837346736188 pred=0.2383674329614733 half=0.08727767214621368 (SE_pred 0.0014580207167506282, SE_meas 0.002324586047924536, SE_approx 0.043552479712535445). Hashed `ef870d43d6c73757b8de9336e8567571586ee0aaacb991a6cebc217b63a1af6a`, stamped 2026-08-15T17:27:40.278163+00:00 with
+  **0 fresh worlds AND
+  0 probe worlds in existence** — the cleanest
+  K2f ordering the program has achieved, because SE_meas came from S1's persisted
+  spread and SE_approx from standard-normal arithmetic, so no world of any kind
+  was needed to build the band. Arms re-hashed to a match
+  17.961275 s later.
+- **Measured:** γ=0.0: -0.000556827079510771 [-0.001610303477140683, 0.0004102164964021282]; γ=0.25: 0.021687781588106775 [0.019706868338856466, 0.023929471306571363]; γ=0.5: 0.11011136328557458 [0.10764037282740947, 0.11285795106841882]; γ=0.75: 0.20669287217697138 [0.204047311871756, 0.20943216928148053]; γ=1.0: 0.237741075953029 [0.23415995152633748, 0.24081471764146747].
+- **V-S2b: 3/3 inside the sealed analytic bands** — γ=0.25 pos -0.10995782940173755 INSIDE=True; γ=0.5 pos -0.2717359118085588 INSIDE=True; γ=0.75 pos -0.3629171127689849 INSIDE=True.
+  **All three positions are NEGATIVE**, i.e. every measurement sits BELOW the
+  analytic prediction, and the miss grows with the prediction's size.
+- **THE LEG'S METHODOLOGICAL FINDING — REGISTRATION-DEFECT CANDIDATE, PINNED
+  BEFORE ANY WORLD (RN-S2-6).** The registered SE_approx absorbs the softmax
+  distortion into BAND WIDTH. But the budget's own probe-free arithmetic showed,
+  before a single world existed, that the distortion is not uncertainty — it is a
+  SYSTEMATIC, sign-stable bias: the analytic g OVERSHOOTS the pipeline ratio at
+  every interior γ (analytic 0.11043152607484653 /
+  0.7071067811865475 /
+  0.9938837346736188 against pipeline
+  0.07766211128618199 /
+  0.44959247073676384 /
+  0.8823526228138191), with MC spreads
+  (0.013608651968474933 /
+  0.02274388784050644 /
+  0.0069168510746423885) an ORDER OF MAGNITUDE smaller
+  than the bias. **A #61 band states UNCERTAINTY; a known bias belongs in the
+  PREDICTION.** Absorbing it into width inflated the γ = 0.5 half-width
+  (0.21887836869808167) past the
+  prediction itself (0.16958847637891772), which
+  makes V-S2b nearly unfalsifiable there.
+- **So a SECOND prediction was stamped alongside the first** — equally
+  probe-free, equally pre-world, using the pipeline ratio directly. The
+  registered analytic prediction still ROUTES, unchanged. Result: γ=0.25: pipeline pred 0.01862603990771079 (half 0.005021709419392657), |err| 0.003061741680395986 vs analytic |err| 0.004797488740945814; γ=0.5: pipeline pred 0.1078277059876844 (half 0.0057682731266421915), |err| 0.0022836572978901792 vs analytic |err| 0.05947711309334314; γ=0.75: pipeline pred 0.2116184442197572 (half 0.005406852719451732), |err| 0.00492557204278582 vs analytic |err| 0.031674560784501926.
+  **3/3 inside the pipeline bands, whose half-widths (~0.005) are 8x to
+  40x TIGHTER than the analytic ones, with absolute errors ~13x smaller at
+  γ = 0.5 (0.0023 against 0.0595).** The transfer law's FORM is right — monotone,
+  sharply non-linear, correct ordering, near-flat top and collapsing knee — while
+  its analytic COEFFICIENT overshoots; the softmax-corrected version is accurate
+  to 0.002–0.005 across the interior.
+- **The conservatism direction, as the registration requires:** the budget took
+  the MAX absolute deviation across MC reps (not the mean) times
+  1.5, because in R2b this executor's probe-based
+  transport term undersized the realized value by 1.53x. The budget therefore
+  errs WIDE, which makes the sealed test EASIER to pass — the direction that
+  flatters a hit, and therefore the one that had to be disclosed.
+- **V-S2a: r(0) NULL on FRESH worlds** — -0.000556827079510771
+  [-0.001610303477140683, 0.0004102164964021282] against ε = 0.010125436066679785
+  (True). S1's falsifier arm reproduces on worlds it never saw,
+  which is what licenses reading the interior points as shape rather than
+  artefact.
+- **Anchors PASS (True), and they route INSTRUMENT_DEFECT rather than
+  a shape cell.** γ = 1 re-measured 0.237741075953029 against S1's
+  0.23983432331725474, deviation -0.0020932473642257254 within
+  the 2√2·SEM band 0.006421905101506714 (z = -0.921937887620048).
+- **V-S2c, the direction reading (adjudicates nothing):** cosine and distance
+  geometries agree in sign at every γ (True) and
+  cosine exceeds distance at γ = 1 (True) — T8's
+  expectation, checked rather than assumed.
+- **Gates.** G1s2 / #59: the interior arms' preferences are genuinely MIXED (mean
+  max-π ≈ 0.586 at both γ = 0.25 and 0.75, against 0.25 for flat and 1.0 for
+  collapsed), so the interior g values are not forced by construction. G2s2 PASS.
+  G3s2 PASS: power 1.0 at each
+  interior truth with false-fire
+  0.0; escalation
+  False.
+- Rule 13: 0 events. Report: `reports/SUICA_M4_S2_TRANSFER_LAW_REPORT.md`.
+- **One registration-defect candidate:** RN-S2-6, the SE_approx category error
+  (systematic bias absorbed as band width). Non-blocking — the registered test
+  routed exactly as written and the fix was stamped alongside it before any
+  world.
