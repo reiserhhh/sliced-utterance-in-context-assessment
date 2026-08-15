@@ -297,3 +297,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #64 | R-line / M4-R2b | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R2b outcome + planner adjudication` | The registered κ_slow operand order yields a NEGATIVE tax against a positive sealed prediction — S3 structurally unfirable under perfect channel specificity; executor pinned the standard secant orientation pre-measurement (RN-R2B-2) with the literal reading reported. | none (convention: every registered estimand states its sign convention with a worked numeric example) | sign-convention |
+
+## Dated additions (2026-08-16, seventeenth note — S1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #65 | S-line / M4-S1 | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — S1 outcome + planner adjudication` | C-S1a conflated uniform SELECTION with baseline EXPOSURE and demanded both at β=0 — but uniformizing exposure scatters authors across frames and the level drop (−0.032 paired, CI excludes zero) is the program's own frame-coherence mechanism behaving correctly; the executor's dual reading (B: β=0 as frame-path no-op, already bit-certified in Part 0) adopted by dated note; the generator certified without re-run. | none (convention: neutrality clauses name WHICH neutrality — selection-side, exposure-side, or path-level — and anchor only on the path-level no-op unless the mechanism itself is the test) | neutrality-conflation |

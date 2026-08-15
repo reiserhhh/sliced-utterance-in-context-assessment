@@ -302,3 +302,111 @@ specification rather than in the apparatus.**
   handback exactly as the ladder intends, and the generator itself is certified on
   every other clause.
 - Report: `reports/SUICA_M4_S1_CHOICE_GENERATOR_REPORT.md`.
+
+### Planner adjudication of S1 (2026-08-16, appended after the run) — THE GENERATOR IS CERTIFIED BY DATED NOTE; THE FAILING CLAUSE WAS THE PLANNER'S CONFLATION
+
+**INSTRUMENT_DEFECT(C_S1a) accepted as routed — and resolved by the
+executor's dual reading. Defect #65 (mine):** C-S1a conflated two
+neutralities — uniform SELECTION (π flat) and baseline EXPOSURE —
+and demanded both at β = 0. Uniformizing exposure scatters each
+author across frames, destroying exactly the frame-coherence the
+gauge reads; the level drop (−0.03191225113985062
+[−0.0512, −0.0115], paired against the same worlds' layout
+exposure) is CORRECT behaviour predicted by appendix II's own
+mechanism. Reading (B) — β = 0 as the frame-path no-op — is what
+"neutral anchor" meant, and its evidence ALREADY EXISTS in this
+leg's Part 0: panel, truth panel and field bit-exact at
+choice = layout (0.09919789 = 0.09919789), every v2 object
+bit-identical. **Dated note: C-S1a is re-typed to reading (B),
+whose certificate is the leg's own Part-0 bit-exactness. With
+C-S1b and C-S1c PASSED, the choice generator is CERTIFIED.** No
+re-run is needed because no new quantity needs measuring — the
+(A)-clause's failure is a planner specification defect, recorded,
+not an instrument fault.
+
+**Two findings worth carrying:** (i) the exposure-uniformization
+level drop is a NEW mechanism-consistent reading (scattering frames
+costs the gauge −0.032 at these knobs) — named THE SCATTER READING,
+unregistered, adjudicating nothing, a candidate future tax channel;
+(ii) C-S1c's γ = 0 arm is the line's treasure: **a selection
+signature exactly as stable as the trait-driven one (split-half
+0.556 vs 0.563) carrying ZERO trait information** (Mantel −4e-05
+against ε = 0.0101) — decomposition (b) is now a measured physical
+possibility, and SR1's real-data verdict must be read against it.
+
+**Environment note:** the pinned venv was destroyed by the tmp
+reaper between legs and rebuilt from the lockfile with identical
+versions before any number (A-1) — the environment pin's value
+demonstrated; future legs re-verify the interpreter as a matter of
+course.
+
+---
+
+## M4-S2 — the transfer law (sealed shape of r(γ))
+
+**REGISTERED 2026-08-16, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. The synthetic half of the
+owner's conjecture, as a sealed quantitative law.
+
+### The derived shape (planner theory; executed derivation and its error budget in Part 0)
+
+Selection similarity is driven by the mixed vector γ·u + (1−γ)·v
+with u ⟂ v (S1-certified independence); trait similarity by u
+alone. Under the pinned pipeline the pairwise-similarity
+correlation obeys
+
+    r(γ) = r(1) · g(γ),  g(γ) = γ² / √(γ⁴ + (1−γ)⁴)
+
+with r(1) the amplitude (attenuation through multinomial sampling
+and the softmax pipeline — γ-independent, as C-S1b's equal
+stabilities at both γ showed). Amplitude input: S1's persisted
+r(1) = 0.23983432331725474 (G0 bit-verifies). Predicted interior
+points (planner sanity, executor recomputes at full precision):
+g(0.25) ≈ 0.1104, g(0.5) ≈ 0.7071, g(0.75) ≈ 0.9938 — a sharply
+non-linear shape (near-flat top, collapsing knee) that no smooth
+monotone guess reproduces by luck. Bands per #61: SE_pred (S1's
+r(1) CI propagated) ⊕ SE_meas ⊕ SE_approx (the softmax/z-scoring
+distortion budget, derived in Part 0 from the pipeline's own
+arithmetic on probe-free objects; the R2b lesson on undersized
+transport terms applies — the executor states the budget's
+construction and its conservatism direction).
+
+### Design
+
+γ ∈ {0, 0.25, 0.5, 0.75, 1.0} × 16 worlds each (80 worlds; the
+985-author panel gives abundant pairs). share 0.25, φ 0.60,
+w_style 1.0, β = β* = 1.7 (S1's pinned value). Salts `m4s2-author`
+/ `m4s2-frameA` / `m4s2-pilot`, master_seed 20260816. K2f
+ordering: predictions for the three INTERIOR γ hashed BEFORE any
+fresh world; the endpoints are re-measured as anchors (γ = 1
+against S1's value distributionally; γ = 0 against the ε-null).
+
+### Verdicts (rule 22; NULL-first; sides declared)
+
+- **V-S2a [.75]:** r(0) NULL on fresh worlds (ε from permutation
+  arithmetic as S1).
+- **V-S2b [.55 for 3/3]:** the three interior measurements inside
+  their sealed bands — 3/3 → **TRANSFER_LAW_SEALED**; 2/3 →
+  **SHAPE_PARTIAL** (the miss names the distortion); ≤1/3 →
+  **SHAPE_WRONG** (the analytic form dies; the curve is reported).
+- **V-S2c (reading, the owner's direction question):** cosine-based
+  vs distance-based selection similarity — the same Mantel
+  quantities under both geometries, reported side by side (T8's
+  expectation: cosine dominates; distance mixes magnitude).
+- Anchor failures route **INSTRUMENT_DEFECT**, never a shape cell.
+
+### Gates
+
+G0s2 (S1 values bit-exact incl. r(1), β*, u/v pins, ε arithmetic);
+G1s2 (C2-style battery; γ interior arms' π actually mixed — #59
+non-degeneracy: interior g values are not forced by construction);
+G2s2 pilot 4 worlds at γ ∈ {0.25, 0.75} (rule-29 predicates);
+G3s2 projection (interior-band widths achievable at 16 worlds/arm;
+once-only escalation to 32 ON THIS GATE); G4s2 (routing verified;
+rule 24; stages < 600 s; target < 30 min).
+
+Deliverables: the six as always;
+`reports/SUICA_M4_S2_TRANSFER_LAW_REPORT.md`; ONE commit
+`feat(m4-s): S2 — the transfer law — <SLUG>`. Dispatch order note:
+SR0 (the real-data reconnaissance, already registered above) runs
+BEFORE S2 — the real track takes its first leg; S2 follows.
