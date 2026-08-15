@@ -704,3 +704,48 @@ trait-similarity.**
 - Rule 13: 0 events. **Registration-defect candidates: none** — the registration
   was executable exactly as written.
 - Report: `reports/SUICA_M4_SR1_SELECTION_GEOMETRY_REPORT.md` (aggregates only).
+
+### Planner adjudication of SR1 (2026-08-16, appended after the run) — DECOMPOSITION (b) HOLDS ON PANDORA; THE OWNER'S CONJECTURE GETS ITS FIRST REAL-DATA PAIRWISE CONFIRMATION
+
+**SELECTION_TRAIT_COUPLING_DETECTED accepted — zero registration
+defects, the seal proven (stamp 91.577 s before the first joint
+quantity, zero prior joins, selection stage never opened the label
+table), zero ID leaks with the scan re-run report-present.**
+Primary: **Mantel r = 0.048987613136188025, one-sided permutation
+p = 0.001 (0/999 permutations reached it; empirical null sd
+0.009064019613144935; z = 5.416)** over 852,165 pairs of 1306
+users. Robustness is the result's spine: **all six registered
+geometries agree in sign** (GEOMETRY_SPLIT False — the C-4
+direction concern does not bite on this corpus at this
+granularity), both time halves (+0.0399 / +0.0450), and all three
+activity tertiles (+0.0445 / +0.0320 / +0.0639). Disattenuated
+0.0640 (UNBUDGETED; label reliability declared 0.80).
+Axis-space honestly NOT_RUN (inputs absent; a substitute would be
+a different object inviting the barred mis-citation).
+
+**Defect #66 (mine — the #57 family, on power heuristics).** SR0's
+power table used the 1/√(N−1) closed form for the Mantel null sd;
+the empirical permutation null is 3.054× smaller (0.00906 vs
+0.02768), so the declared MDR 0.0776 was overstated and the
+observed 0.0490 sits at 1.93× the CORRECTED empirical MDR
+(0.0254). The registered adjudicator was always the permutation
+test, so routing is untouched — but the modifier BELOW_SR0_MDR is
+carried, and the convention is enacted: **power analyses for
+permutation tests pin the null-sd METHOD, preferring a small
+pre-registered permutation calibration over closed-form
+heuristics.** The executor corrected its own table and disclosed
+the error's favourable direction unprompted.
+
+**The reading, bounded exactly as the tier demands.** This is a
+CORPUS-LEVEL pairwise aggregate at EXPLORATORY tier: small in
+absolute magnitude, supporting NO person-level claim, quotable
+only with its tier label and alongside the S1 γ=0 counterexample —
+which is what makes the finding a finding: stability alone would
+NOT have implied this (S1 proved a stable, trait-silent selection
+signature is physical); the coupling is a measured fact about this
+corpus, not a logical consequence of signature stability.
+Decomposition (a) was SR0's; **decomposition (b) is now measured:
+on PANDORA, people who choose similar frames measurably have
+similar Big5 profiles, across every registered geometry.** Theory
+consequence in appendix NN; S2 (the sealed synthetic shape
+r(γ)) dispatches next to complete the line's synthetic half.

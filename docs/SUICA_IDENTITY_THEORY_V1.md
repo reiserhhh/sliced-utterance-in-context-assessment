@@ -2018,3 +2018,46 @@ is HELD pending the reconciliation derivation of two distinct
 identity formalisms (typology-η vs style-channel) — the #59 class
 of error, avoided by not registering it yet. The loop rests here
 with the founding question answered where it could be posed.
+
+## Appendix NN — dated append (2026-08-16, post-SR1): the selection conjecture — apparatus, falsifier, and the first real-data detection
+
+**NN.1 — The conjecture and its decomposition.** The owner's
+conjecture, arriving from the identity era's mechanism results:
+the gauge reads frames, but WHICH frames a person chooses is
+person-owned — so selection-proximity should imply
+personality-proximity. Decomposed for adjudication: (a) selection
+is a person-stable signature; (b) selection-similarity implies
+trait-similarity. (b) is not a theorem: M4-S1's γ = 0 arm built a
+world whose selection signature is exactly as stable as the
+trait-driven one (split-half 0.556 vs 0.563) while carrying ZERO
+trait information (Mantel −4e-05) — stability without coupling is
+physical, so (b) must be measured, never inferred.
+
+**NN.2 — The real-data verdict.** On PANDORA (1306 users, 852,165
+pairs, sealed config-before-joint, R-G governed): (a) holds
+strongly — selection signatures are person-stable (split-half
+self-cosine 0.681 vs 0.051 permuted; pairwise-similarity ceiling
+0.733). (b) is DETECTED — Mantel r = 0.0490, permutation
+p = 0.001 (z = 5.42), positive in all six registered geometries,
+both time halves, and all three activity tertiles; disattenuated
+≈ 0.064 under declared reliabilities. EXPLORATORY, corpus-level,
+no person claims; small in absolute magnitude and quotable only
+so.
+
+**NN.3 — The mechanism reading.** With the P/Q-line instrument
+statement in force (the gauge is a frame-agreement meter), the
+selection channel is the licensed route by which a context meter
+becomes a person reader: the person's frame CHOICES carry the
+person into pairwise geometry even where the gauge's own reading
+cannot cross frames. The rind model's choice channel — the
+program's founding design principle — returns with its mechanism
+and its first sealed pairwise confirmation.
+
+**NN.4 — Method residue.** #65 (neutrality clauses name their
+neutrality; the scatter reading recorded), #66 (permutation power
+analyses pin the null-sd method; the 1/√(N−1) heuristic
+overstated the Mantel null 3.05× and the executor's own
+correction is the record). The synthetic shape law r(γ) (S2) and
+the S1-γ intermediate coupling remain the line's open synthetic
+half; the 12-axis refit is priced (TF-IDF inputs absent) and
+parked.

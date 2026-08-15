@@ -303,3 +303,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #65 | S-line / M4-S1 | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — S1 outcome + planner adjudication` | C-S1a conflated uniform SELECTION with baseline EXPOSURE and demanded both at β=0 — but uniformizing exposure scatters authors across frames and the level drop (−0.032 paired, CI excludes zero) is the program's own frame-coherence mechanism behaving correctly; the executor's dual reading (B: β=0 as frame-path no-op, already bit-certified in Part 0) adopted by dated note; the generator certified without re-run. | none (convention: neutrality clauses name WHICH neutrality — selection-side, exposure-side, or path-level — and anchor only on the path-level no-op unless the mechanism itself is the test) | neutrality-conflation |
+
+## Dated additions (2026-08-16, eighteenth note — SR1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #66 | S-line / M4-SR1 (origin in SR0's power table) | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — SR1 outcome + planner adjudication` | SR0's Mantel MDR used the 1/√(N−1) closed form; the empirical permutation null sd is 3.054× smaller (0.00906 vs 0.02768), overstating the declared MDR (0.0776 vs corrected 0.0254). The registered permutation test adjudicated correctly; the power table did not. Executor self-corrected and disclosed the favourable direction. | none (convention: permutation-test power analyses pin the null-sd method, preferring a small pre-registered permutation calibration over closed-form heuristics) | permutation-power |
