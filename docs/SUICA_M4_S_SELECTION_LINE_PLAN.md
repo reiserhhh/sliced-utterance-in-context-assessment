@@ -625,3 +625,82 @@ Deliverables: the six as always;
 only); ONE commit `feat(m4-s): SR1 — the selection-geometry test —
 <SLUG>`. Sequencing note: SR1 dispatches before S2 (the real track
 carries the line's point; S2's synthetic shape follows).
+
+### Outcome of M4-SR1 (executed 2026-08-15, append-only)
+
+**`SELECTION_TRAIT_COUPLING_DETECTED` (rule-16 cell 2).** Modifiers:
+BELOW_SR0_MDR, AXIS_SPACE_NOT_RUN. **EXPLORATORY, corpus-level, no person claims.**
+**Decomposition (b) holds on PANDORA: selection-similarity does carry
+trait-similarity.**
+
+- **The seal held.** Config hashed `11b36622c2099acae3d72b54b6c8502b5cc2a913831fce1bd1f64eb6efc11876` and stamped
+  2026-08-15T17:13:13.916769+00:00 with **0 joint
+  quantities in existence**; the first joint selection x trait quantity was
+  computed at 2026-08-15T17:14:45.493576+00:00, **91.576807 s later**
+  (True). The selection stage never opened the label
+  table (False); SR0's no-peek enumeration was
+  the hand-off state and its gate is re-verified PASS.
+- **G0sr1: every SR0 number bit-verified** — ceiling 0.7332, MDR
+  0.0776, N 1306, pairs 852165, vocabulary 1191, coverage
+  0.7814, all matching. One executor slip caught and fixed BEFORE the first
+  join: the signature threshold must apply to the IN-VOCABULARY comment total
+  (SR0's own definition), not the overall total — the overall reading gives 1362
+  users instead of 1306. Corrected, N and vocabulary then reproduced exactly.
+- **PRIMARY: Mantel r = 0.048987613136188025, one-sided permutation p = 0.001**
+  over 852,165 pairs from 1306 users. **0
+  of 999 permutations reached the observed value.** Null mean
+  -0.00010562885372651673, sd 0.009064019613144935, 95th pct 0.01540180833500572, max
+  0.029409823942762026; **z = 5.416277113822429**.
+- **A CORRECTION TO SR0's POWER ANALYSIS, WHICH THIS EXECUTOR WROTE, AND WHICH
+  CUTS IN THIS LEG'S FAVOUR.** The observed r is 0.6312836744354127x
+  SR0's declared MDR 0.0776 — i.e. BELOW it — yet p = 0.001.
+  The reason: SR0's MDR used the standard 1/sqrt(N-1) heuristic for the Mantel
+  permutation sd (0.027681826617913324), and the
+  EMPIRICAL permutation null sd is 0.009064019613144935 — the
+  heuristic **overstates the null spread by 3.0540342805269574x**.
+  The corrected empirical MDR is 0.025393623364872876 and the observed
+  r is 1.929130492025523x that. The registered test is the
+  PERMUTATION null and always was, so the routing is unaffected — but SR0's power
+  table was wrong, and it was wrong in the direction that flatters this leg. The
+  `BELOW_SR0_MDR` modifier is carried for exactly this reason.
+- **Disattenuated (UNBUDGETED, routes nothing): 0.06396318159111603**
+  = observed / sqrt(0.7332 x 0.80). The selection reliability is MEASURED; the
+  label reliability 0.80 is DECLARED, not measured, so this is an illustration of
+  scale and never a result (rule 30).
+- **No GEOMETRY_SPLIT** (False): all six selection x trait
+  geometries agree in sign (+1). hellinger_cosine x negative_squared_euclidean = 0.048987613136187574; hellinger_cosine x centred_profile_cosine = 0.03207134928723893; raw_frequency_cosine x negative_squared_euclidean = 0.03703374254514458; raw_frequency_cosine x centred_profile_cosine = 0.025984074919015603; negative_euclidean_distance x negative_squared_euclidean = 0.04789480729045626; negative_euclidean_distance x centred_profile_cosine = 0.03201520943384964. The owner's C-4 direction concern is
+  checked and clear — the reading does not depend on the direction convention.
+- **Split-half agreement:** early 0.03985813511679325, late 0.04498873327209943, mean
+  0.042423434194446344, agreeing in sign (True); the selection geometry's
+  own early-vs-late self-consistency is 0.675573251251224.
+- **Comment-count tertiles:** low (n=437, median 73 comments) = 0.0444626838820253; mid (n=434, median 481 comments) = 0.03199603525666885; high (n=435, median 2884 comments) = 0.06391622568311668 — positive in all three, and largest in the
+  heaviest-posting tertile.
+- **The 12-axis space: NOT RUN, on evidence.** A faithful refit runs TF-IDF over
+  SLICE TEXT (constructor lines 49-55) and both inputs
+  (`phase2_passB_slicetext_s128.parquet`, `tier_u_comments.parquet`) are absent
+  from disk. Refitting would require reading comment text, which this line has
+  never done; substituting a co-occurrence "axis" would be a different object and
+  would invite the mis-citation the planner barred. Declared NOT_RUN with the
+  reason rather than approximated.
+- **G1sr1** predicates pass: cosines within [-1, 1]
+  (True); selection similarity spans
+  [0.0,
+  1.0], trait similarity
+  [-46.45520669416317,
+  -0.0].
+- **G3sr1 / R-G compliance:** the report was scanned against all
+  1401 cohort IDs with the report present —
+  **0 leaks**. Aggregates only, no per-user rows,
+  no text excerpts, `body` never read, no cross-corpus linkage; Essays untouched
+  with confirm-half labels sealed; native corpus untouched and still paused.
+- **What this does and does not establish.** It establishes decomposition (b) at
+  EXPLORATORY tier on one corpus: pairwise selection proximity carries pairwise
+  trait proximity, robustly across geometries, halves and activity tertiles. The
+  magnitude is small in absolute terms (0.048987613136188025), it is a CORPUS-LEVEL
+  pairwise statistic and supports NO person-level claim, and the (a)-only reading
+  rule still binds for SR0 — S1's gamma = 0 arm remains the standing proof that
+  stability alone would not have implied this. **The owner's conjecture has its
+  first real-data pairwise confirmation.**
+- Rule 13: 0 events. **Registration-defect candidates: none** — the registration
+  was executable exactly as written.
+- Report: `reports/SUICA_M4_SR1_SELECTION_GEOMETRY_REPORT.md` (aggregates only).
