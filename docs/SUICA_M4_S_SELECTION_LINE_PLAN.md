@@ -518,3 +518,110 @@ joint selection x label quantities found**.
   no-peek mandate and routing were all executable as written; the "1401 rows"
   description is exact.
 - Report: `reports/SUICA_M4_SR0_RECON_REPORT.md` (aggregates only).
+
+### Planner adjudication of SR0 (2026-08-16, appended after the run) — SR1 IS READY; THE (a)-ONLY READING RULE BINDS
+
+**SR1_READY accepted — zero registration defects, zero ID leaks,
+zero joint quantities.** The recon delivered: sources pinned (5.4
+GiB comment table streamed at 17,640,062 rows without reading
+`body`; the 1401 cohort EXACT, with the executor correcting its own
+early wc-based miscount); the selection-signature object defined
+(1191-subreddit vocabulary at the ≥15-user floor, coverage 0.7814,
+1306 signature-carrying users); **selection proven strongly
+person-stable on real data** (self-cosine 0.6814 vs permuted
+0.0512; pairwise-similarity reliability 0.7332 by Spearman-Brown —
+SR1's ceiling); power adequate (852,165 pairs; minimum detectable
+observed Mantel r 0.0776). The 12-axis constructor is LIVE CODE
+with its fitted map absent — SR1 refits if it uses axes and may
+NOT cite the historical 5/5 as if those axes were in hand
+(adopted). The executor's A-4 (its own no-peek gate's substring
+false positive, replaced pre-clean-declaration by a strictly
+stronger leaf-key test) is the gate-hardening pattern working on
+the gate itself.
+
+**Binding reading rule for SR1 (the executor's interpretive point,
+adopted verbatim):** SR0 measured decomposition **(a) only**.
+S1's γ = 0 arm stands as the physical counterexample — a perfectly
+stable selection signature carrying zero trait information — so
+SR0's stability is NOT evidence for the owner's conjecture, and no
+SR1 text may read it as such.
+
+---
+
+## M4-SR1 — the selection-geometry test on PANDORA (sealed)
+
+**REGISTERED 2026-08-16, BEFORE RUN.** Planner: this document's
+author; executor: dispatched agent. THE REAL-DATA VERDICT LEG for
+decomposition (b). Tier: EXPLORATORY, corpus-level; the R-G block
+binds; **no person claims; aggregates only; quotable only with the
+tier label.**
+
+### Estimand (ONE primary; everything else second readings with no verdict weight)
+
+Over the 1306 signature-carrying users: **Mantel correlation
+between pairwise SELECTION similarity and pairwise TRAIT
+similarity.**
+
+- Selection similarity (primary): **Hellinger cosine** — cosine of
+  sqrt-frequency signature vectors (compositional-data standard;
+  pinned NOW, rule 9). Second geometries: raw-frequency cosine;
+  Euclidean-distance-based similarity (the direction question,
+  T8).
+- Trait similarity (primary): **negative squared Euclidean over the
+  five z-scored Big5** (the conjecture's plain "personalities are
+  close"). Second: cosine of centred 5-profiles (shape-only).
+- Statistic: Pearson over the 852,165 pairs; **null = 999
+  permutations of users** (labels shuffled across users, pairs
+  recomputed — the only valid exchangeability), seed master
+  20260816; p one-sided positive per the conjecture's direction
+  (rule 22: side declared).
+- Disattenuation: observed r divided by √(0.7332 · rel_label) with
+  rel_label a DECLARED parameter (0.8), quoted UNBUDGETED
+  descriptive (rule 30 honesty — label reliability is unmeasured).
+
+### Ordering (the seal, adapted)
+
+No worlds exist to generate; the discipline is CONFIG-BEFORE-JOINT:
+the full analysis config (estimand definitions, transforms,
+permutation seed, cells, leans) is hashed and stamped BEFORE the
+first joint selection×trait quantity is computed; SR0's no-peek
+enumeration is the hand-off state; G-SR1 verifies the stamp
+precedes the first join in the run log.
+
+### Leans (sides declared; the S1-γ=0 reading rule in force)
+
+**L-SR1 [POSITIVE_DETECTED .55 / POSITIVE_UNDETECTED .25 /
+NULL_OR_NEGATIVE .20].** Prior grounds: the choice channel's
+trait-LEVEL evidence (H6 lockbox r=+0.096; axes 5/5) suggests a
+real but small pairwise coupling; the MDR 0.0776 sits near the
+plausible magnitude — an honest coin-lean, not a confident one.
+
+### Routing (rule 16 — disjoint, covering, entailed)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/stamp-order/no-peek violation | **STOP / VOID** |
+| 2 | primary r > 0 AND perm p < .05 | **SELECTION_TRAIT_COUPLING_DETECTED** — decomposition (b) holds on this corpus at EXPLORATORY tier; magnitude + disattenuated value quoted UNBUDGETED; the owner's conjecture gains its first real-data pairwise confirmation |
+| 3 | primary r > 0 AND p ≥ .05 | **COUPLING_BELOW_DETECTION** — the signature is real (SR0) and the coupling, if any, is below 0.0776 observed; read against S1's γ=0: stability without coupling is physical |
+| 4 | primary r ≤ 0 | **NULL_OR_NEGATIVE_NAMED** — reported plainly; the second geometries checked for sign agreement |
+| — | second readings (raw-freq; distance; profile-cosine; axis-space refit if used; split-half agreement; comment-count tertiles) | reported, adjudicating nothing; any sign DISAGREEMENT among geometries is flagged GEOMETRY_SPLIT (the owner's C-4 direction concern, on the record) |
+
+### Gates
+
+G0sr1: SR0's numbers bit-verified (ceiling 0.7332, MDR 0.0776,
+N 1306, pairs 852165, vocabulary 1191, coverage 0.7814); the
+cohort hand-off file consumed as-is; labels joined ONLY inside the
+stamped stage. G1sr1: rule-29 predicates on similarity
+distributions (cosines in [−1,1]); #57 (no pilot correlations; the
+permutation machinery is the null). G2sr1: power stands on SR0's
+analysis (rule 25 satisfied there; no new projection). G3sr1:
+R-G compliance block re-run (ID-leak scan of the report against
+all cohort IDs; aggregates only). Rule 24 generated tables; stages
+< 600 s (the pair matrix at 1306 users is in-memory feasible;
+permutations chunked); target < 40 min.
+
+Deliverables: the six as always;
+`reports/SUICA_M4_SR1_SELECTION_GEOMETRY_REPORT.md` (aggregates
+only); ONE commit `feat(m4-s): SR1 — the selection-geometry test —
+<SLUG>`. Sequencing note: SR1 dispatches before S2 (the real track
+carries the line's point; S2's synthetic shape follows).
