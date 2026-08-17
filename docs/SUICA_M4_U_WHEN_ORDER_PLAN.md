@@ -456,3 +456,146 @@ denominator; all-events gives 0.1076).
 inherits: the live order channel, dwell dominance as its expected slow-time
 analogue, and the census (spans median 1157 d). U3 remains gated on U2 and on
 the cross-thread designation above.
+
+---
+
+## U2 — the personal persistence curve (registered BEFORE run, 2026-08-18)
+
+### 4W header
+
+- **Which 4W object.** When, slow time — the persistence of the Where
+  signature: how the marginal selection distribution π_u holds or drifts over
+  calendar time. A slow-time projection of K_u (eq 12); §2.4's "state
+  durations and change points" at the coarsest scale. Identity structure
+  only; no psychological naming (§5.4).
+- **What is fixed / what is varied.** Fixed: SR0 vocabulary (1191);
+  Hellinger unigram sphere (√freq, L2 — the T-line's identity-carrying
+  metric); blocks of exactly K = 50 consecutive in-vocabulary events
+  (disjoint, no sliding), so measurement noise is constant by construction.
+  Varied: the calendar gap Δt between block midpoints, binned; personal vs
+  epoch-matched cross-author pairing.
+- **What falsifies.** A flat personal-excess curve (decay contrast D
+  indistinguishable from its permutation null AND inside the equivalence
+  band) yields FIXED_POINT — a statement that drift is undetected at this
+  span and power, for this projection; NOT "no dynamics" (the eq-12
+  projection caution is quoted into any verdict).
+- **V/R/P layer.** R. No synthetic gate is required: the estimator is a
+  binned mean contrast with a permutation null, not a fitted discriminator;
+  its honesty checks are the permutation null itself plus contract tests
+  (defect #76's operating-point convention does not bind — no world is
+  simulated; where a functional form appears it is a refinement, never the
+  verdict carrier).
+
+### Question and estimand
+
+Is the personal selection signature a standing wave or a moving one? For
+authors' disjoint K-event blocks, define per gap bin b:
+
+    E(b) = mean cos(h_i, h_j | same author, gap in b)
+         − mean cos(h_i, h_j | different authors, epoch-matched, gap in b)
+
+where h is the block's Hellinger vector and the cross term matches the
+self-pairs' joint (quarter_i, quarter_j) histogram — absorbing global
+platform drift (communities rising and dying) so E is PERSONAL persistence
+in excess of shared-epoch similarity. Primary contrasts: existence
+E(0–90d) > 0; decay D = E(0–90d) − E(2–3y). The endpoint is registered
+against the available span (convention #74): 2–3y is the last bin with deep
+support; 3y+ is a descriptive extension, never the verdict endpoint.
+
+### Census (planner arithmetic, #43, run 2026-08-18 on the U1 events cache)
+
+Cache: `results/m4_u1_order_identity/events_cache.npz` — 3,005,360 cohort
+events, built by the committed U1 runner from the canonical CSV under
+contract tests; the U2 runner must re-verify its anchors (event count,
+1401 authors, vocabulary 1191) before use.
+
+| quantity | value |
+|---|---|
+| authors with ≥ 4 blocks (K=50) | **849** (primary pool, #69) |
+| authors with ≥ 2 / ≥ 8 blocks | 1028 / 690 |
+| total blocks | 46,318 over 18 calendar quarters |
+| self pairs 0–90d / 90–180d / 180–365d | 1,005,742 / 783,654 / 1,198,561 |
+| self pairs 1–2y / 2–3y / 3y+ | 1,248,992 / 417,963 / 100,150 |
+| authors contributing to 2–3y / 3y+ | 564 / 332 |
+| min cross candidates per self quarter-pair cell | 115.4× (epoch matching feasible in every bin) |
+| activity terciles (pool sizes) | 302 / 265 / 282 (edges 650 / 2050 vocab events) |
+
+### Design pins (#70)
+
+- Blocks: K = 50 consecutive in-vocabulary events, disjoint, stream-ordered
+  (stable sort, ties keep stream order — U1's pin); trailing remainder
+  dropped; block midpoint = mean of first and last event timestamps.
+- Features: √(count/K) over the 1191 vocabulary, L2-normalized. No OOV state
+  (bags are vocab-restricted — T-line convention; coverage 78.14% named).
+- Bins: {0–90d, 90–180d, 180–365d, 1–2y, 2–3y} verdict bins + 3y+
+  descriptive.
+- Cross baseline: per bin, different-author block pairs sampled to match the
+  self-pairs' joint quarter-pair histogram, up to 20 cross pairs per self
+  pair per cell (min feasibility 115× censused); quarter = 91.3 days from
+  the corpus minimum timestamp.
+- Own null (#68, #66): B = 499 permutations reassigning block→author labels
+  within each calendar quarter (epoch structure preserved exactly, identity
+  destroyed); E(b) and D recomputed per permutation; band = 2.5/97.5
+  percentiles; E's expected null location is 0 BY CONSTRUCTION of the
+  contrast — stated, and verified by the null's realized center.
+- Uncertainty: cluster bootstrap over authors, B = 1000, CIs on E(b), D, and
+  the floor share E(2–3y)/E(0–90d).
+- Attenuation: constant across bins by the fixed-K construction; E is an
+  attenuated level (reliability < 1 at K = 50), D and the floor share are
+  the transportable quantities; adjacent-block similarity is reported as the
+  reliability descriptive.
+- Refinement (not verdict-carrying): if D is detected, fit
+  E(Δt) = E_inf + A·exp(−Δt/τ) on bin-midpoint means (cluster-bootstrap CI;
+  τ capped at 10 y, cap-hit reported).
+
+### Arms
+
+| arm | role |
+|---|---|
+| full vocab, pool 849, verdict bins | PRIMARY |
+| balanced panel (564 authors with 2–3y support) | sensitivity — composition shift control |
+| activity terciles (302/265/282) | secondary — decay shape by activity |
+| clean_no_explicit_personality (23 removed, blocks recomputed) | governance echo; #73 flag on divergence |
+| 3y+ extension | descriptive only |
+| K = 100 blocks | sensitivity — block-size stability |
+
+### Classification cells (NULL-first #55, effect-size keyed #75)
+
+1. **NO_PERSONAL_PERSISTENCE** — E(0–90d) CI includes 0 or is inside the
+   permutation band. (Would contradict the T-line's early/late AUC; the cell
+   must exist regardless.)
+2. **FIXED_POINT** — E(0–90d) > 0; D CI includes 0 AND |D| < 0.2·E(0–90d)
+   (equivalence band; its achievable width vs the realized D band is
+   reported per #71).
+3. **DRIFT_WITH_CORE** — D > 0 outside its null band and E(2–3y) CI > 0.
+4. **FULL_DRIFT** — D > 0 and E(2–3y) CI includes 0.
+
+Straddles reported as straddles; the verdict takes the interval statement.
+Full-vs-clean and primary-vs-balanced divergences carry #73 flags; the
+primary arm routes.
+
+### Registered leans
+
+- Primary lean: **DRIFT_WITH_CORE with a large floor** — floor share
+  E(2–3y)/E(0–90d) in [0.6, 0.9]. Rationale: the T-line's early-to-late
+  AUC 0.9837 over median 3.2-year spans and the S-line's split-half 0.681
+  demand a large permanent core; personal taste drift over 3 years is
+  plausible but epoch matching already absorbs the platform's own drift.
+- Secondary lean: the decay, if detected, is concentrated in the low-activity
+  tercile (thin signatures drift-or-noise more); held weakly.
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_u2_persistence_curve.py` +
+`tests/test_m4_u2_persistence_curve.py`; gitignored
+`results/m4_u2_persistence_curve/`; report
+`reports/SUICA_M4_U2_PERSISTENCE_CURVE_REPORT.md` (rule-24 generated tables;
+own-null locations; the eq-12 projection caution in the verdict; config
+block); outcome appended here; one CLAIMS_LEDGER row (EXPLORATORY,
+label-free, corpus-level); exactly ONE commit
+`feat(m4-u): U2 — the personal persistence curve — <VERDICT>`, never
+amended, never pushed by the executor. Suite green (1060 + new) before
+commit. Blocking gates: cache anchor verification, permutation-null center
+check, ID-leak scan (0 of 1401 cohort IDs in committed files), exact-K block
+invariants. SEED = 20260818; B_perm = 499; B_boot = 1000. Label-free: no
+Big5/MBTI value is read.
