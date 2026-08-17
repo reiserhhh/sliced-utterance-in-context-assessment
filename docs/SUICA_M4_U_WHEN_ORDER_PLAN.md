@@ -900,3 +900,121 @@ label-free, cheap, and it tests a prediction DERIVED from the T-line
 proposition. U3 (stage-E trait join) remains gated: it now inherits BOTH
 the cross-thread designation (U1) and the drift-aware caution that
 slow-time coordinates are moving targets (U2).
+
+---
+
+## U2b — the persistence budget by carrier (registered BEFORE run, 2026-08-18)
+
+A derived-prediction test: the T-line proposition ("identity lives in the
+distinctive; personality lives in the common") plus U2's DRIFT_WITH_CORE
+forces the question WHICH LAYER MOVES. If re-identification survives three
+years while the signature loses ~46% of its personal excess, the T-line
+reading predicts the distinctive layer is the standing part. This leg tests
+that prediction label-free on U2's own blocks.
+
+### 4W header
+
+- **Which 4W object.** When × the T-line's carrier split — the persistence
+  curve of U2, decomposed by sub-vocabulary carrier (common mass vs
+  distinctive tail vs the low-rank taste coordinate). Slow-time projection
+  of K_u; identity structure only, no psychological naming.
+- **Fixed.** U2's blocks, bins, pools, permutation-null machinery, Hellinger
+  conventions — inherited unchanged (inheritance is not exemption, #56: the
+  U2 anchors are re-verified bit-close before any new row). The vocabulary
+  split is corpus-global and fit-free, precedent: SR0's vocabulary itself.
+- **Varied.** The carrier restriction (full / common / distinctive / taste);
+  the split level q ∈ {0.3, 0.5, 0.7}; the eligibility floor m ∈ {5, 10, 15}.
+- **What falsifies.** A Δfloor CI strictly below 0 (COMMON_STANDING) refutes
+  the derived prediction and forces a When-clause revision of the T-line
+  proposition; a null split (NO_LAYER_SPLIT) says persistence does not
+  decompose along the common/distinctive axis at this resolution.
+- **Layer.** R.
+
+### Census (planner arithmetic, #43; computations pinned per #77)
+
+Universe: the 2,348,361 in-vocabulary cohort events of the U1 cache (the
+denominator); communities ranked by descending event count over that
+universe; Common(q) = the smallest rank prefix with cumulative share ≥ q;
+Distinctive(q) = its complement within the 1191 vocabulary. Blocks: U2's
+exact construction (849 authors, 45,731 blocks — reproduced). Pair
+eligibility at floor m: a same-author pair enters a restricted row iff BOTH
+blocks hold ≥ m events of that sub-vocabulary (pair-level, per row).
+
+| quantity (pinned definition above) | value |
+|---|---|
+| Common(0.5) | **32 communities** (realized share 0.5036) |
+| Common(0.3) / Common(0.7) | 8 (0.3077) / 104 (0.7008) |
+| per-block common events, q5/q25/median | 0 / 8 / 25 |
+| per-block distinctive events, q5/q25/median | 0 / 6 / 25 |
+| eligible pairs at m=10, 2–3y: common / distinct | 253,946 / 230,661 |
+| distinct-eligible authors at m=10, 2–3y | 506 |
+
+### Design pins (#70, #72)
+
+- Primary configuration: q = 0.5, m = 10.
+- **One pair set for all rows (#72):** the INTERSECTION set — pairs whose
+  both blocks hold ≥ m events in BOTH sub-vocabularies. Full, common,
+  distinctive, and taste rows are all computed on this identical pair set;
+  no cross-row comparison ever uses non-aligned pairs. Registered pool
+  targets (#69): the intersection set must retain ≥ 100,000 pairs and
+  ≥ 400 contributing authors in the 2–3y bin; if unmet at q=0.5/m=10 the
+  leg STOPS and reports (no silent re-split).
+- Rows: (1) full vocabulary (anchor; additionally the UNRESTRICTED full
+  curve is recomputed and bit-compared against U2's committed artifacts —
+  G0 gate); (2) common-restricted (block vector renormalized on Common(q));
+  (3) distinctive-restricted; (4) taste — per-fold PPMI+SVD d = 64 community
+  embeddings (SR3 pattern: 5 folds, KFold shuffle SEED, embeddings fit on
+  TRAINING authors' first-half events only, first half by the author-median
+  rule; test-author purity asserted), block taste vector = Hellinger-weighted
+  mean of its communities' embeddings, L2-normalized; fold curves pooled by
+  unweighted mean (U1 convention).
+- Estimands per row: E_row(b) with U2's epoch-matched exact stratified cross
+  baseline (RD-U2-1 form) on the intersection pair set; floor share
+  F_row = E_row(2–3y)/E_row(0–90d). Verdict contrast:
+  **Δfloor = F_distinct − F_common** with cluster-bootstrap (B = 1000) CI.
+  Secondary contrast: F_taste − F_full.
+- Own nulls (#68/#66): U2's within-quarter permutation, B = 499, per row and
+  for Δfloor; expected null locations 0 by construction, verified.
+- Comparison rule (pinned): LEVEL differences across rows are never
+  interpreted (restricted rows carry different, block-varying attenuation);
+  only within-row floor shares and their contrasts are transportable.
+  Registered descriptive: mean common-share of blocks by account era (the
+  mix-shift trajectory), non-verdict-moving.
+- Sensitivities: q ∈ {0.3, 0.7} and m ∈ {5, 15} on the primary contrast;
+  #73 flags on any cell divergence, primary routes.
+
+### Classification cells (NULL-first #55, effect-size keyed #75)
+
+1. **NO_LAYER_SPLIT** — Δfloor CI includes 0 AND |Δfloor| < 0.10
+   (equivalence band; realized CI width vs the 0.10 band reported per #71).
+2. **DISTINCTIVE_STANDING** — Δfloor CI > 0 (the derived prediction).
+3. **COMMON_STANDING** — Δfloor CI < 0 (forces the When-clause revision).
+4. **UNRESOLVED_SPLIT** — CI straddles 0 with |point Δfloor| ≥ 0.10;
+   verdict takes the interval statement.
+
+### Registered leans
+
+- L1 (the derived prediction, held moderately): DISTINCTIVE_STANDING with
+  point Δfloor ∈ (0.05, 0.25].
+- L2 (held weakly): the taste row posts the highest floor share of all four
+  rows (F_taste ≥ F_full) — the low-rank generalizing coordinate is the
+  slow part.
+- Stated openly: COMMON_STANDING is the informative surprise — it would
+  relocate the standing core to the layer the T-line assigned to
+  personality, and U3's design would then target the stable common layer.
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_u2b_persistence_budget.py` +
+`tests/test_m4_u2b_persistence_budget.py`; gitignored
+`results/m4_u2b_persistence_budget/`; report
+`reports/SUICA_M4_U2B_PERSISTENCE_BUDGET_REPORT.md` (rule-24 generated
+tables; null locations; #71 projection; the eq-12 projection caution;
+config block); outcome appended here; one CLAIMS_LEDGER row (EXPLORATORY,
+label-free, corpus-level); exactly ONE commit
+`feat(m4-u): U2b — the persistence budget by carrier — <VERDICT>`, never
+amended, never pushed by the executor. Suite green (1078 + new) before
+commit. Blocking gates: cache anchors; U2 full-curve bit-comparison (G0);
+intersection pool targets; permutation-null centers; fold purity (taste
+row); ID-leak scan (0 of 1401). SEED = 20260818; B_perm = 499;
+B_boot = 1000. Label-free.
