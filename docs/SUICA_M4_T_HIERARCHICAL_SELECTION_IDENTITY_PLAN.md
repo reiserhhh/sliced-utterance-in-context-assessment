@@ -890,3 +890,152 @@ The six as always: `scripts/run_suica_m4_sr2_coupling_budget.py`;
 HERE; one ledger row (EXPLORATORY, corpus-level); exactly ONE
 commit `feat(m4-t): SR2 — the trait-coupling budget — <SLUG>`,
 never amended, never pushed; suite green first (994 baseline).
+
+## M4-SR2 outcome (2026-08-17, appended by the executing agent) — COUPLING_BEYOND_TASTE
+
+**Routing: `COUPLING_BEYOND_TASTE` (cell 4), modifier
+`SUPPORT_TRAIT_COUPLING_NULL`.** Slug `coupling-beyond-taste`. Report:
+`reports/SUICA_M4_SR2_COUPLING_BUDGET_REPORT.md`; harness
+`scripts/run_suica_m4_sr2_coupling_budget.py`; tests
+`tests/test_m4_sr2_coupling_budget.py`; artifacts (gitignored)
+`results/m4_sr2_coupling_budget/`. EXPLORATORY, corpus-level.
+ID-leak scan 0 hits.
+
+### Label governance — the T-line ordering paid off
+
+| event | UTC |
+|---|---|
+| `config_stamped` (sha256 `abf198c6af3af6ae…`) | 2026-08-17T10:14:34.240101+00:00 |
+| `first_join` | 2026-08-17T10:14:53.741310+00:00 |
+| `labels_opened` (Big5 read) | 2026-08-17T10:14:53.771777+00:00 |
+
+Stamp precedes join: true. Join precedes the first label read: true. Every
+logged event before the join is label-free: true. **The G2 pilot is itself
+label-free** — it calibrates against a synthetic standard-normal trait
+surrogate, so the resolution question was settled before any real Big5
+value was touched.
+
+### Gates
+
+- **G0sr2 PASS.** **SR1's primary is reproduced BIT-EXACTLY by calling
+  SR1's own functions**: r = 0.048987613136188025, 852165 pairs, p = 0.001,
+  null sd = 0.009064019613144935. T3 anchors match (0.7293990670964055,
+  0.9311359256886822); T2 embedding purity re-verified.
+- **G1sr2 PASS.** r spread [-0.0104, 0.0490], nothing forced; smallest
+  observability stratum 130 against a pool target of 20.
+- **G2sr2 PASS (label-free).** Projected full-scale null p95 across all
+  eight readings 0.0114–0.0228, all below SR1's r = 0.049.
+- **G3sr2 PASS.** 28 own-null predicates; stamp-before-join proven from the
+  run log.
+
+### THE COUPLING BUDGET (full arm, B_perm = 999)
+
+| representation | null | pair set | Mantel r | own null band | p (1-sided) | z | detected |
+|---|---|---|---|---|---|---|---|
+| R_obs | marginal | full | **-0.010352** | [-0.02578, 0.02786] | 0.7680 | -0.75 | **False** |
+| R_obs | stratified | full | -0.010352 | [-0.02523, 0.01148] | 0.5960 | -0.27 | False |
+| R_obs (log, #70) | marginal | full | 0.012340 | [-0.01915, 0.02096] | 0.1200 | — | **False** |
+| R_tree | marginal | within-fold | 0.007071 | [-0.01146, 0.01202] | 0.1350 | 1.14 | False |
+| R_tree | stratified | within-fold | 0.007071 | [-0.00932, 0.01513] | 0.2530 | 0.63 | False |
+| R_emb | marginal | within-fold | **0.023885** | [-0.02432, 0.02457] | 0.0310 | 2.01 | **True** |
+| R_emb | stratified | within-fold | 0.023885 | [-0.01004, 0.03165] | 0.1110 | 1.21 | **False** |
+| R_flat | marginal | within-fold | 0.047687 | [-0.01870, 0.02038] | 0.0010 | 4.82 | True |
+| R_flat | marginal | full | **0.048988** | [-0.01756, 0.01728] | 0.0010 | 5.23 | True |
+| R_flat | stratified | full | **0.048988** | [-0.00731, 0.02416] | 0.0010 | 5.13 | **True** |
+
+Carrier ordering (marginal, within-fold — like for like): **R_flat 0.0477
+(z 4.82) > R_emb 0.0239 (z 2.01) > R_tree 0.0071 (z 1.14) > R_obs -0.0087
+(z -0.67)**.
+
+### Verdicts
+
+- **V-SR2a — the confound check: NULL.** R_obs × trait r = **-0.010352**,
+  p = 0.768, own band [-0.02578, 0.02786]. The #70 log1p sensitivity agrees:
+  r = 0.012340, p = 0.120, also undetected. **The support channel carries no
+  trait coupling at all, in either transform.** The registration's first
+  falsifier ("R_obs DETECTED with R_emb dying → re-type SR1 as an
+  activity/support correlate") therefore never fires.
+- **V-SR2b — the carrier question: detected-but-DIES.** R_emb × trait
+  marginal r = **0.023885** (p = 0.031, band [-0.02432, 0.02457]); under the
+  observability-stratified null r = 0.023885 against a band of
+  [-0.01004, 0.03165], p = 0.111 — **inside**. The d = 64 taste coordinate
+  carries roughly half of R_flat's coupling on the same pair set and none of
+  it robustly.
+- **V-SR2c — the audit SR1 never ran: SURVIVES.** SR1's own coupling under
+  **user permutation within observability deciles**: r = **0.048988**, band
+  [-0.00731, 0.02416], p = 0.0010, z = 5.13. **SR1's headline is not a
+  support confound.**
+
+### Readings
+
+- **Clean arm (23-community ablation).** n_valid 1269 = T1's exactly.
+  V-SR2a NULL (r = -0.013664, p = 0.851) and V-SR2c SURVIVES (r = 0.028701,
+  stratified p = 0.026, z = 1.97) both replicate. V-SR2b reads NULL_MARGINAL
+  clean (r = 0.018123, p = 0.076) rather than detected-but-DIES — see
+  RD-SR2-3; both readings agree that the taste coordinate is not a
+  surviving carrier.
+- **THE ABLATION COSTS 41% OF SR1's HEADLINE.** 0.048988 → 0.028701.
+  It still detects and still survives the stratified null, so the finding
+  is not overturned — but a large minority of the S-line's headline
+  coupling is carried by subreddits whose whole subject is personality
+  typology, where a selection–trait coupling is close to tautological.
+  **Flagged for adjudication; not resolved here.**
+- **The within-fold mask is representative:** R_flat 0.047687 masked vs
+  0.048988 full, a difference of 0.0013.
+- **The stratified null is STRICTER, not weaker.** Within-stratum
+  permutation preserves observability–selection structure, lifting the
+  null's upper tail (R_emb marginal band [-0.024, 0.025] → stratified
+  [-0.010, 0.032]). That is why R_emb dies, and it is correct behaviour.
+
+### Post-verdict observation
+
+**The trait coupling lives in the same residual T3 quantified.** T3 found
+tree ⊕ embedding falls 0.0387 short of the flat ceiling and typed it
+representation-capacity. SR2 finds the d = 64 taste coordinate captures
+about half the marginal coupling and none of it robustly, while the full
+1191-dim Hellinger vector carries all of it and survives conditioning. Two
+independent lines now point at the same object: **the fine-grained
+community structure that the 64-dimensional compression discards.** Note
+also the dissociation this leg is the first to show — observability is a
+substantial carrier of IDENTITY (T3: AUC 0.7294) and a null carrier of
+TRAIT (here: r = -0.010). Those are different questions with different
+answers.
+
+### Anomalies (all pre-verdict, pre-label)
+
+- **A1 — the first G0sr2 run FAILED and stopped the leg.** Two T3 anchor
+  constants had been transcribed from rounded display output instead of the
+  persisted values. The gate caught it; **no stamp was issued and no label
+  was opened**. The harness was then changed so a failed G0 can never issue
+  a stamp — on the first run the stamp was written before the PASS check,
+  which is the wrong order for a governance artifact even though nothing
+  joined. Both the error and the ordering fix precede the join.
+- **A2 — the budget cannot run on SR1's pair set** (R_tree/R_emb are
+  fold-local; cross-fold entries are undefined). Within-fold mask used,
+  with R_obs/R_flat also on the full set. RD-SR2-1.
+- **A3 — the four representations bring three different halves** (full /
+  late / early), inherited from three frozen objects. RD-SR2-2.
+
+### Registration-defect candidates
+
+- **RD-SR2-1** — "SR1's exact pair set" is unavailable to two of the four
+  representations; a future registration must register the mask or specify
+  a pooled representation.
+- **RD-SR2-2** — the coupling budget invites row-to-row comparison across
+  representations that are not half-aligned; the registration should say so.
+- **RD-SR2-3** — no convention exists for full-versus-clean disagreement
+  INSIDE one verdict. Arm-level routing separates the three verdicts but
+  says nothing about which arm owns a verdict when full and clean disagree.
+  The full arm owns it here as the registered primary; the line should pin
+  the rule.
+
+### What this leaves for the line
+
+SR1's coupling is real, is not a support artifact, and is not carried by
+the generalizing taste coordinate — its carrier is named open, and the
+evidence points at the flat representation's fine structure. Two questions
+now dominate: (1) how much of the coupling is tautological, given that
+removing 23 typology-named communities costs 41% of it; (2) whether an
+embedding with more capacity than d = 64 recovers what the compression
+loses, which would identify the carrier and would also test T3's
+representation-capacity typing of its own residual.
