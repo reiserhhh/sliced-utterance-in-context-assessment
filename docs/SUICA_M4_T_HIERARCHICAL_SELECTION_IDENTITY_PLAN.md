@@ -1039,3 +1039,130 @@ removing 23 typology-named communities costs 41% of it; (2) whether an
 embedding with more capacity than d = 64 recovers what the compression
 loses, which would identify the carrier and would also test T3's
 representation-capacity typing of its own residual.
+
+### Planner adjudication of SR2 (2026-08-17, appended after the run) — THE COUPLING SURVIVES ITS AUDIT; THE CARRIER IS NOT THE TASTE CENTROID; THE DISSOCIATION IS THE FINDING
+
+**COUPLING_BEYOND_TASTE accepted.** Three verdicts, one picture:
+
+1. **V-SR2c SURVIVES** — SR1's headline r = 0.048987613136188025
+   holds under observability-stratified permutation (p = 0.0010,
+   z = 5.13): the S-line's real-data coupling is NOT a support
+   confound. The audit SR1 never ran now exists and strengthens it.
+2. **V-SR2a NULL** — observability carries NO trait coupling
+   (r = −0.0104, p = 0.768; the #70 log1p sensitivity agrees at
+   p = 0.120). The plausible confound is measured absent.
+3. **V-SR2b detected-but-DIES** (clean: NULL_MARGINAL — both
+   agree the taste coordinate is not a surviving carrier): the
+   d = 64 taste centroid's coupling is small (0.0239, p = .031)
+   and does not survive conditioning.
+
+**The dissociation, stated as the T-line's central empirical
+lesson:** the component that carries IDENTITY (the taste centroid,
+82% of the identity bits; and observability, 0.73 AUC) is largely
+TRAIT-SILENT, while the trait coupling rides fine-grained selection
+structure that the identity-optimal compression discards (carrier
+ordering: R_flat 0.0477/z 4.82 ≫ R_emb 0.0239/z 2.01 ≫ R_tree ≈
+R_obs ≈ null). **S1's γ = 0 lesson — stable identity channels can
+be trait-silent — has now appeared INSIDE the real corpus's
+budget.** And the 23-community ablation costs 41% of the headline
+(0.0490 → 0.0287, still detected at strat p = .026): a substantial
+minority of the coupling is carried by explicitly
+personality-adjacent communities; the majority is not.
+
+**Defects (mine).** **#72 (RD-SR2-1/2):** the registration demanded
+"SR1's exact pair set" for representations that are fold-local —
+impossible for two of four — and thereby invited cross-row
+comparisons over non-aligned pair sets. **Convention (rule 33's
+cousin at the pair-set level): every coupling row declares its pair
+set and half-alignment; comparisons are licensed only within
+aligned sets, and the table marks alignment classes.** The
+executor's within-fold mask (cost 0.0013, disclosed) was the right
+in-leg repair. **#73 (RD-SR2-3):** no convention existed for
+full-vs-clean divergence INSIDE one verdict (V-SR2b read
+detected-but-DIES full, NULL_MARGINAL clean). **Convention: the
+registered primary arm routes; the replication arm's divergence is
+FLAGGED on the verdict line itself, never averaged away.** The
+executor's A1 (a failed G0 stopping the leg BEFORE any stamp, then
+hardening the harness so a failed G0 can never issue a stamp) is
+adopted as the stamp-order convention for all sealed legs.
+
+**What is now open, and precisely:** the coupling's carrier lives
+between d = 64 and the 1191-dim flat vector — the same territory
+as T3's 3.9-point identity gap. Localizing it is SR3.
+
+---
+
+## M4-SR3 — carrier localization (where between d=64 and flat does the coupling live?)
+
+**REGISTERED 2026-08-17, BEFORE RUN.** Planner: the M-line planner;
+executor: dispatched agent. Governance: SR2's regime verbatim
+(labels open only inside the stamped joint stage; all
+representations frozen label-free first; R-G block; ID scans).
+
+### 4W header
+
+- **Object:** the (Where × Who) → trait connection's CARRIER —
+  its localization along the representation-capacity axis.
+- **Fixed:** T2/T3's embedding construction recipe (per-fold PPMI
+  + SVD, training-early-only) at d ∈ {64 (anchor), 128, 256, 512};
+  the flat vector; SR1's trait side and machinery; T3's PC1
+  deciles.
+- **Varied:** embedding dimension only.
+- **Falsifiers:** coupling flat across d then jumping only at full
+  → the carrier is individual-community indicators (loyalty-
+  adjacent, not a continuous coordinate); coupling rising smoothly
+  to the flat value by d ≤ 512 → the carrier is fine-grained
+  CONTINUOUS structure (the same object as T3's identity gap).
+- **Layer:** R with external anchor; corpus-level only.
+
+### Estimands (SR2's machinery verbatim; within-fold pair sets, alignment declared per #72)
+
+Per d ∈ {64, 128, 256, 512}: Mantel r(emb_d-sim, trait-sim),
+marginal and under T3-PC1-stratified permutation (B = 999, own
+bands, pool target 20). Anchors: d = 64 must reproduce SR2's
+0.023885 (marginal) bit-exactly; R_flat within-fold 0.047687 as
+the ceiling row. IDENTITY companion (label-free stage, before the
+stamp): same-author AUC per d (T3's machinery) — the identity
+curve and the coupling curve on ONE dimension axis, so the
+dissociation becomes a picture.
+
+### Verdicts (rule 22; NULL-first; arm-level; #73 divergence flags)
+
+- **V-SR3a [the coupling curve]:** the d at which stratified
+  coupling first becomes DETECTED (own band), if any; monotonicity
+  reading. Classification: CONTINUOUS_CARRIER (detected at some
+  d ≤ 512 with r ≥ half the flat within-fold value) /
+  INDICATOR_CARRIER (undetected through 512 while flat detects) /
+  MIXED (detected but below half-flat) / UNDERRESOLVED.
+- **V-SR3b [the identity curve, reading]:** does the identity gap
+  close by d ≤ 512 (T3's 0.9450 → toward 0.9837)? Reported, no
+  gate — it types T3's GAP_REMAINS residual on the same axis.
+- Clean-arm replication of the coupling curve (#73 flags on any
+  divergence).
+
+### Leans
+
+**L-SR3 [CONTINUOUS_CARRIER .40 / MIXED .30 / INDICATOR_CARRIER
+.20 / underresolved .10].**
+
+### Gates
+
+G0sr3: SR2 anchors bit-exact (0.023885, 0.047687, 0.048987613136188025
+full-set; T3's 0.9449/0.9837); embedding purity per fold at every
+d. G1sr3 (#59): the curve is not forced (d=64 sits well below
+flat on BOTH axes). G2sr3 (#66/#68/#69/#71): pilot calibration of
+every band's achievable width; pool target 20. G3sr3:
+config-before-joint stamp with the A1-hardened order (G0 PASS
+precedes stamp issuance structurally); labels joined only after
+the hash; identity companion computed BEFORE the stamp
+(label-free); rule 24; R-G + ID scans; stages < 600 s; target
+< 40 min.
+
+### Deliverables
+
+The six as always: `scripts/run_suica_m4_sr3_carrier_localization.py`;
+`results/m4_sr3_carrier_localization/` (gitignored);
+`reports/SUICA_M4_SR3_CARRIER_LOCALIZATION_REPORT.md`; outcome
+append HERE; one ledger row (EXPLORATORY, corpus-level); exactly
+ONE commit `feat(m4-t): SR3 — carrier localization — <SLUG>`,
+never amended, never pushed; suite green first (1003 baseline).

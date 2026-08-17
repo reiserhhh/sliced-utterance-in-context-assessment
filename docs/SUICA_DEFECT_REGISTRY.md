@@ -329,3 +329,10 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|---|---|
 | #70 | T-line / M4-T3 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — T3 outcome + planner adjudication` | "z-scored" underspecified the observability transform and the MAJOR/MODERATE verdict boundary sits inside the ambiguity (raw 0.7294 vs log1p 0.8447); verdict stands on the registered reading with the sensitivity carried. | none (convention: transforms that can move a verdict across its boundary are pinned WITH the verdict; boundary-straddling sensitivities are always co-reported) | transform-pinning |
 | #71 | T-line / M4-T3 | same | ε_gap = 0.03 declared without a G2 projection of achievable CI width (realized 0.0117 against a 0.0030 miss — safe by luck, not design). | none (convention, #61/#66 family: every ε-type band carries a G2 projection of its achievable width) | band-projection |
+
+## Dated additions (2026-08-17, twenty-second note — SR2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #72 | T-line / M4-SR2 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR2 outcome + planner adjudication` | The registration demanded "SR1's exact pair set" for fold-local representations (impossible for two of four) and invited cross-row comparison over non-aligned pair sets; executor's within-fold mask (cost 0.0013, disclosed) was the correct in-leg repair. | none (convention: every coupling row declares its pair set and half-alignment; comparisons licensed only within aligned classes — rule 33's pair-set cousin) | pair-set-alignment |
+| #73 | T-line / M4-SR2 | same | No convention for full-vs-clean divergence INSIDE one verdict (V-SR2b: detected-but-DIES full vs NULL_MARGINAL clean). | none (convention: the registered primary arm routes; the replication arm's divergence is flagged on the verdict line, never averaged; plus the A1 stamp-order hardening — a failed G0 can never issue a stamp — adopted for all sealed legs) | verdict-divergence |
