@@ -1245,3 +1245,165 @@ configurations pointing at the named informative surprise
 is 1.459× its own equivalence band — so any promotion should re-price power,
 not only the pool.
 
+
+## U2b planner adjudication (2026-08-18)
+
+**Registered outcome ACCEPTED: `POOL_GATE_UNMET` — no cell is assigned.**
+The #69 gate did its job: intersection realization 99,714 pairs (0.997× the
+target) and 348 authors (0.870×) at q=0.5/m=10. The executor's RD-U2B-1
+(STOP implemented at the verdict, provisional numbers computed and
+quarantined) is accepted: for a POOL/POWER gate this is the economical form
+— it hands the adjudicator everything for one decision instead of pricing a
+second blind run. The A1 principle is untouched: INSTRUMENT-validity gates
+(G0, synthetic gates) remain hard stops before real data; pool gates stop at
+the verdict with provisional numbers marked and quarantined. This
+distinction is adopted as standing convention (recorded under #78).
+
+**Why the gate missed — defect #78 (planner, purchased; registry
+twenty-seventh note).** All fourteen registered census pins reproduce
+exactly; the gate governed a quantity none of them computed. The pool
+targets were set from MARGINAL eligibilities while the gate ran on their
+INTERSECTION — and on a fixed-K block the both-carriers predicate
+(10 ≤ common ≤ 40) removes lopsided blocks, whose owners leave wholesale
+(61.7% of U2's 2–3y contributors survive). #77's third instance and its
+first with teeth. Convention: **every registered gate quantity is itself
+censused — the gate's exact predicate executed on the census data — never
+derived from marginals or bounds**; pool/power gates stop at the verdict
+with quarantined provisionals, instrument gates stop before real data.
+
+**Defect #79 (planner, purchased; same note).** Two power/estimand defects
+in one leg: (a) the 0.10 equivalence band was registered with no achievable-
+width projection — realized Δfloor CI half-width 0.1459 = 1.459× the band,
+so NO_LAYER_SPLIT was unreachable at any point value (the #71 convention
+existed and was not executed at registration time); (b) the Δfloor
+permutation null is a ratio of two permutation-nulled quantities and is
+heavy-tailed by construction (IQR ±2.5 around a 0.045 center) — the location
+check passes but the band is unreadable as a bound. Convention: every
+equivalence cell carries a REGISTRATION-TIME width projection from prior
+legs' realized dispersions; nulls and contrasts on ratio estimands are posed
+on the log ratio or on a numerator/slope contrast, never on the raw ratio.
+
+**The provisional evidence (quarantined, adjudication input only).** The
+sign of Δfloor is negative in all five configurations (−0.098 to −0.441),
+with two registered configurations clearing both #69 targets and both
+carrying #73-flagged cells (COMMON_STANDING at q=0.7/m=10 with CI
+[−0.2256, −0.0007]; NO_LAYER_SPLIT at q=0.5/m=5 — the latter now known
+to be an arithmetic artifact of the unreachable band, per #79a). The
+planner's derived prediction L1 MISSED IN SIGN. L2 HELD: the taste
+coordinate posts the highest floor share of all rows (0.6909).
+
+**No post-hoc promotion.** Promoting a passing sensitivity configuration to
+primary after seeing its cell would manufacture a verdict at the noise edge
+(the q=0.7 CI clears zero by 7e-4). Instead the completion leg U2c is
+REGISTERED BELOW with full disclosure: the provisional sign is known; U2c
+exists to issue a verdict from a registered-before-run primary under
+corrected gate arithmetic (#78) and a re-posed, ratio-free contrast (#79),
+exactly the SR4 pattern (a completion micro-leg whose registration names
+what is already known).
+
+**The emerging three-layer time structure (named, to be tested by U2c and
+carried to the synthesis only if U2c confirms).** If the provisional sign
+holds: the taste COORDINATE is slowest (F 0.69), the common mass is slower
+than the distinctive tail (0.58 vs 0.46) — so identity's cross-sectional
+carrier (the distinctive) is the FASTEST-churning layer, and re-identification
+survives because the low-rank taste DIRECTION expressed through those
+churning communities is stable. "Identity lives in the distinctive" would
+then be a statement about WHERE the signal sits, not about what stands
+still: the distinctive is the ink, the taste coordinate is the hand.
+
+**Gates and discipline.** G0 bitwise (U2's twenty fields at 0.0 difference);
+taste purity exact; suite 1078 → 1115; ID-leak 0/1401; one commit; ppmi_svd
+replicated bit-identically from T2 with contract test (RN-SR3-1 pattern
+honored). The mix-shift descriptive reads platform-era, not personal — and
+the epoch-matched baseline already absorbs it.
+
+---
+
+## U2c — the decay-rate contrast (completion of U2b; registered BEFORE run, 2026-08-18)
+
+**Disclosure first:** U2b's quarantined provisionals are KNOWN and point
+COMMON_STANDING with sign unanimity. U2c is a verdict-issuing completion
+under corrected arithmetic, not a prediction; the registration's honesty is
+this disclosure (SR4 precedent).
+
+### 4W header
+
+- **Object.** Identical to U2b (which layer moves), re-posed per #79 on
+  decay RATES instead of floor-share ratios.
+- **Fixed.** U2b's split (Common(0.5) = 32 communities), blocks, bins,
+  intersection pair-set construction (#72 by construction), exact stratified
+  cross baseline, permutation and bootstrap machinery — inherited unchanged
+  from the committed U2b runner (#56: anchors re-verified).
+- **Varied.** Eligibility floor m = 5 (primary — the largest REALIZED
+  passing pool); q = 0.7 / m = 10 confirmatory sensitivity; all other U2b
+  grid points descriptive.
+- **Falsifies.** A slope contrast CI strictly below 0 (DISTINCT_SLOWER)
+  refutes the provisional sign; a straddling CI yields the interval
+  statement (SIGN_UNRESOLVED — a live outcome per the projection below).
+- **Layer.** R.
+
+### Gate arithmetic (#78: the gate predicate was executed on census data)
+
+The gate quantities are U2b's REALIZED intersection numbers (the gate's
+exact predicate, already executed): q=0.5/m=5 → 179,107 pairs / 424 authors
+in 2–3y (both targets met: ≥ 100,000 / ≥ 400); q=0.7/m=10 → 108,716 / 401
+(met). The U2c runner re-verifies both against its own recomputation as a
+blocking anchor; any mismatch STOPS the leg.
+
+### Estimand and contrast (#79: ratio-free)
+
+Per row (full / common / distinct / taste), fit by OLS on the five verdict
+bins: log E_row(b) = log E0_row − λ_row · gap(b), gap in years at the row's
+realized per-bin mean gaps on the intersection set. λ_row is the row's decay
+rate (1/y), level-free by construction (attenuation moves log E0, not λ,
+when gap-independent — U2's argument inherited). VERDICT CONTRAST:
+**Λ = λ_distinct − λ_common** (positive Λ = the distinctive decays faster =
+common standing), paired cluster bootstrap B = 1000 (identical author draws
+across rows), CI on Λ. Replicates with any non-positive E(b) are dropped
+with count reported (expected ≈ 0; all realized E(b) ≥ 0.20). Permutation
+null (B = 499): within-quarter reassignment; the null is posed on Λ directly
+(a slope contrast, not a ratio — well-behaved); realized center reported.
+Secondary: λ_taste vs λ_full (L2's rate form).
+
+### Registration-time width projection (#71/#79, executed now)
+
+From U2b's realized quantities: implied rates λ_com ≈ 0.239/y,
+λ_dist ≈ 0.338/y, Λ ≈ +0.10/y; the Δfloor CI half-width 0.146 maps to
+≈ 0.12/y at m=10, shrinking with the m=5 pool (+22% authors) and the
+five-bin slope fit to a projected half-width ≈ 0.08–0.10/y. **The
+projection says detection is BORDERLINE: SIGN_UNRESOLVED is a live cell and
+the verdict may be the interval statement.** This is stated before the run;
+no equivalence cell is offered at all (none is reachable at this width —
+posing one would repeat #79a).
+
+### Cells (NULL-first #55, effect-size keyed #75)
+
+1. **SIGN_UNRESOLVED** — Λ CI straddles 0; verdict is the interval
+   statement (sign evidence carried as: U2c CI + U2b's quarantined sign
+   unanimity, both reported, tier unchanged EXPLORATORY).
+2. **COMMON_STANDING** — Λ CI > 0 (confirms the provisional sign; the
+   T-line proposition acquires its When clause: the distinctive churns,
+   the taste direction stands).
+3. **DISTINCT_SLOWER** — Λ CI < 0 (refutes the provisionals; forces a
+   re-examination of U2b's computation before any theory move).
+
+Confirmatory q=0.7/m=10 divergence carries a #73 flag; primary routes.
+
+### Leans (disclosed-knowledge)
+
+- Λ > 0 with point ≈ +0.10/y (from the provisionals; this is a disclosure,
+  not a prediction).
+- λ_taste is the smallest rate of the four rows (L2's rate form; from
+  F_taste 0.6909, λ_taste ≈ 0.16/y projected).
+
+### Deliverables and discipline
+
+Standard six; script `scripts/run_suica_m4_u2c_decay_rate_contrast.py` +
+tests; gitignored `results/m4_u2c_decay_rate_contrast/`; report
+`reports/SUICA_M4_U2C_DECAY_RATE_CONTRAST_REPORT.md`; outcome appended
+here; one CLAIMS_LEDGER row; ONE commit
+`feat(m4-u): U2c — the decay-rate contrast — <VERDICT>`; suite green
+(1115 + new); blocking gates: cache anchors, U2b intersection re-verification,
+G0 bit-comparison of the four-row E(b) table against U2b's committed
+artifacts, permutation-null centers, taste-fold purity, ID-leak scan.
+SEED = 20260818; B_perm = 499; B_boot = 1000. Label-free.
