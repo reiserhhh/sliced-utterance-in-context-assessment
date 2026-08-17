@@ -276,3 +276,146 @@ HERE; one ledger row (EXPLORATORY, label-free); exactly ONE commit
 `feat(m4-t): T2 — the condition-matched residual audit — <SLUG>`,
 never amended, never pushed; suite green first (report the new
 suite count — T1 added tests).
+
+## M4-T2 outcome (2026-08-17, appended by the executing agent) — UNDERRESOLVED
+
+**Routing cell 5 → `UNDERRESOLVED`.** Slug `underresolved`. Report:
+`reports/SUICA_M4_T2_MATCHED_RESIDUAL_REPORT.md`; harness
+`scripts/run_suica_m4_t2_matched_residual.py`; artifacts (gitignored)
+`results/m4_t2_matched_residual/`. Label-free throughout; ID-leak scan of
+the report against all 1401 SR0 cohort identifiers returned 0 hits (the
+same scan over the plan doc, the ledger row, the harness and its tests
+also returns 0).
+
+### Gates
+
+- **G0t2 PASS.** Every T1 anchor bit-matches (0.9552295265671575 /
+  0.9416819726747061 / 0.7460863278537894 / 0.731654715213212; N 1304 /
+  1269; vocabulary 1191 at floor 15; 23 removed). The L0 anchor reproduces
+  T1's pooled leaf-residual AUC **exactly** (|diff| = 0.0). SR1 never
+  persisted the half-split COUNT matrices Arm B needs, so they were
+  re-derived from the comment stream under SR1's own split rule and
+  verified against SR1's frequency matrices: max |Δfreq| = 0.0 in both
+  halves, support patterns identical.
+- **G1t2 PASS.** AUC moves across the ladder (0.8944–0.9552), so the
+  calipers restrict rather than equalize; centroid_Lnew nonempty for 1081
+  users; all five fold embeddings pure (train × held-out overlap = 0).
+- **G2t2 UNDERRESOLVED_BY_DESIGN — fired BEFORE the full run.**
+- **G3t2 PASS** on the required predicates (AUC ∈ [0,1]; the vectorised
+  AUC agrees with the reference implementation to 1e-12 at all 12
+  comparison sets). The `null 0.5` predicate is reported, not enforced —
+  see RD-T2-1.
+
+### G2t2 — the pilot, and why the leg is UNDERRESOLVED
+
+200 targets, full realized pools, B = 299. Median admissible stranger pool
+by level: L0 **25**, L1 **3**, L2 **0**, L3 **0**, L4 **0**. L3 and L4
+produce permutation bands of literally zero width ([0.0333, 0.0333] and
+[0.0500, 0.0500]) built on 15 and 10 surviving targets. They cannot
+separate 0.5 from 0.75 — not because the band is wide, but because there
+is no pool left to build a band from. Arm B's band ([0.4761, 0.5516],
+width 0.0755, centred 0.5122) does separate.
+
+**The registered UNDERRESOLVED-by-design condition was met, so no survival
+and no collapse claim is available at L4.** The full ladder was still run,
+because cell 5 obliges this leg to report attrition and pool sizes. The
+gate cost nothing: the registered per-level rule (median pool < 5) voids
+L1–L4 independently, so the post-hoc reading of L4 is UNDERRESOLVED too.
+
+### Arm A — the ladder (full arm, B_boot = 1000, B_perm = 999)
+
+| level | targets | median pool | AUC | CI95 | null band | level verdict |
+|---|---|---|---|---|---|---|
+| L0 | 1304 | 21.0 | 0.9552 | [0.9471, 0.9630] | [0.4399, 0.4652] | anchor, above null |
+| L1 | 1125 | 3.0 | 0.9523 | [0.9440, 0.9600] | [0.4518, 0.4770] | UNDERRESOLVED (pool) |
+| L2 | 528 | 0.0 | 0.9473 | [0.9322, 0.9622] | [0.3989, 0.4439] | UNDERRESOLVED (pool) |
+| L3 | 143 | 0.0 | 0.9149 | [0.8675, 0.9592] | [0.2750, 0.3919] | UNDERRESOLVED (pool) |
+| L4 | 96 | 0.0 | 0.8944 | [0.8268, 0.9551] | [0.1839, 0.2984] | UNDERRESOLVED (pool) |
+
+**V-T2a: UNDERRESOLVED.** Arm A's reportable content is its attrition, not
+its L4 AUC. Requiring only that a stranger match on in-vocabulary volume
+takes the median pool from 21 to 3; adding the span caliper takes it to 0.
+Within a frozen selection leaf, PANDORA users are so heterogeneous in how
+much they are observed that condition-matched strangers essentially do not
+exist. That is a real fact about the corpus, and it is also precisely why
+the registered design cannot answer its own question.
+
+### Arm B — taste transport onto disjoint support
+
+**V-T2b: TRANSPORTS.** AUC **0.6031**, bootstrap CI95 **[0.5837, 0.6236]**,
+permutation null band **[0.4870, 0.5149]** (mean 0.5010, sd 0.0073), 907
+targets, 3914 negative comparisons. The CI sits entirely above the null
+band. Attrition: 1081 / 1304 users (82.9%) had ≥ 3 late communities absent
+from their early half (median 10 such communities); 64 leaves usable.
+Embedding: PPMI + SVD d = 64 on TRAINING rows' early sqrt-count matrix,
+per fold, all five folds verified pure.
+
+**The early-half taste centroid identifies its owner through communities
+that owner had not yet joined.** Selection identity is not only loyalty to
+a fixed community set. The effect is modest and heterogeneous, though:
+median pool is thin (2.0), and 24 of 46 scoreable leaves fall below 0.60
+against a pooled 0.6031.
+
+### Readings
+
+- **Ladder curve.** AUC falls 0.9552 → 0.9523 → 0.9473 → 0.9149 → 0.8944.
+  The volume caliper (L1) costs almost nothing in AUC (−0.0029) while
+  costing 86% of the pool — the first and sharpest sign that the ladder
+  spends resolution far faster than it buys control.
+- **Clean arm (23-community ablation).** n_valid = 1269, matching T1's
+  clean arm exactly. L0 = 0.9417 (T1's clean anchor, bit-matched); L4 =
+  0.9257 [0.8880, 0.9602]; V-T2a clean UNDERRESOLVED (same pool collapse).
+  **Arm B replicates: 0.5941 [0.5751, 0.6148] against null [0.4556,
+  0.4858] — TRANSPORTS.** The transport finding does not depend on
+  explicit personality/typology communities.
+- **Per-leaf heterogeneity.** L0: 61 leaves, median 0.9698, min 0.7777,
+  none below 0.60. Arm B: 46 leaves, median 0.5967, min 0.4306, max
+  0.8333, 24 below 0.60.
+- **UNREGISTERED width diagnostic (names the redesign, claims nothing).**
+  Widening every caliper by a common factor, L4's median pool reaches the
+  registered floor of 5 only at **8×** the registered widths.
+
+### Anomalies (all pre-verdict)
+
+- **A1** T1's per-fold seed is `SEED + 1000*fold`; the wrong reading gives
+  0.9536 instead of 0.9552295265671575. Fixed before Part 0 was accepted.
+- **A2** Part 0 persisted `volume_late` as the **all-subreddit** late
+  comment count while the registration pins L1 to **in-vocabulary**
+  volume (medians 338.5 vs 229.5). Repaired from the verified count
+  matrix before the pilot; no verdict was computed under the wrong
+  caliper. Disclosed, not silently corrected.
+- **A3** The permutation null was vectorised. The registered null's
+  combined value multiset is always the flat pool of admissible stranger
+  scores, so its tie-averaged ranks precompute once and each replicate is
+  one batched gather. Same statistic, not an approximation; checked
+  against the reference implementation at every comparison set (G3t2).
+- **A4** SR1's 4000-timestamp cap on the median split time is inherited
+  deliberately — reproducing the frozen halves requires it. Named because
+  it is invisible in SR1's own report.
+
+### Registration-defect candidates (flagged, never repaired)
+
+- **RD-T2-1 — `null 0.5` is not achievable for the registered statistic.**
+  The comparison pools one positive per target against many negatives per
+  target across heterogeneous targets, so the permutation null sits where
+  that weighting puts it: 0.4525 at L0, and it walks down to 0.2410 at L4
+  as pools collapse. #66's "the permutation's own band, no closed forms"
+  is the instruction that survives contact with the data and the one this
+  leg followed; the closed-form expectation should be struck. 7 of 12
+  comparison sets have a null within 0.05 of 0.5.
+- **RD-T2-2 — the ladder was registered with widths instead of a target
+  pool size.** G2t2 caught the consequence, but it could only fire or not;
+  it had no width to negotiate. A future ladder should register a target
+  pool size and derive the calipers from it.
+
+### What this leaves for the line
+
+Arm A's question is still open and is *not* answered by "the residual
+survives" — nothing here licenses that. The redesign is named in the
+report (§9): match across leaves rather than within them; replace hard
+calipers with a propensity score on the four observables so match quality
+becomes measurable rather than binary; register a target pool size. Arm
+B's TRANSPORTS result stands on its own, replicates under ablation, and is
+the leg's substantive contribution — but with V-T2a undecided, the 4W
+doc's priority 2 (tree + tail joint representation) does **not** become
+registrable on a certified object, because the object is not yet certified.
