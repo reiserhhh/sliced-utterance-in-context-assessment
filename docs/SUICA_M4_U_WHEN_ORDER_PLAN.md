@@ -1407,3 +1407,173 @@ here; one CLAIMS_LEDGER row; ONE commit
 G0 bit-comparison of the four-row E(b) table against U2b's committed
 artifacts, permutation-null centers, taste-fold purity, ID-leak scan.
 SEED = 20260818; B_perm = 499; B_boot = 1000. Label-free.
+
+
+## U2c outcome (executor, 2026-08-18)
+
+Append-only. The registration text above is unchanged. Artifact stamps: run
+window `2026-08-17T22:53:29.632693Z` – `2026-08-17T22:55:04.435166Z` (UTC;
+local date 2026-08-18). Report:
+`reports/SUICA_M4_U2C_DECAY_RATE_CONTRAST_REPORT.md`. Harness:
+`scripts/run_suica_m4_u2c_decay_rate_contrast.py`. Tests:
+`tests/test_m4_u2c_decay_rate_contrast.py`. Artifacts (gitignored):
+`results/m4_u2c_decay_rate_contrast/`.
+
+### Outcome
+
+**Cell 1, `SIGN_UNRESOLVED`. THE VERDICT IS THE INTERVAL STATEMENT.**
+
+**Λ = λ_distinct − λ_common = +0.0741/y [−0.0558, 0.1854]** at the registered
+primary q = 0.5 / m = 5 (179,107 self pairs, 424 contributing authors in the
+2–3y bin). The registration named this cell live before the run and projected
+a borderline half-width of 0.08–0.10/y; the realized half-width is **0.1206/y,
+1.206× the top of that range**, and the interval straddles zero. Tier
+unchanged: EXPLORATORY, label-free, corpus-level.
+
+The registered sign evidence is therefore carried in the two pieces the
+registration named: **this CI, together with U2b's quarantined sign
+unanimity** — and U2c adds a third piece of the same kind, not a fourth kind.
+Both of U2c's arms put the point on the same side of zero, and in both arms
+λ_distinct exceeds λ_common:
+
+| arm | pairs / authors (2–3y) | λ_full | λ_common | λ_distinct | λ_taste | Λ [CI] | half-width | cell |
+|---|---|---|---|---|---|---|---|---|
+| **primary q=0.5/m=5** | 179,107 / 424 | 0.2943 | **0.2535** | **0.3276** | 0.1736 | **+0.0741** [−0.0558, 0.1854] | 0.1206 | `SIGN_UNRESOLVED` |
+| confirmatory q=0.7/m=10 | 108,716 / 401 | 0.2751 | 0.2315 | 0.3176 | 0.1515 | +0.0861 [−0.0109, 0.1609] | 0.0859 | `SIGN_UNRESOLVED` |
+
+**Zero #73 flags** — the arms agree in cell. Note how close the confirmatory
+arm comes: its lower bound is −0.0109, i.e. it misses `COMMON_STANDING` by
+about 1.1e−02/y. That is a near-miss, not a result, and the primary routes.
+
+### The four rates and their fits (primary arm)
+
+R² is the log-linear fit's, descriptive only. All bootstrap replicates were
+retained in every row: **zero drops for non-positive E(b) out of 1000**, as
+the registration expected (realized E(b) ≥ 0.2033 everywhere in the fitted
+window).
+
+| row | λ (1/y) [CI] | R² | E0 | F = E(2–3y)/E(0–90d) | boot drops |
+|---|---|---|---|---|---|
+| full vocabulary | 0.2943 [0.1895, 0.4405] | 0.9939 | 0.5403 | 0.5094 | 0 / 1000 |
+| common (32 communities) | 0.2535 [0.1408, 0.4244] | 0.9992 | 0.6122 | 0.5625 | 0 / 1000 |
+| distinctive (1159) | 0.3276 [0.1854, 0.4970] | 0.9747 | 0.4280 | 0.4646 | 0 / 1000 |
+| taste (d = 64, OOF) | 0.1736 [0.0970, 0.2737] | 0.9670 | 0.4419 | 0.6803 | 0 / 1000 |
+
+Per-bin personal excess E(b) and the realized mean gaps the slope is fitted
+at (the 3y+ column is DESCRIPTIVE and never entered the fit):
+
+| row | 0–90d | 90–180d | 180–365d | 1–2y | 2–3y | *3y+ (unfitted)* |
+|---|---|---|---|---|---|---|
+| full | 0.5340 | 0.4820 | 0.4330 | 0.3459 | 0.2720 | *0.2434* |
+| common | 0.5925 | 0.5554 | 0.5148 | 0.4259 | 0.3333 | *0.2962* |
+| distinctive | 0.4376 | 0.3729 | 0.3272 | 0.2551 | 0.2033 | *0.2026* |
+| taste | 0.4407 | 0.4183 | 0.3866 | 0.3295 | 0.2998 | *0.2756* |
+| **mean gap (days)** | 43.18 | 133.31 | 266.62 | 517.59 | 875.16 | *1240.19* |
+| **mean gap (years)** | 0.1182 | 0.3650 | 0.7300 | 1.4171 | 2.3961 | *3.3955* |
+| **self pairs** | 453,665 | 356,709 | 538,528 | 541,856 | 179,107 | *49,230* |
+
+### L2's rate form: HELD, and it is the cleanest thing in the leg
+
+**λ_taste is the smallest of the four rows in BOTH arms** — 0.1736/y (primary)
+and 0.1515/y (confirmatory) — against the registration's projected 0.16/y.
+The secondary contrast λ_taste − λ_full = **−0.1207 [−0.2771, 0.0205]**
+(confirmatory −0.1236 [−0.2798, 0.0300]); it is the UNPAIRED contrast (the
+taste row's bootstrap draws are fold-stratified against the other rows'
+pool-level draws) so its interval is conservative and it too straddles zero.
+The lean is about the ORDERING, and the ordering holds in both arms.
+
+### Nulls, and the second thing the registration's null argument missed
+
+Per-row per-bin E(b) permutation centers are at most **3.7e−04** in any bin of
+any row (full row max 5.8e−05), 818× to 4,699× inside their own effects —
+U2's result reproduced on every carrier at both floors.
+
+**The Λ null is the anomaly, and RD-U2C-1 is the disclosed handling.** The
+registration posed the null directly on Λ on the ground that a slope contrast
+is well behaved where a ratio is not. That is true of the SLOPE and false of
+the LOGARITHM the registered slope is taken on: a within-quarter relabelling
+drives E(b) to within a few 1e−4 of zero, the sign then flips freely across
+bins, and log E(b) is undefined for most replicates. The registered null was
+computed with the same positivity rule and **retains only 7 of 499
+replicates** (confirmatory: 22 of 499) — center +0.0446, band unreadable.
+Beside it the runner reports the positivity-free LINEAR slope contrast (OLS of
+E(b) on gap_years, no logarithm), defined on 100% of replicates: center
+**+6.09e−05** with band [−0.0029, 0.0026] against a realized −0.0162 on that
+same scale. **No verdict rests on either null.** The convention gap is #79's
+successor and belongs to the planner: *nulls on slope estimands taken on a
+transformed scale inherit the transform's domain, so a log-slope null needs
+either a positivity-safe estimator or a companion posed on the untransformed
+slope.*
+
+### The honest anomaly: the bigger pool bought a WIDER interval
+
+The m = 5 pool did everything the projection said it would — **+21.8% authors
+(424 vs U2b's 348) and +79.6% pairs (179,107 vs 99,714)** — and the interval
+still came out **1.404× wider** than the confirmatory arm's, which runs on a
+SMALLER pool (108,716 pairs / 401 authors). The per-row half-widths locate it
+in the distinctive row: 0.1558 at m = 5 against 0.1153 at m = 10, a 1.352×
+inflation, while full (1.065×), common (1.007×) and taste (1.059×) barely
+move. Lowering the floor admits blocks holding as few as m events in a
+sub-vocabulary, and a 1159-dimensional carrier vector built from five events
+is a far noisier point on the sphere than one built from ten. **Pool size and
+per-block precision trade against each other on a fixed-K block, and the
+registration's width projection priced only the first.** The #71/#79
+convention itself HELD — the number was stated before the run and is reported
+against — but the model behind the number did not, and that is the reusable
+lesson: a pool-size projection is not a width projection unless the
+per-observation precision is held fixed across the configurations compared.
+
+### Gates
+
+- **Cache anchor gate PASS**: 3,005,360 events / 1401 authors / 1191
+  vocabulary, verified before any computation.
+- **GATE ANCHORS (#78) PASS, EXACTLY.** The gate's executed predicate was
+  re-executed here on census data: q=0.5/m=5 → **179,107 pairs / 424 authors**
+  (registered 179,107 / 424) over 27,485 eligible blocks; q=0.7/m=10 →
+  **108,716 / 401** (registered 108,716 / 401) over 19,571 blocks. Both clear
+  the #69 targets. This is the convention the planner adopted after U2b, run
+  as a blocking anchor rather than a projection.
+- **G0 (#56) PASS, BITWISE.** U2b's whole four-row table at q=0.5/m=10 —
+  including all five taste folds — was recomputed here through the imported
+  estimator and compared field by field against
+  `results/m4_u2b_persistence_budget/rows.json`: **max absolute difference 0.0
+  across 60 fields (15 per row × 4 rows), every field bit-identical**,
+  including the curves, both CIs, the null bands, D, the floor shares and the
+  permutation p-values.
+- **Split census PASS**: universe 2,348,361; Common(0.5) = 32 at 0.5036;
+  Common(0.7) = 104 at 0.7008; pool 849 authors / 45,731 blocks.
+- **Taste-row fold purity PASS** at all three configurations: 15 folds
+  (5 × 3), 679/679/679/679/680 training authors, zero train/test overlap, the
+  mass identity exact to 1e−06 in every fold with the test authors' mass
+  entirely absent.
+- **Sub-vocabulary count recovery PASS**: counts recovered as K·f², maximum
+  deviation from integrality 1.06e−05.
+- **ID-leak scan PASS**: 0 of 1401 cohort IDs in the committed set.
+- **No synthetic gate**, as registered (R layer, no world simulated).
+- Suite 1115 → 1148 (33 new contract tests). SEED 20260818, B_perm 499, B_boot 1000; the run is
+  deterministic (re-executed end to end, identical to the last digit).
+
+### Registered leans
+
+- **L1 (disclosed, not a prediction) — SIGN HELD IN POINT, UNRESOLVED IN
+  INTERVAL.** Λ = +0.0741/y against the disclosed +0.10/y, the right sign and
+  the right order of magnitude, with the interval straddling zero exactly as
+  the registration warned it might.
+- **L2 HELD.** λ_taste is the smallest rate of the four rows in both arms
+  (0.1736 and 0.1515 against a projected 0.16).
+
+### Line state
+
+U2c DELIVERED A VERDICT, and the verdict is that the design cannot resolve the
+sign at this resolution. What the leg does deliver: a ratio-free estimand that
+behaves (four log-linear fits with R² between 0.913 and 0.999, zero dropped
+bootstrap replicates, every fitted E(b) ≥ 0.2033); a bit-exact G0
+reproduction of U2b's entire four-row table (60 fields at 0.0); the #78
+convention executed as a blocking anchor and passing exactly; **L2 held in its
+rate form in both arms — the low-rank taste coordinate is the slowest layer,
+which is the one piece of the three-layer picture that U2c CONFIRMS**; and two
+findings the planner owns — the log-slope null's domain problem (RD-U2C-1) and
+the pool-size-is-not-width anomaly. The T-line proposition's When clause
+remains OPEN: the distinctive tail decays faster than the common mass at the
+point estimate of every configuration run so far (five in U2b, two here), and
+no interval yet excludes zero.
