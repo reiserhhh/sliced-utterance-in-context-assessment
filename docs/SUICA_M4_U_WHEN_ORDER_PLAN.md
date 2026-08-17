@@ -247,3 +247,138 @@ B_bootstrap = 1000; C primary 24; pools 984/821; data =
 (columns author, subreddit, created_utc, link_id only; no bodies);
 cohort = `results/m4_sr0_recon/cohort_authors.csv`; vocabulary reconstruction
 via the T1 pattern (import by file, provenance stated).
+
+---
+
+## U1 outcome (executor, 2026-08-18)
+
+Append-only. The registration text above is unchanged. Artifact stamps:
+Part 0 completed `2026-08-17T20:48:42Z`, real-arm window
+`2026-08-17T20:48:44Z` – `2026-08-17T21:09:02Z` (UTC; local date 2026-08-18).
+Report: `reports/SUICA_M4_U1_ORDER_IDENTITY_REPORT.md`. Harness:
+`scripts/run_suica_m4_u1_order_identity.py`. Tests:
+`tests/test_m4_u1_order_identity.py`.
+
+### Verdict
+
+**`ORDER_CHANNEL`** (cell 3). Primary arm rho = **0.2893**, 95%
+cluster-bootstrap CI **[0.2695, 0.3114]**, raw excess AUC 0.0175
+[0.0152, 0.0195], permutation p = 0.0020 over B = 499. The CI straddles no
+cell boundary, so point and interval agree and no interval-statement
+substitution is needed. No arm diverges in cell membership, so **no #73 flag
+is raised anywhere in this leg**.
+
+The theory's projection caution is carried into the verdict as registered:
+this is one first-order projection of K_u over coarse Where states, and a
+positive reading here is not a claim about K_u itself.
+
+### The null's own location (#68)
+
+The null does not sit at 0.5 and did not: the primary shuffle null is
+**0.9396** (band [0.9393, 0.9399], sd 0.00015) against a same-folds,
+same-states unigram bag AUC of **0.9607** — a gap of 0.0211, inside the
+registered 0.05 tolerance. The mechanism is an identity, not an accident:
+for product-form counts the bigram Hellinger cosine is the SQUARE of the
+unigram cosine, a monotone map, so the shuffled features inherit the bag's
+ranking and are degraded only by the finite-sample noise of L−1 pairs.
+Realized minimal detectable rho from the band: **0.0050**, an order of
+magnitude inside the registered epsilon of 0.05.
+
+### The reading the estimand forces
+
+**Real AUC 0.9571 sits 0.0036 BELOW the static bag AUC 0.9607.** Order
+recovers nearly all of the bigram representation's sparsity cost but does
+not surpass the bag. rho is an order statement INSIDE this projection; it is
+not a claim that order out-identifies the static selection bag. Any prose
+that upgrades U1 to "order beats the bag" is wrong.
+
+### Decomposition (all arms scored against their own exact-bag nulls)
+
+| arm | rho | 95% CI | share of primary |
+|---|---|---|---|
+| PRIMARY raw adjacency, C=24, full vocab, N=984 | 0.2893 | [0.2695, 0.3114] | 100% |
+| CO-PRIMARY cross-thread only | 0.1626 | [0.1373, 0.1895] | 56.2% |
+| session-restricted (<= 3600 s) | 0.2986 | [0.2802, 0.3205] | 103.2% |
+| C = 12 | 0.2269 | [0.2046, 0.2502] | 78.4% |
+| C = 48 | 0.2430 | [0.2283, 0.2598] | 84.0% |
+| conditional-rows lens | 0.1017 | [0.0545, 0.1473] | 35.2% |
+| stay-rate scalar | 0.1803 | [0.1375, 0.2234] | 62.3% |
+| pool >= 100 (N=821) | 0.2918 | [0.2687, 0.3150] | 100.8% |
+| clean_no_explicit_personality (N=888) | 0.2666 | [0.2441, 0.2902] | 92.2% |
+
+- **Dwell-dominated.** 71.2% of adjacent pairs are same-state; realized stay
+  rate 0.6734 against a bag-implied pseudo-stay of 0.4086. ONE SCALAR per
+  half recovers 62.3% of the channel and identifies authors at AUC 0.7388
+  against its own null of 0.6814.
+- **Reply-chain mechanics are a large minority, not a majority.** Removing
+  within-thread adjacency costs 43.8% of rho; 53.1% of same-state stays sit
+  inside one thread. The registered decomposition lean holds, but only at
+  56% — "free-selection order" must never be stated without this number.
+- **Fast time carries it.** Within-hour adjacency (67.0% of pairs) reads
+  103.2% of the primary rho.
+- **Occupancy weighting is doing the work.** The unweighted conditional-rows
+  lens collapses to 0.1017, its CI straddling the 0.10 boundary. The channel
+  lives in the dominant states' dwell-and-switch mass, not in rare
+  transitions.
+- **Governance contrast worth carrying forward.** The 23-community ablation
+  costs 7.8% of rho here, against 41% of the S-line's trait coupling.
+
+### Registered leans
+
+- Primary lean rho in (0.02, 0.15]: **EXCEEDED** — 0.2893, ~1.9x the top of
+  the leaned interval, CI entirely above it.
+- Secondary lean (stay-rate scalar detects alone): **HELD**, 0.1803.
+- Decomposition lean (cross-thread retains most): **HELD**, 56.2%.
+
+### Part 0
+
+**PASS**, before any real arm. W_null across 8 replicate worlds: mean rho
+5.07e-05, 95% t-interval [-0.0108, 0.0109], between-replicate sd 0.0133,
+every replicate inside |rho| < 0.05. W_sticky 0.0565 / 0.1847 / 0.4305 and
+W_transition 0.5498 / 0.7853 / 0.9716 — both positive and monotone. MH
+stationary drift 2.8e-17, detailed-balance violation 1.7e-18. Exact-bag
+invariance held in every world and every real arm.
+
+### Disclosures
+
+- **A-U1-1 (pre-verdict, synthetic only).** The first synthetic
+  parameterisation (Dirichlet 0.4) saturated at bag AUC 0.99999, leaving no
+  discrimination error for order to remove; the gate FAILED and stopped the
+  leg exactly as A1 requires. The concentration was re-set to Dirichlet(4.5)
+  — the grid point putting the synthetic bag AUC nearest a declared 0.96
+  target — and the gate re-run. No real arm ran before the gate passed.
+- **RD-U1-1.** The W_null target's two clauses ("CI includes 0" AND
+  "|rho| < 0.05") cannot both be evaluated on ONE draw at the pinned N = 900:
+  the bootstrap CI half-width (~0.018) is the size of rho's own between-draw
+  scatter (0.0133), and the first seed missed zero by 0.0008 while sitting
+  2.7x inside the magnitude clause. Resolved by making the test STRICTER:
+  8 replicate worlds, magnitude required of every one, "must not detect"
+  decided on the across-replicate mean. Both clauses survive in substance.
+- **RD-U1-2.** The synthetic null-location check conflates a broken null with
+  an under-sampled world. The null−bag gap is the finite-sample penalty of
+  estimating a (C+1)^2-cell object from L−1 pairs; at the registration's own
+  pinned synthetic event count that is 0.33 pairs per cell, against 2.4 at
+  the real arm's budget. Split: synthetic worlds must retain >= 40% of the
+  bag's lift over 0.5 (all did, none near the threshold), and the literal
+  |null − bag| <= 0.05 check is enforced on the real primary arm, where it
+  passes at 0.0211.
+
+### Census and gates
+
+Vocabulary reproduced bit-identically (17,640,062 rows streamed, 1401 authors,
+floor 15, **1191 communities**); pools **984 / 821** exactly as censused; 23
+typology communities removed for the clean arm (re-derived pool 888).
+Adjacent-pair tie rate reproduces the census at **0.11522** on in-vocabulary
+events (0.10760 over all events — the census value is the in-vocabulary one).
+Blocking gates all PASS: Part 0, exact-bag invariance, fold purity, vocabulary
+and pool reproduction, real-arm null location, ID-leak scan (0 of 1401 cohort
+IDs in any committed file). Binned-vs-exact AUC error 1.6e-05.
+
+### What this hands U2 and U3
+
+U2 (persistence curve) inherits a live, resolution-stable order channel and
+should expect dwell to dominate its slow-time analogue. U3 must not open
+labels against the primary arm as if it were free-selection order: the
+mechanics-controlled cross-thread arm (rho 0.1626) is the honest object for
+any Who x When trait join, and the stay-rate scalar is a cheap, already-
+validated single coordinate to carry into a stage-E design.
