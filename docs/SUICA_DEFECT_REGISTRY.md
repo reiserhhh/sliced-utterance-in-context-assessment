@@ -322,3 +322,10 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|---|---|
 | #68 | T-line / M4-T2 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — T2 outcome + planner adjudication` | G3t2 registered "null 0.5" for a pooled one-positive-vs-many-negatives AUC whose true null walks with pool size (0.4525 → 0.2410 across the ladder); #66's permutation-band instruction survives. | none (convention: rule-29 predicates for composite statistics state the statistic's OWN null from its permutation machinery, never an idealized constant) | composite-null |
 | #69 | T-line / M4-T2 | same | The matching ladder registered caliper WIDTHS rather than target POOL SIZES, so the feasibility gate could only fire-or-not (median pools hit 0 by L2; L4 needs 8× the widths for a pool of 5). | none (convention: matching designs register target pool sizes; realized widths are the reported quantity) | matching-design |
+
+## Dated additions (2026-08-17, twenty-first note — T3; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #70 | T-line / M4-T3 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — T3 outcome + planner adjudication` | "z-scored" underspecified the observability transform and the MAJOR/MODERATE verdict boundary sits inside the ambiguity (raw 0.7294 vs log1p 0.8447); verdict stands on the registered reading with the sensitivity carried. | none (convention: transforms that can move a verdict across its boundary are pinned WITH the verdict; boundary-straddling sensitivities are always co-reported) | transform-pinning |
+| #71 | T-line / M4-T3 | same | ε_gap = 0.03 declared without a G2 projection of achievable CI width (realized 0.0117 against a 0.0030 miss — safe by luck, not design). | none (convention, #61/#66 family: every ε-type band carries a G2 projection of its achievable width) | band-projection |

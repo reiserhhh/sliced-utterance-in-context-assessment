@@ -734,3 +734,159 @@ now a quantified object, which is what cell 6 asks for. The obvious next
 question is what lives in that residual — and the first thing to rule out
 is that it is simply the flat vector's higher dimensionality (1191 vs 64),
 which a d-sweep of the embedding would settle cheaply.
+
+### Planner adjudication of T3 (2026-08-17, appended after the run) — THE BUDGET IS IN: TASTE DOMINATES, SUPPORT IS MODERATE, THE TREE IS SUBSUMED, A RESIDUAL REMAINS
+
+**BUDGET_WITH_RESIDUAL + TASTE_BEYOND_SUPPORT accepted.** The
+identity budget the 4W doc's eq. (13) needed now has measured
+sizes, one machinery, own-null bands throughout (the first leg run
+fully under #68):
+
+- **Taste (R_emb) dominates:** 0.9449 marginal, 0.9311 under
+  observability conditioning (4.878 / 2.823 excess bits; 82% of
+  the 5.957-bit flat ceiling). T2's transport finding is UPGRADED:
+  not support-carried. The dominance argument closes RD-T3-3's
+  worry independently of conditioning completeness: **R_emb's
+  CONDITIONAL 0.9311 exceeds R_obs's MARGINAL ceiling 0.7294 by
+  0.20 with disjoint CIs — even total leakage of the support
+  channel cannot produce the taste reading.**
+- **Support (R_obs) is real and MODERATE:** 0.7294 [0.7170,
+  0.7427], 1.734 bits — the direct measurement T2's Arm A could
+  not deliver by matching.
+- **The tree is subsumed by its own leaves:** within-leaf R_tree
+  0.5060, 0.008 bits — as it must be; a clean internal-consistency
+  check of the machinery.
+- **GAP_REMAINS:** joint (tree ⊕ embedding, w* = 0.95) 0.9450 vs
+  flat 0.9837; gap 0.0387 [0.0330, 0.0447] against ε 0.03. About
+  3.9 AUC points of reproducible identity live outside the named
+  representations — likely representation capacity (d = 64 + path
+  vs 1191-dim flat), typed as the next open object, not queued.
+- **All three verdicts replicate in the clean arm** (0.7233 /
+  0.9107 SURVIVES / gap 0.0389). Per-leaf heterogeneity is tight
+  (median 0.9418, min 0.8674) — far tighter than T2's Arm B.
+
+**Defects (mine).** **#70 (RD-T3-1):** "z-scored" underspecified
+the observability transform and V-T3a's MAJOR/MODERATE boundary
+sits INSIDE the ambiguity (raw 0.7294 vs log1p 0.8447; clean
+0.7233 vs 0.8262). The verdict stands as registered (raw was the
+registered reading) with the sensitivity reported. **Convention: a
+transform that can move a verdict across its boundary is pinned
+WITH the verdict at registration; boundary-straddling sensitivity
+forces the report to carry both readings.** **#71 (RD-T3-2):**
+ε_gap = 0.03 was declared without a G2 projection (realized CI
+width 0.0117 against a 0.0030 miss — the verdict is safe here, CI
+entirely above ε, but the band was luck not design). **Convention
+(the #61/#66 family): every ε-type band carries a G2 projection of
+its achievable width.** RD-T3-3 resolved by the dominance argument
+above; convention: multidimensional conditioning objects name
+their reduction and its explained variance, and verdicts citing
+conditioning state whether a dominance argument independently
+holds.
+
+**The theory reading (eq. 13, measured):** selection identity =
+nested conditional innovations (real through 4–5 levels, then
+subsumed) + a CONTINUOUS TASTE COORDINATE (dominant, generalizing
+to unseen communities, support-independent by dominance) + a
+moderate observability channel + ~4 points of unnamed residual.
+The 4W doc's §5.2 extends accordingly (owner's text; noted here,
+not edited). **The line's next question is no longer identity —
+it is the CONNECTION: which budget component carries the S-line's
+trait coupling?**
+
+---
+
+## M4-SR2 — the trait-coupling budget (which component carries r = 0.049?)
+
+**REGISTERED 2026-08-17, BEFORE RUN.** Planner: the M-line
+planner; executor: dispatched agent. The 4W doc's priority 5
+(external connection), run exactly as its stage E demands: every
+technical object (tree, embedding, observability vectors, budget)
+was frozen LABEL-FREE in T1–T3; labels open only inside the
+stamped joint stage. Governance: SR1's regime verbatim (R-G block,
+aggregates only, ID-leak scans, EXPLORATORY corpus-level, no
+person claims).
+
+### 4W header
+
+- **Object:** the (Where × Who) → trait connection — the
+  DECOMPOSITION of SR1's detected coupling across the identity
+  budget's components.
+- **Fixed:** T1's tree; T2/T3's per-fold embeddings and
+  observability vectors; SR1's primary trait similarity
+  (neg-sq-Euclidean over five z-scored Big5) and its permutation
+  machinery.
+- **Varied:** the SELECTION-side representation (R_obs / R_tree /
+  R_emb / R_flat), marginally and under observability-stratified
+  permutation.
+- **Falsifiers:** R_obs×trait DETECTED with R_emb×trait dying
+  under conditioning → SR1's coupling re-typed as an
+  activity/support correlate (a major correction to the S-line);
+  R_emb×trait NULL marginal → the taste coordinate is
+  trait-silent (the γ=0 world made real).
+- **Layer:** R with external anchor; V/R/P typing enforced —
+  corpus-level relations only.
+
+### Estimands (one machinery: SR1's Mantel over the SR1 pair set, user-permutation nulls B = 999, #66/#68 own bands)
+
+Per representation X ∈ {R_obs, R_tree, R_emb, R_flat}: Mantel
+r(X-sim, trait-sim) with SR1's exact trait side. Similarities
+pinned: R_obs — negative Euclidean on the registered (raw
+z-scored) 4-dim vectors, with the log1p reading carried as the
+#70-mandated sensitivity; R_tree — depth-weighted prefix overlap;
+R_emb — cosine of taste centroids; R_flat — SR1's Hellinger cosine
+(G0 anchor: must reproduce r = 0.048987613136188025 bit-exactly
+under SR1's config). CONDITIONAL: r(R_emb-sim, trait-sim) and
+r(R_flat-sim, trait-sim) under OBSERVABILITY-STRATIFIED user
+permutation (T3's PC1 deciles, pool target ≥ 20 per #69 — the
+null preserves any obs–trait coupling, so what survives is
+selection–trait coupling beyond support).
+
+### Verdicts (rule 22; NULL-first; arm-level cells per the T2 lesson)
+
+- **V-SR2a [the confound check]:** R_obs×trait marginal —
+  DETECTED (own-band exceeded, one-sided positive) / NULL. Lean
+  DETECTED .5 (activity–trait couplings are plausible).
+- **V-SR2b [the carrier question]:** R_emb×trait marginal
+  DETECTED? and under observability-stratified null — SURVIVES /
+  DIES / NULL_MARGINAL. Lean: detected-and-survives .5 /
+  detected-but-dies .2 / null-marginal .3 (SR1's r was small; the
+  taste coordinate may or may not be its carrier).
+- **V-SR2c [the flat anchor under conditioning]:** SR1's own
+  r under the stratified null — SURVIVES / DIES (does the S-line's
+  headline survive the support confound at all — the audit SR1
+  never ran).
+- Readings: the full coupling-budget table (four representations ×
+  {marginal r, band, p; conditional r, band, p}); clean-arm
+  replication; the ordering of carriers.
+
+### Routing (rule 16 — arm-level)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0 (SR1 anchor bit-reproduction) failure | **STOP** |
+| 2 | V-SR2c DIES | **SR1_RETYPED_SUPPORT_CONFOUND** — the S-line coupling re-typed by dated note; the owner's conjecture's real-data evidence re-scoped |
+| 3 | V-SR2c SURVIVES and V-SR2b detected-and-survives | **TASTE_CARRIES_THE_COUPLING** — the generalizing coordinate is trait-coupled; the selection conjecture deepens to its strongest form |
+| 4 | V-SR2c SURVIVES and V-SR2b dies-or-null | **COUPLING_BEYOND_TASTE** — the coupling survives support but is not carried by the d=64 taste coordinate; carrier named open |
+| 5 | any UNDERRESOLVED (pool/width) | that verdict UNDERRESOLVED, others stand |
+
+### Gates
+
+G0sr2: SR1's primary reproduced bit-exactly under its persisted
+config (r, p, N, pairs); T3's budget anchors verified; embedding
+purity re-checked. G1sr2 (#59): none of the couplings forced;
+strata non-degenerate. G2sr2 (#66/#68/#69/#71): pilot permutation
+calibration (200 users) fixes every band's achievable width and
+the ε-free verdict feasibility BEFORE the joint stage; pool
+target 20. G3sr2: config-before-joint stamp (SR1's ordering
+pattern — labels joined only after the hash; run-log proof);
+rule-29 own-null predicates; rule 24; R-G + ID-leak scan; stages
+< 600 s; target < 40 min.
+
+### Deliverables
+
+The six as always: `scripts/run_suica_m4_sr2_coupling_budget.py`;
+`results/m4_sr2_coupling_budget/` (gitignored);
+`reports/SUICA_M4_SR2_COUPLING_BUDGET_REPORT.md`; outcome append
+HERE; one ledger row (EXPLORATORY, corpus-level); exactly ONE
+commit `feat(m4-t): SR2 — the trait-coupling budget — <SLUG>`,
+never amended, never pushed; suite green first (994 baseline).
