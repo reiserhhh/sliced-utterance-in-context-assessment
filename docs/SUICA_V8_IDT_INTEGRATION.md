@@ -288,3 +288,27 @@ first dual-track (synthetic + real) line of the identity era:
   #1–#67 (#65–#67 bought the neutrality-naming,
   permutation-power, and bias-vs-band conventions). Zero ID leaks
   across three scans; Essays and native corpus untouched.
+
+## Dated addendum (2026-08-17) — the M4-T 4W line
+
+The T-line (Codex's T1 + the owner's 4W synthesis + five legs
+under the loop discipline; synthesis
+`docs/SUICA_M4_T_LINE_SYNTHESIS.md`):
+
+- **The 4W frame** (Where/What/Who/When as analytic roles;
+  `docs/SUICA_4W_PERSON_INTERPRETER_THEORY.md`) is the program's
+  map; its §11 four-questions template is now a mandatory
+  registration section.
+- **Selection identity = nested innovations + a generalizing
+  continuous tail** (T1/T2), budgeted in one currency (T3: taste
+  82%, support moderate, tree subsumed).
+- **The dissociation** (SR2): identity's dominant carrier is
+  largely trait-silent; SR1's coupling survives its observability
+  audit while observability itself is trait-null.
+- **The carrier is METRIC-BORNE** (SR3/SR4, capacity exhausted by
+  rotation proof): the Big5 coupling and most of the identity gap
+  live in the common-community mass PPMI suppresses. **Identity
+  lives in the distinctive; personality lives in the common.**
+- Standing rules 1–33; defects #1–#75 (#68–#75 bought eight
+  conventions); suite 970 → 1021; every real-data leg
+  stage-E-governed with zero ID leaks.

@@ -342,3 +342,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #74 | T-line / M4-SR3 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR3 outcome + planner adjudication` | The capacity sweep's endpoint (512) was registered against nothing — available rank 1043, stratified p still falling monotonically at the cut; the classification's scope had to be narrowed to "through 512" at adjudication. | none (convention, #69/#71 family: a capacity sweep registers its endpoint against the available rank, or states why it stops short) | sweep-endpoint |
+
+## Dated additions (2026-08-17, twenty-fourth note — SR4; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #75 | T-line / M4-SR4 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR4 outcome + planner adjudication` | The classification pattern table keyed on binary detection at a 0.05 boundary the corpus sits on (0.052–0.056 in three rows); the verdict survived only because the capacity argument is threshold-free. | none (convention: classification cells key on effect-size contrasts with detection secondary, or declare a near-band zone; the #74 endpoint convention now anticipates non-uniform rank) | threshold-keying |

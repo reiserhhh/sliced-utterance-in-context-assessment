@@ -935,3 +935,15 @@ instrument delivered; synthesis
 W–MM in `SUICA_IDENTITY_THEORY_V1.md`; graded laws and corrections
 in the four dated addenda of `SUICA_V8_IDT_INTEGRATION.md`; rules
 1–33 and defects #1–#64 in `SUICA_DEFECT_REGISTRY.md` dated notes.
+
+## Dated addendum (2026-08-17) — the M4-T line and the 4W era
+
+Codex's T1 (`d9da17d`) and the owner's 4W synthesis (`24d4a80`)
+opened the era; five legs under the loop discipline closed its
+measurement phase (synthesis `SUICA_M4_T_LINE_SYNTHESIS.md`;
+adjudications in `SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md`).
+Headlines: selection identity = nested innovations + a
+generalizing taste tail; the identity budget (taste 82%); the
+dissociation (identity's carrier largely trait-silent); the
+carrier METRIC-BORNE — identity lives in the distinctive,
+personality in the common. Defects #68–#75; suite 1021.

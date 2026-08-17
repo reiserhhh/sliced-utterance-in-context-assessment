@@ -1530,3 +1530,55 @@ common-community mass. The natural next step is a metric sweep rather than
 a capacity sweep: interpolate between Hellinger and PPMI weighting (e.g. a
 family of frequency-exponent reweightings) and find where the coupling
 appears. That would name the carrier in one number instead of bounding it.
+
+### Planner adjudication of SR4 (2026-08-17, appended after the run) — METRIC-BORNE, CAPACITY PROVABLY EXHAUSTED; THE MEASUREMENT PHASE CLOSES
+
+**METRIC_BORNE accepted, with the strongest possible form of its
+premise: capacity is exhausted BY PROOF** (full-rank PPMI ≡
+unfactorised PPMI to 5.3e-15 — the rotation row did its job;
+RANK_ANOMALY correctly unreachable; fold 4's rank 1044 controlled
+by the never-truncating row). PPMI at ANY rank reaches 56.3% of
+the Hellinger flat coupling and detects at no rank; **87.6% of the
+coupling gap and 61.2% of the identity gap are METRIC, not
+capacity.**
+
+**Dated correction to the T3 adjudication (owed to the executor's
+flag):** T3's GAP_REMAINS residual was typed
+"representation-capacity". That typing DOES NOT SURVIVE the
+completed axis — 61.2% of the gap persists at zero truncation. The
+residual re-types as predominantly METRIC: structure the PPMI
+weighting suppresses and the Hellinger geometry keeps.
+
+**Defect #75 (RD-SR4-1, mine):** the pattern table keyed on binary
+detection at a 0.05 boundary this corpus sits on (0.052–0.056 in
+three rows). The verdict is unaffected — the capacity argument is
+threshold-free (56.3% of flat at FULL rank) — but **convention:
+classification cells key on effect-size contrasts with detection
+secondary, or declare a near-band zone** (#74 note: the endpoint
+convention now also anticipates non-uniform rank across folds).
+
+**The T-line's final synthesis proposition (adjudicated wording,
+carried to the synthesis doc and the 4W map):**
+
+> **Identity lives in the distinctive; personality lives in the
+> common.** The re-identification signal is carried by a low-rank,
+> PPMI-friendly taste coordinate that generalizes to unseen
+> communities (T2/T3); the Big5 coupling is carried by the
+> Hellinger-kept COMMON-COMMUNITY MASS — how a person distributes
+> over widely-shared opportunities — which the
+> distinctiveness-emphasizing metric suppresses (SR2/SR3/SR4).
+> Mechanically sensible: dimensional population-graded constructs
+> should live in shared-opportunity allocation; individual identity
+> in rare distinctive choices. EXPLORATORY, corpus-level, one
+> cohort; no person claims.
+
+**THE MEASUREMENT PHASE OF THE T-LINE CLOSES.** Seven legs under
+the loop discipline (T2, T3, SR2, SR3, SR4 + the adopted T1 and
+the 4W synthesis), defects #68–#75 each buying a convention, suite
+970 → 1021, every leg label-governed with zero ID leaks. Synthesis:
+`docs/SUICA_M4_T_LINE_SYNTHESIS.md`. Named, not queued: the
+When-dynamics program (the 4W doc's §2.4, unposed); second-corpus
+transport of the branch code; common-mass carrier refinement
+(which shared communities, at cluster level — naming governance
+applies); R3's identity-formalism reconciliation (held); the
+owner's parked decisions.
