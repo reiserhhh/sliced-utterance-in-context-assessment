@@ -599,3 +599,217 @@ commit. Blocking gates: cache anchor verification, permutation-null center
 check, ID-leak scan (0 of 1401 cohort IDs in committed files), exact-K block
 invariants. SEED = 20260818; B_perm = 499; B_boot = 1000. Label-free: no
 Big5/MBTI value is read.
+---
+
+## U2 outcome (executor, 2026-08-18)
+
+Append-only. The registration text above is unchanged. Artifact stamps: run
+window `2026-08-17T21:48:30.732133Z` – `2026-08-17T21:50:40.015368Z` (UTC; local date 2026-08-18). Report:
+`reports/SUICA_M4_U2_PERSISTENCE_CURVE_REPORT.md`. Harness:
+`scripts/run_suica_m4_u2_persistence_curve.py`. Tests:
+`tests/test_m4_u2_persistence_curve.py`. Artifacts (gitignored):
+`results/m4_u2_persistence_curve/`.
+
+### Verdict
+
+**`DRIFT_WITH_CORE`** (cell 3). The personal selection signature is a
+**moving wave with a standing core**: it drifts, and it does not drift away.
+
+| quantity | value | 95% CI | own null band |
+|---|---|---|---|
+| E(0–90d) — existence | **0.6573** | [0.5973, 0.7228] | [−0.00088, 0.00090] |
+| E(2–3y) — verdict endpoint (#74) | **0.3515** | [0.2708, 0.4270] | [−0.00143, 0.00168] |
+| D = E(0–90d) − E(2–3y) | **0.3058** | [0.2364, 0.3855] | [−0.00173, 0.00164] |
+| floor share E(2–3y)/E(0–90d) | **0.5348** | [0.4203, 0.6320] | — |
+
+Permutation p = 0.0020 (the floor at B = 499) for both existence and decay.
+The intervals straddle no cell boundary, so point and interval agree and no
+interval-statement substitution is needed. **All seven arms land in
+`DRIFT_WITH_CORE`; zero #73 flags.**
+
+The registered projection caution is carried into the verdict: this is one
+SLOW-TIME projection of K_u (eq 12) onto the marginal selection distribution
+π_u over 1191 communities. The decay is a statement about π_u on the
+Hellinger unigram sphere over calendar time, not about any psychological
+attribute (§5.4).
+
+### The curve
+
+| bin | self mean cos | epoch-matched cross | E(b) | 95% CI |
+|---|---|---|---|---|
+| 0–90d | 0.7105 | 0.0532 | 0.6573 | [0.5973, 0.7228] |
+| 90–180d | 0.6487 | 0.0516 | 0.5971 | [0.5318, 0.6665] |
+| 180–365d | 0.5950 | 0.0503 | 0.5447 | [0.4727, 0.6163] |
+| 1–2y | 0.5033 | 0.0479 | 0.4554 | [0.3784, 0.5274] |
+| 2–3y | 0.3959 | 0.0444 | 0.3515 | [0.2708, 0.4270] |
+| 3y+ *(descriptive)* | 0.3091 | 0.0453 | 0.2638 | [0.1869, 0.3339] |
+
+Epoch matching is doing visible work: the cross floor itself falls from
+0.0532 to 0.0444 across the bins, and that platform-wide decline is
+subtracted out before E is read.
+
+### The null's own location (#68)
+
+The registration's claim — E's expected null location is 0 BY CONSTRUCTION —
+is an argument, and it was checked as a number. Realized within-quarter
+permutation centers, all six bins: **−1.5e−05, +2.4e−05, −3.7e−05, −3.7e−05,
++1.6e−05, +8.1e−05**; D's center **−1.9e−05**. Every one is three to four
+orders of magnitude inside its own 95% band and four orders inside the
+effect. The null destroys identity while preserving each author's
+per-quarter block count exactly, so the epoch structure the cross baseline
+matches on is untouched.
+
+### The equivalence band could have spoken (#71)
+
+The FIXED_POINT margin is 0.2 × E(0–90d) = **0.1315**; the realized
+half-width of D's CI is **0.0745**, i.e. **0.567× the margin**. The design
+had the power to DECLARE equivalence had D been near zero. `FIXED_POINT` was
+reachable and was not reached — the decay is not an artifact of a band too
+wide to exclude it.
+
+### Arms
+
+| arm | authors | blocks | E(0–90d) | E(2–3y) | D | floor share | cell |
+|---|---|---|---|---|---|---|---|
+| PRIMARY full vocab, pool 849 | 849 | 45,731 | 0.6573 | 0.3515 | 0.3058 | 0.5348 | `DRIFT_WITH_CORE` |
+| balanced panel (2–3y support) | 564 | 39,076 | 0.6402 | 0.3506 | 0.2896 | 0.5477 | `DRIFT_WITH_CORE` |
+| activity tercile 1 (≤650 ev) | 302 | 2,347 | 0.7073 | 0.2817 | 0.4256 | 0.3982 | `DRIFT_WITH_CORE` |
+| activity tercile 2 (650–2050) | 265 | 6,416 | 0.6981 | 0.3110 | 0.3871 | 0.4455 | `DRIFT_WITH_CORE` |
+| activity tercile 3 (>2050 ev) | 282 | 36,968 | 0.6523 | 0.3501 | 0.3021 | 0.5368 | `DRIFT_WITH_CORE` |
+| clean_no_explicit_personality | 779 | 39,634 | 0.6588 | 0.3418 | 0.3170 | 0.5188 | `DRIFT_WITH_CORE` |
+| K = 100 blocks | 690 | 22,257 | 0.6994 | 0.3854 | 0.3140 | 0.5511 | `DRIFT_WITH_CORE` |
+
+Three readings the arm table forces.
+
+1. **Composition is not the decay.** The balanced panel — only the 564
+   authors who actually contribute a 2–3y pair, so the same people appear in
+   every bin — gives D 0.2896 against the primary's 0.3058 and a floor share
+   0.5477 against 0.5348. The curve is not an artifact of who survives to the
+   far bins.
+2. **Attenuation transports as registered.** K = 100 raises the LEVEL
+   (E(0–90d) 0.6994 against 0.6573, exactly the predicted reliability gain
+   from doubling the block) while D (0.3140 vs 0.3058, +2.7%) and the floor
+   share (0.5511 vs 0.5348, +3.0%) barely move. The fixed-K design's promise
+   — E is an attenuated level, D and the floor share are the transportable
+   quantities — is empirically kept.
+3. **Governance echo, fourth instance.** Removing the 23 explicit-typology
+   communities costs 13.3% of the blocks (45,731 → 39,634) and 8.2% of the
+   pool, and moves D by **+3.7%** (0.3058 → 0.3170) with the cell unchanged.
+   Identity structure keeps not caring about the criterion-adjacent
+   communities. Note the sign: the clean arm drifts slightly MORE, so the
+   typology communities were, if anything, a mild stabiliser.
+
+### Leans
+
+- **Primary lean: the CELL held, the MAGNITUDE missed — in the OVERCLAIM
+  direction.** DRIFT_WITH_CORE was leaned and delivered, but the floor share
+  is **0.5348 [0.4203, 0.6320]** against the registered [0.6, 0.9]. The
+  interval's top edge only grazes the lean's bottom. The signature keeps 53%
+  of its near-gap excess at three years, not the 60–90% the planner leaned
+  on.
+
+  **Why the lean missed is itself a finding.** The lean was calibrated from
+  the T-line's early/late AUC 0.9837 and the S-line's split-half 0.681 —
+  DISCRIMINABILITY statistics. But the cross floor here is 0.05: an author's
+  blocks can lose nearly half their excess similarity and still be trivially
+  separable from a random stranger's, because the stranger is so far away.
+  **AUC over-predicts the persistence floor.** A high early/late AUC is
+  compatible with substantial signature drift, and reasoning from
+  discriminability to stability is a mistake this leg should retire.
+- **Secondary lean: HELD, and monotone.** Decay by activity tercile
+  0.4256 / 0.3871 / 0.3021 (low → high), floor share 0.3982 / 0.4455 /
+  0.5368. Thin signatures both start higher (a narrow repertoire self-
+  correlates) and fall further. The lean was held weakly and is now the
+  clearest gradient in the leg.
+
+### Refinement fit (never verdict-carrying, and it could not have been)
+
+E(Δt) = E_inf + A·exp(−Δt/τ): E_inf **0.1310** [−1.0224, 0.3558],
+A **0.5439** [0.3130, 1.7268], τ **976.3 d** [415.6, 3650.0] ≈ 2.67 y, cap
+hit in 11.5% of bootstrap replicates. Three parameters on five points is
+weakly identified: the E_inf interval runs NEGATIVE at its bottom, which is
+unphysical for a floor, and an eighth of replicates prefer a straight line to
+a decay-with-floor over this window. Read τ as an order of magnitude — years,
+not months — and nothing finer. The floor the verdict rests on is the
+measured E(2–3y) and its own interval, not this E_inf.
+
+### Reliability descriptive
+
+Adjacent-block same-author cosine, the shortest personal gap the design can
+see: mean **0.7703** (median 0.8090, sd 0.1962) over 44,882 pairs from 849
+authors at a mean gap of 17.4 d. The 0–90d self mean (0.7105) already sits
+close to that ceiling, so the near bin is measuring near the instrument's
+limit, not far below it.
+
+### Gates and honesty checks
+
+- **Cache anchor gate PASS**: 3,005,360 events / 1401 authors / 1191
+  vocabulary, verified before any computation.
+- **Census reproduction PASS on every registered pin**: 849 / 1028 / 690
+  authors, 46,318 blocks, 18 quarters, self pairs per bin
+  1,005,742 / 783,654 / 1,198,561 / 1,248,992 / 417,963 / 100,150 (exact),
+  564 and 332 contributors, terciles 302 / 265 / 282 at edges 650 / 2050.
+  The tercile convention needed for those sizes is recorded: quantiles of
+  per-author BLOCK counts (13 and 41 = 650 and 2050 vocabulary events) with
+  `x ≤ lo | lo < x ≤ hi | x > hi`.
+- **Permutation-null center PASS** in all six bins and for D (above).
+- **ID-leak scan PASS**: 0 of 1401 cohort IDs in the committed set.
+- **No synthetic gate**, as registered (R layer, no world simulated; #76's
+  operating-point convention does not bind).
+
+### Disclosed re-posing RD-U2-1 (cross baseline computed exactly)
+
+The registration specifies the epoch-matched cross term as a sample of up to
+20 different-author pairs per self pair per cell. The runner instead computes
+each (quarter-pair × bin) stratum's cross mean **exactly**, over all its
+different-author pairs, and weights strata by the identical self-pair
+histogram. This is the zero-variance limit of the registered sampler and has
+the identical estimand, because the censused feasibility makes 20 × self <
+available in every stratum. **The registered sampler was also run** on the
+primary arm as an equivalence check: 95,094,317 cross pairs drawn of
+95,101,240 requested (shortfall 7.3e−05, from the rejection-attempt cap),
+per-bin |sampled − exact| at most **4.8e−05**. The re-posing is STRICTER
+than the registered form.
+
+### Census note not reproduced (non-blocking)
+
+The registration's "min cross candidates per self quarter-pair cell 115.4×"
+does not reproduce at either resolution the executor could construct:
+**26.0×** over occupied (quarter-pair × bin) strata, **71.4×** at
+quarter-pair resolution (median over strata 203.3×). The figure's denominator
+is not named in the registration. The operative property is intact — both
+resolutions clear the 20× the registered sampler needs, and zero self pairs
+were dropped for want of a cross partner — so this is recorded, not
+escalated. Future census lines should pin the denominator (the U1
+precision note, repeated).
+
+### Theory reading
+
+**The first slow-time measurement in SUICA, and it is neither a fixed point
+nor a random walk.** U1 found the fast-time channel dwell-dominated; U2 finds
+the slow-time marginal decaying to a large but non-flat residue: 53% of the
+near-gap personal excess survives three years, with the drift and the core
+both far outside anything the permutation null can produce.
+
+The number that matters for the rest of the line is the DISSOCIATION between
+persistence and discriminability. The T-line's early/late AUC 0.9837 and this
+leg's floor share 0.5348 are the same corpus, the same metric, the same
+authors — and they say different things because AUC is a ranking statistic
+against a distant stranger while E is a magnitude. **Identity remains
+recoverable while the signature substantially moves.** Any future leg that
+infers stability from a discrimination score inherits this error.
+
+Boundary the verdict must carry: **the curve has not flattened by the verdict
+endpoint** (E(3y+) = 0.2638 sits below E(2–3y) = 0.3515, and the fit's
+asymptote sits below both). `DRIFT_WITH_CORE` is a statement at a THREE-YEAR
+horizon. The core is what survives three years, not a demonstrated permanent
+floor, and extrapolating past the observed span is not licensed here.
+
+### Line state
+
+U2 CLOSED. The When line now has both a fast-time result (U1
+`ORDER_CHANNEL`) and a slow-time one (U2 `DRIFT_WITH_CORE`). U3 (Who × When)
+inherits: the cross-thread arm as the canonical order object (U1
+adjudication), a three-year horizon over which the Where signature is known
+to move by half its excess, and the standing warning that a trait join fitted
+on one epoch is being fitted to a moving target.
