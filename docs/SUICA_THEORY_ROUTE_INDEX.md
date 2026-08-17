@@ -1,6 +1,6 @@
 # SUICA Development and Theory Route Index
 
-Date: 2026-07-30  
+Opened: 2026-07-30; updated through 2026-08-17
 Status: active development map; not a release seal or a scientific promotion
 
 ## 1. Purpose
@@ -24,6 +24,7 @@ Recommended reading order:
 | Priority | Question | Primary documents |
 | --- | --- | --- |
 | 0 | What is the complete current system and its claim boundary? | [Unified Theory System V8](SUICA_UNIFIED_THEORY_SYSTEM_V8.md) |
+| 0.5 | How do condition, expression, identity, and time form one person-interpreter architecture? | [4W Person Interpreter Theory](SUICA_4W_PERSON_INTERPRETER_THEORY.md) |
 | 1 | How did the method evolve? | This index, [Rind Theory v3](THEORY.md), [Rind Theory v4](THEORY_V4.md), [Theory V6](THEORY_V6.md) |
 | 2 | What is the current mathematical object? | [V8 Conditional Response Geometry](V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md), [V8 Mathematical Route](V8_MATHEMATICAL_RESEARCH_ROUTE.md) |
 | 3 | What micro mechanisms can generate it? | [M3 Foundation](SUICA_M3_MICRO_MESO_MACRO_FOUNDATION.md), [M3 Mechanism Atlas](SUICA_M3_MECHANISM_ATLAS_THEORY.md) |

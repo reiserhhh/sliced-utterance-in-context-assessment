@@ -69,6 +69,15 @@ measure choice as a channel).*
 > 1–24; defect registry #1–#42. Everything EXPLORATORY, synthetic,
 > instrument-world — no person claims, ever.
 
+> **Theory synthesis (2026-08-17) — the 4W person-interpreter map.**
+> `docs/SUICA_4W_PERSON_INTERPRETER_THEORY.md` integrates the development
+> lineage and the latest selection work as `Where` (opportunity/selection),
+> `What` (conditional expression), `Who` (reference-relative reproducible
+> deviation), and `When` (state/path dynamics). The four terms are analytical
+> roles, not four factors. The document also incorporates M4-T1's exploratory
+> finding that selection identity contains nested conditional innovations plus
+> a continuous or higher-order tail; neither object is licensed as personality.
+
 Main has moved past v0.2.1 in three tracked layers (the sealed release above
 is unchanged and remains the verification anchor):
 
