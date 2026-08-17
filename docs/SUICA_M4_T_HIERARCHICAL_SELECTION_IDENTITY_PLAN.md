@@ -1294,3 +1294,102 @@ the typology-named communities in particular. The two open questions are
 whether the coupling that survives ablation is carried by identifiable
 community *sets*, which a sparse-selection analysis on the flat vector
 would answer directly.
+
+### Planner adjudication of SR3 (2026-08-17, appended after the run) — NO LOW-RANK CARRIER; THE ENDPOINT QUESTION SHARPENS INTO A METRIC QUESTION
+
+**INDICATOR_CARRIER accepted, with its scope stated exactly:** no
+embedding dimension through 512 clears its stratified band (p
+0.126 → 0.063, monotonically falling, never detecting) while the
+flat vector clears at z = 4.46; the marginal coupling plateaus at
+55.9% of the flat ceiling; the identity gap closes only 38.0%
+(0.0387 → 0.0240, CIs disjoint from flat at 512). Clean arm
+replicates the classification; the four #73 marginal-divergence
+flags are consistent with SR2's 41% ablation cost. The A1
+stamp-order hardening ran as standing convention
+(g0_passed_before_stamp True; identity curve pre-stamp,
+label-free), and the executor's process note (its own drafted
+timestamps corrected against artifacts before commit) is rule-30
+culture in prose.
+
+**Defect #74 (RD-SR3-1, mine):** the sweep endpoint 512 was
+registered against nothing — available rank is 1043 and the
+stratified p was still falling at the cut. **Convention (the
+#69/#71 family): a capacity sweep registers its endpoint against
+the available rank, or states why it stops short.** The
+classification therefore reads "no low-to-mid-rank continuous
+carrier through 512"; the edge is SR4's.
+
+**The sharper question the endpoint hides (planner derivation):**
+at d = 1043 the truncation vanishes — the embedding becomes a
+ROTATION of the full space, and what remains different from the
+Hellinger flat row is the METRIC (PPMI weighting) alone. So the
+endpoint completion is a three-way disambiguation, not a formality:
+detection appearing by 1043 means a high-rank continuous carrier;
+the PPMI-metric full-rank row failing while Hellinger detects
+means the coupling is **METRIC-BORNE — living in the
+common/popular community mass that PPMI reweighting suppresses**
+(PPMI emphasizes distinctive co-occurrence; Hellinger keeps mass
+on frequent communities); truncations failing while ppmi-full
+detects means rank-borne after all. Each cell re-types the carrier
+differently. SR4 below.
+
+---
+
+## M4-SR4 — the endpoint and the metric (completing the carrier curve to full rank)
+
+**REGISTERED 2026-08-17, BEFORE RUN.** Planner: the M-line planner;
+executor: dispatched agent. A micro-leg: SR3's machinery verbatim,
+three new rows, one three-way classification. Governance: SR2/SR3's
+regime verbatim (A1-hardened stamp; labels after hash; R-G; ID
+scans).
+
+### 4W header
+
+- **Object:** the trait-coupling carrier's final type — rank-borne
+  vs indicator vs METRIC-borne.
+- **Fixed:** everything from SR3 (recipe, folds, pair sets, strata,
+  trait side, bands machinery).
+- **Varied:** three rows only — d = 768, d = 1043 (= available
+  rank; the pure-rotation row), and **ppmi-full-metric** (the PPMI
+  transform with NO truncation, cosine similarity — the metric
+  isolated from capacity).
+- **Falsifiers / cells:** each of the three carrier types has a
+  row pattern that kills the other two.
+- **Layer:** R with external anchor; corpus-level.
+
+### Verdict (rule 22; NULL-first; #73 flags)
+
+**V-SR4** on the stratified detections of the three rows plus
+SR3's persisted curve:
+
+| pattern | classification |
+|---|---|
+| detection at 768 or 1043 with r ≥ half-flat | **CONTINUOUS_CARRIER_HIGH_RANK** — SR3's cell amends by dated note |
+| truncations (incl. 1043-rotation) undetected AND ppmi-full undetected AND Hellinger flat detected | **METRIC_BORNE** — the coupling lives in what PPMI suppresses (common-community mass); the carrier re-types |
+| ppmi-full detected while 768/1043 truncations undetected | **RANK_ANOMALY_NAMED** (should be impossible — 1043 IS full rank; a detection difference between 1043 and ppmi-full isolates numerical/whitening effects; reported as an instrument finding) |
+| all three undetected AND Hellinger flat detected AND 1043 ≈ ppmi-full (both null) | **METRIC_BORNE** (same cell as above — the operative contrast is PPMI-vs-Hellinger) |
+| pool/width underresolution | **UNDERRESOLVED** |
+
+Leans: METRIC_BORNE .45 / CONTINUOUS_CARRIER_HIGH_RANK .35 /
+other .20 — the falling-p trend argues for late detection; the
+38%-only identity-gap closure argues the flat advantage is not
+mere capacity.
+
+### Gates
+
+G0sr4: SR3's full curve bit-verified (all ten coupling rows, both
+identity endpoints, the anchors); rank availability 1043 confirmed.
+G1sr4 (#59): the three rows are not forced. G2sr4 (#71): pilot
+band projection for the three rows. G3sr4: A1-hardened stamp;
+labels after hash; identity companion at 768/1043 (label-free,
+pre-stamp) to extend V-SR3b's reading; #72 alignment (within-fold);
+rule 24; stages < 600 s; target < 20 min.
+
+### Deliverables
+
+The six as always: `scripts/run_suica_m4_sr4_endpoint_metric.py`;
+`results/m4_sr4_endpoint_metric/` (gitignored);
+`reports/SUICA_M4_SR4_ENDPOINT_METRIC_REPORT.md`; outcome append
+HERE; one ledger row; exactly ONE commit
+`feat(m4-t): SR4 — the endpoint and the metric — <SLUG>`, never
+amended, never pushed; suite green first (1012 baseline).

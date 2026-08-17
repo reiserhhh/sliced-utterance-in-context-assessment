@@ -336,3 +336,9 @@ mirror). N4's three candidates are all planner defects:
 |---|---|---|---|---|---|
 | #72 | T-line / M4-SR2 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR2 outcome + planner adjudication` | The registration demanded "SR1's exact pair set" for fold-local representations (impossible for two of four) and invited cross-row comparison over non-aligned pair sets; executor's within-fold mask (cost 0.0013, disclosed) was the correct in-leg repair. | none (convention: every coupling row declares its pair set and half-alignment; comparisons licensed only within aligned classes — rule 33's pair-set cousin) | pair-set-alignment |
 | #73 | T-line / M4-SR2 | same | No convention for full-vs-clean divergence INSIDE one verdict (V-SR2b: detected-but-DIES full vs NULL_MARGINAL clean). | none (convention: the registered primary arm routes; the replication arm's divergence is flagged on the verdict line, never averaged; plus the A1 stamp-order hardening — a failed G0 can never issue a stamp — adopted for all sealed legs) | verdict-divergence |
+
+## Dated additions (2026-08-17, twenty-third note — SR3; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #74 | T-line / M4-SR3 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR3 outcome + planner adjudication` | The capacity sweep's endpoint (512) was registered against nothing — available rank 1043, stratified p still falling monotonically at the cut; the classification's scope had to be narrowed to "through 512" at adjudication. | none (convention, #69/#71 family: a capacity sweep registers its endpoint against the available rank, or states why it stops short) | sweep-endpoint |
