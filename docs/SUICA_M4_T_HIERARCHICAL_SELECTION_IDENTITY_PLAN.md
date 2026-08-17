@@ -1166,3 +1166,131 @@ The six as always: `scripts/run_suica_m4_sr3_carrier_localization.py`;
 append HERE; one ledger row (EXPLORATORY, corpus-level); exactly
 ONE commit `feat(m4-t): SR3 — carrier localization — <SLUG>`,
 never amended, never pushed; suite green first (1003 baseline).
+
+## M4-SR3 outcome (2026-08-17, appended by the executing agent) — INDICATOR_CARRIER
+
+**Routing: `INDICATOR_CARRIER`.** Slug `indicator-carrier`. Report:
+`reports/SUICA_M4_SR3_CARRIER_LOCALIZATION_REPORT.md`; harness
+`scripts/run_suica_m4_sr3_carrier_localization.py`; tests
+`tests/test_m4_sr3_carrier_localization.py`; artifacts (gitignored)
+`results/m4_sr3_carrier_localization/`. EXPLORATORY, corpus-level.
+ID-leak scan 0 hits.
+
+### Label governance (SR2's regime, with the A1 hardening now standing)
+
+| event | UTC |
+|---|---|
+| `config_stamped` (sha256 `fa3bf734839b0b9e…`) | 2026-08-17T10:29:54.206498+00:00 |
+| `first_join` | 2026-08-17T10:30:21.437455+00:00 |
+| `labels_opened` | 2026-08-17T10:30:21.449356+00:00 |
+
+Stamp<join true; join<labels true; all pre-join events label-free true;
+**G0 PASS structurally precedes stamp issuance** true; **the entire
+identity curve was computed before the stamp** true.
+
+### Gates
+
+- **G0sr3 PASS.** All anchors bit-exact: SR2's d=64 marginal coupling
+  0.023884547516782918 and within-fold flat 0.04768658177503308 both
+  reproduced by the sweep; SR1's full-set 0.048987613136188025; T3's
+  identity AUCs 0.9449125076918007 (d=64) and 0.9836592913058296 (flat)
+  both reproduced by the identity curve. Purity: all 20 (fold × d) cells
+  pure, train×held-out overlap 0; available rank 1043 at every fold so
+  d=512 is genuinely available (d_effective = d at all four dimensions).
+- **G1sr3 PASS** (d=64 below flat on both axes). **G2sr3 PASS**
+  (label-free; projected full p95 0.0154–0.0228, all below half-flat
+  0.0238). **G3sr3 PASS** (25 own-null predicates + stamp order).
+
+### The two curves
+
+**Identity (label-free, pre-stamp):**
+
+| representation | AUC | CI95 | excess bits | gap to flat |
+|---|---|---|---|---|
+| d=64 | 0.944913 | [0.9388, 0.9509] | 4.877 | 0.038747 |
+| d=128 | 0.952439 | [0.9461, 0.9580] | 4.993 | 0.031221 |
+| d=256 | 0.957391 | [0.9521, 0.9625] | 5.085 | 0.026269 |
+| d=512 | 0.959635 | [0.9540, 0.9646] | 5.132 | 0.024024 |
+| flat | 0.983659 | [0.9795, 0.9872] | — | — |
+
+**Coupling (full arm, within-fold pair set, B=999):**
+
+| representation | marginal r | p | det | stratified p | det |
+|---|---|---|---|---|---|
+| d=64 | 0.023885 | 0.0220 | True | 0.1260 | **False** |
+| d=128 | 0.025248 | 0.0180 | True | 0.0950 | **False** |
+| d=256 | 0.026100 | 0.0160 | True | 0.0760 | **False** |
+| d=512 | 0.026660 | 0.0150 | True | 0.0630 | **False** |
+| flat | 0.047687 | 0.0010 | True | 0.0010 (z 4.46) | **True** |
+
+### Verdicts
+
+- **V-SR3a: INDICATOR_CARRIER.** No embedding dimension up to 512 clears
+  its own stratified band while the flat vector clears it at p = 0.0010,
+  z = 4.46. The marginal curve *is* monotone non-decreasing (0.023885 →
+  0.025248 → 0.026100 → 0.026660) and the stratified p-values fall
+  monotonically (0.1260 → 0.0950 → 0.0760 → 0.0630) — the trend points the
+  right way — but eight-fold more capacity plateaus at **56% of the
+  within-fold flat value** and never arrives. **The carrier is not a
+  low-rank continuous coordinate at any d ≤ 512.**
+- **V-SR3b (reading, no gate): the identity gap narrows but does not
+  close.** 0.038747 at d=64 → 0.024024 at d=512: **38.0% of T3's
+  GAP_REMAINS residual closes**, and the CI at 512 still does not reach
+  flat's. T3 typed that residual representation-capacity; this sweep says
+  capacity is *part* of it and not all of it — measured on the same axis
+  with the same machinery.
+
+### Clean arm and #73 divergence flags
+
+Clean classification **INDICATOR_CARRIER** — the headline does not diverge
+(n_valid 1269 = T1's exactly). But **all four marginal readings diverge**:
+every d detects marginally on the full arm (p 0.015–0.022) and none does
+on the clean arm (p 0.087–0.125), while the flat vector detects on both.
+Per #73 the primary (full) arm routes and the divergence is flagged, and
+here **the flag is itself the finding: what little coupling the compressed
+representation carries is largely the 23 typology-named communities** —
+SR2's 41% ablation effect, now localized to the embedding.
+
+### Anomalies (all pre-verdict)
+
+- **A1 — one SVD per fold, sliced (pre-stamp, by design, asserted).** The
+  frozen recipe returns `vt[:d].T * sv[:d]` from a single deterministic
+  SVD, so d=128/256/512 are prefixes of the same factorisation as d=64.
+  The harness asserts bit-equality against a genuine `ppmi_svd(counts, 64)`
+  call at every fold before using any slice, and a unit test checks the
+  same property across five widths. This is an optimisation with a proof,
+  not a substitution.
+- **A2 — the ceiling row is the WITHIN-FOLD flat value, not the full-set
+  one (pre-verdict, #72).** Comparing a fold-local curve against a
+  full-set ceiling is exactly the misalignment #72 exists to prevent, so
+  the half-flat threshold is 0.5 × 0.04768658177503308 = 0.023843. Note
+  SR2's d=64 marginal (0.023885) sits a hair above that line by
+  coincidence; the classification turns on the STRATIFIED reading, where
+  d=64 is undetected.
+- **A3 — the two curves are different statistics on one axis
+  (pre-verdict).** An AUC and a Mantel r are never subtracted here; the
+  shared axis buys the SHAPE of each as capacity grows, nothing more.
+
+### Registration-defect candidate
+
+- **RD-SR3-1 — the sweep stops at 512 for no registered reason.** The
+  available rank is 1043 at every fold, so d ∈ {768, 1043} were reachable
+  at negligible extra cost, and the stratified p-values were still falling
+  monotonically at 512 (0.0630). INDICATOR_CARRIER is the correct verdict
+  *for the registered grid*, but the grid's top end was not justified by a
+  projection the way pool sizes (#69) and bands (#71) now are. A capacity
+  sweep should register its endpoint against the available rank.
+
+### What this leaves for the line
+
+The dissociation now has a shape. Both curves rise with capacity and both
+stall well short of the flat vector: identity closes 38% of its gap,
+coupling reaches 56% of the flat value and never clears the stricter band.
+**The trait coupling — and a large part of T3's identity residual — rides
+on specific-community membership rather than on a smooth taste geometry**,
+and the clean arm sharpens that to: for the compressed representation, on
+the typology-named communities in particular. The two open questions are
+(1) whether d ∈ {768, 1043} closes either curve (RD-SR3-1), and (2)
+whether the coupling that survives ablation is carried by identifiable
+community *sets*, which a sparse-selection analysis on the flat vector
+would answer directly.
