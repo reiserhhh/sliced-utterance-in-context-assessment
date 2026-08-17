@@ -419,3 +419,161 @@ B's TRANSPORTS result stands on its own, replicates under ablation, and is
 the leg's substantive contribution — but with V-T2a undecided, the 4W
 doc's priority 2 (tree + tail joint representation) does **not** become
 registrable on a certified object, because the object is not yet certified.
+
+### Planner adjudication of T2 (2026-08-17, appended after the run) — ARM A UNRESOLVABLE AS DESIGNED, ARM B DELIVERS THE FINDING: TASTE TRANSPORTS
+
+**UNDERRESOLVED accepted as routed — and the standing scientific
+result is Arm B's replicated TRANSPORTS.** The routing conjunction
+(cell 3 required both arms) was the planner's; it under-describes a
+leg in which one arm resolved cleanly: **taste transport AUC
+0.6031 [0.5837, 0.6236] against its own permutation null
+[0.4870, 0.5149], replicating under the 23-community ablation
+(0.5941 [0.5751, 0.6148]), fold purity 0-overlap everywhere.** The
+person's early selection centroid predicts which NEVER-BEFORE-USED
+communities they adopt later — a generalizing continuous Where
+coordinate EXISTS (modest, heterogeneous: per-leaf median 0.597,
+24/46 leaves below 0.60). Arm A is honestly unresolvable on this
+corpus at the registered calipers: the pilot gate fired BEFORE the
+full run; the median-pool rule voids L1–L4 independently; the
+reportable content is the attrition itself (volume matching alone
+costs 86% of the pool while moving AUC by only 0.0029; L4 needs
+8× the registered widths for a median pool of 5). The executor's
+hardening of the separation criterion (a zero-width band must not
+"pass") and its A2 disclosure (the volume caliper first measured on
+all-subreddit rather than in-vocabulary counts, repaired pre-pilot)
+are both the audit culture working.
+
+**Defects (mine).** **#68 (RD-T2-1):** G3t2's "null 0.5" predicate
+is wrong for a statistic pooling one positive per target against
+many negatives — the true null walks with pool size (0.4525 at L0
+to 0.2410 at L4); #66's permutation-band instruction is the one
+that survives. **Convention: rule-29 predicates for composite
+statistics state the statistic's OWN null (from its permutation
+machinery), never an idealized constant.** **#69 (RD-T2-2):** the
+ladder registered caliper WIDTHS rather than target POOL SIZES, so
+the feasibility gate could only fire-or-not. **Convention: matching
+designs register target pool sizes; realized caliper widths are
+the reported quantity.** Routing-granularity note (no number):
+independent arms get arm-level cells; conjunctions are reserved for
+genuinely joint claims.
+
+**What T1's 0.955 tail now reads as:** dominated by
+loyalty/self-history plus support structure whose split THIS corpus
+cannot adjudicate by matching — PLUS a real, modest, generalizing
+taste component (0.60 on disjoint support, ablation-robust). The
+matching question is not dead: it converts into a MEASUREMENT
+question, which is T3.
+
+---
+
+## M4-T3 — the identity budget (one currency for the tail)
+
+**REGISTERED 2026-08-17, BEFORE RUN.** Planner: the M-line planner;
+executor: dispatched agent. The 4W doc's priority 2, reformulated
+so Arm A's question is answered by direct measurement instead of
+infeasible matching. Label-free throughout.
+
+### 4W header
+
+- **Object:** Where × Who — the decomposition of TOTAL selection
+  identity into named carriers.
+- **Fixed:** T1's frozen tree and leaves; T2's frozen per-fold
+  embedding and observability vectors; the SR0 vocabulary.
+- **Varied:** the REPRESENTATION handed to the same identity
+  statistic (observability-only / tree-path / taste-embedding /
+  flat), marginally and conditionally.
+- **Falsifiers:** observability alone reproducing the flat ceiling
+  (identity = support artifact); the taste embedding dying under
+  observability-stratified conditioning (transport was
+  support-carried); tree ⊕ embedding failing to approach the flat
+  ceiling (the joint representation inadequate — priority 2
+  refuted in this form).
+- **Layer:** R, label-free.
+
+### Question
+
+Everything so far measured identity through different lenses with
+different units. T3 puts four representations through ONE
+statistic and one permutation machinery, marginally and
+conditionally, to produce the IDENTITY BUDGET: how much
+reproducible same-author information is carried by (i)
+observability alone, (ii) the frozen tree path, (iii) the
+continuous taste embedding beyond observability, (iv) nothing we
+have named (the residual gap to the flat ceiling).
+
+### Representations (all early→late, all persisted objects)
+
+- **R_obs:** the 4-dim late-side observability vector of T2
+  (volume, span, entropy, breadth; z-scored) — its same-author AUC
+  is THE direct measurement of the support channel T2's Arm A
+  could not isolate;
+- **R_tree:** the frozen path code (depth-weighted prefix);
+- **R_emb:** the full-early taste centroid in T2's frozen per-fold
+  embedding (d = 64);
+- **R_flat:** the Hellinger frequency vector (T1's flat ceiling,
+  0.9837 anchor).
+
+### Statistics (one machinery, #66/#68-compliant)
+
+Same-author AUC per representation with user-bootstrap CIs
+(B = 1000) and permutation nulls (B = 999) — each null from ITS OWN
+machinery. CONDITIONAL readings by CORPUS-WIDE stratified
+permutation (never within-leaf — the T2 lesson): AUC(R_emb |
+observability-decile strata), AUC(R_tree | strata), AUC(R_obs |
+leaf strata). Excess-bits companion per T1's conditional-MI
+pattern for each marginal and conditional reading (the budget's
+common currency; permutation-corrected).
+
+### Verdicts (rule 22; NULL-first; sides declared)
+
+- **V-T3a [support size]:** R_obs marginal — MAJOR (AUC CI above
+  0.75) / MODERATE / MINOR (CI below 0.60). Lean: MODERATE .5 /
+  MAJOR .3 / MINOR .2.
+- **V-T3b [taste beyond support]:** R_emb under
+  observability-stratified null — SURVIVES (CI above its
+  stratified band) / DIES. Lean SURVIVES .65 (T2's transport was
+  support-blind by construction).
+- **V-T3c [joint adequacy, priority 2's core]:** AUC(R_tree ⊕
+  R_emb concatenated, weights pinned by a declared rule fitted on
+  training folds only) vs the R_flat ceiling — ADEQUATE (gap CI
+  inside a declared band ε_gap = 0.03) / GAP_REMAINS (the
+  unexplained residual is quantified and becomes the object).
+  Lean GAP_REMAINS .6 — honest: 0.9837 is a high ceiling.
+- Readings: the full budget table (marginal + conditional AUC +
+  excess bits per representation); clean-arm replication; per-leaf
+  heterogeneity for R_emb.
+
+### Routing (rule 16 — arm-level cells, the T2 lesson)
+
+| # | condition | outcome |
+|---|---|---|
+| 1 | G0/purity failure | **STOP** |
+| 2 | V-T3a MAJOR | **SUPPORT_CHANNEL_MAJOR** (+ the other verdicts still reported) — T1's tail re-typed by dated note as substantially observability-carried |
+| 3 | V-T3b SURVIVES | modifier **TASTE_BEYOND_SUPPORT** — the T2 transport finding upgraded: not support-carried |
+| 4 | V-T3b DIES | modifier **TRANSPORT_WAS_SUPPORT** — T2's Arm B re-typed by dated note |
+| 5 | V-T3c ADEQUATE | **JOINT_REPRESENTATION_ADEQUATE** — priority 2 lands: tree + continuous ≈ the flat ceiling |
+| 6 | V-T3c GAP_REMAINS | **BUDGET_WITH_RESIDUAL** — the unexplained share is the next object, quantified |
+| 7 | pool/purity underresolution anywhere | that verdict UNDERRESOLVED, others stand (arm-level, never conjunctive) |
+
+### Gates
+
+G0t3: T1/T2 anchors bit-verified (0.9837, 0.9552295265671575,
+0.6031 and its null band, the embedding hashes, fold purity);
+representations rebuilt through the persisted objects with
+provenance. G1t3 (#59): none of the four AUCs is forced;
+strata non-degenerate. G2t3 (#66/#68): pilot permutation
+calibration (200 users) fixes every null band's achievable width
+BEFORE the full run; corpus-wide strata sized to keep median
+permutation pools ≥ 20 (the #69 convention: POOL TARGETS
+registered, realized widths reported). G3t3: rule-29 with each
+statistic's OWN null; rule 24; R-G block + ID-leak scan; stages
+< 600 s; target < 45 min.
+
+### Deliverables
+
+The six as always: `scripts/run_suica_m4_t3_identity_budget.py`;
+`results/m4_t3_identity_budget/` (gitignored);
+`reports/SUICA_M4_T3_IDENTITY_BUDGET_REPORT.md`; outcome append
+HERE; one ledger row (EXPLORATORY, label-free); exactly ONE commit
+`feat(m4-t): T3 — the identity budget — <SLUG>`, never amended,
+never pushed; suite green first (983 expected baseline).

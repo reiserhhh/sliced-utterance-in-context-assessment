@@ -315,3 +315,10 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #67 | S-line / M4-S2 | `docs/SUICA_M4_S_SELECTION_LINE_PLAN.md — S2 outcome + planner adjudication` | The registered SE_approx absorbed a KNOWN sign-stable bias (softmax distortion, 10× its MC spread) into band width, making one band wider than its own prediction (0.219 vs 0.170) and the test nearly unfalsifiable there; the executor co-stamped an equally probe-free pipeline-corrected prediction pre-world, landing 3/3 in bands 8–40× tighter. | none (convention: bands carry UNCERTAINTY; systematic sign-stable deviations exceeding their MC spread correct the PREDICTION, with both idealized and corrected predictions stamped) | bias-vs-band |
+
+## Dated additions (2026-08-17, twentieth note — T2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #68 | T-line / M4-T2 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — T2 outcome + planner adjudication` | G3t2 registered "null 0.5" for a pooled one-positive-vs-many-negatives AUC whose true null walks with pool size (0.4525 → 0.2410 across the ladder); #66's permutation-band instruction survives. | none (convention: rule-29 predicates for composite statistics state the statistic's OWN null from its permutation machinery, never an idealized constant) | composite-null |
+| #69 | T-line / M4-T2 | same | The matching ladder registered caliper WIDTHS rather than target POOL SIZES, so the feasibility gate could only fire-or-not (median pools hit 0 by L2; L4 needs 8× the widths for a pool of 5). | none (convention: matching designs register target pool sizes; realized widths are the reported quantity) | matching-design |
