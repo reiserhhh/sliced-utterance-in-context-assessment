@@ -1393,3 +1393,140 @@ The six as always: `scripts/run_suica_m4_sr4_endpoint_metric.py`;
 HERE; one ledger row; exactly ONE commit
 `feat(m4-t): SR4 — the endpoint and the metric — <SLUG>`, never
 amended, never pushed; suite green first (1012 baseline).
+
+## M4-SR4 outcome (2026-08-17, appended by the executing agent) — METRIC_BORNE
+
+**Routing: `METRIC_BORNE`.** Slug `metric-borne`. Report:
+`reports/SUICA_M4_SR4_ENDPOINT_METRIC_REPORT.md`; harness
+`scripts/run_suica_m4_sr4_endpoint_metric.py`; tests
+`tests/test_m4_sr4_endpoint_metric.py`; artifacts (gitignored)
+`results/m4_sr4_endpoint_metric/`. EXPLORATORY, corpus-level.
+ID-leak scan 0 hits.
+
+### Label governance
+
+| event | UTC |
+|---|---|
+| `config_stamped` (sha256 `1f7ec6a6b0ab6970…`) | 2026-08-17T10:42:11.279493+00:00 |
+| `first_join` | 2026-08-17T10:42:33.129163+00:00 |
+| `labels_opened` | 2026-08-17T10:42:33.139959+00:00 |
+
+stamp<join true; join<labels true; all pre-join events label-free true;
+G0 PASS precedes stamp issuance true; identity companion pre-stamp true.
+
+### Gates
+
+- **G0sr4 PASS.** SR3's curve is **RECOMPUTED and bit-compared, not
+  copied**: all **10/10 coupling rows** and **5/5 identity rows** reproduce
+  exactly. n_valid 1304; all folds pure.
+- **G1sr4 PASS**, **G2sr4 PASS** (label-free; projected full p95
+  0.0154–0.0227, all below half-flat 0.023843), **G3sr4 PASS** (32 own-null
+  predicates + stamp order).
+
+### The rotation check (the leg's instrument premise)
+
+| fold | n train | rank available | d=1043 effective | exactly full rank |
+|---|---|---|---|---|
+| 0–3 | 1043 | 1043 | 1043 | True |
+| 4 | 1044 | 1044 | 1043 | False |
+
+**Max |d=1043 − ppmi-full| = 5.329e-15.** The algebra holds numerically:
+with PPMI = U S Vᵀ, freq·(V S) = (freq·PPMIᵀ)·U and right-multiplication by
+an orthonormal-column matrix preserves inner products. The RANK_ANOMALY
+cell is correctly unreachable. Fold 4's one-component shortfall is
+controlled by the ppmi-full row, which never truncates anywhere.
+
+### The completed coupling curve (full arm, within-fold, B=999)
+
+| representation | marginal r | p | det | stratified p | z | det |
+|---|---|---|---|---|---|---|
+| d=64 | 0.023885 | 0.0220 | True | 0.1260 | 1.17 | False |
+| d=128 | 0.025248 | 0.0180 | True | 0.0950 | 1.33 | False |
+| d=256 | 0.026100 | 0.0160 | True | 0.0760 | 1.46 | False |
+| d=512 | 0.026660 | 0.0150 | True | 0.0630 | 1.57 | False |
+| **d=768** | **0.026824** | 0.0090 | True | **0.0520** | 1.59 | **False** |
+| **d=1043** | **0.026841** | 0.0140 | True | **0.0520** | 1.65 | **False** |
+| **ppmi-full** | **0.026841** | 0.0170 | True | **0.0560** | 1.66 | **False** |
+| flat | 0.047687 | 0.0010 | True | **0.0010** | **4.45** | **True** |
+
+### The completed identity curve (label-free, pre-stamp)
+
+d=64 0.944913 / d=128 0.952439 / d=256 0.957391 / d=512 0.959635 /
+**d=768 0.959913** / **d=1043 0.959946** / **ppmi-full 0.959946** /
+flat 0.983659.
+
+### V-SR4: METRIC_BORNE
+
+No PPMI representation detects at ANY rank — including the untruncated one
+— while the Hellinger flat row detects at p = 0.0010, z = 4.45.
+
+**Capacity is provably exhausted, and this is the leg's point.** The
+stratified coupling plateaus at 0.026841 from d=768 through full rank
+through the unfactorised PPMI. There is no truncation left to remove, so
+the remaining shortfall to flat cannot be capacity:
+
+- **Coupling axis:** capacity buys **12.4%** of the d=64 shortfall;
+  **87.6% is metric**. Full-rank PPMI reaches only **56.3%** of the flat
+  value.
+- **Identity axis:** capacity buys **38.8%** of T3's gap; **61.2% is
+  metric** — 0.023713 of the original 0.038747 survives at zero truncation.
+
+**Both axes, independently, return the same answer: the difference is
+PPMI-vs-Hellinger geometry, not representation capacity. The coupling —
+and most of T3's identity residual — lives in what PPMI suppresses, i.e.
+the common-community mass that Hellinger's sqrt-frequency keeps and PPMI's
+reweighting discounts.**
+
+**Honest margin.** The binary detection is the weaker statement: the
+high-rank rows sit at p = 0.052 / 0.052 / 0.056 — just short of the band,
+not comfortably null. What does not depend on the threshold is the z
+contrast, **1.66 for untruncated PPMI against 4.45 for Hellinger**, on
+identical pairs with identical machinery.
+
+### Candidate re-typing, flagged for adjudication (NOT asserted here)
+
+T3 typed its 0.0387 GAP_REMAINS residual **representation-capacity**. On
+the completed axis that typing does not survive: 61.2% of it persists at
+zero truncation. **This is a candidate re-typing of a standing T3 result**
+and is reported for the planner rather than applied by the executor.
+
+### Clean arm and #73 flags
+
+Clean classification **METRIC_BORNE** — same cell (n_valid 1269 = T1's
+exactly). **Seven #73 divergence flags, all marginal**: every PPMI row
+detects marginally on the full arm and none does on the clean arm, while
+Hellinger flat detects on both. The typology-community dependence SR2 and
+SR3 found now demonstrably persists all the way to full rank. Full arm
+routes per #73.
+
+### Anomalies (all pre-verdict)
+
+- **A1 — the available rank is not uniform across folds (pre-stamp,
+  disclosed).** Fold 4 trains on 1044 authors, so the registered d=1043
+  row is exactly full rank in four folds and one component short in the
+  fifth. The ppmi-full row is the clean control and agrees to 5.3e-15.
+- **A2 — SR3's curve was recomputed rather than read (pre-verdict, by
+  design).** A transcription check proves numbers were typed correctly;
+  recomputation proves the machinery still produces them. 15/15 rows.
+- **A3 — d=1043 and ppmi-full are one estimand by two routes
+  (pre-verdict).** They are not independent evidence, and the report says
+  so; their agreement is an instrument check, not a replication.
+
+### Registration-defect candidate
+
+- **RD-SR4-1 — the detection predicate is binary at a boundary the data
+  sits on.** Three rows land at p = 0.052–0.056 against a 0.05 threshold.
+  The verdict is unchanged either way *because the capacity argument does
+  not use the threshold at all*, but a pattern table keyed on binary
+  detections is fragile exactly where this corpus put its answer. Cells
+  should key on effect-size contrasts (here z 1.66 vs 4.45) with detection
+  as a secondary report, or declare a near-band zone.
+
+### What this leaves for the line
+
+The carrier question is answered as far as this instrument can answer it:
+not capacity, not a low-rank continuous coordinate, but the METRIC —
+common-community mass. The natural next step is a metric sweep rather than
+a capacity sweep: interpolate between Hellinger and PPMI weighting (e.g. a
+family of frequency-exponent reweightings) and find where the coupling
+appears. That would name the carrier in one number instead of bounding it.
