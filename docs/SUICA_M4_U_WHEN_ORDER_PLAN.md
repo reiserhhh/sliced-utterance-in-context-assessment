@@ -1018,3 +1018,230 @@ commit. Blocking gates: cache anchors; U2 full-curve bit-comparison (G0);
 intersection pool targets; permutation-null centers; fold purity (taste
 row); ID-leak scan (0 of 1401). SEED = 20260818; B_perm = 499;
 B_boot = 1000. Label-free.
+
+## U2b outcome (executor, 2026-08-18)
+
+Append-only. The registration text above is unchanged. Artifact stamps: run
+window `2026-08-17T22:25:22.373510Z` – `2026-08-17T22:27:14.220465Z` (UTC;
+local date 2026-08-18). Report:
+`reports/SUICA_M4_U2B_PERSISTENCE_BUDGET_REPORT.md`. Harness:
+`scripts/run_suica_m4_u2b_persistence_budget.py`. Tests:
+`tests/test_m4_u2b_persistence_budget.py`. Artifacts (gitignored):
+`results/m4_u2b_persistence_budget/`.
+
+### Outcome
+
+**`POOL_GATE_UNMET`. THE LEG STOPS AT THE REGISTERED #69 GATE AND ASSIGNS NO
+CELL.** The registration pins that the intersection pair set at q = 0.5 /
+m = 10 must retain ≥ 100,000 pairs and ≥ 400 contributing authors in the 2–3y
+bin, and that the leg STOPS and reports if that is unmet with no silent
+re-split. It is unmet on BOTH clauses.
+
+| #69 clause | required | realized | ratio |
+|---|---|---|---|
+| 2–3y pairs, intersection set | 100,000 | **99,714** | 0.9971× |
+| 2–3y contributing authors | 400 | **348** | 0.8700× |
+
+Everything below is PROVISIONAL and non-verdict-carrying; it is computed and
+reported so the planner can adjudicate the re-split it now owns from numbers
+rather than from an empty report (disclosed re-posing RD-U2B-1, below).
+
+### Why the gate missed, and it is not a construction error
+
+Every registered census pin reproduces EXACTLY — all fourteen, including the
+two the gate depends on:
+
+| registered census quantity | registered | observed |
+|---|---|---|
+| universe (in-vocabulary cohort events) | 2,348,361 | **2,348,361** |
+| Common(0.5) | 32 at 0.5036 | **32 at 0.5036** |
+| Common(0.3) / Common(0.7) | 8 at 0.3077 / 104 at 0.7008 | **identical** |
+| pool | 849 authors, 45,731 blocks | **identical** |
+| per-block common q5/q25/median | 0 / 8 / 25 | **identical** |
+| per-block distinctive q5/q25/median | 0 / 6 / 25 | **identical** |
+| eligible pairs m=10, 2–3y: common / distinct | 253,946 / 230,661 | **identical** |
+| distinct-eligible authors m=10, 2–3y | 506 | **identical** |
+
+The construction here IS the planner's construction, verified on the two
+MARGINAL eligibilities to the last pair. What the census did not carry is
+their INTERSECTION, and the intersection is far smaller than either marginal:
+99,714 pairs against 253,946 and 230,661 — **39.3% of the common row's 2–3y
+pairs and 61.7% of U2's 564 2–3y contributors.** The mechanism is structural,
+not incidental. A block holds exactly K = 50 in-vocabulary events, so
+"≥ 10 events in BOTH sub-vocabularies" is the single per-block predicate
+`10 ≤ common ≤ 40`; it discards every LOPSIDED block, the per-block common
+count is U-shaped (q5 = 0 for both halves, i.e. ≥ 5% of blocks are pure
+common and ≥ 5% pure distinctive), and lopsidedness is author-persistent, so
+whole authors leave rather than a thin slice of each author's pairs. **This
+is defect #77's third instance and its first with teeth: a registered census
+quantity that was projected from marginals rather than computed.** The
+previous two (U1's tie rate, U2's 115.4× feasibility) cost a footnote; this
+one costs the leg's primary configuration.
+
+One clean consequence worth pinning for the convention: eligibility on a
+fixed-K block is a BLOCK property, not a pair property, so the intersection
+pair set is exactly the same-author pair set of the eligible block subset.
+That is what makes #72 hold by construction here — identical pair indices,
+identical cross reservoir, identical permutation plans and identical
+bootstrap author draws across all four rows, so Δfloor's interval is paired
+replicate by replicate rather than aligned after the fact.
+
+### The four rows — PROVISIONAL
+
+All on the ONE intersection pair set (20,047 blocks, 99,714 self pairs in
+2–3y). **LEVEL differences across rows are never interpreted** (registered
+comparison rule): a restricted row carries its own block-varying attenuation.
+Only within-row floor shares and their contrasts transport.
+
+| row | 0–90d | 90–180d | 180–365d | 1–2y | 2–3y | 3y+ | D [CI] | F = E(2–3y)/E(0–90d) [CI] |
+|---|---|---|---|---|---|---|---|---|
+| full | 0.5218 | 0.4691 | 0.4262 | 0.3430 | 0.2672 | 0.2441 | 0.2546 [0.1564, 0.3600] | **0.5120** [0.3441, 0.6793] |
+| common (32 communities) | 0.5879 | 0.5511 | 0.5152 | 0.4296 | 0.3405 | 0.3182 | 0.2474 [0.1258, 0.3858] | **0.5792** [0.3603, 0.7760] |
+| distinctive (1159) | 0.4440 | 0.3753 | 0.3323 | 0.2578 | 0.2055 | 0.2012 | 0.2385 [0.1329, 0.3481] | **0.4628** [0.3000, 0.6655] |
+| taste (d = 64, OOF) | 0.4278 | 0.4071 | 0.3810 | 0.3264 | 0.2956 | 0.2636 | 0.1322 [0.0754, 0.1943] | **0.6909** [0.5530, 0.8210] |
+
+**Δfloor = F_distinct − F_common = −0.1163 [−0.2620, 0.0299]**, provisional
+cell `UNRESOLVED_SPLIT` (|point| ≥ 0.10 with the interval straddling zero).
+Secondary contrast F_taste − F_full = +0.1789 [−0.0373, 0.3749].
+
+**The point estimate carries the sign of the informative surprise, and the
+sign is unanimous across the whole registered grid.** Δfloor is NEGATIVE at
+all five configurations — −0.1163 (q .5/m 10), −0.4406 (q .3), −0.1209
+(q .7), −0.0980 (m 5), −0.1083 (m 15) — and two of the five have an interval
+strictly below zero. The direction that keeps appearing is `COMMON_STANDING`:
+the COMMON mass, not the distinctive tail, is the slower-decaying carrier at
+this resolution. That is the opposite of the derived T-line prediction and it
+is what the planner should be adjudicating toward, with the caveat that no
+interval at the registered primary configuration excludes zero.
+
+### The sensitivity grid, which is also the adjudication data
+
+| q | m | Common(q) | 2–3y pairs | 2–3y authors | #69 | F_common | F_distinct | Δfloor [CI] | cell |
+|---|---|---|---|---|---|---|---|---|---|
+| **0.5** | **10** | 32 | 99,714 | 348 | **UNMET** | 0.5792 | 0.4628 | −0.1163 [−0.2620, 0.0299] | `UNRESOLVED_SPLIT` |
+| 0.3 | 10 | 8 | 48,862 | 199 | UNMET | 0.8109 | 0.3703 | −0.4406 [−0.5648, −0.2011] | `COMMON_STANDING` |
+| 0.7 | 10 | 104 | 108,716 | **401** | **PASS** | 0.5792 | 0.4583 | −0.1209 [−0.2256, −0.0007] | `COMMON_STANDING` |
+| 0.5 | 5 | 32 | 179,107 | **424** | **PASS** | 0.5625 | 0.4646 | −0.0980 [−0.2144, 0.0424] | `NO_LAYER_SPLIT` |
+| 0.5 | 15 | 32 | 42,230 | 259 | UNMET | 0.5899 | 0.4817 | −0.1083 [−0.2789, 0.0378] | `UNRESOLVED_SPLIT` |
+
+Three #73 flags (q = 0.3, q = 0.7, m = 5 diverge in cell from the primary
+configuration). **Two ALREADY-REGISTERED configurations clear both #69
+targets — q = 0.7/m = 10 and q = 0.5/m = 5 — so the planner can adjudicate a
+promotion rather than charter a new leg. The executor did not promote either;
+that is the re-split the registration forbids doing silently.** Note what the
+two say: q = 0.7 lands `COMMON_STANDING` (CI top −0.0007, grazing), m = 5
+lands `NO_LAYER_SPLIT`. They do not agree on a cell, and the honest reading
+is that this design resolves the SIGN more confidently than the CELL.
+
+### The equivalence band could NOT have spoken (#71) — the leg's real defect
+
+The `NO_LAYER_SPLIT` band is |Δfloor| < 0.10. The realized half-width of
+Δfloor's 95% CI is **0.1459 — 1.459× the band.** Unlike U2, where the
+FIXED_POINT cell was demonstrably reachable (0.567× its margin), **this
+design could not have DECLARED a null split at any Δfloor**: a Δfloor of
+exactly zero would still have read `UNRESOLVED_SPLIT`. The m = 5 row's
+`NO_LAYER_SPLIT` is therefore the arithmetic of a point inside the band with
+a wide interval, not a demonstration of equivalence. Any re-registration
+should price the interval width against the 0.10 band BEFORE the run — the
+pool gate and the band are the same power question asked twice, and the leg
+failed both.
+
+### Own nulls (#68), and an honest anomaly
+
+Per-row per-bin within-quarter permutation centers on E(b) are at most
+**2.7e−04** in any bin of any row (full row max 8.5e−05), three to four
+orders of magnitude inside their own bands and four inside the effects —
+U2's result reproduced on every carrier.
+
+**The Δfloor null is the anomaly and it is structural.** A floor share is a
+RATIO whose numerator and denominator the permutation both drives to zero, so
+its null is heavy-tailed by construction: the realized Δfloor permutation
+center is **+0.04479** with IQR **[−2.346, +2.651]** over 499 replicates
+(100% finite). The center is where the registration's argument says it should
+be — the claim is about LOCATION — but the 95% band is not a bound and is not
+read as one. Registered nulls on ratio estimands should in future be posed on
+the LOG ratio or on the numerator contrast; that is a convention gap, not a
+run defect.
+
+### Gates
+
+- **Cache anchor gate PASS**: 3,005,360 events / 1401 authors / 1191
+  vocabulary, verified before any computation.
+- **G0 (#56) PASS, BITWISE**: U2's primary arm recomputed here through the
+  imported estimator and compared field by field against
+  `results/m4_u2_persistence_curve/arms.json` — **max absolute difference
+  0.0 across 20 fields, every field bit-identical**, including the full
+  curve, both CIs, the null bands, D, the floor share and the permutation
+  p-values. The machinery is U2's object, imported by file, not a
+  re-implementation.
+- **Census reproduction PASS on all fourteen registered pins** (table above);
+  zero non-reproducing quantities, in contrast to U1 and U2.
+- **Taste-row fold purity PASS**: 5 folds, 679/679/679/679/680 training
+  authors, zero train/test overlap, and the mass identity exact — the fitted
+  count matrix's total equals the training authors' first-half in-vocabulary
+  mass to within 1e−06 in every fold, with the test authors' mass entirely
+  absent.
+- **Sub-vocabulary count recovery PASS**: counts recovered from the Hellinger
+  feature as K·f², maximum deviation from integrality 1.05e−05.
+- **Pool gate #69 UNMET** — the leg's outcome.
+- **ID-leak scan PASS**: 0 of 1401 cohort IDs in the committed set.
+- **No synthetic gate**, as registered (R layer, no world simulated).
+
+### Registered leans (both PROVISIONAL)
+
+- **L1 MISSED, and missed in SIGN, not magnitude.** The lean was
+  `DISTINCTIVE_STANDING` with Δfloor in (0.05, 0.25]; the realized point is
+  **−0.1163**, the same magnitude with the opposite sign, and every
+  configuration in the grid agrees on that sign. The derived prediction from
+  the T-line proposition is not merely unconfirmed here — the data lean
+  against it.
+- **L2 HELD.** The taste row posts the highest floor share of all four:
+  F_taste **0.6909** against F_full 0.5120, F_common 0.5792, F_distinct
+  0.4628. The low-rank generalizing coordinate is the slow part, exactly as
+  leaned. Per-fold floor shares 0.5547 / 0.4806 / 0.8310 / 0.7938 / 0.7992 —
+  wide across folds, so the lean holds on the pooled estimate with visible
+  fold-level dispersion.
+
+### Registered descriptive — the mix-shift trajectory (non-verdict-moving)
+
+Mean common-share of a block over all 45,731 pool blocks, overall 0.5070.
+
+| calendar era | 2015 | 2016 | 2017 | 2018 | 2019 |
+|---|---|---|---|---|---|
+| mean common share | 0.4517 | 0.4886 | 0.5407 | 0.5295 | 0.4393 |
+
+| within-author tenure quintile | Q1 | Q2 | Q3 | Q4 | Q5 |
+|---|---|---|---|---|---|
+| mean common share | 0.4987 | 0.5056 | 0.5223 | 0.5211 | 0.4875 |
+
+Both readings of "account era" are reported because the registration does not
+pin it. The calendar trajectory is a shallow inverted U with a range of
+0.10; the personal-tenure trajectory is nearly flat (range 0.035). **The mix
+shift is a platform-era effect, not a personal one**, which is reassuring for
+the epoch-matched design: the cross baseline already absorbs the calendar
+part.
+
+### Disclosed re-posing RD-U2B-1 (the STOP is a stop at the VERDICT)
+
+The registration says the leg "STOPS and reports". Implemented as a stop at
+the VERDICT, not at the COMPUTATION: no cell is assigned, `verdict.json`
+carries `outcome = POOL_GATE_UNMET` with `cell = null`, every estimate is
+labelled PROVISIONAL in the report and in this section, and the registered
+rows, contrasts and sensitivity grid are still computed so the adjudication
+can happen once. **No re-split was performed and no configuration was
+promoted.** If the planner intended a bare stop, the surplus here is
+discardable; the reverse — adjudicating a pool failure with no numbers — is
+not recoverable without a second run.
+
+### Line state
+
+U2b DELIVERED WITHOUT A VERDICT. The When line's carrier question is
+UNRESOLVED at the registered primary configuration and the planner owns the
+re-split. What the leg does deliver: the census defect that cost it (#77's
+first consequential instance), a bit-exact G0 reproduction of U2's anchor
+(#56 satisfied to 0.0), a unanimous negative SIGN on Δfloor across five
+configurations pointing at the named informative surprise
+(`COMMON_STANDING`), L2 held, and a #71 finding that this design's interval
+is 1.459× its own equivalence band — so any promotion should re-price power,
+not only the pool.
+
