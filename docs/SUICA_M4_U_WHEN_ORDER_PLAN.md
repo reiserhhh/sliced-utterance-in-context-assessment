@@ -1577,3 +1577,56 @@ the pool-size-is-not-width anomaly. The T-line proposition's When clause
 remains OPEN: the distinctive tail decays faster than the common mass at the
 point estimate of every configuration run so far (five in U2b, two here), and
 no interval yet excludes zero.
+
+## U2c planner adjudication + measurement-phase close (2026-08-18)
+
+**Verdict ACCEPTED: `SIGN_UNRESOLVED` — the interval statement, exactly the
+outcome the registration named as live.** Λ = +0.0741/y [−0.0558, +0.1854]
+primary; confirmatory +0.0861/y [−0.0109, +0.1609] (misses COMMON_STANDING
+by 0.011/y); zero #73 flags. The formalized evidence state: **seven of seven
+configurations across U2b+U2c put the point estimate on the same side
+(the distinctive decays faster), and no registered interval excludes
+zero.** The T-line proposition's When clause therefore stays OPEN. Its
+resolution path is the SECOND CORPUS (standing charter) — a same-corpus
+power escalation (U2d) is PARKED WITH PRICE: escalating designs on the same
+data until an interval clears zero is significance-chasing, not measurement.
+
+**What DID close: the outer comparison of the three-layer structure.**
+λ_taste is the smallest rate of the four rows in BOTH arms (0.1736 and
+0.1515 /y, against full 0.294/0.275) — L2 confirmed in its rate form. The
+low-rank taste direction is the slowest object measured in this line,
+consistent with T3's identity budget (the generalizing coordinate) and U2's
+core. The middle comparison (common vs distinct) is the open edge.
+
+**Defect #80 (planner, purchased; registry twenty-eighth note).** Two parts,
+both mine. (a) The registered null on Λ was posed on a LOG-scale slope
+whose domain the permutation destroys — E(b) is driven through zero under
+reassignment, so only 7/499 permutations were defined; #79's convention
+moved the pathology from the ratio into the log. The executor's RD-U2C-1
+(positivity-free linear-slope companion, 100% defined; no verdict rested on
+either null) is the correct in-leg repair. Convention: a null on any
+transformed-scale statistic verifies the transform's DOMAIN under the null
+at registration and ships a domain-safe companion. (b) The width projection
+modeled pool counts but not per-unit noise: m = 5 enlarged the pool exactly
+as assumed (+21.8% authors) yet WIDENED the distinctive row's interval
+1.35× — a 1159-dimensional carrier vector built from five events is a
+noisier point on the sphere than one built from ten. Convention: width
+projections model per-unit measurement noise as a function of eligibility
+floors, never pool counts alone.
+
+**Discipline noted.** Gate anchors re-executed exactly (#78's convention in
+its first full use); G0 bitwise over 60 fields; suite 1115 → 1148; zero
+dropped bootstrap replicates; the run re-executed end-to-end identically.
+
+**MEASUREMENT-PHASE CLOSE.** The When line's label-free measurement phase
+closes with U1 (ORDER_CHANNEL), U2 (DRIFT_WITH_CORE), U2b
+(POOL_GATE_UNMET, the gate honored), U2c (SIGN_UNRESOLVED, the honest
+interval). Synthesis: `docs/SUICA_M4_U_LINE_SYNTHESIS.md`. **U3 (the
+Who × When trait join) is the REGISTERED-NEXT beat, not opened today**: its
+object is fixed by this phase — the cross-thread stay rate (U1's binding
+designation) and slow-time coordinates, joined to Big5 distances only
+inside a config-before-joint stamped stage-E design (S-line SR1/SR2
+machinery), with the drift-aware caution that slow-time coordinates are
+moving targets. Also named-open: the long-horizon floor (corpus-bounded),
+the non-dwell order residual, the distinct-vs-common closure (second
+corpus).

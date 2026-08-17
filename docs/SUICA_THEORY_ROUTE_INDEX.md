@@ -947,3 +947,17 @@ generalizing taste tail; the identity budget (taste 82%); the
 dissociation (identity's carrier largely trait-silent); the
 carrier METRIC-BORNE — identity lives in the distinctive,
 personality in the common. Defects #68–#75; suite 1021.
+
+## Dated addendum (2026-08-18) — the M4-U When line
+
+The 4W theory's unposed quadrant measured on both time scales
+(plan + all adjudications `SUICA_M4_U_WHEN_ORDER_PLAN.md`; synthesis
+`SUICA_M4_U_LINE_SYNTHESIS.md`). Headlines: the order channel exists
+and is inertia (dwell), reproducible but redundant vs the bag; the
+person is a moving distribution with a THREE-YEAR core (53%) — and
+discrimination scores over-predict geometric persistence (AUC 0.9837
+coexists with the 53% floor because the cross floor is 0.05); the
+low-rank taste direction is the slowest object measured (λ 0.17/y);
+whether common outlasts distinctive is OPEN (7/7 point estimates say
+yes, no interval closes; second-corpus charter owns it). Defects
+#76–#80; suite 1148; U3 (stage-E trait join) registered-next.

@@ -312,3 +312,17 @@ under the loop discipline; synthesis
 - Standing rules 1–33; defects #1–#75 (#68–#75 bought eight
   conventions); suite 970 → 1021; every real-data leg
   stage-E-governed with zero ID leaks.
+
+## Dated addendum (2026-08-18) — the When line closes its measurement phase
+
+The M4-U line (U1/U2/U2b/U2c) adds the time axis to the V8×IDT structure:
+selection identity has sticky local dynamics (dwell/inertia — the first
+positive projection of the 4W transition kernel), a moving marginal with a
+three-year core, and a slowest low-rank taste direction — the same
+coordinate T3 priced at 82% of the identity budget. Standing methodological
+law purchased for all future card/gauge readings: **discrimination is not
+stability** — an AUC near ceiling licenses no claim that the underlying
+signature stands still (U2: floor share 0.5348 under AUC 0.9837). The
+T-line proposition's When clause (does the common outlast the distinctive?)
+remains open pending the second corpus. Details:
+`SUICA_M4_U_LINE_SYNTHESIS.md`.
