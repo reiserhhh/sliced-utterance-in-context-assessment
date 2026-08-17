@@ -382,3 +382,77 @@ labels against the primary arm as if it were free-selection order: the
 mechanics-controlled cross-thread arm (rho 0.1626) is the honest object for
 any Who x When trait join, and the stay-rate scalar is a cheap, already-
 validated single coordinate to carry into a stage-E design.
+
+## U1 planner adjudication (2026-08-18)
+
+**Verdict ACCEPTED: `ORDER_CHANNEL`** — rho 0.2893 [0.2695, 0.3114],
+p = 0.0020, all eight arms in the same cell, zero #73 flags, gate passed
+before any real arm with the A1 stop demonstrably live (it fired on the
+saturated first world). The CI straddles no boundary; the conditional-rows
+lens straddle (0.0545–0.1473 across 0.10) is a lens-level note, not a
+verdict-level one, and is carried as registered.
+
+**The scoping is adopted as binding.** Real bigram AUC 0.9571 sits 0.0036
+BELOW the same-folds unigram bag AUC 0.9607: order is REPRODUCIBLE but, at
+this resolution, REDUNDANT for absolute identity — order recovers nearly all
+of the bigram representation's sparsity cost and does not surpass the bag.
+The sentence "order beats the bag" is forbidden U1 prose repo-wide; rho is a
+within-projection statement. The 4W theory's projection caution binds the
+positive result exactly as it would have bound a null one: this is ONE
+first-order projection of K_u (eq 12), and ORDER_CHANNEL is a statement about
+that projection.
+
+**Theory reading (first positive When projection).** The channel is
+dwell-dominated: 71.2% of adjacent pairs are same-state, realized stay 0.6734
+against the bag-implied pseudo-stay 0.4086, and ONE scalar per half (the stay
+rate) recovers 62.3% of the primary rho. This is the first label-free
+measurement of the theory's crossing-#4 candidate "inertia" — kept strictly
+technical per §5.4: dwell is an author-owned selection-process statistic, not
+a psychological attribute. Mechanics decomposition honored: reply-chain
+mechanics carry 43.8% of the channel (and 53.1% of same-state stays sit
+inside one thread), so the executor's pre-scoping is ADOPTED AS BINDING:
+**the cross-thread arm (rho 0.1626) is the canonical order object for U3's
+Who × When trait join**; the primary arm may never feed a label join as if it
+were free-selection order.
+
+**Governance contrast recorded.** The 23-community typology ablation costs
+7.8% of order-identity rho against 41% of the S-line's trait coupling on the
+same ablation — the third instance of the identity-robust/trait-fragile
+asymmetry (T-line dissociation family). Identity keeps not caring about the
+criterion-adjacent communities; trait coupling keeps depending on them.
+
+**Lean record.** The primary lean (0.02, 0.15] was EXCEEDED ~1.9× with the
+CI entirely above its top — the order channel is materially larger than the
+planner leaned; the stay-rate and cross-thread leans held. Recorded as a
+prediction miss in the honest direction (underclaim), no repair needed.
+
+**Defect #76 (planner, purchased; registry twenty-fifth note).** The
+synthetic worlds were registered by MECHANISM with no OPERATING POINT: the
+Dirichlet concentration was unpinned, and the first parameterisation
+saturated at bag AUC 0.99999, making the registered W_sticky target
+unreachable by ANY correct estimator; separately, the registered synthetic
+null-location check was ill-posed at the worlds' own sampling density
+(0.33 pairs/cell against 2.4 real). The gate architecture caught both — an
+A1 stop and two disclosed re-posings (RD-U1-1, RD-U1-2), each STRICTER than
+the registered form — but the registration should not have needed catching.
+Convention purchased: (a) every synthetic authentication world registers a
+target operating point (a realized discrimination density, e.g. target bag
+AUC) on a declared grid, not just a mechanism; (b) null-location gate checks
+are split — a mechanics-retention bound on the synthetic side, the literal
+location bound on the real arm. Minor precision note (unnumbered): census
+statistics pin their denominators (the 0.1152 tie rate is the in-vocabulary
+denominator; all-events gives 0.1076).
+
+**Named-open (not queued).**
+- The non-dwell residual of the channel (37.7% of rho): transition structure
+  proper vs higher-order dwell — a carrier refinement, priced by the T-line
+  lesson that carrier chains go deep.
+- The absolute-increment question (combined unigram+bigram representation):
+  expected ≈ 0 given the redundancy anomaly; low priority.
+- Finer-state order (25 states is coarse; an order channel below this
+  resolution is invisible here by construction).
+
+**Line state.** U1 CLOSED. U2 (the persistence curve — slow time) is next and
+inherits: the live order channel, dwell dominance as its expected slow-time
+analogue, and the census (spans median 1157 d). U3 remains gated on U2 and on
+the cross-thread designation above.

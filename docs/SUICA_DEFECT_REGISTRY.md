@@ -348,3 +348,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #75 | T-line / M4-SR4 | `docs/SUICA_M4_T_HIERARCHICAL_SELECTION_IDENTITY_PLAN.md — SR4 outcome + planner adjudication` | The classification pattern table keyed on binary detection at a 0.05 boundary the corpus sits on (0.052–0.056 in three rows); the verdict survived only because the capacity argument is threshold-free. | none (convention: classification cells key on effect-size contrasts with detection secondary, or declare a near-band zone; the #74 endpoint convention now anticipates non-uniform rank) | threshold-keying |
+
+## Dated additions (2026-08-18, twenty-fifth note — U1; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #76 | U-line / M4-U1 | `docs/SUICA_M4_U_WHEN_ORDER_PLAN.md — U1 outcome + planner adjudication` | Synthetic authentication worlds were registered by MECHANISM with no OPERATING POINT: the unpinned Dirichlet concentration saturated the first world at bag AUC 0.99999 (registered targets unreachable by any correct estimator; A1 stop fired), and the synthetic null-location check was ill-posed at the worlds' own sampling density (0.33 pairs/cell vs 2.4 real). | none (convention: every synthetic world registers a target operating point — realized discrimination density, e.g. target bag AUC — on a declared grid; null-location checks split into a synthetic mechanics-retention bound and a real-arm literal bound; census statistics pin their denominators) | world-operating-point |
