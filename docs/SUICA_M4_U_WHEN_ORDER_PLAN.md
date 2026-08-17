@@ -813,3 +813,90 @@ inherits: the cross-thread arm as the canonical order object (U1
 adjudication), a three-year horizon over which the Where signature is known
 to move by half its excess, and the standing warning that a trait join fitted
 on one epoch is being fitted to a moving target.
+
+## U2 planner adjudication (2026-08-18)
+
+**Verdict ACCEPTED: `DRIFT_WITH_CORE`, scoped as a THREE-YEAR statement.**
+D = 0.3058 [0.2364, 0.3855] against a null band of ±0.0017; floor share
+0.5348 [0.4203, 0.6320]; all seven arms in the same cell, zero #73 flags,
+permutation-null center verified at 0 to within 1e-04 in every bin. The
+FIXED_POINT cell was demonstrably reachable (equivalence margin 0.1315 vs
+realized D half-width 0.0745, ratio 0.567 — #71 satisfied in substance) and
+was not reached. The executor's endpoint caution is adopted VERBATIM as
+binding scope: E(3y+) = 0.2638 still sits below E(2–3y) = 0.3515 and the
+exponential asymptote is weakly identified (E_inf CI dips negative), so
+**the core is what survives three years, not a demonstrated permanent
+floor** — "permanent core" is forbidden U2 prose; "three-year core" is the
+licensed phrase.
+
+**The lean record, and the leg's transportable finding.** The planner's
+floor-share lean [0.6, 0.9] MISSED in the overclaim direction (realized
+0.5348, CI top 0.6320 only grazing the lean's bottom). U1 missed under, U2
+missed over; both stand as honest prediction records. The diagnosis is the
+finding: **a discrimination score over-predicts geometric persistence.** The
+T-line's early/late AUC 0.9837 and this floor share 0.5348 are the same
+corpus and the same metric family; they coexist because the cross floor is
+0.05 — the signature can lose ~46% of its personal excess over three years
+while the person remains trivially closer to themselves than to anyone
+else. Re-identification works not because people stand still but because
+they move inside a space where others are far away. Stability claims may
+never be inferred from discrimination scores (this sentence is now standing
+guidance, the slow-time mirror of U1's "order is reproducible but redundant"
+scoping).
+
+**Secondary structure accepted.** Tercile gradient monotone (D 0.4256 /
+0.3871 / 0.3021; floor share rising with activity 0.3982 / 0.4455 / 0.5368)
+— the planner's weak secondary lean held. Attenuation transported as
+designed under K = 100 (level up, D +2.7% relative). Clean arm: D +3.7%
+with 13.3% of blocks removed — the FOURTH instance of the identity-robust /
+trait-fragile asymmetry, with the sign indicating the typology communities
+acted as a mild stabiliser of the signature, not a driver of its identity
+content.
+
+**Executor deviations adjudicated.**
+- RD-U2-1 ACCEPTED AS EXEMPLARY: the exact stratified cross mean replaces
+  the registered ≤20× sampler (same estimand, zero MC variance, STRICTER),
+  and the registered sampler was still run as an equivalence check
+  (max per-bin |sampled − exact| = 4.8e-05). This is the correct direction
+  of deviation: tighter than registered, with the registered form used to
+  certify the replacement.
+- Bootstrap holding cross means fixed: accepted (cross side estimated from
+  ~1e9 pairs; its sampling variance is negligible against the
+  author-clustered self side); recorded in config.
+- Tercile-variable inference: accepted; the registration should have pinned
+  the tercile variable exactly (folded into #77 below).
+
+**Defect #77 (planner, purchased; registry twenty-sixth note).** Census
+statistics shipped without pinned computation twice in two legs: U1's tie
+rate reproduced only on the in-vocabulary denominator (0.1152 vs 0.1076
+all-events), and U2's cross-candidate feasibility "115.4×" did not
+reproduce under the executor's stratum and pair-eligibility definitions
+(26.0× over occupied quarter-pair × bin strata; 71.4× at quarter-pair
+resolution) — the planner's census counted candidate pairs without
+excluding same-author pairs or handling the diagonal quarter cells, and
+named neither stratum nor eligibility; the tercile variable was likewise
+left inferable. No verdict was at risk (feasibility cleared the sampler's
+20× need in every definition; zero self pairs dropped), but the pattern
+recurs. Convention: every registered census quantity carries its exact
+computation — denominator, stratum, pair-eligibility — or is explicitly
+marked "approximate, feasibility-only"; tercile/split variables are pinned
+by name and formula.
+
+**Named-open (not queued).**
+- The long-horizon floor: does E(Δt) flatten anywhere? Corpus-bounded
+  (span q75 ≈ 4.2 y); a second corpus with longer panels would be needed —
+  priced with the second-corpus transport charter already standing.
+- The persistence budget by carrier (which layer moves — the distinctive
+  taste coordinate or the common mass): a derived-prediction test of the
+  T-line proposition; REGISTERED NEXT as U2b.
+- The drift's shape (sudden change-points vs gradual mixing): §2.4's
+  change-point object, needs per-author trajectory modeling; priced, not
+  queued.
+
+**Line state.** U2 CLOSED. The When quadrant now has both time scales:
+fast (U1, ORDER_CHANNEL, dwell-dominated) and slow (U2, DRIFT_WITH_CORE,
+three-year core 53%). U2b (persistence budget by carrier) is next —
+label-free, cheap, and it tests a prediction DERIVED from the T-line
+proposition. U3 (stage-E trait join) remains gated: it now inherits BOTH
+the cross-thread designation (U1) and the drift-aware caution that
+slow-time coordinates are moving targets (U2).

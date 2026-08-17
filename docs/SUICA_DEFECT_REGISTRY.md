@@ -354,3 +354,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #76 | U-line / M4-U1 | `docs/SUICA_M4_U_WHEN_ORDER_PLAN.md — U1 outcome + planner adjudication` | Synthetic authentication worlds were registered by MECHANISM with no OPERATING POINT: the unpinned Dirichlet concentration saturated the first world at bag AUC 0.99999 (registered targets unreachable by any correct estimator; A1 stop fired), and the synthetic null-location check was ill-posed at the worlds' own sampling density (0.33 pairs/cell vs 2.4 real). | none (convention: every synthetic world registers a target operating point — realized discrimination density, e.g. target bag AUC — on a declared grid; null-location checks split into a synthetic mechanics-retention bound and a real-arm literal bound; census statistics pin their denominators) | world-operating-point |
+
+## Dated additions (2026-08-18, twenty-sixth note — U2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #77 | U-line / M4-U2 | `docs/SUICA_M4_U_WHEN_ORDER_PLAN.md — U2 outcome + planner adjudication` | Census statistics shipped without pinned computation twice in two legs (U1 tie-rate denominator; U2 cross-candidate feasibility 115.4× vs 26.0×/71.4× under named strata and pair-eligibility; tercile variable inferable-not-pinned); no verdict at risk, pattern recurring. | none (convention: every registered census quantity carries its exact computation — denominator, stratum, pair-eligibility — or is marked "approximate, feasibility-only"; split variables pinned by name and formula) | census-denominators |
