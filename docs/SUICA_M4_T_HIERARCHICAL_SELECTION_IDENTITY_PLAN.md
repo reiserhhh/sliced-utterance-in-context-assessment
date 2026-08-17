@@ -577,3 +577,160 @@ The six as always: `scripts/run_suica_m4_t3_identity_budget.py`;
 HERE; one ledger row (EXPLORATORY, label-free); exactly ONE commit
 `feat(m4-t): T3 — the identity budget — <SLUG>`, never amended,
 never pushed; suite green first (983 expected baseline).
+
+## M4-T3 outcome (2026-08-17, appended by the executing agent) — BUDGET_WITH_RESIDUAL
+
+**Routing: `BUDGET_WITH_RESIDUAL`, modifier `TASTE_BEYOND_SUPPORT`.** Slug
+`budget-with-residual`. Report:
+`reports/SUICA_M4_T3_IDENTITY_BUDGET_REPORT.md`; harness
+`scripts/run_suica_m4_t3_identity_budget.py`; tests
+`tests/test_m4_t3_identity_budget.py`; artifacts (gitignored)
+`results/m4_t3_identity_budget/`. Label-free; ID-leak scan 0 hits.
+
+### Gates
+
+- **G0t3 PASS.** Every T1 and T2 anchor bit-matches (flat 0.9836592822513264
+  / clean 0.9660999136733576; residual 0.9552295265671575; path
+  0.7460863278537894; N 1304 / 1269; T2 Arm B 0.6031409031779736 with null
+  [0.4869631462640095, 0.5149378939035671] on 907 targets). T2's fold
+  embeddings re-verified held-out-pure. `R_flat` marginal rebuilds to
+  0.9836592913058296 — |diff| 9.1e-9 from T1's persisted ceiling, i.e. the
+  same estimator up to summation order.
+- **G1t3 PASS.** AUC spread [0.5060, 0.9837]; nothing forced; strata
+  non-degenerate.
+- **G2t3 PASS.** All 12 readings separate at the pilot. The registered
+  DECILE stratification survives at full width: 10 strata, median
+  permutation pool **26** against the registered target of 20, chosen on the
+  first rung of the ladder. Null bands are narrow (0.050–0.075) — the
+  contrast with T2's collapse is the whole point of conditioning
+  corpus-wide instead of within-leaf.
+- **G3t3 PASS.** 24 predicates, each against the statistic's OWN null
+  (#68, the defect T2 raised and this leg is the first to run under).
+
+### THE IDENTITY BUDGET (full arm, B_boot = 1000, B_perm = 999)
+
+| representation | stratification | AUC | CI95 | own null band | excess bits | pool |
+|---|---|---|---|---|---|---|
+| R_obs | marginal | 0.7294 | [0.7170, 0.7427] | [0.4879, 0.5136] | 1.734 | 260 |
+| R_obs | obs stratum | 0.6018 | [0.5904, 0.6137] | [0.4879, 0.5092] | 0.655 | 26 |
+| R_obs | leaf | 0.7153 | [0.7011, 0.7272] | [0.5139, 0.5412] | 1.074 | 21 |
+| R_tree | marginal | 0.7523 | [0.7383, 0.7673] | [0.4861, 0.5153] | 1.540 | 260 |
+| R_tree | obs stratum | 0.7244 | [0.7091, 0.7404] | [0.4877, 0.5162] | 1.093 | 26 |
+| R_tree | leaf | **0.5060** | [0.4896, 0.5214] | [0.4918, 0.5204] | **0.008** | 21 |
+| R_emb | marginal | 0.9449 | [0.9386, 0.9508] | [0.4862, 0.5136] | 4.878 | 260 |
+| R_emb | obs stratum | **0.9311** | [0.9242, 0.9384] | [0.4905, 0.5143] | 2.823 | 26 |
+| R_emb | leaf | 0.8871 | [0.8779, 0.8962] | [0.5211, 0.5469] | 2.400 | 21 |
+| R_flat | marginal | 0.9837 | [0.9800, 0.9873] | [0.4871, 0.5135] | 5.957 | 260 |
+| R_flat | obs stratum | 0.9783 | [0.9742, 0.9823] | [0.4899, 0.5127] | 3.286 | 26 |
+| R_flat | leaf | 0.9580 | [0.9520, 0.9636] | [0.5248, 0.5489] | 3.033 | 21 |
+
+Marginal bits as a share of the flat ceiling (5.957): taste 4.878 (82%),
+observability 1.734 (29%), tree path 1.540 (26%). The carriers overlap, so
+the shares do not sum; the ORDERING is the finding.
+
+### Verdicts
+
+- **V-T3a — the support channel: MODERATE.** `R_obs` marginal AUC **0.7294
+  [0.7170, 0.7427]**, own null [0.4879, 0.5136], 1.734 excess bits.
+  **This is the number T2's Arm A could not obtain by matching.** Four
+  coordinates carrying no content whatsoever identify the author far above
+  their own null — the support channel is real and substantial — but the
+  CI does not reach the 0.75 MAJOR threshold. See RD-T3-1: the log1p
+  variant reads 0.8447 [0.8355, 0.8538] and WOULD be MAJOR.
+- **V-T3b — taste beyond support: SURVIVES.** `R_emb` under
+  observability-stratified permutation: **0.9311 [0.9242, 0.9384]** against
+  its own null [0.4905, 0.5143], 2.823 excess bits, median pool 26. The
+  marginal is 0.9449, so stratifying on observability costs the taste
+  coordinate **0.014** of AUC while costing `R_obs` itself **0.128**.
+  **T2's TRANSPORTS result is upgraded: the taste coordinate is not
+  support-carried.**
+- **V-T3c — joint adequacy: GAP_REMAINS.** Weight fitted on training folds
+  only: w* = **0.95** (training AUC 0.9565). Held-out joint **0.9450
+  [0.9392, 0.9509]** against the flat ceiling **0.9837 [0.9798, 0.9871]**.
+  **Gap 0.0387, paired-bootstrap CI [0.0330, 0.0447]** against the declared
+  ε_gap = 0.03 — outside the band, but only just (RD-T3-2). Roughly 3.9 AUC
+  points, or 5.957 − ~4.9 bits, of the tail remain unexplained by anything
+  this line has named.
+
+### Readings
+
+- **Clean arm (23-community ablation) replicates every verdict.**
+  n_valid 1269 = T1's exactly; `R_flat` marginal 0.9661 = T1's clean
+  ceiling. V-T3a MODERATE (0.7233 [0.7105, 0.7361]); V-T3b SURVIVES
+  (0.9107 [0.9015, 0.9193] vs null [0.4879, 0.5108]); V-T3c GAP_REMAINS
+  (w* 0.9, joint 0.9272 vs flat 0.9661, gap 0.0389 [0.0320, 0.0458]).
+- **Per-leaf heterogeneity for `R_emb`** (observability-stratified): 50
+  strata scored, median 0.9418, min 0.8674, max 0.9835, IQR 0.0345 — far
+  more homogeneous than T2's Arm B, where half the leaves sat below 0.60.
+- **The stratifier:** PC1 of the z-scored late observability vector,
+  explaining 0.5157 of its variance, loadings volume 0.410 / span 0.385 /
+  entropy 0.538 / breadth 0.627.
+
+### Post-verdict observations (marked as such)
+
+- **The tree carries nothing beyond its own leaf.** `R_tree | leaf` reads
+  0.5060 for 0.008 excess bits — indistinguishable from nothing. That is
+  also a strong internal check on the conditioning machinery: a
+  representation whose information IS the stratifier must fall to its null,
+  and it does.
+- **The joint is the embedding.** w* = 0.95 and the joint AUC 0.9449583
+  sits 4.6e-5 from `R_emb` marginal alone (0.9449125) — adding the whole
+  frozen hierarchy to the taste coordinate buys five ten-thousandths of an
+  AUC point. **On this evidence the 4W doc's
+  priority 2 is mostly tail, not tree**: the hierarchy is a coarse
+  quantisation of the same geometry the embedding carries continuously, not
+  an independent carrier to be added to it.
+- **The conditioning is partial, and it cuts against V-T3b.** PC1 explains
+  only 0.5157 of the observability variance, and `R_obs | obs_stratum`
+  still reads 0.6018 above its null — residual observability survives inside
+  a stratum. V-T3b therefore means "survives conditioning on the dominant
+  observability axis", not "on all four coordinates". What holds the verdict
+  up is the asymmetry (0.128 vs 0.014), not completeness of conditioning.
+
+### Anomalies (all pre-verdict)
+
+- **A1** The early-side observability vector did not exist — T2 persisted
+  only the late side — and was built here from the comment stream under
+  SR1's own split rule (4000-timestamp cap included) plus T2's verified
+  early count matrix.
+- **A2** `R_tree` is deliberately NOT T1's path statistic: T1's 0.7461 used
+  an unweighted common prefix, while the registration asks for a
+  depth-weighted code and V-T3c needs a concatenable vector. R_tree rebuilds
+  to 0.7523. Relatives, not the same estimator; T1's number gates nothing
+  here.
+- **A3** The leaf-stratified nulls sit slightly above 0.5 (e.g. 0.5248–0.5489
+  for `R_flat | leaf`) — the #68 weighting artifact, mild but present. Every
+  comparison is against the reading's own band, never 0.5, which is exactly
+  what #68 now requires.
+
+### Registration-defect candidates (flagged, never repaired)
+
+- **RD-T3-1 — "z-scored" underspecifies the transform, and V-T3a's cell
+  boundary sits inside the ambiguity.** Raw z gives 0.7294 → MODERATE; the
+  declared log1p sensitivity gives 0.8447 [0.8355, 0.8538] → MAJOR. Volume,
+  span and breadth are heavy-tailed, so raw z-scores let outliers dominate
+  the Euclidean geometry and UNDERSTATE the support channel. Same pattern
+  clean-side (0.7233 vs 0.8262). A future registration must pin the
+  transform.
+- **RD-T3-2 — ε_gap was declared without a projection.** G2 projects pool
+  sizes (#69) but nothing projects the equivalence band. The gap CI
+  [0.0330, 0.0447] is 0.0117 wide and misses the ±0.03 band by 0.0030. A
+  verdict this close to its own resolution should have had its band
+  projected at G2, exactly as pool targets now are.
+- **RD-T3-3 — "observability-decile strata" names one dimension for a
+  four-dimensional object.** Deciles need a scalar; PC1 was declared and
+  used, and it demonstrably does not exhaust the vector. A design meaning
+  "condition on observability" should register the projection, or a
+  multivariate scheme with its own pool target.
+
+### What this leaves for the line
+
+The tail is now budgeted rather than argued about. Observability is a real
+and substantial carrier (MODERATE, and MAJOR under a defensible transform);
+the taste coordinate is the dominant named carrier and is NOT
+support-carried; the tree adds nothing the embedding does not already have;
+and roughly 3.9 AUC points of ceiling remain unexplained. The residual is
+now a quantified object, which is what cell 6 asks for. The obvious next
+question is what lives in that residual — and the first thing to rule out
+is that it is simply the flat vector's higher dimensionality (1191 vs 64),
+which a d-sweep of the embedding would settle cheaply.
