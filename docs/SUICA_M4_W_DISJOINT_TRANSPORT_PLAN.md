@@ -157,3 +157,139 @@ label-free, corpus-level, disjoint-cohort transport named); ONE commit
 never pushed by the executor. Suite green (1197 + new) before commit.
 `author_profiles.csv` is NEVER opened. SEED = 20260818; B_perm = 499;
 B_boot = 1000.
+
+---
+
+## W1 outcome (executor, 2026-08-18)
+
+**`COMMON_STANDING`. The U-line's open middle CLOSES.**
+
+`Λ = λ_distinct − λ_common = +0.0911/y [+0.0628, +0.1490]` on the LAW arm at
+the registered q = 0.5 / m = 10 (125,555 blocks; 1,211,631 self pairs and
+3,241 contributing authors in the 2–3y bin; paired cluster bootstrap
+B = 1000, all 1,000 replicates retained). The bootstrap interval — the
+registered verdict criterion — lies strictly above zero on a cohort that
+shares no author with the one that produced the provisional sign. The
+DISTINCTIVE carrier decays faster than the COMMON carrier; over the observed
+three-year window the common mass is the standing part.
+
+Realized half-width **0.0431** against the registered projection **±0.044**
+(ratio 0.979) — the #79b/#80b √N scaling was accurate to 2%.
+
+### Census (#78) — every pinned predicate re-executed, 16 of 16 PASS
+
+Disjoint events 14,634,702; authors_seen 8,895; floor ceil(0.01·8895) = 89 →
+1,443 communities at coverage 0.7587; Common(0.5) = 71 communities carrying
+0.5022 of the in-vocabulary mass; typology names 22 in vocabulary / 8 in
+Common; pool 6,111 authors and 213,489 blocks over 18 quarters; self pairs
+2–3y 2,591,663 (3y+ 1,004,737); gate m=10 1,211,631 pairs / 3,241 authors;
+gate m=5 1,790,865 / 3,746. Nothing drifted; the leg never needed its STOP.
+
+### The four-row rate table (LAW arm)
+
+| row | λ (1/y) | 95% CI | R² | F = E(2–3y)/E(0–90d) | D |
+|---|---|---|---|---|---|
+| full (1,443) | 0.1236 | [0.0591, 0.2520] | 0.925 | 0.7360 | 0.1408 |
+| common (71) | 0.0901 | [0.0362, 0.2069] | 0.942 | 0.8014 | 0.1117 |
+| distinctive (1,372) | 0.1812 | [0.1045, 0.3223] | 0.923 | 0.6392 | 0.1734 |
+| taste (PPMI+SVD d=64) | 0.1010 | [0.0854, 0.1345] | 0.982 | 0.7838 | 0.0610 |
+
+Nulls (#80a-compliant): per-bin within-quarter permutation centres are
+≤ 5e-05 in absolute value, i.e. zero to four decimals as the construction
+requires. The Λ null is posed on the LINEAR slope contrast — realized
++0.0236 against a null centre of +0.00006 and a null band
+[−0.00083, +0.00086], all 499 replicates finite. The LOG-form null retains
+only 37 of 499 replicates (a relabelling drives E(b) through zero), which is
+why the registration put the null on the linear form; neither null routes.
+
+### Arms — all four land in the same cell
+
+| arm | Λ | 95% CI | cell |
+|---|---|---|---|
+| LAW (q=0.5, m=10, Common 71) | +0.0911 | [+0.0628, +0.1490] | `COMMON_STANDING` |
+| m = 5 sensitivity | +0.0953 | [+0.0648, +0.1509] | `COMMON_STANDING` |
+| INSTRUMENT (frozen 1191 / Common 32) | +0.0644 | [+0.0168, +0.1107] | `COMMON_STANDING` |
+| clean_no_explicit_personality (22 removed) | +0.0780 | [+0.0484, +0.1397] | `COMMON_STANDING` |
+
+The instrument arm is the informative one for transport semantics: 1,187 of
+the 1,191 frozen community names exist in the disjoint stream, but the frozen
+32-community Common set holds only **0.3473** of that cohort's mass where it
+held 0.50 on the source. The frozen artifact does NOT carry its own mass
+split — and the contrast survives anyway, weaker and still strictly positive.
+The LAW transports; the INSTRUMENT transports too, at a cost in effect size.
+
+The clean arm matters here because the cohort is typology-enriched: removing
+the 22 explicit-typology communities (leaving 1,421, re-blocked, re-pooled,
+mass split re-derived to Common(0.5) = 84) moves Λ from +0.0911 to +0.0780,
+same cell, overlapping intervals. The slow common mass is NOT localized in
+the typology forums.
+
+### Sealed-prediction transport table (SECONDARY — never routed)
+
+| quantity | source | target | classification |
+|---|---|---|---|
+| Λ | +0.0741 [−0.0558, +0.1854] | +0.0911 [+0.0628, +0.1490] | **BREAKS** (cell) |
+| floor share, full row | 0.5348 [0.4203, 0.6320] | 0.7360 [0.5453, 0.8568] | **REPRODUCES** |
+| D, full row | 0.3058 [0.2364, 0.3855] | 0.1408 [0.0850, 0.2224] | **SHIFTS** |
+| λ_full | 0.2943 [0.1895, 0.4405] | 0.1236 [0.0591, 0.2520] | **REPRODUCES** |
+| ordering: λ_taste smallest | ORDER HOLDS | ORDER BREAKS | **BREAKS** |
+
+Two BREAKs, and both need reading rather than reciting:
+
+1. **Λ "BREAKS" as a PRECISION GAIN, not a contradiction.** The intervals
+   OVERLAP and the sealed source point +0.0741 lies INSIDE the target
+   interval. The source half-width was 0.1206 and could not exclude zero;
+   the target's is 0.0431 and does. The registered rule keys on the CELL, so
+   it lands in BREAKS — the substance is confirmation of the source's
+   direction at a width the source never had. The planner should decide
+   whether the #75 classification wants a fourth label for this case.
+2. **The ordering BREAKS narrowly.** λ_taste = 0.1010 is rank 2 of 4,
+   0.0109/y above the slowest row (`common` at 0.0901), and the taste row's
+   own interval [0.0854, 0.1345] CONTAINS the common row's point. Order
+   slowest-first: common 0.0901 < taste 0.1010 < full 0.1236 < distinct
+   0.1812.
+
+Floor share and D split classification for one reason: the disjoint cohort's
+curve is FLATTER at both ends. The sealed values imply a source curve running
+0.6574 → 0.3516; the target full row runs 0.5332 → 0.3925. Lower start,
+higher finish — the RATIO reproduces while the DIFFERENCE shifts down. Part
+of that gap is the disclosed provenance asymmetry (the sealed floor share and
+D come from U2's 849-author POOL arm while Λ and λ_full come from U2c's
+INTERSECTION set), and this leg does not separate the two contributions.
+
+### Registered leans
+
+- **L1 (Λ > 0 at ≈ +0.07/y): HELD** — realized +0.0911, cell
+  `COMMON_STANDING`.
+- **L2 (floor share and D REPRODUCE): PARTIAL** — floor share REPRODUCES, D
+  SHIFTS.
+- **L3 (λ_taste smallest): MISSED**, narrowly — rank 2, inside its own CI of
+  the winner.
+- **L4 (clean arm survives within CI class): HELD.**
+
+### Governance
+
+Label-free throughout — `author_profiles.csv` was never opened, and the
+disjoint authors' MBTI labels stay closed. The ID-leak universe was widened
+to all 10,296 author names as registered; the scan returns **0 NEW hits**.
+Three raw hits exist in `docs/CLAIMS_LEDGER.md` and all three are DICTIONARY
+COLLISIONS — candidate author names that are ordinary English words or bare
+digit runs, occurring in prose committed long before this line opened. They
+are separated from leaks mechanically, never by hand: a hit counts as
+pre-existing only when the same scanner produces the identical hit, same file
+and same line, on that file's version at HEAD. W1's own outputs have no HEAD
+version and therefore zero tolerance, and they are clean. **This is a
+governance finding the planner should rule on: at 10,296 candidates the
+substring scan has a false-positive floor, and the widened universe will keep
+paying it on every future leg.**
+
+The cohort-composition caveat binds every claim above: the disjoint cohort is
+PANDORA's MBTI-labelled population, typology-enriched by construction (8 of
+71 Common communities are typology names). A law that transports here has
+been carried to a different KIND of author population on the same platform,
+not to a fresh sample of the same one.
+
+Artifacts: `results/m4_w1_slow_transport/` (gitignored — includes the events
+cache and the disjoint cohort listing, never committed). Report:
+`reports/SUICA_M4_W1_SLOW_TRANSPORT_REPORT.md`. Runtime ≈ 24 minutes;
+17 estimator calls; SEED 20260818, B_perm 499, B_boot 1000.
