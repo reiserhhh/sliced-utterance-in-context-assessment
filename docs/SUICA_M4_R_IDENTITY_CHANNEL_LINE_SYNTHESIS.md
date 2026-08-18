@@ -59,3 +59,21 @@ planted style at the generator layer.
 IDENTITY_CHANNEL_CERTIFIED · `49b5161` R1b adj + R2 · `22d9256` R2
 INTERFERENCE_MISPRICED · `4bece27` R2 adj + #62/#63 + R2b ·
 `e06d73f` R2b TAX_IS_CHANNEL_SPECIFIC · (this commit) phase close.
+
+## Dated addendum (2026-08-19) — R3 discharged and sealed; the line closes fully
+
+The reconciliation derivation
+(`SUICA_R3_IDENTITY_RECONCILIATION_NOTE.md`) resolved the two named
+identities into a 2×2 (geometric alignment × channel semantics) with
+η̂ formalized as an excess-alignment reader, and the R3 leg sealed its
+composition law parameter-free: η̂(η₀,w) = η₀/(1+w²), 8/8 registered
+predictions inside the certification band, both energies, instrument ≡
+oracle to ≤ 0.041. The first forgery direction is measured (a typed
+world driven to η̂ 0.12 by style with geometry unchanged); the signed
+dissociation exists (shown by the declared second reading; the
+registered reader saturated — defect #84a); the whitening precondition
+is structurally IMMUNE to card-level style (the bound the planner
+registered was in a blind coordinate — #84b; the immunity is the
+better theorem). The program's dissociation family now has both its
+formal home and its instrument-level seal. Defect #84; suite 1304.
+**The R-line is fully closed.**

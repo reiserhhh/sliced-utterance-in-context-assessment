@@ -386,3 +386,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #83 | W-line / M4-W1 | `docs/SUICA_M4_W_DISJOINT_TRANSPORT_PLAN.md — W1 outcome + planner adjudication` | The widened ID-gate (0 hits over 10,296 names) was registered without pre-executing it against the committed tree — three dictionary-collision usernames pre-exist in old ledger prose, making the gate as registered unsatisfiable; the executor's mechanical HEAD-identical separation (pre-existing vs new; new = 0 tolerance) is adopted as standing policy. | none (convention: ID-gates over widened universes are pre-executed against HEAD at registration with the pre-existing-hit policy pinned; plus the RESOLVES transport class — same sign, target excludes the boundary the source straddled, source point inside target CI — added to the #75 scheme) | gate-pre-execution |
+
+## Dated additions (2026-08-19, thirty-first note — R3; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #84 | R-line / M4-R3 | `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_PLAN.md — R3 outcome + planner adjudication` | Three registration clauses with unverified antecedents/coordinates: the union reader saturated at AUC 1.0000 (degenerate antecedent, #59 class, inside the leg stamping the #59-discharge note); the P3 validity bound was posed in a coordinate the whitening precondition is blind to (the correct statement is a style-immunity theorem); the two-energy world parameter σ_b² was left unnamed. | none (convention: discrimination clauses register only with demonstrated headroom (< 1 at the most favorable cell); validity bounds register in the coordinate the mechanism acts on, or declare the mechanism unknown; inherited world parameters are named per #77/#81) | antecedent-verification |

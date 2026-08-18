@@ -1195,3 +1195,62 @@ headroom-preserving reading rises monotonically while η̂ falls.
 Artifacts (gitignored): `results/m4_r3_taxometer_mixtures/`. Report:
 `reports/SUICA_M4_R3_TAXOMETER_MIXTURES_REPORT.md`. Runtime 20.0 s
 (128 world-cells); config sha256 `9718c4a07bca…`.
+
+## R3 planner adjudication + FULL LINE CLOSE (2026-08-19)
+
+**Compound verdict ACCEPTED: `DILUTION_LAW_HOLDS / PARTIAL /
+BUDGET_HOLDS`.**
+
+**P1 — the headline, and the seal.** All eight parameter-free
+predictions written into the registration landed inside the L3
+certification band (largest miss 0.0434, at the UNDILUTED cell — the
+instrument's baseline bias, not the law); both profiles strictly
+monotone; routing invariant on the second energy; instrument and oracle
+agree to ≤ 0.0408 everywhere, so the localizer never fired. **The
+reconciliation note's composition theorem is EMPIRICALLY SEALED**, and
+the note's first forgery direction now has a number: style at w = 2
+drives a strongly typed world (η₀ = 0.6) to η̂ = 0.1204 with its type
+geometry unchanged. "η̂ low" licenses "typology-applicable" only after
+a style audit — measured, not argued.
+
+**P2 — PARTIAL as routed, and the irony recorded.** The planner's
+registered union reader shares the slow state between draws and
+SATURATES at AUC 1.0000 in every cell — a degenerate antecedent, #59
+class, INSIDE the very leg that stamps the #59-discharge note. The
+discipline caught it: the executor pinned the reading before any
+main-grid number, routed by the registered reader, and ran the declared
+second reading (slow state refreshed) which shows the dissociation
+cleanly (AUC 0.918 → 0.9999 rising while η̂ falls, both η₀). Adopted
+reading: **the signed dissociation EXISTS; the registered reader could
+not show it.** A headroom-checked reader is named for any future
+v2-typed leg; not queued.
+
+**P3 — BUDGET_HOLDS, and the finding is better than the lean.** No
+crossing anywhere; the bias is LARGEST at w = 0 (0.0408) and SHRINKS
+with style at η₀ = 0.6. Mechanism: the whitener is estimated from the
+state channel's innovations, which card-level style never touches — so
+**η̂'s whitening precondition is structurally immune to card-level
+style**. The planner registered the validity bound in a coordinate the
+precondition is blind to; the correct statement is an immunity theorem,
+not a bound. Recorded as the leg's second theory gift.
+
+**Defect #84 (planner, purchased; registry thirty-first note).** Three
+parts, one family — registration clauses with unverified antecedents or
+coordinates: (a) a discrimination clause registered without a HEADROOM
+check (the saturating union reader; convention: discrimination clauses
+are registered only with a demonstrated < 1 reading at the most
+favorable cell); (b) a validity bound registered in a coordinate the
+mechanism is blind to (convention: bounds are registered in the
+coordinate the mechanism acts on, or the mechanism is declared
+unknown); (c) an inherited two-energy world parameter left unnamed
+(σ_b²; #77/#81 family; the executor's RN-R3-1 primary/secondary split
+accepted). Executor register-notes RN-R3-1/3/6 all accepted;
+C-R3a bit-identity (24 × 22 objects) and G0 (cell mean bit-identical to
+L3's committed artifact) noted with approval.
+
+**THE R-LINE IS FULLY CLOSED**: measurement phase (R1–R2b, 2026-08-14)
++ the reconciliation derivation (note, 1bbda62) + the empirical stamp
+(this leg). The founding conjecture's arc — "the residual is an ID
+card" — now ends in a 2×2 whose composition law is sealed
+parameter-free and whose instruments know exactly which margin each of
+them reads.
