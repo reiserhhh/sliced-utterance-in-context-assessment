@@ -476,3 +476,141 @@ CLAIMS_LEDGER row; ONE commit
 `feat(m4-w): W2 — fast-time and branch-code transport — <VERDICT>`; suite
 green (1236 + new). Label-free; `author_profiles.csv` never opened;
 SEED = 20260818; B_perm = 499; B_boot = 1000.
+
+---
+
+## W2 outcome (executor, 2026-08-18)
+
+**`ORDER_SHIFTS` (cell 2 of 3). The fast-time order channel RE-INSTANTIATES
+on the disjoint cohort — in the same cell, at a lower level.**
+
+Size-matched primary `rho = 0.2207 [0.2023, 0.2401]` on 984 authors drawn
+from the censused 7,247, against U1's sealed `0.2893 [0.2695, 0.3114]` on its
+own 984. Both points sit inside U1's `ORDER_CHANNEL` cell (0.10–0.33, CI
+strictly above zero); the intervals do not meet. Same law, different
+magnitude. The exact-bag shuffle p is at its floor (0.002 = 1/500) on all
+three arms, and bag invariance is bit-exact per fold.
+
+### Anchor gates (#78) — 10 of 10 PASS, first execution, nothing drifted
+
+Disjoint events 14,634,702; authors 8,895; floor ceil(0.01 × 8895) = 89 →
+**1,443** communities, and the recomputed list is BIT-IDENTICAL to the one W1
+cached, not merely the same length. U1-pool **7,247**; T1-pool **8,625**; tie
+rate on in-law-vocab spliced adjacency **0.00882**; session share **0.56147**;
+cross-thread share of all adjacencies **0.73174**. The leg never needed its
+STOP.
+
+### The size-matched draws
+
+One `numpy.random.default_rng(20260818)` stream, two draws, ORDER first and
+BRANCH second: 984 of 7,247 (digest `e44097a2b36ad6ea`), then 1,304 of 8,625
+(digest `b76122f923db8740`), both uniform without replacement and sorted
+before use. The draw ORDER is part of the pin — swapping it changes both
+subpools. 138 authors fall in both draws, which is harmless: the families are
+separate instruments, not a joint test.
+
+### Order family (VERDICT ROUTER) — two of three arms REPRODUCE
+
+| arm (N = 984) | target rho | source rho | class |
+|---|---|---|---|
+| raw adjacency (PRIMARY, routes) | 0.2207 [0.2023, 0.2401] | 0.2893 [0.2695, 0.3114] | **SHIFTS** |
+| stay-rate scalar | 0.1778 [0.1344, 0.2191] | 0.1803 [0.1375, 0.2234] | **REPRODUCES** |
+| cross-thread only | 0.1383 [0.1192, 0.1593] | 0.1626 [0.1373, 0.1895] | **REPRODUCES** |
+
+The two channel-restricted arms land on top of their seals (deltas −0.0025
+and −0.0243, both overlapping); only the FULL raw-adjacency arm moves enough
+to separate. Null locations sit on the same side of the unigram bag ceiling
+as at source (primary −0.0254 here against −0.0211 there).
+
+### Full-pool sensitivity — the size correction, made visible
+
+At the full censused gallery of 7,247 the same arm gives
+`rho = 0.1762 [0.1700, 0.1831]` — same cell, but **0.0446 below** the
+size-matched value across a 7.36× gallery change. Had this leg compared the
+full pool against U1's 984-author seal it would have manufactured a transport
+failure out of gallery size alone. The W1 adjudication's correction is
+vindicated on its first use.
+
+### Branch family (co-primary, #73 flags, never routing)
+
+| arm | quantity | target | source | class |
+|---|---|---|---|---|
+| full | flat AUC | 0.9817 [0.9772, 0.9852] | 0.9837 | **REPRODUCES** |
+| full | path AUC | 0.7154 [0.7028, 0.7425] | 0.7461 | **SHIFTS** ⚑ |
+| full | residual AUC | 0.9722 [0.9617, 0.9761] | 0.9552 | **SHIFTS** ⚑ |
+| clean | flat AUC | 0.9562 [0.9480, 0.9638] | 0.9661 | **SHIFTS** ⚑ |
+| clean | path AUC | 0.6929 [0.6918, 0.7273] | 0.7317 | **SHIFTS** ⚑ |
+| clean | residual AUC | 0.9486 [0.9374, 0.9580] | 0.9417 | **REPRODUCES** |
+| full | stable depths | {1,2,3,4,5,6} | {1,2,3,4,5} | **DEPTHS_SHIFT** ⚑ |
+| clean | stable depths | {1,2,3,4} | {1,2,3,4} | **DEPTHS_REPRODUCE** |
+
+No branch quantity comes anywhere near chance: every AUC interval sits far
+above 0.50, so the registered falsifier (a branch-code family collapse) does
+NOT fire. The identity signal is intact; what moves is its DISTRIBUTION
+between the frozen path and the terminal residual. Path drops (−0.0307) while
+residual RISES (+0.0170): on the disjoint cohort the tree's frozen route
+carries LESS of the identity and the within-leaf remainder carries MORE. T1's
+own headline — that the tree does not exhaust the identity tail — is not
+merely reproduced but strengthened.
+
+Stable depths go one level DEEPER on the full arm. T1's depth 6 was
+underresolved (N = 26, gain CI crossing zero); here depth 6 carries N = 257
+and clears all three gates. The clean arm's depth set is identical to T1's.
+
+**Missing source intervals (registered rule, applied to all six AUC rows).**
+T1's committed artifacts publish per-depth gain CIs but NO interval for flat,
+path or residual. Every branch AUC row therefore fell to the registered
+fallback — classify by point-in-TARGET-CI — and every one carries the
+missing-interval flag. The target intervals are this leg's own instrument
+(RD-W2-2): an author-level cluster bootstrap, B = 300, re-running the SAME
+pinned `cross_fitted_hierarchical_identity` on each resample with its
+permutation/bootstrap counts at the minimum (a contract test shows those
+counts leave the AUCs bit-identical). Measured bias runs −0.0004 to +0.0159;
+the bias-corrected interval is carried per row, and it flips exactly one
+classification (`clean.path`, which is REPRODUCES under the percentile
+interval's lower edge 0.6918 and SHIFTS under the recentred one). That row
+should be read as borderline, not as a finding.
+
+### Cohort-instrument notes
+
+The registration's named difference is real and large: the tie rate is
+**0.00882** here against **0.11522** at source (13.1× lower). The session
+share is 0.56147 against a source test-fold share of 0.6700, and the
+same-state dwell share falls to **0.6141** from the sealed **0.7122** —
+dwell is still the majority of adjacencies, but less dominant. OOV occupancy
+rises (0.2801 vs 0.2071) and realized transitions per author fall (median
+839.5 vs 1224.5). This cohort's fast-time instrument is simply coarser.
+
+### Registered leans
+
+- **L1 (ORDER_TRANSPORTS with rho in [0.25, 0.40], leaning HIGH): MISSED,
+  and in the wrong DIRECTION.** The tie-attenuation argument predicted rho
+  above source because ties cannot carry order; the realized rho is 0.0686
+  BELOW source. The argument's premise held (ties are 13× rarer) and its
+  conclusion failed. Recorded as an anomaly, not explained away.
+- **L2 (dwell dominance transports): HELD** — stay-arm rho detected and
+  strictly positive, dwell share 0.6141 > 0.5, though the share itself fell.
+- **L3 (flat and residual REPRODUCE, path SHIFTS plausibly): PARTIAL** —
+  flat REPRODUCES and path SHIFTS as leaned, but residual SHIFTS too, and
+  UPWARD, which no lean anticipated.
+- **L4 (depths REPRODUCE or SHIFT by one): HELD** — one deeper on full,
+  identical on clean.
+- **L5 (clean arm same cell): HELD** — all three clean quantities remain far
+  above chance.
+
+### Governance
+
+Label-free throughout: `author_profiles.csv` was never opened. The ID-leak
+gate over all 10,296 names returns **0 NEW hits** under the #83
+HEAD-identical policy; 4 raw hits are dictionary collisions reproduced
+identically at HEAD (three in `docs/CLAIMS_LEDGER.md`, one in this plan's own
+W2 registration section). The scan is run TWICE and the numbers printed in
+the report are verified to be the numbers of the report that carries them
+(fixed point). The cohort-composition caveat binds: 22 explicit-typology
+communities sit in the 1,443-name vocabulary, and the clean arm is the handle
+on that.
+
+Artifacts: `results/m4_w2_fast_branch_transport/` (gitignored). Report:
+`reports/SUICA_M4_W2_FAST_BRANCH_TRANSPORT_REPORT.md`. Runtime ≈ 65 minutes
+(order size-matched 358 s, order full-pool 2,313 s, branch arms 52 s, branch
+AUC bootstrap 1,139 s). SEED 20260818, B_shuffle 499, B_boot 1000.
