@@ -293,3 +293,72 @@ Artifacts: `results/m4_w1_slow_transport/` (gitignored — includes the events
 cache and the disjoint cohort listing, never committed). Report:
 `reports/SUICA_M4_W1_SLOW_TRANSPORT_REPORT.md`. Runtime ≈ 24 minutes;
 17 estimator calls; SEED 20260818, B_perm 499, B_boot 1000.
+
+## W1 planner adjudication (2026-08-18)
+
+**Verdict ACCEPTED: `COMMON_STANDING` — the U-line's open middle CLOSES on
+fresh authors.** Λ = +0.0911/y [+0.0628, +0.1490] on 3,241 authors sharing
+nobody with the source cohort; all four arms in the same cell; the width
+projection realized at ratio 0.979 (the #79b/#80b machinery is now
+calibrated on two consecutive exact hits); anchor gates 16/16 first try.
+
+**The fourth transport class is ADOPTED (executor's request granted).**
+**RESOLVES** = same sign; the source CI straddled a cell boundary that the
+target CI excludes; the source point lies inside the target CI. It sits
+between REPRODUCES and SHIFTS in the #75 scheme. Λ's row is reclassified
+BREAKS → RESOLVES at adjudication (the committed report stands as written;
+this note carries the reclassification). A transported precision gain is
+not a contradiction and must never be filed as one.
+
+**The When clause lands — in the TWO-REGIME form.** The strict ordering
+(λ_taste smallest) did NOT transport: on the disjoint cohort the slow end
+is {common 0.0901, taste 0.1010} — statistically tied (taste's CI contains
+common's point) — and the fast end is the distinctive tail (0.1812),
+cleanly separated. The licensed proposition, revised to what BOTH cohorts
+support: **the distinctive is the ink — it fades fastest; what stands is
+the common scaffold and the taste direction written through it.** The
+three-layer strict ordering is retired in favor of the two-regime
+statement; the ordering break carries its #73 flag.
+
+**Law vs instrument — a textbook dissociation.** The LAW transports fully
+(re-instantiated vocabulary and split → strict positive Λ). The frozen
+INSTRUMENT transports at reduced effect (+0.0644, still positive) and
+demonstrably does not carry its own mass split (the 32-community Common
+holds 0.3473 of this cohort's mass against 0.50 at source). Q-line
+vocabulary applies verbatim: transport the rule, not the artifact. The
+clean arm defuses the cohort-composition worry: the slow common mass is
+NOT the typology forums (Λ +0.0780 with them removed).
+
+**Cohort-level persistence differences are real and now on record.** All
+λ levels are lower on the disjoint cohort (λ_full 0.1236 vs 0.2943): the
+disjoint signature is more persistent across the board; the floor-share
+LAW reproduces while the absolute drop D shifts. Caveat carried: the
+sealed floor-share/D rows were sourced from U2's pool arm while Λ/λ_full
+came from U2c's intersection set (planner registration imprecision,
+#81-family, recorded here without a number — it moves no classification
+under the registered rule); and this cohort is typology-enriched by
+construction.
+
+**Defect #83 (planner, purchased; registry thirtieth note).** The widened
+ID-gate ("0 hits over 10,296 names, blocking") was registered WITHOUT
+pre-executing it against the already-committed tree: three dictionary
+collisions (ordinary-word/digit usernames) pre-exist in old ledger prose,
+so the gate as registered was unsatisfiable. The executor's mechanical
+separation is ADOPTED AS STANDING POLICY: a raw hit is pre-existing only
+if the same scanner reproduces the identical hit (same file, same line)
+on that file's HEAD version; leg-authored files have no HEAD version and
+carry zero tolerance; the verdict gate is NEW hits = 0. Convention: an
+ID-gate over a widened universe is pre-executed against HEAD at
+registration, and the pre-existing-hit policy is pinned with the gate.
+
+**Lean record.** L1 HELD (disclosed-knowledge). L2 PARTIAL (floor share
+reproduces; D shifts with the flatter-curve reading). L3 MISSED narrowly
+(the ordering break above). L4 HELD.
+
+**Line state.** W1 closed. W2 (fast-time + branch-code transport) is
+registered next — with one design correction the planner owes to W1's
+reading: **AUC-family transport must be SIZE-MATCHED** (pooled AUCs depend
+on gallery size; the sealed T1/U1 values were measured at N = 1304/984,
+so the primary transport arms draw seeded same-size subpools, with the
+full-pool runs as sensitivity). W3 (labels, MBTI-axis class) stays gated
+on its own governance review.
