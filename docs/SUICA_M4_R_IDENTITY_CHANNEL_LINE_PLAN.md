@@ -943,3 +943,17 @@ instruments across that gap without reconciling the definitions
 first is precisely the #59 class of error. The derivation is the
 next planner move when the loop resumes. Synthesis:
 `docs/SUICA_M4_R_IDENTITY_CHANNEL_LINE_SYNTHESIS.md`.
+
+## Dated addendum (2026-08-19) — the R3 derivation debt is DISCHARGED
+
+The reconciliation derivation the phase close demanded now exists:
+`docs/SUICA_R3_IDENTITY_RECONCILIATION_NOTE.md`. The two named
+identities are the two axes of a 2×2 (geometric alignment × channel
+semantics): η̂ is an excess-alignment reader blind to semantics; the
+style channel is an isotropic non-trait object invisible to that
+reading except as dilution. Composition theorem with a parameter-free
+dilution law η₀/(1 + w²·V_s/V_b) (numerically verified to 3 decimals),
+two precise #59 forgery directions, the signed T6″-vs-η̂ dissociation
+as the registerable centerpiece, and the real-text dissociation
+family's formal home. A future R3 leg registers against the note;
+nothing is registered or re-certified today.
