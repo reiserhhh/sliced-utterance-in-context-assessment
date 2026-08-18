@@ -1630,3 +1630,147 @@ machinery), with the drift-aware caution that slow-time coordinates are
 moving targets. Also named-open: the long-horizon floor (corpus-bounded),
 the non-dwell order residual, the distinct-vs-common closure (second
 corpus).
+
+---
+
+## U3 — the Who × When trait join (registered BEFORE run, 2026-08-18)
+
+The line's first LABEL leg. Everything the measurement phase fixed is
+inherited as binding: the cross-thread designation (U1 adjudication — the
+primary-arm stay rate is 43.8% reply-chain mechanics and may never feed a
+label join as free-selection order), the drift-aware caution (slow-time
+coordinates are moving targets), and §5.4 (When coordinates are technical
+objects — no psychological naming regardless of outcome).
+
+### 4W header
+
+- **Object.** Crossing #4 (Who × When): do the When coordinates the
+  measurement phase validated — inertia (cross-thread stay), signature
+  tightness, personal drift — couple to Big5 similarity, and do they add
+  anything BEYOND the Where bag channel (S-line SR1's r = 0.049)? The
+  increment is the question; the raw coupling is its precondition.
+- **Fixed.** The U2 block pool (849 authors, 100% Big5-complete); SR1's
+  stamp machinery (config-before-joint; stage_part0 stamps and opens no
+  label; first_join logged; G-U3 proves stamp < first_join); SR1's primary
+  trait geometry (z-scored 5-dim Euclidean) and declared label reliability
+  0.8 (#57 family — disattenuation is a SECONDARY reading only); the bag
+  distance (Hellinger full-signature cosine distance on the same pool).
+- **Varied.** Raw vs bag-controlled (partial) coupling; the three
+  coordinates; activity-controlled sensitivity.
+- **What falsifies.** The dissociation family predicts silence: a raw
+  Mantel r inside its own permutation band for every coordinate is the
+  registered lean, not a failure. What would surprise is a surviving
+  partial coupling (When beyond Where).
+- **Layer.** P (the first label-bearing projection of the When quadrant).
+
+### Census (planner arithmetic #43; predicates exact per #77/#78)
+
+Computed on the U1 events cache; label table touched ONLY for availability
+counts (null-structure, no values — the SR1-established census operation).
+
+| quantity (exact predicate) | value |
+|---|---|
+| U2 block pool (≥ 4 disjoint K=50 in-vocab blocks) | 849 |
+| … with all five Big5 columns non-null | **849 (100%)** |
+| stay-eligible (≥ 30 cross-thread adjacencies per half; halves by full-stream median) | 847 |
+| tight-eligible (≥ 2 consecutive-block pairs, midpoint gap ≤ 90 d) | 763 |
+| drift-eligible (≥ 3 pairs gap ≤ 180 d AND ≥ 3 pairs gap > 365 d) | 652 |
+| census split-half reliabilities (proxy for stay: subreddit-level states, DECLARED PROXY; exact for tight/drift) | stay 0.7828 / tight 0.8872 / drift 0.9383 |
+| coordinate dispersions (sd) | 0.2531 / 0.1426 / 0.1830 |
+
+Predicate lesson recorded (#77 family, no number — it governs nothing
+here): "≥ 50 in-vocab events per half" yields 1028 authors under an
+in-vocab-median half rule vs U1's 984 under the full-stream-median rule;
+U3's pools are coordinate-driven and inherit neither.
+
+### Coordinates (label-free, frozen in stage B; transforms pinned #70)
+
+1. **stay_ct (PRIMARY — U1's designated object).** One GLOBAL state map:
+   spherical k-means, C = 24 + OOV state, fit on all 849 authors' EARLY
+   halves (full-stream-median rule), seed 20260818, n_init 10 — declared
+   corpus-global (precedent: the SR0 vocabulary). stay_ct = mean
+   1[state_i = state_{i+1}] over adjacent full-stream event pairs with
+   DIFFERENT link_code (cross-thread only).
+2. **tight.** Mean Hellinger cosine over consecutive-block pairs with
+   midpoint gap ≤ 90 d (U2 blocks).
+3. **drift_pa.** Mean cosine (pairs ≤ 180 d) − mean cosine (pairs > 365 d)
+   over the author's own block pairs.
+
+**Reliability gate (label-free, BEFORE the stamp'.s joint stage):** each
+coordinate enters stage E only if its split-half reliability on the ACTUAL
+objects (stay_ct at C = 24 early/late halves; tight and drift odd/even
+pair splits) is ≥ 0.5. A coordinate failing the gate is excluded
+label-free and reported. If the PRIMARY coordinate fails, the leg STOPS
+before any stamp (clean stop, no label touched, verdict
+COORDINATE_UNRELIABLE). Census proxies project all three far above the
+gate.
+
+### Estimands (ratio-free #79; own nulls #68/#66)
+
+Per admitted coordinate c, on the coordinate's eligible pool:
+- **Raw coupling:** Mantel r between |c_u − c_v| and SR1's z-scored Big5
+  Euclidean distance; permutation of author label-rows, B = 999 (the
+  Mantel permutation IS the own null); two-sided band.
+- **Increment (the U3 question):** partial Mantel r(c-dist, trait-dist |
+  bag-dist), Smouse–Long–Sokal residual permutation, B = 999; bag-dist =
+  Hellinger full-signature cosine distance on the same pairs. Sensitivity:
+  additionally controlling |log n_u − log n_v| (activity; SR2 found
+  observability trait-NULL on this corpus, named regardless).
+- Disattenuation (SECONDARY reading only, SR1 pattern): observed r /
+  sqrt(rel_c^SB · 0.8) with rel_c the measured split-half
+  (Spearman–Brown), label reliability DECLARED 0.8.
+- Projection (#79b, assumption declared): scaling SR1's realized z = 5.42
+  at N = 1306, r = 0.049 by z ∝ r·√N gives minimal detectable
+  r ≈ 0.022 at N = 849 (stay pool 847). Reported against realized bands.
+
+### Multiplicity and cells (NULL-first #55, effect-size keyed #75)
+
+The verdict keys on the PRIMARY coordinate (stay_ct). tight and drift_pa
+are secondary rows; their detections carry a Bonferroni ×3 guard and flag
+but never route the verdict.
+
+1. **WHEN_TRAIT_SILENT** — stay_ct raw r inside its band; scoped statement
+   "silent beyond r ≈ 0.022" attaches only with the realized-band width
+   report (#71 executed form; no equivalence cell beyond this).
+2. **WHEN_COUPLED_REDUNDANT** — stay_ct raw r outside its band AND partial
+   r inside its band (the When coordinate reads the bag's trait channel
+   through a scalar).
+3. **WHEN_COUPLED_INCREMENTAL** — stay_ct partial r outside its band (When
+   adds trait information beyond Where; the informative surprise).
+
+Secondary-row cells reported in the same scheme with flags. SR1's
+r = 0.049 is the declared effect-scale anchor for all rows.
+
+### Registered leans
+
+- Primary: **SILENT-to-REDUNDANT** for stay_ct — the dissociation family's
+  fifth test (identity carriers keep being trait-silent; stay is an
+  identity carrier). Point |raw r| ≤ 0.03.
+- Secondary (weak): if any row detects raw, it is tight or drift (slow
+  coordinates aggregate more signal than one fast scalar) — structural
+  lean only, no trait-level lean (§5.4).
+
+### Stage discipline and deliverables
+
+Stages: Part 0 (anchors: cache, U2 pool predicate, census reproduction;
+config hash + STAMP; no label opened) → stage B (global map, coordinates,
+reliability gate, coordinate file frozen + hashed into the stamp chain) →
+stage E (ONE join: author_profiles.csv Big5 columns opened once,
+first_join logged, all registered quantities computed) → G-U3 (stamp <
+first_join proof in the artifacts). A1 binds: instrument-gate failures
+before the stamp mean NO stamp ever.
+
+Standard six: `scripts/run_suica_m4_u3_when_trait_join.py` + tests
+(stamp-order contract, gate exclusion logic, Mantel/partial on toy data
+with known structure, map purity = label-free inputs only, ID-leak
+helper); gitignored `results/m4_u3_when_trait_join/`; report
+`reports/SUICA_M4_U3_WHEN_TRAIT_JOIN_REPORT.md` (rule-24 tables; the
+label event named; boundaries: EXPLORATORY corpus-level, no person claims,
+no psychological naming of coordinates, the eq-12 projection caution);
+outcome appended here; one CLAIMS_LEDGER row naming the label event
+(PANDORA Big5 re-join under stamp, SR1/SR2 class); ONE commit
+`feat(m4-u): U3 — the Who × When trait join — <VERDICT>`; suite green
+(1148 + new). SEED = 20260818; B = 999 both nulls; B_boot n/a (Mantel
+bands are the uncertainty machinery; no bootstrap CI on r is registered).
+The planner records the label event in the private-repo audit log at
+adjudication (planner-side action, not the executor's).
