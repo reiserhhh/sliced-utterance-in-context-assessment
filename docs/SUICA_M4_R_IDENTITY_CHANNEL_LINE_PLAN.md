@@ -957,3 +957,109 @@ two precise #59 forgery directions, the signed T6″-vs-η̂ dissociation
 as the registerable centerpiece, and the real-text dissociation
 family's formal home. A future R3 leg registers against the note;
 nothing is registered or re-certified today.
+
+---
+
+## M4-R3 — the taxometer on identity mixtures (registered BEFORE run, 2026-08-19)
+
+The empirical stamp of the reconciliation note
+(`docs/SUICA_R3_IDENTITY_RECONCILIATION_NOTE.md`, commit 1bbda62). The
+note discharged the #59 debt; this leg registers against it. D1-seal
+class: the predictions below are PARAMETER-FREE and written into the
+registration before the run.
+
+### 4W header
+
+- **Object.** The composed identity 2×2 under the certified
+  instruments: does η̂ obey the dilution law when an isotropic
+  non-trait style channel is added to the L-geometry? Does the union
+  reader rise while η̂ falls (the signed dissociation)? Where does the
+  whitening precondition break? Layer V (synthetic instrument world);
+  no psychological naming.
+- **Fixed (by formula/import, #81).** The L3 world and taxometer
+  machinery from `scripts/run_suica_m4_l3_taxometer_meter.py`
+  (N_AUTHORS = 512, K_TAU = 3, the certified whitening pipeline and η̂
+  reader), imported by file with provenance; the oracle
+  excess-alignment reader from the note (η̂_oracle =
+  (raw share − d_T/D)/(1 − d_T/D)).
+- **Varied.** The style weight w ∈ {0, 0.5, 1, 2} (style_a per author,
+  card-level additive, style variance = w²·σ_b² — so V_s/V_b = w² BY
+  CONSTRUCTION, the #76 operating point); the alignment parameter
+  η₀ ∈ {0.25, 0.6}; 8 replicate worlds per cell (L3's convention).
+- **What falsifies.** A non-monotone or flat η̂-vs-w profile kills the
+  dilution law (P1); AUC failing to rise with w kills the union-reader
+  half of the dissociation (P2).
+- **Zero-default certification (C-R3a).** At w = 0 the worlds are
+  BIT-IDENTICAL to the unmodified L3 construction (the R1 pattern);
+  any difference → INSTRUMENT_DEFECT, A1 stop.
+
+### Registered parameter-free predictions (#43; from the note's §2,
+numerically verified at oracle level to 3 decimals)
+
+    η̂(η₀, w) = η₀ / (1 + w²)        [V_s/V_b = w² pinned]
+
+| η₀ \ w | 0 | 0.5 | 1 | 2 |
+|---|---|---|---|---|
+| 0.25 | 0.250 | 0.200 | 0.125 | 0.050 |
+| 0.60 | 0.600 | 0.480 | 0.300 | 0.120 |
+
+The acceptance band per cell is the L3 CERTIFICATION BUDGET ±0.125 on
+the 8-world cell mean (the instrument's own certified error, not a new
+tolerance). Style shares realized: w²/(1+w²) ∈ {0, 0.2, 0.5, 0.8}.
+
+### Instruments and estimands
+
+- **η̂ (certified)** per world via the imported L3 pipeline, whitening
+  precondition applied as certified; cell mean ± across-replicate sd.
+- **η̂_oracle** per world (the note's formula on realized vectors) —
+  the instrument-vs-law localizer: if η̂ misses a prediction while
+  η̂_oracle hits it, the failure is the INSTRUMENT (whitening under
+  style), not the LAW.
+- **Union reader (P2):** two-draw worlds (two independent ε draws per
+  author sharing τ, b, style); same-author-vs-different pooled AUC on
+  cosine of centered cards; its null is 0.5 here and is stated (#68 —
+  no composite subtlety in this design); monotonicity read on cell
+  means across w.
+- **Whitening-bias bound (P3):** |η̂ − η̂_oracle| per cell vs realized
+  style share; the crossing of the 0.125 budget reported with a
+  replicate CI if in-grid.
+
+### Cells (NULL-first #55; effect-size keyed #75 — the band is the
+certification budget)
+
+- **P1 (ROUTES):** 1. DILUTION_FAILS — non-monotone in w on cell
+  means, or flat (max−min < 0.05 where the predicted drop is ≥ 0.13);
+  2. DILUTION_SHAPE_SHIFTS — monotone decrease with ≥ 1 cell mean
+  outside ±0.125 of its registered prediction; 3. DILUTION_LAW_HOLDS —
+  all 8 cell means inside ±0.125 AND monotone.
+- **P2 (co-primary, #73 flags):** SIGNED_DISSOCIATION_CONFIRMED (AUC
+  strictly rises AND η̂ strictly falls across all w steps, both cell-
+  mean profiles, both η₀) / PARTIAL (one direction) / FAILS.
+- **P3 (co-primary):** BOUND_MEASURED (in-grid crossing, reported with
+  CI) / BUDGET_HOLDS (no crossing through style share 0.8).
+
+### Registered leans
+
+- P1 DILUTION_LAW_HOLDS — the law is exact at oracle level; the risk
+  is concentrated in the instrument's whitening under style, which is
+  exactly what P3 measures and the oracle localizes.
+- P2 CONFIRMED.
+- P3 BOUND_MEASURED, weakly at w = 2 (style share 0.8).
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_r3_taxometer_mixtures.py` + tests
+(C-R3a bit-identity; oracle-reader correctness on the note's checked
+values; two-draw AUC on a hand toy; G0 anchor — the w = 0, η₀ = 0.25
+cells reproduce the imported L3 pipeline's readings; grid/seed
+determinism); gitignored `results/m4_r3_taxometer_mixtures/`; report
+`reports/SUICA_M4_R3_TAXOMETER_MIXTURES_REPORT.md` (rule-24 tables;
+prediction-vs-read table with the certification band; the
+instrument-vs-law localization; P2 profiles; P3 bound; config);
+outcome appended here; one CLAIMS_LEDGER row (EXPLORATORY, label-free,
+synthetic, card-space); ONE commit
+`feat(m4-r): R3 — the taxometer on identity mixtures — <VERDICT>`;
+suite green (1279 + new); ID-leak scan on committed files under the
+#83 policy (synthetic leg, scan runs regardless). SEED = 20260819;
+8 worlds/cell; world seeds SEED + world index conventions pinned in
+config.
