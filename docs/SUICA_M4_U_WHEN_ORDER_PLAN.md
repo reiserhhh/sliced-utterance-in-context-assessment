@@ -1930,3 +1930,67 @@ scalar of this author's own stream does not covary with Big5 distance at
 this width"); anything beyond ONE first-order projection of K_u per
 coordinate (eq 12); and anything about coordinates measured over a fixed
 window rather than each author's own span (the drift-aware caution).
+
+## U3 planner adjudication + FULL LINE CLOSE (2026-08-18)
+
+**Verdict ACCEPTED: `WHEN_TRAIT_SILENT`.** All nine registered estimates
+(raw / bag-partial / activity-partial × three coordinates) are negative,
+small, and inside their own permutation bands (primary raw r = −0.0036,
+p = 0.74; |raw| = 7.4% of the 0.049 anchor). The silence is READABLE
+because the executor carried the live-channel anchor: Mantel(bag-dist,
+trait-dist) = 0.049014 on the SAME pairs and machinery — SR1's 0.049
+independently reproduced — so the Where channel is live while every When
+coordinate is mute. And the coordinates are not bag-degenerate
+(corr with bag-dist 0.09–0.18): genuinely different scalars, genuinely no
+Big5 signal. Scoped statement carried at exactly the registered width:
+silent beyond r ≈ 0.022 — the projection ratio 0.9998 is the U line's
+first width projection that did not miss (#80b's convention paying off on
+its first use).
+
+**The dissociation family's FIFTH confirmation, now covering When.**
+Inertia (the order-identity carrier), tightness, and personal drift are
+all trait-mute at corpus power. The theory's §5.4 restraint — dynamic
+objects are "reproducible text-behavior processes," not personality
+factors — is now empirically vindicated for Big5 on every dynamics
+coordinate measured. Crossing #4's candidates exist as author structure
+and have shown no Big5 content in this projection family.
+
+**Stamp discipline.** G-U3 PASS with the stronger evidence noted: the
+frozen coordinate artifact is bit-identical to a label-free rehearsal —
+the coordinates did not move when labels arrived. The label event is
+recorded in the release ledger row and in the private-repo audit ledger
+(planner-side, private commit c6f0ed3).
+
+**Executor deviations adjudicated.** RD-U3-1 ACCEPTED (the census-named
+847 routes; the prose/arithmetic boundary disagreement at exactly one
+author is the census-boundary family's third instance, folded into #81).
+The two unregistered second readings (bag+bag² partial; squared-Euclidean
+geometry) route nothing and are accepted as diagnostic notes.
+
+**Defect #81 (planner, purchased; registry twenty-ninth note).**
+Registration ambiguities that required executor rulings, twice in one
+leg: (a) the trait geometry was pinned BY NAME ("SR1's z-scored Euclidean")
+while SR1's harness actually used negative squared Euclidean — the literal
+estimand text and the named source diverged (outcome-invariant here,
+−0.003578 vs −0.003601, but the ruling should not have been needed);
+(b) the prose predicate "≥ 30" vs the census arithmetic "> 30" disagree at
+exactly one author. Convention: inherited machinery is pinned by QUOTED
+FORMULA (with file+line provenance), never by name alone; eligibility
+predicates and their census values are generated from the same code.
+
+**Defect #82 (planner, purchased; same note).** The registered partial
+(Smouse–Long–Sokal) controls the covariate LINEARLY; the executor's toy
+suite exhibits a world with pure redundancy where the linear-residual
+partial reads 0.26 — the REDUNDANT/INCREMENTAL cell boundary is
+assumption-laden. Routes nothing here (everything silent at raw), but the
+convention is purchased: a partial controlling a covariate linearly
+declares linearity as an assumption or ships a nonlinear companion
+(rank/spline residual) whenever the partial can route a verdict.
+
+**THE WHEN LINE IS FULLY CLOSED** (measurement phase U1/U2/U2b/U2c +
+label phase U3). The quadrant's answer, in one line: **the When channel
+carries who you are, and — at this corpus's power, in every projection
+measured — not what you are like.** Named-open unchanged: second-corpus
+transport (owns the distinct-vs-common closure and now also the
+transport of the When silences), long-horizon floor, non-dwell order
+residual, R3 reconciliation.

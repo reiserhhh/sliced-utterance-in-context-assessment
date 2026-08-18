@@ -373,3 +373,10 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #80 | U-line / M4-U2c | `docs/SUICA_M4_U_WHEN_ORDER_PLAN.md — U2c outcome + planner adjudication` | (a) The registered Λ null was a slope on the LOG scale whose domain the permutation destroys (7/499 defined; #79 moved the pathology from ratio into log); (b) the width projection modeled pool counts but not per-unit noise — m=5's larger pool WIDENED the distinctive interval 1.35× (five-event 1159-dim vectors are noisier sphere points). | none (convention: transformed-scale nulls verify the transform's domain UNDER THE NULL at registration and ship a domain-safe companion; width projections model per-unit noise as a function of eligibility floors, never pool counts alone) | transform-domain / projection-model |
+
+## Dated additions (2026-08-18, twenty-ninth note — U3; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #81 | U-line / M4-U3 | `docs/SUICA_M4_U_WHEN_ORDER_PLAN.md — U3 outcome + planner adjudication` | Two registration ambiguities needed executor rulings: trait geometry pinned by NAME diverged from the named harness's actual formula (z-Euclidean vs negative squared Euclidean; outcome-invariant), and the prose "≥ 30" vs census "> 30" disagree at exactly one author (census-boundary family, third instance). | none (convention: inherited machinery pinned by QUOTED FORMULA with file+line provenance, never by name; eligibility predicates and census values generated from the same code) | registration-precision |
+| #82 | U-line / M4-U3 | same | The registered SLS partial controls its covariate LINEARLY; a pure-redundancy toy world reads linear-residual partial 0.26, so the REDUNDANT/INCREMENTAL boundary is assumption-laden (routes nothing here — all rows silent at raw). | none (convention: a linear-control partial declares linearity as an assumption or ships a nonlinear companion whenever it can route a verdict) | partial-control-assumptions |

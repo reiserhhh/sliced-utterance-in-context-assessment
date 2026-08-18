@@ -113,3 +113,17 @@ fastest while the direction it expresses stands.
 | 6a4a5bb | U2b adjudication; defects #78/#79; U2c registered before run |
 | d6ead28 | U2c leg — SIGN_UNRESOLVED |
 | (this) | U2c adjudication; defect #80; phase close; this synthesis |
+
+## Dated addendum (2026-08-18) — U3 closes the line's label phase
+
+U3 (the Who × When trait join, PANDORA Big5 under SR1-class stamps, the
+line's only label event) returned **WHEN_TRAIT_SILENT**: inertia
+(cross-thread stay), tightness, and personal drift — reliabilities
+0.77/0.89/0.94, admitted by a label-free r ≥ 0.5 gate — show no raw and
+no bag-partial Big5 coupling (nine of nine estimates in-band; silent
+beyond r ≈ 0.022), while the bag channel reproduces SR1's r = 0.049 on
+the same pairs. The dissociation family's fifth confirmation, now
+covering time. The line's closing sentence: **the When channel carries
+who you are, and — at this power, in every projection measured — not
+what you are like.** Defects #81/#82 purchased (registration-by-formula;
+linear-partial assumptions). Suite 1197. The U-line is fully closed.
