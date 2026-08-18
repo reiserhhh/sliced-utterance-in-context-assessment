@@ -614,3 +614,57 @@ Artifacts: `results/m4_w2_fast_branch_transport/` (gitignored). Report:
 `reports/SUICA_M4_W2_FAST_BRANCH_TRANSPORT_REPORT.md`. Runtime ≈ 65 minutes
 (order size-matched 358 s, order full-pool 2,313 s, branch arms 52 s, branch
 AUC bootstrap 1,139 s). SEED 20260818, B_shuffle 499, B_boot 1000.
+
+## W2 planner adjudication + LABEL-FREE PHASE CLOSE (2026-08-19)
+
+**Verdict ACCEPTED: `ORDER_SHIFTS`.** The order channel re-instantiates on
+fresh authors IN CELL: raw arm 0.2207 [0.2023, 0.2401] against the sealed
+0.2893 (disjoint CIs, same ORDER_CHANNEL cell); the stay-rate scalar
+REPRODUCES nearly exactly (0.1778 vs 0.1803) and cross-thread REPRODUCES
+(0.1383 vs 0.1626). Two of three arms reproduce; the full-arm level is
+cohort-owned. Null locations on the registered side of the bag ceiling;
+exact-bag invariance bit-exact per fold; anchors 10/10 first try including
+a bit-identical law-vocabulary recomputation.
+
+**The size-matching correction was vindicated on first use.** Full-pool
+rho 0.1762 at gallery 7,247 vs 0.2207 size-matched — a 0.0446 artifact of
+gallery size alone (7.36×). Comparing the full pool against the sealed
+984-author value would have manufactured a transport failure. Standing
+guidance reinforced: AUC-family quantities are compared ONLY size-matched.
+
+**Branch family accepted with its five #73 flags — and T1's open item
+CLOSES.** No branch quantity approaches chance (the registered falsifier
+does not fire): flat REPRODUCES (0.9817 vs 0.9837); the identity
+DISTRIBUTION redistributes — path down (0.7154), residual UP (0.9722 vs
+0.9552), depth 6 newly resolved at N = 257 where T1 had N = 26. This
+STRENGTHENS T1's `TREE_DOES_NOT_EXHAUST_IDENTITY_TAIL` on fresh authors:
+the tree code transports; the continuous tail carries even more here. The
+clean arm's depth set reproduces identically ({1–4}). RD-W2-2 (T1
+published no headline CIs; the registered point-in-target-CI fallback ran
+on all six rows with flags; executor-supplied target CIs under a
+bit-identity contract test) is accepted; clean.path is read as borderline,
+as disclosed. RD-W2-1 (sensitivity-row bootstrap reduction) accepted.
+
+**Lean record.** L1 MISSED IN THE WRONG DIRECTION: the tie-attenuation
+premise held (0.9% vs 11.5%) but rho landed 0.0686 LOW — single-factor
+attenuation reasoning does not predict cross-cohort levels. Guidance (not
+a numbered defect; leans are allowed to miss and this miss is the
+information): cross-cohort LEVEL leans from single-factor instrument
+reasoning are retired; levels are cohort-owned. L2/L4/L5 held; L3 partial.
+Dwell share 0.6141 vs 0.7122 — still majority, less dominant; this
+cohort's fast-time instrument is coarser across the board. **Zero new
+planner defects this leg** — the first since the U-line opened.
+
+**THE LABEL-FREE TRANSPORT PHASE CLOSES (W1 + W2).** The phase's law, now
+supported five ways: **structure and ratio laws transport; levels belong
+to the cohort.** (Λ's sign closes and the floor-share ratio reproduces
+while D and all λ levels shift — W1; the rho cell and the stay scalar
+reproduce while the raw level shifts — W2; flat reproduces while
+path/residual redistribute — W2.) Program state after this close: the
+T-line is FULLY closed (branch transport was its last open item), the
+U-line is fully closed (W1 closed its middle), and the W-line's label-free
+phase is complete. W3 (the MBTI-axis label class on the disjoint cohort)
+remains GATED on its own governance review — it is a new join class and
+opens only under a fresh stamped design after that review. Named-open
+elsewhere: R3 reconciliation derivation (theory-side), long-horizon floor
+(external data), non-dwell order residual, finer-state order.

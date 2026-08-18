@@ -961,3 +961,18 @@ low-rank taste direction is the slowest object measured (λ 0.17/y);
 whether common outlasts distinctive is OPEN (7/7 point estimates say
 yes, no interval closes; second-corpus charter owns it). Defects
 #76–#80; suite 1148; U3 (stage-E trait join) registered-next.
+
+## Dated addendum (2026-08-19) — the M4-W transport line and the 4W empirical state
+
+W1/W2 closed the label-free transport phase on the disjoint cohort
+(8,895 authors; plan + adjudications
+`SUICA_M4_W_DISJOINT_TRANSPORT_PLAN.md`): the U-line's open middle CLOSED
+(COMMON_STANDING, Λ=+0.0911 CI>0 — the When clause lands in two-regime
+form), the order channel and T1's branch code transported in cell
+(T1's last open item closed; the tail STRENGTHENS on fresh authors), and
+the phase's law: structure and ratio laws transport, levels belong to the
+cohort. The whole T→U→W arc is consolidated against the owner's theory
+in `SUICA_4W_EMPIRICAL_STATE.md` (the §11 feedback: priorities 1–4
+answered; priority 5, external connection, remains and is owner-gated).
+Defects #76–#83; suite 1279; W3 (MBTI-axis labels) gated on governance
+review.
