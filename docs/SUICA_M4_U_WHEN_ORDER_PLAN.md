@@ -1774,3 +1774,159 @@ outcome appended here; one CLAIMS_LEDGER row naming the label event
 bands are the uncertainty machinery; no bootstrap CI on r is registered).
 The planner records the label event in the private-repo audit log at
 adjudication (planner-side action, not the executor's).
+
+---
+
+## U3 outcome (executor, 2026-08-18)
+
+**VERDICT: `WHEN_TRAIT_SILENT` (cell 1).** The primary coordinate's raw
+Mantel r is **−0.0036**, band [−0.0231, +0.0213], p = 0.7430, over 847
+authors and 358,281 pairs. The partial (bag-controlled) r is −0.0125, band
+[−0.0217, +0.0202], p = 0.2570 — also inside its band, so the cell is
+SILENT and not REDUNDANT. Both secondary rows land in the same cell with no
+detection at any correction level. Harness
+`scripts/run_suica_m4_u3_when_trait_join.py`, report
+`reports/SUICA_M4_U3_WHEN_TRAIT_JOIN_REPORT.md`, artifacts (gitignored)
+`results/m4_u3_when_trait_join/`.
+
+### The stamp chain (G-U3, from the artifacts)
+
+| event | utc | sha256 (16) |
+|---|---|---|
+| config stamped | 2026-08-18T06:56:01.975215+00:00 | `8c399494dfbba293` |
+| coordinate table frozen | 2026-08-18T06:56:16.189523+00:00 | `4a4aa07100c8c473` |
+| FIRST JOIN | 2026-08-18T06:56:16.267746+00:00 | — |
+
+`stamp < freeze < first_join` = **true** (+14.2 s, then +0.1 s); joint
+quantities before the stamp 0; labels opened before the stamp false; both
+hashes re-verify; ID-leak scan 0 hits over 1,398 cohort names. The frozen
+coordinate table's hash is **bit-identical to an earlier label-free
+rehearsal of stages part0+B**, which is the determinism claim in its
+strongest available form: the coordinates did not move when the labels
+arrived.
+
+### Part 0 anchors, and RD-U3-1
+
+Cache anchors exact (3,005,360 / 1401 / 1191). Pool census exact:
+849 / 847 / 763 / 652.
+
+**RD-U3-1 (disclosed re-posing, decided label-free in part 0, before the
+stamp).** The registered prose predicate "≥ 30 cross-thread adjacencies per
+half" admits **848** authors from this cache while the registered census
+names **847**: exactly ONE author sits at min(early, late) = 30 (the next
+lowest is 27). Under the registration's own hierarchy — "planner arithmetic
+#43; predicates exact per #77/#78" — the pool the census NAMES is the
+registered object, so U3 adopted the STRICTLY TIGHTER `> 30`, which
+reproduces 847 exactly and drops the boundary author. This is the same
+direction as U1's RD-U1-1/RD-U1-2 (each stricter than the registered form).
+The looser 848-author pool is recorded in `part0.json` and routes nothing.
+
+### The label-free reliability gate (all three admitted)
+
+| coordinate | split-half r | Spearman–Brown | gate (≥ 0.5) | pool | mean (sd) |
+|---|---|---|---|---|---|
+| `stay_ct` (PRIMARY) | 0.7685 | 0.8691 | ADMIT | 847 | 0.5413 (0.2037) |
+| `tight` | **0.8872** | 0.9402 | ADMIT | 763 | 0.7718 (0.1427) |
+| `drift_pa` | **0.9383** | 0.9681 | ADMIT | 652 | 0.2565 (0.1831) |
+
+`tight` and `drift_pa` reproduce the registration's census reliabilities to
+four decimals (0.8872 / 0.9383) — the exact-predicate census was exact.
+`stay_ct`'s measured C = 24 value is 0.7685 against the census's DECLARED
+PROXY 0.7828 (subreddit-level states), i.e. the proxy was honest and mildly
+optimistic. Global map: C = 24 + OOV, 1181 of 1191 communities active, 10
+zero-mass communities to OOV, cluster sizes 11–100.
+
+### The joined estimands (stage E, one join)
+
+| coordinate | raw r [band] p | partial \| bag [band] p | + activity | + bag² (2nd) | disatt. raw (2nd) |
+|---|---|---|---|---|---|
+| `stay_ct` | −0.0036 [−0.0231, +0.0213] 0.7430 | −0.0125 [−0.0217, +0.0202] 0.2570 | −0.0124 p 0.2490 | −0.0127 p 0.2380 | −0.0043 |
+| `tight` | −0.0087 [−0.0251, +0.0254] 0.4930 | −0.0132 [−0.0252, +0.0237] 0.2950 | −0.0131 p 0.3280 | −0.0132 p 0.2910 | −0.0100 |
+| `drift_pa` | −0.0042 [−0.0313, +0.0313] 0.7780 | −0.0111 [−0.0283, +0.0304] 0.4560 | −0.0110 p 0.4670 | −0.0116 p 0.4500 | −0.0048 |
+
+Every point estimate is NEGATIVE and every one is inside its band. All nine
+z-scores against their own nulls sit between −0.272 and −1.211. Big5
+completeness on the 849 pool: **849/849 = 100%**, reproducing the census.
+
+### THE POSITIVE CONTROL THAT MAKES THE SILENCE READABLE
+
+On the SAME pairs, with the SAME trait matrix and the SAME Mantel
+machinery, the WHERE channel is live: Mantel(bag-distance, trait-distance)
+= **0.0490** on `stay_ct`'s pool (0.0494 on `tight`'s, 0.0559 on
+`drift_pa`'s) against SR1's independently established **0.049** on a
+different pool of 1306. A descriptive point estimate with no null run —
+it is not a registered estimand of this leg and routes nothing — but it is
+the reading under which the When rows' bands mean what they say. The
+harness finds the coupling it is known to find, in these very pairs, and
+finds none through any When coordinate. The coordinates are not
+bag-degenerate either: corr(coordinate-distance, bag-distance) is 0.177 /
+0.090 / 0.120, so the three When scalars are largely ORTHOGONAL to the bag
+and still carry no trait signal of their own.
+
+### Projection versus realized width (#71 executed form)
+
+| coordinate | N | projected MDR at this N | realized 1.96 × null sd | ratio | band half-width |
+|---|---|---|---|---|---|
+| `stay_ct` | 847 | 0.0220 | 0.0220 | **1.000** | 0.0222 |
+| `tight` | 763 | 0.0232 | 0.0254 | 1.094 | 0.0252 |
+| `drift_pa` | 652 | 0.0251 | 0.0300 | 1.198 | 0.0313 |
+
+The primary row's realized width matched the registered projection to
+three decimals — the first width projection in the U line that did not
+miss (contrast U2c's 1.21× and defect #80b). The scoped statement
+"**silent beyond r ≈ 0.022**" is therefore carried at exactly the width it
+was registered at, and attaches only to this table.
+
+### Leans
+
+- **Primary lean SILENT-to-REDUNDANT: HELD, on the SILENT side.** Point
+  lean |raw r| ≤ 0.03: HELD with room to spare, |−0.0036| = 0.0036, an
+  order of magnitude inside the leaned bound and 7.4% of SR1's anchor.
+- **Secondary weak lean: NOT ACTIVATED.** No row detected raw, so the
+  "if anything detects, it is a slow coordinate" prediction was never put
+  to a test. Recorded as untested, not as held.
+
+### Honest anomalies and defects the run surfaced
+
+1. **The SLS partial controls the bag channel LINEARLY.** A shared
+   NON-LINEAR dependence of both distances on the bag distance survives it
+   — the contract tests exhibit exactly such a world (a uniform latent
+   whose small-distance noise floor is shared by both matrices leaves a
+   linear-residual partial of 0.26 where the truth is redundancy). An
+   unregistered `bag + bag²` second reading was therefore computed and
+   reported for every row; it moves the primary partial from −0.01246 to
+   −0.01270, i.e. nothing. Offered to the planner as a candidate
+   convention: **a partial that controls a covariate linearly must ship a
+   non-linear companion, or declare the linearity as an assumption.**
+2. **The registration's trait geometry is stated two ways.** The Fixed
+   block inherits "SR1's primary trait geometry (z-scored 5-dim
+   Euclidean)" while SR1's harness in fact used negative SQUARED Euclidean.
+   U3 took the registration's literal estimand text (Euclidean DISTANCE)
+   as primary and shipped the squared form as a second reading: −0.0036 vs
+   −0.0036 on the primary row. The choice was worth nothing here, but the
+   ambiguity should not have needed an executor's ruling.
+3. **The 1-author census boundary (RD-U3-1 above).** Recorded as an
+   instance of the #77/#78 family: an inequality written in prose and an
+   inequality executed in arithmetic disagreed at the exact boundary.
+4. **`freeze → first_join` is 0.1 s.** The ordering is proved from
+   timestamps, and 0.1 s is a true ordering, but it is thin. The stronger
+   evidence is structural and is the one to cite: the config hash and the
+   coordinate hash both re-verify after the join, and the coordinate
+   artifact is bit-identical to a label-free rehearsal.
+
+### What this closes, and what it does not
+
+The dissociation family's FIFTH test returns the family's answer. Identity
+carriers keep being trait-silent: the T-line's tree code, the S-line's
+γ = 0 arm, U1's order channel, and now all three When coordinates. The
+When quadrant's first label-bearing projection of K_u is silent at a
+corpus-level width of r ≈ 0.022 while the Where channel is live at 0.049
+in the same pairs.
+
+It does NOT close: anything about persons (corpus-level only); anything
+about a psychological reading of stay/tight/drift (§5.4 binds regardless of
+outcome — the null does not license "inertia is not a trait", only "this
+scalar of this author's own stream does not covary with Big5 distance at
+this width"); anything beyond ONE first-order projection of K_u per
+coordinate (eq 12); and anything about coordinates measured over a fixed
+window rather than each author's own span (the drift-aware caution).
