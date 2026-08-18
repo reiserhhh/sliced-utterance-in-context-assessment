@@ -1063,3 +1063,135 @@ suite green (1279 + new); ID-leak scan on committed files under the
 #83 policy (synthetic leg, scan runs regardless). SEED = 20260819;
 8 worlds/cell; world seeds SEED + world index conventions pinned in
 config.
+
+---
+
+## R3 outcome (executor, 2026-08-19)
+
+**`DILUTION_LAW_HOLDS__PARTIAL__BUDGET_HOLDS`.** The D1-seal held on
+its own terms: **8/8** registered cell means landed inside the L3
+certification budget, both profiles strictly monotone in w. The two
+co-primaries split — one because the world said so, one because the
+REGISTERED READER could not speak.
+
+### P1 — the dilution seal (ROUTES): `DILUTION_LAW_HOLDS`, lean MET
+
+σ_b² = rho55eq (RN-R3-1), 8 worlds/cell, band ±0.125 = `l3.X2_TOL`
+verbatim.
+
+| η₀ | w | registered prediction | η̂ cell mean ± sd | η̂_oracle | abs err | band |
+|---|---|---|---|---|---|---|
+| 0.25 | 0 | 0.250 | 0.2451 ± 0.0648 | 0.2473 | 0.0049 | IN |
+| 0.25 | 0.5 | 0.200 | 0.2158 ± 0.0576 | 0.1968 | 0.0158 | IN |
+| 0.25 | 1 | 0.125 | 0.1424 ± 0.0245 | 0.1218 | 0.0174 | IN |
+| 0.25 | 2 | 0.050 | 0.0759 ± 0.0224 | 0.0474 | 0.0259 | IN |
+| 0.6 | 0 | 0.600 | 0.5566 ± 0.0785 | 0.5974 | 0.0434 | IN |
+| 0.6 | 0.5 | 0.480 | 0.4464 ± 0.0591 | 0.4768 | 0.0336 | IN |
+| 0.6 | 1 | 0.300 | 0.2756 ± 0.0280 | 0.2962 | 0.0244 | IN |
+| 0.6 | 2 | 0.120 | 0.1204 ± 0.0153 | 0.1168 | 0.0004 | IN |
+
+Largest miss 0.0434 (η₀ = 0.6, w = 0 — the UNDILUTED cell). Observed
+spreads 0.1692 and 0.4362 against predicted drops 0.200 and 0.480: the
+flat clause never came near firing. Routing is invariant on the second
+identity energy (rho35eq, RN-R3-1's declared second reading): same
+three cells.
+
+### P2 — the signed dissociation (co-primary): `PARTIAL`, lean MISSED, ⚑ #73
+
+η̂ strictly falls across every w step at both η₀. **The union reader
+does not rise — because it is pinned at 1.0000 in all eight cells.**
+Under the registration-literal construction ("two ε draws per author
+sharing τ, b, style") the slow state is shared too, so the two draws
+are separated by their persistent content at every w and the AUC is
+perfect everywhere; the clause "AUC strictly rises" has a DEGENERATE
+ANTECEDENT in this design (#59 class, caught at execution, not at
+registration).
+
+The declared second reading (RN-R3-6: ε **and** the slow state
+refreshed, so only the persistent author content is shared) is off the
+ceiling and rises strictly at both η₀ over the identical worlds:
+
+| η₀ | w=0 | w=0.5 | w=1 | w=2 |
+|---|---|---|---|---|
+| 0.25 AUC (2nd reading) | 0.9518 | 0.9679 | 0.9910 | 0.9999 |
+| 0.25 η̂ | 0.2451 | 0.2158 | 0.1424 | 0.0759 |
+| 0.6 AUC (2nd reading) | 0.9184 | 0.9435 | 0.9824 | 0.9999 |
+| 0.6 η̂ | 0.5566 | 0.4464 | 0.2756 | 0.1204 |
+
+**The signed dissociation is present in these worlds; the registered
+reader cannot show it.** The routing above is the registered reader's,
+as it must be; the second reading routes nothing.
+
+### P3 — the validity bound (co-primary): `BUDGET_HOLDS`, lean MISSED
+
+|η̂ − η̂_oracle| on cell means, against realized style share
+{0, 0.2, 0.5, 0.8}: **0.0022, 0.0190, 0.0207, 0.0285** (η₀ = 0.25) and
+**0.0408, 0.0303, 0.0206, 0.0036** (η₀ = 0.6). No crossing of the 0.125
+budget anywhere; the grid maximum is **0.0408 — at w = 0**, the cell
+with NO style at all. The lean expected the bound to appear weakly at
+w = 2; the whitening bias does not grow with style share in the
+direction the lean assumed, and at η₀ = 0.6 it *shrinks* monotonically
+as style is added.
+
+**Why (mechanism, not excuse).** The whitener is estimated from the
+STATE channel's innovations, which the style channel never touches, so
+adding style leaves the whitening shape exactly where the L3
+certification put it and moves only isotropic mass — precisely the mass
+the bulk-excess estimator is built to divide out. The style share
+reachable in-grid (0.8) is not enough to break a precondition style does
+not load on. **A bound in style share was the wrong axis.**
+
+### Certifications
+
+- **C-R3a (zero-default): PASS.** 24 world-cells × 22 compared objects
+  each, bit-identical at w = 0 to the unmodified L3 construction — every
+  `cards_for_cell_l3` array, the taxometer's full-panel halves, and every
+  taxometer reading. No A1 stop. (Mechanism: at w = 0 the style add is
+  SKIPPED, not zero-scaled.)
+- **G0 anchor: PASS.** The R3 pipeline at w = 0, re-run on L3's OWN world
+  seeds and k-means convention, reproduces L3's committed
+  `cell_C_rho55eq_eta0.25.csv` world-for-world: max |Δη̂_P| = 8.3e-17
+  (the committed CSV's decimal round-trip), and the recomputed cell mean
+  0.27073961414044734 is **bit-identical** to L3's.
+- **ID-leak gate (#83 HEAD-identical): PASS.** 10,280 names, 5 committed
+  files (3 leg-authored, zero tolerance): 4 raw hits, all reproduced
+  identically at HEAD, **0 NEW**. Fixed point verified.
+
+### Executor's defect candidates (planner's to adjudicate)
+
+1. **The union reader was registered with a saturating antecedent.** The
+   two-draw construction shares every author-persistent channel except ε,
+   which in this world includes the slow state — so AUC = 1.0000 exactly,
+   at every operating point, and the registered monotonicity clause is
+   unsatisfiable by construction. Candidate convention: **a
+   discrimination clause registers its reader's HEADROOM — the reader's
+   value at the design's most favourable cell must be shown < 1 before
+   the clause is written** (the #59 family, discrimination flavour).
+2. **P3 registered a bound in the wrong coordinate.** The bias axis the
+   lean named (style share) is the one axis the whitening estimator is
+   blind to, because the whitener is read off the state channel. A
+   validity bound must be registered in a coordinate the estimator's
+   PRECONDITION actually loads on.
+3. **The registered grid did not name the identity energy** — the L3 grid
+   crossed two, the R3 grid has 8 cells, so one had to be pinned by the
+   executor (RN-R3-1). Both were run; routing is invariant, so nothing
+   moves — but the registration should name σ_b² when it inherits a
+   two-energy world.
+
+### What this leg settles
+
+The note's composition theorem is no longer only algebra: **the
+certified taxometer obeys η₀/(1+w²) at instrument resolution across a
+16× range of style-to-identity variance ratio**, and the excess-aligned
+pool is untouched by isotropic non-trait mass exactly as derived. The
+first forgery direction of note section 3 is now MEASURED, not argued: at
+η₀ = 0.6, style at w = 2 drives a strongly typed world's reading to
+0.1204 — a world that reads "nearly untyped" while its type geometry is
+unchanged. **"η̂ low" licenses "typology-applicable" only after a style
+audit.** The union reader's ceiling is an instrument fact of this design,
+not evidence against the dissociation: on the same worlds, the
+headroom-preserving reading rises monotonically while η̂ falls.
+
+Artifacts (gitignored): `results/m4_r3_taxometer_mixtures/`. Report:
+`reports/SUICA_M4_R3_TAXOMETER_MIXTURES_REPORT.md`. Runtime 20.0 s
+(128 world-cells); config sha256 `9718c4a07bca…`.
