@@ -362,3 +362,117 @@ on gallery size; the sealed T1/U1 values were measured at N = 1304/984,
 so the primary transport arms draw seeded same-size subpools, with the
 full-pool runs as sensitivity). W3 (labels, MBTI-axis class) stays gated
 on its own governance review.
+
+---
+
+## W2 — fast-time and branch-code transport (registered BEFORE run, 2026-08-18)
+
+The label-free transport phase's second and closing leg: U1's order channel
+and T1's hierarchical selection identity as sealed predictions on the
+disjoint cohort. The W1 adjudication's design correction binds: **AUC-family
+transport is SIZE-MATCHED** — pooled AUCs depend on gallery size, and the
+sealed values were measured at N = 984 (U1) and N = 1304 (T1), so the
+primary arms draw seeded same-size subpools; full-pool runs are sensitivity.
+
+### 4W header
+
+- **Object.** When × transport (fast time): does the order channel
+  re-instantiate (rho, dwell dominance, cross-thread retention)? And
+  Where × Who × transport: does the branch code re-instantiate (flat /
+  path / residual AUCs, stable depths)? Sealed predictions from committed
+  U1/T1 artifacts; author structure only.
+- **Fixed (by formula/import per #81).** The order machinery from
+  `scripts/run_suica_m4_u1_order_identity.py` (bigram Hellinger sphere,
+  α = 0.5; per-fold spherical k-means C = 24 + OOV on training authors'
+  early halves, seed SEED+1000·fold; exact-bag within-half shuffles
+  B = 499; rho = (AUC_real − null mean)/(1 − null mean); cluster bootstrap
+  B = 1000). The branch machinery from
+  `suica_core/hierarchical_selection_identity.py` via the T1 driver
+  pattern (cross_fitted_hierarchical_identity; max_depth 6, min_leaf 30,
+  folds 5, √freq Hellinger sphere input, bootstrap 1000, permutations 499;
+  triple gate for stable depths).
+- **Varied.** Cohort (disjoint); vocabulary (law arm 1,443); seeded
+  size-matched subpools vs full pools.
+- **What falsifies.** rho landing outside U1's ORDER_CHANNEL cell breaks
+  the order law on fresh authors; a branch-code family collapse (flat or
+  residual to chance, or no stable depth) breaks T1's law.
+- **Layer.** R.
+
+### Census (planner arithmetic #43; predicates exact per #77/#78, executed 2026-08-18 on the W1 cache)
+
+| quantity (exact predicate) | value |
+|---|---|
+| law vocabulary re-verified (floor 89) | 1,443 |
+| U1-pool: ≥ 50 law-vocab events per half, halves by FULL-STREAM median (boundary ≤ to early) | **7,247** |
+| T1-pool: ≥ 40 total events (SR0 split-half rule) | **8,625** |
+| size-match feasibility (984 / 1304) | both TRUE |
+| tie rate, in-law-vocab spliced adjacency | **0.00882** (source 0.11522 — an attenuation source absent here; named cohort-instrument difference) |
+| session ≤ 1 h fraction (same denominator) | 0.56147 |
+| cross-thread share of all full-stream adjacencies | 0.73174 |
+
+Anchor gates (#78): the executor re-executes and must reproduce these
+exactly (STOP on mismatch). ID-gate per #83: pre-executed at W1 — raw 3
+pre-existing dictionary collisions (HEAD-identical policy pinned), NEW
+hits = 0 is the blocking form.
+
+### Sealed predictions (from committed U1/T1 artifacts)
+
+| family | quantity | source | class rule |
+|---|---|---|---|
+| order | rho (primary arm) | 0.2893 [0.2695, 0.3114] | four-class (#75 + RESOLVES) |
+| order | stay-scalar arm rho | 0.1803 [0.1375, 0.2234] | four-class |
+| order | cross-thread arm rho | 0.1626 [0.1373, 0.1895] | four-class |
+| order | dwell same-state adjacency share | 0.7122 | descriptive |
+| branch | flat AUC | 0.9837 | four-class (CIs from T1 artifacts; if a source CI is absent, classify by point-in-target-CI and flag the missing interval) |
+| branch | path AUC | 0.7461 | same |
+| branch | terminal residual AUC | 0.9552 | same |
+| branch | stable depths | {1,2,3,4,5} | DEPTHS_REPRODUCE (same set) / DEPTHS_SHIFT (symmetric difference ≤ 1) / DEPTHS_BREAK |
+| branch clean arm | flat/path/residual, depths | 0.9661 / 0.7317 / 0.9417, {1–4} | same; #73 flags |
+
+### Design
+
+- **Order family (VERDICT ROUTER).** Law vocabulary; primary pool = seeded
+  draw of N = 984 from the 7,247 (numpy default_rng(SEED), uniform without
+  replacement, sorted); 5-fold; U1's full pipeline (raw-adjacency primary
+  arm plus stay-scalar and cross-thread arms with their own nulls).
+  Full-pool 7,247 as sensitivity. rho's transport class routes:
+  1. **ORDER_BREAKS** — target rho lands outside U1's ORDER_CHANNEL cell
+     (point below 0.10 or above 0.33 with CI support, per U1's registered
+     boundaries; includes the no-channel case) — NULL-first cell.
+  2. **ORDER_SHIFTS** — same cell, disjoint CIs.
+  3. **ORDER_TRANSPORTS** — REPRODUCES or RESOLVES class.
+- **Branch family (co-primary; #73 flags on the verdict line, never
+  routing).** Primary pool = seeded draw of N = 1304 from the 8,625
+  (independent draw, same SEED stream documented); halves by SR0's
+  per-author median rule; T1's full+clean arms at d6/l30 with the triple
+  gate; SEED = 20260818. Full-pool run NOT registered (compute-priced;
+  named as future sensitivity).
+- Registered descriptives: null location vs bag ceiling (order); tie-rate
+  and session differences as cohort-instrument notes; per-depth gain
+  tables (branch).
+
+### Registered leans
+
+- Order: **ORDER_TRANSPORTS** with target rho in [0.25, 0.40] — the tie
+  attenuation absent here (0.9% vs 11.5%) leans rho slightly HIGH of
+  source; dwell dominance transports (stay-arm rho detected, > 50% of
+  primary in share terms, descriptive).
+- Branch: flat and residual REPRODUCE; path SHIFTS plausibly (path AUC is
+  the most resolution-sensitive object); depths REPRODUCE or SHIFT by one.
+- Clean arm: same-cell transport (the U/W identity-robust pattern).
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_w2_fast_branch_transport.py` + tests
+(seeded-subpool determinism; U1-formula agreement on a toy; suica_core
+import contract; exact-bag invariance re-asserted on this cohort;
+census-predicate reproduction; ID-leak with the #83 policy); gitignored
+`results/m4_w2_fast_branch_transport/`; report
+`reports/SUICA_M4_W2_FAST_BRANCH_TRANSPORT_REPORT.md` (rule-24 tables;
+both families' transport tables with classes and flags; null locations;
+size-matching stated on every AUC row; cohort-composition caveat;
+boundaries with the eq-12 projection caution); outcome appended here; one
+CLAIMS_LEDGER row; ONE commit
+`feat(m4-w): W2 — fast-time and branch-code transport — <VERDICT>`; suite
+green (1236 + new). Label-free; `author_profiles.csv` never opened;
+SEED = 20260818; B_perm = 499; B_boot = 1000.
