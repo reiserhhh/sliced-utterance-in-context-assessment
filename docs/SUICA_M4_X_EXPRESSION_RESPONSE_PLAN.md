@@ -263,3 +263,112 @@ was read, `author_profiles.csv` was never opened, and the ID-leak scan over all
 10,296 author names cleared with 0 NEW hits (3 pre-existing dictionary
 collisions in `CLAIMS_LEDGER.md`, carried unchanged from HEAD under the W1
 policy).
+
+## X1 planner adjudication (2026-08-19)
+
+**Registered outcome ACCEPTED: `A1_STOP__SYNTHETIC_GATE_FAILED` — no
+cell, and expressly NOT `NO_REPRODUCIBLE_RESPONSE`.** The gate
+architecture did precisely what #76/#84 built it to do: it caught a real
+estimator defect on the realized design BEFORE any real estimand ran
+(39.8 s leg; ten anchors exact; the real skeleton reused with wholly
+synthetic signal). The executor's restraint is noted with approval
+twice: Part 0 was NOT run on the better-conditioned law-vocabulary
+skeleton (choosing an arm by gate performance after a failure is a
+planner re-registration, not an executor pivot), and the #83 scan
+caught a PANDORA username ("independent") inside the executor's own
+docstring — the widened-universe policy working end to end.
+
+**The mechanism, owned.** Double-centering removes mains EXACTLY only
+on a complete grid. The registered primary grid has fill 0.0018 with a
+median of 2.0 eligible authors per community and 5.77% single-author
+slots; v therefore retains per-community residues of the author main
+and per-author residues of the community main — IDENTICAL across
+halves — and the "attenuation-free" cross-half covariance has no
+defence: the null world read share 0.0458 (2.3× the registered TRACE
+boundary) and R = 0.45, with the registered permutation null sitting
+BELOW the artifact (it moves the community main together with the
+interaction). Ablations localize the leak to the author main.
+
+**Defect #85 (planner, purchased; registry thirty-second note).** Three
+parts. (a) The estimator's ZERO POINT was never verified on the
+REALIZED design geometry — #84's antecedent checks covered the ceiling
+and the null's coordinate but not whether zero reads zero on this
+skeleton; (b) the zero-reference is not bootstrap-stable (the author
+cluster bootstrap makes the grid ~37% more incomplete and moves the
+zero); (c) the registration's "the estimand needs no cross-author
+support floor" was exactly backwards — the ESTIMAND needs no semantic
+floor, but the ESTIMATOR needs cross-author SUPPORT, so support
+conditioning (fill, units-per-condition, singleton share, connectivity)
+is a PRIMARY design parameter. Convention: every estimator whose
+exactness depends on design completeness carries a zero-point gate ON
+THE REALIZED SKELETON (real incidence, synthetic signal), verified
+under bootstrap resampling as well; support conditioning is censused
+and pinned as primary design; nulls hold fixed everything the estimand
+claims to have removed. Minor (#77 family, non-gating): two census
+descriptives did not reproduce under ambiguous predicate readings
+(within-cell sd 0.9035 vs 0.9070; the shared-communities median) — the
+gated pool counts matched to the unit.
+
+**X1b is registered below** (the SR4/U2c completion pattern): design
+repaired (law vocabulary + support floor, censused on X1's committed
+cache) AND estimator repaired (exact two-way fixed effects on the
+connected component), with the gate that failed here required to PASS
+there before any real number.
+
+---
+
+## X1b — the venue response, repaired design and exact estimator (registered BEFORE run, 2026-08-19)
+
+### What changes from X1 (everything else inherits)
+
+1. **Design (support conditioning as primary, #85c).** Community
+   universe = the LAW vocabulary (1,443; floor 89, reproduced on X1's
+   cache); pinned predicate order with NO fixed-point iteration:
+   (1) cells n ≥ 10, disjoint authors, law communities; (2) shared
+   pairs (both halves eligible); (3) community support floor s = 5
+   authors with a shared pair; (4) authors with ≥ 3 surviving shared
+   communities; (5) largest connected component of the bipartite
+   graph. Census (planner, on X1's committed cell cache, 2026-08-19):
+
+   | s | authors | communities | shared pairs | fill | med authors/comm | singletons | LCC |
+   |---|---|---|---|---|---|---|---|
+   | 3 | 3,686 | 1,145 | 32,415 | 0.0077 | 11.0 | 0.0009 | 1.000 |
+   | **5 (PRIMARY)** | **3,665** | **1,000** | **31,899** | 0.0087 | **12.5** | **0.0000** | **1.000** |
+   | 8 (sensitivity) | 3,595 | 780 | 30,561 | 0.0109 | 16.0 | 0.0000 | 1.000 |
+
+2. **Estimator (exact zero on any connected design).** Per half,
+   two-way fixed effects on the eligible shared cells by alternating
+   projections (within-transform demeaning iterated to max-change
+   ≤ 1e-10; exact main removal is guaranteed on the connected
+   component, and the LCC covers 100% of authors at every s); v = the
+   FE residual of the cell mean. R and the interaction covariance
+   share defined on v exactly as in X1; the author and community main
+   shares from the same cross-half covariances as in X1 (mains are
+   estimated pre-FE; only the interaction object changes).
+3. **The gate that failed must now pass (Part 0, A1 stop).** The SAME
+   realized-skeleton battery, now on the X1b skeleton: planted
+   {author .30, community .08, interaction .02}, the NULL world
+   (interaction 0), author-only and community-only ablation worlds,
+   8 replicates; PASS = recovery within max(0.01, 3·replicate sd),
+   null non-detection (share CI covers 0 AND its point within the
+   band; R inside band), ablation leakage < 0.005, AND the
+   bootstrap-zero check (#85b: the null world's cluster-bootstrap CI
+   covers 0). Any clause fails → A1 stop, honest report.
+4. **Replication arm.** Big5 cohort under the identical predicate
+   chain; its pool is censused IN-LEG with a #69 floor of 300 authors
+   — below the floor the arm reports as underpowered-descriptive
+   rather than flagging #73.
+
+Cells, leans, sensitivities (s = 8; n = 5; word_count), boundaries,
+governance, and discipline inherit X1's registration verbatim
+(metadata-only; no bodies; no profiles; #83 universe 10,296;
+EXPLORATORY; the projection caution). Deliverables: standard six,
+`scripts/run_suica_m4_x1b_venue_response_fe.py` + tests (FE exactness
+on a hand toy AND on the realized skeleton; gate battery; predicate-
+chain reproduction of the census table above as blocking anchors),
+gitignored `results/m4_x1b_venue_response_fe/`, report
+`reports/SUICA_M4_X1B_VENUE_RESPONSE_FE_REPORT.md`, outcome appended
+here, one CLAIMS_LEDGER row, ONE commit
+`feat(m4-x): X1b — the venue response, exact estimator — <VERDICT>`;
+suite green (1359 + new). SEED = 20260819; B_perm = 499;
+B_boot = 1000.
