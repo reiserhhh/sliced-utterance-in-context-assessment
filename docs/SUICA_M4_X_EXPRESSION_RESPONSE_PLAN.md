@@ -149,3 +149,117 @@ metadata-only named); ONE commit
 suite green (1304 + new); ID-leak scan under #83 (universe 10,296).
 SEED = 20260819; B_perm = 499; B_boot = 1000. `author_profiles.csv`
 never opened; no text bodies read.
+
+---
+
+## X1 outcome (executor, 2026-08-19)
+
+**VERDICT — `A1_STOP__SYNTHETIC_GATE_FAILED`.** Part 0 failed on BOTH of its
+clauses, so the A1 stop fired before any real estimand was computed. There is
+no corpus value of R, of the variance budget, or of the headroom distribution
+anywhere in this leg's artifacts. The registered cells are UNSCORED —
+`NO_REPRODUCIBLE_RESPONSE` is *not* the outcome; the leg reached no reading of
+crossing #2 in either direction.
+
+Harness `scripts/run_suica_m4_x1_venue_response.py`; tests
+`tests/test_m4_x1_venue_response.py`; artifacts
+`results/m4_x1_venue_response/` (gitignored); report
+`reports/SUICA_M4_X1_VENUE_RESPONSE_REPORT.md`. Runtime 39.8 s end to end
+(17.6M-row metadata stream 17.5 s). SEED 20260819, B_perm 499, B_boot 1000.
+
+### The census reproduced exactly (#78) — all ten pins
+
+17,640,062 parseable rows of 17,640,062 streamed; wcq = 0 share 0.0000 (119
+rows); 10,296 authors = 1,401 Big5 + 8,895 disjoint; pools **4,342** (disjoint
+n=10/k=3, PRIMARY), **5,842** (disjoint n=5/k=3), **615** (Big5 n=10/k=3); law
+vocabulary floor 89 = ceil(0.01 x 8,895) giving exactly **1,443** communities.
+Two inherited cross-checks also land on the nose: 14,634,702 disjoint events
+(W1's cache) and 3,005,360 Big5 events (U2's `ANCHOR_EVENTS`). The eligibility
+predicate is therefore not in doubt.
+
+Two NON-GATING descriptives in the census table did not reproduce and are
+recorded as anomalies: the within-cell sd of y (registered 0.9070, observed
+0.9035 over disjoint n=5 early cells, ddof=1), and the median shared eligible
+communities (registered 4 disjoint / 3 Big5; observed 5.0 / 4.0 over authors
+with at least one shared pair and 7.0 / 8.0 over eligible authors — off by one
+under the first reading in both cohorts). Neither gates anything.
+
+### Part 0 — what the gate found (all numbers synthetic; no real y)
+
+The world is built at the primary arm's REALIZED design density by reusing the
+real skeleton (4,342 authors, 5,369 communities, 42,141 occupied slots, the
+real per-cell comment counts) and planting entirely synthetic y. Tolerance
+`max(0.01, 3 x replicate sd)` over 8 replicates; the 0.01 floor is half the
+width of the registration's own TRACE/IDIOSYNCRATIC boundary.
+
+| planted | value | recovered (8 reps) | tolerance | bias | status |
+|---|---|---|---|---|---|
+| author main | 0.3000 | 0.3261 | 0.0217 | +0.0261 | FAIL |
+| community main | 0.0800 | 0.1351 | 0.0268 | +0.0551 | FAIL |
+| interaction | 0.0200 | 0.0613 | 0.0100 | +0.0413 | FAIL |
+
+Null world (interaction planted at exactly 0.0000): the estimator returns
+0.0458 +- 0.0014 over 8 replicates; on the scored replicate 0.0482 with a
+cluster-bootstrap CI [0.0566, 0.0738] that excludes 0 **and does not even
+cover its own point estimate**, and R = 0.4524 against a permutation band
+[0.2184, 0.2439]. Both honesty clauses fail.
+
+Ablations localize the artifact exactly. Author main ONLY (0.3000, nothing
+else): interaction reads 0.0383, R reads 0.4244. Community main ONLY (0.0800,
+nothing else): interaction reads 0.0078, R reads 0.0006. The two leaks are
+additive (0.0383 + 0.0078 = 0.0461 vs the null world's 0.0458), and the AUTHOR
+main through thin communities is the dominant one.
+
+### The mechanism, stated once
+
+Double-centering removes the mains EXACTLY only on a complete grid. On an
+incomplete one, `v` retains two residues: a per-COMMUNITY term (the community's
+own author-set mean of the author main) and a per-AUTHOR term (the author's own
+community-set mean of the community main). Both are the same in EARLY and LATE
+by construction, because a main effect does not change across halves — so the
+cross-half covariance trick, which is attenuation-free against noise, is
+defenceless against them. The per-author term is removed by the within-author
+centering inside the correlation, which is why the community main leaks 0.0078
+into the share but 0.0006 into R; the per-community term survives both, which
+is why the author main leaks into R at 0.4244.
+
+The registered permutation null does not absorb this. Permuting community
+labels within (author, half) moves the community MAIN together with the
+interaction, injecting within-author variance the real data does not carry, so
+the band ([0.0423, 0.0440]) sits BELOW the artifact it is meant to calibrate
+(0.0482) — anti-conservative, not conservative.
+
+### Defect candidates recorded for the planner (nothing below was run)
+
+1. **The #84 antecedent verification checked the wrong antecedent.** It
+   verified the ceiling (no saturation) and the null's coordinate, and asserted
+   that "the estimand needs no cross-author support floor". It never asked
+   whether the estimator's ZERO is zero on the realized design. It is not.
+2. **The routing statistic is zero-referenced but its zero moves.** Cell 1
+   asks whether the share's CI includes 0; on an incomplete grid the
+   no-response value is the leak, and the author cluster bootstrap makes the
+   grid MORE incomplete (about 63% distinct authors per replicate), so the CI
+   tracks the leak rather than the estimand.
+3. **The permutation null is not a clean mechanism coordinate here.** A null
+   that resamples the interaction while HOLDING both mains fixed would be the
+   matching coordinate.
+4. **The headroom clause is stated about the wrong object.** At k_min = 3 a
+   per-author Pearson correlation over three points is NOT bounded away from 1
+   (4.70% of authors above 0.99 on the planted world, extremes rounding to
+   +-1.0000). What is bounded is the MEAN over thousands of authors.
+5. **Support is a PRIMARY question, not a sensitivity.** The primary design has
+   a median of 2.0 eligible authors per community and 5.77% of slots in
+   single-author communities; the law-vocabulary arm the registration demoted
+   to a sensitivity has 9.0 and 0.32%. The leak scales with exactly that
+   sparsity, so a cross-author support floor is a candidate PRIMARY — the
+   opposite of what the registration reasoned.
+
+### What still stands
+
+The 4W header, the census, the eligibility predicate, the half rule and the
+cell/lean boundaries are all intact and re-usable: only the ESTIMATOR's
+calibration failed. The metadata-only boundary held throughout — no text body
+was read, `author_profiles.csv` was never opened, and the ID-leak scan over all
+10,296 author names cleared with 0 NEW hits (3 pre-existing dictionary
+collisions in `CLAIMS_LEDGER.md`, carried unchanged from HEAD under the W1
+policy).
