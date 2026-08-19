@@ -510,3 +510,90 @@ hits** (4 pre-existing dictionary collisions carried unchanged from HEAD:
 three in `CLAIMS_LEDGER.md`, one in this plan at the line where the X1
 adjudication quotes the colliding word). The new boundary is named on every
 claim: the analysis universe is now WELL-SHARED VENUES by construction.
+
+## X1b planner adjudication (2026-08-19)
+
+**Registered outcome ACCEPTED: `A1_STOP__SYNTHETIC_GATE_FAILED` — as
+routed, 8 of 9 clauses passing. No cell; the corpus remains unread on
+crossing #2.** But the situation is categorically different from X1's
+stop, and the adjudication must say so precisely:
+
+**The repair WORKED for everything that routes.** The exact-FE
+estimator reads the null world at −0.0000 ± 0.0001 with R = 0.0000 —
+and reads ZERO even on X1's own registered skeleton (0.0458 → 0.0000),
+proving the leak was THE PROJECTION, NOT THE GRID (support conditioning
+alone would only have bought 0.0458 → 0.0183). Recovery, both
+ablations, both null clauses, and the new #85b bootstrap-zero clause
+all pass. The verdict-routing machinery (interaction share + R) is now
+CERTIFIED EXACT on the realized skeleton, twice over.
+
+**The one failing clause is a DESCRIPTIVE object with a solved
+mechanism.** The author-main share was registered PRE-FE (X1's
+definition, deliberately kept): its estimand is MARGINAL, not main —
+an author's half-mean carries the author's own composition average of
+the community main and the interaction, persistent across halves by
+construction. The bias is design-predicted: E[1/k_u]·(0.08+0.02) =
++0.0191 against +0.0220 observed; the mirror contamination shows in
+the null world's community main (0.1139 vs 0.0800). No support floor
+can move it (floors raise authors-per-community, not
+communities-per-author). Also quantified: the FE projection removes
+A+C−1 of P dimensions, making the interaction share conservative by
+exactly P/(P−A−C+1)⁻¹ = 0.8538 (predicted 0.0171, observed 0.0170).
+
+**Defect #86 (planner, purchased; registry thirty-third note).** Three
+parts, from the executor's candidates, all adopted. (a) GATE CLAUSE
+GRANULARITY: the gate bundled verdict-routing clauses with descriptive
+clauses, so a descriptive bias with a solved mechanism stopped a leg
+whose routing machinery is exact. Convention: gates separate ROUTING
+clauses (A1-stopping) from DESCRIPTIVE clauses (failure → the
+descriptive is reported WITH its dual-stamped bias annotation per #67,
+never a stop). (b) ESTIMAND NAMING (#59/#81 family): "author main
+share" was in fact the MARGINAL author share; budget components name
+their estimand exactly, and marginal estimands are gate-scored against
+MARGINAL targets (planted value + the design-composition term,
+computable from the skeleton). (c) DF PINNING: a projection estimator's
+dimension loss is pinned; the df-corrected share routes, the raw share
+is co-reported (#67 dual stamp). Also noted: the #83 baseline is now 4
+pre-existing collisions — the fourth introduced by the PLANNER's own
+adjudication commit quoting the flagged word; the policy absorbed it
+correctly, and the lesson (do not quote flagged usernames into
+committed prose, even common-word ones) is recorded here without a
+number.
+
+**Executor discipline noted:** seeds deliberately NOT re-chosen after
+the failure (gate-shopping refused a second time); the FE stopping rule
+tightened so BOTH residual group means are ≤ 1e-10 on exit; the
+bootstrap-FE weighted-projection equivalence proven by contract test.
+
+---
+
+## X1c — the venue response, clause-separated gate (registered BEFORE run, 2026-08-19)
+
+Third and final registration of this estimand. Everything inherits
+X1b (design chain at s = 5: 3,665 × 1,000, 31,899 shared pairs,
+LCC 1.000; exact-FE estimator; arms; cells; leans; boundaries;
+governance) except the following #86-compliant changes:
+
+1. **Gate restructure (#86a).** ROUTING clauses (A1-stopping):
+   df-corrected interaction-share recovery within max(0.01, 3·rep sd);
+   null-world share CI covers 0 with point inside the permutation band;
+   null-world R inside its band; both ablation leakages < 0.005; the
+   #85b bootstrap-zero clause. DESCRIPTIVE clauses (report-gated):
+   marginal author and community shares scored against their MARGINAL
+   TARGETS — planted value plus the design-composition term, both
+   derived from the skeleton with pinned formulas (the executor pins
+   and prints the derivation); a descriptive failure annotates, never
+   stops.
+2. **Estimand naming and correction (#86b/c).** The verdict routes on
+   the DF-CORRECTED reproducible interaction share:
+   share_corr = share_raw · P/(P − A − C + 1) (numerics pinned from
+   the realized skeleton). Raw co-reported (#67). Cell boundaries
+   unchanged (0.02 / 0.10 on share_corr). R unchanged. The budget
+   table reports the MARGINAL author/community shares under that name
+   with their design-composition bias annotations, plus the
+   FE-interaction rows.
+3. Everything else — B_perm = 499, B_boot = 1000, SEED = 20260819,
+   seeds inherited, standard six, ONE commit
+   `feat(m4-x): X1c — the venue response, clause-separated gate —
+   <VERDICT>`, suite green (1410 + new), #83 scan (baseline 4
+   pre-existing) — verbatim from X1b.
