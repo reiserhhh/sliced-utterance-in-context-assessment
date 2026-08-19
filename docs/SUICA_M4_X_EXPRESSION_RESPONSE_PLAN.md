@@ -794,3 +794,69 @@ hits** (4 pre-existing dictionary collisions carried unchanged from HEAD:
 three in `CLAIMS_LEDGER.md`, one in this plan). Every boundary is carried
 forward, plus the one X1c adds: the routing statistic is DF-CORRECTED and the
 two main shares are MARGINAL, named and annotated as such on every table.
+
+## X1c planner adjudication + the X1 arc CLOSES (2026-08-19)
+
+**Verdict ACCEPTED: `RESPONSE_TRACE`, with the boundary-region
+annotation adopted as part of the verdict.** Routing 5/5 (df-corrected
+recovery at gap −0.0001), descriptive 2/2 against the exact marginal
+targets — and the executor's integrity demonstration is noted with
+approval: scored against X1b's planted-component clause the author gap
+STILL fails (+0.0220), so the gate structure, not a quietly changed
+estimator, is what let the leg through. Both readings printed side by
+side. The marginal-target derivation went past the planner's
+first-order heuristic (κ̄ = 0.2905 vs 1/k̄ = 0.1909 — cell-size
+inequality explains X1b's undershoot) and was verified by simulation
+twice.
+
+**Crossing #2's first corpus reading, formalized.** Expression volume
+is venue-conditioned in three layers on this corpus: the personal
+baseline (marginal share 0.1804; 2×2-inverted true main ≈ 0.153), the
+venue norm (0.0928; ≈ 0.077), and a SMALL, REAL, PERSISTENT
+idiosyncratic response: **df-corrected reproducible interaction share
+0.0190 [0.0171, 0.0193] against a ±0.0017 band; profile persistence
+R = 0.2788 [0.2598, 0.2934] against ±0.016; 73.6% of authors
+positive; REPRODUCED on the Big5 cohort (0.0177, same cell, lean
+held).** The response operator's first projection is NON-EMPTY — the
+first crossing where the personal second-order channel is present
+rather than silent. All five registered leans HELD, on both the raw
+scale the lean was written for and the corrected scale the verdict
+routes on. The registration's reasoning stands: multiplicative
+baseline × norm lands in the mains; the interaction asked for more,
+and the corpus has more — about 1.9% of variance worth.
+
+**The honest fragility, carried into the verdict.** The estimand lives
+ON the registered boundary: arms span 0.0177–0.0208 against the 0.0200
+line set from literature priors; one #73 straddle (n_min = 5 at 0.0208
+[0.0192, 0.0214]). The DETECTION is unambiguous (CI 10× outside the
+band); the LABEL is boundary-sensitive. Licensed sentence: "a real,
+persistent idiosyncratic venue response at the TRACE/IDIOSYNCRATIC
+boundary (≈ 2% of variance)" — never the bare cell name without the
+boundary note.
+
+**Defect #87 (planner, purchased; registry thirty-fourth note).** Two
+parts. (a) Cell boundaries were registered as POINTS from literature
+priors with no boundary-region provision, and the corpus landed within
+0.001 of one — "straddle" had to work as an annotation where it
+deserves first-class status. Convention: every effect-size
+classification registers a BOUNDARY REGION (default: ± the projected
+CI half-width) inside which the verdict IS the region statement
+("AT the boundary"), first-class, not an annotation. (b) The pinned df
+factor is not recomputed per bootstrap replicate, making the interval
+one-sidedly conservative — the executor calibrated this against the
+planted world (truth covered; low side only) rather than arguing it.
+Convention: projection-dependent corrections are recomputed inside
+every resample, or the one-sided conservatism is declared WITH a
+planted-world calibration. Also adopted from the executor's
+candidates: any leg wanting the MAINS as objects (X3's trait join)
+must first build main ESTIMATORS (the marginals are now correctly
+named but still not estimators of Var(a)/Var(b)) under their own gate.
+
+**The X1 arc closes: X1 (A1 stop, projection leak caught) → X1b
+(A1 stop, routing machinery certified, descriptive mechanism solved) →
+X1c (reading).** Three registrations, two stops, zero real-data
+contamination, one boundary-honest reading — the gate discipline's
+full showcase, with defects #85–#87 as its tuition. The X-line
+continues: X2 (What × When paths of expression volume) and X3 (the
+stage-E trait join, now with a validated coordinate and the
+main-estimator prerequisite) are named, not queued.
