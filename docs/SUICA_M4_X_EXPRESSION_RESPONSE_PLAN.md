@@ -597,3 +597,200 @@ governance) except the following #86-compliant changes:
    `feat(m4-x): X1c — the venue response, clause-separated gate —
    <VERDICT>`, suite green (1410 + new), #83 scan (baseline 4
    pre-existing) — verbatim from X1b.
+
+## X1c outcome (executor, 2026-08-19)
+
+**VERDICT — `RESPONSE_TRACE`.** Part 0's five ROUTING clauses all passed, the
+two DESCRIPTIVE clauses passed as well, the A1 stop did not fire, and the real
+arms ran. Crossing #2 has its first corpus reading: on the primary arm the
+DF-CORRECTED reproducible author × community interaction carries **0.0190** of
+comment-level Var(y), cluster-bootstrap CI **[0.0171, 0.0193]**, permutation
+band [−0.0016, 0.0017]; raw **0.0162** [0.0146, 0.0165] under the #67 dual
+stamp. **R = 0.2788** [0.2598, 0.2934] against a permutation band
+[−0.0161, 0.0152]. The interaction is DETECTED and it is SMALL — the whole CI
+sits below the 0.02 TRACE/IDIOSYNCRATIC boundary, so the cell is not a
+straddle.
+
+Harness `scripts/run_suica_m4_x1c_venue_response.py`; tests
+`tests/test_m4_x1c_venue_response.py` (45); artifacts
+`results/m4_x1c_venue_response/` (gitignored); report
+`reports/SUICA_M4_X1C_VENUE_RESPONSE_REPORT.md`. Runtime about 121 s end to
+end, entirely off X1's committed 13.6 MB cell cache — the 17.6M-row comments
+file was not re-streamed for the third leg running. SEED 20260819, B_perm 499,
+B_boot 1000, seeds inherited and not re-chosen.
+
+### Anchors (#78) — all nine, exact
+
+17,640,062 parseable rows; 10,296 authors = 1,401 Big5 + 8,895 disjoint;
+vocabulary floor 89 giving exactly 1,443 law communities; the predicate chain
+at s = 3 / 5 / 8 giving 3,686 / 1,145 / 32,415, **3,665 / 1,000 / 31,899**
+and 3,595 / 780 / 30,561, with **0 singleton communities and LCC author
+coverage 1.000** at the primary floor. Attrition at s = 5: 140,026 eligible
+cells → 37,414 shared pairs → 36,612 → 31,899 → 31,899 (already connected
+before the LCC step). The alternating projection converges in 31 sweeps per
+half on the corpus arm with residual author means ≤ 4.9e-11 and residual
+community means ≤ 6.3e-17.
+
+### The gate, separated (#86a)
+
+| family | clause | value | status |
+|---|---|---|---|
+| ROUTING | (i) recovery, DF-CORRECTED interaction | 0.0199 for 0.0200, gap −0.0001, tol 0.0100 | PASS |
+| ROUTING | (ii) null world — share CI covers 0 AND point inside band | CI [−0.0004, 0.0002]; −0.0001 in [−0.0012, 0.0012] | PASS |
+| ROUTING | (iii) null world — R inside band | 0.0078 in [−0.0166, 0.0166] | PASS |
+| ROUTING | (iv) ablations — author-only and community-only leakage | 0.0001 and 0.0001, both < 0.0050 | PASS |
+| ROUTING | (v) #85b bootstrap-zero | the null CI covers 0 and its own point | PASS |
+| DESCRIPTIVE | marginal AUTHOR share vs its MARGINAL TARGET | 0.3220 for a target of 0.3267, gap −0.0047, tol 0.0179 | PASS |
+| DESCRIPTIVE | marginal COMMUNITY share vs its MARGINAL TARGET | 0.1072 for a target of 0.1077, gap −0.0006, tol 0.0424 | PASS |
+
+**The df correction, pinned.** P = 31,899, A = 3,665, C = 1,000, rank removed
+A + C − 1 = 4,664, residual df 27,235, retained fraction 0.8538, factor
+**1.1712502**. It converts a raw recovery of 0.0170 (gap −0.0030 against the
+planted 0.0200) into 0.0199 (gap −0.0001). X1b's prediction of the projection
+loss is confirmed to the fourth decimal by an estimator that now corrects for
+it.
+
+**The marginal targets, derived and printed.** The estimator of a main share
+is a cross-half covariance of size-weighted half-means, so it targets the
+planted component PLUS the unit's own composition average of everything else
+that persists. With `w[u,c,h] = n[u,c,h] / Σ_c' n[u,c',h]`,
+`t[u,c,h] = n[u,c,h] / Σ_u' n[u',c,h]`, `κ_u = Σ_c w[u,c,e] w[u,c,l]`,
+`λ_c = Σ_u t[u,c,e] t[u,c,l]` and `Ŵ_c` the normalized `n[c,e] + n[c,l]` size
+weights the budget already uses:
+
+```
+T_a = v_a (1 − 1/A) + (v_c + v_g)·mean_u[κ_u]
+      − v_c·Σ_c w̄[c,e] w̄[c,l] − v_g·mean_u[κ_u]/A
+T_c = v_c (1 − Σ_c Ŵ_c²) + v_a·(Σ_c Ŵ_c λ_c − Σ_u φ[u,e] φ[u,l])
+      + v_g·(Σ_c Ŵ_c λ_c − Σ_c Ŵ_c² λ_c)
+```
+
+On the realized skeleton mean_u[κ_u] = **0.2905**, which is **52% larger** than
+the 1/k_u heuristic X1b used (0.1909) — the gap is entirely cell-size
+inequality, and it is why X1b's first-order prediction (+0.0191) undershot the
+observed bias (+0.0220) while the exact term (+0.0290 composition − 0.0024
+mean-removal = +0.0267) brackets it. Author target 0.3267, community target
+0.1077 (size-weighted mean_c[λ_c] = 0.0937). Scored against the PLANTED
+components instead — X1b's clause — the author gap is +0.0220 against a
+tolerance of 0.0179 and that clause still FAILS, exactly as before: #86a is
+what let the leg through, and the estimator was not quietly changed to make it
+pass. The NULL world scores its own targets as a free cross-check and passes
+both (author 0.3220 for 0.3209; community 0.1139 for 0.1059). The derivation
+was verified against simulation on both a synthetic design (contract test) and
+the realized skeleton (48 replicates: author 0.3262 ± 0.0008 se against a
+target of 0.3267, community 0.1084 ± 0.0020 against 0.1077).
+
+### The corpus reading
+
+PRIMARY arm: 3,665 disjoint authors × 1,000 law communities, 31,899 shared
+pairs, 63,798 eligible cells, 6,811,576 comments, comment-level
+Var(y) = 1.2423.
+
+| quantity | value | CI | band |
+|---|---|---|---|
+| interaction share, DF-CORRECTED (routes) | **0.0190** | [0.0171, 0.0193] | [−0.0016, 0.0017] |
+| interaction share, raw (#67) | 0.0162 | [0.0146, 0.0165] | [−0.0014, 0.0015] |
+| R | **0.2788** | [0.2598, 0.2934] | [−0.0161, 0.0152] |
+| MARGINAL author share | 0.1804 | [0.1729, 0.1882] | — |
+| MARGINAL community share | 0.0928 | [0.0898, 0.1075] | — |
+| residual | 0.7106 | [0.6931, 0.7180] | — |
+
+Both of cell 1's conditions are refused: R is far outside its band and the
+share's CI excludes 0. The mains are reported under their true name — this
+arm's composition weights are κ̄ = 0.2905 and λ̄ = 0.0937, so inverting the
+2 × 2 mixing as an ANNOTATION ONLY (not a registered estimand, nothing routes
+on it) implies an author main near 0.1526 and a community main near 0.0767.
+
+| arm | corrected share [CI] | R | cell | #73 |
+|---|---|---|---|---|
+| PRIMARY (n=10, s=5, wcq) | 0.0190 [0.0171, 0.0193] | 0.2788 | RESPONSE_TRACE | — |
+| s = 8 | 0.0189 [0.0172, 0.0193] | 0.2738 | RESPONSE_TRACE | none |
+| n_min = 5 | 0.0208 [0.0192, 0.0214] | 0.2192 | IDIOSYNCRATIC_RESPONSE (STRADDLE) | **#73** |
+| y = word_count | 0.0188 [0.0170, 0.0191] | 0.2777 | RESPONSE_TRACE | none |
+| Big5 replication (408 authors) | 0.0177 [0.0131, 0.0189] | 0.2823 | RESPONSE_TRACE | none |
+
+The five arms span 0.0031 of total variance. The single #73 is a BOUNDARY
+CROSSING: the n_min = 5 arm's CI [0.0192, 0.0214] touches both cells and is
+reported as a straddle, with its point at 0.0208 placing it in
+IDIOSYNCRATIC_RESPONSE. The Big5 replication carries 408 authors, above the
+in-leg #69 floor of 300, and lands in the primary cell — the replication lean
+is scored and HELD rather than waived.
+
+**All five registered leans HELD** (six rows, because the share lean is
+reported on both scales): R = 0.2788 in (0.05, 0.30]; the interaction share in
+(0.005, 0.05] on the RAW scale the lean was written for (0.0162) and also on
+the corrected scale the verdict routes on (0.0190); the marginal author share
+0.1804 in [0.15, 0.45]; the marginal community share 0.0928 in [0.02, 0.15];
+the Big5 replication in the primary cell. The registration's own reasoning —
+"personal baseline × venue norm is additive in log and lands in the mains, so
+the interaction asks for more" — is vindicated: the interaction is real and it
+is second-order.
+
+**Headroom, about the MEAN (#84 as restated by #85).** 3,665 authors scored,
+0 undefined; realized per-author correlation mean 0.2788, sd 0.5021, median
+0.3501, 2.76% above 0.99, 9.55% above 0.90, 73.64% positive, extremes at
+±1.0000. Per-author saturation is acknowledged and is NOT a ceiling: at k = 3
+a three-point correlation reaches ±1 whenever three points line up. The
+bounded object is the mean, and it separates cleanly from Part 0's synthetic
+null world (0.2788 against 0.0078).
+
+### Honest anomalies
+
+1. **The cluster-bootstrap interval is not symmetric about its point**; every
+   arm's point sits near the upper edge (primary: point 0.0162 raw against a
+   bootstrap mean of 0.0155). The mechanism is the resample's sparsity — a
+   bootstrap author multiset holds about 63% of the distinct authors, so each
+   replicate's projection removes a larger fraction of its own design than the
+   full design's, while the pinned factor stays at the realized skeleton's
+   value (which is what the registration fixes). The direction is CALIBRATED,
+   not argued: Part 0's planted world has a known truth of 0.0200 and shows
+   the same asymmetry — point 0.0204, interval [0.0188, 0.0206] — and still
+   covers it. The corpus intervals are therefore conservative on the low side
+   only, and no cell assignment is at risk.
+2. **The estimand lives on the cell boundary.** Four arms sit at 0.0177–0.0190
+   and one at 0.0208, against a registered boundary of 0.0200. The cells did
+   their job, but the leg's headline is a few thousandths of total variance
+   from a different label.
+3. Non-gating, inherited from X1: the two census descriptives that did not
+   reproduce in X1 (within-cell sd; median shared communities) were not
+   re-examined here.
+
+### Deviation
+
+X1b's X1-versus-X1b estimator-comparison grid was NOT re-run. It was a
+one-time demonstration of the repair, already adjudicated, and re-running it
+would add nothing to a leg whose purpose is the corpus reading; X1b's
+artifact holds it. Nothing else in the registration was skipped, and nothing
+was added to the routing path.
+
+### Defect candidates recorded for the planner (nothing below was run)
+
+1. **The df factor is pinned at the realized design and does not follow the
+   bootstrap.** The registration is explicit that P/A/C come from the realized
+   skeleton, and that is what was done; the consequence is anomaly 1. A future
+   registration can either correct each replicate by its OWN residual-df
+   fraction, or declare the interval one-sidedly conservative — which is what
+   this report does, with the planted world as its calibration.
+2. **The mains are now correctly NAMED but still not ESTIMATED.** #86b gave
+   the marginal estimators exact targets; it did not give the leg an estimator
+   of Var(a) or Var(b). The 2 × 2 inversion printed here is arithmetic on the
+   design, not an estimator with a null or a CI. Any leg that wants the mains
+   as objects — X3's trait join is the obvious one — needs them read off the
+   same two-way projection that now carries the interaction, with their
+   sampling variance removed, and registered with their own gate.
+3. **Cell boundaries drawn before the estimand's scale was known.** The
+   0.02 / 0.10 boundaries were set in X1 on literature priors; the corpus
+   answer landed within 0.001 of the first one, and one arm crossed it. A
+   planner may wish to register a boundary REGION (report both cells when the
+   CI touches both) rather than a point, so that "straddle" is a first-class
+   outcome and not an annotation on a cell.
+
+### Governance
+
+Metadata only; `word_count_quoteless` and `word_count` are the sole
+text-derived quantities; no body was read; `author_profiles.csv` was never
+opened. The ID-leak scan over all 10,296 author names cleared with **0 NEW
+hits** (4 pre-existing dictionary collisions carried unchanged from HEAD:
+three in `CLAIMS_LEDGER.md`, one in this plan). Every boundary is carried
+forward, plus the one X1c adds: the routing statistic is DF-CORRECTED and the
+two main shares are MARGINAL, named and annotated as such on every table.
