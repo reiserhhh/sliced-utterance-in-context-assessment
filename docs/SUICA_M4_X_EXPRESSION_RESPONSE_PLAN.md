@@ -372,3 +372,141 @@ here, one CLAIMS_LEDGER row, ONE commit
 `feat(m4-x): X1b — the venue response, exact estimator — <VERDICT>`;
 suite green (1359 + new). SEED = 20260819; B_perm = 499;
 B_boot = 1000.
+
+---
+
+## X1b outcome (executor, 2026-08-19)
+
+**VERDICT — `A1_STOP__SYNTHETIC_GATE_FAILED`.** Part 0 passed **8 of its 9
+clauses** and failed one, so the A1 stop fired again and no real estimand was
+computed. There is no corpus value of R, of the variance budget or of the
+headroom distribution anywhere in this leg's artifacts. The four cells and all
+five leans are UNSCORED; `NO_REPRODUCIBLE_RESPONSE` is expressly NOT the
+outcome.
+
+The registered repair itself **succeeded completely.** What failed is the one
+object the X1b registration explicitly declined to change.
+
+Harness `scripts/run_suica_m4_x1b_venue_response_fe.py`; tests
+`tests/test_m4_x1b_venue_response_fe.py`; artifacts
+`results/m4_x1b_venue_response_fe/` (gitignored); report
+`reports/SUICA_M4_X1B_VENUE_RESPONSE_FE_REPORT.md`. Runtime about 45 s end to end,
+entirely off X1's committed 13.6 MB cell cache — the comments file was not
+re-streamed. SEED 20260819, B_perm 499, B_boot 1000.
+
+### The design repair — the planner's census reproduced to the unit (#78)
+
+The pinned chain (no fixed-point iteration) reproduces every blocking anchor:
+
+| s | authors | communities | shared pairs | fill | med authors/comm | singleton communities | LCC |
+|---|---|---|---|---|---|---|---|
+| 3 | 3,686 | 1,145 | 32,415 | 0.0077 | 11.0 | 1 (0.0009) | 1.000 |
+| **5 (PRIMARY)** | **3,665** | **1,000** | **31,899** | 0.0087 | **12.5** | **0** | **1.000** |
+| 8 | 3,595 | 780 | 30,561 | 0.0109 | 16.0 | 0 | 1.000 |
+
+The inherited anchors also hold: 17,640,062 parseable rows, 10,296 authors
+(1,401 + 8,895), vocabulary floor 89 giving exactly 1,443 communities. The
+published fill / median / singleton cross-checks agree at every floor.
+Attrition at s = 5: 140,026 eligible cells → 37,414 shared pairs → 36,612
+after the support floor → 31,899 after the k ≥ 3 floor → 31,899 in the LCC
+(the graph was **already connected** before step 5, so the exactness argument
+is valid, not merely assumed). In-leg arm censuses: s = 8 gives 3,595 authors;
+n_min = 5 gives 5,094 authors / 1,243 communities / 56,460 pairs; the
+word_count arm shares the primary design exactly; the Big5 replication gives
+**408 authors**, above the in-leg #69 floor of 300, so it would have carried a
+#73 comparison had a cell been reached.
+
+### The estimator repair — exact, and demonstrated on the SAME null world
+
+Alternating projections converge in 28 sweeps per half; the residual AUTHOR
+means are ≤ 3.9e-11 and the residual COMMUNITY means ≤ 2.8e-17 on the realized
+incomplete grid — the thing a single double-centering cannot do.
+
+| skeleton | estimator | interaction share, null world (mean ± sd of 8) | R |
+|---|---|---|---|
+| X1's registered skeleton (4,342 × 5,369) | X1 double-centering | **0.0458 ± 0.0014** | 0.4464 |
+| X1's registered skeleton | X1b exact FE | 0.0000 ± 0.0001 | 0.0017 |
+| X1b skeleton (3,665 × 1,000) | X1 double-centering | 0.0183 ± 0.0014 | 0.2436 |
+| **X1b skeleton** | **X1b exact FE** | **−0.0000 ± 0.0001** | **0.0000** |
+
+The top-left cell reproduces X1's committed 0.0458 exactly, which validates
+the comparison. Two things follow. (a) The leak was the PROJECTION, not the
+grid: the FE reads zero even on X1's own sparse skeleton, while support
+conditioning alone would only have taken double-centering from 0.0458 to
+0.0183 — still nine times the TRACE boundary's half-width. (b) On the scored
+replicate with full inference on both sides, the old estimator gives
+0.0176 with CI [0.0241, 0.0286] (covering neither 0 nor its own point) and
+R = 0.2442 against band [0.0636, 0.0965]; the new one gives −0.0001 with CI
+[−0.0003, 0.0002] and R = 0.0078 against band [−0.0166, 0.0166]. Support
+conditioning is still worth its place — it is what makes the mains estimable
+and the graph connected — but the registration's estimator clause is what
+purchased the zero.
+
+### Part 0 — the nine clauses
+
+| # | clause | value | status |
+|---|---|---|---|
+| 1 | recovery — author main | 0.3220 for 0.3000, tol 0.0179 | **FAIL** |
+| 2 | recovery — community main | 0.1072 for 0.0800, tol 0.0424 | PASS |
+| 3 | recovery — interaction | 0.0170 for 0.0200, tol 0.0100 | PASS |
+| 4 | null world — share CI covers 0 | [−0.0003, 0.0002] | PASS |
+| 5 | null world — share inside its band | −0.0001 in [−0.0011, 0.0010] | PASS |
+| 6 | null world — R inside its band | 0.0078 in [−0.0166, 0.0166] | PASS |
+| 7 | ablation — author-only leakage | 0.0001 < 0.0050 | PASS |
+| 8 | ablation — community-only leakage | 0.0001 < 0.0050 | PASS |
+| 9 | #85b bootstrap-zero — null CI covers 0 | yes, and it covers its own point | PASS |
+
+The X1 pathologies are all gone: the CI now covers its own point estimate, the
+permutation band now brackets the artifact instead of sitting below it, and
+both ablations are three orders of magnitude inside their clause (author-only
+0.0001 against X1's 0.0383; community-only 0.0001 against 0.0078).
+
+### The one failing clause, and its mechanism
+
+The author main share is estimated PRE-FE — from the cross-half covariance of
+author half-means, X1's definition, which the X1b registration explicitly kept
+("mains are estimated pre-FE; only the interaction object changes"). That
+estimator's target is not Var(a). An author's half-mean is a_u PLUS that
+author's own average of the community main and of the interaction over the
+communities they occupy, and that composition average is the same in both
+halves up to cell-size reweighting, so the cross-half covariance keeps it. The
+size of the term is a design constant: E[1/k_u] = 0.1909 over the 3,665
+eligible authors predicts a bias of 0.1909 × (0.08 + 0.02) = **0.0191**
+against an observed **+0.0220**. The support floor raised authors-per-community
+from X1's 2.0 to 12.5 and thereby fixed the community main (0.1072 for 0.0800
+now sits inside its tolerance, against X1's 0.1351); it does not raise
+communities-per-author, so it cannot touch the author main.
+
+A second, smaller and opposite bias is now on the record: the two-way
+projection removes A + C − 1 = 4,664 dimensions from 31,899 cells, so a white
+planted interaction retains 0.8538 of itself. That predicts 0.0171 for a
+planted 0.0200 against the observed 0.0170 — the interaction estimand is
+CONSERVATIVE by a computable factor, and passes its clause with room to spare.
+
+### Defect candidates recorded for the planner (nothing below was run)
+
+1. **The main-share estimators are MARGINAL, not main.** Their target is
+   Var(a) plus a composition term whose divisor is communities-per-author, so
+   no support conditioning can move them. Candidates: read the mains off the
+   SAME two-way projection that now carries the interaction (effect variances
+   with their sampling variance removed), or re-state the clause so the mains
+   are scored against their own marginal targets. Neither was run.
+2. **Routing clauses and descriptive clauses are gated together.** The cells
+   route on the interaction share and R, and both now behave exactly; the leg
+   nevertheless stops on a co-reported descriptive component. A planner may
+   wish to separate the two so a descriptive bias downgrades a number instead
+   of stopping a leg — or may deliberately keep them together, since a budget
+   that over-reads its largest component is not a budget.
+3. **The FE's degrees of freedom are worth pinning.** Either correct the
+   interaction share for the (A + C − 1)/M projection loss or register the
+   estimand explicitly as a LOWER bound.
+
+### Governance
+
+Metadata only; `word_count_quoteless` and `word_count` are the sole
+text-derived quantities; no body was read; `author_profiles.csv` was never
+opened. The ID-leak scan over all 10,296 author names cleared with **0 NEW
+hits** (4 pre-existing dictionary collisions carried unchanged from HEAD:
+three in `CLAIMS_LEDGER.md`, one in this plan at the line where the X1
+adjudication quotes the colliding word). The new boundary is named on every
+claim: the analysis universe is now WELL-SHARED VENUES by construction.
