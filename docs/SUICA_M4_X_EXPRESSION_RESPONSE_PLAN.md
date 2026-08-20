@@ -860,3 +860,119 @@ full showcase, with defects #85–#87 as its tuition. The X-line
 continues: X2 (What × When paths of expression volume) and X3 (the
 stage-E trait join, now with a validated coordinate and the
 main-estimator prerequisite) are named, not queued.
+
+---
+
+## X2 — the path of expression volume (registered BEFORE run, 2026-08-19)
+
+Crossing #3 (What × When): the first real-data projection of expression
+STATE TRAJECTORIES — does expression volume have reproducible path
+structure in event time, and is the path parameter an AUTHOR attribute?
+Metadata-only, as the line charter binds.
+
+### 4W header
+
+- **Object.** The lag-1 event-time autocorrelation of y = log1p(wcq)
+  within an author-half — one static projection of the What × When
+  trajectory kernel; the eq-12 projection caution binds (a flat r1 does
+  not falsify dynamics; it is a statement about this projection).
+- **Fixed.** y pinned (#70); per-author stable order by created_utc
+  (ties keep stream order); halves by full-stream median (≤ early);
+  adjacency = consecutive events WITHIN a half (never across the
+  boundary); r1 per (author, half) requires sd > 0 (censused: zero
+  degenerate halves).
+- **Varied.** Raw adjacency vs cross-thread-only (link_id differs) vs
+  venue-residualized (y minus the global community-half mean b̄_{c,h}
+  computed over ALL events in that community-half); cohort (disjoint
+  primary, Big5 replication); pool floor 50 vs 100 events/half.
+- **What falsifies.** Ownership ρ_own CI including 0 → the path
+  parameter is not an author attribute at this power (PATH_NOT_OWNED).
+- **Layer.** R.
+
+### Census (planner arithmetic #43; #77/#78 exact; #57 — NO estimand
+value was evaluated: r1 was never computed; degenerate halves counted
+by sd = 0 alone)
+
+| quantity (exact predicate) | disjoint | Big5 |
+|---|---|---|
+| pool: ≥ 50 events in EACH half (all events) | **8,008** | **1,116** |
+| cross-thread share of within-half adjacencies | 0.73159 | 0.62054 |
+| degenerate halves (sd = 0) | 0 | 0 |
+| median adjacencies per half | 348.0 | 491.75 |
+| ownership width projection (analytic 1/√N) | ±0.0112 | ±0.0299 |
+
+Inherited anchors: 17,640,062 parseable rows; 10,296 authors
+(1,401 + 8,895). Per-half r1 sampling noise (analytic): ≈ 1/√348 ≈
+0.054 — named as the attenuation floor on ρ_own (the ownership
+correlation reads the attenuated per-half parameter; no disattenuation
+is registered — raw ρ_own routes).
+
+### Estimands (own nulls #68/#66; transforms pinned #70)
+
+1. **Path presence (co-reports):** mean over (author, half) of r1,
+   against the MARGINAL-PRESERVING within-half permutation null
+   (each half's y sequence permuted; the per-half marginal is EXACTLY
+   invariant — contract test, the U1 exact-bag pattern on a scalar);
+   B = 499; band = 2.5/97.5 percentiles.
+2. **Ownership ρ_own (ROUTES):** Pearson over pool authors of
+   (r1_early, r1_late). Own null: author pairing permuted between
+   halves, B = 499. Cluster bootstrap over authors B = 1000 for the CI.
+3. Arms as above; each arm carries its own presence + ownership pair.
+
+### Gate (Part 0, #85/#86-compliant, on the REALIZED skeleton — real
+per-author sequence lengths and half splits, wholly synthetic y)
+
+ROUTING clauses (A1-stopping): (i) ownership recovery on a planted
+world — per-author AR(1) with author-owned φ_u at a #76-declared
+operating point (across-author ownership ρ_true = 0.5; 8 replicates;
+tol max(0.02, 3·rep sd)); (ii) the COMMON-PATH null world (every author
+the same φ̄ > 0: presence WITHOUT ownership — ρ_own CI must cover 0,
+point inside band; the design's decisive honesty check); (iii) the iid
+world (no path at all: mean r1 inside band AND ρ_own inside band);
+(iv) marginal-preservation contract (bit-exact per-half marginals under
+the shuffle); (v) #85b bootstrap-zero on the common-path world.
+DESCRIPTIVE clauses (annotate, never stop): mean-r1 recovery against
+the planted φ̄ mapping on both non-null worlds.
+
+### Cells (NULL-first #55; effect-size keyed #75; #87 boundary REGIONS
+declared: half-width = the projected CI half-width, 0.011 primary)
+
+On ρ_own (primary arm): 1 **PATH_NOT_OWNED** — CI includes 0 or point
+below 0.15 − 0.011; **AT_BOUNDARY(0.15)** — point inside
+[0.139, 0.161] (first-class verdict); 2 **WEAKLY_OWNED** —
+(0.161, 0.489); **AT_BOUNDARY(0.50)** — [0.489, 0.511]; 3
+**STRONGLY_OWNED** — above 0.511 (the U3 reliability-gate level:
+trait-join eligible). Presence co-reports with its own band. Arm
+divergences carry #73 flags; the primary routes.
+
+### Registered leans
+
+- Presence: mean r1 positive and clearly detected (session structure
+  alone should produce it) — magnitude deliberately un-leaned (#57:
+  no pilot was taken).
+- Ownership: ρ_own ∈ (0.30, 0.60] — WEAKLY_OWNED toward the upper
+  boundary; rationale: the U3 slow-coordinate reliabilities ran
+  0.77–0.94, but r1's per-half sampling noise (≈ 0.054) attenuates,
+  and rhythm is plausibly less stable than level.
+- Cross-thread arm retains most of the ownership (rhythm is not just
+  reply mechanics) — held moderately; the U1 precedent (43.8%
+  mechanics) prices the alternative.
+- Venue-residualized arm retains most (rhythm is not venue-routing).
+- Big5 replication: same cell (#73 if divergent).
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_x2_volume_path.py` + tests
+(marginal-preservation bit-exactness; AR-world construction and the
+common-path null's honesty on a toy; ownership/pairing-permutation
+correctness; anchors; #83 helper); gitignored
+`results/m4_x2_volume_path/` (fresh event cache: author, created_utc,
+link hash, y — anchors above); report
+`reports/SUICA_M4_X2_VOLUME_PATH_REPORT.md` (rule-24; gate table with
+ROUTING/DESCRIPTIVE sections; presence + ownership per arm with bands
+and CIs; boundaries: metadata-only, expression VOLUME not content, the
+projection caution, no psychological naming, cohort caveat); outcome
+appended here; one CLAIMS_LEDGER row; ONE commit
+`feat(m4-x): X2 — the path of expression volume — <VERDICT>`; suite
+green (1455 + new); #83 scan (baseline 4 pre-existing).
+SEED = 20260819; B_perm = 499; B_boot = 1000.
