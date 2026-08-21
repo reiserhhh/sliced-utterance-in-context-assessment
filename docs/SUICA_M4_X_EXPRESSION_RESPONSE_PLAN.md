@@ -1948,3 +1948,59 @@ estimator instrument) then X3 (the stage-E trait join, whose
 coordinate menu is now rich: response profile 0.279, rhythm 0.259,
 five relation slopes 0.22–0.42 — all Big5-higher — plus the strongly
 owned level parameters).
+
+---
+
+## X-M — the mains estimator (instrument leg, registered BEFORE run, 2026-08-19)
+
+The #87 prerequisite for X3: ESTIMATORS of the true author main Var(a)
+and community main Var(b) on the incomplete two-way design — X1c
+correctly renamed its budget rows MARGINAL; this leg builds the main
+estimators proper, R1-class (certificates only, no theory verdict).
+
+### Design
+
+- **Skeleton.** X1c's primary design (law vocabulary, support floor
+  s = 5: 3,665 authors × 1,000 communities, 31,899 shared pairs,
+  LCC coverage 1.000 — #78 anchors, STOP on mismatch), n_min = 10
+  cells, from X1's committed cell cache.
+- **Estimators.** Per half, the exact two-way FE fit (X1b/X1c
+  machinery, alternating projections to ≤ 1e-10 on both residual group
+  means); coefficients IDENTIFIED by the pinned normalization: author
+  and community coefficient vectors each centered to mean 0 over the
+  connected component, per half. Then:
+  Var̂(a) = cov over authors of (â_early, â_late);
+  Var̂(b) = cov over communities of (b̂_early, b̂_late), size-weighted
+  primary and unweighted secondary. Shares of comment-level Var(y).
+  Any joint-estimation df interaction is DERIVED, printed, and
+  contract-tested (the X1c pattern).
+- **Gate (the leg IS the gate; #85/#86/#89/#90/#92 in force).** On the
+  realized skeleton, wholly synthetic y, 8 replicates each: worlds
+  {a-only}, {b-only}, {g-only}, {null}, {full: a .30 + b .08 + g .02}.
+  ROUTING clauses: own-component recovery with floors stated as
+  RESOLUTION 0.01 in share units (#92) and #90 ceilings (rep-sd ≤
+  floor, else UNINFORMATIVE → A1); CROSS-LEAKAGE < 0.005 into every
+  other component in every world (the #85 zero-point family, now for
+  mains); bootstrap-zero on the null world (#85b); bootstrap-stability
+  of the zero under author resampling.
+- **Cells.** MAINS_CERTIFIED (all clauses) / INSTRUMENT_DEFECT
+  (any routing failure; A1, honest report). Certified values on the
+  REAL data are then reported once (the corpus main shares with CIs —
+  the first true main budget, superseding X1c's marginal-annotated
+  reading as the interpretable budget; X1c's rows remain valid under
+  their marginal name).
+- **Leans.** Certification passes (the machinery is X1b/X1c's, twice
+  certified for the interaction; the new risk is coefficient-level
+  normalization consistency). Real mains: author ≈ 0.15, community ≈
+  0.077 (X1c's 2×2-inversion annotations — now tested as predictions).
+
+### Deliverables and discipline
+
+Standard six; `scripts/run_suica_m4_xm_mains_estimator.py` + tests
+(normalization consistency; leakage battery; df derivation; anchors;
+#83 helper — baseline 4); gitignored `results/m4_xm_mains_estimator/`;
+report `reports/SUICA_M4_XM_MAINS_ESTIMATOR_REPORT.md`; outcome
+appended here; one CLAIMS_LEDGER row; ONE commit
+`feat(m4-x): X-M — the mains estimator — <VERDICT>`; suite green
+(1674 + new); SEED = 20260819; B_perm = 499 where applicable;
+B_boot = 1000. Metadata-only; label-free; profiles never opened.
