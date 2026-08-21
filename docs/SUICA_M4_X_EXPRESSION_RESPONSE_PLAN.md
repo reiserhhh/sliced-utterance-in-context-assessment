@@ -2560,3 +2560,198 @@ join (first_join logged; stamp < freeze < join proven). A1: instrument
 failures before the stamp mean no stamp. SEED = 20260819; B = 999.
 The planner records the label event in the private-repo audit ledger
 at adjudication.
+
+---
+
+## X3 outcome (executor, 2026-08-19)
+
+**VERDICT: `EXPRESSION_TRAIT_SILENT` (cell 1, no suffix — nothing detects, so
+nothing takes REDUNDANT/INCREMENTAL).** Tier EXPLORATORY, corpus-level,
+layer P. Harness `scripts/run_suica_m4_x3_trait_join.py`; report
+`reports/SUICA_M4_X3_TRAIT_JOIN_REPORT.md`; gitignored artifacts
+`results/m4_x3_trait_join/`.
+
+**All four coordinates were admitted, and all four are silent.** The
+dissociation family's sixth test returns its sixth silence — this time
+against the literature's oldest and most-cited metadata claim.
+
+### The stamp chain
+
+`config_stamped` < `coordinates_frozen` < `first_join`, proven from the
+artifact timestamps by G-X3 and machine-asserted in the contract tests
+(the proof is driven through all six order violations, the joint-quantity
+lie and the label-before-stamp lie). Joint quantities before the stamp: 0.
+Labels opened before the stamp: no. Both hashes match on recomputation.
+`author_profiles.csv` was opened ONCE, in stage E, through U3's certified
+reader, for `author` + the five Big5 columns; label completeness on the
+analysis pool was **1,116 of 1,116 (1.0000)**.
+
+A1 was honoured structurally: the whole instrument — anchors, coordinates,
+gate and four value reproductions — lives in part 0, BEFORE the stamp, so
+the registration's clean COORDINATES_UNRELIABLE exit could never have
+produced a stamp. Stage B then re-executed the coordinates from the same
+label-free sources and the split-half reliabilities came back BIT-IDENTICAL
+to the ones the stamp pinned (a determinism gate that did not exist in U3).
+
+### Anchors and the four value reproductions (all PASS)
+
+Inherited census exact: 17,640,062 parseable rows / 10,296 authors /
+1,401 Big5 / 8,895 disjoint / law vocabulary 1,443 at floor 89 /
+9,124 candidates = 8,008 disjoint + **1,116 Big5** / R2 pool 7,989 + **1,100**.
+
+The coordinates are the certifying legs' own estimators, and they prove it:
+
+| reproduced from | committed | recomputed here |
+|---|---|---|
+| X2 rhythm ownership, Big5 arm | 0.6366996180212687 | identical to < 1e-9 |
+| X5 R2 slope ownership, Big5 arm | 0.538039302428076 | identical to < 1e-9 |
+| X5 R2 mean floored slope, Big5 arm | 0.05203279700207156 | exact |
+| X-Mb certified author main, disjoint s=5 | 0.12858739914097542 | exact |
+| X-Mb disjoint chain census s=5 | 3,665 / 1,000 / 31,899 | exact |
+
+Three caches feed one coordinate table, so their author universes were
+checked rather than assumed (identical name lists, identical candidate pools,
+identical Big5 masks — BLOCKING).
+
+### The reliability gate (label-free, before the stamp)
+
+| coordinate | n eligible | split-half r | expected | gate |
+|---|---|---|---|---|
+| RAW LEVEL (person-mean y) | 1,116 | 0.8859 | ~0.9 | ADMIT |
+| ADJUSTED LEVEL (a_hat_u) | **408** | 0.9015 | ~0.9 | ADMIT |
+| RHYTHM (r1_u) | 1,116 | 0.6367 | 0.637 | ADMIT |
+| R2 SLOPE (floored) | 1,100 | 0.5380 | 0.538 | ADMIT |
+
+All four expectations landed; the rhythm and slope reliabilities ARE X2's and
+X5's routing statistics, to the tenth decimal.
+
+**THE #87 CENSUS THE REGISTRATION LEFT OPEN.** The Big5-cohort analog of the
+X1c predicate chain, censused label-free in part 0 and pinned into the stamped
+config: s = 3 → 446 authors / 431 communities / 3,889 shared pairs;
+**s = 5 (PRIMARY, X-Mb's certified support) → 408 / 240 / 3,261**; s = 8 →
+351 / 133 / 2,659. On the Big5 chain the FE budget reads author main 0.1376,
+community main 0.0458, interaction 0.0177, residual 0.7989 — the author main
+is close to the disjoint cohort's certified 0.1286, the community main lower.
+The chain costs 63% of the pool, which is the leg's largest honest anomaly.
+
+### The four rows
+
+| coordinate | N | raw r | band | p | bootstrap CI | partial \| bag | + activity |
+|---|---|---|---|---|---|---|---|
+| RAW LEVEL | 1,116 | **+0.0006** | [-0.0207, +0.0216] | 0.948 | [-0.0199, +0.0241] | -0.0020 (p 0.866) | -0.0020 (p 0.854) |
+| ADJUSTED LEVEL | 408 | **-0.0073** | [-0.0370, +0.0375] | 0.706 | [-0.0467, +0.0285] | -0.0078 (p 0.700) | -0.0079 (p 0.682) |
+| RHYTHM | 1,116 | **+0.0023** | [-0.0200, +0.0242] | 0.841 | [-0.0202, +0.0259] | +0.0008 (p 0.953) | +0.0002 (p 0.985) |
+| R2 SLOPE | 1,100 | **-0.0172** | [-0.0293, +0.0238] | 0.193 | [-0.0395, +0.0059] | -0.0189 (p 0.147) | -0.0197 (p 0.123) |
+
+Every raw r is inside its own permutation band; every bootstrap CI covers
+zero; the bag-partial and the activity-controlled row move nothing.
+
+**The silence is not a dead harness.** On the SAME pairs, with the SAME trait
+matrix and the SAME Mantel machinery, the Where channel is live:
+Mantel(bag-distance, trait-distance) = 0.0454 on the raw level's pool
+(0.0449–0.0528 across the four), against SR1's independently established
+0.049 on a different pool of 1,306. A descriptive with no null of its own,
+but it is the reading under which these bands mean what they say: the
+instrument finds the coupling it is known to find, in these very pairs, and
+finds none through any expression coordinate.
+
+### The level contrast
+
+The registered contrast never activated: the raw level does not detect, so
+there is nothing for the adjusted level to retain. Reported anyway, with the
+disclosed second reading that separates the adjustment from the chain's
+eligibility loss:
+
+| row | N | raw r | band | p | CI |
+|---|---|---|---|---|---|
+| RAW LEVEL, own support | 1,116 | +0.0006 | [-0.0207, +0.0216] | 0.948 | [-0.0199, +0.0241] |
+| ADJUSTED LEVEL | 408 | -0.0073 | [-0.0370, +0.0375] | 0.706 | [-0.0467, +0.0285] |
+| RAW LEVEL on the adjusted support (2nd reading) | 408 | -0.0080 | [-0.0364, +0.0368] | 0.659 | [-0.0455, +0.0326] |
+
+The third row is an EXECUTOR ADDITION, disclosed and routing nothing. It
+earns its place: raw and adjusted land within 0.0007 of each other ON THE SAME
+408 authors, so whatever the venue adjustment does to this coordinate, it does
+not move its (absent) trait coupling. The descriptive retention ratio
+(-11.76) is printed and explicitly NOT read — its denominator is inside its
+own band, so the ratio has no scale (#79 already forbids a null on it).
+
+### Projection against realized power
+
+| coordinate | N | projected mdr | realized 1.96 x null sd | ratio |
+|---|---|---|---|---|
+| RAW LEVEL | 1,116 | 0.0192 | 0.0218 | 1.135 |
+| ADJUSTED LEVEL | 408 | 0.0317 | 0.0369 | 1.165 |
+| RHYTHM | 1,116 | 0.0192 | 0.0227 | 1.187 |
+| R2 SLOPE | 1,100 | 0.0193 | 0.0261 | 1.354 |
+
+The registration's 0.019 at N ~ 1,116 reproduces as an arithmetic projection,
+but the REALIZED bands are 1.14x to 1.35x wider — the `z ~ r*sqrt(N)`
+transport of SR1's power to a different coordinate family is optimistic by
+about a sixth to a third. **The scoped silence is therefore scoped at the
+REALIZED widths, not at 0.019**: silent beyond |r| ~ 0.022 on the two
+full-pool coordinates, ~0.026 on the slope and ~0.037 on the adjusted level.
+
+### Secondary: the per-trait table
+
+0 of 20 cells survive the Bonferroni guard (alpha = 0.00250). The three
+largest, all failing it: ADJUSTED LEVEL x agreeableness 0.141 (p = 0.0042,
+n = 408); RHYTHM x neuroticism -0.087 (p = 0.0035, n = 1,116); RAW LEVEL x
+openness 0.086 (p = 0.0038, n = 1,116). Note what these are NOT: a marginal
+Pearson against one trait and a Mantel r against the five-dimensional trait
+geometry answer different questions, and only the Mantel row routes. The
+agreeableness cell is the one a future leg would have to explain if it
+wanted to reopen the level question — on 408 authors, at a p the guard
+rejects, it explains nothing here.
+
+### Leans
+
+- **Primary HELD** at the null end: registered `EXPRESSION_TRAIT_SILENT to
+  LEVEL_ONLY_COMPOSITION`, realized `EXPRESSION_TRAIT_SILENT`. The
+  composition branch never had to be adjudicated.
+- **Dynamics point HELD**: |raw r| = 0.0023 (rhythm) and 0.0172 (slope), both
+  inside the registered 0.03. The slope is the leg's largest |r| and still
+  well inside.
+- **Cohort caveat carried on every claim** (the sevenfold Big5-ownership flag;
+  the cohort's selection is inseparable from it).
+
+### Honest anomalies
+
+1. **The adjusted level costs two thirds of the pool** (408 of 1,116). It is
+   the least powerful row in the leg and the level contrast's two registered
+   rows do not stand on the same support — which is exactly why the second
+   reading was added.
+2. **Seven pool authors carry the zero bag signature** (no event in the 1,443
+   law communities), so their bag distance is exactly 1 to everyone. Reported,
+   not dropped; 7 of 1,116 cannot move a band.
+3. **The retention ratio is uninterpretable** under a silent verdict and is
+   printed only for completeness.
+4. **The slope row is the closest thing to a signal and is still inside**
+   (p = 0.193), and controlling the bag and activity moves it AWAY from zero
+   (-0.0172 -> -0.0189 -> -0.0197) rather than towards it. That is the shape a
+   real but sub-threshold coupling would also make. Named, not claimed.
+5. **The realized bands are wider than the projection said** (ratios above).
+
+### Governance
+
+Metadata only; no text body read anywhere. Label event named in the config,
+the report and the ledger: PANDORA Big5 re-join under an SR1-class stamp, one
+open, five columns, aggregates only, no per-author trait value in any
+committed file. #83 scan over the 10,296-name universe: **0 NEW hits**, 4
+pre-existing dictionary collisions carried unchanged from HEAD — and the scan
+is run TWICE, once at the gate and once again on the freshly written report,
+so no committed file is ever scanned only in a stale version. No
+psychological naming of any coordinate, as registered, regardless of outcome.
+
+### What this closes and what it does not
+
+Closes: crossing #2/#3 x Who on the X line's certified coordinates. The
+"personality lives in Where" family is not extended to expression, because
+expression does not couple in the first place — the composition question the
+atlas raised cannot be answered by a coordinate that has nothing to
+decompose. **The X line's own summary now reads: expression volume has strong
+author ownership (X1c/X2/X4/X5) and no measured trait content.**
+
+Does not close: the eq-12 caution stands — four first-order projections, on
+this cohort, measured this way. A coordinate family with genuine trait content
+(the bag channel) is live in the same pairs, so the silence is about these
+coordinates and not about the pool.
