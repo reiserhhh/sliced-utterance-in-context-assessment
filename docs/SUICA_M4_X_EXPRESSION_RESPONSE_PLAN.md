@@ -2420,3 +2420,143 @@ carried forward, plus the two this leg adds: a certified instrument is still
 only an instrument, and the gate was repaired rather than relaxed — paired
 scoring makes the ceiling stricter on the estimator while removing a term the
 clause was never entitled to charge it for.
+
+## X-Mb planner adjudication (2026-08-19)
+
+**Verdict ACCEPTED: `MAINS_CERTIFIED`** — 10/10 routing under paired
+scoring (R02's paired sd 0.000508, 30.9× inside its nominal spread,
+exactly as the X-M diagnosis predicted); the certification-before-real
+order machine-asserted (984,917 ns); anchors exact.
+
+**The first true main budget.** Author main **0.1286**
+[0.1230, 0.1357]; community main (size-weighted primary) **0.0552**
+[0.0523, 0.0596], unweighted 0.0786; against X1c's marginals
+0.1804 / 0.0928. **Both registered predictions MISSED — informatively:**
+X1c's 2×2 inversion over-corrected both mains by the SAME ~0.021
+(gaps differ by 0.0004), so the inversion is a decent but biased
+approximation; the true mains are now measured, and the marginal-vs-
+main gap itself (≈ 0.05 author, ≈ 0.04 community) is the measured
+composition content of the marginals. Leans held (both values inside
+their intervals).
+
+**Two honest anomalies adjudicated.** (1) R03's paired pass carries a
+KNOWN bias +0.00397 = the interaction→author term (matches the
+{g-only} leakage to the fifth decimal) — inside resolution, correctly
+passed, and now a NAMED term future mains legs must carry. (2) The
+planner's #93b worked example was WRONG: sweeping the nominal clause
+shows P(informative) FALLS with replicate count (0.267 → 0.011 at 60)
+because the replicate sd concentrates on the target's own draw sd —
+the counterfactual holds only for a ceiling on the SE of the mean. The
+#93b convention stands (budgets derived from closed forms); the
+derivation must target the statistic the ceiling actually reads.
+Dated correction recorded here; no new number. (3) Observation only:
+the unweighted community secondary lands 0.0016 from the old
+prediction while the weighted primary misses — weighting moves this
+estimand more than either CI width; the primary was named pre-run and
+routes.
+
+**X3's #87 prerequisite is DISCHARGED**, carrying two conditions into
+X3's design: the size-weighted community main has effective sample
+43.3, and full-world author readings carry the +0.004 interaction
+term inside resolution.
+
+---
+
+## X3 — the trait join of expression coordinates (registered BEFORE run, 2026-08-19)
+
+The X-line's stage-E label leg: the literature's classic claims
+(verbosity × personality) meet the dissociation family, on the
+coordinates this line certified. SR1-class stamp machinery (U3's
+implementation inherited verbatim by import-by-file); PANDORA Big5
+labels re-joined ONCE; the label event recorded release-side and in
+the private audit ledger at adjudication (planner-side).
+
+### 4W header
+
+- **Object.** Do the certified expression coordinates couple to Big5 —
+  and if the LEVEL does, does the coupling survive venue adjustment
+  (the composition question the atlas raises)? Crossing #2/#3 × Who.
+- **Coordinates (label-free, frozen stage B; four registered).**
+  (1) RAW LEVEL: person-mean y over the analysis pool (the
+  literature's object); (2) ADJUSTED LEVEL: the X-Mb author-main
+  coordinate â_u (venue-composition-free, certified this leg);
+  (3) RHYTHM: X2's r1_u (Big5-cohort ownership 0.637); (4) R2 SLOPE:
+  the gap×volume within-person slope (Big5 ownership 0.538, floored
+  per #89). Reliability gate (U3's, label-free, BEFORE the stamp):
+  split-half r ≥ 0.5 on the Big5 pool admits a coordinate; failures
+  reported and excluded; if ALL fail the leg stops clean
+  (COORDINATES_UNRELIABLE). Expectations: levels ≈ 0.9+, rhythm 0.637,
+  slope 0.538 — all four expected admitted.
+- **Fixed.** The Big5 pool (X2's 1,116 with per-coordinate
+  eligibility); SR1's trait geometry BY FORMULA (#81: z-scored 5-dim
+  Euclidean distance, the U3 pin); the bag distance (Hellinger
+  full-signature cosine on the SR0-class vocabulary over this pool)
+  for the increment partials; declared label reliability 0.8 (#57,
+  secondary readings only).
+- **What falsifies.** All admitted coordinates' raw Mantel r inside
+  their own permutation bands → EXPRESSION_TRAIT_SILENT (the
+  dissociation family's sixth test).
+- **Layer.** P (label-bearing).
+
+### Estimands (U3's machinery; own nulls; #79 ratio-free)
+
+Per admitted coordinate: raw Mantel r (|c_u − c_v| vs trait distance),
+permutation B = 999; partial Mantel | bag distance (SLS residual
+permutation, B = 999, linearity declared per #82); activity-controlled
+sensitivity. THE REGISTERED CONTRAST (routes alongside detection): if
+RAW LEVEL detects, does ADJUSTED LEVEL retain it? Retention =
+r_adjusted/r_raw as a descriptive with CIs on both rs (no ratio
+null — #79); the CELL structure below keys on detection patterns.
+Projection: minimal detectable r ≈ 0.019 at N ≈ 1,116 (z ∝ r√N from
+SR1's realized 5.42 at 1,306; assumption declared).
+
+### Cells (NULL-first #55; #75; the U3 scheme extended)
+
+1. **EXPRESSION_TRAIT_SILENT** — no admitted coordinate detects raw
+   (scoped: silent beyond r ≈ 0.019, with realized band widths).
+2. **LEVEL_ONLY_COMPOSITION** — raw level detects; adjusted level does
+   NOT; dynamics silent (the coupling rides venue composition — the
+   program's "personality lives in Where" family extended to
+   expression).
+3. **LEVEL_INTRINSIC** — both levels detect (coupling survives venue
+   adjustment).
+4. **DYNAMICS_COUPLED** — rhythm or slope detects raw (any level
+   pattern); the surprise cell.
+   Bag-partial results refine any detecting cell with the
+   REDUNDANT/INCREMENTAL suffix (U3's scheme). Per-trait table
+   (5 traits × admitted coordinates) is SECONDARY, Bonferroni-guarded,
+   never routing.
+
+### Registered leans
+
+- Primary: **EXPRESSION_TRAIT_SILENT to LEVEL_ONLY_COMPOSITION** —
+  the dissociation family's record (five silences) against the
+  literature's verbosity-E claim; if anything speaks it is the RAW
+  level, and the adjusted-level contrast then decides whether the
+  signal is composition (the family's prediction) or intrinsic.
+- |raw r| ≤ 0.03 for every dynamics coordinate.
+- The cohort caveat rides every claim (Big5-cohort ownership is
+  higher on all measured coordinates — X2/X5's sevenfold flag — and
+  the cohort's selection cannot be separated from it).
+
+### Deliverables and discipline
+
+Standard six; `scripts/run_suica_m4_x3_trait_join.py` + tests (stamp
+order; gate exclusion; Mantel/SLS on toys with planted structure and
+null worlds; coordinate determinism; import provenance; #83 helper
+with baseline 4; pytest tmp_path only); gitignored
+`results/m4_x3_trait_join/`; report
+`reports/SUICA_M4_X3_TRAIT_JOIN_REPORT.md` (rule-24; stamp chain;
+gate results; per-coordinate raw/partial table with bands; the
+level-contrast reading; per-trait secondary table; boundaries:
+metadata-only, no psychological naming of technical objects REGARDLESS
+of outcome, EXPLORATORY corpus-level, no person claims, the label
+event named, the cohort caveat); outcome appended here; one
+CLAIMS_LEDGER row naming the label event (SR1/U3 class); ONE commit
+`feat(m4-x): X3 — the trait join of expression coordinates —
+<VERDICT>`; suite green (1805 + new). Stage discipline: config stamp
+(no label) → stage B coordinates + gate + freeze/hash → single stage-E
+join (first_join logged; stamp < freeze < join proven). A1: instrument
+failures before the stamp mean no stamp. SEED = 20260819; B = 999.
+The planner records the label event in the private-repo audit ledger
+at adjudication.
