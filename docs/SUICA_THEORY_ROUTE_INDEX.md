@@ -29,7 +29,7 @@ Recommended reading order:
 | 2 | What is the current mathematical object? | [V8 Conditional Response Geometry](V8_CONDITIONAL_RESPONSE_GEOMETRY_THEORY.md), [V8 Mathematical Route](V8_MATHEMATICAL_RESEARCH_ROUTE.md) |
 | 3 | What micro mechanisms can generate it? | [M3 Foundation](SUICA_M3_MICRO_MESO_MACRO_FOUNDATION.md), [M3 Mechanism Atlas](SUICA_M3_MECHANISM_ATLAS_THEORY.md) |
 | 4 | Which objects survived each experiment? | [Claims Ledger](CLAIMS_LEDGER.md), [V7 Discovery Ledger](V7_DISCOVERY_LEDGER.md), named reports |
-| 5 | What are the inference boundaries? | [Foundational Closure Standard](SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md), [Foundation Gap Ledger](SUICA_FOUNDATION_GAP_LEDGER.md) |
+| 5 | What are the inference boundaries? | [Foundational Closure Standard](SUICA_FOUNDATIONAL_CLOSURE_STANDARD.md), [Cross-Level Inference Contract](SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md), [Foundation Gap Ledger](SUICA_FOUNDATION_GAP_LEDGER.md) |
 
 ## 2. Development lineage
 

@@ -4,8 +4,9 @@ Status: **canonical theory integration, 2026-08-01**
 
 This document is the shortest authoritative path through the current SUICA
 theory. Detailed protocols and reports remain the evidence record; when an old
-headline conflicts with this document and the claims ledger, the narrower
-audited claim controls.
+headline conflicts with this document, the claims ledger, or the
+[Cross-Level Inference Contract](SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md), the
+narrower audited claim controls.
 
 ## 1. What SUICA is
 

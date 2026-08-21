@@ -1,6 +1,6 @@
 # SUICA Claims Ledger
 
-Governance: SUICA_METHOD_VALIDATION_PLAN_V2.md section 5. One row per claim.
+Governance: SUICA_METHOD_VALIDATION_PLAN_V2.md section 5; cross-level rows also obey `SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md`. One row per claim.
 Statuses: `supported` / `directional` / `computed_pending_audit` / `failed` /
 `retired` / `not_run`. A claim may be cited in prose only at its ledger status.
 No number may be written here that is not computed by a script from a CSV/JSON
