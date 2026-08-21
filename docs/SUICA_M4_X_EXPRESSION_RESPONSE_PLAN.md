@@ -1893,3 +1893,58 @@ pre-existing dictionary collisions carried from HEAD). Suite 1,604 + 70 new.
 X5 closes. The bridge receives build-out item 2 (the map) and, unexpectedly,
 a correction to item 3's premise (there is no level-3 plateau). Queued behind
 it, unchanged: X-M / X3.
+
+## X5 planner adjudication (2026-08-19)
+
+**Verdict ACCEPTED: `ATLAS_HETEROGENEOUS`** — four distinct Δ cells
+across five relations on the primary cohort; every routing clause
+passed, every #90 ceiling INFORMATIVE, every #91 ladder COHERENT; the
+R1 import bit-checked at 0.0; 22/22 anchors.
+
+**The map's reading (the leg's theory yield).** The conflation error is
+a PROPERTY OF THE RELATION: relations routed through venue COMPOSITION
+(commonness × anything) are non-ergodic — sign-flip on volume
+(+0.076), sign-unresolved on score (−0.025, between-person NEGATIVE),
+and a 2.5× same-sign exaggeration on gap (Δ = −0.183, the atlas's
+largest error, on the one relation the planner declined to lean) —
+while relations between two BEHAVIORS (volume × score, gap × volume)
+are level-consistent at this power. Mechanism named (not tested),
+consistent with X4's: who-lives-where dominates between persons;
+within persons only the response to the venue remains. In the
+bridge's vocabulary: 「どの関係で混同が危険か」への最初の答え —
+**組成(Where)を経由する関係は危険、行動どうしの関係は比較的安全**。
+
+**Ownership is universal and the plateau is DEAD.** All five slopes
+are WEAKLY_OWNED on the disjoint cohort (0.216–0.415) and the Big5
+cohort reads HIGHER ON ALL FIVE (the cohort flag now at seven
+occurrences). The registered ≈0.27 plateau prediction BROKE (1 of 4 in
+band; spread 0.199) — level-3 reliability is a property of the
+RELATION, not a constant of the medium. A registered conjecture
+killed within one leg of its birth is the discipline working on
+theory, not just on instruments; build-out item 3's catalogue premise
+is corrected BEFORE compilation (catalogue BY RELATION, and BY
+PARAMETER CLASS — see the bridge §8 table this commit adds: LEVEL
+parameters are strongly owned, 0.77–0.94; RESPONSE/DYNAMICS
+parameters weakly, 0.22–0.42).
+
+**Defect #92 (planner, purchased; registry thirty-seventh note).** The
+X5 registration inherited X4's recovery tolerance in %-of-planted form
+where #90's own logic demands a RESOLUTION statement in the estimand's
+units — under the literal inherited floor every relation would have
+A1-stopped for replicate spreads the #90 ceiling itself certifies as
+informative. The executor's re-posing (absolute floor 0.02 in Δ units,
+matching the priced region scale) is accepted and conventionalized:
+gate floors are resolution statements in estimand units, tied to the
+priced region half-width, stated at registration. Remaining
+deviations (owned worlds on all four skeletons with only R2 routing;
+the refined route-2 predicate recorded beside the literal; the
+pinned plateau operationalization; the R1 pool distinction; the dev
+flag) accepted as recorded. Hygiene note for a future leg, no number:
+one contract test writes to /tmp instead of pytest tmp_path.
+
+**Line state.** X5 closes; the bridge receives §8 (the map + the
+ownership catalogue). Next per the build-out: X-M (the mains
+estimator instrument) then X3 (the stage-E trait join, whose
+coordinate menu is now rich: response profile 0.279, rhythm 0.259,
+five relation slopes 0.22–0.42 — all Big5-higher — plus the strongly
+owned level parameters).

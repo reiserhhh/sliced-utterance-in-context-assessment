@@ -424,3 +424,9 @@ mirror). N4's three candidates are all planner defects:
 | #89 | X-line / M4-X4 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X4 outcome + planner adjudication` | "sd(x) > 0" admitted a Σ(x−x̄)² = 4.7e−06 half (96% of a variance term from one author) and is float-path sensitive (8,004/8,008/8,000 by path). | none (convention: pool clauses state an ESTIMABILITY FLOOR in the estimand's own denominator units, with the computation path pinned) | estimability-floors |
 | #90 | same | same | max(floor, 3·rep sd) tolerances cannot distinguish "recovered" from "too unstable to say" (clause iii passed on a 1.69-rep-sd gap, uninformatively). | none (convention: recovery clauses carry a registered precision CEILING, or report UNINFORMATIVE as a first-class status) | tolerance-ceilings |
 | #91 | same | same | Priced #87 regions overlapped and silently EMPTIED an interior cell (the leaned WEAKLY_OWNED could not occur; cross-half Var went negative on the same fragile object). | none (convention: region pricing asserts LADDER COHERENCE — disjoint regions, non-empty interior cells — else the classification collapses to the coarser partition EXPLICITLY) | ladder-coherence |
+
+## Dated additions (2026-08-19, thirty-seventh note — X5; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #92 | X-line / M4-X5 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X5 outcome + planner adjudication` | The registration inherited a %-of-planted recovery floor where #90's ceiling logic demands a resolution statement in the estimand's units — the literal floor would have A1-stopped every relation for spreads the ceiling itself certifies as informative; the executor's units-based re-posing (floor = priced-region scale) accepted. | none (convention: gate tolerance floors are RESOLUTION statements in the estimand's units, tied to the priced region half-width, stated at registration) | floor-units |
