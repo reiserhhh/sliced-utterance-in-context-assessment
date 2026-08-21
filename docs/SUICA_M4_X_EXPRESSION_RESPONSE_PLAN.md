@@ -1321,3 +1321,214 @@ naming, cohort caveats); outcome appended here; one CLAIMS_LEDGER row;
 ONE commit `feat(m4-x): X4 — the three-level decomposition — <VERDICT>`;
 suite green (1541 + new); #83 scan (baseline 4). SEED = 20260819;
 B_perm = 499; B_boot = 1000.
+
+---
+
+## X4 outcome (executor, 2026-08-19)
+
+**`NONERGODIC_SIGN_FLIP`** (co-primary ownership: **`NOT_OWNED`**). All six
+ROUTING clauses of Part 0 passed and all six DESCRIPTIVE clauses annotated, so
+the A1 stop did not fire and the owner's three-level schema has its first
+corpus instance. Runtime about 40 s after the cache build (one stream pass
+over the 17,640,062-row comments file, four columns, then everything
+vectorised off a fresh gitignored event cache with x attached).
+
+**The headline, in one line: the between-person relation and the
+average-within-person relation have OPPOSITE SIGNS on this corpus.** Across
+people, someone who spends their life in commoner venues writes MORE
+(`beta_between = +0.069062` [+0.048843, +0.090518]); within a person, moving
+to a commoner venue makes them write LESS (`beta_within = −0.007316`
+[−0.011278, −0.003048]). `Delta_erg = +0.076377` [+0.055630, +0.097254], an
+interval nowhere near zero and 3.5× the width of the priced null-world region.
+Both slopes are detected against their own intervals, which is what the
+registered cell 3 requires.
+
+### The census reproduced the planner's table to the unit (#78, 21 predicates)
+
+| registered predicate | registered | observed |
+|---|---|---|
+| rows parseable | 17,640,062 | 17,640,062 |
+| authors (Big5 + disjoint) | 10,296 (1,401 + 8,895) | 10,296 (1,401 + 8,895) |
+| communities | 46,214 | 46,214 |
+| x = log10(share) range (2 dp) | [−7.25, −1.14] | [−7.25, −1.14] |
+| pool (≥ 50 each half ∧ sd(x) > 0 each half) | 8,004 / 1,112 | 8,004 / 1,112 |
+| within-author sd(x) q25/med/q75, disjoint | 0.805 / 0.965 / 1.111 | 0.805 / 0.965 / 1.111 |
+| within-author sd(x) q25/med/q75, Big5 | 0.660 / 0.856 / 1.013 | 0.660 / 0.856 / 1.013 |
+| distinct communities per author, median | 64 / 55 | 64 / 55 |
+| top-1 community share, med / q90 | 0.259 / 0.577 and 0.329 / 0.743 | same |
+
+TWO DEFINITIONS WERE PINNED BY THE ANCHORS, and both are worth recording
+because neither is the obvious reading.
+
+1. **"within-author sd(x)" is the MEAN OF THE AUTHOR'S TWO HALF SDs**
+   (population sd), not the sd over all of the author's events. Pooling both
+   halves reads 0.834 / 0.999 / 1.148 instead — a different quantity, because
+   an author who drifts between communities across their own median adds
+   BETWEEN-half spread that no within-half slope can use.
+2. **The `sd(x) > 0` pool clause is float-path sensitive, and the anchors pin
+   the path.** `np.std` on each half's contiguous x slice (numpy's pairwise
+   two-pass) gives exactly 8,004 / 1,112; a grouped sequential accumulation
+   gives 8,008 / 1,114; the mathematically exact test `min(x) == max(x)` gives
+   8,000 / 1,103. The anchored path therefore admits 13 halves whose x is
+   mathematically CONSTANT. The leg reproduces the anchored path exactly and
+   then handles those 13 where they belong: their contribution to the level-1
+   and level-2 pooled sums is exactly zero and is set to zero, and the level-3
+   estimator returns NaN for them and counts them (4 authors dropped on the
+   primary arm, 9 on Big5, 1 on floor-100).
+
+In-leg census: the floor-100 sensitivity pool is **6,859** disjoint authors;
+the primary arm carries 8,004 authors, 16,008 cells and 14,581,265 events; the
+Big5 arm 1,112 / 2,224 / 2,984,569.
+
+### Part 0 — six ROUTING clauses, all PASS
+
+| # | world | required | observed | status |
+|---|---|---|---|---|
+| i | ERGODIC (one β, intercepts unrelated to x̄_u) | \|mean Δ\| ≤ max(0.0050, 3·rep sd) = 0.026973 and ≥ 6/8 CIs cover 0 | Δ = +0.002027 (sd 0.008991), **8/8** CIs cover 0 | PASS |
+| ii | NON-ERGODIC, derived Δ = γ = +0.25 | \|gap\| ≤ max(2%·0.25, 3·rep sd) = 0.028108 | Δ = +0.256506 (sd 0.009369), gap +0.006506 | PASS |
+| iii | OWNED-SLOPES at the derived ρ = 0.50 | \|gap\| ≤ max(0.02, 3·rep sd) = 0.4948 | ρ_own = +0.7790 (sd 0.1649), gap +0.2790 = 1.69 rep sd | PASS (uninformative — see below) |
+| iv | NULL (β ≡ 0) — all four objects read 0 | ≥ 6/8 on each of five coverage counts | β_b +0.002927 (8/8), β_w +0.000141 (8/8), Δ +0.002786 (8/8), ρ_own +0.0024 (6/8 CIs, 7/8 in band) | PASS |
+| v | #85b bootstrap-zero on the NULL world | ≥ 6/8 both counts | Δ 8/8, ρ_own point-coverage 8/8 | PASS |
+| vi | #88a region pricing, pinned before any real number | three finite positive half-widths, artifact first | Δ ±0.021532; ρ ±0.3827 at 0.15, ±0.1837 at 0.50 | PASS |
+
+Clause (i) records a RECORDED REFINEMENT: the registration says "the Δ CI must
+cover 0 (8 replicates)", and with eight separately drawn 95% intervals the
+honest reading is a COVERAGE floor rather than "all eight or the leg dies"
+(Binomial(8, 0.95): a correct estimator fails an 8-of-8 requirement 34% of the
+time and a 6-of-8 requirement 0.58% of the time). The realized count was 8/8,
+so the refinement changed nothing about this run's outcome.
+
+The DERIVED Δ of clause (ii) is analytic and parameter-free: within-(u,h)
+centering annihilates a_u so E[β_within] = β, while ȳ_u = (β+γ)x̄_u + w_u + ē_u
+gives E[β_between] = β + γ, hence **Δ_erg = γ exactly**. The contract test
+asserts the identity to machine precision with the noise switched off, not
+merely on average. That same world also plants a SIGN FLIP (β_within = −0.10,
+β_between = +0.15) and D2 recovered it: −0.1000 / +0.1565.
+
+### The three levels
+
+| arm | authors | β_between (CI) | β_within (CI) | Δ_erg (CI) | cell |
+|---|---|---|---|---|---|
+| PRIMARY, disjoint | 8,004 | +0.069062 [+0.048843, +0.090518] | −0.007316 [−0.011278, −0.003048] | **+0.076377 [+0.055630, +0.097254]** | `NONERGODIC_SIGN_FLIP` |
+| Big5 replication | 1,112 | +0.051346 [−0.005921, +0.107078] | −0.009454 [−0.021970, +0.001675] | +0.060799 [+0.002037, +0.116844] | `NONERGODIC_SIGN_UNRESOLVED` |
+| floor-100 sensitivity | 6,859 | +0.063888 [+0.039694, +0.087040] | −0.007804 [−0.011817, −0.003275] | +0.071692 [+0.046891, +0.094870] | `NONERGODIC_SIGN_FLIP` |
+
+The Big5 arm lands in a CELL THE REGISTRATION DID NOT NAME. Its Δ excludes 0
+and its two slopes have opposite point signs, but neither slope's own interval
+excludes 0, so the flip is not established at n = 1,112. Rather than force it
+into cell 2 or cell 3 the runner adds a completeness fallback,
+`NONERGODIC_SIGN_UNRESOLVED`, and flags the divergence under #73. The primary
+routes. Read plainly: the Big5 cohort agrees in DIRECTION and magnitude with
+the primary and simply cannot resolve it — which is exactly what a 7×-smaller
+cohort should look like, and is a weaker kind of #73 flag than a real
+disagreement.
+
+Level 2 is the mean of two half slopes that DISAGREE: −0.014776 early,
++0.000144 late (Big5 −0.022666 / +0.003759; floor-100 −0.015400 / −0.000209).
+The registered estimand is their average and that is what routes, but level 2
+should not be read as a stationary quantity on this corpus. Nothing in this
+leg separates calendar drift, cohort composition, or the half split itself.
+
+### Level 3, and the leg's real methodological finding
+
+The level-3 object as registered is **ONE-AUTHOR FRAGILE**, and the leg's own
+#88a pricing is what exposed it. `den = Σ(x − x̄_cell)²` is unbounded below in
+this pool: the median half has den ≈ 324, but the smallest non-degenerate late
+half has den = 4.66e−06, so that ONE author's per-half slope carries a
+sampling variance of 214,404 — about 96% of the whole arm's
+A_late = 27.95 = σ²·E[1/den]. Consequences, all of them recorded:
+
+- the #76 mapping lands on a pathological operating point (V = 9.34,
+  sd(β_u) = 3.06) and clause (iii) recovers 0.779 instead of 0.500, PASSING
+  only because its own replicate sd is 0.165 and the tolerance is 3× that. The
+  clause is recorded as PASSED **and** as UNINFORMATIVE;
+- the priced ρ regions come out ±0.3827 at 0.15 and ±0.1837 at 0.50, which
+  OVERLAP: `WEAKLY_OWNED` is an EMPTY interval at this pricing. The
+  registration's own ownership lean therefore could not have held whatever the
+  data said, and is recorded BROKEN with that caveat attached. The routed cell
+  is unaffected — `NOT_OWNED` is decided NULL-first, by whether the interval
+  covers 0, never by a region edge;
+- `Var(β)` by cross-half covariance comes out NEGATIVE on the primary
+  (−0.00972847) and Big5 (−0.00047770) arms, so sd_true and the headroom are
+  undefined and print as n/a;
+- ρ_own reads −0.0052 with a wildly asymmetric CI [−0.0156, +0.2740] — the
+  bootstrap resamples that happen to omit the one author read ≈ +0.27.
+
+The x-only PRECISION FLOOR (den ≥ 1, i.e. the per-half slope's sampling sd
+does not exceed the event-noise sd) was pinned in the config before any real
+number and carried as a NON-ROUTING sensitivity on every arm. It excludes 14
+of 8,000 primary authors (0.18%) and changes the reading completely:
+
+| arm | authors above the floor | ρ_own (CI) | Var(β) | sd_true | headroom about the mean |
+|---|---|---|---|---|---|
+| PRIMARY | 7,986 | **+0.2768 [+0.2416, +0.3103]** | +0.00798683 | 0.089369 | [−0.1681, +0.1822] |
+| Big5 | 1,096 | **+0.3338 [+0.2590, +0.4184]** | +0.01745042 | 0.132100 | [−0.2555, +0.2623] |
+| floor-100 | 6,851 | +0.3246 [+0.2941, +0.3554] | +0.00778750 | 0.088247 | [−0.1692, +0.1767] |
+
+Part 0's D6 clause shows the machinery is sound and the pool's den tail is not:
+on the floored object the SAME planted worlds recover +0.5051 (sd 0.0138,
+half-width 0.0293) against a planted 0.50, and +0.1468 (half-width 0.0357)
+against a planted 0.15 — half-widths in the same range X2 realized (0.032 /
+0.045), which is what #88a expected a priced region to look like.
+
+**This is an executor annotation and it routes nothing**, but it should not be
+lost: at 0.2768 the floored primary sits within a whisker of X2's ρ_own = 0.259
+and X1c's R = 0.279. Three different second-order personal channels on the
+same corpus — venue response profile, expression path, and now the venue
+GRADIENT of expression volume — all land in the same narrow band. Whether that
+is one channel seen three ways or a coincidence of three ~0.27s is X3's
+problem, not this leg's.
+
+### Registered leans
+
+| lean | status |
+|---|---|
+| β_within < 0 | **HELD** (−0.007316, CI excludes 0) |
+| β_between < 0 | **BROKEN** — it is POSITIVE, +0.069062, and that reversal is the leg's finding |
+| Δ_erg NONERGODIC_SAME_SIGN with \|β_between\| > \|β_within\| | **BROKEN** on the cell (a SIGN FLIP, not same-sign); the magnitude half of the lean held, 0.069 vs 0.007 |
+| ρ_own WEAKLY_OWNED | **BROKEN** (`NOT_OWNED`) — against a ladder whose WEAKLY_OWNED interval was empty; the floored annotation reads +0.2768 |
+| Big5 same Δ cell | **BROKEN** (`NONERGODIC_SIGN_UNRESOLVED`, a power difference not a disagreement) |
+| Big5 ownership possibly higher | **HELD** (+0.3338 vs +0.2768 floored; the routed pair is noise) |
+
+### Governance
+
+Four metadata columns streamed once; no body ever read; `author_profiles.csv`
+never opened; the leg is label-free end to end. ID-leak scan over all 10,296
+author names PASSED with 0 NEW hits (4 pre-existing dictionary collisions
+carried unchanged from HEAD). The executor's first draft tripped the scan on
+two NEW hits — the word "independent" is a PANDORA username, the same
+collision the X2 executor recorded — and the prose was rewritten rather than
+the gate relaxed. #88a ordering asserted from artifact timestamps: the region
+pricing was on disk 6 ms before the first real-arm number and a test asserts
+the order from the artifacts, not from prose.
+
+### Deviations and defect candidates (none run)
+
+1. **DEVIATION (recorded, changed no outcome):** clause (i)'s "the CI must
+   cover 0 (8 replicates)" implemented as a ≥ 6/8 coverage floor with the
+   binomial arithmetic printed; realized 8/8.
+2. **DEVIATION (recorded):** a fourth Δ cell, `NONERGODIC_SIGN_UNRESOLVED`,
+   added for completeness because the registered cell 3 requires both slopes
+   detected and the Big5 arm satisfies everything except that. Without it the
+   Big5 arm would have been forced into a cell it does not belong in.
+3. **DEVIATION (recorded, non-routing):** the x-only precision floor arm and
+   the two floored Part 0 worlds (D5/D6) are unregistered additions. They exist
+   because the registered level-3 object turned out to be one-author fragile
+   and a report that said only `NOT_OWNED` would have been true and useless.
+4. **Defect candidate #89:** a pool predicate stated as `sd(x) > 0` is not a
+   predicate — three defensible float paths give three different pools
+   (8,004/1,112, 8,008/1,114, 8,000/1,103). Registrations should state the
+   ESTIMABILITY floor the clause is trying to enforce (here: a minimum
+   `Σ(x − x̄)²`, which is what actually bounds the slope's variance), not a
+   strict inequality on a computed sd.
+5. **Defect candidate #90:** a `max(floor, 3 × replicate sd)` tolerance cannot
+   distinguish "recovered" from "too unstable to say". Clause (iii) passed at a
+   gap of 0.279 on a target of 0.500. A routing tolerance should carry a
+   SECOND arm — a cap on the replicate sd itself, or a required ratio of gap to
+   floor — so that a runaway spread fails rather than absolves.
+6. **Defect candidate #91:** #87 boundary regions can OVERLAP once priced, which
+   silently empties an interior cell. The pricing step should assert ladder
+   coherence and, when the regions collide, report the ladder as unresolved
+   rather than letting a lean be scored against a cell that could not occur.
+7. Carried, unchanged: the X2 cohort-selection caveat — a Big5/disjoint
+   difference cannot be separated from how the 1,401 were selected.
