@@ -2755,3 +2755,45 @@ Does not close: the eq-12 caution stands — four first-order projections, on
 this cohort, measured this way. A coordinate family with genuine trait content
 (the bag channel) is live in the same pairs, so the silence is about these
 coordinates and not about the pool.
+
+## X3 planner adjudication + THE X-LINE CLOSES (2026-08-21)
+
+**Verdict ACCEPTED: `EXPRESSION_TRAIT_SILENT` — the dissociation
+family's SIXTH confirmation, now on expression coordinates.** All four
+coordinates admitted (reliabilities 0.886 / 0.902 / 0.637 / 0.538,
+reproducing the registered expectations to the last digit where
+committed values existed) and all four silent — raw rs +0.0006 to
+−0.0172, every one inside its band — while the LIVE ANCHOR carries the
+weight: Mantel(bag, trait) = 0.0454 on the same pairs (SR1's 0.049
+independently reproduced a third time). The channel is alive; the
+coordinates are mute. The literature's verbosity × personality claim
+finds no support on this corpus at this power; the scoped silence is
+stated at the REALIZED widths (|r| ≈ 0.022 full-pool, 0.026 slope,
+0.037 adjusted — the z∝r√N projection ran optimistic 1.14–1.35×, a
+dated calibration note, no number). The level contrast never activated:
+the composition question dissolved — a coordinate with nothing to
+decompose. The Big5-chain FE budget censused in-leg (author 0.1376,
+community 0.0458, interaction 0.0177 at 408/240/3,261) sits beside the
+disjoint budget (0.1286 / 0.0552 / 0.0190) — the mains transport-close
+across cohorts, an observation banked for free.
+
+**Adopted from the executor:** the INSTRUMENT-BEFORE-STAMP structure
+(the entire instrument — anchors, coordinates, gate — executes in
+Part 0 before the stamp, with stage B re-executing bit-identically) is
+the standing stage pattern for all future label legs; A5 (the slope
+row's controls moving it away from zero, the shape a sub-threshold
+coupling would make) is named-not-claimed and priced for any future
+higher-power look; all disclosed deviations accepted. Label event
+recorded release-side (ledger row) and in the private audit ledger
+(planner commit 4a303c1). Leans held at the null end. Zero new
+planner defects.
+
+**THE X-LINE CLOSES** — nine legs (X1/X1b/X1c, X2, X4, X5, X-M/X-Mb,
+X3), two A1 stops with zero real-data contamination, one label event,
+defects #85–#93 purchased, and the line's yield in one paragraph:
+**expression volume is venue-conditioned in three layers, author-owned
+in every parameter measured, non-ergodic wherever composition routes
+the relation — and trait-mute everywhere.** The support mission's
+honest conclusion for the bridge: this system offers the three-level
+readout and the level-3 reliability instruments; it does not offer
+trait proxies, and says so with certified silence.
