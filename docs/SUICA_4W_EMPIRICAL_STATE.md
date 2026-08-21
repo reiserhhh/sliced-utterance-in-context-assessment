@@ -164,3 +164,31 @@ The expression-side readings are VOLUME-only (no text bodies were
 read); content-bearing What objects remain unopened and are a
 governance decision, not a loop decision. Priority 5 (external
 connection) remains the program's one unanswered theory priority.
+
+## Dated addendum (2026-08-21) — the X-line closes; the measurement-series program lands
+
+The X-line's nine legs (plan `SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md`;
+bridge `SUICA_MEASUREMENT_SERIES_BRIDGE.md`) complete the expression
+side of the crossing table and add a chapter the theory did not have —
+the OWNER's measurement-series program (三枝・下司 2025):
+
+- Crossing #2 deepened: the true mains are measured (author 0.1286,
+  community 0.0552; the marginal-vs-main gap is the composition
+  content); the idiosyncratic response stands at the TRACE boundary.
+- Crossing #3 deepened: the ergodicity ATLAS — the conflation error is
+  a property of the relation (sign-flip and 2.5× exaggeration where
+  composition routes; level-consistency between behaviors); the
+  three-level readout from one recording, one scale, is demonstrated
+  (three-level completeness, bridge §6).
+- The ownership catalogue: LEVEL parameters strongly owned (0.77–0.94),
+  RESPONSE/DYNAMICS parameters weakly (0.22–0.42), Big5-cohort higher
+  on every measured coordinate (the sevenfold flag, selection-caveat
+  bound).
+- The dissociation family's SIXTH confirmation (X3): every certified
+  expression coordinate is Big5-silent while the bag channel reproduces
+  SR1's 0.049 on identical pairs. The support mission's honest form:
+  this system supplies three-level readouts and level-3 reliability
+  instruments — not trait proxies.
+
+Defects #85–#93; suite 1,873; the label ledger carries the X3 event.
+Owner-gated frontiers unchanged: W3, external connection, native corpus.
