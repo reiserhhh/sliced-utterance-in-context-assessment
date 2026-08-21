@@ -416,3 +416,11 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #88 | X-line / M4-X2 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X2 outcome + planner adjudication` | The #87 boundary-region half-width was priced from the analytic null sd (0.011) while realized bootstrap half-widths run 0.032–0.045 (the region under-covers the interval it prices); arms with different pool sizes make cross-arm comparisons partly precision comparisons. | none (convention: boundary-region widths are priced from the PROJECTED BOOTSTRAP width of the non-null estimate, never the null sd; cross-arm comparisons of owned-variance objects use the implied-variance scale or size-matched subpools — W2's size-matching lesson extended within legs) | region-pricing |
+
+## Dated additions (2026-08-19, thirty-sixth note — X4; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #89 | X-line / M4-X4 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X4 outcome + planner adjudication` | "sd(x) > 0" admitted a Σ(x−x̄)² = 4.7e−06 half (96% of a variance term from one author) and is float-path sensitive (8,004/8,008/8,000 by path). | none (convention: pool clauses state an ESTIMABILITY FLOOR in the estimand's own denominator units, with the computation path pinned) | estimability-floors |
+| #90 | same | same | max(floor, 3·rep sd) tolerances cannot distinguish "recovered" from "too unstable to say" (clause iii passed on a 1.69-rep-sd gap, uninformatively). | none (convention: recovery clauses carry a registered precision CEILING, or report UNINFORMATIVE as a first-class status) | tolerance-ceilings |
+| #91 | same | same | Priced #87 regions overlapped and silently EMPTIED an interior cell (the leaned WEAKLY_OWNED could not occur; cross-half Var went negative on the same fragile object). | none (convention: region pricing asserts LADDER COHERENCE — disjoint regions, non-empty interior cells — else the classification collapses to the coarser partition EXPLICITLY) | ladder-coherence |

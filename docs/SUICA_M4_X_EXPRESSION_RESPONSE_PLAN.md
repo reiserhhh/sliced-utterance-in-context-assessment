@@ -1532,3 +1532,65 @@ the order from the artifacts, not from prose.
    rather than letting a lean be scored against a cell that could not occur.
 7. Carried, unchanged: the X2 cohort-selection caveat — a Big5/disjoint
    difference cannot be separated from how the 1,401 were selected.
+
+## X4 planner adjudication (2026-08-19)
+
+**Verdict ACCEPTED: `NONERGODIC_SIGN_FLIP`** — Δ_erg = +0.0764
+[+0.0556, +0.0973] on 8,004 authors, with β_between = +0.0691 and
+β_within = −0.0073 of OPPOSITE SIGNS; the floor-100 arm reproduces the
+cell; the Big5 arm is same-direction underpowered
+(NONERGODIC_SIGN_UNRESOLVED, a #73 power flag, not a disagreement —
+its Δ CI [+0.0020, +0.1168] sits inside the primary's story). The
+executor's added fourth cell is adopted retroactively as the honest
+handling of an underpowered replication. Gate 6/6 routing first try;
+the ERGODIC world read Δ = +0.002 (8/8 CIs covering 0) — the
+instrument demonstrably does NOT manufacture non-ergodicity.
+
+**The reading, in the bridge's vocabulary.** Between persons, a life
+spent in commoner venues goes with WRITING MORE; within a person,
+moving to a commoner venue goes with WRITING LESS. The between-person
+relation is not merely a biased estimate of the within-person one —
+it has the WRONG SIGN. 三枝・下司 (2025) の警鐘のこの関係における
+実測形:個人間関係から個人内関係を読むと、大きさ以前に**向き**を
+誤る。The plausible mechanism (named, not tested): composition —
+who lives where — dominates between persons, while the within-person
+response reflects venue norms; selection and response point in
+opposite directions here.
+
+**Ownership: NOT_OWNED as routed, with the instructive fracture on
+record.** The registered level-3 object carried no estimability
+floor: one author-half with Σ(x−x̄)² = 4.7e−06 contributed 96% of a
+variance term, the priced ρ regions ballooned (±0.38) until
+WEAKLY_OWNED became an EMPTY interval (the leaned cell could not
+occur), and cross-half Var(β) went negative. NULL-first routing kept
+the verdict sound. The executor's non-routing precision floor
+(den ≥ 1) reads **ρ_own = +0.2768 [+0.2416, +0.3103]** — and the
+planner notes for the record what now stands beside it: X1c's
+response-profile persistence 0.279, X2's rhythm ownership 0.259.
+**Three different level-3 expression parameters, one narrow band
+around ≈ 0.27 on the disjoint cohort.** Named (not claimed): a
+possible level-3 reliability plateau for expression metadata at this
+span — a future look, priced, not queued. Big5 ownership again higher
+(+0.334), the X2 cohort flag repeating.
+
+**Defects #89–#91 (planner, purchased; registry thirty-sixth note).**
+(a) #89: a pool clause stated as "sd(x) > 0" is not an estimability
+predicate — it admitted a 4.7e−06 denominator, and it is float-path
+sensitive (8,004 / 8,008 / 8,000 by computation path; the anchored
+path reproduced, but predicates must state an estimability FLOOR in
+the estimand's own denominator units and pin the computation path).
+(b) #90: a tolerance of max(floor, 3·rep sd) cannot distinguish
+"recovered" from "too unstable to say" — clause (iii) passed
+uninformatively on a 1.69-rep-sd gap; recovery clauses carry a
+registered precision CEILING or report UNINFORMATIVE as a first-class
+status. (c) #91: priced #87 regions can overlap and silently EMPTY an
+interior cell — region pricing must assert LADDER COHERENCE (regions
+disjoint and every interior cell non-empty), else the classification
+collapses to the coarser partition EXPLICITLY. Lean record: 2 held,
+4 broken — including the leaned ρ cell broken against an interval
+that could not occur (#91's teeth).
+
+**Line state.** X4 closes. The bridge (§2) receives the sign-flip in
+the paper's vocabulary with this commit. Next per the bridge build-out:
+X5 (the ergodicity atlas) with #89–#91 baked into its registration;
+X-M/X3 queued behind it.
