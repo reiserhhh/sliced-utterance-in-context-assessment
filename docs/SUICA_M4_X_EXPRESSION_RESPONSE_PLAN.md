@@ -2765,9 +2765,11 @@ reproducing the registered expectations to the last digit where
 committed values existed) and all four silent — raw rs +0.0006 to
 −0.0172, every one inside its band — while the LIVE ANCHOR carries the
 weight: Mantel(bag, trait) = 0.0454 on the same pairs (SR1's 0.049
-independently reproduced a third time). The channel is alive; the
-coordinates are mute. The literature's verbosity × personality claim
-finds no support on this corpus at this power; the scoped silence is
+reappears under a different same-PANDORA pool/procedure; this is not an
+independent-corpus replication). The registered multivariate coupling is
+not detected in these coordinates. The literature's verbosity ×
+personality claim finds no support in this corpus under this primary test;
+the scoped non-detection is
 stated at the REALIZED widths (|r| ≈ 0.022 full-pool, 0.026 slope,
 0.037 adjusted — the z∝r√N projection ran optimistic 1.14–1.35×, a
 dated calibration note, no number). The level contrast never activated:
@@ -2791,9 +2793,12 @@ planner defects.
 **THE X-LINE CLOSES** — nine legs (X1/X1b/X1c, X2, X4, X5, X-M/X-Mb,
 X3), two A1 stops with zero real-data contamination, one label event,
 defects #85–#93 purchased, and the line's yield in one paragraph:
-**expression volume is venue-conditioned in three layers, author-owned
-in every parameter measured, non-ergodic wherever composition routes
-the relation — and trait-mute everywhere.** The support mission's
+**expression volume is venue-conditioned in three layers and author-owned
+in every parameter measured. Three commonness-involving projections show
+the clearest cross-level transport gaps; two behavior-behavior projections
+show no resolved gap at this power. None of the four registered expression
+coordinates detects multivariate Big5 geometry at its realized resolution.**
+The support mission's
 honest conclusion for the bridge: this system offers the three-level
 readout and the level-3 reliability instruments; it does not offer
 trait proxies, and says so with certified silence.

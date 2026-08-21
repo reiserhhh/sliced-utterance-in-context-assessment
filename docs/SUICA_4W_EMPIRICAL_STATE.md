@@ -175,20 +175,25 @@ the OWNER's measurement-series program (三枝・下司 2025):
 - Crossing #2 deepened: the true mains are measured (author 0.1286,
   community 0.0552; the marginal-vs-main gap is the composition
   content); the idiosyncratic response stands at the TRACE boundary.
-- Crossing #3 deepened: the ergodicity ATLAS — the conflation error is
-  a property of the relation (sign-flip and 2.5× exaggeration where
-  composition routes; level-consistency between behaviors); the
-  three-level readout from one recording, one scale, is demonstrated
-  (three-level completeness, bridge §6).
+- Crossing #3 deepened: the cross-level transport atlas (historical artifact
+  name: ergodicity atlas) — the five registered projections show a sign flip,
+  a 2.5× exaggeration and two unresolved gaps. This diagnoses transport of
+  those slopes, not full process ergodicity. A three-level readout from one
+  dense longitudinal stream in commensurable units is demonstrated; neither
+  psychometric invariance nor equality across levels is implied (bridge §6).
 - The ownership catalogue: LEVEL parameters strongly owned (0.77–0.94),
   RESPONSE/DYNAMICS parameters weakly (0.22–0.42), Big5-cohort higher
   on every measured coordinate (the sevenfold flag, selection-caveat
   bound).
-- The dissociation family's SIXTH confirmation (X3): every certified
-  expression coordinate is Big5-silent while the bag channel reproduces
-  SR1's 0.049 on identical pairs. The support mission's honest form:
+- The dissociation family's SIXTH test (X3): none of the four certified
+  expression coordinates detects the registered multivariate Big5 coupling
+  at its coordinate-specific realized resolution, while the bag channel
+  repeats SR1's approximately 0.049 same-corpus pattern on identical pairs.
+  This is analytical recurrence, not independent-corpus replication. The
+  support mission's honest form:
   this system supplies three-level readouts and level-3 reliability
   instruments — not trait proxies.
 
-Defects #85–#93; suite 1,873; the label ledger carries the X3 event.
+Defects #85–#95; suite count is historical and must be rerun before citation;
+the label ledger carries the X3 event.
 Owner-gated frontiers unchanged: W3, external connection, native corpus.
