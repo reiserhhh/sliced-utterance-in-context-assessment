@@ -976,3 +976,177 @@ appended here; one CLAIMS_LEDGER row; ONE commit
 `feat(m4-x): X2 — the path of expression volume — <VERDICT>`; suite
 green (1455 + new); #83 scan (baseline 4 pre-existing).
 SEED = 20260819; B_perm = 499; B_boot = 1000.
+
+---
+
+## X2 outcome (executor, 2026-08-19)
+
+**`WEAKLY_OWNED`.** All five ROUTING clauses of Part 0 passed and both
+DESCRIPTIVE clauses annotated cleanly, so the A1 stop did not fire and
+crossing #3 has its first corpus number. Runtime about 640 s (one stream pass
+over the 17,640,062-row comments file, then everything vectorised off a
+fresh gitignored event cache).
+
+### The census reproduced the planner's table to the unit (#78)
+
+| registered predicate | registered | observed |
+|---|---|---|
+| rows parseable | 17,640,062 | 17,640,062 |
+| authors (Big5 + disjoint) | 10,296 (1,401 + 8,895) | 10,296 (1,401 + 8,895) |
+| pool ≥ 50 events in EACH half, disjoint | 8,008 | 8,008 |
+| pool ≥ 50 events in EACH half, Big5 | 1,116 | 1,116 |
+| cross-thread share of within-half adjacencies, disjoint | 0.73159 | 0.73159 |
+| cross-thread share of within-half adjacencies, Big5 | 0.62054 | 0.62054 |
+| degenerate halves (sd = 0) | 0 / 0 | 0 / 0 |
+| median adjacencies per half | 348.0 / 491.75 | 348.0 / 491.75 |
+
+Definition pinned by the anchor: "median adjacencies per half" is the
+MEDIAN OVER AUTHORS of the MEAN of that author's two half adjacency
+counts. The Big5 quarter-fraction 491.75 is reachable no other way, and
+that is what fixed the reading. In-leg census: the floor-100
+sensitivity pool is **6,863** disjoint authors; the primary arm carries
+16,016 cells, 14,586,457 events and 14,570,441 within-half adjacencies;
+the cross-thread arm keeps 10,659,581 of them. Zero cells were
+undefined and zero authors were dropped on any arm.
+
+### Part 0 — the gate on the realized skeleton (wholly synthetic y)
+
+| # | ROUTING clause | observed | status |
+|---|---|---|---|
+| i | ownership recovery, author-owned AR(1) at planted ρ_own = 0.50 | 0.4977 over 8 replicates (sd 0.0119), gap −0.0023, tolerance 0.0357 | **PASS** |
+| ii | COMMON-PATH null world: presence WITHOUT ownership | ρ_own +0.0085, CI [−0.0197, 0.0384], band [−0.0203, 0.0217] | **PASS** |
+| iii | iid world | mean r1 −0.004565 in [−0.005659, −0.003678]; ρ_own +0.0131 in [−0.0225, 0.0234] | **PASS** |
+| iv | marginal preservation, BIT-EXACT | 16,016 cells; multisets bit-exact; the index array is a permutation; no index leaves its own cell | **PASS** |
+| v | #85b bootstrap-zero on the common-path world | CI [−0.0197, 0.0384] covers 0 and covers its own point | **PASS** |
+
+| # | DESCRIPTIVE clause | observed |
+|---|---|---|
+| D1 | mean-r1 recovery, AR(1) world | +0.1927 observed vs +0.1923 predicted (Marriott–Pope) |
+| D2 | mean-r1 recovery, common-path world | +0.1918 observed vs +0.1925 predicted |
+
+The **ownership mapping** was derived, printed and solved rather than
+tuned. With g(φ) ≈ φ and Bartlett's Var(r1) = (1 − φ²)/n, the per-half
+errors carry no cross-half covariance, so ρ_own = V / √((V+A_e)(V+A_l))
+with A_h = (1 − φ̄² − V)·E_u[1/(n_{u,h} − 1)]. On the realized skeleton
+m_e = 0.00465751, m_l = 0.00467906, and the bisection solution at
+φ̄ = 0.20, ρ = 0.50 is V = 0.00446072, i.e. **sd(φ_u) = 0.066789** —
+the readable special case V = A (plant exactly as much across-author φ
+variance as the estimator's own sampling variance). The COMMON-PATH
+world is the design's decisive honesty check and it behaved: presence
+0.1918 — as strong as the owned world's 0.1927 — with ρ_own +0.0085 and
+a CI covering zero. A world with a path but no owner was **not** called
+owned.
+
+### The corpus reading
+
+| arm | authors | adjacencies | presence mean r1 | band | ρ_own | CI | pairing band | cell |
+|---|---|---|---|---|---|---|---|---|
+| **PRIMARY** raw adjacency, disjoint | 8,008 | 14,570,441 | **+0.1111** | [−0.005635, −0.003648] | **0.2589** | [0.2273, 0.2921] | [−0.0228, 0.0213] | `WEAKLY_OWNED` |
+| cross-thread only | 8,008 | 10,659,581 | +0.0545 | [−0.006454, −0.003859] | 0.1062 | [0.0713, 0.1394] | [−0.0200, 0.0209] | `PATH_NOT_OWNED` **#73** + **#87 straddle** |
+| venue-residualized | 8,008 | 14,570,441 | +0.0917 | [−0.005820, −0.003643] | 0.2204 | [0.1864, 0.2534] | [−0.0225, 0.0213] | `WEAKLY_OWNED` |
+| Big5 replication | 1,116 | 2,989,174 | +0.1773 | [−0.006953, −0.001800] | 0.6367 | [0.5894, 0.6785] | [−0.0572, 0.0549] | `STRONGLY_OWNED` **#73** |
+| floor-100 sensitivity | 6,863 | 14,402,480 | +0.1150 | [−0.003999, −0.002226] | 0.3341 | [0.2977, 0.3653] | [−0.0246, 0.0251] | `WEAKLY_OWNED` |
+
+**PRESENCE is unambiguous on every arm** — the primary's mean r1 sits
+about 58 band-widths above the upper edge of its own
+marginal-preserving band. **OWNERSHIP routes at 0.2589**, a CI that
+clears the 0.161 region edge by 0.066 and the 0.489 edge by 0.197: the
+primary cell is `WEAKLY_OWNED` and it is **not** a straddle. Retention
+ratios: venue-residualized **0.8516**, cross-thread **0.4104**.
+
+### Leans: two held, three broke
+
+| lean | registered | observed | status |
+|---|---|---|---|
+| presence positive and detected (magnitude un-leaned, #57) | > 0 and outside the band | +0.1111 vs [−0.005635, −0.003648] | **HELD** |
+| ρ_own ∈ (0.30, 0.60] | (0.30, 0.60] | 0.2589 | **BROKEN** (low) |
+| cross-thread retains most | ≥ 0.50 | 0.4104 | **BROKEN** |
+| venue-residualized retains most | ≥ 0.50 | 0.8516 | **HELD** |
+| Big5 same cell | `WEAKLY_OWNED` | `STRONGLY_OWNED` | **BROKEN** (high) |
+
+The ownership lean broke LOW and the Big5 lean broke HIGH, which is one
+fact seen twice — see the attenuation arithmetic below.
+
+### Attenuation arithmetic (ANNOTATION; nothing routes on it)
+
+The registration named the attenuation and refused to correct for it.
+Inverting the SAME first-order model Part 0 plants — A from each arm's
+own pair counts and its own mean r1, then V from its own ρ_own — reads:
+
+| arm | median pairs/cell | A | implied Var(φ) | implied sd(φ) |
+|---|---|---|---|---|
+| primary | 348.0 | 0.004600 | 0.001610 | 0.0401 |
+| cross-thread | 266.0 | 0.006169 | 0.000740 | 0.0272 |
+| venue-residualized | 348.0 | 0.004618 | 0.001309 | 0.0362 |
+| Big5 | 492.0 | 0.004154 | 0.007303 | 0.0855 |
+| floor-100 | 447.0 | 0.003034 | 0.001524 | 0.0390 |
+
+Three readings follow, and they are the leg's real content beyond the
+cell. (1) The **floor-100 arm is the primary at a better precision**:
+0.3341 against 0.2589, but the implied Var(φ) agrees to 5%
+(0.001524 vs 0.001610). Two ρ, one object. (2) The **Big5 divergence is
+NOT attenuation**: its A is if anything smaller, and its implied Var(φ)
+is **4.5×** the primary's, with the higher presence to match
+(0.1773 vs 0.1111). The label-carrying cohort genuinely has more
+across-author dispersion in this path parameter than the disjoint
+cohort does. (3) The **cross-thread loss is not only arithmetic**: its
+implied Var(φ) is 46% of the primary's on top of a larger A, so a real
+part of the owned rhythm is reply-chain mechanics — U1's 43.8%
+precedent priced this and the lean paid.
+
+### Honest anomalies
+
+- The presence permutation band sits **entirely below zero**. A uniform
+  permutation of a finite sequence has a small negative expected lag-1
+  correlation; the primary's null mean is −0.004680 against the
+  analytic offset −E[1/pairs] = −0.004668. It is a bias-offset band,
+  not a zero band. Detection is untouched.
+- The Big5 arm reads **above the trait-join-eligible level** (0.6367,
+  CI entirely above 0.511) while the primary does not. Whatever X3
+  intends to join, it will join it on the cohort that reads
+  `STRONGLY_OWNED`, and the two cohorts do not agree.
+- The cross-thread cell is a **#87 straddle**: its CI crosses 0.139, so
+  `PATH_NOT_OWNED` there is boundary-sensitive and should be read as
+  "at or below the low boundary", not as a clean null.
+- The cluster-bootstrap interval is asymmetric about its point on the
+  null world (+0.0085 inside [−0.0197, 0.0384]) — X1c's asymmetry,
+  unchanged, conservative on the side that matters, and far from every
+  region edge on the primary.
+
+### Boundaries carried
+
+Metadata only, expression VOLUME and not content (permanent — no body
+was read); the What × When projection caution (r1 is ONE static
+projection of the trajectory kernel, so 0.2589 is a lower bound on the
+kernel's ownership and a flat r1 would not have falsified dynamics); no
+psychological naming; EXPLORATORY corpus-level, no person claims; the
+disjoint cohort is TYPOLOGY-ENRICHED by construction; the attenuation
+note (raw ρ_own routes, no disattenuation); and NEW — the pool floors
+at 50 events in EACH half, so the leg speaks only for authors active on
+both sides of their own median.
+
+### Deviations and defect candidates (none run)
+
+- **Deviation (recorded):** the leg builds its OWN event cache rather
+  than reusing X1's. X1's cache aggregates over (author, community,
+  half) and carries neither event order nor `link_id`, so it cannot
+  serve a path estimand. One stream pass, five metadata columns, no
+  bodies.
+- **Deviation (recorded):** two unregistered ANNOTATIONS are printed —
+  a cluster-bootstrap interval on the presence mean, and the
+  attenuation arithmetic above. Both are labelled in the report; the
+  verdict touches neither.
+- **Defect candidate (#87 follow-on):** the registered region
+  half-width 0.011 was the ANALYTIC 1/√N projection, and the realized
+  cluster-bootstrap half-widths are 0.032 (primary) and 0.045 (Big5) —
+  three to four times wider. A region set from the analytic width
+  under-covers the interval it is meant to price; future legs should
+  set the region from the REALIZED interval or say why not.
+- **Defect candidate:** presence and ownership are reported per arm,
+  but the arms' pool sizes differ (8,008 / 6,863 / 1,116), so the
+  cross-arm comparison is partly a precision comparison. A leg that
+  wants arms comparable should match precision, not just floor it.
+- **Defect candidate:** the lag-1 projection is one coordinate. The
+  Big5/disjoint dispersion gap (4.5×) is the kind of thing that could
+  be a genuine cohort difference or a selection artifact of how the
+  1,401 were sampled; neither this leg nor X1 can separate them.
