@@ -2142,3 +2142,80 @@ all 10,296 author names cleared with **0 NEW hits** (4 pre-existing
 dictionary collisions carried unchanged from HEAD). Every X-line boundary is
 carried forward, plus the one this leg adds: it is an INSTRUMENT leg, and
 nothing it certifies is evidence about people or venues.
+
+## X-M planner adjudication (2026-08-19)
+
+**Registered outcome ACCEPTED: `INSTRUMENT_DEFECT` as routed — and the
+diagnosis is unambiguous: THE ESTIMATOR IS SOUND, THE GATE CLAUSE WAS
+UNDERPOWERED.** 9/10 routing clauses passed. R02 (size-weighted
+community own-recovery) read UNINFORMATIVE because the size-weighted
+covariance concentrates on an EFFECTIVE 43.3 communities of the
+nominal 1,000: the planted target's own draw noise (closed form
+0.08·√(2Σp²) = 0.0172) exceeds the #90 ceiling (0.01), so
+P(8-replicate sd ≤ ceiling) = 0.267 for ANY correct estimator — and
+the honest anomaly proves it: R04 passed the same ceiling on the same
+estimand at that same 0.267. Paired scoring (each replicate against
+its own realized target) shows estimator error sd 0.000496 — 30×
+inside the target noise. No seed could have changed this; the A1 fired
+on gate arithmetic, not on the instrument.
+
+**The leg's substantive gifts, banked.** (1) The df derivation: the
+mains are projection COORDINATES, not residuals — the cross-half form
+is attenuation-free with NO residual-df shrinkage; the only correction
+is the mean-removal gauge factor 1/(1 − Σp²) (author 1.000273,
+size-weighted community 1.023667), recomputed per bootstrap replicate.
+(2) FE-vs-MARGINAL leakage MEASURED: the FE mains pass all six
+zero-point rows while the marginal estimators fail three ({a-only} →
+community 0.0263 etc.) — #87's diagnosis is now a number, not an
+inference. (3) The author main IS certified at 0.01 resolution.
+
+**Defect #93 (planner, purchased; registry thirty-eighth note).**
+Three parts, from the executor's candidates, adopted. (a) A #90
+ceiling on a WORLD-LIMITED clause cannot separate a bad estimator from
+a bad gate — own-recovery clauses are scored PAIRED (error against the
+replicate's own realized target) with the ceiling on the PAIRED sd;
+the nominal reading is co-reported. (b) Replicate counts are DERIVED
+pre-registration from the estimand's effective sample (the closed-form
+target sd is design-only arithmetic the planner could have run —
+~60 replicates would have made R02 reliable at nominal scoring).
+(c) A size-weighted estimand publishes its EFFECTIVE sample beside its
+nominal one. Also recorded WITH a convention (from the executor's
+disclosure 4, appreciated for its honesty): development prototypes
+never touch the real arm before certification — instrument-leg dev
+work runs on synthetic worlds only; the disclosed scratchpad contact
+produced no artifact, report, or ledger content, and the rule now
+exists so the next leg does not rely on restraint alone.
+
+**X3 remains gated:** the author main is certified; the size-weighted
+community main is neither validated nor invalidated. X-Mb below
+completes it — gate arithmetic only, the estimator untouched.
+
+---
+
+## X-Mb — the mains estimator, paired-scored gate (registered BEFORE run, 2026-08-19)
+
+Completion of X-M under #93; the SR4/U2c/X1c pattern. Everything
+inherits X-M (skeleton, estimators, normalization, worlds, seeds,
+clauses R01/R03–R10, descriptives) except:
+
+1. **Paired scoring (#93a)** for all four own-recovery clauses: error =
+   estimate − the replicate's own realized planted component; ROUTING
+   ceiling = paired rep-sd ≤ 0.01 (share units, #92) and |paired mean
+   error| ≤ 0.01; the nominal (world-limited) reading co-reported with
+   its derived reliability P(informative) from the closed form.
+2. **Effective samples (#93c)** published for every weighted estimand
+   row (nominal vs effective; R02's 1,000 vs 43.3 the first entry).
+3. **Replicate budget (#93b)**: 8 paired replicates suffice under
+   paired scoring (paired sd ≈ 0.0005 ≪ 0.01 by X-M's own artifact);
+   the derivation is printed, not assumed.
+4. If MAINS_CERTIFIED: the real arm runs ONCE (the first true main
+   budget, with CIs, gauge factors applied, effective samples shown)
+   and the X1c predictions (author ≈ 0.15 [0.10, 0.20], community ≈
+   0.077 [0.05, 0.11]) are scored.
+5. Dev-prototype rule (#93 note) in force: synthetic worlds only until
+   certification inside the run.
+
+Deliverables: standard six; ONE commit
+`feat(m4-x): X-Mb — the mains estimator, paired-scored — <VERDICT>`;
+suite green (1742 + new); #83 baseline 4; tests use pytest tmp_path.
+SEED = 20260819; B_boot = 1000.

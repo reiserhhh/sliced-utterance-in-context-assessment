@@ -430,3 +430,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #92 | X-line / M4-X5 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X5 outcome + planner adjudication` | The registration inherited a %-of-planted recovery floor where #90's ceiling logic demands a resolution statement in the estimand's units — the literal floor would have A1-stopped every relation for spreads the ceiling itself certifies as informative; the executor's units-based re-posing (floor = priced-region scale) accepted. | none (convention: gate tolerance floors are RESOLUTION statements in the estimand's units, tied to the priced region half-width, stated at registration) | floor-units |
+
+## Dated additions (2026-08-19, thirty-eighth note — X-M; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #93 | X-line / M4-X-M | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X-M outcome + planner adjudication` | A #90 ceiling on a world-limited clause stopped a sound estimator: the size-weighted target's own draw noise (effective 43.3 of 1,000 communities; closed-form sd 0.0172, design-only arithmetic) exceeded the ceiling, P(informative) = 0.267 for ANY correct estimator (the twin clause R04 passed at the same 0.267); paired error sd was 0.0005. | none (conventions: own-recovery clauses scored PAIRED with ceilings on the paired sd, nominal co-reported; replicate counts DERIVED pre-registration from effective-sample closed forms; weighted estimands publish effective beside nominal samples; dev prototypes never touch the real arm before certification — synthetic only) | gate-power |
