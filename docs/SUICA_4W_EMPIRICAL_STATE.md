@@ -197,3 +197,28 @@ the OWNER's measurement-series program (三枝・下司 2025):
 Defects #85–#95; suite count is historical and must be rerun before citation;
 the label ledger carries the X3 event.
 Owner-gated frontiers unchanged: W3, external connection, native corpus.
+
+## Dated correction addendum (2026-08-22) — inference-scope corrections adopted (#94/#95)
+
+Codex's post-closure review (commits 84e7d9d..2e83217) corrected this
+document's X-line addendum language; the corrections are adopted and
+this note governs how the addendum above is read:
+
+- "the ergodicity atlas" is the ARTIFACT NAME of X5; what it measures
+  is the PROJECTION-SPECIFIC CROSS-LEVEL TRANSPORT GAP (Δ_erg as a
+  historical variable name); no process-ergodicity claim is made, and
+  the temporal audit (X5-T) shows the finest-resolution within-slopes
+  are equivalent at 0.02 for 4/5 disjoint relations with R1 unresolved.
+- Physical units license COMMENSURABILITY, not psychometric
+  measurement invariance; cross-level preservation of meaning is an
+  EMPIRICAL question the program tests, not a property it assumes.
+- "trait-mute everywhere" over-generalized a registered MULTIVARIATE
+  null: the X3 result is non-detection of the registered multivariate
+  distance coupling at coordinate-specific realized bands
+  (0.022–0.037; bootstrap to 0.047), with unconfirmed exploratory
+  univariate candidates (max |r| = 0.141) surviving as candidates,
+  not claims. Same-corpus repetitions of the bag channel
+  (0.045–0.049) are ANALYTICAL RECURRENCES, not independent
+  replications.
+- The binding reference is `SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md`;
+  defects #94/#95 (planner's, ratified) carry the conventions.

@@ -2802,3 +2802,53 @@ The support mission's
 honest conclusion for the bridge: this system offers the three-level
 readout and the level-3 reliability instruments; it does not offer
 trait proxies, and says so with certified silence.
+
+## Post-closure external review — planner adjudication (2026-08-22)
+
+Codex reviewed the X-line's closing documents and corrected the
+planner's INFERENCE-SCOPE overclaims in four commits (84e7d9d,
+fa8988a, b0b38c2, 2e83217). **All four are ACCEPTED IN FULL, and
+defects #94/#95 — recorded by Codex against the planner's prose — are
+RATIFIED as the planner's own**, the registry's first entries at the
+language layer rather than the estimator layer:
+
+- **#94 (mine):** common physical units were promoted to psychometric
+  measurement invariance (units license COMMENSURABILITY only), and a
+  difference between two registered linear slopes was promoted to
+  process ERGODICITY (Δ_erg is retained as a historical artifact name
+  but reads as a PROJECTION-SPECIFIC CROSS-LEVEL TRANSPORT GAP). X5's
+  own data carried the counterwarning I under-read: R1/R4 early/late
+  within-slopes disagree.
+- **#95 (mine):** the projected r = 0.019 was quoted where realized
+  bands (0.022–0.037, bootstrap to 0.047) belong; same-corpus reruns
+  were called "independent replications" (they are ANALYTICAL
+  RECURRENCES); and the registered multivariate null was generalized
+  to "trait-mute everywhere" over unconfirmed univariate candidates
+  up to |r| = 0.141.
+
+**The Cross-Level Inference Contract
+(`docs/SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md`) is ADOPTED as
+BINDING program-wide**, including its claim gates, the
+recurrence-vs-replication distinction, and the source-boundary
+handling of the professor's "Level 5" (an oral-discussion ideal
+limit, never attributed to 三枝・下司 2025).
+
+**The X5-T temporal transport audit is ACCEPTED** (verdict
+POST_CLOSURE_TEMPORAL_DIAGNOSTIC_COMPLETE; protocol committed before
+execution; reproduction gate at ≤ 2.4e-16 on all ten X5 rows before
+any multisegment estimate). Substantive reading adopted with its own
+scoping: at K = 8 the disjoint cohort's within-slopes are temporally
+equivalent at 0.02 for four of five relations (R1 unresolved — its
+within-slope moves from −0.024 toward ≈ 0 across segments, the
+concrete form of #94's counterwarning); the Big5 cohort shows
+finest-resolution heterogeneity on R1/R2 with the power caveat; K
+views are nested, not independent. The historical X4/X5 verdict names
+stand as artifact names; their prose now reads through the contract.
+
+Corrected prose is live in the bridge and the JPA feed (Codex's
+84e7d9d); the 4W empirical state receives its correction addendum
+with this commit; earlier append-only adjudication texts stand as
+history and are read through this note. The planner notes with
+appreciation that the review arrived through the same discipline it
+audits: registered protocol, reproduction gates, one commit per unit,
+and defect entries with conventions.
