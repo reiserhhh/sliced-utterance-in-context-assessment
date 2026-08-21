@@ -210,6 +210,24 @@ The event-to-relation seam is supported only when raw replicated supports are
 observably comparable. Support drift, aliasing, underresolution, and ecological
 only structure require explicit refusal rather than forced transport.
 
+Their temporal paths must also remain separate. For centered segment paths
+\(b_k=\beta_{B,k}-\bar\beta_B\) and
+\(w_k=\beta_{W,k}-\bar\beta_W\), cross-level transport has the exact geometry
+
+\[
+\lVert b-w\rVert^2
+=\lVert b\rVert^2+\lVert w\rVert^2
+-2\lVert b\rVert\lVert w\rVert\cos\phi.
+\]
+
+The X5-T audit shows why this distinction is operationally necessary: a
+within-person path may be temporally stable while the transport family changes
+because the between-person geometry moves. The three coordinates are therefore
+within-response energy, between-geometry energy, and their coupling angle;
+none is automatically a personality factor. See the
+[Cross-Level Inference Contract](SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md) and
+[X5-T report](../reports/SUICA_M4_X5_TEMPORAL_TRANSPORT_AUDIT.md).
+
 ### 6.3 Macro: population relation field
 
 Population structure is a field over reproducible contexts, not one universal

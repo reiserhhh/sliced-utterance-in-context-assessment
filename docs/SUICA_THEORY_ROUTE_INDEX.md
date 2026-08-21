@@ -1,6 +1,6 @@
 # SUICA Development and Theory Route Index
 
-Opened: 2026-07-30; updated through 2026-08-17
+Opened: 2026-07-30; updated through 2026-08-22
 Status: active development map; not a release seal or a scientific promotion
 
 ## 1. Purpose
@@ -976,3 +976,20 @@ in `SUICA_4W_EMPIRICAL_STATE.md` (the §11 feedback: priorities 1–4
 answered; priority 5, external connection, remains and is owner-gated).
 Defects #76–#83; suite 1279; W3 (MBTI-axis labels) gated on governance
 review.
+
+## Dated addendum (2026-08-22) — X-line inference repair and X5-T
+
+The cross-level audit separated common units from measurement invariance and
+renamed the historical `Delta_erg` object canonically as the
+projection-specific transport gap `Delta_T`. X5-T then reproduced all ten
+committed K=2 relation/cohort slopes to machine precision and audited nested
+K=2/4/8 event-order partitions on fixed K=8 pools. At K=8, the disjoint cohort
+had four of five equivalent within-slope paths but only R5 retained the same
+transport family in all segments; the Big5-name-list cohort had one equivalent,
+two detected heterogeneous, and two unresolved paths. The result closes the
+old compression: temporal persistence of an average within-person response and
+temporal persistence of cross-level transport are distinct gates. Their exact
+path relation is now represented by
+`||b-w||^2 = ||b||^2 + ||w||^2 - 2<b,w>`. Evidence:
+[contract](SUICA_CROSS_LEVEL_INFERENCE_CONTRACT.md) and
+[report](../reports/SUICA_M4_X5_TEMPORAL_TRANSPORT_AUDIT.md).

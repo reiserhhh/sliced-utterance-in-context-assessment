@@ -1,6 +1,6 @@
 # SUICA Cross-Level Inference Contract
 
-Status: `CANONICAL_SCOPE_CONTRACT__TEMPORAL_AUDIT_REGISTERED`
+Status: `CANONICAL_SCOPE_CONTRACT__TEMPORAL_AUDIT_COMPLETE`
 
 Opened: 2026-08-22. This document corrects the inference scope of the M4-X
 measurement-series line without changing any historical artifact, verdict
@@ -193,7 +193,7 @@ earlier gate.
 |---|---|---|---|
 | G0 Observability | Is the channel recorded with provenance and common units? | frozen transforms, support, horizon | pass for the five metadata relations |
 | G1 Estimability | Is zero calibrated on the realized design and the estimator precise? | synthetic recovery, support floors, precision ceilings | pass after defects #85-#93 for the certified objects |
-| G2 Temporal persistence | Does the estimand survive more than one arbitrary partition? | multisegment stability and drift audit | incomplete; R1/R4 half disagreement is a warning |
+| G2 Temporal persistence | Does the estimand survive more than one arbitrary partition? | multisegment stability and drift audit | projection-specific: at K=8 the disjoint cohort has 4/5 equivalent and 1 unresolved; the Big5-name-list cohort has 1 equivalent, 2 detected heterogeneous, and 2 unresolved |
 | G3 Cross-level transport | Does the registered projection agree across series? | paired gap CI or equivalence test | heterogeneous across five projections |
 | G4 Construct connection | Does the technical object connect to an external psychological or behavioral instrument? | frozen label join on held-out or controlled data | X3 primary coupling not detected; exploratory cells unconfirmed |
 | G5 Person applicability | Is an individual reading calibrated, stable, fair, and decision-valid? | prospective repeated-person and use-specific validation | not licensed |
@@ -346,6 +346,43 @@ Co-reported, never silently promoted:
   class narrows X5 to a corpus-horizon average. Neither outcome creates a
   psychological construct.
 
+### 9.6 Executed outcome (2026-08-22)
+
+The cache and K=2 reproduction gates passed for all ten relation/cohort arms at
+maximum absolute error \(2.36\times10^{-16}\). All support gates passed. No
+text body or questionnaire score was opened.
+
+At the finest registered resolution, K=8:
+
+- disjoint primary: four of five within-person slope paths were equivalent at
+  0.02; R1 was unresolved; only R5 retained its historical transport family in
+  every segment;
+- Big5-name-list cohort: R3 was equivalent, R1 and R2 had detected temporal
+  heterogeneity, R4 and R5 were unresolved; R3-R5 retained their historical
+  families in every segment.
+
+The K=2/4/8 rows are nested analyses of the same events, not fifteen
+replications. The main result is therefore not "14 of 15 stable." It is:
+
+> average within-person temporal persistence and cross-level transport-family
+> persistence are separate empirical properties.
+
+R5 is the strongest joint example in the disjoint cohort: its within slope is
+equivalent at K=8 and all eight segment families remain `SAME_SIGN_GAP`. R3 is
+the clearest separation: its disjoint within slope is nearly constant, while
+its between-person path moves enough that the segment transport family does
+not remain fixed.
+
+Segments are equal usable-event-count blocks, not equal calendar-time blocks.
+The result concerns event-order evolution at this corpus horizon. Because
+usable events differ by relation, segment boundaries are nested within a
+relation but need not align across relations. Segment-family retention uses
+pointwise intervals and is descriptive; the registered familywise decision is
+the within-slope temporal class.
+
+Full aggregate evidence:
+`reports/SUICA_M4_X5_TEMPORAL_TRANSPORT_AUDIT.md`.
+
 ## 10. Consequence for future SUICA theory
 
 The three-series system remains a useful methodological contribution, but its
@@ -369,3 +406,29 @@ No arrow is automatic. This makes the theory stronger: it preserves the
 observed sign reversal and three-series machinery while preventing a precise
 technical result from being silently renamed as invariance, ergodicity, or
 personality.
+
+The executed audit adds a path geometry for cross-level transport. For segment
+\(k\), center the between- and within-person slope paths:
+
+\[
+b_k=\beta_{B,k}-\bar\beta_B,
+\qquad
+w_k=\beta_{W,k}-\bar\beta_W.
+\]
+
+The centered transport path is \(d_k=b_k-w_k\), so its energy obeys the exact
+identity
+
+\[
+E_T=\lVert d\rVert^2
+=\lVert b\rVert^2+\lVert w\rVert^2
+-2\lVert b\rVert\lVert w\rVert\cos\phi,
+\]
+
+where \(\cos\phi=\langle b,w\rangle/(\lVert b\rVert\lVert w\rVert)\). Thus a
+stable within-person response does not imply stable transport: group geometry
+may move while the within response remains fixed. Conversely, between and
+within paths may move together and partially cancel in the transport gap.
+These are technical path properties, not psychological constructs, but they
+give the previously vague "dynamic axis" three explicit coordinates:
+within-response energy, between-geometry energy, and their coupling angle.
