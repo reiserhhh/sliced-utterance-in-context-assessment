@@ -2004,3 +2004,141 @@ appended here; one CLAIMS_LEDGER row; ONE commit
 `feat(m4-x): X-M — the mains estimator — <VERDICT>`; suite green
 (1674 + new); SEED = 20260819; B_perm = 499 where applicable;
 B_boot = 1000. Metadata-only; label-free; profiles never opened.
+
+---
+
+## X-M outcome (executor, 2026-08-19)
+
+**Verdict: `INSTRUMENT_DEFECT`. 9 of 10 ROUTING clauses passed; the A1
+stop fired; NO real-data main was computed, reported or stored.** The
+descriptive family passed 3/3. Runtime 18.9 s, entirely from X1's
+committed cell cache; the comments CSV was never re-streamed.
+
+### The instrument was built, and it works
+
+The estimator is the exact two-way FE fit per half (X1b's alternating
+projections, its tightened stopping rule; the residual this leg returns is
+BIT-IDENTICAL to `fe_residual`'s, contract-tested), with the coefficients
+kept and identified by the pinned normalization — fit, centre the author
+coefficients into the intercept, centre the community coefficients likewise.
+The normalization is confluent (its two steps touch disjoint vectors) and
+the normalized triple is invariant to which side the sweep starts from, both
+contract-tested; the raw split genuinely moves, so the test is not vacuous.
+
+Everything the battery could certify, it certified:
+
+- **author main recovery** — gap +0.0002 in `{a-only}` and +0.0012 in
+  `{full}`, replicate sds 0.0036 / 0.0061, both under the #90 ceiling;
+- **cross-leakage, all 6 zero-point rows below 0.005** — the largest is the
+  interaction's bleed into the author coefficient in `{g-only}`, 0.00395;
+- **`{null}` bootstrap-zero and bootstrap-stability** — both mains' CIs cover
+  0 and their own points (author 0.00016 [−0.00011, 0.00044]);
+- **the interaction echo** — X1c's estimand reproduces to 0.0199 against
+  0.0200 in both worlds that plant it, which certifies that this leg's fit
+  IS X1c's fit.
+
+**The #87 diagnosis is now a measurement, not an inference.** Both
+estimators ran on all five worlds. The FE mains pass all 6 zero-point rows;
+the MARGINAL mains fail 3 of them — `{a-only}` community 0.0263, `{b-only}`
+author 0.0225, `{g-only}` author 0.0057, against the same 0.005 bound. The
+marginal rows were not a conservative version of the mains; they were
+contaminated, and the projection is what removes the contamination.
+
+### The df question, answered in the negative
+
+Derived, printed and contract-tested in-leg: **the mains carry NO
+residual-df shrinkage.** They are the projection's COORDINATES, not its
+residual, and the cross-half form is attenuation-free, so neither
+`(P − A − C + 1)/P` nor a noise term touches them. The only interaction is
+the MEAN-REMOVAL (gauge) loss, and it collapses to ONE formula for all three
+readings: for a weighted population covariance with normalized weights `p`,
+`factor(p) = 1/(1 − Σ p_i²)`. Realized: author 1.000273 (Σp² = 0.000273),
+community size-weighted 1.023667 (Σp² = 0.023120), community unweighted
+1.001001 — against X1c's interaction factor 1.171250 for contrast. Corrected
+routes, raw co-reported (#67); per #87(b) treatment one, the factor is
+RECOMPUTED inside every bootstrap replicate from that replicate's own
+weights, and the weighted-projection equivalence is contract-tested by
+building the replicated design explicitly.
+
+### Why it stopped, and the honest shape of the stop
+
+The single non-passing clause is **R02, the size-weighted community main's
+own-recovery clause in `{b-only}` — and it did not FAIL, it read
+UNINFORMATIVE.** Its gap is +0.0036, inside any tolerance; its replicate sd
+is 0.0157 against the #90 ceiling of 0.0100, so the tolerance it would have
+been scored at is 0.0470. A clause that claims 0.01 resolution and delivers
+0.047 has measured nothing, and #90 exists to refuse that pass.
+
+**The spread is the WORLDS, not the estimator.** Scored PAIRED — each
+replicate against its own realized planted target — the same estimator on
+the same worlds reads mean error −0.000045 with sd 0.000496, while the
+realized target itself moves with sd 0.0150: thirty times larger.
+
+**The cause is structural and was visible at registration.** The
+size-weighted community covariance concentrates on an EFFECTIVE **43.3**
+communities, not the nominal 1,000, so the realized weighted variance of an
+iid component moves draw-to-draw with closed-form sd `0.08·√(2·Σp²)` =
+0.0172. Over 8 replicates, P(replicate sd ≤ ceiling) = **0.267**. No seed
+would have changed that; the same diagnostic gives 1.000 for the UNWEIGHTED
+community clause and 0.954 for the author clause.
+
+**A clause that PASSED must be read with the same eye.** The identical
+estimand in `{full}` drew a replicate sd of 0.0072 and cleared the ceiling
+with 0.0028 to spare — at that same 0.267 probability. The same clause
+reading INFORMATIVE in one world and UNINFORMATIVE in another, on the same
+estimand and the same skeleton, is the sharpest available demonstration that
+this ceiling is being asked a question it cannot answer at this replicate
+budget.
+
+### Consequences for X3
+
+X3's #87 prerequisite is **NOT discharged**. The author main is certified at
+the registered resolution; the community main is not, in either direction —
+it was neither validated nor invalidated. A future registration can discharge
+this cheaply: nothing about the estimator needs changing.
+
+### Deviations, all recorded
+
+1. **No permutation null was run.** `B_perm = 499` is registered "where
+   applicable"; no X-M clause is defined against a permutation band.
+2. **`{g-only}`'s seed offset (23) is new**, taken from X1b's series before
+   the run and pinned in the config; the four inherited offsets are X1b's
+   (13 / 19 / 7 / 0). No seed was re-chosen after seeing a result (#76).
+3. **The mean-removal factor is recomputed per bootstrap replicate** —
+   #87(b) treatment one, available here because the mains' correction is a
+   function of the resample's own weights.
+4. **A development prototype touched the real arm.** While the estimator was
+   being written, a scratchpad script (never committed, never an artifact)
+   evaluated the mains on the real skeleton to size the compute. No real
+   main appears in the report, the artifacts, the ledger row, or this
+   outcome. Recorded because concealing it would be the worse failure.
+
+### Defect candidates for the planner (nothing below was run)
+
+1. **A #90 ceiling on a WORLD-LIMITED clause cannot distinguish a bad
+   estimator from a bad gate.** The replicate spread of an own-recovery
+   clause is estimator error PLUS world-draw variability, and on a
+   size-skewed design the second term dominates by two orders of magnitude.
+   Convention to consider: own-recovery clauses are scored PAIRED (each
+   replicate against its own realized target) so the ceiling constrains the
+   ESTIMATOR, with the nominal-target reading co-reported.
+2. **Replicate counts should be DERIVED from the estimand's effective
+   sample, not inherited.** `sd ≈ V·√(2·Σ p_i²)` is computable from the
+   DESIGN ALONE before any world is drawn, so a registration can state the
+   replicate budget that makes each clause informative — and refuse to
+   register one that cannot be. Here 8 replicates would have needed to be
+   about 60 for R02 to clear its ceiling reliably.
+3. **A size-weighted estimand needs its effective sample published beside
+   its nominal one.** A covariance over 1,000 communities whose weights
+   concentrate on 43 is not a covariance over 1,000 anything, and every
+   table printing the nominal count invites the wrong reading of its
+   precision.
+
+### Governance
+
+Metadata only; `word_count_quoteless` is the sole text-derived quantity; no
+body was read; `author_profiles.csv` was never opened. The ID-leak scan over
+all 10,296 author names cleared with **0 NEW hits** (4 pre-existing
+dictionary collisions carried unchanged from HEAD). Every X-line boundary is
+carried forward, plus the one this leg adds: it is an INSTRUMENT leg, and
+nothing it certifies is evidence about people or venues.
