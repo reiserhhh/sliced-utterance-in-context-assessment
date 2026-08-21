@@ -410,3 +410,9 @@ mirror). N4's three candidates are all planner defects:
 | # | era / leg | where recorded | one-line description | rule it paid for | family |
 |---|---|---|---|---|---|
 | #87 | X-line / M4-X1c | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X1c outcome + planner adjudication` | Cell boundaries registered as POINTS from literature priors with no boundary-region provision — the corpus landed within 0.001 of the 0.02 line (arms 0.0177–0.0208), leaving "straddle" to do first-class work as an annotation; the pinned df factor is not recomputed per bootstrap replicate (interval one-sidedly conservative; executor calibrated against the planted world). | none (convention: effect-size classifications register a BOUNDARY REGION — default ± the projected CI half-width — inside which the verdict IS the region statement, first-class; projection-dependent corrections recomputed per resample or the one-sided conservatism declared with planted-world calibration; mains-as-objects require main ESTIMATORS under their own gate before any trait join) | boundary-regions |
+
+## Dated additions (2026-08-19, thirty-fifth note — X2; append-only)
+
+| # | era / leg | where recorded | one-line description | rule it paid for | family |
+|---|---|---|---|---|---|
+| #88 | X-line / M4-X2 | `docs/SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md — X2 outcome + planner adjudication` | The #87 boundary-region half-width was priced from the analytic null sd (0.011) while realized bootstrap half-widths run 0.032–0.045 (the region under-covers the interval it prices); arms with different pool sizes make cross-arm comparisons partly precision comparisons. | none (convention: boundary-region widths are priced from the PROJECTED BOOTSTRAP width of the non-null estimate, never the null sd; cross-arm comparisons of owned-variance objects use the implied-variance scale or size-matched subpools — W2's size-matching lesson extended within legs) | region-pricing |

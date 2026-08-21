@@ -138,3 +138,29 @@ register single-factor level leans across cohorts.
 - Long-horizon floor (needs panels longer than ~4 y).
 - Non-dwell order residual; finer-state order.
 - JPA manuscript (#27, owner's, in progress).
+
+## Dated addendum (2026-08-19) — the crossing table completes
+
+With X1c and X2 (`SUICA_M4_X_EXPRESSION_RESPONSE_PLAN.md`), all four
+crossings now carry real-data readings, metadata-only on the
+expression side:
+
+- **#2 Where × What (X1c):** expression volume is venue-conditioned in
+  three layers — personal baseline (marginal 0.180), venue norm
+  (0.093), and a real, persistent idiosyncratic response at the
+  TRACE/IDIOSYNCRATIC boundary (~1.9% of variance; R = 0.279;
+  reproduced on the Big5 cohort). The response operator's first
+  projection is NON-EMPTY — the first crossing where the personal
+  second-order channel is present rather than silent.
+- **#3 What × When (X2):** expression volume has real event-time path
+  structure (presence +0.111, ~58 bands), author-owned WEAKLY on the
+  disjoint cohort (ρ_own 0.259) and STRONGLY on the Big5 cohort
+  (0.637, 4.5× implied variance — a genuine cohort difference carried
+  as X3's flag with its selection caveat); 85% intrinsic vs venue
+  routing; ~46% of the owned variance is reply-chain mechanics
+  (U1's lesson repeating on the What side).
+
+The expression-side readings are VOLUME-only (no text bodies were
+read); content-bearing What objects remain unopened and are a
+governance decision, not a loop decision. Priority 5 (external
+connection) remains the program's one unanswered theory priority.

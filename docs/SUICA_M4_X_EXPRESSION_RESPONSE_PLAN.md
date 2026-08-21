@@ -1150,3 +1150,60 @@ both sides of their own median.
   Big5/disjoint dispersion gap (4.5×) is the kind of thing that could
   be a genuine cohort difference or a selection artifact of how the
   1,401 were sampled; neither this leg nor X1 can separate them.
+
+## X2 planner adjudication (2026-08-19)
+
+**Verdict ACCEPTED: `WEAKLY_OWNED`** — ρ_own = 0.2589 [0.2273, 0.2921],
+clean of both boundary regions (clears the 0.161 edge by 0.066); the
+gate passed FIRST TRY, all five routing clauses, with the decisive
+common-path clause doing exactly its job (presence 0.1918 in the
+unowned world, as strong as the owned world's 0.1927, and the gate
+refused to call it owned). The ownership mapping was derived and
+bisection-solved, not tuned — and the executor's Marriott–Pope
+small-sample handling of the r1 bias (the presence null band sits at
+the analytic −E[1/pairs], an offset band, not a zero band) is exactly
+the standard the line now runs at. The X1-arc tuition (#85–#87) bought
+X2 a clean first gate.
+
+**Crossing #3's first reading, formalized.** Expression volume has REAL
+path structure in event time (presence +0.1111, ~58 band-widths out),
+and the rhythm parameter is an author attribute — weakly, on the
+disjoint cohort. Retention decomposition: **85.2% of the ownership
+survives venue-residualization** (the rhythm is intrinsic, not venue
+routing) and **41.0% survives the cross-thread restriction** — with
+implied Var(φ) at 46%, a real part of the owned rhythm IS reply-chain
+mechanics (U1's 43.8% precedent priced it; the lean broke exactly
+there and pays the same lesson twice: fast-time channels are
+mechanics-heavy). Lean record: 2 held, 3 broke (ρ_own low of the lean;
+cross-thread retention; Big5 cell) — honest, and each break carries
+information.
+
+**The flag for X3 (the leg's most consequential row).** The Big5
+cohort reads ρ_own = 0.6367 [0.5894, 0.6785] — STRONGLY_OWNED, above
+the trait-join-eligible 0.511 line — while the primary reads 0.2589,
+and the attenuation arithmetic shows this is NOT precision: implied
+Var(φ) is 4.5× the disjoint cohort's, with higher presence too. The
+label-carrying cohort genuinely differs on this object. Carried into
+X3 with the standing caveat the executor named: neither X1 nor X2 can
+separate a genuine cohort difference from a selection artifact of how
+the 1,401 were chosen (test-takers may be atypical posters); every X3
+claim inherits this caveat verbatim.
+
+**Defect #88 (planner, purchased; registry thirty-fifth note).** Two
+parts. (a) The #87 boundary-region half-width was priced from the
+ANALYTIC null sd (1/√N = 0.011) while the realized bootstrap
+half-widths run 0.032–0.045 — the region under-covers the interval it
+prices; the convention is corrected: region widths are priced from the
+PROJECTED BOOTSTRAP width of the non-null estimate (#79b machinery),
+never from the null sd. (b) Arms with different pool sizes make
+cross-arm comparisons partly precision comparisons — the W2
+size-matching lesson extends WITHIN legs: cross-arm ownership
+comparisons use the implied-variance scale (as the executor's
+annotation did) or size-matched subpools. The two unregistered
+annotations (presence bootstrap; attenuation arithmetic) are accepted
+as labelled.
+
+**Program milestone: every 4W crossing now has a real-data reading.**
+Crossing #1 (T/W lines), #2 (X1c), #3 (this leg), #4 (U-line). The 4W
+empirical-state document receives its completion addendum with this
+commit.
