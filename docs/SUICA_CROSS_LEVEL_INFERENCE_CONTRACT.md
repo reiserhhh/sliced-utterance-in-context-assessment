@@ -310,8 +310,17 @@ Co-reported, never silently promoted:
 
 - segment sign sequence for \(\beta_W\);
 - segment transport-gap sequence \(\Delta_{T,k}\);
-- whether the X5 aggregate cell label is stable over segments;
-- normalized linear trend across segment index;
+- whether the X5 aggregate cell family is stable over segments. Segment
+  families use pointwise 95% bootstrap intervals:
+  `SIGN_FLIP` if both slopes exclude zero with opposite signs and the gap
+  excludes zero; `SAME_SIGN_GAP` if both slopes exclude zero with the same
+  sign and the gap excludes zero; `GAP_SIGN_UNRESOLVED` if only the gap
+  excludes zero; otherwise `GAP_UNRESOLVED`. Historical X5 labels map to these
+  four families by removing the `NONERGODIC_`/`LEVELS_` naming layer;
+- raw and normalized linear trend across segment index. With
+  \(z_k\in[-1,1]\), raw trend is the OLS slope of \(\beta_{W,k}\) on \(z_k\),
+  and normalized trend is
+  \(b_{time}/\max(|\bar\beta_W|,0.02)\);
 - retained author and event counts;
 - K=2 reproduction against X5/X4 artifacts on their original pools.
 
