@@ -1207,3 +1207,117 @@ as labelled.
 Crossing #1 (T/W lines), #2 (X1c), #3 (this leg), #4 (U-line). The 4W
 empirical-state document receives its completion addendum with this
 commit.
+
+---
+
+## X4 — the three-level decomposition and the ergodicity contrast (registered BEFORE run, 2026-08-19)
+
+**Provenance: the OWNER's conference input, relayed 2026-08-19** — the
+three-designs schema for personality measurement: (1) one-shot group
+measurement yields BETWEEN-person relations; (2) repeated measurement of
+many yields the AVERAGE WITHIN-person relation; (3) repeated measurement
+of one yields THAT PERSON's relation. X1c/X2 already instantiated levels
+2–3 for single-variable structures (venue norms vs idiosyncratic
+response; presence vs ownership); X4 measures ONE two-variable relation
+at ALL THREE levels and registers the level comparison — the ergodicity
+contrast — as the verdict. The relation: **event commonness × expression
+volume**, metadata-only.
+
+### 4W header
+
+- **Object.** The Where × What relation "how common a venue is × how
+  much one writes there," decomposed into the owner's three levels;
+  verdict = whether level 1 (between-person) equals level 2 (average
+  within-person). Non-ergodicity here is the two-variable form of the
+  program's dissociation family (levels do not reduce to one another).
+- **Fixed.** x = log10(community share of all 17,640,062 parseable
+  events) — a GLOBAL fixed community attribute (46,214 communities,
+  range [−7.25, −1.14]); y = log1p(wcq) (#70); X2's universe, order,
+  halves; pool = X2's ≥ 50 events/half AND within-author sd(x) > 0 in
+  each half.
+- **Varied.** Cohort (disjoint primary; Big5 replication, #73 — X2's
+  cohort-difference flag rides along); floor-100 sensitivity.
+- **What falsifies.** Δ_erg CI including 0 → the levels are
+  indistinguishable at this power (scoped by realized width).
+- **Layer.** R.
+
+### Census (planner arithmetic #43; #77/#78 exact; #57 — NO estimand
+value evaluated: no x–y slope, correlation, or covariance was computed)
+
+| quantity (exact predicate) | disjoint | Big5 |
+|---|---|---|
+| pool (X2 pool ∧ sd(x) > 0 both halves) | **8,004** | **1,112** |
+| within-author sd(x), q25/med/q75 | 0.805 / 0.965 / 1.111 | 0.660 / 0.856 / 1.013 |
+| distinct communities per author, median | 64 | 55 |
+| top-1 community share, med / q90 | 0.259 / 0.577 | 0.329 / 0.743 |
+
+### Estimands (own nulls #68/#66; #79 ratio-free; transforms pinned)
+
+1. **Level 1, β_between:** OLS slope of person-mean ȳ_u on person-mean
+   x̄_u across pool authors (correlation co-reported). Author-cluster
+   bootstrap B = 1000.
+2. **Level 2, β_within:** the within-centered pooled slope per half
+   (y − ȳ_{u,h} on x − x̄_{u,h}, over events), averaged over the two
+   halves. Same bootstrap.
+3. **Level 3:** per-(author, half) slopes β_{u,h}; ownership
+   ρ_own(β) = Pearson over authors of (β_early, β_late) with the
+   pairing-permutation null (X2 machinery, B = 499); true dispersion
+   Var(β) by cross-half covariance; headroom about the mean.
+4. **The ergodicity contrast (ROUTES): Δ_erg = β_between − β_within**,
+   paired author-cluster bootstrap CI (both slopes recomputed per
+   resample).
+
+### Gate (Part 0, realized skeleton — real x-sequences and halves,
+wholly synthetic y; #85/#86 clause separation; A1 on routing failures)
+
+ROUTING: (i) ERGODIC world (one β for all, no person-level confound —
+Δ_erg CI must cover 0); (ii) NON-ERGODIC world (person intercepts a_u
+correlated with x̄_u planting a derived, printed Δ ≠ 0 — recovery
+within max(0.02·|Δ|-scale, 3·rep sd)); (iii) OWNED-SLOPES world
+(Var(β) > 0 at an ownership-0.5 operating point (#76) — ρ_own
+recovery); (iv) NULL world (β ≡ 0, no relation: every level must read
+0 within band); (v) #85b bootstrap-zero on (iv); (vi) **REGION PRICING
+(#88a executed in-leg): the #87 boundary-region half-widths for BOTH
+routed objects are set to Part 0's realized bootstrap half-widths on
+the matched planted worlds, pinned in the artifacts BEFORE any real
+number.** DESCRIPTIVE (annotate, never stop): level-value recoveries.
+
+### Cells (NULL-first #55; #75; regions priced per (vi))
+
+On Δ_erg (primary arm): 1 **LEVELS_INDISTINGUISHABLE** — CI includes 0
+(scoped by realized width; no equivalence claim). 2
+**NONERGODIC_SAME_SIGN** — CI excludes 0, β_between and β_within share
+sign. 3 **NONERGODIC_SIGN_FLIP** — CI excludes 0, signs differ with
+both slopes detected. Co-primary (X2's scheme with priced regions):
+ρ_own(β) in NOT/AT/WEAKLY/AT/STRONGLY. Arm divergences #73; primary
+routes.
+
+### Registered leans
+
+- β_within < 0 (commoner venue → shorter comments) — held moderately;
+  β_between < 0 likewise.
+- Δ_erg ≠ 0, same sign, |β_between| > |β_within| (composition
+  amplifies the between-person relation) — NONERGODIC_SAME_SIGN, held
+  weakly; the schema's whole point is that level 1 need not equal
+  level 2, and the dissociation family leans that way.
+- ρ_own(β): WEAKLY_OWNED (X1c's idiosyncratic response is the
+  categorical cousin at R = 0.279).
+- Big5 replication: same Δ_erg cell; ownership possibly higher (X2's
+  cohort flag) — #73 either way.
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_x4_three_levels.py` + tests
+(within-centering exactness; the ergodic world's Δ ≈ 0 honesty; the
+non-ergodic world's derived Δ; slope-ownership machinery on a toy;
+region-pricing pinning order — priced before real, asserted from
+timestamps; anchors; #83 helper); gitignored
+`results/m4_x4_three_levels/` (event cache with x attached); report
+`reports/SUICA_M4_X4_THREE_LEVELS_REPORT.md` (rule-24; the three-level
+table per arm; Δ_erg with CI; ownership with priced regions; gate
+table ROUTING/DESCRIPTIVE; the owner-schema mapping stated; boundaries:
+metadata-only, volume-not-content, projection caution, no psychological
+naming, cohort caveats); outcome appended here; one CLAIMS_LEDGER row;
+ONE commit `feat(m4-x): X4 — the three-level decomposition — <VERDICT>`;
+suite green (1541 + new); #83 scan (baseline 4). SEED = 20260819;
+B_perm = 499; B_boot = 1000.
