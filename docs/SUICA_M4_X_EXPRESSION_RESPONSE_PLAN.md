@@ -2219,3 +2219,204 @@ Deliverables: standard six; ONE commit
 `feat(m4-x): X-Mb — the mains estimator, paired-scored — <VERDICT>`;
 suite green (1742 + new); #83 baseline 4; tests use pytest tmp_path.
 SEED = 20260819; B_boot = 1000.
+
+---
+
+## X-Mb outcome (executor, 2026-08-19)
+
+**Verdict: `MAINS_CERTIFIED`. All 10 ROUTING clauses passed under paired
+scoring, the descriptive family passed 3/3, the certificate was stamped, and
+the real arm ran ONCE through the gated path — the first true main budget of
+this design.** Runtime 30.4 s, entirely from X1's committed cell cache; the
+comments CSV was never re-streamed.
+
+### The repair, and exactly how much of it there was
+
+The estimator is X-M's, imported by file and contract-tested to return X-M's
+own numbers on the same world; the skeleton, the pinned normalization, the
+five worlds, the seed offsets (13 / 19 / 23 / 7 / 0), the 8 replicates, the
+six inherited routing clauses R05–R10 and the three descriptives D01–D03 are
+unchanged, character for character where they are text and value for value
+where they are numbers. What changed is the arithmetic of four rows.
+
+Scored PAIRED — each replicate against its own realized planted component,
+computed by reconstructing that replicate's drawn `a`/`b`/`g` from the
+builder's own stream and applying the estimator's own functional to them —
+the four own-recovery clauses read:
+
+| clause | paired mean error | paired sd | PAIRED | nominal gap | nominal sd | NOMINAL | P(informative) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R01 `{a-only}` author | −0.000304 | 0.001084 | PASS | +0.0002 | 0.0036 | PASS | 0.954 |
+| R02 `{b-only}` community | −0.000046 | 0.000508 | PASS | +0.0036 | 0.0157 | **UNINFORMATIVE** | 0.267 |
+| R03 `{full}` author | +0.003965 | 0.002020 | PASS | +0.0012 | 0.0061 | PASS | 0.954 |
+| R04 `{full}` community | +0.000531 | 0.000456 | PASS | −0.0084 | 0.0072 | PASS | 0.267 |
+
+**Exactly one clause moved: R02.** Its nominal replicate sd is 30.9× its
+paired sd, and that ratio is the whole of #93a — the world's draw noise being
+charged to the instrument, and then not being charged to it. The other three
+clauses passed both ways, which is the right shape for a repair: a gate that
+changed every answer would have been a different gate.
+
+### One clause passes with a bias, and pairing is what makes it legible
+
+R03's paired mean error is +0.003965 against a standard error of 0.000714 —
+inside the registered 0.01 resolution, therefore a PASS, but five and a half
+standard errors from zero and not noise. It has a name and a measured value
+in the same battery: the interaction's bleed into the author coefficient
+reads 0.00395 in `{g-only}`, the largest of the six zero-point rows. The two
+agree to the fifth decimal. This is the df derivation's `popvar(M_a·g)` term
+appearing twice — once as leakage in a world with no author effect, once as
+bias in a world that has one. Nominal scoring hid it inside a replicate
+spread six times its size; paired scoring puts it on the table. It is
+reported, not repaired: it is inside the resolution the registration claims.
+
+### Effective samples (#93c), published
+
+| row | nominal | Σp² | effective | effective/nominal | gauge factor |
+| --- | --- | --- | --- | --- | --- |
+| R02 / R04 community main, size-weighted (PRIMARY) | 1,000 | 0.023120 | **43.3** | 0.0433 | 1.023667 |
+| R01 / R03 author main | 3,665 | 0.000273 | 3,665.0 | 1.0000 | 1.000273 |
+| community main, unweighted (secondary) | 1,000 | 0.001000 | 1,000.0 | 1.0000 | 1.001001 |
+| *(contrast)* X1c interaction, residual df | 31,899 | — | 27,235 | 0.8538 | 1.171250 |
+
+### The replicate budget (#93b) — and the correction the note needed
+
+PAIRED side, closed form. X-M's own artifact measures the paired sd on all
+four clauses (0.001084 / 0.000496 / 0.002019 / 0.000445); the widest is
+0.002019. With `(R−1)s²/σ² ~ χ²_{R−1}`, 8 replicates put the sd ceiling
+5.0× away (χ²₇ threshold 171.7, Chernoff bound on the breach probability
+10^−30.9) and the mean ceiling 14 standard errors away. The registered budget
+is adequate by a margin that is arithmetic, not hope.
+
+NOMINAL side, simulated on this skeleton at four budgets:
+
+| replicates | mean replicate sd | P(sd ≤ ceiling) |
+| --- | --- | --- |
+| 8 | 0.0141 | 0.267 |
+| 16 | 0.0147 | 0.136 |
+| 30 | 0.0150 | 0.056 |
+| 60 | 0.0152 | 0.011 |
+
+**#93b's worked example does not hold.** The adjudication reasoned that about
+60 replicates would have made R02 reliable at nominal scoring; measured, the
+probability FALLS with the budget, because a sample sd concentrates on the
+quantity it estimates and that quantity — the target's own draw sd, 0.0172 —
+is above the ceiling. Sixty replicates would have made R02 more reliably
+UNINFORMATIVE. The counterfactual would hold for a ceiling read on the
+standard ERROR of the replicate mean, which shrinks as 1/√R; it does not hold
+for a ceiling on the replicate SD, which is what #90 specifies. For this
+clause the paired repair was not one option among several — it was the only
+one that works.
+
+### The dev-prototype rule, enforced rather than promised
+
+The real arm is unreachable except through `run_real_arm`, which refuses a
+certificate that is not `MAINS_CERTIFIED`, that carries no stamp, or whose
+stamp is not already on disk. `main` contains no other call to `full_budget`
+or to the cluster bootstrap, which is contract-tested against the source. The
+stamp was written at `02:57:38.137176Z`; the real arm began at
+`02:57:38.138163Z`, 984,917 ns later, and `certification_order.json` asserts
+the order from the artifacts' own timestamps. A test drives the assertion to
+FAIL on reversed stamps, so the clause is a check and not decoration.
+
+### The first true main budget
+
+| component | share (corrected) | 95% CI | raw (#67) | gauge factor |
+| --- | --- | --- | --- | --- |
+| author main `Var(a)` | **0.1286** | [0.1230, 0.1357] | 0.1286 | 1.000273 |
+| community main `Var(b)`, size-weighted (PRIMARY) | **0.0552** | [0.0523, 0.0596] | 0.0539 | 1.023667 |
+| community main, unweighted (secondary) | 0.0786 | [0.0772, 0.0854] | 0.0786 | 1.001001 |
+| interaction (X1c's estimand) | 0.0190 | — | 0.0162 | 1.171250 |
+| residual | 0.7972 | — | — | — |
+
+Cluster bootstrap over authors, B = 1,000, the FE refitted and the
+coefficients re-normalized inside every replicate, the gauge factor
+recomputed from each replicate's own weights (#87(b) treatment one). X1c's
+MARGINAL rows on the same skeleton read author 0.1804 and community 0.0928;
+the gap between those and the mains above is the contamination the projection
+removes, now measured at corpus scale rather than on synthetic worlds.
+
+### Both registered predictions MISS, and they miss together
+
+| prediction | value | realized | CI | result | gap |
+| --- | --- | --- | --- | --- | --- |
+| author main | 0.15 | 0.1286 | [0.1230, 0.1357] | **MISS** | −0.0214 |
+| community main | 0.077 | 0.0552 | [0.0523, 0.0596] | **MISS** | −0.0218 |
+
+The two gaps differ by 0.00041. X1c's 2×2 inversion was an algebraic
+annotation on contaminated rows, and it over-corrected both mains by about
+two variance points in the same direction — a property of the inversion, not
+of either main. A prediction that breaks the same way twice says more than
+one that breaks once. The three registered LEANS all HELD (certification
+PASSES; author main in [0.10, 0.20]; community main in [0.05, 0.11]), which
+is the honest reading of the difference between a lean and a prediction.
+
+An observation with no claim attached: the UNWEIGHTED community secondary
+reads 0.0786, which is 0.0016 from the predicted 0.077, while the registered
+size-weighted PRIMARY reads 0.0552. The primary was named before the run and
+is what routes and what is scored. On a design whose size-weighted community
+side has an effective sample of 43.3, the two weightings are not estimating a
+common number, and which one a downstream leg wants is a question that has to
+be asked deliberately rather than inherited.
+
+### Consequences for X3
+
+**X3's #87 prerequisite is DISCHARGED.** The author main is certified at
+0.01 resolution in two worlds; the size-weighted community main is now
+certified in both worlds that plant it. X3 may take `Var(a)` and `Var(b)` as
+estimated objects on this design, with two conditions carried forward: the
+size-weighted community estimand has an effective sample of 43.3, and the
+{full}-world author reading carries a known +0.004 interaction bias inside
+the resolution.
+
+### Deviations, all recorded
+
+1. **The paired block reuses the gate's own per-replicate estimates.** X-M's
+   diagnostic paired block re-drew each world and recomputed the estimator;
+   this leg reads the per-replicate values the scored block already stored
+   and computes only the realized target, so the pairing is bit-exact against
+   the replicates the nominal clause read. The realized-component
+   reconstruction is contract-tested against a noiseless world (shares
+   summing to 1) where the cell means ARE the drawn components, with a
+   wrong-stream-order guard so the test cannot pass vacuously.
+2. **Paired errors route on the corrected scale, raw co-reported (#67).** On
+   a fixed skeleton the estimate and the realized target carry the same
+   constant mean-removal factor, so the corrected paired error is exactly the
+   raw one times that factor; the identity is contract-tested and the routing
+   decision is scale-invariant here.
+3. **#93b's worked example is corrected in-leg**, by measurement, above.
+4. **No permutation null was run.** `B_perm = 499` is registered "where
+   applicable"; no X-Mb clause is defined against a permutation band.
+5. **No development prototype touched the real arm.** The #93 note is
+   enforced in code, and the ordering is asserted from the artifacts.
+
+### Defect candidates for the planner (nothing below was run)
+
+1. **A gate ceiling should declare which VARIANCE it bounds.** #93a fixed
+   own-recovery clauses by pairing, but the general shape of the mistake is a
+   clause whose statistic mixes estimator error with design-side draw noise.
+   A convention could require every ceiling to name the component it
+   constrains (estimator / world / both), so the arithmetic is checkable
+   before the run rather than after the stop.
+2. **A worked example inside an adopted defect deserves the same
+   pre-registration arithmetic as a clause.** #93b's illustration was not
+   derived and does not hold for the ceiling it illustrates. Either derive
+   the number in the note, or mark it explicitly as an unchecked sketch.
+3. **A registered PRIMARY weighting should be re-justified when its effective
+   sample is small.** The size-weighted community main and its unweighted
+   secondary differ by 0.023 here — more than either main's CI width — and
+   the effective-sample disclosure (#93c) is what makes that difference
+   readable. A convention could require a weighted primary whose effective
+   sample falls below some fraction of nominal to state, at registration,
+   why the weighting is the estimand of interest.
+
+### Governance
+
+Metadata only; `word_count_quoteless` is the sole text-derived quantity; no
+body was read; `author_profiles.csv` was never opened. The ID-leak scan over
+all 10,296 author names cleared with **0 NEW hits** (4 pre-existing
+dictionary collisions carried unchanged from HEAD). Every X-line boundary is
+carried forward, plus the two this leg adds: a certified instrument is still
+only an instrument, and the gate was repaired rather than relaxed — paired
+scoring makes the ceiling stricter on the estimator while removing a term the
+clause was never entitled to charge it for.
