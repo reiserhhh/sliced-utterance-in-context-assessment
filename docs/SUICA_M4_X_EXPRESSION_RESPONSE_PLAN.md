@@ -1594,3 +1594,112 @@ that could not occur (#91's teeth).
 the paper's vocabulary with this commit. Next per the bridge build-out:
 X5 (the ergodicity atlas) with #89–#91 baked into its registration;
 X-M/X3 queued behind it.
+
+---
+
+## X5 — the ergodicity atlas (registered BEFORE run, 2026-08-19)
+
+The bridge's build-out item 2: not one relation but a MAP — which kinds
+of metadata relations carry large level-conflation errors, and where do
+individual parameters live. Five relations, each measured
+THREE-LEVEL-COMPLETE (bridge §6) with X4's machinery, under the
+#89–#91 conventions baked in from registration.
+
+### 4W header
+
+- **Object.** Five Where/What/When metadata relations at all three
+  measurement series; the atlas's verdict is the SUMMARY SHAPE of the
+  per-relation Δ_erg cells. Provenance: the owner's support program
+  (bridge §5.2).
+- **Relations (transforms pinned #70).** y = log1p(wcq) and
+  x as follows unless stated: **R1** commonness × volume (X4's
+  relation: Δ_erg IMPORTED from X4's committed artifacts with a
+  bit-check; ρ_own RECOMPUTED under the estimability floor — X4's
+  annotated +0.2768 is the check value); **R2** gap × volume
+  (x = log10 seconds since the author's previous comment; first event
+  dropped; nonpositive gaps dropped); **R3** volume × score
+  (x = log1p(wcq), y = slog(score) = sign·log1p(|score|));
+  **R4** commonness × score (y = slog(score)); **R5** commonness × gap
+  (y = log10 gap seconds).
+- **Fixed.** X2/X4 universe, order, halves; the ESTIMABILITY FLOOR
+  (#89): per (author, half, relation), den = Σ(x − x̄)² ≥ 1 computed by
+  the pinned two-pass float64 path; pool = ≥ 50 usable events per half
+  AND the floor in each half. The level-3 estimator is the FLOORED
+  per-author slope THROUGHOUT (X4's lesson made primary).
+- **What falsifies.** All five relations reading LEVELS_INDISTINGUISHABLE
+  (the atlas uniform-ergodic) would refute the conflation-warning's
+  relevance to this corpus family.
+- **Layer.** R.
+
+### Census (planner #43; #77/#78 exact; #57 clean; #89 floor applied)
+
+| relation | disjoint pool | Big5 pool | within-sd(x) med (disjoint) |
+|---|---|---|---|
+| R2 gap × volume | 7,989 | 1,100 | 1.138 |
+| R3 volume × score | 8,008 | 1,116 | 1.031 |
+| R4 commonness × score | 7,986 | 1,096 | 0.966 |
+| R5 commonness × gap | 7,966 | 1,081 | 0.966 |
+
+score missing 147 of 17,640,062 parseable; R1 pools are X4's (8,004 /
+1,112). Anchors: all of the above plus X4's inherited set.
+
+### Estimands and cells
+
+Per relation × cohort: β_between, β_within (per-half, averaged),
+Δ_erg with paired cluster bootstrap B = 1000; per-relation Δ cells as
+X4's four (LEVELS_INDISTINGUISHABLE / NONERGODIC_SAME_SIGN /
+NONERGODIC_SIGN_FLIP / NONERGODIC_SIGN_UNRESOLVED), regions priced per
+#88a from the matched gate worlds. ρ_own per relation (FLOORED), with
+the #91 LADDER-COHERENCE assertion: after pricing, regions must be
+disjoint and every interior cell non-empty, ELSE the ownership
+classification COLLAPSES EXPLICITLY to the binary
+OWNED (CI > 0) / NOT_OWNED — no silent empty cells.
+
+**Atlas summary (ROUTES, NULL-first #55):**
+1. **ATLAS_UNIFORM_ERGODIC** — all five relations
+   LEVELS_INDISTINGUISHABLE.
+2. **ATLAS_UNIFORM_NONERGODIC** — all five in nonergodic cells.
+3. **ATLAS_HETEROGENEOUS** — at least two different Δ cells across
+   relations (the map has structure).
+
+### Gate (Part 0 per relation, realized skeletons, #90 ceilings)
+
+For EACH of R2–R5 (R1 inherits X4's passed gate): ERGODIC world
+(Δ CI covers 0, ≥ 6/8), NON-ERGODIC world (derived printed Δ,
+recovery), NULL world (all read 0), #85b bootstrap-zero. The OWNED
+world once on R2's skeleton (machinery shared; floored estimator).
+**#90 ceilings:** every routing recovery clause carries the assertion
+rep-sd ≤ the tolerance floor; a clause whose rep-sd exceeds it is
+UNINFORMATIVE and, being a routing clause, STOPS the leg (A1) — an
+uninformative pass can certify nothing. DESCRIPTIVE clauses annotate.
+Region pricing (#88a) per relation from its matched worlds, pinned
+before any real number, with the #91 coherence check.
+
+### Registered leans (directional, weakly held; the atlas exists
+because these are guesses)
+
+- R2: β_within > 0 (rest precedes longer comments); Δ SAME_SIGN.
+- R3: both positive, small; SAME_SIGN or INDISTINGUISHABLE.
+- R4: β_within > 0 (bigger venue, more eyes, more score); SAME_SIGN.
+- R5: unleaned (stated: no defensible prior).
+- Summary: **ATLAS_HETEROGENEOUS** (R1's SIGN_FLIP already in hand
+  vs the SAME_SIGN leans above).
+- Ownership: the ≈ 0.27 band (bridge §7) appears for at least two of
+  the four new relations on the disjoint cohort — the level-3
+  plateau's first test as a PREDICTION rather than an observation.
+
+### Deliverables and discipline
+
+Standard six: `scripts/run_suica_m4_x5_ergodicity_atlas.py` + tests
+(floored-estimator correctness incl. the #89 two-pass path; per-relation
+gate battery; #90 ceiling logic both directions; #91 coherence check
+and the explicit collapse; R1 import bit-check; anchors; #83 helper);
+gitignored `results/m4_x5_ergodicity_atlas/`; report
+`reports/SUICA_M4_X5_ERGODICITY_ATLAS_REPORT.md` (rule-24; THE ATLAS
+TABLE — 5 relations × {β_b, β_w, Δ, cell, ρ_own, ownership cell} ×
+2 cohorts; gate tables; the bridge-vocabulary summary paragraph;
+boundaries incl. volume-not-content, projection caution, cohort
+caveats); outcome appended here; one CLAIMS_LEDGER row; ONE commit
+`feat(m4-x): X5 — the ergodicity atlas — <VERDICT>`; suite green
+(1604 + new); #83 scan (baseline 4). SEED = 20260819; B_perm = 499;
+B_boot = 1000.
