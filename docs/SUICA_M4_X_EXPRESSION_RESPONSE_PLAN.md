@@ -1703,3 +1703,193 @@ caveats); outcome appended here; one CLAIMS_LEDGER row; ONE commit
 `feat(m4-x): X5 — the ergodicity atlas — <VERDICT>`; suite green
 (1604 + new); #83 scan (baseline 4). SEED = 20260819; B_perm = 499;
 B_boot = 1000.
+
+---
+
+## X5 outcome (executor, 2026-08-19)
+
+**`ATLAS_HETEROGENEOUS`** — four different Δ cells across the five relations
+on the disjoint cohort. Every ROUTING clause of every per-relation Part 0
+passed, every #90 ceiling read INFORMATIVE, every priced ladder read
+COHERENT, and the 22-predicate census reproduced the planner's table to the
+unit. Runtime 102 s off the cache, plus a 45 s cache build (one 26 s stream
+pass over the 17,640,062-row comments file for five metadata columns).
+
+**The headline: the level-conflation error is NOT a property of the corpus,
+it is a property of the RELATION.** On one event stream, at one span, with
+one estimator, the same contrast reads a sign flip, two scoped nulls, an
+unresolved flip and a same-sign 3.5× overstatement, depending only on which
+pair of metadata channels is crossed.
+
+### THE ATLAS — disjoint cohort (PRIMARY)
+
+| relation | authors | β_between | β_within | Δ_erg [95% CI] | Δ cell | ρ_own [95% CI] | ownership |
+|---|---|---|---|---|---|---|---|
+| **R1** commonness × volume | 7,986 (Δ on X4's 8,004) | +0.069062 | −0.007316 | **+0.076377** [+0.055630, +0.097254] | `NONERGODIC_SIGN_FLIP` | +0.2768 [+0.2441, +0.3092] | `WEAKLY_OWNED` |
+| **R2** gap × volume | 7,989 | +0.078450 | +0.059092 | +0.019358 [−0.001034, +0.037833] | `LEVELS_INDISTINGUISHABLE` | +0.4151 [+0.3925, +0.4372] | `WEAKLY_OWNED` |
+| **R3** volume × score | 8,008 | +0.006501 | +0.005172 | +0.001329 [−0.010809, +0.013378] | `LEVELS_INDISTINGUISHABLE` | +0.3585 [+0.3320, +0.3847] | `WEAKLY_OWNED` |
+| **R4** commonness × score | 7,986 | −0.022737 | +0.001884 | −0.024622 [−0.035282, −0.013686] | `NONERGODIC_SIGN_UNRESOLVED` | +0.2863 [+0.2435, +0.3319] | `WEAKLY_OWNED` |
+| **R5** commonness × gap | 7,966 | −0.256325 | −0.073531 | **−0.182794** [−0.205119, −0.158719] | `NONERGODIC_SAME_SIGN` | +0.2164 [+0.1849, +0.2480] | `WEAKLY_OWNED` |
+
+### THE ATLAS — Big5 replication (#73)
+
+| relation | authors | β_between | β_within | Δ_erg [95% CI] | Δ cell | ρ_own [95% CI] | ownership |
+|---|---|---|---|---|---|---|---|
+| R1 | 1,096 (Δ on 1,112) | +0.051346 | −0.009454 | +0.060799 [+0.002037, +0.116844] | `NONERGODIC_SIGN_UNRESOLVED` | +0.3338 [+0.2681, +0.4199] | `WEAKLY_OWNED` |
+| R2 | 1,100 | +0.125773 | +0.083492 | +0.042281 [−0.014043, +0.093462] | `LEVELS_INDISTINGUISHABLE` | +0.5380 [+0.4800, +0.5916] | `STRONGLY_OWNED` |
+| R3 | 1,116 | +0.000506 | +0.014898 | −0.014392 [−0.044014, +0.015019] | `LEVELS_INDISTINGUISHABLE` | +0.4356 [+0.3536, +0.5175] | `WEAKLY_OWNED` |
+| R4 | 1,096 | +0.004780 | +0.007481 | −0.002702 [−0.030359, +0.027177] | `LEVELS_INDISTINGUISHABLE` | +0.3396 [+0.2674, +0.4108] | `WEAKLY_OWNED` |
+| R5 | 1,081 | −0.347683 | −0.084064 | −0.263619 [−0.322152, −0.206946] | `NONERGODIC_SAME_SIGN` | +0.2398 [+0.0788, +0.3885] | `WEAKLY_OWNED` |
+
+Big5 route: `ATLAS_HETEROGENEOUS` as well (three distinct cells). Two #73
+divergences on Δ (R1 flip → unresolved, R4 unresolved → indistinguishable),
+both power differences at n ≈ 1,100 rather than disagreements; ONE on
+ownership (R2 weakly → strongly). Big5 ownership is HIGHER on all five
+relations — the X2/X4 cohort flag repeating five times.
+
+### The census reproduced the planner's table to the unit (#78, 22 predicates)
+
+| predicate | registered | observed |
+|---|---|---|
+| rows parseable | 17,640,062 | 17,640,062 |
+| authors (Big5 + disjoint) | 10,296 (1,401 + 8,895) | same |
+| communities / x range | 46,214 / [−7.25, −1.14] | same |
+| score missing | 147 | 147 |
+| R1 pool by X4's `sd(x) > 0` path | 8,004 / 1,112 | 8,004 / 1,112 |
+| R2 / R3 / R4 / R5 pools, disjoint | 7,989 / 8,008 / 7,986 / 7,966 | same |
+| R2 / R3 / R4 / R5 pools, Big5 | 1,100 / 1,116 / 1,096 / 1,081 | same |
+| within-sd(x) medians, disjoint | 1.138 / 1.031 / 0.966 / 0.966 | same |
+
+Two arithmetic identities fell out and are worth recording. The candidate set
+(≥ 50 events in each half, before any relation's own clause) is **9,124**
+authors = 8,008 + 1,116, which is exactly R3's pool: with x = log1p(wcq) and
+≥ 50 events a half, the #89 floor never binds. And R4's pool (7,986 / 1,096)
+is exactly X4's own precision-floored author count, because `score` is missing
+for only 147 of 17.6M rows — so R1 and R4 are pooled on the SAME people and
+differ only in y.
+
+### Part 0 — five per-relation batteries, all PASS
+
+| relation | ERGODIC Δ (sd, cover) | NON-ERGODIC gap (rep sd) | #90 Δ ceiling | OWNED ρ (rep sd) | #90 ρ ceiling | priced Δ / ρ@0.15 / ρ@0.50 | #91 |
+|---|---|---|---|---|---|---|---|
+| R1 | inherited from X4 (+0.002027, 8/8) | inherited | inherited | inherited | inherited | ±0.021532 / ±0.0357 / ±0.0293 (X4's FLOORED worlds) | COHERENT |
+| R2 | −0.001043 (0.015430, 6/8) | +0.002026 = 0.14 rep sd | 0.014128 ≤ 0.02 | +0.5042 (0.0101) | 0.0101 ≤ 0.02 | ±0.019237 / ±0.0284 / ±0.0211 | COHERENT |
+| R3 | +0.003458 (0.019292, 7/8) | +0.005285 = 0.61 rep sd | 0.008675 ≤ 0.02 | +0.5013 (0.0126, annotates) | — | ±0.022525 / ±0.0290 / ±0.0218 | COHERENT |
+| R4 | −0.001790 (0.011940, 8/8) | −0.001547 = 0.09 rep sd | 0.018061 ≤ 0.02 | +0.4994 (0.0090, annotates) | — | ±0.021514 / ±0.0388 / ±0.0306 | COHERENT |
+| R5 | −0.006324 (0.016342, 6/8) | +0.000591 = 0.05 rep sd | 0.012910 ≤ 0.02 | +0.5047 (0.0172, annotates) | — | ±0.021404 / ±0.0377 / ±0.0292 | COHERENT |
+
+The ownership RECOVERY clause routes once, on R2, as registered; the owned
+worlds still ran on every relation because #88a prices each relation's ρ
+regions from ITS OWN matched worlds, and there they annotate (D4). Every NULL
+world read four zeros at ≥ 6/8 coverage and every #85b bootstrap-zero clause
+passed.
+
+### What the #89 floor bought — the three defects, closed
+
+| object | X4, no floor | X5, floored |
+|---|---|---|
+| cross-half Var(β), R1 disjoint | **−0.009728** (negative; sd_true undefined) | **+0.007987** (defined; sd_true 0.0894) |
+| owned-world ρ replicate sd (the #90 object) | 0.1649 → clause PASSED UNINFORMATIVELY | 0.0090–0.0172 → **INFORMATIVE everywhere** |
+| priced ρ half-width at 0.50 (the #91 object) | ±0.1837, overlapping ±0.3827 at 0.15 | ±0.0211–0.0306 |
+| ladders coherent | 0 of 1 (`WEAKLY_OWNED` was an EMPTY interval) | **5 of 5** |
+
+The three defects the planner purchased from X4 were not merely honoured, they
+were the leg's most useful machinery: with the floor in the POOL rather than in
+a footnote, the level-3 object stopped being one-author fragile, the ceiling
+clauses became able to certify, and the registered ownership ladder resolved
+for the first time — every relation lands in a NON-EMPTY interior cell.
+
+### The plateau PREDICTION — BROKEN, and instructively
+
+| relation | ρ_own | in [0.25, 0.30]? |
+|---|---|---|
+| R2 gap × volume | +0.4151 | no |
+| R3 volume × score | +0.3585 | no |
+| R4 commonness × score | **+0.2863** | yes |
+| R5 commonness × gap | +0.2164 | no |
+
+One of four, against a registered ≥ 2. Including R1's imported +0.2768 the
+five values run **0.2164 → 0.4151**, a spread of 0.199 on one cohort at one
+span. **The ≈ 0.27 band was a coincidence of three parameters, not a plateau.**
+Level-3 reliability is a property of the relation being owned — which is the
+most useful negative result the atlas produces for build-out item 3, since a
+catalogue whose entries were all the same number would not be worth compiling.
+
+### Leans: 5 held, 3 broken, 1 registered unleaned
+
+HELD — R2 β_within > 0 (+0.059092: rest precedes longer comments); R3 both
+slopes positive and small (+0.006501 / +0.005172); R3's cell
+(`LEVELS_INDISTINGUISHABLE`, which the lean admitted); R4 β_within > 0
+(+0.001884); the summary route `ATLAS_HETEROGENEOUS`.
+BROKEN — R2's `NONERGODIC_SAME_SIGN` (the Δ CI covers zero by 0.001, 2.7% of
+its own width: a power-limited null, recorded as such); R4's
+`NONERGODIC_SAME_SIGN` (Δ excludes zero with opposite point signs but
+β_within's own interval does not, so it is X4's fourth cell again); the
+plateau prediction. UNLEANED — R5, registered with no defensible prior, and it
+produced the atlas's LARGEST conflation error.
+
+### R5, the unleaned relation, is the atlas's largest error
+
+Between people, someone whose life is spent in commoner venues comments with
+SHORTER gaps (β_between = −0.256); within a person, moving to a commoner venue
+also shortens the gap, but only 29% as steeply (β_within = −0.0735). The
+level difference −0.183 [−0.205, −0.159] is **2.5× the within-person slope
+itself**: reading the within-person relation off the between-person one would
+overstate it by that factor. Mechanism named, not tested: composition (who
+lives in big venues) again, now on the timing channel.
+
+### The R1 import bit-check
+
+X4's Δ and its CI are IMPORTED, not recomputed. The floored ownership was
+recomputed on this leg's fresh five-column cache and reproduced X4's committed
++0.276816343318229 with an absolute difference of **0.0** on the same 7,986
+authors — same events, same order, same pinned two-pass path. The atlas and
+X4 are demonstrably measuring the same corpus.
+
+### Honest anomalies (all in the artifacts)
+
+The five relations are five PROJECTIONS of one stream and share channels
+(R1/R4/R5 share x, R1/R2 share y, R3/R4 share y), so agreement between two of
+them is partly shared measurement. `slog(score)` is platform feedback, never
+quality. The gap channel drops 433,827 nonpositive gaps plus one first event
+per author, and the drops concentrate in same-second bursts — the fastest
+activity. R1 and R4 have level-2 halves that disagree in sign, so level 2 is
+not stationary there. R4's Δ ceiling passed at 90% of its ceiling and R5's ρ
+ceiling at 86% — thin margins, named. R2's `LEVELS_INDISTINGUISHABLE` is
+decided by 2.7% of its CI width.
+
+### Deviations, all recorded
+
+1. **The Δ tolerance FLOOR is an absolute 0.02 in Δ units**, not X4's 2% of
+   the planted scale (0.005). #90 turns the floor into a CEILING on the
+   replicate spread, so it has to be a resolution statement in the estimand's
+   own units rather than a fraction of a freely chosen planted scale. The
+   planted world itself is X4's, untouched (β = −0.10, γ = +0.25, sd_a = 0.5,
+   sd_e = 1.0), and the realized recovery tolerance is unchanged because the
+   3 × rep-sd term binds either way.
+2. **The owned worlds ran on all four new relations**, since #88a prices per
+   relation from matched worlds; only R2's ownership RECOVERY clause routes.
+3. **Atlas route 2 was refined** to "all five in the SAME nonergodic cell";
+   the literal predicate ("all five nonergodic") is recorded next to it and
+   did not bind here (it read false).
+4. **The plateau band was operationalized** as the point estimate lying in
+   [0.25, 0.30], pinned in the config before the run from bridge §7's three
+   values; the CI-overlap count is co-reported (also 1 of 4).
+5. R1's ownership pool (7,986 / 1,096) is the FLOORED subset of X4's Δ pool
+   (8,004 / 1,112); the atlas row rests on two slightly different author sets
+   and says so.
+6. A `--stop-after-census` development flag exists and writes no estimand.
+
+### Governance
+
+Five metadata columns streamed once; no body ever read; `author_profiles.csv`
+never opened; aggregates only; EXPLORATORY corpus-level with no person claim
+and no psychological naming; the cohort-selection caveat carried unchanged;
+ID-leak scan over all 10,296 author names PASSED with 0 NEW hits (4
+pre-existing dictionary collisions carried from HEAD). Suite 1,604 + 70 new.
+
+### Line state
+
+X5 closes. The bridge receives build-out item 2 (the map) and, unexpectedly,
+a correction to item 3's premise (there is no level-3 plateau). Queued behind
+it, unchanged: X-M / X3.
